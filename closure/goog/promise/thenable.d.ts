@@ -63,7 +63,7 @@ declare module goog.Thenable {
      * @param {function(new:goog.Thenable,...[?])} ctor The class constructor. The
      *     corresponding class must have already implemented the interface.
      */
-    export function addImplementation(ctor: any): void;
+    export function addImplementation(ctor: (...arg0: any[]) => any): void;
 
     /**
      * @param {*} object

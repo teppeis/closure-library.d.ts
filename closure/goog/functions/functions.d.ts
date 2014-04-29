@@ -4,19 +4,19 @@ declare module goog.functions {
      * Always returns false.
      * @type {function(...): boolean}
      */
-    export var FALSE: any;
+    export var FALSE: (...arg0: any[]) => boolean;
 
     /**
      * Always returns true.
      * @type {function(...): boolean}
      */
-    export var TRUE: any;
+    export var TRUE: (...arg0: any[]) => boolean;
 
     /**
      * Always returns NULL.
      * @type {function(...): null}
      */
-    export var NULL: any;
+    export var NULL: (...arg0: any[]) => void;
 
     /**
      * Creates a function that always returns the same value.

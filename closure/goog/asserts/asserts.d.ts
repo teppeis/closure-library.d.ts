@@ -132,7 +132,7 @@ declare module goog.asserts {
      * @return {!T}
      * @template T
      */
-    export function assertInstanceof<T>(value: any, type: any, opt_message?: string, ...var_args: any[]): T;
+    export function assertInstanceof<T>(value: any, type: (...arg0: any[]) => any, opt_message?: string, ...var_args: any[]): T;
 
     /**
      * Checks that no enumerable keys are present in Object.prototype. Such keys
