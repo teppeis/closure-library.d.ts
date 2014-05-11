@@ -121,4 +121,13 @@ declare module goog.ui.FilteredMenu {
     export interface EventType {
         FILTER_CHANGED: string;
     }
+
+    /**
+     * Filter menu element ids.
+     * @enum {string}
+     * @private
+     */
+    export interface Id_ {
+        CONTENT_ELEMENT: string;
+    }
 }

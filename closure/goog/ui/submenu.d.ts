@@ -149,7 +149,7 @@ declare module goog.ui {
         
         /**
          * Returns the menu items contained in the sub menu.
-         * @return {Array.<goog.ui.MenuItem>} An array of menu items.
+         * @return {!Array.<!goog.ui.MenuItem>} An array of menu items.
          * @deprecated Use getItemAt/getItemCount instead.
          */
         getItems(): Array<goog.ui.MenuItem>;

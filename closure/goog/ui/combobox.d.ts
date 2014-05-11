@@ -27,6 +27,11 @@ declare module goog.ui {
         setEnabled(enabled: boolean): void;
         
         /**
+         * @return {boolean} Whether the menu item is enabled.
+         */
+        isEnabled(): boolean;
+        
+        /**
          * Combo box currently can't decorate elements.
          * @return {boolean} The value false.
          * @override

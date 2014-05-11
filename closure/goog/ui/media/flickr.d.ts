@@ -44,7 +44,7 @@ declare module goog.ui.media {
          * @param {goog.ui.media.FlickrSetModel} dataModel The Flickr Set data model.
          * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper, used for
          *     document interaction.
-         * @return {goog.ui.media.Media} A Control binded to the FlickrSet renderer.
+         * @return {!goog.ui.media.Media} A Control binded to the FlickrSet renderer.
          * @throws exception in case {@code flickrSetUrl} is an invalid flickr set URL.
          * TODO(user): use {@link goog.ui.media.MediaModel} once it is checked in.
          */
@@ -63,7 +63,7 @@ declare module goog.ui.media {
          * the flash object pointing to a flickr set player.
          *
          * @param {goog.ui.Control} c The media control.
-         * @return {Element} The DOM structure that represents this control.
+         * @return {!Element} The DOM structure that represents this control.
          * @override
          */
         createDom(c: goog.ui.Control): Element;
@@ -99,7 +99,7 @@ declare module goog.ui.media {
          * @param {string} flickrSetUrl A Flickr set URL.
          * @param {string=} opt_caption An optional caption of the flickr set.
          * @param {string=} opt_description An optional description of the flickr set.
-         * @return {goog.ui.media.FlickrSetModel} The data model that represents the
+         * @return {!goog.ui.media.FlickrSetModel} The data model that represents the
          *     Flickr set.
          * @throws exception in case the parsing fails
          */

@@ -165,7 +165,8 @@ declare module goog.async {
          * but doesn't prevent additional callbacks from being added to
          * {@code otherDeferred}.
          *
-         * @param {!goog.async.Deferred} otherDeferred The Deferred to wait for.
+         * @param {!goog.async.Deferred|!goog.Thenable} otherDeferred The Deferred
+         *     to wait for.
          * @return {!goog.async.Deferred} This Deferred.
          */
         awaitDeferred(otherDeferred: goog.async.Deferred<any>): goog.async.Deferred<any>;

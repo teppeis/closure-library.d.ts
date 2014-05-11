@@ -75,7 +75,7 @@ declare module goog.net.WebChannel {
      * messageUrlParams: custom url query parameters to be added to every message
      * sent to the server.
      *
-     * spdyRequestLimit: the maximum number of in-flight HTTP requests allowed
+     * concurrentRequestLimit: the maximum number of in-flight HTTP requests allowed
      * when SPDY is enabled. Currently we only detect SPDY in Chrome.
      * This parameter defaults to 10. When SPDY is not enabled, this parameter
      * will have no effect.
@@ -91,7 +91,7 @@ declare module goog.net.WebChannel {
      * @typedef {{
      *   messageHeaders: (!Object.<string, string>|undefined),
      *   messageUrlParams: (!Object.<string, string>|undefined),
-     *   spdyRequestLimit: (number|undefined),
+     *   concurrentRequestLimit: (number|undefined),
      *   supportsCrossDomainXhr: (boolean|undefined),
      *   testUrl: (string|undefined)
      * }}
@@ -99,7 +99,7 @@ declare module goog.net.WebChannel {
     export interface Options {
         messageHeaders: Object;
         messageUrlParams: Object;
-        spdyRequestLimit: number;
+        concurrentRequestLimit: number;
         supportsCrossDomainXhr: boolean;
         testUrl: string;
     }

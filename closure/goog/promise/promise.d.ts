@@ -34,7 +34,7 @@ declare module goog {
      *
      * @param {function(
      *             this:RESOLVER_CONTEXT,
-     *             function((TYPE|IThenable.<TYPE>|Thenable)),
+     *             function((TYPE|IThenable.<TYPE>|Thenable)=),
      *             function(*)): void} resolver
      *     Initialization function that is invoked immediately with {@code resolve}
      *     and {@code reject} functions as arguments. The Promise is resolved or
@@ -49,7 +49,7 @@ declare module goog {
      * @template TYPE,RESOLVER_CONTEXT
      */
     export class Promise<TYPE, RESOLVER_CONTEXT> {
-        constructor(resolver: (arg0: (arg0: TYPE) => any, arg1: (arg0: any) => any) => void, opt_context?: RESOLVER_CONTEXT);
+        constructor(resolver: (arg0: (arg0?: TYPE) => any, arg1: (arg0: any) => any) => void, opt_context?: RESOLVER_CONTEXT);
         
         /**
          * @param {(TYPE|goog.Thenable.<TYPE>|Thenable)=} opt_value
@@ -110,8 +110,8 @@ declare module goog {
          * exception, the child Promise will be rejected with the thrown value instead.
          *
          * If the Promise is rejected, the {@code onRejected} callback will be invoked
-         * with the rejection reason as argument, and the child Promise will be rejected
-         * with the return value (or thrown value) of the callback.
+         * with the rejection reason as argument, and the child Promise will be resolved
+         * with the return value or rejected with the thrown value of the callback.
          *
          * @param {?(function(this:THIS, TYPE):
          *             (RESULT|IThenable.<RESULT>|Thenable))=} opt_onFulfilled A

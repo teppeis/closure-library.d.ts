@@ -35,7 +35,7 @@ declare module goog.dom {
         static createFromTextRanges(textRanges: Array<goog.dom.TextRange>): goog.dom.MultiRange;
         
         /**
-         * @return {goog.dom.MultiRange} A clone of this range.
+         * @return {!goog.dom.MultiRange} A clone of this range.
          * @override
          */
         clone(): goog.dom.MultiRange;
@@ -66,7 +66,7 @@ declare module goog.dom {
     export interface DomSavedMultiRange_ extends goog.dom.SavedRange {
         
         /**
-         * @return {goog.dom.MultiRange} The restored range.
+         * @return {!goog.dom.MultiRange} The restored range.
          * @override
          */
         restoreInternal(): goog.dom.MultiRange;

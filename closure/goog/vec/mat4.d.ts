@@ -16,7 +16,7 @@ declare module goog.vec.Mat4 {
     export interface AnyType {
     }
 
-    /** @typedef {Float32Array} */
+    /** @typedef {!Float32Array} */
     export interface Type {
     }
 

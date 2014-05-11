@@ -361,7 +361,7 @@ declare module goog.net {
         /**
          * Gets the Uri used for the connection that sends data to the server.
          * @param {string} path The path on the host.
-         * @return {goog.Uri} The forward channel URI.
+         * @return {!goog.Uri} The forward channel URI.
          */
         getForwardChannelUri(path: string): goog.Uri;
         
@@ -382,7 +382,7 @@ declare module goog.net {
          * Gets the Uri used for the connection that receives data from the server.
          * @param {?string} hostPrefix The host prefix.
          * @param {string} path The path on the host.
-         * @return {goog.Uri} The back channel URI.
+         * @return {!goog.Uri} The back channel URI.
          */
         getBackChannelUri(hostPrefix: string, path: string): goog.Uri;
         

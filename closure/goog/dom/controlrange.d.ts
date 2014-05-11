@@ -22,7 +22,7 @@ declare module goog.dom {
          * Create a new range wrapper that selects the given element.  Do not use
          * this method directly - please use goog.dom.Range.createFrom* instead.
          * @param {...Element} var_args The element(s) to select.
-         * @return {goog.dom.ControlRange} A range wrapper object.
+         * @return {!goog.dom.ControlRange} A range wrapper object.
          */
         static createFromElements(...var_args: Element[]): goog.dom.ControlRange;
         

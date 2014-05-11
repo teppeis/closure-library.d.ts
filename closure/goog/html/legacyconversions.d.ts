@@ -38,4 +38,13 @@ declare module goog.html.legacyconversions {
      *     object.
      */
     export function safeUrlFromString(url: string): goog.html.SafeUrl;
+
+    /**
+     * Sets a function that will be called every time a legacy conversion is
+     * performed. The function is called with no parameters but it can use
+     * goog.debug.getStacktrace to get a stacktrace.
+     *
+     * @param {function(): undefined} callback Error callback as defined above.
+     */
+    export function setReportCallback(callback: () => void): void;
 }

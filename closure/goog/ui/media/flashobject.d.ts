@@ -32,7 +32,7 @@ declare module goog.ui.media {
          * Sets the flash movie Wmode.
          *
          * @param {goog.ui.media.FlashObject.Wmodes} wmode the flash movie Wmode.
-         * @return {goog.ui.media.FlashObject} The flash object instance for chaining.
+         * @return {!goog.ui.media.FlashObject} The flash object instance for chaining.
          */
         setWmode(wmode: goog.ui.media.FlashObject.Wmodes): goog.ui.media.FlashObject;
         
@@ -45,7 +45,7 @@ declare module goog.ui.media {
          * Adds flash variables.
          *
          * @param {goog.structs.Map|Object} map A key-value map of variables.
-         * @return {goog.ui.media.FlashObject} The flash object instance for chaining.
+         * @return {!goog.ui.media.FlashObject} The flash object instance for chaining.
          */
         addFlashVars(map: goog.structs.Map<any, any>): goog.ui.media.FlashObject;
         
@@ -54,7 +54,7 @@ declare module goog.ui.media {
          *
          * @param {string} key The name of the flash variable.
          * @param {string} value The value of the flash variable.
-         * @return {goog.ui.media.FlashObject} The flash object instance for chaining.
+         * @return {!goog.ui.media.FlashObject} The flash object instance for chaining.
          */
         setFlashVar(key: string, value: string): goog.ui.media.FlashObject;
         
@@ -69,7 +69,7 @@ declare module goog.ui.media {
          *    as a goog.structs.Map or an Object literal) or a key to the optional
          *    {@code opt_value}.
          * @param {string=} opt_value The optional value for the flashVar key.
-         * @return {goog.ui.media.FlashObject} The flash object instance for chaining.
+         * @return {!goog.ui.media.FlashObject} The flash object instance for chaining.
          */
         setFlashVars(flashVar: goog.structs.Map<any, any>, opt_value?: string): goog.ui.media.FlashObject;
         
@@ -82,7 +82,7 @@ declare module goog.ui.media {
          * Sets the background color of the movie.
          *
          * @param {string} color The new color to be set.
-         * @return {goog.ui.media.FlashObject} The flash object instance for chaining.
+         * @return {!goog.ui.media.FlashObject} The flash object instance for chaining.
          */
         setBackgroundColor(color: string): goog.ui.media.FlashObject;
         
@@ -95,7 +95,7 @@ declare module goog.ui.media {
          * Sets the allowScriptAccess setting of the movie.
          *
          * @param {string} value The new value to be set.
-         * @return {goog.ui.media.FlashObject} The flash object instance for chaining.
+         * @return {!goog.ui.media.FlashObject} The flash object instance for chaining.
          */
         setAllowScriptAccess(value: string): goog.ui.media.FlashObject;
         
@@ -109,7 +109,7 @@ declare module goog.ui.media {
          *
          * @param {number|string} width The width of the movie.
          * @param {number|string} height The height of the movie.
-         * @return {goog.ui.media.FlashObject} The flash object instance for chaining.
+         * @return {!goog.ui.media.FlashObject} The flash object instance for chaining.
          */
         setSize(width: number, height: number): goog.ui.media.FlashObject;
         
@@ -123,7 +123,7 @@ declare module goog.ui.media {
          *
          * @param {?string} version The minimum required version for this movie to work,
          *     or null if you want to unset it.
-         * @return {goog.ui.media.FlashObject} The flash object instance for chaining.
+         * @return {!goog.ui.media.FlashObject} The flash object instance for chaining.
          */
         setRequiredVersion(version: string): goog.ui.media.FlashObject;
         

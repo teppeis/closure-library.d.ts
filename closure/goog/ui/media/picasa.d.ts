@@ -48,7 +48,7 @@ declare module goog.ui.media {
          * @param {goog.ui.media.PicasaAlbumModel} dataModel A picasa album data model.
          * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper, used for
          *     document interaction.
-         * @return {goog.ui.media.Media} A Control instance binded to the Picasa
+         * @return {!goog.ui.media.Media} A Control instance binded to the Picasa
          *     renderer.
          */
         static newControl(dataModel: goog.ui.media.PicasaAlbumModel, opt_domHelper?: goog.dom.DomHelper): goog.ui.media.Media;
@@ -58,7 +58,7 @@ declare module goog.ui.media {
          * the flash object pointing to a flash picasa album player.
          *
          * @param {goog.ui.Control} c The media control.
-         * @return {Element} The DOM structure that represents the control.
+         * @return {!Element} The DOM structure that represents the control.
          * @override
          */
         createDom(c: goog.ui.Control): Element;
@@ -98,7 +98,7 @@ declare module goog.ui.media {
          * @param {string=} opt_caption An optional caption of the picasa album.
          * @param {string=} opt_description An optional description of the picasa album.
          * @param {boolean=} opt_autoplay Whether to autoplay the slideshow.
-         * @return {goog.ui.media.PicasaAlbumModel} The picasa album data model that
+         * @return {!goog.ui.media.PicasaAlbumModel} The picasa album data model that
          *     represents the picasa URL.
          * @throws exception in case the parsing fails
          */

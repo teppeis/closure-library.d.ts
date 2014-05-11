@@ -70,7 +70,7 @@ declare module goog.ui {
          *     to display as the tab's caption.
          * @param {goog.ui.TabBar.Location} location Tab bar location relative to the
          *     tab contents.
-         * @return {Element} Table implementing a rounded corner tab.
+         * @return {!Element} Table implementing a rounded corner tab.
          * @protected
          */
         createTab(dom: goog.dom.DomHelper, caption: goog.ui.ControlContent, location: goog.ui.TabBar.Location): Element;
@@ -80,7 +80,7 @@ declare module goog.ui {
          * @param {goog.dom.DomHelper} dom DOM helper to use for element construction.
          * @param {goog.ui.ControlContent} caption Text caption or DOM structure
          *     to display as the tab's caption.
-         * @return {Element} Tab caption table row.
+         * @return {!Element} Tab caption table row.
          * @protected
          */
         createCaption(dom: goog.dom.DomHelper, caption: goog.ui.ControlContent): Element;
@@ -89,7 +89,7 @@ declare module goog.ui {
          * Creates a table row implementing a rounded tab edge.
          * @param {goog.dom.DomHelper} dom DOM helper to use for element construction.
          * @param {boolean} isTopEdge Whether to create a top or bottom edge.
-         * @return {Element} Rounded tab edge table row.
+         * @return {!Element} Rounded tab edge table row.
          * @protected
          */
         createEdge(dom: goog.dom.DomHelper, isTopEdge: boolean): Element;

@@ -55,7 +55,7 @@ declare module goog.module {
          *    is the module context.
          * @param {Object=} opt_handler Optional handler under whose scope to execute
          *     the callback.
-         * @return {goog.module.ModuleLoadCallback} Reference to the callback
+         * @return {!goog.module.ModuleLoadCallback} Reference to the callback
          *     object.
          */
         registerEarlyCallback(fn: Function, opt_handler?: Object): goog.module.ModuleLoadCallback;
@@ -66,7 +66,7 @@ declare module goog.module {
          *    is the module context.
          * @param {Object=} opt_handler Optional handler under whose scope to execute
          *     the callback.
-         * @return {goog.module.ModuleLoadCallback} Reference to the callback
+         * @return {!goog.module.ModuleLoadCallback} Reference to the callback
          *     object.
          */
         registerCallback(fn: Function, opt_handler?: Object): goog.module.ModuleLoadCallback;
@@ -77,7 +77,7 @@ declare module goog.module {
          *    is the failure type.
          * @param {Object=} opt_handler Optional handler under whose scope to execute
          *     the callback.
-         * @return {goog.module.ModuleLoadCallback} Reference to the callback
+         * @return {!goog.module.ModuleLoadCallback} Reference to the callback
          *     object.
          */
         registerErrback(fn: Function, opt_handler?: Object): goog.module.ModuleLoadCallback;

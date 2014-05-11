@@ -16,7 +16,7 @@ declare module goog.dom {
          * @param {Range|TextRange} range The browser range object.
          * @param {boolean=} opt_isReversed Whether the focus node is before the anchor
          *     node.
-         * @return {goog.dom.TextRange} A range wrapper object.
+         * @return {!goog.dom.TextRange} A range wrapper object.
          */
         static createFromBrowserRange(range: Range, opt_isReversed?: boolean): goog.dom.TextRange;
         
@@ -26,7 +26,7 @@ declare module goog.dom {
          * @param {Node} node The node to select.
          * @param {boolean=} opt_isReversed Whether the focus node is before the anchor
          *     node.
-         * @return {goog.dom.TextRange} A range wrapper object.
+         * @return {!goog.dom.TextRange} A range wrapper object.
          */
         static createFromNodeContents(node: Node, opt_isReversed?: boolean): goog.dom.TextRange;
         
@@ -97,7 +97,7 @@ declare module goog.dom {
     export interface DomSavedTextRange_ extends goog.dom.SavedRange {
         
         /**
-         * @return {goog.dom.AbstractRange} The restored range.
+         * @return {!goog.dom.AbstractRange} The restored range.
          * @override
          */
         restoreInternal(): goog.dom.AbstractRange;

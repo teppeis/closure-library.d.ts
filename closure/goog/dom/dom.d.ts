@@ -232,7 +232,7 @@ declare module goog.dom {
         
         /**
          * Gets the document scroll element.
-         * @return {Element} Scrolling element.
+         * @return {!Element} Scrolling element.
          */
         getDocumentScrollElement(): Element;
         
@@ -839,7 +839,7 @@ declare module goog.dom {
 
     /**
      * Gets the document scroll element.
-     * @return {Element} Scrolling element.
+     * @return {!Element} Scrolling element.
      */
     export function getDocumentScrollElement(): Element;
 

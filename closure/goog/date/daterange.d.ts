@@ -143,7 +143,7 @@ declare module goog.date {
          * @param {string} dateRangeKey A standard date range key.
          * @param {goog.date.Date=} opt_today The date to consider today.
          *     Defaults to today.
-         * @return {goog.date.DateRange} The date range that corresponds to that key.
+         * @return {!goog.date.DateRange} The date range that corresponds to that key.
          * @throws {Error} If no standard date range with that key exists.
          */
         static standardDateRange(dateRangeKey: string, opt_today?: goog.date.Date): goog.date.DateRange;

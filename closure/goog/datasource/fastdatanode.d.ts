@@ -186,7 +186,7 @@ declare module goog.ds {
         /**
          * Returns child nodes of this data node. Always returns an unmodifiable,
          * empty list.
-         * @return {goog.ds.DataNodeList} (Empty) list of child nodes.
+         * @return {!goog.ds.DataNodeList} (Empty) list of child nodes.
          * @override
          */
         getChildNodes(): goog.ds.DataNodeList;

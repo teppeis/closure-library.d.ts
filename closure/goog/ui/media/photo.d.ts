@@ -35,7 +35,7 @@ declare module goog.ui.media {
          * over the configuration.
          *
          * @param {goog.ui.media.MediaModel} dataModel The photo data model.
-         * @return {goog.ui.media.Media} A goog.ui.Control subclass with the photo
+         * @return {!goog.ui.media.Media} A goog.ui.Control subclass with the photo
          *     renderer.
          */
         static newControl(dataModel: goog.ui.media.MediaModel): goog.ui.media.Media;
@@ -44,7 +44,7 @@ declare module goog.ui.media {
          * Creates the initial DOM structure of a photo.
          *
          * @param {goog.ui.Control} c The media control.
-         * @return {Element} A DOM structure that represents the control.
+         * @return {!Element} A DOM structure that represents the control.
          * @override
          */
         createDom(c: goog.ui.Control): Element;

@@ -41,13 +41,13 @@ declare module goog.ui {
          *     add before the color palettes.
          * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM hepler, used for
          *     document interaction.
-         * @return {goog.ui.Menu} Color menu.
+         * @return {!goog.ui.Menu} Color menu.
          */
         static newColorMenu(opt_extraItems?: Array<goog.ui.Control>, opt_domHelper?: goog.dom.DomHelper): goog.ui.Menu;
         
         /**
          * Returns the currently selected color (null if none).
-         * @return {?string} The selected color.
+         * @return {string} The selected color.
          */
         getSelectedColor(): string;
         

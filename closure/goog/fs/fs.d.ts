@@ -13,7 +13,7 @@ declare module goog.fs {
 
     /**
      * @typedef {!{createObjectURL: (function(!Blob): string),
-     *             revokeObjectURL: function(string): void}}
+     *            revokeObjectURL: function(string): void}}
      */
     export interface UrlObject_ {
     }
@@ -40,6 +40,7 @@ declare module goog.fs {
 
     /**
      * Creates a blob URL for a blob object.
+     * Throws an error if the browser does not support Object Urls.
      *
      * @param {!Blob} blob The object for which to create the URL.
      * @return {string} The URL for the object.
@@ -48,10 +49,19 @@ declare module goog.fs {
 
     /**
      * Revokes a URL created by {@link goog.fs.createObjectUrl}.
+     * Throws an error if the browser does not support Object Urls.
      *
      * @param {string} url The URL to revoke.
      */
     export function revokeObjectUrl(url: string): void;
+
+    /**
+     * Checks whether this browser supports Object Urls. If not, calls to
+     * createObjectUrl and revokeObjectUrl will result in an error.
+     *
+     * @return {boolean} True if this browser supports Object Urls.
+     */
+    export function browserSupportsObjectUrls(): boolean;
 
     /**
      * Concatenates one or more values together and converts them to a Blob.
@@ -61,6 +71,19 @@ declare module goog.fs {
      * @return {!Blob} The blob.
      */
     export function getBlob(...var_args: string[]): Blob;
+
+    /**
+     * Creates a blob with the given properties.
+     * See https://developer.mozilla.org/en-US/docs/Web/API/Blob for more details.
+     *
+     * @param {Array.<string|!Blob>} parts The values that will make up the
+     *     resulting blob.
+     * @param {string=} opt_type The MIME type of the Blob.
+     * @param {string=} opt_endings Specifies how strings containing newlines are to
+     *     be written out.
+     * @return {!Blob} The blob.
+     */
+    export function getBlobWithProperties(parts: Array<string>, opt_type?: string, opt_endings?: string): Blob;
 
     /**
      * Converts a Blob or a File into a string. This should only be used when the

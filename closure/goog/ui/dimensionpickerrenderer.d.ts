@@ -46,7 +46,7 @@ declare module goog.ui {
         /**
          * Creates a div and adds the appropriate contents to it.
          * @param {goog.ui.Control} control Picker to render.
-         * @return {Element} Root element for the palette.
+         * @return {!Element} Root element for the palette.
          * @override
          */
         createDom(control: goog.ui.Control): Element;

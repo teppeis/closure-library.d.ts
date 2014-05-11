@@ -386,6 +386,11 @@ declare module goog.i18n {
     export var DateTimeSymbols_ca_ES: any;
 
     /**
+     * Date/time formatting symbols for locale ca_ES_VALENCIA.
+     */
+    export var DateTimeSymbols_ca_ES_VALENCIA: any;
+
+    /**
      * Date/time formatting symbols for locale ca_FR.
      */
     export var DateTimeSymbols_ca_FR: any;
@@ -664,16 +669,6 @@ declare module goog.i18n {
      * Date/time formatting symbols for locale en_DM.
      */
     export var DateTimeSymbols_en_DM: any;
-
-    /**
-     * Date/time formatting symbols for locale en_Dsrt.
-     */
-    export var DateTimeSymbols_en_Dsrt: any;
-
-    /**
-     * Date/time formatting symbols for locale en_Dsrt_US.
-     */
-    export var DateTimeSymbols_en_Dsrt_US: any;
 
     /**
      * Date/time formatting symbols for locale en_ER.
@@ -1176,6 +1171,21 @@ declare module goog.i18n {
     export var DateTimeSymbols_ff: any;
 
     /**
+     * Date/time formatting symbols for locale ff_CM.
+     */
+    export var DateTimeSymbols_ff_CM: any;
+
+    /**
+     * Date/time formatting symbols for locale ff_GN.
+     */
+    export var DateTimeSymbols_ff_GN: any;
+
+    /**
+     * Date/time formatting symbols for locale ff_MR.
+     */
+    export var DateTimeSymbols_ff_MR: any;
+
+    /**
      * Date/time formatting symbols for locale ff_SN.
      */
     export var DateTimeSymbols_ff_SN: any;
@@ -1434,6 +1444,16 @@ declare module goog.i18n {
      * Date/time formatting symbols for locale fur_IT.
      */
     export var DateTimeSymbols_fur_IT: any;
+
+    /**
+     * Date/time formatting symbols for locale fy.
+     */
+    export var DateTimeSymbols_fy: any;
+
+    /**
+     * Date/time formatting symbols for locale fy_NL.
+     */
+    export var DateTimeSymbols_fy_NL: any;
 
     /**
      * Date/time formatting symbols for locale ga.
@@ -2849,6 +2869,21 @@ declare module goog.i18n {
      * Date/time formatting symbols for locale tzm_Latn_MA.
      */
     export var DateTimeSymbols_tzm_Latn_MA: any;
+
+    /**
+     * Date/time formatting symbols for locale ug.
+     */
+    export var DateTimeSymbols_ug: any;
+
+    /**
+     * Date/time formatting symbols for locale ug_Arab.
+     */
+    export var DateTimeSymbols_ug_Arab: any;
+
+    /**
+     * Date/time formatting symbols for locale ug_Arab_CN.
+     */
+    export var DateTimeSymbols_ug_Arab_CN: any;
 
     /**
      * Date/time formatting symbols for locale uk_UA.

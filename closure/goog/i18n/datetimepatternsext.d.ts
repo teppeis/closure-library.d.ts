@@ -2571,6 +2571,21 @@ declare module goog.i18n {
     export var DateTimePatterns_tzm_Latn_MA: any;
 
     /**
+     * Extended set of localized date/time patterns for locale ug.
+     */
+    export var DateTimePatterns_ug: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale ug_Arab.
+     */
+    export var DateTimePatterns_ug_Arab: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale ug_Arab_CN.
+     */
+    export var DateTimePatterns_ug_Arab_CN: any;
+
+    /**
      * Extended set of localized date/time patterns for locale uk_UA.
      */
     export var DateTimePatterns_uk_UA: any;

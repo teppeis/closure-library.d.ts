@@ -53,7 +53,7 @@ declare module goog.ds {
         
         /**
          * Get the value of the node
-         * @return {Object} The value of the node, or null if no value.
+         * @return {!Object} The value of the node.
          * @override
          */
         get(): Object;

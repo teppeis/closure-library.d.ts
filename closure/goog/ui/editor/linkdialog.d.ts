@@ -78,7 +78,7 @@ declare module goog.ui.editor {
          * Creates and returns the event object to be used when dispatching the OK
          * event to listeners based on which tab is currently selected and the contents
          * of the input fields of that tab.
-         * @return {goog.ui.editor.LinkDialog.OkEvent} The event object to be used when
+         * @return {!goog.ui.editor.LinkDialog.OkEvent} The event object to be used when
          *     dispatching the OK event to listeners.
          * @protected
          * @override

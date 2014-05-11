@@ -237,6 +237,12 @@ declare module goog.i18n {
     export interface NumberFormatSymbols_ca_ES extends goog.i18n.NumberFormatSymbols_ca {}
 
     /**
+     * Number formatting symbols for locale ca_ES_VALENCIA.
+     * @enum {string}
+     */
+    export interface NumberFormatSymbols_ca_ES_VALENCIA extends goog.i18n.NumberFormatSymbols_ca {}
+
+    /**
      * Number formatting symbols for locale ca_FR.
      * @enum {string}
      */
@@ -539,12 +545,6 @@ declare module goog.i18n {
      * @enum {string}
      */
     export interface NumberFormatSymbols_en_DG extends goog.i18n.NumberFormatSymbols_en {}
-
-    /**
-     * Number formatting symbols for locale en_Dsrt_US.
-     * @enum {string}
-     */
-    export interface NumberFormatSymbols_en_Dsrt_US extends goog.i18n.NumberFormatSymbols_en {}
 
     /**
      * Number formatting symbols for locale en_FM.

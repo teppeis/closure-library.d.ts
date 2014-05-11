@@ -59,7 +59,7 @@ declare module goog.ui.media {
          *     an mp3 url on {@code dataModel.getUrl}.
          * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper, used for
          *     document interaction.
-         * @return {goog.ui.media.Media} A goog.ui.Control subclass with the mp3
+         * @return {!goog.ui.media.Media} A goog.ui.Control subclass with the mp3
          *     renderer.
          */
         static newControl(dataModel: goog.ui.media.MediaModel, opt_domHelper?: goog.dom.DomHelper): goog.ui.media.Media;
@@ -87,7 +87,7 @@ declare module goog.ui.media {
          * the flash object pointing to a flash mp3 player.
          *
          * @param {goog.ui.Control} c The media control.
-         * @return {Element} A DOM structure that represents the control.
+         * @return {!Element} A DOM structure that represents the control.
          * @override
          */
         createDom(c: goog.ui.Control): Element;

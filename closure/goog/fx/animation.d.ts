@@ -128,7 +128,7 @@ declare module goog.fx {
         
         /**
          * Returns the coordinates as integers (rounded to nearest integer).
-         * @return {Array.<number>} An array of the coordinates rounded to
+         * @return {!Array.<number>} An array of the coordinates rounded to
          *     the nearest integer.
          */
         coordsAsInts(): Array<number>;

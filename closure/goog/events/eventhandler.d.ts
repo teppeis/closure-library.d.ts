@@ -98,7 +98,7 @@ declare module goog.events {
          *     Callback method, or an object with a handleEvent function.
          * @param {boolean=} opt_capt Whether to fire in capture phase (defaults to
          *     false).
-         * @return {goog.events.EventHandler} This object, allowing for chaining of
+         * @return {!goog.events.EventHandler} This object, allowing for chaining of
          *     calls.
          */
         listenWithWrapper(src: EventTarget, wrapper: goog.events.EventWrapper, listener: (arg0: any) => any, opt_capt?: boolean): goog.events.EventHandler<any>;
@@ -116,7 +116,7 @@ declare module goog.events {
          *     listener or an object with handleEvent function.
          * @param {boolean|undefined} capture Optional whether to use capture phase.
          * @param {T} scope Object in whose scope to call the listener.
-         * @return {goog.events.EventHandler} This object, allowing for chaining of
+         * @return {!goog.events.EventHandler} This object, allowing for chaining of
          *     calls.
          * @template T
          */

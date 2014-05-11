@@ -21,6 +21,12 @@ declare module goog.date {
         constructor(opt_year?: number, opt_month?: number, opt_date?: number, opt_hours?: number, opt_minutes?: number, opt_seconds?: number, opt_milliseconds?: number);
         
         /**
+         * @param {number} timestamp Number of milliseconds since Epoch.
+         * @return {!goog.date.UtcDateTime}
+         */
+        static fromTimestamp(timestamp: number): goog.date.UtcDateTime;
+        
+        /**
          * Creates a DateTime from a UTC datetime string expressed in ISO 8601 format.
          *
          * @param {string} formatted A date or datetime expressed in ISO 8601 format.

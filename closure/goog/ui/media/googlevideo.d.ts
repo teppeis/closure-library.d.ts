@@ -43,7 +43,7 @@ declare module goog.ui.media {
          * @param {goog.ui.media.GoogleVideoModel} dataModel The GoogleVideo data model.
          * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper, used for
          *     document interaction.
-         * @return {goog.ui.media.Media} A Control binded to the GoogleVideo renderer.
+         * @return {!goog.ui.media.Media} A Control binded to the GoogleVideo renderer.
          */
         static newControl(dataModel: goog.ui.media.GoogleVideoModel, opt_domHelper?: goog.dom.DomHelper): goog.ui.media.Media;
         
@@ -52,7 +52,7 @@ declare module goog.ui.media {
          * basically a the flash object pointing to a GoogleVideo video player.
          *
          * @param {goog.ui.Control} c The media control.
-         * @return {Element} The DOM structure that represents this control.
+         * @return {!Element} The DOM structure that represents this control.
          * @override
          */
         createDom(c: goog.ui.Control): Element;
@@ -93,7 +93,7 @@ declare module goog.ui.media {
          * @param {string=} opt_description An optional description of the GoogleVideo
          *     video.
          * @param {boolean=} opt_autoplay Whether to autoplay video.
-         * @return {goog.ui.media.GoogleVideoModel} The data model that represents the
+         * @return {!goog.ui.media.GoogleVideoModel} The data model that represents the
          *     GoogleVideo URL.
          * @see goog.ui.media.GoogleVideoModel.getVideoId()
          * @throws Error in case the parsing fails.

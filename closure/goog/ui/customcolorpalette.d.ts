@@ -20,7 +20,7 @@ declare module goog.ui {
         /**
          * Returns an array of DOM nodes for each color, and an additional cell with a
          * '+'.
-         * @return {Array.<Node>} Array of div elements.
+         * @return {!Array.<Node>} Array of div elements.
          * @override
          */
         createColorNodes(): Array<Node>;

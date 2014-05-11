@@ -245,12 +245,16 @@ declare module goog.string$ {
     export function newLineToBr(str: string, opt_xml?: boolean): string;
 
     /**
-     * Escape double quote '"' characters in addition to '&', '<', and '>' so that a
-     * string can be included in an HTML tag attribute value within double quotes.
+     * Escapes double quote '"' and single quote '\'' characters in addition to
+     * '&', '<', and '>' so that a string can be included in an HTML tag attribute
+     * value within double or single quotes.
      *
      * It should be noted that > doesn't need to be escaped for the HTML or XML to
      * be valid, but it has been decided to escape it for consistency with other
      * implementations.
+     *
+     * With goog.string.DETECT_DOUBLE_ESCAPING, this function escapes also the
+     * lowercase letter "e".
      *
      * NOTE(user):
      * HtmlEscape is often called during the generation of large blocks of HTML.
@@ -311,6 +315,14 @@ declare module goog.string$ {
      * @return {string} An escaped copy of {@code str}.
      */
     export function whitespaceEscape(str: string, opt_xml?: boolean): string;
+
+    /**
+     * Preserve spaces that would be otherwise collapsed in HTML by replacing them
+     * with non-breaking space Unicode characters.
+     * @param {string} str The string in which to preserve whitespace.
+     * @return {string} A copy of {@code str} with preserved whitespace.
+     */
+    export function preserveSpaces(str: string): string;
 
     /**
      * Strip quote characters around a string.  The second argument is a string of

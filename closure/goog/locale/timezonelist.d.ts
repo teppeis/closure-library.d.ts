@@ -14,7 +14,7 @@ declare module goog.locale {
      *    this parameter is not speficied, current locale is used to
      *    extract this information.
      *
-     * @return {Array.<Object>} Localized and relevant list of timezone names
+     * @return {!Array.<Object>} Localized and relevant list of timezone names
      *    and ids.
      */
     export function getTimeZoneSelectedShortNames(opt_regionOrLang?: string): Array<Object>;
@@ -33,7 +33,7 @@ declare module goog.locale {
      *    this parameter is not speficied, current locale is used to
      *    extract this information.
      *
-     * @return {Array.<Object>} Localized and relevant list of timezone names
+     * @return {!Array.<Object>} Localized and relevant list of timezone names
      *    and ids.
      */
     export function getTimeZoneSelectedLongNames(opt_regionOrLang?: string): Array<Object>;

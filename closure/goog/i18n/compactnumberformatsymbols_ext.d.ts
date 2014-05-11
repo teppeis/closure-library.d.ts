@@ -546,11 +546,6 @@ declare module goog.i18n {
     export var CompactNumberFormatSymbols_en_DM: any;
 
     /**
-     * Compact number formatting symbols for locale en_Dsrt.
-     */
-    export var CompactNumberFormatSymbols_en_Dsrt: any;
-
-    /**
      * Compact number formatting symbols for locale en_ER.
      */
     export var CompactNumberFormatSymbols_en_ER: any;
@@ -966,6 +961,21 @@ declare module goog.i18n {
     export var CompactNumberFormatSymbols_ff: any;
 
     /**
+     * Compact number formatting symbols for locale ff_CM.
+     */
+    export var CompactNumberFormatSymbols_ff_CM: any;
+
+    /**
+     * Compact number formatting symbols for locale ff_GN.
+     */
+    export var CompactNumberFormatSymbols_ff_GN: any;
+
+    /**
+     * Compact number formatting symbols for locale ff_MR.
+     */
+    export var CompactNumberFormatSymbols_ff_MR: any;
+
+    /**
      * Compact number formatting symbols for locale ff_SN.
      */
     export var CompactNumberFormatSymbols_ff_SN: any;
@@ -1164,6 +1174,16 @@ declare module goog.i18n {
      * Compact number formatting symbols for locale fur_IT.
      */
     export var CompactNumberFormatSymbols_fur_IT: any;
+
+    /**
+     * Compact number formatting symbols for locale fy.
+     */
+    export var CompactNumberFormatSymbols_fy: any;
+
+    /**
+     * Compact number formatting symbols for locale fy_NL.
+     */
+    export var CompactNumberFormatSymbols_fy_NL: any;
 
     /**
      * Compact number formatting symbols for locale ga.
@@ -2319,6 +2339,21 @@ declare module goog.i18n {
      * Compact number formatting symbols for locale tzm_Latn_MA.
      */
     export var CompactNumberFormatSymbols_tzm_Latn_MA: any;
+
+    /**
+     * Compact number formatting symbols for locale ug.
+     */
+    export var CompactNumberFormatSymbols_ug: any;
+
+    /**
+     * Compact number formatting symbols for locale ug_Arab.
+     */
+    export var CompactNumberFormatSymbols_ug_Arab: any;
+
+    /**
+     * Compact number formatting symbols for locale ug_Arab_CN.
+     */
+    export var CompactNumberFormatSymbols_ug_Arab_CN: any;
 
     /**
      * Compact number formatting symbols for locale ur_IN.

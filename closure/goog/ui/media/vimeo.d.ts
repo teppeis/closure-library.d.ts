@@ -43,7 +43,7 @@ declare module goog.ui.media {
          * @param {goog.ui.media.VimeoModel} dataModel A vimeo video URL.
          * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper, used for
          *     document interaction.
-         * @return {goog.ui.media.Media} A Control binded to the Vimeo renderer.
+         * @return {!goog.ui.media.Media} A Control binded to the Vimeo renderer.
          */
         static newControl(dataModel: goog.ui.media.VimeoModel, opt_domHelper?: goog.dom.DomHelper): goog.ui.media.Media;
         
@@ -52,7 +52,7 @@ declare module goog.ui.media {
          * the flash object pointing to a vimeo video player.
          *
          * @param {goog.ui.Control} c The media control.
-         * @return {Element} The DOM structure that represents this control.
+         * @return {!Element} The DOM structure that represents this control.
          * @override
          */
         createDom(c: goog.ui.Control): Element;
@@ -89,7 +89,7 @@ declare module goog.ui.media {
          * @param {string=} opt_caption An optional caption of the vimeo video.
          * @param {string=} opt_description An optional description of the vimeo video.
          * @param {boolean=} opt_autoplay Whether to autoplay video.
-         * @return {goog.ui.media.VimeoModel} The vimeo data model that represents this
+         * @return {!goog.ui.media.VimeoModel} The vimeo data model that represents this
          *     URL.
          * @throws exception in case the parsing fails
          */

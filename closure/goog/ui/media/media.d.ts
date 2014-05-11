@@ -60,7 +60,7 @@ declare module goog.ui.media {
          * specific renderers can hide/show the caption as desired.
          *
          * @param {goog.ui.Control} control The control instance.
-         * @return {Element} The DOM structure that represents control.
+         * @return {!Element} The DOM structure that represents control.
          * @override
          */
         createDom(control: goog.ui.Control): Element;

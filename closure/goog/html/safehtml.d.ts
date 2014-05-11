@@ -107,6 +107,18 @@ declare module goog.html {
         static create(tagName: string, opt_attributes?: Object, opt_content?: goog.html.SafeHtml.TextOrHtml_): goog.html.SafeHtml;
         
         /**
+         * Creates a SafeHtml content with known directionality consisting of a tag with
+         * optional attributes and optional content.
+         * @param {!goog.i18n.bidi.Dir} dir Directionality.
+         * @param {string} tagName
+         * @param {!Object.<string, goog.html.SafeHtml.AttributeValue_>=} opt_attributes
+         * @param {!goog.html.SafeHtml.TextOrHtml_|
+         *     !Array.<!goog.html.SafeHtml.TextOrHtml_>=} opt_content
+         * @return {!goog.html.SafeHtml} The SafeHtml content with the tag.
+         */
+        static createWithDir(dir: goog.i18n.bidi.Dir, tagName: string, opt_attributes?: Object, opt_content?: goog.html.SafeHtml.TextOrHtml_): goog.html.SafeHtml;
+        
+        /**
          * Creates a new SafeHtml object by concatenating the values.
          * @param {...!goog.html.SafeHtml.TextOrHtml_|
          *     !Array.<!goog.html.SafeHtml.TextOrHtml_>} var_args Elements of array
@@ -114,6 +126,17 @@ declare module goog.html {
          * @return {!goog.html.SafeHtml}
          */
         static concat(...var_args: goog.html.SafeHtml.TextOrHtml_[]): goog.html.SafeHtml;
+        
+        /**
+         * Creates a new SafeHtml object with known directionality by concatenating the
+         * values.
+         * @param {!goog.i18n.bidi.Dir} dir Directionality.
+         * @param {...!goog.html.SafeHtml.TextOrHtml_|
+         *     !Array.<!goog.html.SafeHtml.TextOrHtml_>} var_args Elements of array
+         *     arguments would be processed recursively.
+         * @return {!goog.html.SafeHtml}
+         */
+        static concatWithDir(dir: goog.i18n.bidi.Dir, ...var_args: goog.html.SafeHtml.TextOrHtml_[]): goog.html.SafeHtml;
     }
 }
 

@@ -48,7 +48,7 @@ declare module goog.ui.media {
          * @param {goog.ui.media.YoutubeModel} youtubeModel The youtube data model.
          * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper, used for
          *     document interaction.
-         * @return {goog.ui.media.Media} A Control binded to the youtube renderer.
+         * @return {!goog.ui.media.Media} A Control binded to the youtube renderer.
          */
         static newControl(youtubeModel: goog.ui.media.YoutubeModel, opt_domHelper?: goog.dom.DomHelper): goog.ui.media.Media;
         
@@ -99,7 +99,7 @@ declare module goog.ui.media {
          * @param {string=} opt_caption An optional caption of the youtube video.
          * @param {string=} opt_description An optional description of the youtube
          *     video.
-         * @return {goog.ui.media.YoutubeModel} The data model that represents the
+         * @return {!goog.ui.media.YoutubeModel} The data model that represents the
          *     youtube URL.
          * @see goog.ui.media.YoutubeModel.getVideoId()
          * @throws Error in case the parsing fails.

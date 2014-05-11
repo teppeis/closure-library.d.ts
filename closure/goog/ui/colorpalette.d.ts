@@ -47,7 +47,7 @@ declare module goog.ui {
         setSelectedColor(color: string): void;
         
         /**
-         * @return {Array.<Node>} An array of DOM nodes for each color.
+         * @return {!Array.<!Node>} An array of DOM nodes for each color.
          * @protected
          */
         createColorNodes(): Array<Node>;
