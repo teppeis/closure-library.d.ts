@@ -12,7 +12,7 @@ declare module goog.history {
      * @extends {goog.events.EventTarget}
      * @final
      */
-    export class Html5History extends goog.events.EventTarget {
+    class Html5History extends goog.events.EventTarget {
         constructor(opt_win?: Window, opt_transformer?: goog.history.Html5History.TokenTransformer);
         
         /**
@@ -87,7 +87,7 @@ declare module goog.history.Html5History {
      *
      * @interface
      */
-    export interface TokenTransformer {
+    interface TokenTransformer {
         
         /**
          * Retrieves a history token given the path prefix and

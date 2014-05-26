@@ -8,7 +8,7 @@ declare module goog.ui {
      * @extends {goog.ui.Menu}
      * @constructor
      */
-    export class PopupMenu extends goog.ui.Menu {
+    class PopupMenu extends goog.ui.Menu {
         constructor(opt_domHelper?: goog.dom.DomHelper, opt_renderer?: goog.ui.MenuRenderer);
         
         /**

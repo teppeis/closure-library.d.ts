@@ -26,7 +26,7 @@ declare module goog.ui.media {
      * @extends {goog.ui.media.MediaRenderer}
      * @final
      */
-    export class PicasaAlbum extends goog.ui.media.MediaRenderer {
+    class PicasaAlbum extends goog.ui.media.MediaRenderer {
         constructor();
         
         /**
@@ -88,7 +88,7 @@ declare module goog.ui.media {
      * @extends {goog.ui.media.MediaModel}
      * @final
      */
-    export class PicasaAlbumModel extends goog.ui.media.MediaModel {
+    class PicasaAlbumModel extends goog.ui.media.MediaModel {
         constructor(userId: string, albumId: string, opt_authKey?: string, opt_caption?: string, opt_description?: string, opt_autoplay?: boolean);
         
         /**

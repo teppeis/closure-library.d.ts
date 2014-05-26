@@ -13,7 +13,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Component}
      */
-    export class Bubble extends goog.ui.Component {
+    class Bubble extends goog.ui.Component {
         constructor(message: string, opt_config?: Object, opt_domHelper?: goog.dom.DomHelper);
         
         /**

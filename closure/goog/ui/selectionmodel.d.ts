@@ -7,7 +7,7 @@ declare module goog.ui {
      * @extends {goog.events.EventTarget}
      * @constructor
      */
-    export class SelectionModel extends goog.events.EventTarget {
+    class SelectionModel extends goog.events.EventTarget {
         constructor(opt_items?: Array<Object>);
         
         /**

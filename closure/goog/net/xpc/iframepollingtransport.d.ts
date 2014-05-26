@@ -16,7 +16,7 @@ declare module goog.net.xpc {
      * @extends {goog.net.xpc.Transport}
      * @final
      */
-    export class IframePollingTransport extends goog.net.xpc.Transport {
+    class IframePollingTransport extends goog.net.xpc.Transport {
         constructor(channel: goog.net.xpc.CrossPageChannel, opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -78,7 +78,7 @@ declare module goog.net.xpc.IframePollingTransport {
      * @param {Object} windowObj The frame used for sending information to.
      * @final
      */
-    export class Sender {
+    class Sender {
         constructor(url: string, windowObj: Object);
         
         /**
@@ -101,7 +101,7 @@ declare module goog.net.xpc.IframePollingTransport {
      *     location has changed.
      * @final
      */
-    export class Receiver {
+    class Receiver {
         constructor(transport: goog.net.xpc.IframePollingTransport, windowObj: Object, callback: Function);
         
         /**

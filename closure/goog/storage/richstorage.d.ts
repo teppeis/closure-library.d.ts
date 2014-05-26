@@ -8,7 +8,7 @@ declare module goog.storage {
      * @constructor
      * @extends {goog.storage.Storage}
      */
-    export class RichStorage extends goog.storage.Storage {
+    class RichStorage extends goog.storage.Storage {
         constructor(mechanism: goog.storage.mechanism.Mechanism);
         
         /**
@@ -46,7 +46,7 @@ declare module goog.storage.RichStorage {
      * @constructor
      * @final
      */
-    export class Wrapper {
+    class Wrapper {
         constructor(value: any);
         
         /**

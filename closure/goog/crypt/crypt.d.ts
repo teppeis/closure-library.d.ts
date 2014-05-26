@@ -7,7 +7,7 @@ declare module goog.crypt {
      * @return {!Array.<number>} Array of numbers corresponding to the
      *     UCS character codes of each character in str.
      */
-    export function stringToByteArray(str: string): Array<number>;
+    function stringToByteArray(str: string): Array<number>;
 
     /**
      * Turns an array of numbers into the string given by the concatenation of the
@@ -15,7 +15,7 @@ declare module goog.crypt {
      * @param {Array} bytes Array of numbers representing characters.
      * @return {string} Stringification of the array.
      */
-    export function byteArrayToString(bytes: Array<any>): string;
+    function byteArrayToString(bytes: Array<any>): string;
 
     /**
      * Turns an array of numbers into the hex string given by the concatenation of
@@ -24,7 +24,7 @@ declare module goog.crypt {
      *     representing characters.
      * @return {string} Hex string.
      */
-    export function byteArrayToHex(array: Uint8Array): string;
+    function byteArrayToHex(array: Uint8Array): string;
 
     /**
      * Converts a hex string into an integer array.
@@ -32,21 +32,21 @@ declare module goog.crypt {
      *     per integer).
      * @return {!Array.<number>} Array of {0,255} integers for the given string.
      */
-    export function hexToByteArray(hexString: string): Array<number>;
+    function hexToByteArray(hexString: string): Array<number>;
 
     /**
      * Converts a JS string to a UTF-8 "byte" array.
      * @param {string} str 16-bit unicode string.
      * @return {!Array.<number>} UTF-8 byte array.
      */
-    export function stringToUtf8ByteArray(str: string): Array<number>;
+    function stringToUtf8ByteArray(str: string): Array<number>;
 
     /**
      * Converts a UTF-8 byte array to JavaScript's 16-bit Unicode.
      * @param {Uint8Array|Int8Array|Array.<number>} bytes UTF-8 byte array.
      * @return {string} 16-bit Unicode string.
      */
-    export function utf8ByteArrayToString(bytes: Uint8Array): string;
+    function utf8ByteArrayToString(bytes: Uint8Array): string;
 
     /**
      * XOR two byte arrays.
@@ -54,5 +54,5 @@ declare module goog.crypt {
      * @param {!ArrayBufferView|!Array.<number>} bytes2 Byte array 2.
      * @return {!Array.<number>} Resulting XOR of the two byte arrays.
      */
-    export function xorByteArray(bytes1: ArrayBufferView, bytes2: ArrayBufferView): Array<number>;
+    function xorByteArray(bytes1: ArrayBufferView, bytes2: ArrayBufferView): Array<number>;
 }

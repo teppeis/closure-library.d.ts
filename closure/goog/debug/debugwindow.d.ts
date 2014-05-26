@@ -12,7 +12,7 @@ declare module goog.debug {
      * @param {string=} opt_identifier Identifier for this logging class.
      * @param {string=} opt_prefix Prefix prepended to messages.
      */
-    export class DebugWindow {
+    class DebugWindow {
         constructor(opt_identifier?: string, opt_prefix?: string);
         
         /**

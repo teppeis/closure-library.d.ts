@@ -4,7 +4,7 @@ declare module goog.net.tmpnetwork {
      * Default timeout to allow for google.com pings.
      * @type {number}
      */
-    export var GOOGLECOM_TIMEOUT: number;
+    var GOOGLECOM_TIMEOUT: number;
 
     /**
      * Pings the network to check if an error is a server error or user's network
@@ -17,7 +17,7 @@ declare module goog.net.tmpnetwork {
      *     people using images served off of google.com for this purpose. The
      *     default will go away when all usages have been changed.
      */
-    export function testGoogleCom(callback: Function, opt_imageUri?: goog.Uri): void;
+    function testGoogleCom(callback: Function, opt_imageUri?: goog.Uri): void;
 
     /**
      * Test loading the given image, retrying if necessary.
@@ -28,7 +28,7 @@ declare module goog.net.tmpnetwork {
      * @param {number=} opt_pauseBetweenRetriesMS Optional number of milliseconds
      *     between retries - defaults to 0.
      */
-    export function testLoadImageWithRetries(url: string, timeout: number, callback: Function, retries: number, opt_pauseBetweenRetriesMS?: number): void;
+    function testLoadImageWithRetries(url: string, timeout: number, callback: Function, retries: number, opt_pauseBetweenRetriesMS?: number): void;
 
     /**
      * Test loading the given image.
@@ -36,5 +36,5 @@ declare module goog.net.tmpnetwork {
      * @param {number} timeout Milliseconds before giving up.
      * @param {Function} callback Function to call with results.
      */
-    export function testLoadImage(url: string, timeout: number, callback: Function): void;
+    function testLoadImage(url: string, timeout: number, callback: Function): void;
 }

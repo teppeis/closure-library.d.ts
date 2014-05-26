@@ -5,14 +5,14 @@ declare module goog.structs {
      * @param {Object} col The collection-like object.
      * @return {number} The number of values in the collection-like object.
      */
-    export function getCount(col: Object): number;
+    function getCount(col: Object): number;
 
     /**
      * Returns the values of the collection-like object.
      * @param {Object} col The collection-like object.
      * @return {!Array} The values in the collection-like object.
      */
-    export function getValues(col: Object): Array<any>;
+    function getValues(col: Object): Array<any>;
 
     /**
      * Returns the keys of the collection. Some collections have no notion of
@@ -20,7 +20,7 @@ declare module goog.structs {
      * @param {Object} col The collection-like object.
      * @return {!Array|undefined} The keys in the collection.
      */
-    export function getKeys(col: Object): Array<any>;
+    function getKeys(col: Object): Array<any>;
 
     /**
      * Whether the collection contains the given value. This is O(n) and uses
@@ -29,20 +29,20 @@ declare module goog.structs {
      * @param {*} val The value to check for.
      * @return {boolean} True if the map contains the value.
      */
-    export function contains(col: Object, val: any): boolean;
+    function contains(col: Object, val: any): boolean;
 
     /**
      * Whether the collection is empty.
      * @param {Object} col The collection-like object.
      * @return {boolean} True if empty.
      */
-    export function isEmpty(col: Object): boolean;
+    function isEmpty(col: Object): boolean;
 
     /**
      * Removes all the elements from the collection.
      * @param {Object} col The collection-like object.
      */
-    export function clear(col: Object): void;
+    function clear(col: Object): void;
 
     /**
      * Calls a function for each value in a collection. The function takes
@@ -60,7 +60,7 @@ declare module goog.structs {
      *     within {@code f}.
      * @template T,S
      */
-    export function forEach<T, S>(col: S, f: (arg0: any, arg1: any, arg2: S) => any, opt_obj?: T): void;
+    function forEach<T, S>(col: S, f: (arg0: any, arg1: any, arg2: S) => any, opt_obj?: T): void;
 
     /**
      * Calls a function for every value in the collection. When a call returns true,
@@ -80,7 +80,7 @@ declare module goog.structs {
      *     has keys and values a plain old JS object is returned.
      * @template T,S
      */
-    export function filter<T, S>(col: S, f: (arg0: any, arg1: any, arg2: S) => boolean, opt_obj?: T): Object;
+    function filter<T, S>(col: S, f: (arg0: any, arg1: any, arg2: S) => boolean, opt_obj?: T): Object;
 
     /**
      * Calls a function for every value in the collection and adds the result into a
@@ -98,7 +98,7 @@ declare module goog.structs {
      *     values a plain old JS object is returned.
      * @template T,S,V
      */
-    export function map<T, S, V>(col: S, f: (arg0: any, arg1: any, arg2: S) => V, opt_obj?: T): Object;
+    function map<T, S, V>(col: S, f: (arg0: any, arg1: any, arg2: S) => V, opt_obj?: T): Object;
 
     /**
      * Calls f for each value in a collection. If any call returns true this returns
@@ -114,7 +114,7 @@ declare module goog.structs {
      * @return {boolean} True if any value passes the test.
      * @template T,S
      */
-    export function some<T, S>(col: S, f: (arg0: any, arg1: any, arg2: S) => boolean, opt_obj?: T): boolean;
+    function some<T, S>(col: S, f: (arg0: any, arg1: any, arg2: S) => boolean, opt_obj?: T): boolean;
 
     /**
      * Calls f for each value in a collection. If all calls return true this return
@@ -131,5 +131,5 @@ declare module goog.structs {
      * @return {boolean} True if all key-value pairs pass the test.
      * @template T,S
      */
-    export function every<T, S>(col: S, f: (arg0: any, arg1: any, arg2: S) => boolean, opt_obj?: T): boolean;
+    function every<T, S>(col: S, f: (arg0: any, arg1: any, arg2: S) => boolean, opt_obj?: T): boolean;
 }

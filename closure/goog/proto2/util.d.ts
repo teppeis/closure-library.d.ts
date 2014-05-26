@@ -8,12 +8,12 @@ declare module goog.proto2.Util {
      * @param {string=} opt_message Error message in case of failure.
      * @throws {Error} Assertion failed, the condition evaluates to false.
      */
-    export function assert(condition: any, opt_message?: string): void;
+    function assert(condition: any, opt_message?: string): void;
 
     /**
      * Returns true if debug assertions (checks) are on.
      *
      * @return {boolean} The value of the PBCHECK constant.
      */
-    export function conductChecks(): boolean;
+    function conductChecks(): boolean;
 }

@@ -7,5 +7,5 @@ declare module goog.userAgent.iphoto {
      * @return {boolean} Whether the installed version of iPhoto is as new or newer
      *     than a given version.
      */
-    export function isVersion(version: string): boolean;
+    function isVersion(version: string): boolean;
 }

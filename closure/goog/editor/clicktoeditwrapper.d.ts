@@ -6,7 +6,7 @@ declare module goog.editor {
      * @constructor
      * @extends {goog.Disposable}
      */
-    export class ClickToEditWrapper extends goog.Disposable {
+    class ClickToEditWrapper extends goog.Disposable {
         constructor(fieldObj: goog.editor.Field);
         
         /** @return {goog.editor.Field} The field. */

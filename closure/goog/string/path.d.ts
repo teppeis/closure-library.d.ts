@@ -7,7 +7,7 @@ declare module goog.string$.path {
      * @return {string} path The final component of a pathname, i.e. everything
      *     after the final slash.
      */
-    export function baseName(path: string): string;
+    function baseName(path: string): string;
 
     /**
      * Alias to goog.string.path.baseName.
@@ -15,7 +15,7 @@ declare module goog.string$.path {
      * @return {string} path The final component of a pathname.
      * @deprecated Use goog.string.path.baseName.
      */
-    export function basename(path: string): string;
+    function basename(path: string): string;
 
     /**
      * Returns the directory component of a pathname.
@@ -24,14 +24,14 @@ declare module goog.string$.path {
      * @return {string} The directory component of a pathname, i.e. everything
      *     leading up to the final slash.
      */
-    export function dirname(path: string): string;
+    function dirname(path: string): string;
 
     /**
      * Extracts the extension part of a pathname.
      * @param {string} path The path name to process.
      * @return {string} The extension if any, otherwise the empty string.
      */
-    export function extension(path: string): string;
+    function extension(path: string): string;
 
     /**
      * Joins one or more path components (e.g. 'foo/' and 'bar' make 'foo/bar').
@@ -40,7 +40,7 @@ declare module goog.string$.path {
      * @param {...string} var_args One of more path components.
      * @return {string} The path components joined.
      */
-    export function join(...var_args: string[]): string;
+    function join(...var_args: string[]): string;
 
     /**
      * Normalizes a pathname by collapsing duplicate separators, parent directory
@@ -49,7 +49,7 @@ declare module goog.string$.path {
      * @param {string} path One or more path components.
      * @return {string} The path after normalization.
      */
-    export function normalizePath(path: string): string;
+    function normalizePath(path: string): string;
 
     /**
      * Splits a pathname into "dirname" and "baseName" components, where "baseName"
@@ -58,5 +58,5 @@ declare module goog.string$.path {
      * @param {string} path A pathname.
      * @return {!Array.<string>} An array of [dirname, basename].
      */
-    export function split(path: string): Array<string>;
+    function split(path: string): Array<string>;
 }

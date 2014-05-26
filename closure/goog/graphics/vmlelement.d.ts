@@ -15,7 +15,7 @@ declare module goog.graphics {
      *     http://en.wikipedia.org/wiki/Canvas_element for details.
      * @final
      */
-    export class VmlGroupElement extends goog.graphics.GroupElement {
+    class VmlGroupElement extends goog.graphics.GroupElement {
         constructor(element: Element, graphics: goog.graphics.VmlGraphics);
         
         /**
@@ -48,7 +48,7 @@ declare module goog.graphics {
      *     http://en.wikipedia.org/wiki/Canvas_element for details.
      * @final
      */
-    export class VmlEllipseElement extends goog.graphics.EllipseElement {
+    class VmlEllipseElement extends goog.graphics.EllipseElement {
         constructor(element: Element, graphics: goog.graphics.VmlGraphics, cx: number, cy: number, rx: number, ry: number, stroke: goog.graphics.Stroke, fill: goog.graphics.Fill);
         
         /**
@@ -85,7 +85,7 @@ declare module goog.graphics {
      *     http://en.wikipedia.org/wiki/Canvas_element for details.
      * @final
      */
-    export class VmlRectElement extends goog.graphics.RectElement {
+    class VmlRectElement extends goog.graphics.RectElement {
         constructor(element: Element, graphics: goog.graphics.VmlGraphics, stroke: goog.graphics.Stroke, fill: goog.graphics.Fill);
         
         /**
@@ -122,7 +122,7 @@ declare module goog.graphics {
      *     http://en.wikipedia.org/wiki/Canvas_element for details.
      * @final
      */
-    export class VmlPathElement extends goog.graphics.PathElement {
+    class VmlPathElement extends goog.graphics.PathElement {
         constructor(element: Element, graphics: goog.graphics.VmlGraphics, stroke: goog.graphics.Stroke, fill: goog.graphics.Fill);
         
         /**
@@ -150,7 +150,7 @@ declare module goog.graphics {
      *     http://en.wikipedia.org/wiki/Canvas_element for details.
      * @final
      */
-    export class VmlTextElement extends goog.graphics.TextElement {
+    class VmlTextElement extends goog.graphics.TextElement {
         constructor(element: Element, graphics: goog.graphics.VmlGraphics, stroke: goog.graphics.Stroke, fill: goog.graphics.Fill);
         
         /**
@@ -176,7 +176,7 @@ declare module goog.graphics {
      *     http://en.wikipedia.org/wiki/Canvas_element for details.
      * @final
      */
-    export class VmlImageElement extends goog.graphics.ImageElement {
+    class VmlImageElement extends goog.graphics.ImageElement {
         constructor(element: Element, graphics: goog.graphics.VmlGraphics);
         
         /**
@@ -213,5 +213,5 @@ declare module goog.graphics {
      *     goog.graphics.VmlTextElement|goog.graphics.VmlImageElement}
      * @private
      */
-    export function vmlGetElement_(): Element;
+    function vmlGetElement_(): Element;
 }

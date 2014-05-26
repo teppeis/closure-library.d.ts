@@ -16,7 +16,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.ControlRenderer}
      */
-    export class ButtonRenderer extends goog.ui.ControlRenderer {
+    class ButtonRenderer extends goog.ui.ControlRenderer {
         constructor();
         
         /**

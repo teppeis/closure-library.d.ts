@@ -17,7 +17,7 @@ declare module goog.ui {
      * @extends {goog.ui.Control}
      * @final
      */
-    export class DimensionPicker extends goog.ui.Control {
+    class DimensionPicker extends goog.ui.Control {
         constructor(opt_renderer?: goog.ui.DimensionPickerRenderer, opt_domHelper?: goog.dom.DomHelper);
         
         /**

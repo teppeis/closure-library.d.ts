@@ -6,7 +6,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Component}
      */
-    export class ProgressBar extends goog.ui.Component {
+    class ProgressBar extends goog.ui.Component {
         constructor(opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -84,7 +84,7 @@ declare module goog.ui.ProgressBar {
      *
      * @enum {string}
      */
-    export interface Orientation {
+    interface Orientation {
         VERTICAL: string;
         HORIZONTAL: string;
     }

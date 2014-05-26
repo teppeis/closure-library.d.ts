@@ -20,7 +20,7 @@ declare module goog.string$.newlines {
      * @struct
      * @final
      */
-    export class Line {
+    class Line {
         constructor(string: string, startLineIndex: number, endContentIndex: number, endLineIndex: number);
         
         /**
@@ -46,12 +46,12 @@ declare module goog.string$.newlines {
      *     resulting strings. Defaults to false.
      * @return {!Array.<string>} String split into lines.
      */
-    export function splitLines(str: string, opt_keepNewlines?: boolean): Array<string>;
+    function splitLines(str: string, opt_keepNewlines?: boolean): Array<string>;
 
     /**
      * Splits a string into an array of line metadata.
      * @param {string} str String to split.
      * @return {!Array.<!goog.string.newlines.Line>} Array of line metadata.
      */
-    export function getLines(str: string): Array<goog.string$.newlines.Line>;
+    function getLines(str: string): Array<goog.string$.newlines.Line>;
 }

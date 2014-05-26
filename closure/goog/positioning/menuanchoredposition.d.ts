@@ -21,7 +21,7 @@ declare module goog.positioning {
      * @constructor
      * @extends {goog.positioning.AnchoredViewportPosition}
      */
-    export class MenuAnchoredPosition extends goog.positioning.AnchoredViewportPosition {
+    class MenuAnchoredPosition extends goog.positioning.AnchoredViewportPosition {
         constructor(anchorElement: Element, corner: goog.positioning.Corner, opt_adjust?: boolean, opt_resize?: boolean);
     }
 }

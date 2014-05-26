@@ -12,7 +12,7 @@ declare module goog.debug {
      * @param {number=} opt_sequenceNumber Sequence number of this log record. This
      *     should only be passed in when restoring a log record from persistence.
      */
-    export class LogRecord {
+    class LogRecord {
         constructor(level: goog.debug.Logger.Level, msg: string, loggerName: string, opt_time?: number, opt_sequenceNumber?: number);
         
         /**

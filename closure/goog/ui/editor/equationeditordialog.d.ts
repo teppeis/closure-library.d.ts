@@ -11,7 +11,7 @@ declare module goog.ui.editor {
      * @extends {goog.ui.editor.AbstractDialog}
      * @final
      */
-    export class EquationEditorDialog extends goog.ui.editor.AbstractDialog {
+    class EquationEditorDialog extends goog.ui.editor.AbstractDialog {
         constructor(context: Object, domHelper: goog.dom.DomHelper, equation: string, helpUrl: string);
     }
 }

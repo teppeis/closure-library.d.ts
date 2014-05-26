@@ -10,5 +10,5 @@ declare module goog.ui.ac {
      * @param {boolean=} opt_useSimilar use similar matches. e.g. "gost" => "ghost".
      * @return {!goog.ui.ac.AutoComplete} A new autocomplete object.
      */
-    export function createSimpleAutoComplete(data: Array<any>, input: Element, opt_multi?: boolean, opt_useSimilar?: boolean): goog.ui.ac.AutoComplete;
+    function createSimpleAutoComplete(data: Array<any>, input: Element, opt_multi?: boolean, opt_useSimilar?: boolean): goog.ui.ac.AutoComplete;
 }

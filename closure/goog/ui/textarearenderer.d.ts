@@ -9,7 +9,7 @@ declare module goog.ui {
      * @extends {goog.ui.ControlRenderer}
      * @final
      */
-    export class TextareaRenderer extends goog.ui.ControlRenderer {
+    class TextareaRenderer extends goog.ui.ControlRenderer {
         constructor();
         
         /**

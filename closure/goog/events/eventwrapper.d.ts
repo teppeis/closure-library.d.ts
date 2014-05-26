@@ -4,7 +4,7 @@ declare module goog.events {
      * Interface for event wrappers.
      * @interface
      */
-    export interface EventWrapper {
+    interface EventWrapper {
         
         /**
          * Adds an event listener using the wrapper on a DOM Node or an object that has

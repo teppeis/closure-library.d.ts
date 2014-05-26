@@ -8,7 +8,7 @@ declare module goog.graphics.ext {
      * @extends {goog.graphics.ext.Element}
      * @final
      */
-    export class Image extends goog.graphics.ext.Element {
+    class Image extends goog.graphics.ext.Element {
         constructor(group: goog.graphics.ext.Group, src: string);
         
         /**

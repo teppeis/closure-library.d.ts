@@ -5,7 +5,7 @@ declare module goog.math.interpolator {
      * @implements {goog.math.interpolator.Interpolator1}
      * @constructor
      */
-    export class Spline1 {
+    class Spline1 {
         constructor();
         
         /**

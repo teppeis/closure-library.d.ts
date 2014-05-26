@@ -11,7 +11,7 @@ declare module goog.dom.pattern {
      * @extends {goog.dom.pattern.AllChildren}
      * @final
      */
-    export class ChildMatches extends goog.dom.pattern.AllChildren {
+    class ChildMatches extends goog.dom.pattern.AllChildren {
         constructor(childPattern: goog.dom.pattern.AbstractPattern, opt_minimumMatches?: number);
         
         /**

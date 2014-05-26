@@ -9,7 +9,7 @@ declare module goog.proto2 {
      * @constructor
      * @extends {goog.proto2.Serializer}
      */
-    export class ObjectSerializer extends goog.proto2.Serializer {
+    class ObjectSerializer extends goog.proto2.Serializer {
         constructor(opt_keyOption?: goog.proto2.ObjectSerializer.KeyOption);
         
         /**
@@ -42,7 +42,7 @@ declare module goog.proto2.ObjectSerializer {
      *
      * @enum {number}
      */
-    export interface KeyOption {
+    interface KeyOption {
         TAG: number;
         NAME: number;
     }

@@ -12,7 +12,7 @@ declare module goog.db {
      * @extends {goog.events.EventTarget}
      * @final
      */
-    export class Transaction extends goog.events.EventTarget {
+    class Transaction extends goog.events.EventTarget {
         constructor(tx: IDBTransaction, db: goog.db.IndexedDb);
         
         /**
@@ -61,7 +61,7 @@ declare module goog.db.Transaction {
      *
      * @enum {string}
      */
-    export interface EventTypes {
+    interface EventTypes {
         COMPLETE: string;
         ABORT: string;
         ERROR: string;
@@ -73,7 +73,7 @@ declare module goog.db.Transaction {
      *
      * @enum {string}
      */
-    export interface TransactionMode {
+    interface TransactionMode {
         READ_ONLY: string;
         READ_WRITE: string;
         VERSION_CHANGE: string;

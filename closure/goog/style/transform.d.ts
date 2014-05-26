@@ -5,14 +5,14 @@ declare module goog.style.transform {
      * and IE 10 supports 3D transforms. IE 8 supports neither.
      * @return {boolean} Whether the current environment supports CSS3 transforms.
      */
-    export function isSupported(): boolean;
+    function isSupported(): boolean;
 
     /**
      * Whether CSS3 transform translate3d() is supported. If the current browser
      * supports this transform strategy.
      * @return {boolean} Whether the current environment supports CSS3 transforms.
      */
-    export function is3dSupported(): boolean;
+    function is3dSupported(): boolean;
 
     /**
      * Returns the x,y translation component of any CSS transforms applied to the
@@ -21,7 +21,7 @@ declare module goog.style.transform {
      * @param {!Element} element The element to get the translation of.
      * @return {!goog.math.Coordinate} The CSS translation of the element in px.
      */
-    export function getTranslation(element: Element): goog.math.Coordinate;
+    function getTranslation(element: Element): goog.math.Coordinate;
 
     /**
      * Translates an element's position using the CSS3 transform property.
@@ -30,5 +30,5 @@ declare module goog.style.transform {
      * @param {number} y The vertical translation.
      * @return {boolean} Whether the CSS translation was set.
      */
-    export function setTranslation(element: Element, x: number, y: number): boolean;
+    function setTranslation(element: Element, x: number, y: number): boolean;
 }

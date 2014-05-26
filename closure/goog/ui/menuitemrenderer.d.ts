@@ -13,7 +13,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.ControlRenderer}
      */
-    export class MenuItemRenderer extends goog.ui.ControlRenderer {
+    class MenuItemRenderer extends goog.ui.ControlRenderer {
         constructor();
         
         /**
@@ -151,7 +151,7 @@ declare module goog.ui.MenuItemRenderer {
      * @enum {number}
      * @private
      */
-    export interface CompositeCssClassIndex_ {
+    interface CompositeCssClassIndex_ {
         HOVER: number;
         CHECKBOX: number;
         CONTENT: number;

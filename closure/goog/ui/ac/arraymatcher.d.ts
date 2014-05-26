@@ -8,7 +8,7 @@ declare module goog.ui.ac {
      * @param {boolean=} opt_noSimilar if true, do not do similarity matches for the
      *     input token against the dictionary.
      */
-    export class ArrayMatcher {
+    class ArrayMatcher {
         constructor(rows: Array<any>, opt_noSimilar?: boolean);
         
         /**

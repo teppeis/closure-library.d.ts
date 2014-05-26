@@ -6,5 +6,5 @@ declare module goog.date.duration {
      * @param {number} durationMs Duration in milliseconds.
      * @return {string} The formatted duration.
      */
-    export function format(durationMs: number): string;
+    function format(durationMs: number): string;
 }

@@ -12,7 +12,7 @@ declare module goog.math {
      * @constructor
      * @final
      */
-    export class RangeSet {
+    class RangeSet {
         constructor();
         
         /**

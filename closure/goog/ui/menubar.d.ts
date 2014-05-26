@@ -8,5 +8,5 @@ declare module goog.ui.menuBar {
      *     interaction.
      * @return {!goog.ui.Container} The created menu bar.
      */
-    export function create(opt_renderer?: goog.ui.ContainerRenderer, opt_domHelper?: goog.dom.DomHelper): goog.ui.Container;
+    function create(opt_renderer?: goog.ui.ContainerRenderer, opt_domHelper?: goog.dom.DomHelper): goog.ui.Container;
 }

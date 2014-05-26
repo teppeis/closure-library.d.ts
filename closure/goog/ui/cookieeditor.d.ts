@@ -7,7 +7,7 @@ declare module goog.ui {
      * @extends {goog.ui.Component}
      * @final
      */
-    export class CookieEditor extends goog.ui.Component {
+    class CookieEditor extends goog.ui.Component {
         constructor(opt_domHelper?: goog.dom.DomHelper);
         
         /**

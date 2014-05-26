@@ -5,7 +5,7 @@ declare module goog.labs.format.csv {
      * @enum {Object}
      * @private
      */
-    export interface Sentinels_ {
+    interface Sentinels_ {
         EMPTY: Object;
         EOF: Object;
         EOR: Object;
@@ -16,7 +16,7 @@ declare module goog.labs.format.csv {
      * A token -- a single-character string or a sentinel.
      * @typedef {string|!goog.labs.format.csv.Sentinels_}
      */
-    export interface Token {
+    interface Token {
     }
 
     /**
@@ -30,7 +30,7 @@ declare module goog.labs.format.csv {
      * @extends {goog.debug.Error}
      * @final
      */
-    export class ParseError extends goog.debug.Error {
+    class ParseError extends goog.debug.Error {
         constructor(text: string, index: number, opt_message?: string);
         
         /** @inheritDoc */
@@ -42,7 +42,7 @@ declare module goog.labs.format.csv {
      * enabled in production if necessary post-compilation.  Otherwise, debug
      * information will be stripped to minimize final code size.
      */
-    export var ENABLE_VERBOSE_DEBUGGING: any;
+    var ENABLE_VERBOSE_DEBUGGING: any;
 
     /**
      * Parses a CSV string to create a two-dimensional array.
@@ -55,5 +55,5 @@ declare module goog.labs.format.csv {
      *      instead try to recover and keep going.
      * @return {!Array.<!Array.<string>>} The parsed CSV.
      */
-    export function parse(text: string, opt_ignoreErrors?: boolean): Array<Array<string>>;
+    function parse(text: string, opt_ignoreErrors?: boolean): Array<Array<string>>;
 }

@@ -7,7 +7,7 @@ declare module goog.ui.equation {
      * @extends {goog.events.Event}
      * @final
      */
-    export class ChangeEvent extends goog.events.Event {
+    class ChangeEvent extends goog.events.Event {
         constructor(isValid: boolean);
     }
 }

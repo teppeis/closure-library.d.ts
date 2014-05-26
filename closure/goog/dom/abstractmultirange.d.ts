@@ -6,7 +6,7 @@ declare module goog.dom {
      * @constructor
      * @extends {goog.dom.AbstractRange}
      */
-    export class AbstractMultiRange extends goog.dom.AbstractRange {
+    class AbstractMultiRange extends goog.dom.AbstractRange {
         constructor();
     }
 }

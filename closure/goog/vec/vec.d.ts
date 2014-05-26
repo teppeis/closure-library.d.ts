@@ -1,26 +1,26 @@
 declare module goog.vec {
 
     /** @typedef {!Float32Array} */
-    export interface Float32 {
+    interface Float32 {
     }
 
     /** @typedef {!Float64Array} */
-    export interface Float64 {
+    interface Float64 {
     }
 
     /** @typedef {!Array.<number>} */
-    export interface Number {
+    interface Number {
     }
 
     /** @typedef {!goog.vec.Float32|!goog.vec.Float64|!goog.vec.Number} */
-    export interface AnyType {
+    interface AnyType {
     }
 
     /**
      * @deprecated Use AnyType.
      * @typedef {!Float32Array|!Array.<number>}
      */
-    export interface ArrayType {
+    interface ArrayType {
     }
 
     /**
@@ -30,5 +30,5 @@ declare module goog.vec {
      * @type {number}
      * @const
      */
-    export var EPSILON: number;
+    var EPSILON: number;
 }

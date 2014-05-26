@@ -6,7 +6,7 @@ declare module goog.json.hybrid {
      * @param {!Object} obj JavaScript object to serialize to JSON.
      * @return {string} Resulting JSON string.
      */
-    export function stringify(obj: Object): string;
+    function stringify(obj: Object): string;
 
     /**
      * Attempts to parse the JSON string natively, falling back to
@@ -14,7 +14,7 @@ declare module goog.json.hybrid {
      * @param {string} jsonString JSON string to parse.
      * @return {!Object} Resulting JSON object.
      */
-    export function parse(jsonString: string): Object;
+    function parse(jsonString: string): Object;
 
     /**
      * Attempts to parse the JSON string natively, falling back to
@@ -22,5 +22,5 @@ declare module goog.json.hybrid {
      * @param {string} jsonString JSON string to parse.
      * @return {!Object} Resulting JSON object.
      */
-    export function unsafeParse(jsonString: string): Object;
+    function unsafeParse(jsonString: string): Object;
 }

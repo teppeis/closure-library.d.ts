@@ -13,7 +13,7 @@ declare module goog.crypt {
      * @final
      * @struct
      */
-    export class Hmac extends goog.crypt.Hash {
+    class Hmac extends goog.crypt.Hash {
         constructor(hasher: goog.crypt.Hash, key: Array<number>, opt_blockSize?: number);
         
         /**

@@ -10,7 +10,7 @@ declare module goog.ui.emoji {
      * @constructor
      * @final
      */
-    export class Emoji {
+    class Emoji {
         constructor(url: string, id: string);
         
         /**

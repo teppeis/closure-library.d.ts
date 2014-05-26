@@ -13,7 +13,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.ContainerRenderer}
      */
-    export class TabBarRenderer extends goog.ui.ContainerRenderer {
+    class TabBarRenderer extends goog.ui.ContainerRenderer {
         constructor();
         
         /**

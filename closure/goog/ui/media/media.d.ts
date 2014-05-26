@@ -13,7 +13,7 @@ declare module goog.ui.media {
      * @extends {goog.ui.Control}
      * @final
      */
-    export class Media extends goog.ui.Control {
+    class Media extends goog.ui.Control {
         constructor(dataModel: goog.ui.media.MediaModel, opt_renderer?: goog.ui.ControlRenderer, opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -50,7 +50,7 @@ declare module goog.ui.media {
      * @constructor
      * @extends {goog.ui.ControlRenderer}
      */
-    export class MediaRenderer extends goog.ui.ControlRenderer {
+    class MediaRenderer extends goog.ui.ControlRenderer {
         constructor();
         
         /**

@@ -16,7 +16,7 @@ declare module goog.ui {
      *     https://developers.google.com/chart/image/ for details.
      * @final
      */
-    export class ServerChart extends goog.ui.Component {
+    class ServerChart extends goog.ui.Component {
         constructor(type: goog.ui.ServerChart.ChartType, opt_width?: number, opt_height?: number, opt_domHelper?: goog.dom.DomHelper, opt_uri?: string);
         
         /**
@@ -685,7 +685,7 @@ declare module goog.ui.ServerChart {
      *
      * @enum {string}
      */
-    export interface EncodingType {
+    interface EncodingType {
         AUTOMATIC: string;
         EXTENDED: string;
         SIMPLE: string;
@@ -697,7 +697,7 @@ declare module goog.ui.ServerChart {
      *
      * @enum {string}
      */
-    export interface ChartType {
+    interface ChartType {
         BAR: string;
         CLOCK: string;
         CONCENTRIC_PIE: string;
@@ -726,7 +726,7 @@ declare module goog.ui.ServerChart {
      *
      * @enum {string}
      */
-    export interface MultiAxisType {
+    interface MultiAxisType {
         X_AXIS: string;
         LEFT_Y_AXIS: string;
         RIGHT_Y_AXIS: string;
@@ -738,7 +738,7 @@ declare module goog.ui.ServerChart {
      *
      * @enum {number}
      */
-    export interface MultiAxisAlignment {
+    interface MultiAxisAlignment {
         ALIGN_LEFT: number;
         ALIGN_CENTER: number;
         ALIGN_RIGHT: number;
@@ -749,7 +749,7 @@ declare module goog.ui.ServerChart {
      *
      * @enum {string}
      */
-    export interface LegendPosition {
+    interface LegendPosition {
         TOP: string;
         BOTTOM: string;
         LEFT: string;
@@ -761,7 +761,7 @@ declare module goog.ui.ServerChart {
      *
      * @enum {string}
      */
-    export interface AxisDisplayType {
+    interface AxisDisplayType {
         LINE_AND_TICKS: string;
         LINE: string;
         TICKS: string;
@@ -773,7 +773,7 @@ declare module goog.ui.ServerChart {
      *
      * @enum {number}
      */
-    export interface MaximumValue {
+    interface MaximumValue {
         WIDTH: number;
         HEIGHT: number;
         MAP_WIDTH: number;
@@ -786,7 +786,7 @@ declare module goog.ui.ServerChart {
      *
      * @enum {string}
      */
-    export interface UriParam {
+    interface UriParam {
         BACKGROUND_FILL: string;
         BAR_HEIGHT: string;
         DATA: string;
@@ -824,7 +824,7 @@ declare module goog.ui.ServerChart {
      * Event types dispatched by the ServerChart object
      * @enum {string}
      */
-    export interface Event {
+    interface Event {
         URI_TOO_LONG: string;
     }
 
@@ -836,7 +836,7 @@ declare module goog.ui.ServerChart {
      * @extends {goog.events.Event}
      * @final
      */
-    export class UriTooLongEvent extends goog.events.Event {
+    class UriTooLongEvent extends goog.events.Event {
         constructor(uri: string);
     }
 }

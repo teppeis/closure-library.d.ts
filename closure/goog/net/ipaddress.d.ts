@@ -10,7 +10,7 @@ declare module goog.net {
      * @param {number} version The version number (4, 6).
      * @constructor
      */
-    export class IpAddress {
+    class IpAddress {
         constructor(address: goog.math.Integer, version: number);
         
         /**
@@ -76,7 +76,7 @@ declare module goog.net {
      * @constructor
      * @final
      */
-    export class Ipv4Address extends goog.net.IpAddress {
+    class Ipv4Address extends goog.net.IpAddress {
         constructor(address: string);
         
         /**
@@ -97,7 +97,7 @@ declare module goog.net {
      * @extends {goog.net.IpAddress}
      * @final
      */
-    export class Ipv6Address extends goog.net.IpAddress {
+    class Ipv6Address extends goog.net.IpAddress {
         constructor(address: string);
         
         /**

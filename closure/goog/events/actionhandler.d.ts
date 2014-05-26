@@ -7,7 +7,7 @@ declare module goog.events {
      * @extends {goog.events.EventTarget}
      * @final
      */
-    export class ActionHandler extends goog.events.EventTarget {
+    class ActionHandler extends goog.events.EventTarget {
         constructor(element: Element);
     }
 
@@ -18,7 +18,7 @@ declare module goog.events {
      * @extends {goog.events.BrowserEvent}
      * @final
      */
-    export class ActionEvent extends goog.events.BrowserEvent {
+    class ActionEvent extends goog.events.BrowserEvent {
         constructor(browserEvent: goog.events.BrowserEvent);
     }
 
@@ -31,7 +31,7 @@ declare module goog.events {
      * @extends {goog.events.BrowserEvent}
      * @final
      */
-    export class BeforeActionEvent extends goog.events.BrowserEvent {
+    class BeforeActionEvent extends goog.events.BrowserEvent {
         constructor(browserEvent: goog.events.BrowserEvent);
     }
 }
@@ -42,7 +42,7 @@ declare module goog.events.ActionHandler {
      * Enum type for the events fired by the action handler
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         ACTION: string;
         BEFOREACTION: string;
     }

@@ -26,7 +26,7 @@ declare module goog.html {
      * @implements {goog.i18n.bidi.DirectionalString}
      * @implements {goog.string.TypedString}
      */
-    export class SafeHtml {
+    class SafeHtml {
         constructor();
         
         /**
@@ -148,7 +148,7 @@ declare module goog.html.SafeHtml {
      * @typedef {string|number|boolean|!goog.string.TypedString|
      *           !goog.i18n.bidi.DirectionalString}
      */
-    export interface StringLike_ {
+    interface StringLike_ {
     }
 
     /**
@@ -156,13 +156,13 @@ declare module goog.html.SafeHtml {
      * @private
      * @typedef {!goog.html.SafeHtml.StringLike_|!goog.html.SafeHtml}
      */
-    export interface TextOrHtml_ {
+    interface TextOrHtml_ {
     }
 
     /**
      * @private
      * @typedef {string|goog.string.Const|goog.html.SafeUrl|goog.html.SafeStyle}
      */
-    export interface AttributeValue_ {
+    interface AttributeValue_ {
     }
 }

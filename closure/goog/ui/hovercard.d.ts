@@ -37,7 +37,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.AdvancedTooltip}
      */
-    export class HoverCard extends goog.ui.AdvancedTooltip {
+    class HoverCard extends goog.ui.AdvancedTooltip {
         constructor(isAnchor: Function, opt_checkDescendants?: boolean, opt_domHelper?: goog.dom.DomHelper, opt_triggeringDocument?: Document);
         
         /**
@@ -122,7 +122,7 @@ declare module goog.ui.HoverCard {
      * Enum for event type fired by HoverCard.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         TRIGGER: string;
         CANCEL_TRIGGER: string;
         BEFORE_SHOW: string;
@@ -141,7 +141,7 @@ declare module goog.ui.HoverCard {
      * @extends {goog.events.Event}
      * @final
      */
-    export class TriggerEvent extends goog.events.Event {
+    class TriggerEvent extends goog.events.Event {
         constructor(type: goog.ui.HoverCard.EventType, target: goog.ui.HoverCard, anchor: Element, opt_data?: Object);
     }
 }

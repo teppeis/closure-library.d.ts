@@ -23,7 +23,7 @@ declare module goog.fx {
      * @extends {goog.fx.Animation}
      * @final
      */
-    export class CssSpriteAnimation extends goog.fx.Animation {
+    class CssSpriteAnimation extends goog.fx.Animation {
         constructor(element: Element, size: goog.math.Size, box: goog.math.Box, time: number, opt_acc?: (arg0: number) => number);
         
         /**

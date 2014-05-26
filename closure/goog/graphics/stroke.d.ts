@@ -10,7 +10,7 @@ declare module goog.graphics {
      *     differences before the canvas tag was widely supported.  See
      *     http://en.wikipedia.org/wiki/Canvas_element for details.
      */
-    export class Stroke {
+    class Stroke {
         constructor(width: number, color: string);
         
         /**

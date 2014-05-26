@@ -29,7 +29,7 @@ declare module goog.math {
      * @constructor
      * @final
      */
-    export class AffineTransform {
+    class AffineTransform {
         constructor(opt_m00?: number, opt_m10?: number, opt_m01?: number, opt_m11?: number, opt_m02?: number, opt_m12?: number);
         
         /**

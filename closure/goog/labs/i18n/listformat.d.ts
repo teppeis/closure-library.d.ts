@@ -12,7 +12,7 @@ declare module goog.labs.i18n {
      * @constructor
      * @final
      */
-    export class ListFormat {
+    class ListFormat {
         constructor();
         
         /**
@@ -37,7 +37,7 @@ declare module goog.labs.i18n {
      * @constructor
      * @final
      */
-    export class GenderInfo {
+    class GenderInfo {
         constructor();
         
         /**
@@ -62,7 +62,7 @@ declare module goog.labs.i18n.GenderInfo {
      * @enum {number}
      * @private
      */
-    export interface ListGenderStyle_ {
+    interface ListGenderStyle_ {
         NEUTRAL: number;
         MIXED_NEUTRAL: number;
         MALE_TAINTS: number;
@@ -74,7 +74,7 @@ declare module goog.labs.i18n.GenderInfo {
      * or the person has declined to state MALE or FEMALE.
      * @enum {number}
      */
-    export interface Gender {
+    interface Gender {
         MALE: number;
         FEMALE: number;
         OTHER: number;

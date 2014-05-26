@@ -9,7 +9,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Separator}
      */
-    export class MenuSeparator extends goog.ui.Separator {
+    class MenuSeparator extends goog.ui.Separator {
         constructor(opt_domHelper?: goog.dom.DomHelper);
     }
 }

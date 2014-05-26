@@ -6,7 +6,7 @@ declare module goog.string$.html {
      *
      * @constructor
      */
-    export class HtmlParser {
+    class HtmlParser {
         constructor();
         
         /**
@@ -33,7 +33,7 @@ declare module goog.string$.html {
      *
      * @constructor
      */
-    export class HtmlSaxHandler {
+    class HtmlSaxHandler {
         constructor();
         
         /**
@@ -85,7 +85,7 @@ declare module goog.string$.html {
      * @param {string} str The string to lower case.
      * @return {string} The str in lower case format.
      */
-    export function toLowerCase(str: string): string;
+    function toLowerCase(str: string): string;
 }
 
 declare module goog.string$.html.HtmlParser {
@@ -95,7 +95,7 @@ declare module goog.string$.html.HtmlParser {
      * TODO(user): use {@code goog.string.htmlEncode} instead.
      * @enum {string}
      */
-    export interface Entities {
+    interface Entities {
         lt: string;
         gt: string;
         amp: string;
@@ -108,7 +108,7 @@ declare module goog.string$.html.HtmlParser {
      * The html eflags, used internally on the parser.
      * @enum {number}
      */
-    export interface EFlags {
+    interface EFlags {
         OPTIONAL_ENDTAG: number;
         EMPTY: number;
         CDATA: number;

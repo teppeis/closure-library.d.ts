@@ -5,7 +5,7 @@ declare module goog.structs {
      * @interface
      * @template T
      */
-    export interface Collection<T> {
+    interface Collection<T> {
         
         /**
          * @param {T} value Value to add to the collection.

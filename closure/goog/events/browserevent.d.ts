@@ -10,7 +10,7 @@ declare module goog.events {
      * @constructor
      * @extends {goog.events.Event}
      */
-    export class BrowserEvent extends goog.events.Event {
+    class BrowserEvent extends goog.events.Event {
         constructor(opt_e?: Event, opt_currentTarget?: EventTarget);
         
         /**
@@ -68,7 +68,7 @@ declare module goog.events.BrowserEvent {
      * Normalized button constants for the mouse.
      * @enum {number}
      */
-    export interface MouseButton {
+    interface MouseButton {
         LEFT: number;
         MIDDLE: number;
         RIGHT: number;

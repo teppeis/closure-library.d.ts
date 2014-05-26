@@ -7,7 +7,7 @@ declare module goog.tweak {
      * @param {string} description A description of what the entry does.
      * @constructor
      */
-    export class BaseEntry {
+    class BaseEntry {
         constructor(id: string, description: string);
         
         /**
@@ -63,7 +63,7 @@ declare module goog.tweak {
      * @constructor
      * @extends {goog.tweak.BaseEntry}
      */
-    export class BaseSetting extends goog.tweak.BaseEntry {
+    class BaseSetting extends goog.tweak.BaseEntry {
         constructor(id: string, description: string);
         
         /**
@@ -142,7 +142,7 @@ declare module goog.tweak {
      * @constructor
      * @extends {goog.tweak.BaseSetting}
      */
-    export class BasePrimitiveSetting extends goog.tweak.BaseSetting {
+    class BasePrimitiveSetting extends goog.tweak.BaseSetting {
         constructor(id: string, description: string, defaultValue: any);
         
         /**
@@ -203,7 +203,7 @@ declare module goog.tweak {
      * @extends {goog.tweak.BasePrimitiveSetting}
      * @final
      */
-    export class StringSetting extends goog.tweak.BasePrimitiveSetting {
+    class StringSetting extends goog.tweak.BasePrimitiveSetting {
         constructor(id: string, description: string);
         
         /**
@@ -265,7 +265,7 @@ declare module goog.tweak {
      * @extends {goog.tweak.BasePrimitiveSetting}
      * @final
      */
-    export class NumericSetting extends goog.tweak.BasePrimitiveSetting {
+    class NumericSetting extends goog.tweak.BasePrimitiveSetting {
         constructor(id: string, description: string);
         
         /**
@@ -326,7 +326,7 @@ declare module goog.tweak {
      * @constructor
      * @extends {goog.tweak.BasePrimitiveSetting}
      */
-    export class BooleanSetting extends goog.tweak.BasePrimitiveSetting {
+    class BooleanSetting extends goog.tweak.BasePrimitiveSetting {
         constructor(id: string, description: string);
         
         /**
@@ -378,7 +378,7 @@ declare module goog.tweak {
      * @extends {goog.tweak.BooleanSetting}
      * @final
      */
-    export class BooleanInGroupSetting extends goog.tweak.BooleanSetting {
+    class BooleanInGroupSetting extends goog.tweak.BooleanSetting {
         constructor(id: string, description: string, group: goog.tweak.BooleanGroup);
         
         /**
@@ -419,7 +419,7 @@ declare module goog.tweak {
      * @extends {goog.tweak.BaseSetting}
      * @final
      */
-    export class BooleanGroup extends goog.tweak.BaseSetting {
+    class BooleanGroup extends goog.tweak.BaseSetting {
         constructor(id: string, description: string);
         
         /**
@@ -452,7 +452,7 @@ declare module goog.tweak {
      * @extends {goog.tweak.BaseEntry}
      * @final
      */
-    export class ButtonAction extends goog.tweak.BaseEntry {
+    class ButtonAction extends goog.tweak.BaseEntry {
         constructor(id: string, description: string, callback: Function);
     }
 }
@@ -465,7 +465,7 @@ declare module goog.tweak.BaseSetting {
      * @enum {number}
      * @private
      */
-    export interface InitializeState_ {
+    interface InitializeState_ {
         NOT_INITIALIZED: number;
         INITIALIZING: number;
         INITIALIZED: number;

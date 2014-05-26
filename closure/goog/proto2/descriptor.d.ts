@@ -5,7 +5,7 @@ declare module goog.proto2 {
      *            fullName: (string|undefined),
      *            containingType: (goog.proto2.Message|undefined)}}
      */
-    export interface Metadata {
+    interface Metadata {
         name: string;
         fullName: string;
         containingType: goog.proto2.Message;
@@ -24,7 +24,7 @@ declare module goog.proto2 {
      * @constructor
      * @final
      */
-    export class Descriptor {
+    class Descriptor {
         constructor(messageType: () => any, metadata: goog.proto2.Metadata, fields: Array<goog.proto2.FieldDescriptor>);
         
         /**

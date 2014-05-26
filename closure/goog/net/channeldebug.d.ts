@@ -5,7 +5,7 @@ declare module goog.net {
      *
      * @constructor
      */
-    export class ChannelDebug {
+    class ChannelDebug {
         constructor();
         
         /**

@@ -83,7 +83,7 @@ declare module goog.html {
      * @struct
      * @implements {goog.string.TypedString}
      */
-    export class SafeStyle {
+    class SafeStyle {
         constructor();
         
         /**

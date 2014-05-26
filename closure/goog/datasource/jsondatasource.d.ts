@@ -27,7 +27,7 @@ declare module goog.ds {
      * @constructor
      * @final
      */
-    export class JsonDataSource extends goog.ds.JsDataSource {
+    class JsonDataSource extends goog.ds.JsDataSource {
         constructor(uri: string, name: string, opt_callbackParamName?: string);
         
         /**

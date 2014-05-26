@@ -6,7 +6,7 @@ declare module goog.crypt {
      * @constructor
      * @struct
      */
-    export class Hash {
+    class Hash {
         constructor();
         
         /**

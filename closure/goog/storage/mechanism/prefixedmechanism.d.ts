@@ -10,7 +10,7 @@ declare module goog.storage.mechanism {
      * @extends {goog.storage.mechanism.IterableMechanism}
      * @final
      */
-    export class PrefixedMechanism extends goog.storage.mechanism.IterableMechanism {
+    class PrefixedMechanism extends goog.storage.mechanism.IterableMechanism {
         constructor(mechanism: goog.storage.mechanism.IterableMechanism, prefix: string);
     }
 }

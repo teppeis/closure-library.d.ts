@@ -10,7 +10,7 @@ declare module goog.events {
      * @constructor
      * @extends {goog.events.EventTarget}
      */
-    export class PasteHandler extends goog.events.EventTarget {
+    class PasteHandler extends goog.events.EventTarget {
         constructor(element: Element);
         
         /**
@@ -44,7 +44,7 @@ declare module goog.events.PasteHandler {
      * The types of events fired by this class.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         PASTE: string;
         AFTER_PASTE: string;
     }
@@ -53,7 +53,7 @@ declare module goog.events.PasteHandler {
      * The states that this class can be found, on the paste detection algorithm.
      * @enum {string}
      */
-    export interface State {
+    interface State {
         INIT: string;
         FOCUSED: string;
         TYPING: string;

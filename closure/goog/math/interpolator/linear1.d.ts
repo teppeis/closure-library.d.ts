@@ -6,7 +6,7 @@ declare module goog.math.interpolator {
      * @constructor
      * @final
      */
-    export class Linear1 {
+    class Linear1 {
         constructor();
     }
 }

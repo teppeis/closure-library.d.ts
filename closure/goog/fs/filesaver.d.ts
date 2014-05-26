@@ -12,7 +12,7 @@ declare module goog.fs {
      * @constructor
      * @extends {goog.events.EventTarget}
      */
-    export class FileSaver extends goog.events.EventTarget {
+    class FileSaver extends goog.events.EventTarget {
         constructor(fileSaver: FileSaver);
         
         /**
@@ -47,7 +47,7 @@ declare module goog.fs.FileSaver {
      *
      * @enum {number}
      */
-    export interface ReadyState {
+    interface ReadyState {
         INIT: number;
         WRITING: number;
         DONE: number;
@@ -58,7 +58,7 @@ declare module goog.fs.FileSaver {
      *
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         WRITE_START: string;
         PROGRESS: string;
         WRITE: string;

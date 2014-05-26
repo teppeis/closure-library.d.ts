@@ -24,7 +24,7 @@ declare module goog.ui.emoji {
      * @extends {goog.ui.Component}
      * @constructor
      */
-    export class EmojiPicker extends goog.ui.Component {
+    class EmojiPicker extends goog.ui.Component {
         constructor(defaultImgUrl: string, opt_domHelper?: goog.dom.DomHelper);
         
         /**

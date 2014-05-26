@@ -4,7 +4,7 @@ declare module goog.ui.RoundedPanel {
      * Enum for specifying which corners to render.
      * @enum {number}
      */
-    export interface Corner {
+    interface Corner {
         NONE: number;
         BOTTOM_LEFT: number;
         TOP_LEFT: number;
@@ -22,7 +22,7 @@ declare module goog.ui.RoundedPanel {
      * @enum {string}
      * @private
      */
-    export interface Classes_ {
+    interface Classes_ {
         BACKGROUND: string;
         PANEL: string;
         CONTENT: string;
@@ -42,7 +42,7 @@ declare module goog.ui.RoundedPanel {
      * @return {!goog.ui.BaseRoundedPanel} An instance of a
      *     goog.ui.BaseRoundedPanel subclass.
      */
-    export function create(radius: number, borderWidth: number, borderColor: string, opt_backgroundColor?: string, opt_corners?: number, opt_domHelper?: goog.dom.DomHelper): goog.ui.BaseRoundedPanel;
+    function create(radius: number, borderWidth: number, borderColor: string, opt_backgroundColor?: string, opt_corners?: number, opt_domHelper?: goog.dom.DomHelper): goog.ui.BaseRoundedPanel;
 }
 
 declare module goog.ui {
@@ -69,7 +69,7 @@ declare module goog.ui {
      * @extends {goog.ui.Component}
      * @constructor
      */
-    export class BaseRoundedPanel extends goog.ui.Component {
+    class BaseRoundedPanel extends goog.ui.Component {
         constructor(radius: number, borderWidth: number, borderColor: string, opt_backgroundColor?: string, opt_corners?: number, opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -106,7 +106,7 @@ declare module goog.ui {
      * @constructor
      * @final
      */
-    export class CssRoundedPanel extends goog.ui.BaseRoundedPanel {
+    class CssRoundedPanel extends goog.ui.BaseRoundedPanel {
         constructor(radius: number, borderWidth: number, borderColor: string, opt_backgroundColor?: string, opt_corners?: number, opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -135,7 +135,7 @@ declare module goog.ui {
      * @constructor
      * @final
      */
-    export class GraphicsRoundedPanel extends goog.ui.BaseRoundedPanel {
+    class GraphicsRoundedPanel extends goog.ui.BaseRoundedPanel {
         constructor(radius: number, borderWidth: number, borderColor: string, opt_backgroundColor?: string, opt_corners?: number, opt_domHelper?: goog.dom.DomHelper);
         
         /**

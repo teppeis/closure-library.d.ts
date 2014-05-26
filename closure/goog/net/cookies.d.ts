@@ -6,7 +6,7 @@ declare module goog.net {
      * @constructor
      * @final
      */
-    export class Cookies {
+    class Cookies {
         constructor(context: Document);
         
         /**
@@ -158,5 +158,5 @@ declare module goog.net {
      * A static default instance.
      * @type {goog.net.Cookies}
      */
-    export var cookies: goog.net.Cookies;
+    var cookies: goog.net.Cookies;
 }

@@ -11,7 +11,7 @@ declare module goog.math {
      * @constructor
      * @final
      */
-    export class Path {
+    class Path {
         constructor();
         
         /**
@@ -228,7 +228,7 @@ declare module goog.math.Path {
      * Path segment types.
      * @enum {number}
      */
-    export interface Segment {
+    interface Segment {
         MOVETO: number;
         LINETO: number;
         CURVETO: number;

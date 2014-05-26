@@ -21,7 +21,7 @@ declare module goog.ui.media {
      * @extends {goog.ui.media.MediaRenderer}
      * @final
      */
-    export class GoogleVideo extends goog.ui.media.MediaRenderer {
+    class GoogleVideo extends goog.ui.media.MediaRenderer {
         constructor();
         
         /**
@@ -81,7 +81,7 @@ declare module goog.ui.media {
      * @extends {goog.ui.media.MediaModel}
      * @final
      */
-    export class GoogleVideoModel extends goog.ui.media.MediaModel {
+    class GoogleVideoModel extends goog.ui.media.MediaModel {
         constructor(videoId: string, opt_caption?: string, opt_description?: string, opt_autoplay?: boolean);
         
         /**

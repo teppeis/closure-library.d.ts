@@ -11,7 +11,7 @@ declare module goog.db {
      * @extends {goog.events.EventTarget}
      * @final
      */
-    export class IndexedDb extends goog.events.EventTarget {
+    class IndexedDb extends goog.events.EventTarget {
         constructor(db: IDBDatabase);
         
         /**
@@ -110,7 +110,7 @@ declare module goog.db.IndexedDb {
      *
      * @enum {string} The event types for the web socket.
      */
-    export interface EventType {
+    interface EventType {
         ABORT: string;
         CLOSE: string;
         ERROR: string;
@@ -130,7 +130,7 @@ declare module goog.db.IndexedDb {
      * @extends {goog.events.Event}
      * @final
      */
-    export class VersionChangeEvent extends goog.events.Event {
+    class VersionChangeEvent extends goog.events.Event {
         constructor(oldVersion: number, newVersion: number);
     }
 }

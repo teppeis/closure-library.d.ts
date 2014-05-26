@@ -22,7 +22,7 @@ declare module goog.ui.media {
      * @extends {goog.ui.media.MediaRenderer}
      * @final
      */
-    export class FlickrSet extends goog.ui.media.MediaRenderer {
+    class FlickrSet extends goog.ui.media.MediaRenderer {
         constructor();
         
         /**
@@ -90,7 +90,7 @@ declare module goog.ui.media {
      * @extends {goog.ui.media.MediaModel}
      * @final
      */
-    export class FlickrSetModel extends goog.ui.media.MediaModel {
+    class FlickrSetModel extends goog.ui.media.MediaModel {
         constructor(userId: string, setId: string, opt_caption?: string, opt_description?: string);
         
         /**

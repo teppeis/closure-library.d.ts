@@ -9,7 +9,7 @@ declare module goog.positioning {
      *
      * @enum {number}
      */
-    export interface Corner {
+    interface Corner {
         TOP_LEFT: number;
         TOP_RIGHT: number;
         BOTTOM_LEFT: number;
@@ -25,7 +25,7 @@ declare module goog.positioning {
      *
      * @enum {number}
      */
-    export interface CornerBit {
+    interface CornerBit {
         BOTTOM: number;
         RIGHT: number;
         FLIP_RTL: number;
@@ -37,7 +37,7 @@ declare module goog.positioning {
      *
      * @enum {number}
      */
-    export interface Overflow {
+    interface Overflow {
         IGNORE: number;
         ADJUST_X: number;
         FAIL_X: number;
@@ -54,7 +54,7 @@ declare module goog.positioning {
      *
      * @enum {number}
      */
-    export interface OverflowStatus {
+    interface OverflowStatus {
         NONE: number;
         ADJUSTED_X: number;
         ADJUSTED_Y: number;
@@ -103,7 +103,7 @@ declare module goog.positioning {
      * @return {goog.positioning.OverflowStatus} Status bitmap,
      *     {@see goog.positioning.OverflowStatus}.
      */
-    export function positionAtAnchor(anchorElement: Element, anchorElementCorner: goog.positioning.Corner, movableElement: Element, movableElementCorner: goog.positioning.Corner, opt_offset?: goog.math.Coordinate, opt_margin?: goog.math.Box, opt_overflow?: number, opt_preferredSize?: goog.math.Size, opt_viewport?: goog.math.Box): goog.positioning.OverflowStatus;
+    function positionAtAnchor(anchorElement: Element, anchorElementCorner: goog.positioning.Corner, movableElement: Element, movableElementCorner: goog.positioning.Corner, opt_offset?: goog.math.Coordinate, opt_margin?: goog.math.Box, opt_overflow?: number, opt_preferredSize?: goog.math.Size, opt_viewport?: goog.math.Box): goog.positioning.OverflowStatus;
 
     /**
      * Calculates the page offset of the given element's
@@ -114,7 +114,7 @@ declare module goog.positioning {
      * @param {!Element} movableElement The element to calculate.
      * @return {!goog.math.Coordinate} The page offset, may be (0, 0).
      */
-    export function getOffsetParentPageOffset(movableElement: Element): goog.math.Coordinate;
+    function getOffsetParentPageOffset(movableElement: Element): goog.math.Coordinate;
 
     /**
      * Positions the specified corner of the movable element at the
@@ -138,7 +138,7 @@ declare module goog.positioning {
      *     movableElement. Defaults to the current size.
      * @return {goog.positioning.OverflowStatus} Status bitmap.
      */
-    export function positionAtCoordinate(absolutePos: goog.math.Coordinate, movableElement: Element, movableElementCorner: goog.positioning.Corner, opt_margin?: goog.math.Box, opt_viewport?: goog.math.Box, opt_overflow?: number, opt_preferredSize?: goog.math.Size): goog.positioning.OverflowStatus;
+    function positionAtCoordinate(absolutePos: goog.math.Coordinate, movableElement: Element, movableElementCorner: goog.positioning.Corner, opt_margin?: goog.math.Box, opt_viewport?: goog.math.Box, opt_overflow?: number, opt_preferredSize?: goog.math.Size): goog.positioning.OverflowStatus;
 
     /**
      * Returns an absolute corner (top/bottom left/right) given an absolute
@@ -149,21 +149,21 @@ declare module goog.positioning {
      *     positioning.
      * @return {goog.positioning.Corner} Effective corner.
      */
-    export function getEffectiveCorner(element: Element, corner: goog.positioning.Corner): goog.positioning.Corner;
+    function getEffectiveCorner(element: Element, corner: goog.positioning.Corner): goog.positioning.Corner;
 
     /**
      * Returns the corner opposite the given one horizontally.
      * @param {goog.positioning.Corner} corner The popup corner used to flip.
      * @return {goog.positioning.Corner} The opposite corner horizontally.
      */
-    export function flipCornerHorizontal(corner: goog.positioning.Corner): goog.positioning.Corner;
+    function flipCornerHorizontal(corner: goog.positioning.Corner): goog.positioning.Corner;
 
     /**
      * Returns the corner opposite the given one vertically.
      * @param {goog.positioning.Corner} corner The popup corner used to flip.
      * @return {goog.positioning.Corner} The opposite corner vertically.
      */
-    export function flipCornerVertical(corner: goog.positioning.Corner): goog.positioning.Corner;
+    function flipCornerVertical(corner: goog.positioning.Corner): goog.positioning.Corner;
 
     /**
      * Returns the corner opposite the given one horizontally and vertically.
@@ -171,7 +171,7 @@ declare module goog.positioning {
      * @return {goog.positioning.Corner} The opposite corner horizontally and
      *     vertically.
      */
-    export function flipCorner(corner: goog.positioning.Corner): goog.positioning.Corner;
+    function flipCorner(corner: goog.positioning.Corner): goog.positioning.Corner;
 }
 
 declare module goog.positioning.OverflowStatus {
@@ -180,17 +180,17 @@ declare module goog.positioning.OverflowStatus {
      * Shorthand to check if a status code contains any fail code.
      * @type {number}
      */
-    export var FAILED: number;
+    var FAILED: number;
 
     /**
      * Shorthand to check if horizontal positioning failed.
      * @type {number}
      */
-    export var FAILED_HORIZONTAL: number;
+    var FAILED_HORIZONTAL: number;
 
     /**
      * Shorthand to check if vertical positioning failed.
      * @type {number}
      */
-    export var FAILED_VERTICAL: number;
+    var FAILED_VERTICAL: number;
 }

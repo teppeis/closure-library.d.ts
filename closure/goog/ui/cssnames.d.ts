@@ -5,5 +5,5 @@ declare module goog.ui {
      * cross-browser way.
      * @type {string}
      */
-    export var INLINE_BLOCK_CLASSNAME: string;
+    var INLINE_BLOCK_CLASSNAME: string;
 }

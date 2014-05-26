@@ -5,14 +5,14 @@ declare module goog.dom.safe {
      * @param {!Element} elem The element whose innerHTML is to be assigned to.
      * @param {!goog.html.SafeHtml} html The known-safe HTML to assign.
      */
-    export function setInnerHtml(elem: Element, html: goog.html.SafeHtml): void;
+    function setInnerHtml(elem: Element, html: goog.html.SafeHtml): void;
 
     /**
      * Writes known-safe HTML to a document.
      * @param {!Document} doc The document to be written to.
      * @param {!goog.html.SafeHtml} html The known-safe HTML to assign.
      */
-    export function documentWrite(doc: Document, html: goog.html.SafeHtml): void;
+    function documentWrite(doc: Document, html: goog.html.SafeHtml): void;
 
     /**
      * Safely assigns a URL to an anchor element's href property.
@@ -33,7 +33,7 @@ declare module goog.dom.safe {
      * @param {string|!goog.html.SafeUrl} url The URL to assign.
      * @see goog.html.SafeUrl#sanitize
      */
-    export function setAnchorHref(anchor: HTMLAnchorElement, url: string): void;
+    function setAnchorHref(anchor: HTMLAnchorElement, url: string): void;
 
     /**
      * Safely assigns a URL to a Location object's href property.
@@ -54,5 +54,5 @@ declare module goog.dom.safe {
      * @param {string|!goog.html.SafeUrl} url The URL to assign.
      * @see goog.html.SafeUrl#sanitize
      */
-    export function setLocationHref(loc: Location, url: string): void;
+    function setLocationHref(loc: Location, url: string): void;
 }

@@ -13,7 +13,7 @@ declare module goog.editor {
      * @constructor
      * @extends {goog.editor.Field}
      */
-    export class ContentEditableField extends goog.editor.Field {
+    class ContentEditableField extends goog.editor.Field {
         constructor(id: string, opt_doc?: Document);
     }
 }

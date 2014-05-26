@@ -8,7 +8,7 @@ declare module goog.structs {
      * @template VALUE
      * @final
      */
-    export class PriorityQueue<VALUE> extends goog.structs.Heap<number, VALUE> {
+    class PriorityQueue<VALUE> extends goog.structs.Heap<number, VALUE> {
         constructor();
         
         /**

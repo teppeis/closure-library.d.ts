@@ -10,7 +10,7 @@ declare module goog.structs {
      * @constructor
      * @template T
      */
-    export class InversionMap<T> {
+    class InversionMap<T> {
         constructor(rangeArray: Array<number>, valueArray: Array<T>, opt_delta?: boolean);
         
         /**

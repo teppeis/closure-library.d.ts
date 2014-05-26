@@ -12,7 +12,7 @@ declare module goog.ui.ac {
      * @constructor
      * @extends {goog.ui.ac.InputHandler}
      */
-    export class RichInputHandler extends goog.ui.ac.InputHandler {
+    class RichInputHandler extends goog.ui.ac.InputHandler {
         constructor(opt_separators?: string, opt_literals?: string, opt_multi?: boolean, opt_throttleTime?: number);
         
         /**

@@ -18,7 +18,7 @@ declare module goog.ui.editor {
      * @constructor
      * @extends {goog.events.EventTarget}
      */
-    export class ToolbarController extends goog.events.EventTarget {
+    class ToolbarController extends goog.events.EventTarget {
         constructor(field: goog.editor.Field, toolbar: goog.ui.Toolbar);
         
         /**

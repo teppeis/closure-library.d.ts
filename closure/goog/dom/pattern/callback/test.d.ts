@@ -5,7 +5,7 @@ declare module goog.dom.pattern.callback {
      * @constructor
      * @final
      */
-    export class Test {
+    class Test {
         constructor();
         
         /**

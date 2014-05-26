@@ -8,7 +8,7 @@ declare module goog.promise {
      * @interface
      * @template TYPE
      */
-    export interface Resolver<TYPE> {
+    interface Resolver<TYPE> {
         
         /**
          * The promise that created this resolver.

@@ -6,7 +6,7 @@ declare module goog.cssom.iframe.style {
      * @constructor
      * @private
      */
-    export interface CssRuleSet_ {
+    interface CssRuleSet_ {
         
         /**
          * Initializes the rule set from a {@code CSSRule}.
@@ -63,7 +63,7 @@ declare module goog.cssom.iframe.style {
      * @constructor
      * @private
      */
-    export interface CssSelector_ {
+    interface CssSelector_ {
         
         /**
          * Tests to see what part of a DOM element hierarchy would be matched by
@@ -95,7 +95,7 @@ declare module goog.cssom.iframe.style {
      * @constructor
      * @private
      */
-    export interface CssSelectorPart_ {
+    interface CssSelectorPart_ {
         
         /**
          * Test whether an element matches this selector part, considered in isolation.
@@ -113,7 +113,7 @@ declare module goog.cssom.iframe.style {
      * @constructor
      * @private
      */
-    export interface NodeAncestry_ {
+    interface NodeAncestry_ {
     }
 
     /**
@@ -121,7 +121,7 @@ declare module goog.cssom.iframe.style {
      * the structure or class/id attributes of your document and you want
      * to recalculate the currently applied CSS rules.
      */
-    export function resetDomCache(): void;
+    function resetDomCache(): void;
 
     /**
      * Reads the current css rules from element's document, and returns them
@@ -140,7 +140,7 @@ declare module goog.cssom.iframe.style {
      *     document, with modified selectors.
      * @see goog.cssom.iframe.style.getBackgroundContext.
      */
-    export function getElementContext(element: Element, opt_forceRuleSetCacheUpdate?: boolean, opt_copyBackgroundContext?: boolean): string;
+    function getElementContext(element: Element, opt_forceRuleSetCacheUpdate?: boolean, opt_copyBackgroundContext?: boolean): string;
 
     /**
      * Generates a set of CSS properties that can be used to make another
@@ -156,7 +156,7 @@ declare module goog.cssom.iframe.style {
      * @param {Element} element The element from which to copy background styles.
      * @return {!Object} Object containing background* properties.
      */
-    export function getBackgroundContext(element: Element): Object;
+    function getBackgroundContext(element: Element): Object;
 }
 
 declare module goog.cssom.iframe.style.ruleSetCache_ {
@@ -166,7 +166,7 @@ declare module goog.cssom.iframe.style.ruleSetCache_ {
      * has rulesets for this document the cached version will be replaced.
      * @param {Document} doc The document from which to load rulesets.
      */
-    export function loadRuleSetsForDocument(doc: Document): void;
+    function loadRuleSetsForDocument(doc: Document): void;
 
     /**
      * Retrieves the array of css rulesets for this document. A cached
@@ -175,5 +175,5 @@ declare module goog.cssom.iframe.style.ruleSetCache_ {
      * @return {!Array.<goog.cssom.iframe.style.CssRuleSet_>} An array of CssRuleSet
      *     objects representing the css rule sets in the supplied document.
      */
-    export function getRuleSetsForDocument(doc: Document): Array<goog.cssom.iframe.style.CssRuleSet_>;
+    function getRuleSetsForDocument(doc: Document): Array<goog.cssom.iframe.style.CssRuleSet_>;
 }

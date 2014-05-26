@@ -8,7 +8,7 @@ declare module goog.storage {
      * @constructor
      * @extends {goog.storage.RichStorage}
      */
-    export class ExpiringStorage extends goog.storage.RichStorage {
+    class ExpiringStorage extends goog.storage.RichStorage {
         constructor(mechanism: goog.storage.mechanism.Mechanism);
         
         /**

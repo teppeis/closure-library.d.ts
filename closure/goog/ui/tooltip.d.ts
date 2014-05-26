@@ -12,7 +12,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Popup}
      */
-    export class Tooltip extends goog.ui.Popup {
+    class Tooltip extends goog.ui.Popup {
         constructor(opt_el?: Element, opt_str?: string, opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -332,7 +332,7 @@ declare module goog.ui.Tooltip {
      * Possible states for the tooltip to be in.
      * @enum {number}
      */
-    export interface State {
+    interface State {
         INACTIVE: number;
         WAITING_TO_SHOW: number;
         SHOWING: number;
@@ -344,7 +344,7 @@ declare module goog.ui.Tooltip {
      * Popup activation types. Used to select a positioning strategy.
      * @enum {number}
      */
-    export interface Activation {
+    interface Activation {
         CURSOR: number;
         FOCUS: number;
     }
@@ -363,7 +363,7 @@ declare module goog.ui.Tooltip {
      * @extends {goog.positioning.ViewportPosition}
      * @final
      */
-    export class CursorTooltipPosition extends goog.positioning.ViewportPosition {
+    class CursorTooltipPosition extends goog.positioning.ViewportPosition {
         constructor(arg1: number, opt_arg2?: number);
         
         /**
@@ -390,7 +390,7 @@ declare module goog.ui.Tooltip {
      * @constructor
      * @extends {goog.positioning.AnchoredPosition}
      */
-    export class ElementTooltipPosition extends goog.positioning.AnchoredPosition {
+    class ElementTooltipPosition extends goog.positioning.AnchoredPosition {
         constructor(element: Element);
         
         /**

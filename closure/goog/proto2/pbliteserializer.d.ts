@@ -6,7 +6,7 @@ declare module goog.proto2 {
      * @constructor
      * @extends {goog.proto2.LazyDeserializer}
      */
-    export class PbLiteSerializer extends goog.proto2.LazyDeserializer {
+    class PbLiteSerializer extends goog.proto2.LazyDeserializer {
         constructor();
         
         /**

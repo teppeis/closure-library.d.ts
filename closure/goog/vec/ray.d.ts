@@ -8,7 +8,7 @@ declare module goog.vec {
      * @constructor
      * @final
      */
-    export class Ray {
+    class Ray {
         constructor(opt_origin?: goog.vec.Vec3.AnyType, opt_dir?: goog.vec.Vec3.AnyType);
         
         /**

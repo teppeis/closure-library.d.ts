@@ -6,14 +6,14 @@ declare module goog.dom.vendor {
      *
      * @return {?string} The JS vendor prefix or null if there is none.
      */
-    export function getVendorJsPrefix(): string;
+    function getVendorJsPrefix(): string;
 
     /**
      * Returns the vendor prefix used in CSS properties.
      *
      * @return {?string} The vendor prefix or null if there is none.
      */
-    export function getVendorPrefix(): string;
+    function getVendorPrefix(): string;
 
     /**
      * @param {string} propertyName A property name.
@@ -22,11 +22,11 @@ declare module goog.dom.vendor {
      * @return {?string} A vendor prefixed property name, or null if it does not
      *     exist.
      */
-    export function getPrefixedPropertyName(propertyName: string, opt_object?: Object): string;
+    function getPrefixedPropertyName(propertyName: string, opt_object?: Object): string;
 
     /**
      * @param {string} eventType An event type.
      * @return {string} A lower-cased vendor prefixed event type.
      */
-    export function getPrefixedEventType(eventType: string): string;
+    function getPrefixedEventType(eventType: string): string;
 }

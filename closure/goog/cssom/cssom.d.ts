@@ -4,7 +4,7 @@ declare module goog.cssom {
      * Enumeration of {@code CSSRule} types.
      * @enum {number}
      */
-    export interface CssRuleType {
+    interface CssRuleType {
         STYLE: number;
         IMPORT: number;
         MEDIA: number;
@@ -19,7 +19,7 @@ declare module goog.cssom {
      * @param {(CSSStyleSheet|StyleSheetList)=} opt_styleSheet The CSSStyleSheet.
      * @return {string} css text.
      */
-    export function getAllCssText(opt_styleSheet?: CSSStyleSheet): string;
+    function getAllCssText(opt_styleSheet?: CSSStyleSheet): string;
 
     /**
      * Recursively gets all CSSStyleRules, optionally starting from a given
@@ -28,7 +28,7 @@ declare module goog.cssom {
      * @param {(CSSStyleSheet|StyleSheetList)=} opt_styleSheet The CSSStyleSheet.
      * @return {Array.<CSSStyleRule>} A list of CSSStyleRules.
      */
-    export function getAllCssStyleRules(opt_styleSheet?: CSSStyleSheet): Array<CSSStyleRule>;
+    function getAllCssStyleRules(opt_styleSheet?: CSSStyleSheet): Array<CSSStyleRule>;
 
     /**
      * Returns the CSSRules from a styleSheet.
@@ -42,7 +42,7 @@ declare module goog.cssom {
      *     have been downloaded and parsed and are "ready".
      * @return {CSSRuleList} An array of CSSRules or null.
      */
-    export function getCssRulesFromStyleSheet(styleSheet: CSSStyleSheet): CSSRuleList;
+    function getCssRulesFromStyleSheet(styleSheet: CSSStyleSheet): CSSRuleList;
 
     /**
      * Gets all CSSStyleSheet objects starting from some CSSStyleSheet. Note that we
@@ -54,14 +54,14 @@ declare module goog.cssom {
      *    defaults to false.
      * @return {!Array.<CSSStyleSheet>} A list of CSSStyleSheet objects.
      */
-    export function getAllCssStyleSheets(opt_styleSheet?: CSSStyleSheet, opt_includeDisabled?: boolean): Array<CSSStyleSheet>;
+    function getAllCssStyleSheets(opt_styleSheet?: CSSStyleSheet, opt_includeDisabled?: boolean): Array<CSSStyleSheet>;
 
     /**
      * Gets the cssText from a CSSRule object cross-browserly.
      * @param {CSSRule} cssRule A CSSRule.
      * @return {string} cssText The text for the rule, including the selector.
      */
-    export function getCssTextFromCssRule(cssRule: CSSRule): string;
+    function getCssTextFromCssRule(cssRule: CSSRule): string;
 
     /**
      * Get the index of the CSSRule in it's CSSStyleSheet.
@@ -71,7 +71,7 @@ declare module goog.cssom {
      * @throws {Error} When we cannot get the parentStyleSheet.
      * @return {number} The index of the CSSRule, or -1.
      */
-    export function getCssRuleIndexInParentStyleSheet(cssRule: CSSRule, opt_parentStyleSheet?: CSSStyleSheet): number;
+    function getCssRuleIndexInParentStyleSheet(cssRule: CSSRule, opt_parentStyleSheet?: CSSStyleSheet): number;
 
     /**
      * We do some trickery in getAllCssStyleRules that hacks this in for IE.
@@ -80,7 +80,7 @@ declare module goog.cssom {
      * @param {CSSRule} cssRule The CSSRule.
      * @return {CSSStyleSheet} A styleSheet object.
      */
-    export function getParentStyleSheet(cssRule: CSSRule): CSSStyleSheet;
+    function getParentStyleSheet(cssRule: CSSRule): CSSStyleSheet;
 
     /**
      * Replace a cssRule with some cssText for a new rule.
@@ -96,7 +96,7 @@ declare module goog.cssom {
      * @throws {Error} If we cannot find a parentStyleSheet.
      * @throws {Error} If we cannot find a css rule index.
      */
-    export function replaceCssRule(cssRule: CSSRule, cssText: string, opt_parentStyleSheet?: CSSStyleSheet, opt_index?: number): void;
+    function replaceCssRule(cssRule: CSSRule, cssText: string, opt_parentStyleSheet?: CSSStyleSheet, opt_index?: number): void;
 
     /**
      * Cross browser function to add a CSSRule into a CSSStyleSheet, optionally
@@ -109,14 +109,14 @@ declare module goog.cssom {
      *     exception warning "Node cannot be inserted at the specified point in
      *     the hierarchy."
      */
-    export function addCssRule(cssStyleSheet: CSSStyleSheet, cssText: string, opt_index?: number): void;
+    function addCssRule(cssStyleSheet: CSSStyleSheet, cssText: string, opt_index?: number): void;
 
     /**
      * Cross browser function to remove a CSSRule in a CSSStyleSheet at an index.
      * @param {CSSStyleSheet} cssStyleSheet The CSSRule's parentStyleSheet.
      * @param {number} index The CSSRule's index in the parentStyleSheet.
      */
-    export function removeCssRule(cssStyleSheet: CSSStyleSheet, index: number): void;
+    function removeCssRule(cssStyleSheet: CSSStyleSheet, index: number): void;
 
     /**
      * Appends a DOM node to HEAD containing the css text that's passed in.
@@ -125,7 +125,7 @@ declare module goog.cssom {
      *     document interactions.
      * @return {!Element} The newly created STYLE element.
      */
-    export function addCssText(cssText: string, opt_domHelper?: goog.dom.DomHelper): Element;
+    function addCssText(cssText: string, opt_domHelper?: goog.dom.DomHelper): Element;
 
     /**
      * Cross browser method to get the filename from the StyleSheet's href.
@@ -136,5 +136,5 @@ declare module goog.cssom {
      * @return {?string} filename The filename, or null if not an external
      *    styleSheet.
      */
-    export function getFileNameFromStyleSheet(styleSheet: StyleSheet): string;
+    function getFileNameFromStyleSheet(styleSheet: StyleSheet): string;
 }

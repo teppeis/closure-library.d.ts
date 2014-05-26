@@ -3,7 +3,7 @@ declare module goog.vec.Matrix3 {
     /**
      * @typedef {goog.vec.ArrayType}
      */
-    export interface Type {
+    interface Type {
     }
 
     /**
@@ -13,7 +13,7 @@ declare module goog.vec.Matrix3 {
      *
      * @return {goog.vec.Matrix3.Type} The new, nine element array.
      */
-    export function create(): goog.vec.Matrix3.Type;
+    function create(): goog.vec.Matrix3.Type;
 
     /**
      * Creates the array representation of a 3x3 matrix. The use of the array
@@ -22,7 +22,7 @@ declare module goog.vec.Matrix3 {
      *
      * @return {goog.vec.Matrix3.Type} The new, nine element array.
      */
-    export function createIdentity(): goog.vec.Matrix3.Type;
+    function createIdentity(): goog.vec.Matrix3.Type;
 
     /**
      * Creates a 3x3 matrix initialized from the given array.
@@ -31,7 +31,7 @@ declare module goog.vec.Matrix3 {
      *     matrix values in column major order.
      * @return {goog.vec.Matrix3.Type} The new, nine element array.
      */
-    export function createFromArray(matrix: goog.vec.ArrayType): goog.vec.Matrix3.Type;
+    function createFromArray(matrix: goog.vec.ArrayType): goog.vec.Matrix3.Type;
 
     /**
      * Creates a 3x3 matrix initialized from the given values.
@@ -47,7 +47,7 @@ declare module goog.vec.Matrix3 {
      * @param {number} v22 The values at (2, 2).
      * @return {goog.vec.Matrix3.Type} The new, nine element array.
      */
-    export function createFromValues(v00: number, v10: number, v20: number, v01: number, v11: number, v21: number, v02: number, v12: number, v22: number): goog.vec.Matrix3.Type;
+    function createFromValues(v00: number, v10: number, v20: number, v01: number, v11: number, v21: number, v02: number, v12: number, v22: number): goog.vec.Matrix3.Type;
 
     /**
      * Creates a clone of a 3x3 matrix.
@@ -55,7 +55,7 @@ declare module goog.vec.Matrix3 {
      * @param {goog.vec.Matrix3.Type} matrix The source 3x3 matrix.
      * @return {goog.vec.Matrix3.Type} The new 3x3 element matrix.
      */
-    export function clone(matrix: goog.vec.Matrix3.Type): goog.vec.Matrix3.Type;
+    function clone(matrix: goog.vec.Matrix3.Type): goog.vec.Matrix3.Type;
 
     /**
      * Retrieves the element at the requested row and column.
@@ -66,7 +66,7 @@ declare module goog.vec.Matrix3 {
      * @param {number} column The column index.
      * @return {number} The element value at the requested row, column indices.
      */
-    export function getElement(mat: goog.vec.ArrayType, row: number, column: number): number;
+    function getElement(mat: goog.vec.ArrayType, row: number, column: number): number;
 
     /**
      * Sets the element at the requested row and column.
@@ -77,7 +77,7 @@ declare module goog.vec.Matrix3 {
      * @param {number} column The column index.
      * @param {number} value The value to set at the requested row, column.
      */
-    export function setElement(mat: goog.vec.ArrayType, row: number, column: number, value: number): void;
+    function setElement(mat: goog.vec.ArrayType, row: number, column: number, value: number): void;
 
     /**
      * Initializes the matrix from the set of values. Note the values supplied are
@@ -95,7 +95,7 @@ declare module goog.vec.Matrix3 {
      * @param {number} v12 The values at (1, 2).
      * @param {number} v22 The values at (2, 2).
      */
-    export function setFromValues(mat: goog.vec.ArrayType, v00: number, v10: number, v20: number, v01: number, v11: number, v21: number, v02: number, v12: number, v22: number): void;
+    function setFromValues(mat: goog.vec.ArrayType, v00: number, v10: number, v20: number, v01: number, v11: number, v21: number, v02: number, v12: number, v22: number): void;
 
     /**
      * Sets the matrix from the array of values stored in column major order.
@@ -105,7 +105,7 @@ declare module goog.vec.Matrix3 {
      * @param {goog.vec.ArrayType} values The column major ordered
      *     array of values to store in the matrix.
      */
-    export function setFromArray(mat: goog.vec.ArrayType, values: goog.vec.ArrayType): void;
+    function setFromArray(mat: goog.vec.ArrayType, values: goog.vec.ArrayType): void;
 
     /**
      * Sets the matrix from the array of values stored in row major order.
@@ -115,7 +115,7 @@ declare module goog.vec.Matrix3 {
      * @param {goog.vec.ArrayType} values The row major ordered array
      *     of values to store in the matrix.
      */
-    export function setFromRowMajorArray(mat: goog.vec.ArrayType, values: goog.vec.ArrayType): void;
+    function setFromRowMajorArray(mat: goog.vec.ArrayType, values: goog.vec.ArrayType): void;
 
     /**
      * Sets the diagonal values of the matrix from the given values.
@@ -126,7 +126,7 @@ declare module goog.vec.Matrix3 {
      * @param {number} v11 The values for (1, 1).
      * @param {number} v22 The values for (2, 2).
      */
-    export function setDiagonalValues(mat: goog.vec.ArrayType, v00: number, v11: number, v22: number): void;
+    function setDiagonalValues(mat: goog.vec.ArrayType, v00: number, v11: number, v22: number): void;
 
     /**
      * Sets the diagonal values of the matrix from the given vector.
@@ -136,7 +136,7 @@ declare module goog.vec.Matrix3 {
      * @param {goog.vec.ArrayType} vec The vector containing the
      *     values.
      */
-    export function setDiagonal(mat: goog.vec.ArrayType, vec: goog.vec.ArrayType): void;
+    function setDiagonal(mat: goog.vec.ArrayType, vec: goog.vec.ArrayType): void;
 
     /**
      * Sets the specified column with the supplied values.
@@ -148,7 +148,7 @@ declare module goog.vec.Matrix3 {
      * @param {number} v1 The value for row 1.
      * @param {number} v2 The value for row 2.
      */
-    export function setColumnValues(mat: goog.vec.ArrayType, column: number, v0: number, v1: number, v2: number): void;
+    function setColumnValues(mat: goog.vec.ArrayType, column: number, v0: number, v1: number, v2: number): void;
 
     /**
      * Sets the specified column with the value from the supplied array.
@@ -159,7 +159,7 @@ declare module goog.vec.Matrix3 {
      * @param {goog.vec.ArrayType} vec The vector elements for the
      *     column.
      */
-    export function setColumn(mat: goog.vec.ArrayType, column: number, vec: goog.vec.ArrayType): void;
+    function setColumn(mat: goog.vec.ArrayType, column: number, vec: goog.vec.ArrayType): void;
 
     /**
      * Retrieves the specified column from the matrix into the given vector
@@ -171,7 +171,7 @@ declare module goog.vec.Matrix3 {
      * @param {goog.vec.ArrayType} vec The vector elements to receive
      *     the column.
      */
-    export function getColumn(mat: goog.vec.ArrayType, column: number, vec: goog.vec.ArrayType): void;
+    function getColumn(mat: goog.vec.ArrayType, column: number, vec: goog.vec.ArrayType): void;
 
     /**
      * Sets the columns of the matrix from the set of vector elements.
@@ -182,7 +182,7 @@ declare module goog.vec.Matrix3 {
      * @param {goog.vec.ArrayType} vec1 The values for column 1.
      * @param {goog.vec.ArrayType} vec2 The values for column 2.
      */
-    export function setColumns(mat: goog.vec.ArrayType, vec0: goog.vec.ArrayType, vec1: goog.vec.ArrayType, vec2: goog.vec.ArrayType): void;
+    function setColumns(mat: goog.vec.ArrayType, vec0: goog.vec.ArrayType, vec1: goog.vec.ArrayType, vec2: goog.vec.ArrayType): void;
 
     /**
      * Retrieves the column values from the given matrix into the given vector
@@ -197,7 +197,7 @@ declare module goog.vec.Matrix3 {
      * @param {goog.vec.ArrayType} vec2 The vector elements to receive
      *     column 2.
      */
-    export function getColumns(mat: goog.vec.ArrayType, vec0: goog.vec.ArrayType, vec1: goog.vec.ArrayType, vec2: goog.vec.ArrayType): void;
+    function getColumns(mat: goog.vec.ArrayType, vec0: goog.vec.ArrayType, vec1: goog.vec.ArrayType, vec2: goog.vec.ArrayType): void;
 
     /**
      * Sets the row values from the supplied values.
@@ -209,7 +209,7 @@ declare module goog.vec.Matrix3 {
      * @param {number} v1 The value for column 1.
      * @param {number} v2 The value for column 2.
      */
-    export function setRowValues(mat: goog.vec.ArrayType, row: number, v0: number, v1: number, v2: number): void;
+    function setRowValues(mat: goog.vec.ArrayType, row: number, v0: number, v1: number, v2: number): void;
 
     /**
      * Sets the row values from the supplied vector.
@@ -219,7 +219,7 @@ declare module goog.vec.Matrix3 {
      * @param {number} row The index of the row.
      * @param {goog.vec.ArrayType} vec The vector containing the values.
      */
-    export function setRow(mat: goog.vec.ArrayType, row: number, vec: goog.vec.ArrayType): void;
+    function setRow(mat: goog.vec.ArrayType, row: number, vec: goog.vec.ArrayType): void;
 
     /**
      * Retrieves the row values into the given vector.
@@ -229,7 +229,7 @@ declare module goog.vec.Matrix3 {
      * @param {number} row The index of the row supplying the values.
      * @param {goog.vec.ArrayType} vec The vector to receive the row.
      */
-    export function getRow(mat: goog.vec.ArrayType, row: number, vec: goog.vec.ArrayType): void;
+    function getRow(mat: goog.vec.ArrayType, row: number, vec: goog.vec.ArrayType): void;
 
     /**
      * Sets the rows of the matrix from the supplied vectors.
@@ -240,7 +240,7 @@ declare module goog.vec.Matrix3 {
      * @param {goog.vec.ArrayType} vec1 The values for row 1.
      * @param {goog.vec.ArrayType} vec2 The values for row 2.
      */
-    export function setRows(mat: goog.vec.ArrayType, vec0: goog.vec.ArrayType, vec1: goog.vec.ArrayType, vec2: goog.vec.ArrayType): void;
+    function setRows(mat: goog.vec.ArrayType, vec0: goog.vec.ArrayType, vec1: goog.vec.ArrayType, vec2: goog.vec.ArrayType): void;
 
     /**
      * Retrieves the rows of the matrix into the supplied vectors.
@@ -251,21 +251,21 @@ declare module goog.vec.Matrix3 {
      * @param {goog.vec.ArrayType} vec1 The vector to receive row 1.
      * @param {goog.vec.ArrayType} vec2 The vector to receive row 2.
      */
-    export function getRows(mat: goog.vec.ArrayType, vec0: goog.vec.ArrayType, vec1: goog.vec.ArrayType, vec2: goog.vec.ArrayType): void;
+    function getRows(mat: goog.vec.ArrayType, vec0: goog.vec.ArrayType, vec1: goog.vec.ArrayType, vec2: goog.vec.ArrayType): void;
 
     /**
      * Clears the given matrix to zero.
      *
      * @param {goog.vec.ArrayType} mat The matrix to clear.
      */
-    export function setZero(mat: goog.vec.ArrayType): void;
+    function setZero(mat: goog.vec.ArrayType): void;
 
     /**
      * Sets the given matrix to the identity matrix.
      *
      * @param {goog.vec.ArrayType} mat The matrix to set.
      */
-    export function setIdentity(mat: goog.vec.ArrayType): void;
+    function setIdentity(mat: goog.vec.ArrayType): void;
 
     /**
      * Performs a per-component addition of the matrices mat0 and mat1, storing
@@ -278,7 +278,7 @@ declare module goog.vec.Matrix3 {
      * @return {goog.vec.ArrayType} return resultMat so that operations can be
      *     chained together.
      */
-    export function add(mat0: goog.vec.ArrayType, mat1: goog.vec.ArrayType, resultMat: goog.vec.ArrayType): goog.vec.ArrayType;
+    function add(mat0: goog.vec.ArrayType, mat1: goog.vec.ArrayType, resultMat: goog.vec.ArrayType): goog.vec.ArrayType;
 
     /**
      * Performs a per-component subtraction of the matrices mat0 and mat1,
@@ -291,7 +291,7 @@ declare module goog.vec.Matrix3 {
      * @return {goog.vec.ArrayType} return resultMat so that operations can be
      *     chained together.
      */
-    export function subtract(mat0: goog.vec.ArrayType, mat1: goog.vec.ArrayType, resultMat: goog.vec.ArrayType): goog.vec.ArrayType;
+    function subtract(mat0: goog.vec.ArrayType, mat1: goog.vec.ArrayType, resultMat: goog.vec.ArrayType): goog.vec.ArrayType;
 
     /**
      * Performs a component-wise multiplication of mat0 with the given scalar
@@ -304,7 +304,7 @@ declare module goog.vec.Matrix3 {
      * @return {goog.vec.ArrayType} return resultMat so that operations can be
      *     chained together.
      */
-    export function scale(mat0: goog.vec.ArrayType, scalar: number, resultMat: goog.vec.ArrayType): goog.vec.ArrayType;
+    function scale(mat0: goog.vec.ArrayType, scalar: number, resultMat: goog.vec.ArrayType): goog.vec.ArrayType;
 
     /**
      * Multiplies the two matrices mat0 and mat1 using matrix multiplication,
@@ -318,7 +318,7 @@ declare module goog.vec.Matrix3 {
      * @return {goog.vec.ArrayType} return resultMat so that operations can be
      *     chained together.
      */
-    export function multMat(mat0: goog.vec.ArrayType, mat1: goog.vec.ArrayType, resultMat: goog.vec.ArrayType): goog.vec.ArrayType;
+    function multMat(mat0: goog.vec.ArrayType, mat1: goog.vec.ArrayType, resultMat: goog.vec.ArrayType): goog.vec.ArrayType;
 
     /**
      * Transposes the given matrix mat storing the result into resultMat.
@@ -328,7 +328,7 @@ declare module goog.vec.Matrix3 {
      * @return {goog.vec.ArrayType} return resultMat so that operations can be
      *     chained together.
      */
-    export function transpose(mat: goog.vec.ArrayType, resultMat: goog.vec.ArrayType): goog.vec.ArrayType;
+    function transpose(mat: goog.vec.ArrayType, resultMat: goog.vec.ArrayType): goog.vec.ArrayType;
 
     /**
      * Computes the inverse of mat0 storing the result into resultMat. If the
@@ -339,7 +339,7 @@ declare module goog.vec.Matrix3 {
      * @return {boolean} True if the inverse is defined. If false is returned,
      *     resultMat is not modified.
      */
-    export function invert(mat0: goog.vec.ArrayType, resultMat: goog.vec.ArrayType): boolean;
+    function invert(mat0: goog.vec.ArrayType, resultMat: goog.vec.ArrayType): boolean;
 
     /**
      * Returns true if the components of mat0 are equal to the components of mat1.
@@ -348,7 +348,7 @@ declare module goog.vec.Matrix3 {
      * @param {goog.vec.ArrayType} mat1 The second matrix.
      * @return {boolean} True if the the two matrices are equivalent.
      */
-    export function equals(mat0: goog.vec.ArrayType, mat1: goog.vec.ArrayType): boolean;
+    function equals(mat0: goog.vec.ArrayType, mat1: goog.vec.ArrayType): boolean;
 
     /**
      * Transforms the given vector with the given matrix storing the resulting,
@@ -362,7 +362,7 @@ declare module goog.vec.Matrix3 {
      * @return {goog.vec.ArrayType} return resultVec so that operations can be
      *     chained together.
      */
-    export function multVec3(mat: goog.vec.ArrayType, vec: goog.vec.ArrayType, resultVec: goog.vec.ArrayType): goog.vec.ArrayType;
+    function multVec3(mat: goog.vec.ArrayType, vec: goog.vec.ArrayType, resultVec: goog.vec.ArrayType): goog.vec.ArrayType;
 
     /**
      * Initializes the given 3x3 matrix as a translation matrix with x and y
@@ -373,7 +373,7 @@ declare module goog.vec.Matrix3 {
      * @param {number} x The translation along the x axis.
      * @param {number} y The translation along the y axis.
      */
-    export function makeTranslate(mat: goog.vec.ArrayType, x: number, y: number): void;
+    function makeTranslate(mat: goog.vec.ArrayType, x: number, y: number): void;
 
     /**
      * Initializes the given 3x3 matrix as a scale matrix with x, y and z scale
@@ -384,7 +384,7 @@ declare module goog.vec.Matrix3 {
      * @param {number} y The scale along the y axis.
      * @param {number} z The scale along the z axis.
      */
-    export function makeScale(mat: goog.vec.ArrayType, x: number, y: number, z: number): void;
+    function makeScale(mat: goog.vec.ArrayType, x: number, y: number, z: number): void;
 
     /**
      * Initializes the given 3x3 matrix as a rotation matrix with the given rotation
@@ -396,5 +396,5 @@ declare module goog.vec.Matrix3 {
      * @param {number} ay The y component of the rotation axis.
      * @param {number} az The z component of the rotation axis.
      */
-    export function makeAxisAngleRotate(mat: goog.vec.ArrayType, angle: number, ax: number, ay: number, az: number): void;
+    function makeAxisAngleRotate(mat: goog.vec.ArrayType, angle: number, ax: number, ay: number, az: number): void;
 }

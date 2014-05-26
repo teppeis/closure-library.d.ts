@@ -10,5 +10,5 @@ declare module goog.crypt.pbkdf2 {
      *     Must be multiple of 8.
      * @return {!Array.<number>} Byte array representation of the output key.
      */
-    export function deriveKeySha1(password: Array<number>, initialSalt: Array<number>, iterations: number, keyLength: number): Array<number>;
+    function deriveKeySha1(password: Array<number>, initialSalt: Array<number>, iterations: number, keyLength: number): Array<number>;
 }

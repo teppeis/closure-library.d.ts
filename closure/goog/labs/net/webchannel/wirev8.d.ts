@@ -6,7 +6,7 @@ declare module goog.labs.net.webChannel {
      * @constructor
      * @struct
      */
-    export class WireV8 {
+    class WireV8 {
         constructor();
     }
 }

@@ -10,7 +10,7 @@ declare module goog.graphics.ext {
      * @constructor
      * @extends {goog.graphics.ext.Element}
      */
-    export class Group extends goog.graphics.ext.Element {
+    class Group extends goog.graphics.ext.Element {
         constructor(group: goog.graphics.ext.Group, opt_wrapper?: goog.graphics.GroupElement);
         
         /**

@@ -5,7 +5,7 @@ declare module goog.dom.pattern {
      *
      * @constructor
      */
-    export class AbstractPattern {
+    class AbstractPattern {
         constructor();
         
         /**

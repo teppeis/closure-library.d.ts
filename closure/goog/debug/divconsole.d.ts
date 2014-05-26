@@ -5,7 +5,7 @@ declare module goog.debug {
      * @param {Element} element The element to append to.
      * @constructor
      */
-    export class DivConsole {
+    class DivConsole {
         constructor(element: Element);
         
         /**

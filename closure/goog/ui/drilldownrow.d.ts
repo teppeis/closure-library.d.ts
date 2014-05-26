@@ -19,7 +19,7 @@ declare module goog.ui {
      * @extends {goog.ui.Component}
      * @final
      */
-    export class DrilldownRow extends goog.ui.Component {
+    class DrilldownRow extends goog.ui.Component {
         constructor(opt_properties?: Object, opt_domHelper?: goog.dom.DomHelper);
         
         /**

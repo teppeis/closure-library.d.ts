@@ -7,7 +7,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Component}
      */
-    export class Ratings extends goog.ui.Component {
+    class Ratings extends goog.ui.Component {
         constructor(opt_ratings?: Array<string>, opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -118,7 +118,7 @@ declare module goog.ui.Ratings {
      * Enums for Ratings event type.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         CHANGE: string;
         HIGHLIGHT_CHANGE: string;
         HIGHLIGHT: string;

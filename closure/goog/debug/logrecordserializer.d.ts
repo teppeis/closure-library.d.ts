@@ -5,7 +5,7 @@ declare module goog.debug.logRecordSerializer {
      * @enum {string}
      * @private
      */
-    export interface Param_ {
+    interface Param_ {
         TIME: string;
         LEVEL_NAME: string;
         LEVEL_VALUE: string;
@@ -22,14 +22,14 @@ declare module goog.debug.logRecordSerializer {
      * @param {goog.debug.LogRecord} record The record to serialize.
      * @return {string} Serialized JSON string of the log message.
      */
-    export function serialize(record: goog.debug.LogRecord): string;
+    function serialize(record: goog.debug.LogRecord): string;
 
     /**
      * Deserializes a JSON-serialized LogRecord.
      * @param {string} s The JSON serialized record.
      * @return {!goog.debug.LogRecord} The deserialized record.
      */
-    export function parse(s: string): goog.debug.LogRecord;
+    function parse(s: string): goog.debug.LogRecord;
 
     /**
      * Deserializes a JSON-serialized LogRecord.  Use this only if you're
@@ -38,5 +38,5 @@ declare module goog.debug.logRecordSerializer {
      * @param {string} s The JSON serialized record.
      * @return {!goog.debug.LogRecord} The deserialized record.
      */
-    export function unsafeParse(s: string): goog.debug.LogRecord;
+    function unsafeParse(s: string): goog.debug.LogRecord;
 }

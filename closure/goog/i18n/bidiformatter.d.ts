@@ -54,7 +54,7 @@ declare module goog.i18n {
      * @constructor
      * @final
      */
-    export class BidiFormatter {
+    class BidiFormatter {
         constructor(contextDir: goog.i18n.bidi.Dir, opt_alwaysSpan?: boolean);
         
         /**

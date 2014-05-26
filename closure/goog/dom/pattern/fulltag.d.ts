@@ -17,7 +17,7 @@ declare module goog.dom.pattern {
      * @extends {goog.dom.pattern.StartTag}
      * @final
      */
-    export class FullTag extends goog.dom.pattern.StartTag {
+    class FullTag extends goog.dom.pattern.StartTag {
         constructor(tag: string, opt_attrs?: Object, opt_styles?: Object, opt_test?: Function);
         
         /**

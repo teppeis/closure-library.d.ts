@@ -18,7 +18,7 @@ declare module goog.ui {
      * goog.ui.Control state management framework.
      * @final
      */
-    export class TriStateMenuItem extends goog.ui.MenuItem {
+    class TriStateMenuItem {
         constructor(content: goog.ui.ControlContent, opt_model?: Object, opt_domHelper?: goog.dom.DomHelper, opt_renderer?: goog.ui.MenuItemRenderer, opt_alwaysAllowPartial?: boolean);
         
         /**
@@ -40,7 +40,7 @@ declare module goog.ui.TriStateMenuItem {
      * Checked states for component.
      * @enum {number}
      */
-    export interface State {
+    interface State {
         NOT_CHECKED: number;
         PARTIALLY_CHECKED: number;
         FULLY_CHECKED: number;

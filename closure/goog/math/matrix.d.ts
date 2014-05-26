@@ -27,7 +27,7 @@ declare module goog.math {
      * @constructor
      * @final
      */
-    export class Matrix {
+    class Matrix {
         constructor(m: goog.math.Matrix, opt_n?: number);
         
         /**

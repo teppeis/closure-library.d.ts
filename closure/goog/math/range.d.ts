@@ -6,7 +6,7 @@ declare module goog.math {
      * @param {number} b The other end of the range.
      * @constructor
      */
-    export class Range {
+    class Range {
         constructor(a: number, b: number);
         
         /**

@@ -11,7 +11,7 @@ declare module goog.fx {
      * @extends {goog.fx.AbstractDragDrop}
      * @constructor
      */
-    export class DragDrop extends goog.fx.AbstractDragDrop {
+    class DragDrop extends goog.fx.AbstractDragDrop {
         constructor(element: Element, opt_data?: Object);
     }
 }

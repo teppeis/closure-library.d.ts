@@ -12,7 +12,7 @@ declare module goog.editor {
      * @constructor
      * @extends {goog.editor.Field}
      */
-    export class SeamlessField extends goog.editor.Field {
+    class SeamlessField extends goog.editor.Field {
         constructor(id: string, opt_doc?: Document);
         
         /**

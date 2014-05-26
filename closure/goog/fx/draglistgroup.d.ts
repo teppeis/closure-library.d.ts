@@ -4,7 +4,7 @@ declare module goog.fx {
      * Enum to indicate the direction that a drag list grows.
      * @enum {number}
      */
-    export interface DragListDirection {
+    interface DragListDirection {
         DOWN: number;
         RIGHT: number;
         LEFT: number;
@@ -27,7 +27,7 @@ declare module goog.fx {
      * @extends {goog.events.EventTarget}
      * @constructor
      */
-    export class DragListGroup extends goog.events.EventTarget {
+    class DragListGroup extends goog.events.EventTarget {
         constructor();
         
         /**
@@ -226,7 +226,7 @@ declare module goog.fx {
      * @constructor
      * @extends {goog.events.Event}
      */
-    export class DragListGroupEvent extends goog.events.Event {
+    class DragListGroupEvent extends goog.events.Event {
         constructor(type: string, dragListGroup: goog.fx.DragListGroup, event: goog.events.BrowserEvent, currDragItem: Element, draggerEl: Element, dragger: goog.fx.Dragger, opt_draggerElCenter?: goog.math.Coordinate, opt_hoverList?: Element, opt_hoverNextItem?: Element);
     }
 }

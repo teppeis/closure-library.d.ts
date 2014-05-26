@@ -4,19 +4,19 @@ declare module goog.functions {
      * Always returns false.
      * @type {function(...): boolean}
      */
-    export var FALSE: (...arg0: any[]) => boolean;
+    var FALSE: (...arg0: any[]) => boolean;
 
     /**
      * Always returns true.
      * @type {function(...): boolean}
      */
-    export var TRUE: (...arg0: any[]) => boolean;
+    var TRUE: (...arg0: any[]) => boolean;
 
     /**
      * Always returns NULL.
      * @type {function(...): null}
      */
-    export var NULL: (...arg0: any[]) => void;
+    var NULL: (...arg0: any[]) => void;
 
     /**
      * Creates a function that always returns the same value.
@@ -24,7 +24,7 @@ declare module goog.functions {
      * @return {function():T} The new function.
      * @template T
      */
-    export function constant<T>(retValue: T): () => T;
+    function constant<T>(retValue: T): () => T;
 
     /**
      * A simple function that returns the first argument of whatever is passed
@@ -34,21 +34,21 @@ declare module goog.functions {
      * @return {T} The first argument passed in, or undefined if nothing was passed.
      * @template T
      */
-    export function identity<T>(opt_returnValue?: T, ...var_args: any[]): T;
+    function identity<T>(opt_returnValue?: T, ...var_args: any[]): T;
 
     /**
      * Creates a function that always throws an error with the given message.
      * @param {string} message The error message.
      * @return {!Function} The error-throwing function.
      */
-    export function error(message: string): Function;
+    function error(message: string): Function;
 
     /**
      * Creates a function that throws the given object.
      * @param {*} err An object to be thrown.
      * @return {!Function} The error-throwing function.
      */
-    export function fail(err: any): Function;
+    function fail(err: any): Function;
 
     /**
      * Given a function, create a function that keeps opt_numArgs arguments and
@@ -58,14 +58,14 @@ declare module goog.functions {
      * @return {!Function} A version of f that only keeps the first opt_numArgs
      *     arguments.
      */
-    export function lock(f: Function, opt_numArgs?: number): Function;
+    function lock(f: Function, opt_numArgs?: number): Function;
 
     /**
      * Creates a function that returns its nth argument.
      * @param {number} n The position of the return argument.
      * @return {!Function} A new function.
      */
-    export function nth(n: number): Function;
+    function nth(n: number): Function;
 
     /**
      * Given a function, create a new function that swallows its return value
@@ -75,7 +75,7 @@ declare module goog.functions {
      * @return {function(...[?]):T} A new function.
      * @template T
      */
-    export function withReturnValue<T>(f: Function, retValue: T): (...arg0: any[]) => T;
+    function withReturnValue<T>(f: Function, retValue: T): (...arg0: any[]) => T;
 
     /**
      * Creates the composition of the functions passed in.
@@ -85,7 +85,7 @@ declare module goog.functions {
      * @return {function(...[?]):T} The composition of all inputs.
      * @template T
      */
-    export function compose<T>(fn: (...arg0: any[]) => T, ...var_args: Function[]): (...arg0: any[]) => T;
+    function compose<T>(fn: (...arg0: any[]) => T, ...var_args: Function[]): (...arg0: any[]) => T;
 
     /**
      * Creates a function that calls the functions passed in in sequence, and
@@ -94,7 +94,7 @@ declare module goog.functions {
      * @param {...Function} var_args A list of functions.
      * @return {!Function} A function that calls all inputs in sequence.
      */
-    export function sequence(...var_args: Function[]): Function;
+    function sequence(...var_args: Function[]): Function;
 
     /**
      * Creates a function that returns true if each of its components evaluates
@@ -105,7 +105,7 @@ declare module goog.functions {
      * @return {function(...[?]):boolean} A function that ANDs its component
      *      functions.
      */
-    export function and(...var_args: Function[]): (...arg0: any[]) => boolean;
+    function and(...var_args: Function[]): (...arg0: any[]) => boolean;
 
     /**
      * Creates a function that returns true if any of its components evaluates
@@ -116,7 +116,7 @@ declare module goog.functions {
      * @return {function(...[?]):boolean} A function that ORs its component
      *    functions.
      */
-    export function or(...var_args: Function[]): (...arg0: any[]) => boolean;
+    function or(...var_args: Function[]): (...arg0: any[]) => boolean;
 
     /**
      * Creates a function that returns the Boolean opposite of a provided function.
@@ -125,7 +125,7 @@ declare module goog.functions {
      * @return {function(...[?]):boolean} A function that delegates to f and returns
      * opposite.
      */
-    export function not(f: Function): (...arg0: any[]) => boolean;
+    function not(f: Function): (...arg0: any[]) => boolean;
 
     /**
      * Generic factory function to construct an object given the constructor
@@ -137,7 +137,7 @@ declare module goog.functions {
      * @param {...*} var_args The arguments to be passed to the constructor.
      * @return {!Object} A new instance of the class given in {@code constructor}.
      */
-    export function create(constructor: Function, ...var_args: any[]): Object;
+    function create(constructor: Function, ...var_args: any[]): Object;
 
     /**
      * Gives a wrapper function that caches the return value of a parameterless
@@ -154,5 +154,5 @@ declare module goog.functions {
      * @return {!function():T} A wrapped version the function.
      * @template T
      */
-    export function cacheReturnValue<T>(fn: () => T): () => T;
+    function cacheReturnValue<T>(fn: () => T): () => T;
 }

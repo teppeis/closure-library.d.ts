@@ -5,7 +5,7 @@ declare module goog.editor.plugins {
      * @constructor
      * @extends {goog.editor.plugins.AbstractDialogPlugin}
      */
-    export class LinkDialogPlugin extends goog.editor.plugins.AbstractDialogPlugin {
+    class LinkDialogPlugin extends goog.editor.plugins.AbstractDialogPlugin {
         constructor();
         
         /**

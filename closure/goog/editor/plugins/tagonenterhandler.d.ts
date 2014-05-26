@@ -7,7 +7,7 @@ declare module goog.editor.plugins {
      * @constructor
      * @extends {goog.editor.plugins.EnterHandler}
      */
-    export class TagOnEnterHandler extends goog.editor.plugins.EnterHandler {
+    class TagOnEnterHandler extends goog.editor.plugins.EnterHandler {
         constructor(tag: goog.dom.TagName);
         
         /**

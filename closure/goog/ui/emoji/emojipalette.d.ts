@@ -12,7 +12,7 @@ declare module goog.ui.emoji {
      * @constructor
      * @final
      */
-    export class EmojiPalette extends goog.ui.Palette {
+    class EmojiPalette extends goog.ui.Palette {
         constructor(emoji: Array<Array<any>>, opt_urlPrefix?: string, opt_renderer?: goog.ui.PaletteRenderer, opt_domHelper?: goog.dom.DomHelper);
         
         /**

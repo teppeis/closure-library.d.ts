@@ -4,7 +4,7 @@ declare module goog.crypt {
      * Interface definition for a block cipher.
      * @interface
      */
-    export interface BlockCipher {
+    interface BlockCipher {
         
         /**
          * Encrypt a plaintext block.  The implementation may expect (and assert)

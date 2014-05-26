@@ -5,7 +5,7 @@ declare module goog.i18n {
      * @constructor
      * @final
      */
-    export class CharListDecompressor {
+    class CharListDecompressor {
         constructor();
         
         /**

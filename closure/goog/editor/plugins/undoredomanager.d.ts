@@ -7,7 +7,7 @@ declare module goog.editor.plugins {
      * @constructor
      * @extends {goog.events.EventTarget}
      */
-    export class UndoRedoManager extends goog.events.EventTarget {
+    class UndoRedoManager extends goog.events.EventTarget {
         constructor();
         
         /**
@@ -75,7 +75,7 @@ declare module goog.editor.plugins.UndoRedoManager {
      * Event types for the events dispatched by undo-redo manager.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         STATE_CHANGE: string;
         STATE_ADDED: string;
         BEFORE_UNDO: string;

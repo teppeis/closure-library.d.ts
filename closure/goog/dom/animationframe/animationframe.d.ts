@@ -8,7 +8,7 @@ declare module goog.dom.animationFrame {
      * }}
      * @private
      */
-    export interface Task_ {
+    interface Task_ {
         id: number;
         fn: Function;
         context: Object;
@@ -24,7 +24,7 @@ declare module goog.dom.animationFrame {
      * }}
      * @private
      */
-    export interface TaskSet_ {
+    interface TaskSet_ {
         measureTask: goog.dom.animationFrame.Task_;
         mutateTask: goog.dom.animationFrame.Task_;
         state: Object;
@@ -38,7 +38,7 @@ declare module goog.dom.animationFrame {
      *   mutate: (!Function|undefined)
      * }}
      */
-    export interface Spec {
+    interface Spec {
         measure: Function;
         mutate: Function;
     }
@@ -48,7 +48,7 @@ declare module goog.dom.animationFrame {
      * @constructor
      * @final
      */
-    export class State {
+    class State {
         constructor();
     }
 
@@ -69,5 +69,5 @@ declare module goog.dom.animationFrame {
      * @return {function(...[?])}
      * @template THIS
      */
-    export function createTask<THIS>(spec: {measure: (arg0: goog.dom.animationFrame.State) => any; mutate: (arg0: goog.dom.animationFrame.State) => any}, opt_context?: THIS): (...arg0: any[]) => any;
+    function createTask<THIS>(spec: {measure: (arg0: goog.dom.animationFrame.State) => any; mutate: (arg0: goog.dom.animationFrame.State) => any}, opt_context?: THIS): (...arg0: any[]) => any;
 }

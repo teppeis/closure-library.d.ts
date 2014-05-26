@@ -14,7 +14,7 @@ declare module goog.graphics {
      *     http://en.wikipedia.org/wiki/Canvas_element for details.
      * @final
      */
-    export class CanvasGroupElement extends goog.graphics.GroupElement {
+    class CanvasGroupElement extends goog.graphics.GroupElement {
         constructor(graphics: goog.graphics.CanvasGraphics);
         
         /**
@@ -56,7 +56,7 @@ declare module goog.graphics {
      * @extends {goog.graphics.EllipseElement}
      * @final
      */
-    export class CanvasEllipseElement extends goog.graphics.EllipseElement {
+    class CanvasEllipseElement extends goog.graphics.EllipseElement {
         constructor(element: Element, graphics: goog.graphics.CanvasGraphics, cx: number, cy: number, rx: number, ry: number, stroke: goog.graphics.Stroke, fill: goog.graphics.Fill);
         
         /**
@@ -100,7 +100,7 @@ declare module goog.graphics {
      * @extends {goog.graphics.RectElement}
      * @final
      */
-    export class CanvasRectElement extends goog.graphics.RectElement {
+    class CanvasRectElement extends goog.graphics.RectElement {
         constructor(element: Element, graphics: goog.graphics.CanvasGraphics, x: number, y: number, w: number, h: number, stroke: goog.graphics.Stroke, fill: goog.graphics.Fill);
         
         /**
@@ -141,7 +141,7 @@ declare module goog.graphics {
      * @extends {goog.graphics.PathElement}
      * @final
      */
-    export class CanvasPathElement extends goog.graphics.PathElement {
+    class CanvasPathElement extends goog.graphics.PathElement {
         constructor(element: Element, graphics: goog.graphics.CanvasGraphics, path: goog.graphics.Path, stroke: goog.graphics.Stroke, fill: goog.graphics.Fill);
         
         /**
@@ -179,7 +179,7 @@ declare module goog.graphics {
      * @extends {goog.graphics.TextElement}
      * @final
      */
-    export class CanvasTextElement extends goog.graphics.TextElement {
+    class CanvasTextElement extends goog.graphics.TextElement {
         constructor(graphics: goog.graphics.CanvasGraphics, text: string, x1: number, y1: number, x2: number, y2: number, align: string, font: goog.graphics.Font, stroke: goog.graphics.Stroke, fill: goog.graphics.Fill);
         
         /**
@@ -227,7 +227,7 @@ declare module goog.graphics {
      * @extends {goog.graphics.ImageElement}
      * @final
      */
-    export class CanvasImageElement extends goog.graphics.ImageElement {
+    class CanvasImageElement extends goog.graphics.ImageElement {
         constructor(element: Element, graphics: goog.graphics.CanvasGraphics, x: number, y: number, w: number, h: number, src: string);
         
         /**

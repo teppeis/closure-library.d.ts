@@ -9,7 +9,7 @@ declare module goog.a11y.aria {
      * @extends {goog.Disposable}
      * @final
      */
-    export class Announcer extends goog.Disposable {
+    class Announcer extends goog.Disposable {
         constructor(opt_domHelper?: goog.dom.DomHelper);
         
         /**

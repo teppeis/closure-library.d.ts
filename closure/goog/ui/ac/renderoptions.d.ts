@@ -5,7 +5,7 @@ declare module goog.ui.ac {
      * matches.  Used as an optional argument in the callback from the matcher.
      * @constructor
      */
-    export class RenderOptions {
+    class RenderOptions {
         constructor();
         
         /**

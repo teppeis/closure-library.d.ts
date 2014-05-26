@@ -6,7 +6,7 @@ declare module goog.crypt {
      * @final
      * @struct
      */
-    export class Arc4 {
+    class Arc4 {
         constructor();
         
         /**

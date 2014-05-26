@@ -10,7 +10,7 @@ declare module goog.editor.plugins {
      * @constructor
      * @extends {goog.editor.Plugin}
      */
-    export class AbstractDialogPlugin extends goog.editor.Plugin {
+    class AbstractDialogPlugin extends goog.editor.Plugin {
         constructor(command: string);
         
         /**
@@ -105,7 +105,7 @@ declare module goog.editor.plugins.AbstractDialogPlugin {
      * Event type constants for events the dialog plugins fire.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         OPENED: string;
         CLOSED: string;
     }

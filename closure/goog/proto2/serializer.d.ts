@@ -7,7 +7,7 @@ declare module goog.proto2 {
      *
      * @constructor
      */
-    export class Serializer {
+    class Serializer {
         constructor();
         
         /**

@@ -17,7 +17,7 @@ declare module goog.ui {
      * @constructor
      * @final
      */
-    export class CharCounter extends goog.events.EventTarget {
+    class CharCounter extends goog.events.EventTarget {
         constructor(elInput: HTMLInputElement, elCount: Element, maxLength: number, opt_displayMode?: goog.ui.CharCounter.Display);
         
         /**
@@ -62,7 +62,7 @@ declare module goog.ui.CharCounter {
      * Display mode for the char counter.
      * @enum {number}
      */
-    export interface Display {
+    interface Display {
         REMAINING: number;
         INCREMENTAL: number;
     }

@@ -21,7 +21,7 @@ declare module goog.net.xpc {
      * @extends {goog.net.xpc.Transport}
      * @final
      */
-    export class NativeMessagingTransport extends goog.net.xpc.Transport {
+    class NativeMessagingTransport extends goog.net.xpc.Transport {
         constructor(channel: goog.net.xpc.CrossPageChannel, peerHostname: string, opt_domHelper?: goog.dom.DomHelper, opt_oneSidedHandshake?: boolean, opt_protocolVersion?: number);
         
         /**

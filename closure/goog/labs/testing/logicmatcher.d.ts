@@ -10,7 +10,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class AllOfMatcher {
+    class AllOfMatcher {
         constructor(matchers: Array<goog.labs.testing.Matcher>);
     }
 
@@ -24,7 +24,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class AnyOfMatcher {
+    class AnyOfMatcher {
         constructor(matchers: Array<goog.labs.testing.Matcher>);
     }
 
@@ -38,7 +38,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class IsNotMatcher {
+    class IsNotMatcher {
         constructor(matcher: goog.labs.testing.Matcher);
     }
 }

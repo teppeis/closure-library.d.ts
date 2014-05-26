@@ -4,7 +4,7 @@ declare module goog.math.interpolator {
      * An interface for one dimensional data interpolation.
      * @interface
      */
-    export interface Interpolator1 {
+    interface Interpolator1 {
         
         /**
          * Sets the data to be interpolated. Note that the data points are expected

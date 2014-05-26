@@ -6,7 +6,7 @@ declare module goog.graphics.ext {
      * @extends {goog.graphics.Path}
      * @final
      */
-    export class Path extends goog.graphics.Path {
+    class Path extends goog.graphics.Path {
         constructor();
         
         /**

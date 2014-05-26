@@ -8,7 +8,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Menu}
      */
-    export class FilteredMenu extends goog.ui.Menu {
+    class FilteredMenu extends goog.ui.Menu {
         constructor(opt_renderer?: goog.ui.MenuRenderer, opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -118,7 +118,7 @@ declare module goog.ui.FilteredMenu {
      * Events fired by component.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         FILTER_CHANGED: string;
     }
 
@@ -127,7 +127,7 @@ declare module goog.ui.FilteredMenu {
      * @enum {string}
      * @private
      */
-    export interface Id_ {
+    interface Id_ {
         CONTENT_ELEMENT: string;
     }
 }

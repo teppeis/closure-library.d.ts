@@ -7,7 +7,7 @@ declare module goog.editor {
      * @constructor
      * @final
      */
-    export class Link {
+    class Link {
         constructor(anchor: HTMLAnchorElement, isNew: boolean);
         
         /**

@@ -11,7 +11,7 @@ declare module goog.dom.pattern {
      * @extends {goog.dom.pattern.AbstractPattern}
      * @final
      */
-    export class Sequence extends goog.dom.pattern.AbstractPattern {
+    class Sequence extends goog.dom.pattern.AbstractPattern {
         constructor(patterns: Array<goog.dom.pattern.AbstractPattern>, opt_ignoreWhitespace?: boolean);
         
         /**

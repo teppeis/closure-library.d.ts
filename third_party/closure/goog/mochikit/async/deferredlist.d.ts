@@ -42,7 +42,7 @@ declare module goog.async {
      * @constructor
      * @extends {goog.async.Deferred}
      */
-    export class DeferredList extends goog.async.Deferred<any> {
+    class DeferredList extends goog.async.Deferred<any> {
         constructor(list: Array<goog.async.Deferred<any>>, opt_fireOnOneCallback?: boolean, opt_fireOnOneErrback?: boolean, opt_consumeErrors?: boolean, opt_canceler?: Function, opt_defaultScope?: Object);
         
         /**

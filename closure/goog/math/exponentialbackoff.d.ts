@@ -6,7 +6,7 @@ declare module goog.math {
      * @param {number} initialValue The initial backoff value.
      * @param {number} maxValue The maximum backoff value.
      */
-    export class ExponentialBackoff {
+    class ExponentialBackoff {
         constructor(initialValue: number, maxValue: number);
         
         /**

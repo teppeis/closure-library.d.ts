@@ -31,7 +31,7 @@ declare module goog.structs {
      * @constructor
      * @template KEY, VALUE
      */
-    export class LinkedMap<KEY, VALUE> {
+    class LinkedMap<KEY, VALUE> {
         constructor(opt_maxCount?: number, opt_cache?: boolean);
         
         /**
@@ -221,7 +221,7 @@ declare module goog.structs.LinkedMap {
      * @template KEY, VALUE
      * @private
      */
-    export interface Node_<KEY, VALUE> {
+    interface Node_<KEY, VALUE> {
         
         /**
          * The next node in the list.

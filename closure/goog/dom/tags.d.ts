@@ -6,5 +6,5 @@ declare module goog.dom.tags {
      * @param {string} tagName The tag name in lower case.
      * @return {boolean}
      */
-    export function isVoidTag(tagName: string): boolean;
+    function isVoidTag(tagName: string): boolean;
 }

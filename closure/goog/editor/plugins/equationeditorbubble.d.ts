@@ -7,7 +7,7 @@ declare module goog.editor.plugins.equation {
      * @extends {goog.editor.plugins.AbstractBubblePlugin}
      * @final
      */
-    export class EquationBubble extends goog.editor.plugins.AbstractBubblePlugin {
+    class EquationBubble extends goog.editor.plugins.AbstractBubblePlugin {
         constructor();
     }
 }

@@ -10,7 +10,7 @@ declare module goog.math {
      * @param {number} left Left.
      * @constructor
      */
-    export class Box {
+    class Box {
         constructor(top: number, right: number, bottom: number, left: number);
         
         /**

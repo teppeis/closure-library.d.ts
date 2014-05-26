@@ -12,7 +12,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.Disposable}
      */
-    export class IframeMask extends goog.Disposable {
+    class IframeMask extends goog.Disposable {
         constructor(opt_domHelper?: goog.dom.DomHelper, opt_iframePool?: goog.structs.Pool<any>);
         
         /**

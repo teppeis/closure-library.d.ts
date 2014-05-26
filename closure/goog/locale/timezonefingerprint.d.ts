@@ -4,7 +4,7 @@ declare module goog.locale {
      * Time zone fingerprint mapping to time zone list.
      * @enum {Array.<string>}
      */
-    export interface TimeZoneFingerprint {
+    interface TimeZoneFingerprint {
         919994368: Array<string>;
         6: Array<string>;
         8: Array<string>;

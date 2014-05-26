@@ -6,5 +6,5 @@ declare module goog.messaging {
      * @param {goog.messaging.MessageChannel} channel1 The first channel.
      * @param {goog.messaging.MessageChannel} channel2 The second channel.
      */
-    export function pipe(channel1: goog.messaging.MessageChannel, channel2: goog.messaging.MessageChannel): void;
+    function pipe(channel1: goog.messaging.MessageChannel, channel2: goog.messaging.MessageChannel): void;
 }

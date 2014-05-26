@@ -16,7 +16,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.events.EventTarget}
      */
-    export class ActivityMonitor extends goog.events.EventTarget {
+    class ActivityMonitor extends goog.events.EventTarget {
         constructor(opt_domHelper?: goog.dom.DomHelper, opt_useBubble?: boolean);
         
         /**
@@ -83,7 +83,7 @@ declare module goog.ui.ActivityMonitor {
      * Event constants for the activity monitor.
      * @enum {string}
      */
-    export interface Event {
+    interface Event {
         ACTIVITY: string;
     }
 }

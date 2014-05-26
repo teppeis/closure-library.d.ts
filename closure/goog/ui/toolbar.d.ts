@@ -12,7 +12,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Container}
      */
-    export class Toolbar extends goog.ui.Container {
+    class Toolbar extends goog.ui.Container {
         constructor(opt_renderer?: goog.ui.ToolbarRenderer, opt_orientation?: goog.ui.Container.Orientation, opt_domHelper?: goog.dom.DomHelper);
     }
 }

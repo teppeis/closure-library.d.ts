@@ -5,7 +5,7 @@ declare module goog.net {
      * @see http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
      * @enum {number}
      */
-    export interface HttpStatus {
+    interface HttpStatus {
         CONTINUE: number;
         SWITCHING_PROTOCOLS: number;
         OK: number;
@@ -62,5 +62,5 @@ declare module goog.net.HttpStatus {
      * @param {number} status The status code to test.
      * @return {boolean} Whether the status code should be considered successful.
      */
-    export function isSuccess(status: number): boolean;
+    function isSuccess(status: number): boolean;
 }

@@ -120,5 +120,5 @@ declare module goog.dom {
        *     document.querySelector. See
        *     https://developer.mozilla.org/en-US/docs/DOM/Document.querySelector .
        */
-    export function query(query: string, opt_root?: string): {length: number};
+    function query(query: string, opt_root?: string): {length: number};
 }

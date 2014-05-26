@@ -23,7 +23,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Dialog}
      */
-    export class Prompt extends goog.ui.Dialog {
+    class Prompt extends goog.ui.Dialog {
         constructor(promptTitle: string, promptHtml: string, callback: Function, opt_defaultValue?: string, opt_class?: string, opt_useIframeForIE?: boolean, opt_domHelper?: goog.dom.DomHelper);
         
         /**

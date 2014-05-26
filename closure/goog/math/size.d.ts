@@ -7,7 +7,7 @@ declare module goog.math {
      * @param {number} height Height.
      * @constructor
      */
-    export class Size {
+    class Size {
         constructor(width: number, height: number);
         
         /**

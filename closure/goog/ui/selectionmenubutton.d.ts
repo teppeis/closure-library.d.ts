@@ -17,7 +17,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.MenuButton}
      */
-    export class SelectionMenuButton extends goog.ui.MenuButton {
+    class SelectionMenuButton extends goog.ui.MenuButton {
         constructor(opt_renderer?: goog.ui.ButtonRenderer, opt_itemRenderer?: goog.ui.MenuItemRenderer, opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -88,7 +88,7 @@ declare module goog.ui.SelectionMenuButton {
      * Constants for menu action types.
      * @enum {number}
      */
-    export interface SelectionState {
+    interface SelectionState {
         ALL: number;
         SOME: number;
         NONE: number;

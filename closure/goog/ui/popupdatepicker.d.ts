@@ -10,7 +10,7 @@ declare module goog.ui {
      * @extends {goog.ui.Component}
      * @constructor
      */
-    export class PopupDatePicker extends goog.ui.Component {
+    class PopupDatePicker extends goog.ui.Component {
         constructor(opt_datePicker?: goog.ui.DatePicker, opt_domHelper?: goog.dom.DomHelper);
         
         /**

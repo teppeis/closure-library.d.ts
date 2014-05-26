@@ -12,7 +12,7 @@ declare module goog.editor.plugins {
      * @extends {goog.editor.Plugin}
      * @final
      */
-    export class Blockquote extends goog.editor.Plugin {
+    class Blockquote extends goog.editor.Plugin {
         constructor(requiresClassNameToSplit: boolean, opt_className?: string);
         
         /**

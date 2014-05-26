@@ -13,7 +13,7 @@ declare module goog.reflect {
      * @param {Object} object Object literal to cast.
      * @return {Object} The object literal.
      */
-    export function object(type: Function, object: Object): Object;
+    function object(type: Function, object: Object): Object;
 
     /**
      * To assert to the compiler that an operation is needed when it would
@@ -24,7 +24,7 @@ declare module goog.reflect {
      * </code>
      * @type {!Function}
      */
-    export function sinkValue(): void;
+    function sinkValue(): void;
 
     /**
      * Check if a property can be accessed without throwing an exception.
@@ -33,5 +33,5 @@ declare module goog.reflect {
      * @return {boolean} Whether the property is accessible. Will also return true
      *     if obj is null.
      */
-    export function canAccessProperty(obj: Object, prop: string): boolean;
+    function canAccessProperty(obj: Object, prop: string): boolean;
 }

@@ -12,7 +12,7 @@ declare module goog.ui {
      * @extends {goog.ui.Separator}
      * @final
      */
-    export class ToolbarSeparator extends goog.ui.Separator {
+    class ToolbarSeparator extends goog.ui.Separator {
         constructor(opt_renderer?: goog.ui.ToolbarSeparatorRenderer, opt_domHelper?: goog.dom.DomHelper);
     }
 }

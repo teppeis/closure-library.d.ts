@@ -7,7 +7,7 @@ declare module svgpan {
      * @constructor
      * @extends {goog.Disposable}
      */
-    export class SvgPan extends goog.Disposable {
+    class SvgPan extends goog.Disposable {
         constructor(opt_graphElementId?: string, opt_root?: Element);
         
         /**
@@ -60,7 +60,7 @@ declare module svgpan.SvgPan {
     /**
      * @enum {string}
      */
-    export interface State {
+    interface State {
         NONE: string;
         PAN: string;
         DRAG: string;

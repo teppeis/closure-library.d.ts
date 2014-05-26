@@ -15,7 +15,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.ColorMenuButton}
      */
-    export class ToolbarColorMenuButton extends goog.ui.ColorMenuButton {
+    class ToolbarColorMenuButton extends goog.ui.ColorMenuButton {
         constructor(content: goog.ui.ControlContent, opt_menu?: goog.ui.Menu, opt_renderer?: goog.ui.ColorMenuButtonRenderer, opt_domHelper?: goog.dom.DomHelper);
     }
 }

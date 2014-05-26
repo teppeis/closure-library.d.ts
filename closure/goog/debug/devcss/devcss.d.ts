@@ -10,7 +10,7 @@ declare module goog.debug {
      * @constructor
      * @final
      */
-    export class DevCss {
+    class DevCss {
         constructor(opt_userAgent?: goog.debug.DevCss.UserAgent, opt_userAgentVersion?: number);
         
         /**
@@ -30,7 +30,7 @@ declare module goog.debug.DevCss {
      * A list of possible user agent strings.
      * @enum {string}
      */
-    export interface UserAgent {
+    interface UserAgent {
         OPERA: string;
         IE: string;
         GECKO: string;
@@ -45,7 +45,7 @@ declare module goog.debug.DevCss {
      * @enum {string}
      * @private
      */
-    export interface CssToken_ {
+    interface CssToken_ {
         USERAGENT: string;
         SEPARATOR: string;
         LESS_THAN: string;

@@ -10,5 +10,5 @@ declare module goog {
      *
      * @param {string} file The path to the file.
      */
-    export function nodeGlobalRequire(file: string): void;
+    function nodeGlobalRequire(file: string): void;
 }

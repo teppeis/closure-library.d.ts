@@ -8,5 +8,5 @@ declare module goog.userAgent.picasa {
      * @return {boolean} Whether the installed Picasa version is as new or newer
      *     than a given version.
      */
-    export function isVersion(version: string): boolean;
+    function isVersion(version: string): boolean;
 }

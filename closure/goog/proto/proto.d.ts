@@ -5,5 +5,5 @@ declare module goog.proto {
      * @param {Object} object The object to serialize.
      * @return {string} The serialized protocol buffer string.
      */
-    export function serialize(object: Object): string;
+    function serialize(object: Object): string;
 }

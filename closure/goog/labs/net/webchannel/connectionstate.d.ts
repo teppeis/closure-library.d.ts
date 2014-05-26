@@ -6,7 +6,7 @@ declare module goog.labs.net.webChannel {
      * @constructor
      * @struct
      */
-    export class ConnectionState {
+    class ConnectionState {
         constructor();
     }
 }

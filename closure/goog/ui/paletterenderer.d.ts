@@ -22,7 +22,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.ControlRenderer}
      */
-    export class PaletteRenderer extends goog.ui.ControlRenderer {
+    class PaletteRenderer extends goog.ui.ControlRenderer {
         constructor();
         
         /**

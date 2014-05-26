@@ -12,7 +12,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Tooltip}
      */
-    export class AdvancedTooltip extends goog.ui.Tooltip {
+    class AdvancedTooltip extends goog.ui.Tooltip {
         constructor(opt_el?: Element, opt_str?: string, opt_domHelper?: goog.dom.DomHelper);
         
         /**

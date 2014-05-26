@@ -7,7 +7,7 @@ declare module goog.structs {
      * @constructor
      * @final
      */
-    export class StringSet {
+    class StringSet {
         constructor(opt_elements?: Array<any>);
         
         /**

@@ -7,7 +7,7 @@ declare module goog.graphics {
      *     differences before the canvas tag was widely supported.  See
      *     http://en.wikipedia.org/wiki/Canvas_element for details.
      */
-    export class Fill {
+    class Fill {
         constructor();
         
         /**

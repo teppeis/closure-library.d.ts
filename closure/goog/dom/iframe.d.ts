@@ -8,7 +8,7 @@ declare module goog.dom.iframe {
      *
      * @type {string}
      */
-    export var BLANK_SOURCE: string;
+    var BLANK_SOURCE: string;
 
     /**
      * Safe source for a new blank iframe that may not cause a new load of the
@@ -38,7 +38,7 @@ declare module goog.dom.iframe {
      *
      * @type {string}
      */
-    export var BLANK_SOURCE_NEW_FRAME: string;
+    var BLANK_SOURCE_NEW_FRAME: string;
 
     /**
      * Creates a completely blank iframe element.
@@ -55,7 +55,7 @@ declare module goog.dom.iframe {
      * @param {string=} opt_styles CSS styles for the iframe.
      * @return {!HTMLIFrameElement} A completely blank iframe.
      */
-    export function createBlank(domHelper: goog.dom.DomHelper, opt_styles?: string): HTMLIFrameElement;
+    function createBlank(domHelper: goog.dom.DomHelper, opt_styles?: string): HTMLIFrameElement;
 
     /**
      * Writes the contents of a blank iframe that has already been inserted
@@ -66,7 +66,7 @@ declare module goog.dom.iframe {
      * @param {string} content Content to write to the iframe, from doctype to
      *     the HTML close tag.
      */
-    export function writeContent(iframe: HTMLIFrameElement, content: string): void;
+    function writeContent(iframe: HTMLIFrameElement, content: string): void;
 
     /**
      * Creates a same-domain iframe containing preloaded content.
@@ -87,5 +87,5 @@ declare module goog.dom.iframe {
      * @param {boolean=} opt_quirks Whether to use quirks mode (false by default).
      * @return {!HTMLIFrameElement} An iframe that has the specified contents.
      */
-    export function createWithContent(parentElement: Element, opt_headContents?: string, opt_bodyContents?: string, opt_styles?: string, opt_quirks?: boolean): HTMLIFrameElement;
+    function createWithContent(parentElement: Element, opt_headContents?: string, opt_bodyContents?: string, opt_styles?: string, opt_quirks?: boolean): HTMLIFrameElement;
 }

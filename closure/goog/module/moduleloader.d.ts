@@ -6,7 +6,7 @@ declare module goog.module {
      * @extends {goog.events.EventTarget}
      * @implements {goog.module.AbstractModuleLoader}
      */
-    export class ModuleLoader extends goog.events.EventTarget {
+    class ModuleLoader extends goog.events.EventTarget {
         constructor();
         
         /**
@@ -70,7 +70,7 @@ declare module goog.module.ModuleLoader {
     /**
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         EVALUATE_CODE: string;
         REQUEST_SUCCESS: string;
         REQUEST_ERROR: string;
@@ -83,7 +83,7 @@ declare module goog.module.ModuleLoader {
      * @extends {goog.events.Event}
      * @final
      */
-    export class Event extends goog.events.Event {
+    class Event extends goog.events.Event {
         constructor(type: goog.module.ModuleLoader.EventType, moduleIds: Array<string>);
     }
 
@@ -93,7 +93,7 @@ declare module goog.module.ModuleLoader {
      * @constructor
      * @final
      */
-    export class LoadStatus {
+    class LoadStatus {
         constructor();
     }
 }

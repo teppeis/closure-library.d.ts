@@ -20,7 +20,7 @@ declare module goog.graphics.ext {
      * @extends {goog.graphics.ext.Group}
      * @final
      */
-    export class Graphics extends goog.graphics.ext.Group {
+    class Graphics extends goog.graphics.ext.Group {
         constructor(width: string, height: string, opt_coordWidth?: number, opt_coordHeight?: number, opt_domHelper?: goog.dom.DomHelper, opt_isSimple?: boolean);
         
         /**

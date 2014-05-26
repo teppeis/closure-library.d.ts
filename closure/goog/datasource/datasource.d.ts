@@ -4,7 +4,7 @@ declare module goog.ds {
      * Enum for load state of a DataNode.
      * @enum {string}
      */
-    export interface LoadState {
+    interface LoadState {
         LOADED: string;
         LOADING: string;
         FAILED: string;
@@ -20,7 +20,7 @@ declare module goog.ds {
      *
      * @constructor
      */
-    export class DataNode {
+    class DataNode {
         constructor();
         
         /**
@@ -116,7 +116,7 @@ declare module goog.ds {
      * implements {goog.ds.DataNode}
      * @constructor
      */
-    export class BaseDataNode {
+    class BaseDataNode {
         constructor();
         
         /**
@@ -190,7 +190,7 @@ declare module goog.ds {
      * @constructor
      * @extends {goog.ds.DataNode}
      */
-    export class DataNodeList extends goog.ds.DataNode {
+    class DataNodeList extends goog.ds.DataNode {
         constructor();
         
         /**
@@ -254,7 +254,7 @@ declare module goog.ds {
      * @constructor
      * @extends {goog.ds.DataNodeList}
      */
-    export class BasicNodeList extends goog.ds.DataNodeList {
+    class BasicNodeList extends goog.ds.DataNodeList {
         constructor(opt_nodes?: Array<goog.ds.DataNode>);
         
         /**
@@ -325,7 +325,7 @@ declare module goog.ds {
      * @constructor
      * @final
      */
-    export class EmptyNodeList extends goog.ds.BasicNodeList {
+    class EmptyNodeList extends goog.ds.BasicNodeList {
         constructor();
         
         /**
@@ -358,7 +358,7 @@ declare module goog.ds {
      * @extends {goog.ds.BasicNodeList}
      * @constructor
      */
-    export class SortedNodeList extends goog.ds.BasicNodeList {
+    class SortedNodeList extends goog.ds.BasicNodeList {
         constructor(compareFn: Function, opt_nodes?: Array<goog.ds.DataNode>);
         
         /**
@@ -393,37 +393,37 @@ declare module goog.ds {
      * The character denoting an attribute.
      * @type {string}
      */
-    export var STR_ATTRIBUTE_START: string;
+    var STR_ATTRIBUTE_START: string;
 
     /**
      * The character denoting all children.
      * @type {string}
      */
-    export var STR_ALL_CHILDREN_SELECTOR: string;
+    var STR_ALL_CHILDREN_SELECTOR: string;
 
     /**
      * The wildcard character.
      * @type {string}
      */
-    export var STR_WILDCARD: string;
+    var STR_WILDCARD: string;
 
     /**
      * The character denoting path separation.
      * @type {string}
      */
-    export var STR_PATH_SEPARATOR: string;
+    var STR_PATH_SEPARATOR: string;
 
     /**
      * The character denoting the start of an array.
      * @type {string}
      */
-    export var STR_ARRAY_START: string;
+    var STR_ARRAY_START: string;
 
     /**
      * Shared logger instance for data package
      * @type {goog.log.Logger}
      */
-    export var logger: goog.log.Logger;
+    var logger: goog.log.Logger;
 }
 
 declare module goog.ds.Util {
@@ -437,5 +437,5 @@ declare module goog.ds.Util {
      * @param {string} name The new name.
      * @return {!goog.ds.DataNode} The new data node.
      */
-    export function makeReferenceNode(node: goog.ds.DataNode, name: string): goog.ds.DataNode;
+    function makeReferenceNode(node: goog.ds.DataNode, name: string): goog.ds.DataNode;
 }

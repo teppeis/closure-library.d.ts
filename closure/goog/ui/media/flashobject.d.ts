@@ -11,7 +11,7 @@ declare module goog.ui.media {
      * @extends {goog.ui.Component}
      * @constructor
      */
-    export class FlashObject extends goog.ui.Component {
+    class FlashObject extends goog.ui.Component {
         constructor(flashUrl: string, opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -158,7 +158,7 @@ declare module goog.ui.media.FlashObject {
      * @enum {number}
      * @private
      */
-    export interface SwfReadyStates_ {
+    interface SwfReadyStates_ {
         LOADING: number;
         UNINITIALIZED: number;
         LOADED: number;
@@ -173,7 +173,7 @@ declare module goog.ui.media.FlashObject {
      *
      * @enum {string}
      */
-    export interface Wmodes {
+    interface Wmodes {
         OPAQUE: string;
         TRANSPARENT: string;
         WINDOW: string;
@@ -187,7 +187,7 @@ declare module goog.ui.media.FlashObject {
      *
      * @enum {string}
      */
-    export interface ScriptAccessLevel {
+    interface ScriptAccessLevel {
         ALWAYS: string;
         SAME_DOMAIN: string;
         NEVER: string;

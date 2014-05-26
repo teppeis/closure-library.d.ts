@@ -16,7 +16,7 @@ declare module goog.events {
      * @see goog.events.KeyCodes
      * @enum {string}
      */
-    export interface KeyNames {
+    interface KeyNames {
         8: string;
         9: string;
         13: string;

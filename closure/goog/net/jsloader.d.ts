@@ -4,7 +4,7 @@ declare module goog.net.jsloader {
      * Possible error codes for jsloader.
      * @enum {number}
      */
-    export interface ErrorCode {
+    interface ErrorCode {
         LOAD_ERROR: number;
         TIMEOUT: number;
         VERIFY_ERROR: number;
@@ -27,7 +27,7 @@ declare module goog.net.jsloader {
      *   cleanupWhenDone: (boolean|undefined)
      * }}
      */
-    export interface Options {
+    interface Options {
         timeout: number;
         document: HTMLDocument;
         cleanupWhenDone: boolean;
@@ -42,7 +42,7 @@ declare module goog.net.jsloader {
      * @extends {goog.debug.Error}
      * @final
      */
-    export class Error extends goog.debug.Error {
+    class Error extends goog.debug.Error {
         constructor(code: goog.net.jsloader.ErrorCode, opt_message?: string);
     }
 
@@ -51,7 +51,7 @@ declare module goog.net.jsloader {
      * load request to complete.
      * @type {number}
      */
-    export var DEFAULT_TIMEOUT: number;
+    var DEFAULT_TIMEOUT: number;
 
     /**
      * Loads and evaluates the JavaScript files at the specified URIs, guaranteeing
@@ -71,7 +71,7 @@ declare module goog.net.jsloader {
      * @param {goog.net.jsloader.Options=} opt_options Optional parameters. See
      *     goog.net.jsloader.options documentation for details.
      */
-    export function loadMany(uris: Array<string>, opt_options?: goog.net.jsloader.Options): void;
+    function loadMany(uris: Array<string>, opt_options?: goog.net.jsloader.Options): void;
 
     /**
      * Loads and evaluates a JavaScript file.
@@ -86,7 +86,7 @@ declare module goog.net.jsloader {
      *     The error callback will be called with a single goog.net.jsloader.Error
      *     parameter.
      */
-    export function load(uri: string, opt_options?: goog.net.jsloader.Options): goog.async.Deferred<any>;
+    function load(uri: string, opt_options?: goog.net.jsloader.Options): goog.async.Deferred<any>;
 
     /**
      * Loads a JavaScript file and verifies it was evaluated successfully, using a
@@ -108,12 +108,12 @@ declare module goog.net.jsloader {
      *     The error callback will be called with a single goog.net.jsloader.Error
      *     parameter.
      */
-    export function loadAndVerify(uri: string, verificationObjName: string, options: goog.net.jsloader.Options): goog.async.Deferred<any>;
+    function loadAndVerify(uri: string, verificationObjName: string, options: goog.net.jsloader.Options): goog.async.Deferred<any>;
 
     /**
      * Cancels a given request.
      * @this {{script_: Element, timeout_: number}} The request context.
      * @private
      */
-    export function cancel_(): void;
+    function cancel_(): void;
 }

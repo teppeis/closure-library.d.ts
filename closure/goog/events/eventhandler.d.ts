@@ -9,7 +9,7 @@ declare module goog.events {
      * @extends {goog.Disposable}
      * @template SCOPE
      */
-    export class EventHandler<SCOPE> extends goog.Disposable {
+    class EventHandler<SCOPE> extends goog.Disposable {
         constructor(opt_scope?: SCOPE);
         
         /**

@@ -17,7 +17,7 @@ declare module goog.ui {
      * @constructor
      * @final
      */
-    export class ColorSplitBehavior extends goog.ui.SplitBehavior {
+    class ColorSplitBehavior extends goog.ui.SplitBehavior {
         constructor(colorButton: goog.ui.Button, opt_domHelper?: goog.dom.DomHelper);
     }
 }

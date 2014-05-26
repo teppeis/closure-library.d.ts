@@ -28,7 +28,7 @@ declare module goog.dom {
      * @constructor
      * @extends {goog.events.EventTarget}
      */
-    export class ViewportSizeMonitor extends goog.events.EventTarget {
+    class ViewportSizeMonitor extends goog.events.EventTarget {
         constructor(opt_window?: Window);
         
         /**

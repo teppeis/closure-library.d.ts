@@ -40,7 +40,7 @@ declare module goog.dom {
      * @extends {goog.dom.TagIterator}
      * @final
      */
-    export class NodeIterator extends goog.dom.TagIterator {
+    class NodeIterator extends goog.dom.TagIterator {
         constructor(opt_node?: Node, opt_reversed?: boolean, opt_unconstrained?: boolean, opt_depth?: number);
         
         /**

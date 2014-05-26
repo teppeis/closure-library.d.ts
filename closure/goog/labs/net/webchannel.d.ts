@@ -11,7 +11,7 @@ declare module goog.net {
      * @interface
      * @extends {EventTarget}
      */
-    export interface WebChannel extends EventTarget {
+    interface WebChannel extends EventTarget {
         
         /**
          * Open the WebChannel against the URI specified in the constructor.
@@ -45,7 +45,7 @@ declare module goog.net.WebChannel {
      * Common events fired by WebChannels.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         OPEN: string;
         CLOSE: string;
         ERROR: string;
@@ -56,7 +56,7 @@ declare module goog.net.WebChannel {
      * WebChannel level error conditions.
      * @enum {number}
      */
-    export interface ErrorStatus {
+    interface ErrorStatus {
         OK: number;
         NETWORK_ERROR: number;
         SERVER_ERROR: number;
@@ -96,7 +96,7 @@ declare module goog.net.WebChannel {
      *   testUrl: (string|undefined)
      * }}
      */
-    export interface Options {
+    interface Options {
         messageHeaders: Object;
         messageUrlParams: Object;
         concurrentRequestLimit: number;
@@ -109,7 +109,7 @@ declare module goog.net.WebChannel {
      *
      * @typedef {(ArrayBuffer|Blob|Object.<string, string>|Array)}
      */
-    export interface MessageData {
+    interface MessageData {
     }
 
     /**
@@ -118,7 +118,7 @@ declare module goog.net.WebChannel {
      * @constructor
      * @extends {goog.events.Event}
      */
-    export class MessageEvent extends goog.events.Event {
+    class MessageEvent extends goog.events.Event {
         constructor();
         
         /**
@@ -135,7 +135,7 @@ declare module goog.net.WebChannel {
      * @constructor
      * @extends {goog.events.Event}
      */
-    export class ErrorEvent extends goog.events.Event {
+    class ErrorEvent extends goog.events.Event {
         constructor();
         
         /**
@@ -154,7 +154,7 @@ declare module goog.net.WebChannel {
      *
      * @interface
      */
-    export interface RuntimeProperties {
+    interface RuntimeProperties {
         
         /**
          * @return {number} The effective limit for the number of concurrent HTTP

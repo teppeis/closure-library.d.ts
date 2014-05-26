@@ -5,7 +5,7 @@ declare module goog.text {
      * distribution of a sample text, using the words in a dictionary.
      * @constructor
      */
-    export class LoremIpsum {
+    class LoremIpsum {
         constructor();
         
         /**

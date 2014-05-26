@@ -9,7 +9,7 @@ declare module goog.debug {
      * @extends {goog.ui.Component}
      * @final
      */
-    export class FpsDisplay extends goog.ui.Component {
+    class FpsDisplay extends goog.ui.Component {
         constructor(opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -36,7 +36,7 @@ declare module goog.debug.FpsDisplay {
      * @constructor
      * @private
      */
-    export interface FpsAnimation_ {
+    interface FpsAnimation_ {
         
         /**
          * @param {number} now The current time.

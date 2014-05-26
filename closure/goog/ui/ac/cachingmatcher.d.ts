@@ -17,7 +17,7 @@ declare module goog.ui.ac {
      *     requestMatchingRows.
      * @final
      */
-    export class CachingMatcher {
+    class CachingMatcher {
         constructor(baseMatcher: Object);
         
         /**

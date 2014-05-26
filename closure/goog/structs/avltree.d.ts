@@ -11,7 +11,7 @@ declare module goog.structs {
      * @final
      * @template T
      */
-    export class AvlTree<T> {
+    class AvlTree<T> {
         constructor(opt_comparator?: Function);
         
         /**
@@ -140,7 +140,7 @@ declare module goog.structs.AvlTree {
      * @final
      * @template T
      */
-    export class Node<T> {
+    class Node<T> {
         constructor(value: T, opt_parent?: goog.structs.AvlTree.Node<T>);
         
         /**

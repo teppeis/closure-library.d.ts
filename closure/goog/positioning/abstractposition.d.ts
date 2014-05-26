@@ -5,7 +5,7 @@ declare module goog.positioning {
      *
      * @constructor
      */
-    export class AbstractPosition {
+    class AbstractPosition {
         constructor();
         
         /**

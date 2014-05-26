@@ -13,7 +13,7 @@ declare module goog.net {
      * @param {number=} opt_retryId  The retry id for this request.
      * @constructor
      */
-    export class ChannelRequest {
+    class ChannelRequest {
         constructor(channel: goog.net.BrowserChannel, channelDebug: goog.net.ChannelDebug, opt_sessionId?: string, opt_requestId?: string, opt_retryId?: number);
         
         /**
@@ -177,7 +177,7 @@ declare module goog.net.ChannelRequest {
      * @enum {number}
      * @private
      */
-    export interface Type_ {
+    interface Type_ {
         XML_HTTP: number;
         IMG: number;
         TRIDENT: number;
@@ -187,7 +187,7 @@ declare module goog.net.ChannelRequest {
      * Enum type for identifying a ChannelRequest error.
      * @enum {number}
      */
-    export interface Error {
+    interface Error {
         STATUS: number;
         NO_DATA: number;
         TIMEOUT: number;

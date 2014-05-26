@@ -11,19 +11,19 @@ declare module goog.string$.linkify {
      *      default attributes set rel='' and target='_blank'.
      * @return {string} HTML Linkified HTML text.
      */
-    export function linkifyPlainText(text: string, opt_attributes?: Object): string;
+    function linkifyPlainText(text: string, opt_attributes?: Object): string;
 
     /**
      * Gets the first URI in text.
      * @param {string} text Plain text.
      * @return {string} The first URL, or an empty string if not found.
      */
-    export function findFirstUrl(text: string): string;
+    function findFirstUrl(text: string): string;
 
     /**
      * Gets the first email address in text.
      * @param {string} text Plain text.
      * @return {string} The first email address, or an empty string if not found.
      */
-    export function findFirstEmail(text: string): string;
+    function findFirstEmail(text: string): string;
 }

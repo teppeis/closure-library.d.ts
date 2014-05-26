@@ -11,7 +11,7 @@ declare module goog.fx {
      * @implements {goog.fx.Transition}
      * @extends {goog.fx.TransitionBase}
      */
-    export class Animation extends goog.fx.TransitionBase {
+    class Animation extends goog.fx.TransitionBase {
         constructor(start: Array<number>, end: Array<number>, duration: number, opt_acc?: Function);
         
         /**
@@ -123,7 +123,7 @@ declare module goog.fx {
      * @constructor
      * @extends {goog.events.Event}
      */
-    export class AnimationEvent extends goog.events.Event {
+    class AnimationEvent extends goog.events.Event {
         constructor(type: string, anim: goog.fx.Animation);
         
         /**
@@ -141,7 +141,7 @@ declare module goog.fx.Animation {
      * Events fired by the animation.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         PLAY: string;
         BEGIN: string;
         RESUME: string;
@@ -158,5 +158,5 @@ declare module goog.fx.Animation {
      * @deprecated Use goog.fx.Transition.State instead.
      * @enum {number}
      */
-    export interface State extends goog.fx.TransitionBase.State {}
+    interface State extends goog.fx.TransitionBase.State {}
 }

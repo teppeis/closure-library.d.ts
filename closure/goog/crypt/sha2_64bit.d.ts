@@ -11,7 +11,7 @@ declare module goog.crypt {
      * @extends {goog.crypt.Hash}
      * @struct
      */
-    export class Sha2_64bit extends goog.crypt.Hash {
+    class Sha2_64bit extends goog.crypt.Hash {
         constructor(numHashBlocks: number, initHashBlocks: Array<number>);
         
         /**

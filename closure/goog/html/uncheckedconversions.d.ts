@@ -25,7 +25,7 @@ declare module goog.html.uncheckedconversions {
      *     withing goog.html.  DO NOT call SafeHtml.create... from outside this
      *     package; use appropriate wrappers instead.
      */
-    export function safeHtmlFromStringKnownToSatisfyTypeContract(justification: goog.string$.Const, html: string, opt_dir?: goog.i18n.bidi.Dir): goog.html.SafeHtml;
+    function safeHtmlFromStringKnownToSatisfyTypeContract(justification: goog.string$.Const, html: string, opt_dir?: goog.i18n.bidi.Dir): goog.html.SafeHtml;
 
     /**
      * Performs an "unchecked conversion" to SafeStyle from a plain string that is
@@ -49,7 +49,7 @@ declare module goog.html.uncheckedconversions {
      *     withing goog.html.  DO NOT call SafeStyle.create... from outside this
      *     package; use appropriate wrappers instead.
      */
-    export function safeStyleFromStringKnownToSatisfyTypeContract(justification: goog.string$.Const, style: string): goog.html.SafeStyle;
+    function safeStyleFromStringKnownToSatisfyTypeContract(justification: goog.string$.Const, style: string): goog.html.SafeStyle;
 
     /**
      * Performs an "unchecked conversion" to SafeUrl from a plain string that is
@@ -73,7 +73,7 @@ declare module goog.html.uncheckedconversions {
      *     withing goog.html.  DO NOT call SafeUrl.create... from outside this
      *     package; use appropriate wrappers instead.
      */
-    export function safeUrlFromStringKnownToSatisfyTypeContract(justification: goog.string$.Const, url: string): goog.html.SafeUrl;
+    function safeUrlFromStringKnownToSatisfyTypeContract(justification: goog.string$.Const, url: string): goog.html.SafeUrl;
 
     /**
      * Performs an "unchecked conversion" to TrustedResourceUrl from a plain string
@@ -97,5 +97,5 @@ declare module goog.html.uncheckedconversions {
      *     "package private" withing goog.html.  DO NOT call SafeUrl.create... from
      *     outside this package; use appropriate wrappers instead.
      */
-    export function trustedResourceUrlFromStringKnownToSatisfyTypeContract(justification: goog.string$.Const, url: string): goog.html.TrustedResourceUrl;
+    function trustedResourceUrlFromStringKnownToSatisfyTypeContract(justification: goog.string$.Const, url: string): goog.html.TrustedResourceUrl;
 }

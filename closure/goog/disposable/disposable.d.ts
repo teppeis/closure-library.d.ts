@@ -8,7 +8,7 @@ declare module goog {
      * @constructor
      * @implements {goog.disposable.IDisposable}
      */
-    export class Disposable {
+    class Disposable {
         constructor();
         
         /**
@@ -112,7 +112,7 @@ declare module goog {
      *     object with a dispose() method, this is a no-op.
      * @param {*} obj The object to dispose of.
      */
-    export function dispose(obj: any): void;
+    function dispose(obj: any): void;
 
     /**
      * Calls {@code dispose} on each member of the list that supports it. (If the
@@ -121,7 +121,7 @@ declare module goog {
      * {@code dispose()} method, then it is ignored.
      * @param {...*} var_args The list.
      */
-    export function disposeAll(...var_args: any[]): void;
+    function disposeAll(...var_args: any[]): void;
 }
 
 declare module goog.Disposable {
@@ -129,7 +129,7 @@ declare module goog.Disposable {
     /**
      * @enum {number} Different monitoring modes for Disposable.
      */
-    export interface MonitoringMode {
+    interface MonitoringMode {
         OFF: number;
         PERMANENT: number;
         INTERACTIVE: number;

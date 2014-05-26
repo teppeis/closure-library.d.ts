@@ -15,7 +15,7 @@ declare module goog.net {
      * @constructor
      * @final
      */
-    export class IframeLoadMonitor extends goog.events.EventTarget {
+    class IframeLoadMonitor extends goog.events.EventTarget {
         constructor(iframe: HTMLIFrameElement, opt_hasContent?: boolean);
         
         /**

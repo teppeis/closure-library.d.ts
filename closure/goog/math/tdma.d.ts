@@ -23,5 +23,5 @@ declare module goog.math.tdma {
      * @param {Array.<number>=} opt_result The optional array to store the result.
      * @return {!Array.<number>} The vector that is the solution to the system.
      */
-    export function solve(subDiag: Array<number>, mainDiag: Array<number>, supDiag: Array<number>, vecRight: Array<number>, opt_result?: Array<number>): Array<number>;
+    function solve(subDiag: Array<number>, mainDiag: Array<number>, supDiag: Array<number>, vecRight: Array<number>, opt_result?: Array<number>): Array<number>;
 }

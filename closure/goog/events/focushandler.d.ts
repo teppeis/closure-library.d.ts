@@ -8,7 +8,7 @@ declare module goog.events {
      * @extends {goog.events.EventTarget}
      * @final
      */
-    export class FocusHandler extends goog.events.EventTarget {
+    class FocusHandler extends goog.events.EventTarget {
         constructor(element: Element);
         
         /**
@@ -25,7 +25,7 @@ declare module goog.events.FocusHandler {
      * Enum type for the events fired by the focus handler
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         FOCUSIN: string;
         FOCUSOUT: string;
     }

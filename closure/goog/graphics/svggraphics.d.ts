@@ -19,7 +19,7 @@ declare module goog.graphics {
      *     http://en.wikipedia.org/wiki/Canvas_element for details.
      * @final
      */
-    export class SvgGraphics extends goog.graphics.AbstractGraphics {
+    class SvgGraphics extends goog.graphics.AbstractGraphics {
         constructor(width: string, height: string, opt_coordWidth?: number, opt_coordHeight?: number, opt_domHelper?: goog.dom.DomHelper);
         
         /**

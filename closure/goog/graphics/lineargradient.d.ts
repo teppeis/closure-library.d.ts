@@ -19,7 +19,7 @@ declare module goog.graphics {
      *     http://en.wikipedia.org/wiki/Canvas_element for details.
      * @final
      */
-    export class LinearGradient extends goog.graphics.Fill {
+    class LinearGradient extends goog.graphics.Fill {
         constructor(x1: number, y1: number, x2: number, y2: number, color1: string, color2: string, opt_opacity1?: number, opt_opacity2?: number);
         
         /**

@@ -4,43 +4,43 @@ declare module goog.crypt.baseN {
      * Base-2, i.e. '01'.
      * @type {string}
      */
-    export var BASE_BINARY: string;
+    var BASE_BINARY: string;
 
     /**
      * Base-8, i.e. '01234567'.
      * @type {string}
      */
-    export var BASE_OCTAL: string;
+    var BASE_OCTAL: string;
 
     /**
      * Base-10, i.e. '0123456789'.
      * @type {string}
      */
-    export var BASE_DECIMAL: string;
+    var BASE_DECIMAL: string;
 
     /**
      * Base-16 using lower case, i.e. '0123456789abcdef'.
      * @type {string}
      */
-    export var BASE_LOWERCASE_HEXADECIMAL: string;
+    var BASE_LOWERCASE_HEXADECIMAL: string;
 
     /**
      * Base-16 using upper case, i.e. '0123456789ABCDEF'.
      * @type {string}
      */
-    export var BASE_UPPERCASE_HEXADECIMAL: string;
+    var BASE_UPPERCASE_HEXADECIMAL: string;
 
     /**
      * The more-known version of the BASE-64 encoding.  Uses + and / characters.
      * @type {string}
      */
-    export var BASE_64: string;
+    var BASE_64: string;
 
     /**
      * URL-safe version of the BASE-64 encoding.
      * @type {string}
      */
-    export var BASE_64_URL_SAFE: string;
+    var BASE_64_URL_SAFE: string;
 
     /**
      * Converts a number from one numeric base to another.
@@ -65,5 +65,5 @@ declare module goog.crypt.baseN {
      * @param {string} outputBase Requested numeric base.
      * @return {string} The converted number.
      */
-    export function recodeString(number: string, inputBase: string, outputBase: string): string;
+    function recodeString(number: string, inputBase: string, outputBase: string): string;
 }

@@ -15,7 +15,7 @@ declare module goog.json {
      * @implements {goog.json.Processor}
      * @final
      */
-    export class EvalJsonProcessor {
+    class EvalJsonProcessor {
         constructor(opt_replacer?: goog.json.Replacer, opt_useUnsafeParsing?: boolean);
     }
 }

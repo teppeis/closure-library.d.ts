@@ -17,7 +17,7 @@ declare module goog.ui {
      * @deprecated Use goog.ui.PopupMenu.
      * @final
      */
-    export class AttachableMenu extends goog.ui.MenuBase {
+    class AttachableMenu extends goog.ui.MenuBase {
         constructor(opt_element?: Element);
         
         /**

@@ -7,7 +7,7 @@ declare module goog.style.bidi {
      *     that the element is not scrolled at all (which, in general, is the
      *     left-most position in ltr and the right-most position in rtl).
      */
-    export function getScrollLeft(element: Element): number;
+    function getScrollLeft(element: Element): number;
 
     /**
      * Returns the "offsetStart" of an element, analagous to offsetLeft but
@@ -39,7 +39,7 @@ declare module goog.style.bidi {
      *     offsetStart position.
      * @return {number} The offsetStart for that element.
      */
-    export function getOffsetStart(element: Element): number;
+    function getOffsetStart(element: Element): number;
 
     /**
      * Sets the element's scrollLeft attribute so it is correctly scrolled by
@@ -52,7 +52,7 @@ declare module goog.style.bidi {
      * @param {number} offsetStart The number of pixels to scroll the element.
      *     If this value is < 0, 0 is used.
      */
-    export function setScrollOffset(element: Element, offsetStart: number): void;
+    function setScrollOffset(element: Element, offsetStart: number): void;
 
     /**
      * Sets the element's left style attribute in LTR or right style attribute in
@@ -62,5 +62,5 @@ declare module goog.style.bidi {
      * @param {?number} top The top position.  If null only the left/right is set.
      * @param {boolean} isRtl Whether we are in RTL mode.
      */
-    export function setPosition(elem: Element, left: number, top: number, isRtl: boolean): void;
+    function setPosition(elem: Element, left: number, top: number, isRtl: boolean): void;
 }

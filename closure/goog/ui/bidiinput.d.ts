@@ -7,7 +7,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Component}
      */
-    export class BidiInput extends goog.ui.Component {
+    class BidiInput extends goog.ui.Component {
         constructor(opt_domHelper?: goog.dom.DomHelper);
         
         /**

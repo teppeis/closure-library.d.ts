@@ -15,7 +15,7 @@ declare module goog.net {
      * @constructor
      * @final
      */
-    export class Jsonp {
+    class Jsonp {
         constructor(uri: goog.Uri, opt_callbackParamName?: string);
         
         /**

@@ -5,7 +5,7 @@ declare module goog.i18n.uChar {
      * @param {string} ch The given character.
      * @return {string} The U+ notation of the given character.
      */
-    export function toHexString(ch: string): string;
+    function toHexString(ch: string): string;
 
     /**
      * Gets Unicode value of the given character.
@@ -14,7 +14,7 @@ declare module goog.i18n.uChar {
      * ignored.
      * @return {number} The Unicode value of the character.
      */
-    export function toCharCode(ch: string): number;
+    function toCharCode(ch: string): number;
 
     /**
      * Gets a character from the given Unicode value. If the given code point is not
@@ -22,7 +22,7 @@ declare module goog.i18n.uChar {
      * @param {number} code The Unicode value of the character.
      * @return {?string} The character corresponding to the given Unicode value.
      */
-    export function fromCharCode(code: number): string;
+    function fromCharCode(code: number): string;
 
     /**
      * Returns the Unicode code point at the specified index.
@@ -57,7 +57,7 @@ declare module goog.i18n.uChar {
      * surrogate) of a surrogate pair, returns the negated code pointed encoded by
      * the pair.
      */
-    export function getCodePointAround(string: string, index: number): number;
+    function getCodePointAround(string: string, index: number): number;
 
     /**
      * Determines the length of the string needed to represent the specified
@@ -65,7 +65,7 @@ declare module goog.i18n.uChar {
      * @param {number} codePoint
      * @return {number} 2 if codePoint is a supplementary character, 1 otherwise.
      */
-    export function charCount(codePoint: number): number;
+    function charCount(codePoint: number): number;
 
     /**
      * Determines whether the specified Unicode code point is in the supplementary
@@ -73,7 +73,7 @@ declare module goog.i18n.uChar {
      * @param {number} codePoint
      * @return {boolean} Whether then given code point is a supplementary character.
      */
-    export function isSupplementaryCodePoint(codePoint: number): boolean;
+    function isSupplementaryCodePoint(codePoint: number): boolean;
 
     /**
      * Gets whether the given code point is a leading surrogate character.
@@ -81,7 +81,7 @@ declare module goog.i18n.uChar {
      * @return {boolean} Whether the given code point is a leading surrogate
      * character.
      */
-    export function isLeadSurrogateCodePoint(codePoint: number): boolean;
+    function isLeadSurrogateCodePoint(codePoint: number): boolean;
 
     /**
      * Gets whether the given code point is a trailing surrogate character.
@@ -89,7 +89,7 @@ declare module goog.i18n.uChar {
      * @return {boolean} Whether the given code point is a trailing surrogate
      * character.
      */
-    export function isTrailSurrogateCodePoint(codePoint: number): boolean;
+    function isTrailSurrogateCodePoint(codePoint: number): boolean;
 
     /**
      * Composes a supplementary Unicode code point from the given UTF-16 surrogate
@@ -100,19 +100,19 @@ declare module goog.i18n.uChar {
      * @return {?number} The supplementary Unicode code point obtained by decoding
      * the given UTF-16 surrogate pair.
      */
-    export function buildSupplementaryCodePoint(lead: number, trail: number): number;
+    function buildSupplementaryCodePoint(lead: number, trail: number): number;
 
     /**
      * Gets the name of a character, if available, returns null otherwise.
      * @param {string} ch The character.
      * @return {?string} The name of the character.
      */
-    export function toName(ch: string): string;
+    function toName(ch: string): string;
 
     /**
      * Sets up the character map, lazily.  Some characters are indexed by their
      * decimal value.
      * @protected
      */
-    export function createCharData(): void;
+    function createCharData(): void;
 }

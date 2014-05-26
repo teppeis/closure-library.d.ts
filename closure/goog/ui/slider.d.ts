@@ -8,7 +8,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.SliderBase}
      */
-    export class Slider extends goog.ui.SliderBase {
+    class Slider extends goog.ui.SliderBase {
         constructor(opt_domHelper?: goog.dom.DomHelper, opt_labelFn?: (arg0: number) => string);
         
         /**
@@ -42,5 +42,5 @@ declare module goog.ui.Slider {
      *
      * @enum {string}
      */
-    export interface Orientation extends goog.ui.SliderBase.Orientation {}
+    interface Orientation extends goog.ui.SliderBase.Orientation {}
 }

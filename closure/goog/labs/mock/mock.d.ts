@@ -11,7 +11,7 @@ declare module goog.labs.mock {
      * @extends {goog.debug.Error}
      * @final
      */
-    export class VerificationError extends goog.debug.Error {
+    class VerificationError extends goog.debug.Error {
         constructor(recordedCalls: Array<any>, methodName: string, args: Array<any>);
     }
 
@@ -25,7 +25,7 @@ declare module goog.labs.mock {
      * @struct
      * @private
      */
-    export interface MockManager_ {
+    interface MockManager_ {
         
         /**
          * Returns the mock object. This should have a stubbed method for each method
@@ -100,7 +100,7 @@ declare module goog.labs.mock {
      * @extends {goog.labs.mock.MockManager_}
      * @private
      */
-    export interface MockObjectManager_ extends goog.labs.mock.MockManager_ {
+    interface MockObjectManager_ extends goog.labs.mock.MockManager_ {
     }
 
     /**
@@ -113,7 +113,7 @@ declare module goog.labs.mock {
      * @extends {goog.labs.mock.MockObjectManager_}
      * @private
      */
-    export interface MockSpyManager_ extends goog.labs.mock.MockObjectManager_ {
+    interface MockSpyManager_ extends goog.labs.mock.MockObjectManager_ {
         
         /**
          * Return a stub, if defined, for the method and arguments passed in. If we lack
@@ -137,7 +137,7 @@ declare module goog.labs.mock {
      * @extends {goog.labs.mock.MockManager_}
      * @private
      */
-    export interface MockFunctionManager_ extends goog.labs.mock.MockManager_ {
+    interface MockFunctionManager_ extends goog.labs.mock.MockManager_ {
     }
 
     /**
@@ -153,7 +153,7 @@ declare module goog.labs.mock {
      * @struct
      * @private
      */
-    export interface StubBinder_ {
+    interface StubBinder_ {
         
         /**
          * Defines the stub to be called for the method name and arguments bound
@@ -182,7 +182,7 @@ declare module goog.labs.mock {
      * @struct
      * @private
      */
-    export interface MethodBinding_ {
+    interface MethodBinding_ {
         
         /**
          * @return {!Function} The stub to be executed.
@@ -221,7 +221,7 @@ declare module goog.labs.mock {
      *     mocked.
      * @return {!Object} The mocked object.
      */
-    export function mock(objectOrClass: Object): Object;
+    function mock(objectOrClass: Object): Object;
 
     /**
      * Mocks a given function.
@@ -229,7 +229,7 @@ declare module goog.labs.mock {
      * @param {!Function} func A function to be mocked.
      * @return {!Function} The mocked function.
      */
-    export function mockFunction(func: Function): Function;
+    function mockFunction(func: Function): Function;
 
     /**
      * Spies on a given object.
@@ -237,7 +237,7 @@ declare module goog.labs.mock {
      * @param {!Object} obj The object to be spied on.
      * @return {!Object} The spy object.
      */
-    export function spy(obj: Object): Object;
+    function spy(obj: Object): Object;
 
     /**
      * Returns an object that can be used to verify calls to specific methods of a
@@ -246,14 +246,14 @@ declare module goog.labs.mock {
      * @param {!Object} obj The mocked object.
      * @return {!Object} The verifier.
      */
-    export function verify(obj: Object): Object;
+    function verify(obj: Object): Object;
 
     /**
      * A unique Id generator that does not modify the object.
      * @param {Object!} obj The object whose unique ID we want to generate.
      * @return {number} an unique id for the object.
      */
-    export function getUid(obj: Object): number;
+    function getUid(obj: Object): number;
 
     /**
      * Facilitates (and is the first step in) setting up stubs. Obtains an object
@@ -265,5 +265,5 @@ declare module goog.labs.mock {
      * @param {!Object} mockObject The mocked object.
      * @return {!goog.labs.mock.StubBinder_} The property binder.
      */
-    export function when(mockObject: Object): goog.labs.mock.StubBinder_;
+    function when(mockObject: Object): goog.labs.mock.StubBinder_;
 }

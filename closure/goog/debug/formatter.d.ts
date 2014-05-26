@@ -7,7 +7,7 @@ declare module goog.debug {
      * @param {string=} opt_prefix The prefix to place before text records.
      * @constructor
      */
-    export class Formatter {
+    class Formatter {
         constructor(opt_prefix?: string);
         
         /**
@@ -81,7 +81,7 @@ declare module goog.debug {
      * @constructor
      * @extends {goog.debug.Formatter}
      */
-    export class HtmlFormatter extends goog.debug.Formatter {
+    class HtmlFormatter extends goog.debug.Formatter {
         constructor(opt_prefix?: string);
         
         /**
@@ -108,7 +108,7 @@ declare module goog.debug {
      * @extends {goog.debug.Formatter}
      * @final
      */
-    export class TextFormatter extends goog.debug.Formatter {
+    class TextFormatter extends goog.debug.Formatter {
         constructor(opt_prefix?: string);
         
         /**

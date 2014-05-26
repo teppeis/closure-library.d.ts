@@ -5,7 +5,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.ControlRenderer}
      */
-    export class MenuHeaderRenderer extends goog.ui.ControlRenderer {
+    class MenuHeaderRenderer extends goog.ui.ControlRenderer {
         constructor();
         
         /**

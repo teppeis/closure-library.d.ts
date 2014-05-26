@@ -6,7 +6,7 @@ declare module goog.events {
      * @constructor
      * @final
      */
-    export class ListenerMap {
+    class ListenerMap {
         constructor(src: EventTarget);
         
         /**

@@ -7,7 +7,7 @@ declare module goog.net.xpc {
      * @constructor
      * @extends {goog.Disposable};
      */
-    export class Transport extends goog.Disposable {
+    class Transport {
         constructor(opt_domHelper?: goog.dom.DomHelper);
         
         /**

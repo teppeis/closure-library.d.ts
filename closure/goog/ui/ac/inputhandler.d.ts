@@ -15,7 +15,7 @@ declare module goog.ui.ac {
      * @constructor
      * @extends {goog.Disposable}
      */
-    export class InputHandler extends goog.Disposable {
+    class InputHandler extends goog.Disposable {
         constructor(opt_separators?: string, opt_literals?: string, opt_multi?: boolean, opt_throttleTime?: number);
         
         /**

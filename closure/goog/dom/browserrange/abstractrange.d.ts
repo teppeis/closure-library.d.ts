@@ -4,7 +4,7 @@ declare module goog.dom.browserrange {
      * The constructor for abstract ranges.  Don't call this from subclasses.
      * @constructor
      */
-    export class AbstractRange {
+    class AbstractRange {
         constructor();
         
         /**

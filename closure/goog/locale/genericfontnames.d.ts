@@ -10,5 +10,5 @@ declare module goog.locale.genericFontNames {
      * @return {Array.<Object>} List of objects with generic name as 'caption' and
      *     corresponding font name lists as 'value' property.
      */
-    export function getList(locale: string): Array<Object>;
+    function getList(locale: string): Array<Object>;
 }

@@ -11,7 +11,7 @@ declare module goog.net {
      *        of the second browser channel test.
      * @constructor
      */
-    export class BrowserChannel {
+    class BrowserChannel {
         constructor(opt_clientVersion?: string, opt_firstTestResults?: Array<string>, opt_secondTestResults?: boolean);
         
         /**
@@ -495,7 +495,7 @@ declare module goog.net.BrowserChannel {
      * Enum type for the browser channel state machine.
      * @enum {number}
      */
-    export interface State {
+    interface State {
         CLOSED: number;
         INIT: number;
         OPENING: number;
@@ -506,7 +506,7 @@ declare module goog.net.BrowserChannel {
      * Enum type for identifying a BrowserChannel error.
      * @enum {number}
      */
-    export interface Error {
+    interface Error {
         OK: number;
         REQUEST_FAILED: number;
         LOGGED_OUT: number;
@@ -525,7 +525,7 @@ declare module goog.net.BrowserChannel {
      * @enum {number}
      * @private
      */
-    export interface ChannelType_ {
+    interface ChannelType_ {
         FORWARD_CHANNEL: number;
         BACK_CHANNEL: number;
     }
@@ -534,7 +534,7 @@ declare module goog.net.BrowserChannel {
      * Events fired by BrowserChannel and associated objects
      * @enum {string}
      */
-    export interface Event {
+    interface Event {
         STAT_EVENT: string;
         TIMING_EVENT: string;
         SERVER_REACHABILITY_EVENT: string;
@@ -545,7 +545,7 @@ declare module goog.net.BrowserChannel {
      * server.
      * @enum {number}
      */
-    export interface ServerReachability {
+    interface ServerReachability {
         REQUEST_MADE: number;
         REQUEST_SUCCEEDED: number;
         REQUEST_FAILED: number;
@@ -557,7 +557,7 @@ declare module goog.net.BrowserChannel {
      * TODO(user) - Change name not to use Event or use EventTarget
      * @enum {number}
      */
-    export interface Stat {
+    interface Stat {
         CONNECT_ATTEMPT: number;
         ERROR_NETWORK: number;
         ERROR_OTHER: number;
@@ -591,7 +591,7 @@ declare module goog.net.BrowserChannel {
      * @constructor
      * @final
      */
-    export class QueuedMap {
+    class QueuedMap {
         constructor(mapId: number, map: Object, opt_context?: Object);
     }
 
@@ -605,7 +605,7 @@ declare module goog.net.BrowserChannel {
      * @extends {goog.events.Event}
      * @final
      */
-    export class StatEvent extends goog.events.Event {
+    class StatEvent extends goog.events.Event {
         constructor(eventTarget: goog.events.EventTarget, stat: goog.net.BrowserChannel.Stat);
     }
 
@@ -621,7 +621,7 @@ declare module goog.net.BrowserChannel {
      * @extends {goog.events.Event}
      * @final
      */
-    export class TimingEvent extends goog.events.Event {
+    class TimingEvent extends goog.events.Event {
         constructor(target: goog.events.EventTarget, size: number, rtt: number, retries: number);
     }
 
@@ -636,7 +636,7 @@ declare module goog.net.BrowserChannel {
      * @extends {goog.events.Event}
      * @final
      */
-    export class ServerReachabilityEvent extends goog.events.Event {
+    class ServerReachabilityEvent extends goog.events.Event {
         constructor(target: goog.events.EventTarget, reachabilityType: goog.net.BrowserChannel.ServerReachability);
     }
 
@@ -644,7 +644,7 @@ declare module goog.net.BrowserChannel {
      * Abstract base class for the browser channel handler
      * @constructor
      */
-    export class Handler {
+    class Handler {
         constructor();
         
         /**
@@ -760,28 +760,28 @@ declare module goog.net.BrowserChannel.LogSaver {
      * Returns whether the LogSaver is enabled.
      * @return {boolean} Whether saving is enabled or disabled.
      */
-    export function isEnabled(): boolean;
+    function isEnabled(): boolean;
 
     /**
      * Enables of disables the LogSaver.
      * @param {boolean} enable Whether to enable or disable saving.
      */
-    export function setEnabled(enable: boolean): void;
+    function setEnabled(enable: boolean): void;
 
     /**
      * Adds a log record.
      * @param {goog.log.LogRecord} logRecord the LogRecord.
      */
-    export function addLogRecord(logRecord: goog.log.LogRecord): void;
+    function addLogRecord(logRecord: goog.log.LogRecord): void;
 
     /**
      * Returns the log as a single string.
      * @return {string} The log as a single string.
      */
-    export function getBuffer(): string;
+    function getBuffer(): string;
 
     /**
      * Clears the buffer
      */
-    export function clearBuffer(): void;
+    function clearBuffer(): void;
 }

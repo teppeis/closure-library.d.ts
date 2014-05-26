@@ -7,7 +7,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.events.EventTarget}
      */
-    export class Component extends goog.events.EventTarget {
+    class Component extends goog.events.EventTarget {
         constructor(opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -478,7 +478,7 @@ declare module goog.ui.Component {
      * the corresponding state change.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         BEFORE_SHOW: string;
         SHOW: string;
         HIDE: string;
@@ -506,7 +506,7 @@ declare module goog.ui.Component {
      * Errors thrown by the component.
      * @enum {string}
      */
-    export interface Error {
+    interface Error {
         NOT_SUPPORTED: string;
         DECORATE_INVALID: string;
         ALREADY_RENDERED: string;
@@ -523,7 +523,7 @@ declare module goog.ui.Component {
      * all states.
      * @enum {number}
      */
-    export interface State {
+    interface State {
         ALL: number;
         DISABLED: number;
         HOVER: number;

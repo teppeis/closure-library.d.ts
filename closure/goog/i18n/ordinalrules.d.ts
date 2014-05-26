@@ -4,7 +4,7 @@ declare module goog.i18n.ordinalRules {
      * Ordinal pattern keyword
      * @enum {string}
      */
-    export interface Keyword {
+    interface Keyword {
         ZERO: string;
         ONE: string;
         TWO: string;
@@ -16,5 +16,5 @@ declare module goog.i18n.ordinalRules {
     /**
      * Selected Ordinal rules by locale.
      */
-    export var select: any;
+    var select: any;
 }

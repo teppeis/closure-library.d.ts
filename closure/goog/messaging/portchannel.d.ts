@@ -18,7 +18,7 @@ declare module goog.messaging {
      * @extends {goog.messaging.AbstractChannel}
      * @final
      */
-    export class PortChannel extends goog.messaging.AbstractChannel {
+    class PortChannel extends goog.messaging.AbstractChannel {
         constructor(underlyingPort: MessagePort);
         
         /**

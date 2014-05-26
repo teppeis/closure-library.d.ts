@@ -6,7 +6,7 @@ declare module goog.fx {
      * @constructor
      * @extends {goog.fx.TransitionBase}
      */
-    export class AnimationQueue extends goog.fx.TransitionBase {
+    class AnimationQueue extends goog.fx.TransitionBase {
         constructor();
         
         /**
@@ -34,7 +34,7 @@ declare module goog.fx {
      * @constructor
      * @extends {goog.fx.AnimationQueue}
      */
-    export class AnimationParallelQueue extends goog.fx.AnimationQueue {
+    class AnimationParallelQueue extends goog.fx.AnimationQueue {
         constructor();
     }
 
@@ -43,7 +43,7 @@ declare module goog.fx {
      * @constructor
      * @extends {goog.fx.AnimationQueue}
      */
-    export class AnimationSerialQueue extends goog.fx.AnimationQueue {
+    class AnimationSerialQueue extends goog.fx.AnimationQueue {
         constructor();
     }
 }

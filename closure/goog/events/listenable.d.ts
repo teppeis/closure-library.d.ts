@@ -27,7 +27,7 @@ declare module goog.events {
      * @see goog.events
      * @see http://www.w3.org/TR/DOM-Level-2-Events/events.html
      */
-    export interface Listenable {
+    interface Listenable {
         
         /**
          * Adds an event listener. A listener can only be added once to an
@@ -200,7 +200,7 @@ declare module goog.events {
      * An interface that describes a single registered listener.
      * @interface
      */
-    export interface ListenableKey {
+    interface ListenableKey {
         
         /**
          * The source event target.
@@ -251,7 +251,7 @@ declare module goog.events.Listenable {
      * @type {string}
      * @const
      */
-    export var IMPLEMENTED_BY_PROP: string;
+    var IMPLEMENTED_BY_PROP: string;
 
     /**
      * Marks a given class (constructor) as an implementation of
@@ -260,7 +260,7 @@ declare module goog.events.Listenable {
      * @param {!Function} cls The class constructor. The corresponding
      *     class must have already implemented the interface.
      */
-    export function addImplementation(cls: Function): void;
+    function addImplementation(cls: Function): void;
 
     /**
      * @param {Object} obj The object to check.
@@ -268,7 +268,7 @@ declare module goog.events.Listenable {
      *     Listenable. The class/superclass of the instance must call
      *     addImplementation.
      */
-    export function isImplementedBy(obj: Object): boolean;
+    function isImplementedBy(obj: Object): boolean;
 }
 
 declare module goog.events.ListenableKey {
@@ -278,5 +278,5 @@ declare module goog.events.ListenableKey {
      * @return {number} A number to be used to fill ListenableKey#key
      *     field.
      */
-    export function reserveKey(): number;
+    function reserveKey(): number;
 }

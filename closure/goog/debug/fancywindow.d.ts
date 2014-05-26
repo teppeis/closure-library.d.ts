@@ -9,7 +9,7 @@ declare module goog.debug {
      * @constructor
      * @extends {goog.debug.DebugWindow}
      */
-    export class FancyWindow extends goog.debug.DebugWindow {
+    class FancyWindow extends goog.debug.DebugWindow {
         constructor(opt_identifier?: string, opt_prefix?: string);
         
         /**

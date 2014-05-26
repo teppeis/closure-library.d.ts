@@ -16,7 +16,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.PopupBase}
      */
-    export class Popup extends goog.ui.PopupBase {
+    class Popup extends goog.ui.PopupBase {
         constructor(opt_element?: Element, opt_position?: goog.positioning.AbstractPosition);
         
         /**
@@ -76,7 +76,7 @@ declare module goog.ui.Popup {
      * @deprecated Use {@link goog.positioning.Corner} instead, this alias will be
      *     removed at the end of Q1 2009.
      */
-    export interface Corner extends goog.positioning.Corner {}
+    interface Corner extends goog.positioning.Corner {}
 
     /**
      * Enum for representing position handling in cases where the element would be
@@ -87,7 +87,7 @@ declare module goog.ui.Popup {
      * @deprecated Use {@link goog.positioning.Overflow} instead, this alias will be
      *     removed at the end of Q1 2009.
      */
-    export interface Overflow extends goog.positioning.Overflow {}
+    interface Overflow extends goog.positioning.Overflow {}
 
     /**
      * Encapsulates a popup position where the popup is anchored at a corner of
@@ -107,7 +107,7 @@ declare module goog.ui.Popup {
      *     alias will be removed at the end of Q1 2009.
      * @final
      */
-    export class AnchoredPosition extends goog.positioning.AbstractPosition {
+    class AnchoredPosition extends goog.positioning.AbstractPosition {
         constructor(element: Element, corner: goog.positioning.Corner);
     }
 
@@ -134,7 +134,7 @@ declare module goog.ui.Popup {
      * @deprecated Use {@link goog.positioning.AnchoredViewportPosition} instead,
      *     this alias will be removed at the end of Q1 2009.
      */
-    export class AnchoredViewPortPosition extends goog.ui.Popup.AnchoredPosition {
+    class AnchoredViewPortPosition extends goog.ui.Popup.AnchoredPosition {
         constructor(element: Element, corner: goog.positioning.Corner, opt_adjust?: boolean);
     }
 
@@ -154,7 +154,7 @@ declare module goog.ui.Popup {
      *     will be removed at the end of Q1 2009.
      * @final
      */
-    export class AbsolutePosition extends goog.positioning.AbstractPosition {
+    class AbsolutePosition extends goog.positioning.AbstractPosition {
         constructor(arg1: number, opt_arg2?: number);
     }
 
@@ -172,7 +172,7 @@ declare module goog.ui.Popup {
      * @deprecated Use {@link goog.positioning.ViewPortPosition} instead, this alias
      *     will be removed at the end of Q1 2009.
      */
-    export class ViewPortPosition extends goog.ui.Popup.AbsolutePosition {
+    class ViewPortPosition extends goog.ui.Popup.AbsolutePosition {
         constructor(arg1: number, opt_arg2?: number);
     }
 
@@ -193,7 +193,7 @@ declare module goog.ui.Popup {
      *     will be removed at the end of Q1 2009.
      * @final
      */
-    export class ClientPosition extends goog.ui.Popup.AbsolutePosition {
+    class ClientPosition extends goog.ui.Popup.AbsolutePosition {
         constructor(arg1: number, opt_arg2?: number);
     }
 
@@ -210,7 +210,7 @@ declare module goog.ui.Popup {
      * @deprecated Use {@link goog.positioning.ViewPortClientPosition} instead, this
      *     alias will be removed at the end of Q1 2009.
      */
-    export class ViewPortClientPosition extends goog.ui.Popup.ClientPosition {
+    class ViewPortClientPosition extends goog.ui.Popup.ClientPosition {
         constructor(arg1: number, opt_arg2?: number);
     }
 }

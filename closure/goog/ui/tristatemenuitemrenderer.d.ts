@@ -11,7 +11,7 @@ declare module goog.ui {
      * @extends {goog.ui.MenuItemRenderer}
      * @final
      */
-    export class TriStateMenuItemRenderer extends goog.ui.MenuItemRenderer {
+    class TriStateMenuItemRenderer extends goog.ui.MenuItemRenderer {
         constructor();
         
         /**

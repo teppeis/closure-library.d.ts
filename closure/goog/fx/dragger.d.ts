@@ -12,7 +12,7 @@ declare module goog.fx {
      * @extends {goog.events.EventTarget}
      * @constructor
      */
-    export class Dragger extends goog.events.EventTarget {
+    class Dragger extends goog.events.EventTarget {
         constructor(target: Element, opt_handle?: Element, opt_limits?: goog.math.Rect);
         
         /**
@@ -260,7 +260,7 @@ declare module goog.fx {
      * @constructor
      * @extends {goog.events.Event}
      */
-    export class DragEvent extends goog.events.Event {
+    class DragEvent extends goog.events.Event {
         constructor(type: string, dragobj: goog.fx.Dragger, clientX: number, clientY: number, browserEvent: goog.events.BrowserEvent, opt_actX?: number, opt_actY?: number, opt_dragCanceled?: boolean);
     }
 }
@@ -271,7 +271,7 @@ declare module goog.fx.Dragger {
      * Constants for event names.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         EARLY_CANCEL: string;
         START: string;
         BEFOREDRAG: string;

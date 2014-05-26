@@ -48,7 +48,7 @@ declare module goog {
      * @implements {goog.Thenable.<TYPE>}
      * @template TYPE,RESOLVER_CONTEXT
      */
-    export class Promise<TYPE, RESOLVER_CONTEXT> {
+    class Promise<TYPE, RESOLVER_CONTEXT> {
         constructor(resolver: (arg0: (arg0?: TYPE) => any, arg1: (arg0: any) => any) => void, opt_context?: RESOLVER_CONTEXT);
         
         /**
@@ -205,7 +205,7 @@ declare module goog.Promise {
      * @enum {number}
      * @private
      */
-    export interface State_ {
+    interface State_ {
         PENDING: number;
         BLOCKED: number;
         FULFILLED: number;
@@ -224,7 +224,7 @@ declare module goog.Promise {
      * }}
      * @private
      */
-    export interface CallbackEntry_ {
+    interface CallbackEntry_ {
         child: goog.Promise<any, any>;
         onFulfilled: (arg0: any) => any;
         onRejected: (arg0: any) => any;
@@ -238,7 +238,7 @@ declare module goog.Promise {
      * @extends {goog.debug.Error}
      * @final
      */
-    export class CancellationError extends goog.debug.Error {
+    class CancellationError extends goog.debug.Error {
         constructor(opt_message?: string);
     }
 
@@ -254,6 +254,6 @@ declare module goog.Promise {
      * @private
      * @template TYPE
      */
-    export interface Resolver_<TYPE> {
+    interface Resolver_<TYPE> {
     }
 }

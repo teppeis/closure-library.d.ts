@@ -6,7 +6,7 @@ declare module goog.editor {
      * @constructor
      * @final
      */
-    export class Table {
+    class Table {
         constructor(node: Element);
         
         /**
@@ -138,7 +138,7 @@ declare module goog.editor {
      * @constructor
      * @final
      */
-    export class TableRow {
+    class TableRow {
         constructor(trElement: Element, rowIndex: number);
     }
 
@@ -151,7 +151,7 @@ declare module goog.editor {
      * @constructor
      * @final
      */
-    export class TableCell {
+    class TableCell {
         constructor(td: Element, startRow: number, startCol: number);
         
         /**

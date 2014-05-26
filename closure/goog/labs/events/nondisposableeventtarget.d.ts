@@ -37,7 +37,7 @@ declare module goog.labs.events {
      * @implements {goog.events.Listenable}
      * @final
      */
-    export class NonDisposableEventTarget {
+    class NonDisposableEventTarget {
         constructor();
         
         /**

@@ -13,7 +13,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Control}
      */
-    export class Checkbox extends goog.ui.Control {
+    class Checkbox extends goog.ui.Control {
         constructor(opt_checked?: goog.ui.Checkbox.State, opt_domHelper?: goog.dom.DomHelper, opt_renderer?: goog.ui.CheckboxRenderer);
         
         /**
@@ -81,7 +81,7 @@ declare module goog.ui.Checkbox {
      * Possible checkbox states.
      * @enum {?boolean}
      */
-    export interface State {
+    interface State {
         CHECKED: boolean;
         UNCHECKED: boolean;
         UNDETERMINED: boolean;

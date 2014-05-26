@@ -14,7 +14,7 @@ declare module goog {
      * @this {Object} The object whose function is being wrapped.
      * @return {!Function} The wrapped function.
      */
-    export function memoize(f: Function, opt_serializer?: (arg0: number, arg1: Object) => string): void;
+    function memoize(f: Function, opt_serializer?: (arg0: number, arg1: Object) => string): void;
 }
 
 declare module goog.memoize {
@@ -24,7 +24,7 @@ declare module goog.memoize {
      * @param {Object} cacheOwner The owner of the cache. This is the {@code this}
      *     context of the memoized function.
      */
-    export function clearCache(cacheOwner: Object): void;
+    function clearCache(cacheOwner: Object): void;
 
     /**
      * Simple and fast argument serializer function for goog.memoize.
@@ -38,5 +38,5 @@ declare module goog.memoize {
      * @return {string} The list of arguments with type information concatenated
      *     with the functionUid argument, serialized as \x0B-separated string.
      */
-    export function simpleSerializer(functionUid: number, args: Object): string;
+    function simpleSerializer(functionUid: number, args: Object): string;
 }

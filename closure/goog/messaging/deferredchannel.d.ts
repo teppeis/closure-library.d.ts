@@ -11,7 +11,7 @@ declare module goog.messaging {
      * @implements {goog.messaging.MessageChannel}
      * @final
      */
-    export class DeferredChannel extends goog.Disposable {
+    class DeferredChannel extends goog.Disposable {
         constructor(deferredChannel: goog.async.Deferred<any>);
         
         /**

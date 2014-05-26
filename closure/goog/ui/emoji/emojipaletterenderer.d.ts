@@ -9,7 +9,7 @@ declare module goog.ui.emoji {
      * @constructor
      * @extends {goog.ui.PaletteRenderer}
      */
-    export class EmojiPaletteRenderer extends goog.ui.PaletteRenderer {
+    class EmojiPaletteRenderer extends goog.ui.PaletteRenderer {
         constructor(defaultImgUrl: string);
         
         /** @override */

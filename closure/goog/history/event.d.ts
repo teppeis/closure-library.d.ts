@@ -12,7 +12,7 @@ declare module goog.history {
      * @extends {goog.events.Event}
      * @final
      */
-    export class Event extends goog.events.Event {
+    class Event extends goog.events.Event {
         constructor(token: string, isNavigation: boolean);
     }
 }

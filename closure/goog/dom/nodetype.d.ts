@@ -13,7 +13,7 @@ declare module goog.dom {
      * See http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1950641247
      * @enum {number}
      */
-    export interface NodeType {
+    interface NodeType {
         ELEMENT: number;
         ATTRIBUTE: number;
         TEXT: number;

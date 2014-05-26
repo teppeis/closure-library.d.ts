@@ -8,7 +8,7 @@ declare module goog.math {
      * @param {number=} opt_z Z coordinate, defaults to 0.
      * @constructor
      */
-    export class Coordinate3 {
+    class Coordinate3 {
         constructor(opt_x?: number, opt_y?: number, opt_z?: number);
         
         /**

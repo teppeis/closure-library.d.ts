@@ -5,7 +5,7 @@ declare module goog.editor.plugins {
      * @constructor
      * @extends {goog.editor.Plugin}
      */
-    export class BasicTextFormatter extends goog.editor.Plugin {
+    class BasicTextFormatter extends goog.editor.Plugin {
         constructor();
         
         /**
@@ -56,7 +56,7 @@ declare module goog.editor.plugins.BasicTextFormatter {
      * Commands implemented by this plugin.
      * @enum {string}
      */
-    export interface COMMAND {
+    interface COMMAND {
         LINK: string;
         FORMAT_BLOCK: string;
         INDENT: string;

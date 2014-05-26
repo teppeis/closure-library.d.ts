@@ -7,7 +7,7 @@ declare module goog.dom {
      * @extends {goog.dom.AbstractMultiRange}
      * @final
      */
-    export class MultiRange extends goog.dom.AbstractMultiRange {
+    class MultiRange extends goog.dom.AbstractMultiRange {
         constructor();
         
         /**
@@ -63,7 +63,7 @@ declare module goog.dom {
      * @extends {goog.dom.SavedRange}
      * @private
      */
-    export interface DomSavedMultiRange_ extends goog.dom.SavedRange {
+    interface DomSavedMultiRange_ extends goog.dom.SavedRange {
         
         /**
          * @return {!goog.dom.MultiRange} The restored range.
@@ -81,7 +81,7 @@ declare module goog.dom {
      * @extends {goog.dom.RangeIterator}
      * @final
      */
-    export class MultiRangeIterator extends goog.dom.RangeIterator {
+    class MultiRangeIterator extends goog.dom.RangeIterator {
         constructor(range: goog.dom.MultiRange);
         
         /**

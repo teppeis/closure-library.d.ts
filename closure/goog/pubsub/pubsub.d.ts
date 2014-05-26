@@ -13,7 +13,7 @@ declare module goog.pubsub {
      * @constructor
      * @extends {goog.Disposable}
      */
-    export class PubSub extends goog.Disposable {
+    class PubSub extends goog.Disposable {
         constructor();
         
         /**

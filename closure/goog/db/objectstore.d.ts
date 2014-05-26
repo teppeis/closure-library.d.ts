@@ -18,7 +18,7 @@ declare module goog.db {
      *     Chrome (v22+) the error/request come with a DOM error string that is
      *     already very descriptive.
      */
-    export class ObjectStore {
+    class ObjectStore {
         constructor(store: IDBObjectStore);
         
         /**

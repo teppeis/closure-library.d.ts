@@ -4,27 +4,27 @@ declare module goog.userAgent {
      * Whether the user agent is Opera.
      * @type {boolean}
      */
-    export var OPERA: boolean;
+    var OPERA: boolean;
 
     /**
      * Whether the user agent is Internet Explorer.
      * @type {boolean}
      */
-    export var IE: boolean;
+    var IE: boolean;
 
     /**
      * Whether the user agent is Gecko. Gecko is the rendering engine used by
      * Mozilla, Firefox, and others.
      * @type {boolean}
      */
-    export var GECKO: boolean;
+    var GECKO: boolean;
 
     /**
      * Whether the user agent is WebKit. WebKit is the rendering engine that
      * Safari, Android and others use.
      * @type {boolean}
      */
-    export var WEBKIT: boolean;
+    var WEBKIT: boolean;
 
     /**
      * Whether the user agent is running on a mobile device.
@@ -34,7 +34,7 @@ declare module goog.userAgent {
      *
      * @type {boolean}
      */
-    export var MOBILE: boolean;
+    var MOBILE: boolean;
 
     /**
      * Used while transitioning code to use WEBKIT instead.
@@ -42,7 +42,7 @@ declare module goog.userAgent {
      * @deprecated Use {@link goog.userAgent.product.SAFARI} instead.
      * TODO(nicksantos): Delete this from goog.userAgent.
      */
-    export var SAFARI: boolean;
+    var SAFARI: boolean;
 
     /**
      * The platform (operating system) the user agent is running on. Default to
@@ -50,56 +50,56 @@ declare module goog.userAgent {
      * example).
      * @type {string}
      */
-    export var PLATFORM: string;
+    var PLATFORM: string;
 
     /**
      * Whether the user agent is running on a Macintosh operating system.
      * @type {boolean}
      */
-    export var MAC: boolean;
+    var MAC: boolean;
 
     /**
      * Whether the user agent is running on a Windows operating system.
      * @type {boolean}
      */
-    export var WINDOWS: boolean;
+    var WINDOWS: boolean;
 
     /**
      * Whether the user agent is running on a Linux operating system.
      * @type {boolean}
      */
-    export var LINUX: boolean;
+    var LINUX: boolean;
 
     /**
      * Whether the user agent is running on a X11 windowing system.
      * @type {boolean}
      */
-    export var X11: boolean;
+    var X11: boolean;
 
     /**
      * Whether the user agent is running on Android.
      * @type {boolean}
      */
-    export var ANDROID: boolean;
+    var ANDROID: boolean;
 
     /**
      * Whether the user agent is running on an iPhone.
      * @type {boolean}
      */
-    export var IPHONE: boolean;
+    var IPHONE: boolean;
 
     /**
      * Whether the user agent is running on an iPad.
      * @type {boolean}
      */
-    export var IPAD: boolean;
+    var IPAD: boolean;
 
     /**
      * The version of the user agent. This is a string because it might contain
      * 'b' (as in beta) as well as multiple dots.
      * @type {string}
      */
-    export var VERSION: string;
+    var VERSION: string;
 
     /**
      * For IE version < 7, documentMode is undefined, so attempt to use the
@@ -109,20 +109,20 @@ declare module goog.userAgent {
      * @type {number|undefined}
      * @const
      */
-    export var DOCUMENT_MODE: number;
+    var DOCUMENT_MODE: number;
 
     /**
      * Returns the userAgent string for the current browser.
      *
      * @return {string} The userAgent string.
      */
-    export function getUserAgentString(): string;
+    function getUserAgentString(): string;
 
     /**
      * TODO(nnaze): Change type to "Navigator" and update compilation targets.
      * @return {Object} The native navigator object.
      */
-    export function getNavigator(): Object;
+    function getNavigator(): Object;
 
     /**
      * Compares two version numbers.
@@ -135,7 +135,7 @@ declare module goog.userAgent {
      *                  -1 if second argument is higher.
      * @deprecated Use goog.string.compareVersions.
      */
-    export function compare(v1: string, v2: string): number;
+    function compare(v1: string, v2: string): number;
 
     /**
      * Whether the user agent version is higher or the same as the given version.
@@ -151,7 +151,7 @@ declare module goog.userAgent {
      * @return {boolean} Whether the user agent version is higher or the same as
      *     the given version.
      */
-    export function isVersionOrHigher(version: string): boolean;
+    function isVersionOrHigher(version: string): boolean;
 
     /**
      * Deprecated alias to {@code goog.userAgent.isVersionOrHigher}.
@@ -160,7 +160,7 @@ declare module goog.userAgent {
      *     the given version.
      * @deprecated Use goog.userAgent.isVersionOrHigher().
      */
-    export function isVersion(version: string): boolean;
+    function isVersion(version: string): boolean;
 
     /**
      * Whether the IE effective document mode is higher or the same as the given
@@ -171,7 +171,7 @@ declare module goog.userAgent {
      * @return {boolean} Whether the IE effective document mode is higher or the
      *     same as the given version.
      */
-    export function isDocumentModeOrHigher(documentMode: number): boolean;
+    function isDocumentModeOrHigher(documentMode: number): boolean;
 
     /**
      * Deprecated alias to {@code goog.userAgent.isDocumentModeOrHigher}.
@@ -180,5 +180,5 @@ declare module goog.userAgent {
      *      same as the given version.
      * @deprecated Use goog.userAgent.isDocumentModeOrHigher().
      */
-    export function isDocumentMode(version: number): boolean;
+    function isDocumentMode(version: number): boolean;
 }

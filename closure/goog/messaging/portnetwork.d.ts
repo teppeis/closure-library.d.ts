@@ -3,7 +3,7 @@ declare module goog.messaging {
     /**
      * @interface
      */
-    export interface PortNetwork {
+    interface PortNetwork {
         
         /**
          * Returns a message channel that communicates with the named context. If no
@@ -33,7 +33,7 @@ declare module goog.messaging.PortNetwork {
      * @type {string}
      * @const
      */
-    export var REQUEST_CONNECTION_SERVICE: string;
+    var REQUEST_CONNECTION_SERVICE: string;
 
     /**
      * The name of the service exported by the callers for adding a connection to
@@ -42,5 +42,5 @@ declare module goog.messaging.PortNetwork {
      * @type {string}
      * @const
      */
-    export var GRANT_CONNECTION_SERVICE: string;
+    var GRANT_CONNECTION_SERVICE: string;
 }

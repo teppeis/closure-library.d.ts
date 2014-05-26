@@ -4,7 +4,7 @@ declare module goog.storage.mechanism.mechanismfactory {
      * The key to shared userData storage.
      * @type {string}
      */
-    export var USER_DATA_SHARED_KEY: string;
+    var USER_DATA_SHARED_KEY: string;
 
     /**
      * Returns the best local storage mechanism, or null if unavailable.
@@ -16,7 +16,7 @@ declare module goog.storage.mechanism.mechanismfactory {
      * @param {string=} opt_namespace Restricts the visibility to given namespace.
      * @return {goog.storage.mechanism.IterableMechanism} Created mechanism or null.
      */
-    export function create(opt_namespace?: string): goog.storage.mechanism.IterableMechanism;
+    function create(opt_namespace?: string): goog.storage.mechanism.IterableMechanism;
 
     /**
      * Returns an HTML5 local storage mechanism, or null if unavailable.
@@ -28,7 +28,7 @@ declare module goog.storage.mechanism.mechanismfactory {
      * @param {string=} opt_namespace Restricts the visibility to given namespace.
      * @return {goog.storage.mechanism.IterableMechanism} Created mechanism or null.
      */
-    export function createHTML5LocalStorage(opt_namespace?: string): goog.storage.mechanism.IterableMechanism;
+    function createHTML5LocalStorage(opt_namespace?: string): goog.storage.mechanism.IterableMechanism;
 
     /**
      * Returns an HTML5 session storage mechanism, or null if unavailable.
@@ -40,7 +40,7 @@ declare module goog.storage.mechanism.mechanismfactory {
      * @param {string=} opt_namespace Restricts the visibility to given namespace.
      * @return {goog.storage.mechanism.IterableMechanism} Created mechanism or null.
      */
-    export function createHTML5SessionStorage(opt_namespace?: string): goog.storage.mechanism.IterableMechanism;
+    function createHTML5SessionStorage(opt_namespace?: string): goog.storage.mechanism.IterableMechanism;
 
     /**
      * Returns an IE userData local storage mechanism, or null if unavailable.
@@ -50,5 +50,5 @@ declare module goog.storage.mechanism.mechanismfactory {
      * @param {string=} opt_namespace Restricts the visibility to given namespace.
      * @return {goog.storage.mechanism.IterableMechanism} Created mechanism or null.
      */
-    export function createIEUserData(opt_namespace?: string): goog.storage.mechanism.IterableMechanism;
+    function createIEUserData(opt_namespace?: string): goog.storage.mechanism.IterableMechanism;
 }

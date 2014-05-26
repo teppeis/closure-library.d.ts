@@ -12,7 +12,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Component}
      */
-    export class ScrollFloater extends goog.ui.Component {
+    class ScrollFloater extends goog.ui.Component {
         constructor(opt_parentElement?: Element, opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -78,7 +78,7 @@ declare module goog.ui.ScrollFloater {
      * Events dispatched by this component.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         FLOAT: string;
         DOCK: string;
         PIN: string;
@@ -89,7 +89,7 @@ declare module goog.ui.ScrollFloater {
      * @enum {number}
      * @private
      */
-    export interface FloatMode_ {
+    interface FloatMode_ {
         TOP: number;
         BOTTOM: number;
     }

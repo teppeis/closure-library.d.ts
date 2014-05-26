@@ -9,7 +9,7 @@ declare module goog.graphics.paths {
      * @param {number} n The number of vertices.
      * @return {!goog.graphics.Path} The path.
      */
-    export function createRegularNGon(center: goog.math.Coordinate, vertex: goog.math.Coordinate, n: number): goog.graphics.Path;
+    function createRegularNGon(center: goog.math.Coordinate, vertex: goog.math.Coordinate, n: number): goog.graphics.Path;
 
     /**
      * Defines an arrow.
@@ -21,5 +21,5 @@ declare module goog.graphics.paths {
      *     0 omits the head.
      * @return {!goog.graphics.Path} The path.
      */
-    export function createArrow(a: goog.math.Coordinate, b: goog.math.Coordinate, aHead: number, bHead: number): goog.graphics.Path;
+    function createArrow(a: goog.math.Coordinate, b: goog.math.Coordinate, aHead: number, bHead: number): goog.graphics.Path;
 }

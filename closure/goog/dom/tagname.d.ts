@@ -5,7 +5,7 @@ declare module goog.dom {
      * specifications.
      * @enum {string}
      */
-    export interface TagName {
+    interface TagName {
         A: string;
         ABBR: string;
         ACRONYM: string;

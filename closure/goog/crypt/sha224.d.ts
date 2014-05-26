@@ -8,7 +8,7 @@ declare module goog.crypt {
      * @final
      * @struct
      */
-    export class Sha224 extends goog.crypt.Sha2 {
+    class Sha224 extends goog.crypt.Sha2 {
         constructor();
     }
 }

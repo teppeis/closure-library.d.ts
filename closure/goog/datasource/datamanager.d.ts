@@ -6,7 +6,7 @@ declare module goog.ds {
      * @constructor
      * @final
      */
-    export class DataManager extends goog.ds.DataNode {
+    class DataManager extends goog.ds.DataNode {
         constructor();
         
         /**

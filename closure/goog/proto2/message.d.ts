@@ -6,7 +6,7 @@ declare module goog.proto2 {
      * subclasses are prohibited.
      * @constructor
      */
-    export class Message {
+    class Message {
         constructor();
         
         /**
@@ -294,7 +294,7 @@ declare module goog.proto2.Message {
      *
      * @enum {number}
      */
-    export interface FieldType {
+    interface FieldType {
         DOUBLE: number;
         FLOAT: number;
         INT64: number;

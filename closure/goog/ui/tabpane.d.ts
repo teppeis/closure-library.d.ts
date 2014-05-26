@@ -17,7 +17,7 @@ declare module goog.ui {
      * @see ../demos/tabpane.html
      * @deprecated Use goog.ui.TabBar instead.
      */
-    export class TabPane extends goog.events.EventTarget {
+    class TabPane extends goog.events.EventTarget {
         constructor(el: Element, opt_tabLocation?: goog.ui.TabPane.TabLocation, opt_domHelper?: goog.dom.DomHelper, opt_useMouseDown?: boolean);
         
         /**
@@ -98,7 +98,7 @@ declare module goog.ui {
      * @constructor
      * @final
      */
-    export class TabPaneEvent extends goog.events.Event {
+    class TabPaneEvent extends goog.events.Event {
         constructor(type: string, target: goog.ui.TabPane, page: goog.ui.TabPane.TabPage);
     }
 }
@@ -110,7 +110,7 @@ declare module goog.ui.TabPane {
      *
      * @enum {number}
      */
-    export interface TabLocation {
+    interface TabLocation {
         TOP: number;
         BOTTOM: number;
         LEFT: number;
@@ -128,7 +128,7 @@ declare module goog.ui.TabPane {
      * The first parameter can be omitted.
      * @constructor
      */
-    export class TabPage {
+    class TabPage {
         constructor(opt_el?: Element, opt_title?: Element, opt_domHelper?: goog.dom.DomHelper);
         
         /**

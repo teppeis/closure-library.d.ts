@@ -9,7 +9,7 @@ declare module goog.events {
      * @extends {goog.events.EventTarget}
      * @final
      */
-    export class KeyHandler extends goog.events.EventTarget {
+    class KeyHandler extends goog.events.EventTarget {
         constructor(opt_element?: Element, opt_capture?: boolean);
         
         /**
@@ -58,7 +58,7 @@ declare module goog.events {
      * @extends {goog.events.BrowserEvent}
      * @final
      */
-    export class KeyEvent extends goog.events.BrowserEvent {
+    class KeyEvent extends goog.events.BrowserEvent {
         constructor(keyCode: number, charCode: number, repeat: boolean, browserEvent: Event);
     }
 }
@@ -69,7 +69,7 @@ declare module goog.events.KeyHandler {
      * Enum type for the events fired by the key handler
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         KEY: string;
     }
 }

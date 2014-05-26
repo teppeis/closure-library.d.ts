@@ -11,7 +11,7 @@ declare module goog.soy {
      *     defaults to that provided by {@code goog.dom.getDomHelper()}.
      * @constructor
      */
-    export class Renderer {
+    class Renderer {
         constructor(opt_injectedDataSupplier?: goog.soy.InjectedDataSupplier, opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -131,7 +131,7 @@ declare module goog.soy {
      * An interface for a supplier that provides Soy injected data.
      * @interface
      */
-    export interface InjectedDataSupplier {
+    interface InjectedDataSupplier {
         
         /**
          * Gets the injected data. Implementation may assume that
@@ -149,6 +149,6 @@ declare module goog.soy.Renderer {
     /**
      * @typedef {Array.<{template: string, data: Object, ijData: Object}>}
      */
-    export interface SavedTemplateRender {
+    interface SavedTemplateRender {
     }
 }

@@ -7,7 +7,7 @@ declare module goog.dom.dataset {
      * @param {string} key Key for the custom data attribute.
      * @param {string} value Value for the custom data attribute.
      */
-    export function set(element: Element, key: string, value: string): void;
+    function set(element: Element, key: string, value: string): void;
 
     /**
      * Gets a custom data attribute from an element. The key should be
@@ -16,7 +16,7 @@ declare module goog.dom.dataset {
      * @param {string} key Key for the custom data attribute.
      * @return {?string} The attribute value, if it exists.
      */
-    export function get(element: Element, key: string): string;
+    function get(element: Element, key: string): string;
 
     /**
      * Removes a custom data attribute from an element. The key should be
@@ -24,7 +24,7 @@ declare module goog.dom.dataset {
      * @param {Element} element DOM node to get the custom data attribute from.
      * @param {string} key Key for the custom data attribute.
      */
-    export function remove(element: Element, key: string): void;
+    function remove(element: Element, key: string): void;
 
     /**
      * Checks whether custom data attribute exists on an element. The key should be
@@ -34,7 +34,7 @@ declare module goog.dom.dataset {
      * @param {string} key Key for the custom data attribute.
      * @return {boolean} Whether the attibute exists.
      */
-    export function has(element: Element, key: string): boolean;
+    function has(element: Element, key: string): boolean;
 
     /**
      * Gets all custom data attributes as a string map.  The attribute names will be
@@ -45,5 +45,5 @@ declare module goog.dom.dataset {
      * @return {!Object} The string map containing data attributes and their
      *     respective values.
      */
-    export function getAll(element: Element): Object;
+    function getAll(element: Element): Object;
 }

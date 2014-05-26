@@ -30,7 +30,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Component}
      */
-    export class Control extends goog.ui.Component {
+    class Control extends goog.ui.Component {
         constructor(opt_content?: goog.ui.ControlContent, opt_renderer?: goog.ui.ControlRenderer, opt_domHelper?: goog.dom.DomHelper);
         
         /**

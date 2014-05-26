@@ -6,7 +6,7 @@ declare module goog.ui {
      * @extends {goog.ui.TabRenderer}
      * @final
      */
-    export class RoundedTabRenderer extends goog.ui.TabRenderer {
+    class RoundedTabRenderer extends goog.ui.TabRenderer {
         constructor();
         
         /**

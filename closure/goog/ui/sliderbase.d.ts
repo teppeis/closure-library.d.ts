@@ -8,7 +8,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Component}
      */
-    export class SliderBase extends goog.ui.Component {
+    class SliderBase extends goog.ui.Component {
         constructor(opt_domHelper?: goog.dom.DomHelper, opt_labelFn?: (arg0: number) => string);
         
         /**
@@ -338,7 +338,7 @@ declare module goog.ui.SliderBase {
      * value and extent together; in this case, they can simply be ignored.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         DRAG_VALUE_START: string;
         DRAG_VALUE_END: string;
         DRAG_EXTENT_START: string;
@@ -352,7 +352,7 @@ declare module goog.ui.SliderBase {
      *
      * @enum {string}
      */
-    export interface Orientation {
+    interface Orientation {
         VERTICAL: string;
         HORIZONTAL: string;
     }
@@ -362,7 +362,7 @@ declare module goog.ui.SliderBase {
      * a new value.
      * @interface
      */
-    export interface AnimationFactory {
+    interface AnimationFactory {
         
         /**
          * Creates an additonal animation to play when animating to a new value.

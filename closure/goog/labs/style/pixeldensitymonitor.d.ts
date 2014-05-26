@@ -19,7 +19,7 @@ declare module goog.labs.style {
      * @extends {goog.events.EventTarget}
      * @final
      */
-    export class PixelDensityMonitor extends goog.events.EventTarget {
+    class PixelDensityMonitor extends goog.events.EventTarget {
         constructor(opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -42,7 +42,7 @@ declare module goog.labs.style.PixelDensityMonitor {
      * physical and device pixels are mapped.
      * @enum {number}
      */
-    export interface Density {
+    interface Density {
         NORMAL: number;
         HIGH: number;
     }
@@ -51,7 +51,7 @@ declare module goog.labs.style.PixelDensityMonitor {
      * The events fired by the PixelDensityMonitor.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         CHANGE: string;
     }
 }

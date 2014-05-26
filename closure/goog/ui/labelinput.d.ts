@@ -7,7 +7,7 @@ declare module goog.ui {
      * @extends {goog.ui.Component}
      * @constructor
      */
-    export class LabelInput extends goog.ui.Component {
+    class LabelInput extends goog.ui.Component {
         constructor(opt_label?: string, opt_domHelper?: goog.dom.DomHelper);
         
         /**

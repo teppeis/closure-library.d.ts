@@ -18,7 +18,7 @@ declare module goog.graphics {
      *     differences before the canvas tag was widely supported.  See
      *     http://en.wikipedia.org/wiki/Canvas_element for details.
      */
-    export class CanvasGraphics extends goog.graphics.AbstractGraphics {
+    class CanvasGraphics extends goog.graphics.AbstractGraphics {
         constructor(width: string, height: string, opt_coordWidth?: number, opt_coordHeight?: number, opt_domHelper?: goog.dom.DomHelper);
         
         /**

@@ -4,7 +4,7 @@ declare module goog.net.xpc {
      * Enum used to identify transport types.
      * @enum {number}
      */
-    export interface TransportTypes {
+    interface TransportTypes {
         NATIVE_MESSAGING: number;
         FRAME_ELEMENT_METHOD: number;
         IFRAME_RELAY: number;
@@ -17,7 +17,7 @@ declare module goog.net.xpc {
     /**
      * @enum {number}
      */
-    export interface ChannelStates {
+    interface ChannelStates {
         NOT_CONNECTED: number;
         CONNECTED: number;
         CLOSED: number;
@@ -28,51 +28,51 @@ declare module goog.net.xpc {
      * transport class names for createTransport_() to work.
      * @type {Object}
      */
-    export var TransportNames: Object;
+    var TransportNames: Object;
 
     /**
      * Field names used on configuration object.
      * @type {Object}
      */
-    export var CfgFields: Object;
+    var CfgFields: Object;
 
     /**
      * Config properties that need to be URL sanitized.
      * @type {Array}.<string>
      */
-    export var UriCfgFields: Array<any>;
+    var UriCfgFields: Array<any>;
 
     /**
      * The name of the transport service (used for internal signalling).
      * @type {string}
      * @suppress {underscore|visibility}
      */
-    export var TRANSPORT_SERVICE_: string;
+    var TRANSPORT_SERVICE_: string;
 
     /**
      * Transport signaling message: setup.
      * @type {string}
      */
-    export var SETUP: string;
+    var SETUP: string;
 
     /**
      * Transport signaling message: setup for native transport protocol v2.
      * @type {string}
      */
-    export var SETUP_NTPV2: string;
+    var SETUP_NTPV2: string;
 
     /**
      * Transport signaling message: setup acknowledgement.
      * @type {string}
      * @suppress {underscore|visibility}
      */
-    export var SETUP_ACK_: string;
+    var SETUP_ACK_: string;
 
     /**
      * Transport signaling message: setup acknowledgement.
      * @type {string}
      */
-    export var SETUP_ACK_NTPV2: string;
+    var SETUP_ACK_NTPV2: string;
 
     /**
      * Object holding active channels.
@@ -80,13 +80,13 @@ declare module goog.net.xpc {
      *
      * @type {Object.<string, goog.net.xpc.CrossPageChannel>}
      */
-    export var channels: Object;
+    var channels: Object;
 
     /**
      * The logger.
      * @type {goog.log.Logger}
      */
-    export var logger: goog.log.Logger;
+    var logger: goog.log.Logger;
 
     /**
      * Returns a random string.
@@ -94,5 +94,5 @@ declare module goog.net.xpc {
      * @param {string=} opt_characters The characters used.
      * @return {string} The random string.
      */
-    export function getRandomString(length: number, opt_characters?: string): string;
+    function getRandomString(length: number, opt_characters?: string): string;
 }

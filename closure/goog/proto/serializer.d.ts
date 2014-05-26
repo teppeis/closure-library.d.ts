@@ -6,7 +6,7 @@ declare module goog.proto {
      * @extends {goog.json.Serializer}
      * @final
      */
-    export class Serializer extends goog.json.Serializer {
+    class Serializer extends goog.json.Serializer {
         constructor();
         
         /**

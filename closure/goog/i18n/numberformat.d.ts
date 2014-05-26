@@ -11,7 +11,7 @@ declare module goog.i18n {
      *        goog.i18n.NumberFormat.CurrencyStyle.
      * @constructor
      */
-    export class NumberFormat {
+    class NumberFormat {
         constructor(pattern: number, opt_currency?: string, opt_currencyStyle?: number);
         
         /**
@@ -130,7 +130,7 @@ declare module goog.i18n.NumberFormat {
      * Standard number formatting patterns.
      * @enum {number}
      */
-    export interface Format {
+    interface Format {
         DECIMAL: number;
         SCIENTIFIC: number;
         PERCENT: number;
@@ -143,7 +143,7 @@ declare module goog.i18n.NumberFormat {
      * Currency styles.
      * @enum {number}
      */
-    export interface CurrencyStyle {
+    interface CurrencyStyle {
         LOCAL: number;
         PORTABLE: number;
         GLOBAL: number;
@@ -153,7 +153,7 @@ declare module goog.i18n.NumberFormat {
      * Compacting styles.
      * @enum {number}
      */
-    export interface CompactStyle {
+    interface CompactStyle {
         NONE: number;
         SHORT: number;
         LONG: number;
@@ -167,7 +167,7 @@ declare module goog.i18n.NumberFormat {
      *     divisorBase: number
      * }}
      */
-    export interface CompactNumberUnit {
+    interface CompactNumberUnit {
         prefix: string;
         suffix: string;
         divisorBase: number;

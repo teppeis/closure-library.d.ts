@@ -4,7 +4,7 @@ declare module goog.events {
      * Constants for event names.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         CLICK: string;
         DBLCLICK: string;
         MOUSEDOWN: string;

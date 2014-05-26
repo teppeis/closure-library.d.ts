@@ -12,7 +12,7 @@ declare module goog.ui {
      * @param {Object} item The item that was clicked.
      * @final
      */
-    export class ItemEvent extends goog.events.Event {
+    class ItemEvent extends goog.events.Event {
         constructor(type: string, target: Object, item: Object);
     }
 }

@@ -8,7 +8,7 @@ declare module goog.async {
      *     the provided function.
      * @template THIS
      */
-    export function run<THIS>(callback: () => any, opt_context?: THIS): void;
+    function run<THIS>(callback: () => any, opt_context?: THIS): void;
 }
 
 declare module goog.async.run {
@@ -22,7 +22,7 @@ declare module goog.async.run {
      * @param {function()} fn
      * @param {Object|null|undefined} scope
      */
-    export interface WorkItem_ {
+    interface WorkItem_ {
     }
 
     /**
@@ -30,5 +30,5 @@ declare module goog.async.run {
      * for general use, but for use by entry point handlers to run items ahead of
      * goog.async.nextTick.
      */
-    export function processWorkQueue(): void;
+    function processWorkQueue(): void;
 }

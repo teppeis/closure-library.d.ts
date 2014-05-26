@@ -10,7 +10,7 @@ declare module goog.ui {
      * @constructor
      * @final
      */
-    export class ColorPicker extends goog.ui.Component {
+    class ColorPicker extends goog.ui.Component {
         constructor(opt_domHelper?: goog.dom.DomHelper, opt_colorPalette?: goog.ui.ColorPalette);
         
         /**
@@ -140,7 +140,7 @@ declare module goog.ui.ColorPicker {
      * Constants for event names.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         CHANGE: string;
     }
 }

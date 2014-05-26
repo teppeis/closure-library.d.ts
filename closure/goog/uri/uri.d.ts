@@ -21,7 +21,7 @@ declare module goog {
      *
      * @constructor
      */
-    export class Uri {
+    class Uri {
         constructor(opt_uri?: any, opt_ignoreCase?: boolean);
         
         /**
@@ -404,7 +404,7 @@ declare module goog.Uri {
      * @constructor
      * @final
      */
-    export class QueryData {
+    class QueryData {
         constructor(opt_query?: string, opt_uri?: goog.Uri, opt_ignoreCase?: boolean);
         
         /**

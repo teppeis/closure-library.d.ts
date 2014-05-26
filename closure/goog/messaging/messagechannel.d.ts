@@ -3,7 +3,7 @@ declare module goog.messaging {
     /**
      * @interface
      */
-    export interface MessageChannel {
+    interface MessageChannel {
         
         /**
          * Initiates the channel connection. When this method is called, all the

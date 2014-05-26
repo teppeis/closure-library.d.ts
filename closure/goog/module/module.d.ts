@@ -12,7 +12,7 @@ declare module goog.module {
      * @param {Function} callback This function will be called with the
      *     resolved symbol as the argument once the module is loaded.
      */
-    export function require(module: string, symbol: number, callback: Function): void;
+    function require(module: string, symbol: number, callback: Function): void;
 
     /**
      * Wrapper of goog.module.Loader.provide() for use in modules
@@ -26,7 +26,7 @@ declare module goog.module {
      * @param {Object=} opt_object The object bound to the symbol, or nothing when
      *     all symbols of the module are defined.
      */
-    export function provide(module: string, opt_symbol?: number, opt_object?: Object): void;
+    function provide(module: string, opt_symbol?: number, opt_object?: Object): void;
 
     /**
      * Wrapper of init() so that we only need to export this single
@@ -39,7 +39,7 @@ declare module goog.module {
      *     module name and should return the fully-formed URL to the module file to
      *     load.
      */
-    export function initLoader(urlBase: string, opt_urlFunction?: Function): void;
+    function initLoader(urlBase: string, opt_urlFunction?: Function): void;
 
     /**
      * Produces a function that delegates all its arguments to a
@@ -52,7 +52,7 @@ declare module goog.module {
      * @return {!Function} A function that forwards all its arguments to
      *     the dynamically loaded function specified by module and symbol.
      */
-    export function loaderCall(module: string, symbol: number): Function;
+    function loaderCall(module: string, symbol: number): Function;
 
     /**
      * Requires symbols for multiple modules, and invokes a final callback
@@ -68,5 +68,5 @@ declare module goog.module {
      * @param {Function} finalCb A function that is called when all
      *     required symbols are loaded.
      */
-    export function requireMultipleSymbols(symbolRequests: Array<Object>, finalCb: Function): void;
+    function requireMultipleSymbols(symbolRequests: Array<Object>, finalCb: Function): void;
 }

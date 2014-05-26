@@ -8,7 +8,7 @@ declare module goog.ui.equation {
      * @constructor
      * @final
      */
-    export class ComparisonPalette extends goog.ui.equation.Palette {
+    class ComparisonPalette extends goog.ui.equation.Palette {
         constructor(paletteManager: goog.ui.equation.PaletteManager);
     }
 }

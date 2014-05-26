@@ -7,7 +7,7 @@ declare module goog.labs.testing {
      * @extends {goog.debug.Error}
      * @final
      */
-    export class MatcherError extends goog.debug.Error {
+    class MatcherError extends goog.debug.Error {
         constructor(opt_message?: string);
     }
 
@@ -19,5 +19,5 @@ declare module goog.labs.testing {
      * @param {string=} opt_reason Description of what is asserted.
      *
      */
-    export function assertThat(actual: any, matcher: goog.labs.testing.Matcher, opt_reason?: string): void;
+    function assertThat(actual: any, matcher: goog.labs.testing.Matcher, opt_reason?: string): void;
 }

@@ -11,7 +11,7 @@ declare module goog.proto2 {
      * @extends {goog.proto2.Serializer}
      * @final
      */
-    export class TextFormatSerializer extends goog.proto2.Serializer {
+    class TextFormatSerializer extends goog.proto2.Serializer {
         constructor(opt_ignoreMissingFields?: boolean, opt_useEnumValues?: boolean);
         
         /**
@@ -41,7 +41,7 @@ declare module goog.proto2.TextFormatSerializer {
      * @constructor
      * @private
      */
-    export interface Printer_ {
+    interface Printer_ {
         
         /**
          * @return {string} The contents of the printer.
@@ -79,7 +79,7 @@ declare module goog.proto2.TextFormatSerializer {
      * @constructor
      * @private
      */
-    export interface Tokenizer_ {
+    interface Tokenizer_ {
         
         /**
          * @return {goog.proto2.TextFormatSerializer.Tokenizer_.Token} The current
@@ -100,7 +100,7 @@ declare module goog.proto2.TextFormatSerializer {
      * @constructor
      * @final
      */
-    export class Parser {
+    class Parser {
         constructor();
         
         /**
@@ -127,7 +127,7 @@ declare module goog.proto2.TextFormatSerializer.Tokenizer_ {
      * An enumeration of all the token types.
      * @enum {*}
      */
-    export interface TokenTypes {
+    interface TokenTypes {
         END: any;
         IDENTIFIER: any;
         NUMBER: any;
@@ -149,7 +149,7 @@ declare module goog.proto2.TextFormatSerializer.Tokenizer_ {
      * @typedef {{type: goog.proto2.TextFormatSerializer.Tokenizer_.TokenTypes,
      *            value: ?string}}
      */
-    export interface Token {
+    interface Token {
         type: goog.proto2.TextFormatSerializer.Tokenizer_.TokenTypes;
         value: string;
     }

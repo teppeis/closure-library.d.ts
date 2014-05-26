@@ -9,7 +9,7 @@ declare module goog.structs {
      * @constructor
      * @final
      */
-    export class QuadTree {
+    class QuadTree {
         constructor(minX: number, minY: number, maxX: number, maxY: number);
         
         /**
@@ -108,7 +108,7 @@ declare module goog.structs.QuadTree {
      * Enumeration of node types.
      * @enum {number}
      */
-    export interface NodeType {
+    interface NodeType {
         EMPTY: number;
         LEAF: number;
         POINTER: number;
@@ -124,7 +124,7 @@ declare module goog.structs.QuadTree {
      * @constructor
      * @final
      */
-    export class Node {
+    class Node {
         constructor(x: number, y: number, w: number, h: number, opt_parent?: goog.structs.QuadTree.Node);
         
         /**
@@ -172,7 +172,7 @@ declare module goog.structs.QuadTree {
      * @constructor
      * @final
      */
-    export class Point {
+    class Point {
         constructor(x: number, y: number, opt_value?: any);
     }
 }

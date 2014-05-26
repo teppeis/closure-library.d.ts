@@ -17,7 +17,7 @@ declare module goog.dom.pattern {
      * @constructor
      * @final
      */
-    export class Matcher {
+    class Matcher {
         constructor();
         
         /**

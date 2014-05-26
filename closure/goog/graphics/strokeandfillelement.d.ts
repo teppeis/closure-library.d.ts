@@ -18,7 +18,7 @@ declare module goog.graphics {
      *     differences before the canvas tag was widely supported.  See
      *     http://en.wikipedia.org/wiki/Canvas_element for details.
      */
-    export class StrokeAndFillElement extends goog.graphics.Element {
+    class StrokeAndFillElement extends goog.graphics.Element {
         constructor(element: Element, graphics: goog.graphics.AbstractGraphics, stroke: goog.graphics.Stroke, fill: goog.graphics.Fill);
         
         /**

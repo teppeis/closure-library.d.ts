@@ -6,7 +6,7 @@ declare module goog.crypt {
      * @constructor
      * @param {number=} opt_quality The compression quality. Default 50.
      */
-    export class JpegEncoder {
+    class JpegEncoder {
         constructor(opt_quality?: number);
     }
 }

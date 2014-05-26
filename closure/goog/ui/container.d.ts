@@ -19,7 +19,7 @@ declare module goog.ui {
      * @extends {goog.ui.Component}
      * @constructor
      */
-    export class Container extends goog.ui.Component {
+    class Container extends goog.ui.Component {
         constructor(opt_orientation?: goog.ui.Container.Orientation, opt_renderer?: goog.ui.ContainerRenderer, opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -438,7 +438,7 @@ declare module goog.ui.Container {
      * Container-specific events.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         AFTER_SHOW: string;
         AFTER_HIDE: string;
     }
@@ -447,7 +447,7 @@ declare module goog.ui.Container {
      * Container orientation constants.
      * @enum {string}
      */
-    export interface Orientation {
+    interface Orientation {
         HORIZONTAL: string;
         VERTICAL: string;
     }

@@ -42,7 +42,7 @@ declare module goog.async {
      * @implements {goog.Thenable.<VALUE>}
      * @template VALUE
      */
-    export class Deferred<VALUE> {
+    class Deferred<VALUE> {
         constructor(opt_onCancelFunction?: Function, opt_defaultScope?: Object);
         
         /**
@@ -287,7 +287,7 @@ declare module goog.async.Deferred {
      * @constructor
      * @extends {goog.debug.Error}
      */
-    export class AlreadyCalledError extends goog.debug.Error {
+    class AlreadyCalledError extends goog.debug.Error {
         constructor(deferred: goog.async.Deferred<any>);
     }
 
@@ -298,7 +298,7 @@ declare module goog.async.Deferred {
      * @constructor
      * @extends {goog.debug.Error}
      */
-    export class CanceledError extends goog.debug.Error {
+    class CanceledError extends goog.debug.Error {
         constructor(deferred: goog.async.Deferred<any>);
     }
 
@@ -312,7 +312,7 @@ declare module goog.async.Deferred {
      * @private
      * @struct
      */
-    export interface Error_ {
+    interface Error_ {
         
         /**
          * Actually throws the error and removes it from the list of pending

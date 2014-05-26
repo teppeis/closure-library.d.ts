@@ -8,7 +8,7 @@ declare module goog.i18n {
      *     instance rather than the global symbols.
      * @final
      */
-    export class DateTimeFormat {
+    class DateTimeFormat {
         constructor(pattern: string, opt_dateTimeSymbols?: Object);
         
         /**
@@ -42,7 +42,7 @@ declare module goog.i18n.DateTimeFormat {
      * Enum to identify predefined Date/Time format pattern.
      * @enum {number}
      */
-    export interface Format {
+    interface Format {
         FULL_DATE: number;
         LONG_DATE: number;
         MEDIUM_DATE: number;
@@ -62,7 +62,7 @@ declare module goog.i18n.DateTimeFormat {
      * @enum {number}
      * @private
      */
-    export interface PartTypes_ {
+    interface PartTypes_ {
         QUOTED_STRING: number;
         FIELD: number;
         LITERAL: number;

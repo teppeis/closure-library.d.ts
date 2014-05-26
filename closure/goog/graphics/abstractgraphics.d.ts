@@ -14,7 +14,7 @@ declare module goog.graphics {
      * @constructor
      * @extends {goog.ui.Component}
      */
-    export class AbstractGraphics extends goog.ui.Component {
+    class AbstractGraphics extends goog.ui.Component {
         constructor(width: number, height: number, opt_coordWidth?: number, opt_coordHeight?: number, opt_domHelper?: goog.dom.DomHelper);
         
         /**

@@ -10,7 +10,7 @@ declare module goog.graphics.ext {
      * @extends {goog.graphics.ext.StrokeAndFillElement}
      * @final
      */
-    export class Shape extends goog.graphics.ext.StrokeAndFillElement {
+    class Shape extends goog.graphics.ext.StrokeAndFillElement {
         constructor(group: goog.graphics.ext.Group, path: goog.graphics.ext.Path, opt_autoSize?: boolean);
         
         /**

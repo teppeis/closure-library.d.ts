@@ -19,7 +19,7 @@ declare module goog.ui {
      * @param {goog.dom.DomHelper=} opt_domHelper An optional DOM helper.
      * @constructor
      */
-    export class Zippy extends goog.events.EventTarget {
+    class Zippy extends goog.events.EventTarget {
         constructor(header: Element, opt_content?: Element, opt_expanded?: boolean, opt_expandedHeader?: Element, opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -121,7 +121,7 @@ declare module goog.ui {
      * @constructor
      * @final
      */
-    export class ZippyEvent extends goog.events.Event {
+    class ZippyEvent extends goog.events.Event {
         constructor(type: string, target: goog.ui.Zippy, expanded: boolean);
     }
 }

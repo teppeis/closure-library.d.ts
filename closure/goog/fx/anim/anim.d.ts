@@ -6,7 +6,7 @@ declare module goog.fx.anim {
      *
      * @interface
      */
-    export interface Animated {
+    interface Animated {
         
         /**
          * Function called when a frame is requested for the animation.
@@ -23,25 +23,25 @@ declare module goog.fx.anim {
      * @type {number}
      * @const
      */
-    export var TIMEOUT: number;
+    var TIMEOUT: number;
 
     /**
      * Registers an animation to be cycled on the global timer.
      * @param {goog.fx.anim.Animated} animation The animation to register.
      */
-    export function registerAnimation(animation: goog.fx.anim.Animated): void;
+    function registerAnimation(animation: goog.fx.anim.Animated): void;
 
     /**
      * Removes an animation from the list of animations which are cycled on the
      * global timer.
      * @param {goog.fx.anim.Animated} animation The animation to unregister.
      */
-    export function unregisterAnimation(animation: goog.fx.anim.Animated): void;
+    function unregisterAnimation(animation: goog.fx.anim.Animated): void;
 
     /**
      * Tears down this module. Useful for testing.
      */
-    export function tearDown(): void;
+    function tearDown(): void;
 
     /**
      * Registers an animation window. This allows usage of the timing control API
@@ -52,5 +52,5 @@ declare module goog.fx.anim {
      *
      * @param {Window} animationWindow The window in which to animate elements.
      */
-    export function setAnimationWindow(animationWindow: Window): void;
+    function setAnimationWindow(animationWindow: Window): void;
 }

@@ -5,7 +5,7 @@ declare module goog.uri.utils {
      * @enum {number}
      * @private
      */
-    export interface CharCode_ {
+    interface CharCode_ {
         AMPERSAND: number;
         EQUAL: number;
         HASH: number;
@@ -16,7 +16,7 @@ declare module goog.uri.utils {
      * The index of each URI component in the return value of goog.uri.utils.split.
      * @enum {number}
      */
-    export interface ComponentIndex {
+    interface ComponentIndex {
         SCHEME: number;
         USER_INFO: number;
         DOMAIN: number;
@@ -30,7 +30,7 @@ declare module goog.uri.utils {
      * Standard supported query parameters.
      * @enum {string}
      */
-    export interface StandardQueryParam {
+    interface StandardQueryParam {
         RANDOM: string;
     }
 
@@ -44,7 +44,7 @@ declare module goog.uri.utils {
      *
      * @typedef {*}
      */
-    export interface QueryValue {
+    interface QueryValue {
     }
 
     /**
@@ -68,7 +68,7 @@ declare module goog.uri.utils {
      *
      * @typedef {!Array.<string|goog.uri.utils.QueryValue>}
      */
-    export interface QueryArray {
+    interface QueryArray {
     }
 
     /**
@@ -88,7 +88,7 @@ declare module goog.uri.utils {
      * @param {?string=} opt_fragment The URI-encoded fragment identifier.
      * @return {string} The fully combined URI.
      */
-    export function buildFromEncodedParts(opt_scheme?: string, opt_userInfo?: string, opt_domain?: string, opt_port?: string, opt_path?: string, opt_queryData?: string, opt_fragment?: string): string;
+    function buildFromEncodedParts(opt_scheme?: string, opt_userInfo?: string, opt_domain?: string, opt_port?: string, opt_path?: string, opt_queryData?: string, opt_fragment?: string): string;
 
     /**
      * Splits a URI into its component parts.
@@ -105,14 +105,14 @@ declare module goog.uri.utils {
      *     on the browser's regular expression implementation.  Never null, since
      *     arbitrary strings may still look like path names.
      */
-    export function split(uri: string): Array<string>;
+    function split(uri: string): Array<string>;
 
     /**
      * @param {string} uri The URI to examine.
      * @return {?string} The protocol or scheme, or null if none.  Does not
      *     include trailing colons or slashes.
      */
-    export function getScheme(uri: string): string;
+    function getScheme(uri: string): string;
 
     /**
      * Gets the effective scheme for the URL.  If the URL is relative then the
@@ -120,65 +120,65 @@ declare module goog.uri.utils {
      * @param {string} uri The URI to examine.
      * @return {string} The protocol or scheme, always lower case.
      */
-    export function getEffectiveScheme(uri: string): string;
+    function getEffectiveScheme(uri: string): string;
 
     /**
      * @param {string} uri The URI to examine.
      * @return {?string} The user name still encoded, or null if none.
      */
-    export function getUserInfoEncoded(uri: string): string;
+    function getUserInfoEncoded(uri: string): string;
 
     /**
      * @param {string} uri The URI to examine.
      * @return {?string} The decoded user info, or null if none.
      */
-    export function getUserInfo(uri: string): string;
+    function getUserInfo(uri: string): string;
 
     /**
      * @param {string} uri The URI to examine.
      * @return {?string} The domain name still encoded, or null if none.
      */
-    export function getDomainEncoded(uri: string): string;
+    function getDomainEncoded(uri: string): string;
 
     /**
      * @param {string} uri The URI to examine.
      * @return {?string} The decoded domain, or null if none.
      */
-    export function getDomain(uri: string): string;
+    function getDomain(uri: string): string;
 
     /**
      * @param {string} uri The URI to examine.
      * @return {?number} The port number, or null if none.
      */
-    export function getPort(uri: string): number;
+    function getPort(uri: string): number;
 
     /**
      * @param {string} uri The URI to examine.
      * @return {?string} The path still encoded, or null if none. Includes the
      *     leading slash, if any.
      */
-    export function getPathEncoded(uri: string): string;
+    function getPathEncoded(uri: string): string;
 
     /**
      * @param {string} uri The URI to examine.
      * @return {?string} The decoded path, or null if none.  Includes the leading
      *     slash, if any.
      */
-    export function getPath(uri: string): string;
+    function getPath(uri: string): string;
 
     /**
      * @param {string} uri The URI to examine.
      * @return {?string} The query data still encoded, or null if none.  Does not
      *     include the question mark itself.
      */
-    export function getQueryData(uri: string): string;
+    function getQueryData(uri: string): string;
 
     /**
      * @param {string} uri The URI to examine.
      * @return {?string} The fragment identifier, or null if none.  Does not
      *     include the hash mark itself.
      */
-    export function getFragmentEncoded(uri: string): string;
+    function getFragmentEncoded(uri: string): string;
 
     /**
      * @param {string} uri The URI to examine.
@@ -186,21 +186,21 @@ declare module goog.uri.utils {
      *     Does not include the hash mark itself.
      * @return {string} The URI with the fragment set.
      */
-    export function setFragmentEncoded(uri: string, fragment: string): string;
+    function setFragmentEncoded(uri: string, fragment: string): string;
 
     /**
      * @param {string} uri The URI to examine.
      * @return {?string} The decoded fragment identifier, or null if none.  Does
      *     not include the hash mark.
      */
-    export function getFragment(uri: string): string;
+    function getFragment(uri: string): string;
 
     /**
      * Extracts everything up to the port of the URI.
      * @param {string} uri The URI string.
      * @return {string} Everything up to and including the port.
      */
-    export function getHost(uri: string): string;
+    function getHost(uri: string): string;
 
     /**
      * Extracts the path of the URL and everything after.
@@ -208,14 +208,14 @@ declare module goog.uri.utils {
      * @return {string} The URI, starting at the path and including the query
      *     parameters and fragment identifier.
      */
-    export function getPathAndAfter(uri: string): string;
+    function getPathAndAfter(uri: string): string;
 
     /**
      * Gets the URI with the fragment identifier removed.
      * @param {string} uri The URI to examine.
      * @return {string} Everything preceding the hash mark.
      */
-    export function removeFragment(uri: string): string;
+    function removeFragment(uri: string): string;
 
     /**
      * Ensures that two URI's have the exact same domain, scheme, and port.
@@ -227,7 +227,7 @@ declare module goog.uri.utils {
      * @param {string} uri2 The second URI.
      * @return {boolean} Whether they have the same domain and port.
      */
-    export function haveSameDomain(uri1: string, uri2: string): boolean;
+    function haveSameDomain(uri1: string, uri2: string): boolean;
 
     /**
      * Builds a query data string from a sequence of alternating keys and values.
@@ -238,7 +238,7 @@ declare module goog.uri.utils {
      * @param {number=} opt_startIndex A start offset into the arary, defaults to 0.
      * @return {string} The encoded query string, in the form 'a=1&b=2'.
      */
-    export function buildQueryData(keysAndValues: goog.uri.utils.QueryArray, opt_startIndex?: number): string;
+    function buildQueryData(keysAndValues: goog.uri.utils.QueryArray, opt_startIndex?: number): string;
 
     /**
      * Builds a query data string from a map.
@@ -249,7 +249,7 @@ declare module goog.uri.utils {
      *     are dropped.
      * @return {string} The encoded query string, in the form 'a=1&b=2'.
      */
-    export function buildQueryDataFromMap(map: Object): string;
+    function buildQueryDataFromMap(map: Object): string;
 
     /**
      * Appends URI parameters to an existing URI.
@@ -278,7 +278,7 @@ declare module goog.uri.utils {
      *     An array or argument list conforming to goog.uri.utils.QueryArray.
      * @return {string} The URI with all query parameters added.
      */
-    export function appendParams(uri: string, ...var_args: goog.uri.utils.QueryArray[]): string;
+    function appendParams(uri: string, ...var_args: goog.uri.utils.QueryArray[]): string;
 
     /**
      * Appends query parameters from a map.
@@ -289,7 +289,7 @@ declare module goog.uri.utils {
      *     are dropped.
      * @return {string} The new parameters.
      */
-    export function appendParamsFromMap(uri: string, map: Object): string;
+    function appendParamsFromMap(uri: string, map: Object): string;
 
     /**
      * Appends a single URI parameter.
@@ -304,7 +304,7 @@ declare module goog.uri.utils {
      *     key will be added as a valueless parameter.
      * @return {string} The URI with the query parameter added.
      */
-    export function appendParam(uri: string, key: string, opt_value?: any): string;
+    function appendParam(uri: string, key: string, opt_value?: any): string;
 
     /**
      * Determines if the URI contains a specific key.
@@ -316,7 +316,7 @@ declare module goog.uri.utils {
      * @param {string} keyEncoded The URI-encoded key.  Case-sensitive.
      * @return {boolean} Whether the key is present.
      */
-    export function hasParam(uri: string, keyEncoded: string): boolean;
+    function hasParam(uri: string, keyEncoded: string): boolean;
 
     /**
      * Gets the first value of a query parameter.
@@ -325,7 +325,7 @@ declare module goog.uri.utils {
      * @return {?string} The first value of the parameter (URI-decoded), or null
      *     if the parameter is not found.
      */
-    export function getParamValue(uri: string, keyEncoded: string): string;
+    function getParamValue(uri: string, keyEncoded: string): string;
 
     /**
      * Gets all values of a query parameter.
@@ -334,7 +334,7 @@ declare module goog.uri.utils {
      * @return {!Array.<string>} All URI-decoded values with the given key.
      *     If the key is not found, this will have length 0, but never be null.
      */
-    export function getParamValues(uri: string, keyEncoded: string): Array<string>;
+    function getParamValues(uri: string, keyEncoded: string): Array<string>;
 
     /**
      * Removes all instances of a query parameter.
@@ -342,7 +342,7 @@ declare module goog.uri.utils {
      * @param {string} keyEncoded The URI-encoded key.
      * @return {string} The URI with all instances of the parameter removed.
      */
-    export function removeParam(uri: string, keyEncoded: string): string;
+    function removeParam(uri: string, keyEncoded: string): string;
 
     /**
      * Replaces all existing definitions of a parameter with a single definition.
@@ -358,7 +358,7 @@ declare module goog.uri.utils {
      *     not already to be encoded).
      * @return {string} The URI with the query parameter added.
      */
-    export function setParam(uri: string, keyEncoded: string, value: any): string;
+    function setParam(uri: string, keyEncoded: string, value: any): string;
 
     /**
      * Generates a URI path using a given URI and a path with checks to
@@ -370,7 +370,7 @@ declare module goog.uri.utils {
      * @param {string} path Path to append.
      * @return {string} Updated URI.
      */
-    export function appendPath(baseUri: string, path: string): string;
+    function appendPath(baseUri: string, path: string): string;
 
     /**
      * Replaces the path.
@@ -378,7 +378,7 @@ declare module goog.uri.utils {
      * @param {string} path New path.
      * @return {string} Updated URI.
      */
-    export function setPath(uri: string, path: string): string;
+    function setPath(uri: string, path: string): string;
 
     /**
      * Sets the zx parameter of a URI to a random value.
@@ -386,5 +386,5 @@ declare module goog.uri.utils {
      * @return {string} That URI with the "zx" parameter added or replaced to
      *     contain a random string.
      */
-    export function makeUnique(uri: string): string;
+    function makeUnique(uri: string): string;
 }

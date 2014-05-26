@@ -5,7 +5,7 @@ declare module goog.net {
      * @interface
      * @extends {goog.events.Listenable}
      */
-    export interface NetworkStatusMonitor extends goog.events.Listenable {
+    interface NetworkStatusMonitor extends goog.events.Listenable {
         
         /**
          * @return {boolean} Whether the system is online or otherwise.
@@ -20,7 +20,7 @@ declare module goog.net.NetworkStatusMonitor {
      * Enum for the events dispatched by the OnlineHandler.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         ONLINE: string;
         OFFLINE: string;
     }

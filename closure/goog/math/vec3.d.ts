@@ -13,7 +13,7 @@ declare module goog.math {
      * @constructor
      * @extends {goog.math.Coordinate3}
      */
-    export class Vec3 extends goog.math.Coordinate3 {
+    class Vec3 extends goog.math.Coordinate3 {
         constructor(x: number, y: number, z: number);
         
         /**

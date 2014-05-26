@@ -16,7 +16,7 @@ declare module goog.dom.pattern {
      *  </ol>
      * @enum {number}
      */
-    export interface MatchType {
+    interface MatchType {
         NO_MATCH: number;
         MATCHING: number;
         MATCH: number;
@@ -27,7 +27,7 @@ declare module goog.dom.pattern {
      * Regular expression for breaking text nodes.
      * @type {RegExp}
      */
-    export var BREAKING_TEXTNODE_RE: RegExp;
+    var BREAKING_TEXTNODE_RE: RegExp;
 
     /**
      * Utility function to match a string against either a string or a regular
@@ -38,7 +38,7 @@ declare module goog.dom.pattern {
      * @return {boolean} Whether the strings are equal, or if the string matches
      *     the regular expression.
      */
-    export function matchStringOrRegex(obj: string, str: string): boolean;
+    function matchStringOrRegex(obj: string, str: string): boolean;
 
     /**
      * Utility function to match a DOM attribute against either a string or a
@@ -52,5 +52,5 @@ declare module goog.dom.pattern {
      *     the regular expression.
      * @this {Element} Called using goog.object every on an Element.
      */
-    export function matchStringOrRegexMap(elem: string, index: string, orig: Object): boolean;
+    function matchStringOrRegexMap(elem: string, index: string, orig: Object): boolean;
 }

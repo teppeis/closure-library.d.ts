@@ -8,7 +8,7 @@ declare module goog.structs {
      * @constructor
      * @template K, V
      */
-    export class Map<K, V> {
+    class Map<K, V> {
         constructor(opt_map?: any, ...var_args: any[]);
         
         /**

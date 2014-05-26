@@ -5,7 +5,7 @@ declare module goog.math {
      * @param {number} a  The upper bound for the random integer (exclusive).
      * @return {number} A random integer N such that 0 <= N < a.
      */
-    export function randomInt(a: number): number;
+    function randomInt(a: number): number;
 
     /**
      * Returns a random number greater than or equal to {@code a} and less than
@@ -14,7 +14,7 @@ declare module goog.math {
      * @param {number} b  The upper bound for the random number (exclusive).
      * @return {number} A random number N such that a <= N < b.
      */
-    export function uniformRandom(a: number, b: number): number;
+    function uniformRandom(a: number, b: number): number;
 
     /**
      * Takes a number and clamps it to within the provided bounds.
@@ -24,7 +24,7 @@ declare module goog.math {
      * @return {number} The input number if it is within bounds, or the nearest
      *     number within the bounds.
      */
-    export function clamp(value: number, min: number, max: number): number;
+    function clamp(value: number, min: number, max: number): number;
 
     /**
      * The % operator in JavaScript returns the remainder of a / b, but differs from
@@ -39,7 +39,7 @@ declare module goog.math {
      * @return {number} a % b where the result is between 0 and b (either 0 <= x < b
      *     or b < x <= 0, depending on the sign of b).
      */
-    export function modulo(a: number, b: number): number;
+    function modulo(a: number, b: number): number;
 
     /**
      * Performs linear interpolation between values a and b. Returns the value
@@ -50,7 +50,7 @@ declare module goog.math {
      * @param {number} x The proportion between a and b.
      * @return {number} The interpolated value between a and b.
      */
-    export function lerp(a: number, b: number, x: number): number;
+    function lerp(a: number, b: number, x: number): number;
 
     /**
      * Tests whether the two values are equal to each other, within a certain
@@ -61,7 +61,7 @@ declare module goog.math {
      *     to 0.000001. If specified, should be greater than 0.
      * @return {boolean} Whether {@code a} and {@code b} are nearly equal.
      */
-    export function nearlyEquals(a: number, b: number, opt_tolerance?: number): boolean;
+    function nearlyEquals(a: number, b: number, opt_tolerance?: number): boolean;
 
     /**
      * Normalizes an angle to be in range [0-360). Angles outside this range will
@@ -69,7 +69,7 @@ declare module goog.math {
      * @param {number} angle Angle in degrees.
      * @return {number} Standardized angle.
      */
-    export function standardAngle(angle: number): number;
+    function standardAngle(angle: number): number;
 
     /**
      * Normalizes an angle to be in range [0-2*PI). Angles outside this range will
@@ -77,21 +77,21 @@ declare module goog.math {
      * @param {number} angle Angle in radians.
      * @return {number} Standardized angle.
      */
-    export function standardAngleInRadians(angle: number): number;
+    function standardAngleInRadians(angle: number): number;
 
     /**
      * Converts degrees to radians.
      * @param {number} angleDegrees Angle in degrees.
      * @return {number} Angle in radians.
      */
-    export function toRadians(angleDegrees: number): number;
+    function toRadians(angleDegrees: number): number;
 
     /**
      * Converts radians to degrees.
      * @param {number} angleRadians Angle in radians.
      * @return {number} Angle in degrees.
      */
-    export function toDegrees(angleRadians: number): number;
+    function toDegrees(angleRadians: number): number;
 
     /**
      * For a given angle and radius, finds the X portion of the offset.
@@ -99,7 +99,7 @@ declare module goog.math {
      * @param {number} radius Radius.
      * @return {number} The x-distance for the angle and radius.
      */
-    export function angleDx(degrees: number, radius: number): number;
+    function angleDx(degrees: number, radius: number): number;
 
     /**
      * For a given angle and radius, finds the Y portion of the offset.
@@ -107,7 +107,7 @@ declare module goog.math {
      * @param {number} radius Radius.
      * @return {number} The y-distance for the angle and radius.
      */
-    export function angleDy(degrees: number, radius: number): number;
+    function angleDy(degrees: number, radius: number): number;
 
     /**
      * Computes the angle between two points (x1,y1) and (x2,y2).
@@ -120,7 +120,7 @@ declare module goog.math {
      * @return {number} Standardized angle in degrees of the vector from
      *     x1,y1 to x2,y2.
      */
-    export function angle(x1: number, y1: number, x2: number, y2: number): number;
+    function angle(x1: number, y1: number, x2: number, y2: number): number;
 
     /**
      * Computes the difference between startAngle and endAngle (angles in degrees).
@@ -136,14 +136,14 @@ declare module goog.math {
      *     angleDifference(30, 40) is 10, and angleDifference(40, 30) is -10.
      *     angleDifference(350, 10) is 20, and angleDifference(10, 350) is -20.
      */
-    export function angleDifference(startAngle: number, endAngle: number): number;
+    function angleDifference(startAngle: number, endAngle: number): number;
 
     /**
      * Returns the sign of a number as per the "sign" or "signum" function.
      * @param {number} x The number to take the sign of.
      * @return {number} -1 when negative, 1 when positive, 0 when 0.
      */
-    export function sign(x: number): number;
+    function sign(x: number): number;
 
     /**
      * JavaScript implementation of Longest Common Subsequence problem.
@@ -164,7 +164,7 @@ declare module goog.math {
      *     such that there is no common subsequence with size greater than the
      *     length of the list.
      */
-    export function longestCommonSubsequence(array1: Array<Object>, array2: Array<Object>, opt_compareFn?: Function, opt_collectorFn?: Function): Array<Object>;
+    function longestCommonSubsequence(array1: Array<Object>, array2: Array<Object>, opt_compareFn?: Function, opt_collectorFn?: Function): Array<Object>;
 
     /**
      * Returns the sum of the arguments.
@@ -172,7 +172,7 @@ declare module goog.math {
      * @return {number} The sum of the arguments (0 if no arguments were provided,
      *     {@code NaN} if any of the arguments is not a valid number).
      */
-    export function sum(...var_args: number[]): number;
+    function sum(...var_args: number[]): number;
 
     /**
      * Returns the arithmetic mean of the arguments.
@@ -180,7 +180,7 @@ declare module goog.math {
      * @return {number} The average of the arguments ({@code NaN} if no arguments
      *     were provided or any of the arguments is not a valid number).
      */
-    export function average(...var_args: number[]): number;
+    function average(...var_args: number[]): number;
 
     /**
      * Returns the unbiased sample variance of the arguments. For a definition,
@@ -190,7 +190,7 @@ declare module goog.math {
      *     than two samples were provided, or {@code NaN} if any of the samples is
      *     not a valid number).
      */
-    export function sampleVariance(...var_args: number[]): number;
+    function sampleVariance(...var_args: number[]): number;
 
     /**
      * Returns the sample standard deviation of the arguments.  For a definition of
@@ -201,7 +201,7 @@ declare module goog.math {
      *     than two samples were provided, or {@code NaN} if any of the samples is
      *     not a valid number).
      */
-    export function standardDeviation(...var_args: number[]): number;
+    function standardDeviation(...var_args: number[]): number;
 
     /**
      * Returns whether the supplied number represents an integer, i.e. that is has
@@ -209,14 +209,14 @@ declare module goog.math {
      * @param {number} num The number to test.
      * @return {boolean} Whether {@code num} is an integer.
      */
-    export function isInt(num: number): boolean;
+    function isInt(num: number): boolean;
 
     /**
      * Returns whether the supplied number is finite and not NaN.
      * @param {number} num The number to test.
      * @return {boolean} Whether {@code num} is a finite number.
      */
-    export function isFiniteNumber(num: number): boolean;
+    function isFiniteNumber(num: number): boolean;
 
     /**
      * Returns the precise value of floor(log10(num)).
@@ -231,7 +231,7 @@ declare module goog.math {
      * @return {number} Its logarithm to base 10 rounded down to the nearest
      *     integer if num > 0. -Infinity if num == 0. NaN if num < 0.
      */
-    export function log10Floor(num: number): number;
+    function log10Floor(num: number): number;
 
     /**
      * A tweaked variant of {@code Math.floor} which tolerates if the passed number
@@ -244,7 +244,7 @@ declare module goog.math {
      *     rounding error to tolerate.
      * @return {number} The largest integer less than or equal to {@code num}.
      */
-    export function safeFloor(num: number, opt_epsilon?: number): number;
+    function safeFloor(num: number, opt_epsilon?: number): number;
 
     /**
      * A tweaked variant of {@code Math.ceil}. See {@code goog.math.safeFloor} for
@@ -254,5 +254,5 @@ declare module goog.math {
      *     rounding error to tolerate.
      * @return {number} The smallest integer greater than or equal to {@code num}.
      */
-    export function safeCeil(num: number, opt_epsilon?: number): number;
+    function safeCeil(num: number, opt_epsilon?: number): number;
 }

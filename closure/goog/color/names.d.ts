@@ -6,5 +6,5 @@ declare module goog.color {
      * The keys of this map are the lowercase "readable" names of the colors, while
      * the values are the "hex" values.
      */
-    export var names: any;
+    var names: any;
 }

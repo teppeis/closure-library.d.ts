@@ -4,7 +4,7 @@ declare module goog.debug {
      * Max length of stack to try and output
      * @type {number}
      */
-    export var MAX_STACK_DEPTH: number;
+    var MAX_STACK_DEPTH: number;
 
     /**
      * Catches onerror events fired by windows and similar objects.
@@ -14,7 +14,7 @@ declare module goog.debug {
      *    browser.
      * @param {Object=} opt_target Object that fires onerror events.
      */
-    export function catchErrors(logFunc: (arg0: Object) => any, opt_cancel?: boolean, opt_target?: Object): void;
+    function catchErrors(logFunc: (arg0: Object) => any, opt_cancel?: boolean, opt_target?: Object): void;
 
     /**
      * Creates a string representing an object and all its properties.
@@ -23,7 +23,7 @@ declare module goog.debug {
      *     default is false.
      * @return {string} The string representation of {@code obj}.
      */
-    export function expose(obj: Object, opt_showFn?: boolean): string;
+    function expose(obj: Object, opt_showFn?: boolean): string;
 
     /**
      * Creates a string representing a given primitive or object, and for an
@@ -36,14 +36,14 @@ declare module goog.debug {
      *     default, functions are omitted).
      * @return {string} A string representation of {@code obj}.
      */
-    export function deepExpose(obj: any, opt_showFn?: boolean): string;
+    function deepExpose(obj: any, opt_showFn?: boolean): string;
 
     /**
      * Recursively outputs a nested array as a string.
      * @param {Array} arr The array.
      * @return {string} String representing nested array.
      */
-    export function exposeArray(arr: Array<any>): string;
+    function exposeArray(arr: Array<any>): string;
 
     /**
      * Exposes an exception that has been caught by a try...catch and outputs the
@@ -52,14 +52,14 @@ declare module goog.debug {
      * @param {Function=} opt_fn Optional function to start stack trace from.
      * @return {string} Details of exception.
      */
-    export function exposeException(err: Object, opt_fn?: Function): string;
+    function exposeException(err: Object, opt_fn?: Function): string;
 
     /**
      * Normalizes the error/exception object between browsers.
      * @param {Object} err Raw error object.
      * @return {!Object} Normalized error object.
      */
-    export function normalizeErrorObject(err: Object): Object;
+    function normalizeErrorObject(err: Object): Object;
 
     /**
      * Converts an object to an Error if it's a String,
@@ -72,7 +72,7 @@ declare module goog.debug {
      *     which is enhanced and returned.  Otherwise err itself is enhanced
      *     and returned.
      */
-    export function enhanceError(err: Error, opt_message?: string): Error;
+    function enhanceError(err: Error, opt_message?: string): Error;
 
     /**
      * Gets the current stack trace. Simple and iterative - doesn't worry about
@@ -82,7 +82,7 @@ declare module goog.debug {
      *     stack, separated by \n.
      * @suppress {es5Strict}
      */
-    export function getStacktraceSimple(opt_depth?: number): string;
+    function getStacktraceSimple(opt_depth?: number): string;
 
     /**
      * Gets the current stack trace, either starting from the caller or starting
@@ -92,21 +92,21 @@ declare module goog.debug {
      * @return {string} Stack trace.
      * @suppress {es5Strict}
      */
-    export function getStacktrace(opt_fn?: Function): string;
+    function getStacktrace(opt_fn?: Function): string;
 
     /**
      * Set a custom function name resolver.
      * @param {function(Function): string} resolver Resolves functions to their
      *     names.
      */
-    export function setFunctionResolver(resolver: (arg0: Function) => string): void;
+    function setFunctionResolver(resolver: (arg0: Function) => string): void;
 
     /**
      * Gets a function name
      * @param {Function} fn Function to get name of.
      * @return {string} Function's name.
      */
-    export function getFunctionName(fn: Function): string;
+    function getFunctionName(fn: Function): string;
 
     /**
      * Makes whitespace visible by replacing it with printable characters.
@@ -115,5 +115,5 @@ declare module goog.debug {
      * @param {string} string whose whitespace needs to be made visible.
      * @return {string} string whose whitespace is made visible.
      */
-    export function makeWhitespaceVisible(string: string): string;
+    function makeWhitespaceVisible(string: string): string;
 }

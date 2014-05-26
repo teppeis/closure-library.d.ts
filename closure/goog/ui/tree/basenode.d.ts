@@ -11,7 +11,7 @@ declare module goog.ui.tree {
      * @constructor
      * @extends {goog.ui.Component}
      */
-    export class BaseNode extends goog.ui.Component {
+    class BaseNode extends goog.ui.Component {
         constructor(html: string, opt_config?: Object, opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -492,7 +492,7 @@ declare module goog.ui.tree.BaseNode {
      * The event types dispatched by this class.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         BEFORE_EXPAND: string;
         EXPAND: string;
         BEFORE_COLLAPSE: string;

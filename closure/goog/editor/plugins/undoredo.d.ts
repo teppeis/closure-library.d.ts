@@ -11,7 +11,7 @@ declare module goog.editor.plugins {
      * @constructor
      * @extends {goog.editor.Plugin}
      */
-    export class UndoRedo extends goog.editor.Plugin {
+    class UndoRedo extends goog.editor.Plugin {
         constructor(opt_manager?: goog.editor.plugins.UndoRedoManager);
         
         /**
@@ -107,7 +107,7 @@ declare module goog.editor.plugins.UndoRedo {
      * Commands implemented by this plugin.
      * @enum {string}
      */
-    export interface COMMAND {
+    interface COMMAND {
         UNDO: string;
         REDO: string;
     }
@@ -125,7 +125,7 @@ declare module goog.editor.plugins.UndoRedo {
      * @constructor
      * @extends {goog.editor.plugins.UndoRedoState}
      */
-    export interface UndoState_ extends goog.editor.plugins.UndoRedoState {
+    interface UndoState_ extends goog.editor.plugins.UndoRedoState {
         
         /**
          * Updates the undo portion of this state. Should only be used to update the
@@ -170,7 +170,7 @@ declare module goog.editor.plugins.UndoRedo {
      * @private
      * @constructor
      */
-    export interface CursorPosition_ {
+    interface CursorPosition_ {
         
         /**
          * @return {boolean} Whether this object is valid.

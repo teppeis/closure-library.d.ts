@@ -28,7 +28,7 @@ declare module goog.net {
      * @extends {goog.events.EventTarget}
      * @final
      */
-    export class ImageLoader extends goog.events.EventTarget {
+    class ImageLoader extends goog.events.EventTarget {
         constructor(opt_parent?: Element);
         
         /**
@@ -72,7 +72,7 @@ declare module goog.net.ImageLoader {
      * @see https://developer.mozilla.org/en-US/docs/HTML/CORS_Enabled_Image
      * @enum {string}
      */
-    export interface CorsRequestType {
+    interface CorsRequestType {
         ANONYMOUS: string;
         USE_CREDENTIALS: string;
     }
@@ -86,7 +86,7 @@ declare module goog.net.ImageLoader {
      * }}
      * @private
      */
-    export interface ImageRequest_ {
+    interface ImageRequest_ {
         src: string;
         corsRequestType: goog.net.ImageLoader.CorsRequestType;
     }

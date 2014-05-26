@@ -10,7 +10,7 @@ declare module goog.ui {
      * @extends {goog.ui.Component}
      * @constructor
      */
-    export class HsvPalette extends goog.ui.Component {
+    class HsvPalette extends goog.ui.Component {
         constructor(opt_domHelper?: goog.dom.DomHelper, opt_color?: string, opt_class?: string);
         
         /**

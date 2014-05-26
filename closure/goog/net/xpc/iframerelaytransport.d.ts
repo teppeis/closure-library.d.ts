@@ -14,7 +14,7 @@ declare module goog.net.xpc {
      * @extends {goog.net.xpc.Transport}
      * @final
      */
-    export class IframeRelayTransport extends goog.net.xpc.Transport {
+    class IframeRelayTransport extends goog.net.xpc.Transport {
         constructor(channel: goog.net.xpc.CrossPageChannel, opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -47,7 +47,7 @@ declare module goog.net.xpc.IframeRelayTransport {
     /**
      * @typedef {{fragments: !Array.<string>, received: number, expected: number}}
      */
-    export interface FragmentInfo {
+    interface FragmentInfo {
         fragments: Array<string>;
         received: number;
         expected: number;

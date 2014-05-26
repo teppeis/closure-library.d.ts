@@ -9,7 +9,7 @@ declare module goog.fx.css3 {
      * @param {number} endOpacity Ending opacity.
      * @return {!goog.fx.css3.Transition} The transition object.
      */
-    export function fade(element: Element, duration: number, timing: string, startOpacity: number, endOpacity: number): goog.fx.css3.Transition;
+    function fade(element: Element, duration: number, timing: string, startOpacity: number, endOpacity: number): goog.fx.css3.Transition;
 
     /**
      * Creates a transition to fade in the element.
@@ -17,7 +17,7 @@ declare module goog.fx.css3 {
      * @param {number} duration Duration in seconds.
      * @return {!goog.fx.css3.Transition} The transition object.
      */
-    export function fadeIn(element: Element, duration: number): goog.fx.css3.Transition;
+    function fadeIn(element: Element, duration: number): goog.fx.css3.Transition;
 
     /**
      * Creates a transition to fade out the element.
@@ -25,5 +25,5 @@ declare module goog.fx.css3 {
      * @param {number} duration Duration in seconds.
      * @return {!goog.fx.css3.Transition} The transition object.
      */
-    export function fadeOut(element: Element, duration: number): goog.fx.css3.Transition;
+    function fadeOut(element: Element, duration: number): goog.fx.css3.Transition;
 }

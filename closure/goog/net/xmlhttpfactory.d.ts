@@ -4,7 +4,7 @@ declare module goog.net {
      * Abstract base class for an XmlHttpRequest factory.
      * @constructor
      */
-    export class XmlHttpFactory {
+    class XmlHttpFactory {
         constructor();
         
         /**

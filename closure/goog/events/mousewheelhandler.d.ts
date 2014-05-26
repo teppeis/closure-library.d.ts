@@ -10,7 +10,7 @@ declare module goog.events {
      * @constructor
      * @extends {goog.events.EventTarget}
      */
-    export class MouseWheelHandler extends goog.events.EventTarget {
+    class MouseWheelHandler extends goog.events.EventTarget {
         constructor(element: Element, opt_capture?: boolean);
         
         /**
@@ -46,7 +46,7 @@ declare module goog.events {
      * @extends {goog.events.BrowserEvent}
      * @final
      */
-    export class MouseWheelEvent extends goog.events.BrowserEvent {
+    class MouseWheelEvent extends goog.events.BrowserEvent {
         constructor(detail: number, browserEvent: Event, deltaX: number, deltaY: number);
     }
 }
@@ -57,7 +57,7 @@ declare module goog.events.MouseWheelHandler {
      * Enum type for the events fired by the mouse wheel handler.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         MOUSEWHEEL: string;
     }
 }

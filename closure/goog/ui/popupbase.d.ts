@@ -10,7 +10,7 @@ declare module goog.ui {
      * @param {Element=} opt_element A DOM element for the popup.
      * @param {goog.ui.PopupBase.Type=} opt_type Type of popup.
      */
-    export class PopupBase extends goog.events.EventTarget {
+    class PopupBase extends goog.events.EventTarget {
         constructor(opt_element?: Element, opt_type?: goog.ui.PopupBase.Type);
         
         /**
@@ -273,7 +273,7 @@ declare module goog.ui.PopupBase {
      * Constants for type of Popup
      * @enum {string}
      */
-    export interface Type {
+    interface Type {
         TOGGLE_DISPLAY: string;
         MOVE_OFFSCREEN: string;
     }
@@ -283,7 +283,7 @@ declare module goog.ui.PopupBase {
      *
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         BEFORE_SHOW: string;
         SHOW: string;
         BEFORE_HIDE: string;

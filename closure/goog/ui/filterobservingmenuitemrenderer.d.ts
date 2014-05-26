@@ -9,7 +9,7 @@ declare module goog.ui {
      * @extends {goog.ui.MenuItemRenderer}
      * @final
      */
-    export class FilterObservingMenuItemRenderer extends goog.ui.MenuItemRenderer {
+    class FilterObservingMenuItemRenderer extends goog.ui.MenuItemRenderer {
         constructor();
         
         /**

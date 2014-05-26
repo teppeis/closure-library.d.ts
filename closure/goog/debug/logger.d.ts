@@ -9,7 +9,7 @@ declare module goog.debug {
      *
      * @typedef {string|function(): string}
      */
-    export interface Loggable {
+    interface Loggable {
     }
 
     /**
@@ -29,7 +29,7 @@ declare module goog.debug {
      * @param {string} name The name of the Logger.
      * @final
      */
-    export class Logger {
+    class Logger {
         constructor(name: string);
         
         /**
@@ -263,7 +263,7 @@ declare module goog.debug.Logger {
      * @constructor
      * @final
      */
-    export class Level {
+    class Level {
         constructor(name: string, value: number);
         
         /**
@@ -370,14 +370,14 @@ declare module goog.debug.LogManager {
     /**
      * Initializes the LogManager if not already initialized.
      */
-    export function initialize(): void;
+    function initialize(): void;
 
     /**
      * Returns all the loggers.
      * @return {!Object.<string, !goog.debug.Logger>} Map of logger names to logger
      *     objects.
      */
-    export function getLoggers(): Object;
+    function getLoggers(): Object;
 
     /**
      * Returns the root of the logger tree namespace, the logger with the empty
@@ -385,7 +385,7 @@ declare module goog.debug.LogManager {
      *
      * @return {!goog.debug.Logger} The root logger.
      */
-    export function getRoot(): goog.debug.Logger;
+    function getRoot(): goog.debug.Logger;
 
     /**
      * Finds a named logger.
@@ -395,7 +395,7 @@ declare module goog.debug.LogManager {
      * subsystem, such as goog.net.BrowserChannel.
      * @return {!goog.debug.Logger} The named logger.
      */
-    export function getLogger(name: string): goog.debug.Logger;
+    function getLogger(name: string): goog.debug.Logger;
 
     /**
      * Creates a function that can be passed to goog.debug.catchErrors. The function
@@ -404,5 +404,5 @@ declare module goog.debug.LogManager {
      *     Defaults to the root logger.
      * @return {function(Object)} The created function.
      */
-    export function createFunctionForCatchErrors(opt_logger?: goog.debug.Logger): (arg0: Object) => any;
+    function createFunctionForCatchErrors(opt_logger?: goog.debug.Logger): (arg0: Object) => any;
 }

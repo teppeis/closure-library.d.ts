@@ -12,7 +12,7 @@ declare module goog.events {
      * @extends {goog.events.EventTarget}
      * @final
      */
-    export class FileDropHandler extends goog.events.EventTarget {
+    class FileDropHandler extends goog.events.EventTarget {
         constructor(element: Element, opt_preventDropOutside?: boolean);
     }
 }
@@ -23,7 +23,7 @@ declare module goog.events.FileDropHandler {
      * The types of events fired by this class.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         DROP: string;
     }
 }

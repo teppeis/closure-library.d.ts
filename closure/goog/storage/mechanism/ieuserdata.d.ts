@@ -10,7 +10,7 @@ declare module goog.storage.mechanism {
      * @extends {goog.storage.mechanism.IterableMechanism}
      * @final
      */
-    export class IEUserData extends goog.storage.mechanism.IterableMechanism {
+    class IEUserData extends goog.storage.mechanism.IterableMechanism {
         constructor(storageKey: string, opt_storageNodeId?: string);
         
         /**

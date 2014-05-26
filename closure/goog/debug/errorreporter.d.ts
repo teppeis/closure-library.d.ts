@@ -16,7 +16,7 @@ declare module goog.debug {
      * @constructor
      * @extends {goog.events.EventTarget}
      */
-    export class ErrorReporter extends goog.events.EventTarget {
+    class ErrorReporter extends goog.events.EventTarget {
         constructor(handlerUrl: string, opt_contextProvider?: (arg0: Error, arg1: Object) => any, opt_noAutoProtect?: boolean);
         
         /**
@@ -131,7 +131,7 @@ declare module goog.debug.ErrorReporter {
      * @extends {goog.events.Event}
      * @final
      */
-    export class ExceptionEvent extends goog.events.Event {
+    class ExceptionEvent extends goog.events.Event {
         constructor(error: Error, context: Object);
         
         /**

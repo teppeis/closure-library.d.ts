@@ -4,7 +4,7 @@ declare module goog.a11y.aria {
      * ARIA states and properties.
      * @enum {string}
      */
-    export interface State {
+    interface State {
         ACTIVEDESCENDANT: string;
         ATOMIC: string;
         AUTOCOMPLETE: string;
@@ -46,7 +46,7 @@ declare module goog.a11y.aria {
      * ARIA state values for AutoCompleteValues.
      * @enum {string}
      */
-    export interface AutoCompleteValues {
+    interface AutoCompleteValues {
         INLINE: string;
         LIST: string;
         BOTH: string;
@@ -57,7 +57,7 @@ declare module goog.a11y.aria {
      * ARIA state values for DropEffectValues.
      * @enum {string}
      */
-    export interface DropEffectValues {
+    interface DropEffectValues {
         COPY: string;
         MOVE: string;
         LINK: string;
@@ -70,7 +70,7 @@ declare module goog.a11y.aria {
      * ARIA state values for LivePriority.
      * @enum {string}
      */
-    export interface LivePriority {
+    interface LivePriority {
         OFF: string;
         POLITE: string;
         ASSERTIVE: string;
@@ -80,7 +80,7 @@ declare module goog.a11y.aria {
      * ARIA state values for OrientationValues.
      * @enum {string}
      */
-    export interface OrientationValues {
+    interface OrientationValues {
         VERTICAL: string;
         HORIZONTAL: string;
     }
@@ -89,7 +89,7 @@ declare module goog.a11y.aria {
      * ARIA state values for RelevantValues.
      * @enum {string}
      */
-    export interface RelevantValues {
+    interface RelevantValues {
         ADDITIONS: string;
         REMOVALS: string;
         TEXT: string;
@@ -100,7 +100,7 @@ declare module goog.a11y.aria {
      * ARIA state values for SortValues.
      * @enum {string}
      */
-    export interface SortValues {
+    interface SortValues {
         ASCENDING: string;
         DESCENDING: string;
         NONE: string;
@@ -111,7 +111,7 @@ declare module goog.a11y.aria {
      * ARIA state values for CheckedValues.
      * @enum {string}
      */
-    export interface CheckedValues {
+    interface CheckedValues {
         TRUE: string;
         FALSE: string;
         MIXED: string;
@@ -122,7 +122,7 @@ declare module goog.a11y.aria {
      * ARIA state values for ExpandedValues.
      * @enum {string}
      */
-    export interface ExpandedValues {
+    interface ExpandedValues {
         TRUE: string;
         FALSE: string;
         UNDEFINED: string;
@@ -132,7 +132,7 @@ declare module goog.a11y.aria {
      * ARIA state values for GrabbedValues.
      * @enum {string}
      */
-    export interface GrabbedValues {
+    interface GrabbedValues {
         TRUE: string;
         FALSE: string;
         UNDEFINED: string;
@@ -142,7 +142,7 @@ declare module goog.a11y.aria {
      * ARIA state values for InvalidValues.
      * @enum {string}
      */
-    export interface InvalidValues {
+    interface InvalidValues {
         FALSE: string;
         TRUE: string;
         GRAMMAR: string;
@@ -153,7 +153,7 @@ declare module goog.a11y.aria {
      * ARIA state values for PressedValues.
      * @enum {string}
      */
-    export interface PressedValues {
+    interface PressedValues {
         TRUE: string;
         FALSE: string;
         MIXED: string;
@@ -164,7 +164,7 @@ declare module goog.a11y.aria {
      * ARIA state values for SelectedValues.
      * @enum {string}
      */
-    export interface SelectedValues {
+    interface SelectedValues {
         TRUE: string;
         FALSE: string;
         UNDEFINED: string;

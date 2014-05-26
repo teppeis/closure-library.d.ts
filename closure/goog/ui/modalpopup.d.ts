@@ -23,7 +23,7 @@ declare module goog.ui {
      *     goog.ui.Component} for semantics.
      * @extends {goog.ui.Component}
      */
-    export class ModalPopup extends goog.ui.Component {
+    class ModalPopup extends goog.ui.Component {
         constructor(opt_useIframeMask?: boolean, opt_domHelper?: goog.dom.DomHelper);
         
         /**

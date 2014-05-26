@@ -12,7 +12,7 @@ declare module goog.events {
      * @implements {goog.events.ListenableKey}
      * @constructor
      */
-    export class Listener {
+    class Listener {
         constructor(listener: Function, proxy: Function, src: EventTarget, type: string, capture: boolean, opt_handler?: Object);
         
         /**

@@ -12,7 +12,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Control}
      */
-    export class Button extends goog.ui.Control {
+    class Button extends goog.ui.Control {
         constructor(opt_content?: goog.ui.ControlContent, opt_renderer?: goog.ui.ButtonRenderer, opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -89,5 +89,5 @@ declare module goog.ui.Button {
      * @enum {number}
      * @deprecated use {@link goog.ui.ButtonSide} instead.
      */
-    export interface Side extends goog.ui.ButtonSide {}
+    interface Side extends goog.ui.ButtonSide {}
 }

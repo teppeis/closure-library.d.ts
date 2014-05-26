@@ -18,7 +18,7 @@ declare module goog.net {
      *
      * @interface
      */
-    export interface WebChannelTransport {
+    interface WebChannelTransport {
         
         /**
          * Create a new WebChannel instance.

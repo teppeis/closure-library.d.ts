@@ -45,7 +45,7 @@ declare module goog {
      * @constructor
      * @extends {goog.events.EventTarget}
      */
-    export class History extends goog.events.EventTarget {
+    class History extends goog.events.EventTarget {
         constructor(opt_invisible?: boolean, opt_blankPageUrl?: string, opt_input?: HTMLInputElement, opt_iframe?: HTMLIFrameElement);
         
         /**
@@ -131,7 +131,7 @@ declare module goog.History {
      * Types of polling. The values are in ms of the polling interval.
      * @enum {number}
      */
-    export interface PollingType {
+    interface PollingType {
         NORMAL: number;
         LONG: number;
     }
@@ -141,7 +141,7 @@ declare module goog.History {
      * @enum {string}
      * @deprecated Use goog.history.EventType.
      */
-    export interface EventType extends goog.history.EventType {}
+    interface EventType extends goog.history.EventType {}
 
     /**
      * Constant for the history change event type.
@@ -151,7 +151,7 @@ declare module goog.History {
      * @deprecated Use goog.history.Event.
      * @final
      */
-    export class Event extends goog.events.Event {
+    class Event extends goog.events.Event {
         constructor(token: string);
     }
 }

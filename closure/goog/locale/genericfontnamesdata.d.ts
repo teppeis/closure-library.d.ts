@@ -5,5 +5,5 @@ declare module goog.locale {
      * font name fallback list).
      * @type {Object}
      */
-    export var genericFontNamesData: Object;
+    var genericFontNamesData: Object;
 }

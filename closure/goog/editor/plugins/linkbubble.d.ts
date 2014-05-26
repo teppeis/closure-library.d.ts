@@ -7,7 +7,7 @@ declare module goog.editor.plugins {
      * @constructor
      * @extends {goog.editor.plugins.AbstractBubblePlugin}
      */
-    export class LinkBubble extends goog.editor.plugins.AbstractBubblePlugin {
+    class LinkBubble extends goog.editor.plugins.AbstractBubblePlugin {
         constructor(...var_args: goog.editor.plugins.LinkBubble.Action[]);
         
         /**
@@ -101,7 +101,7 @@ declare module goog.editor.plugins.LinkBubble {
      * @constructor
      * @final
      */
-    export class Action {
+    class Action {
         constructor(spanId: string, linkId: string, message: string, toShowFn: (arg0: string) => boolean, actionFn: (arg0: string) => void);
     }
 }

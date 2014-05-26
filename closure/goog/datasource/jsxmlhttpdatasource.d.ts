@@ -15,7 +15,7 @@ declare module goog.ds {
      * @constructor
      * @final
      */
-    export class JsXmlHttpDataSource extends goog.ds.FastDataNode {
+    class JsXmlHttpDataSource extends goog.ds.FastDataNode {
         constructor(uri: any, name: string, opt_startText?: string, opt_endText?: string, opt_usePost?: boolean);
         
         /**

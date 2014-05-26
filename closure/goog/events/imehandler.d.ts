@@ -7,7 +7,7 @@ declare module goog.events {
      * @constructor
      * @final
      */
-    export class ImeHandler extends goog.events.EventTarget {
+    class ImeHandler extends goog.events.EventTarget {
         constructor(el: Element);
         
         /**
@@ -30,7 +30,7 @@ declare module goog.events.ImeHandler {
      * about whether they were fired before or after the event in question.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         START: string;
         UPDATE: string;
         END: string;
@@ -44,7 +44,7 @@ declare module goog.events.ImeHandler {
      * @extends {goog.events.Event}
      * @final
      */
-    export class Event extends goog.events.Event {
+    class Event extends goog.events.Event {
         constructor(type: goog.events.ImeHandler.EventType, reason: goog.events.BrowserEvent);
     }
 }

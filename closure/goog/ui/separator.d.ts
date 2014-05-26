@@ -11,7 +11,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Control}
      */
-    export class Separator extends goog.ui.Control {
+    class Separator extends goog.ui.Control {
         constructor(opt_renderer?: goog.ui.MenuSeparatorRenderer, opt_domHelper?: goog.dom.DomHelper);
     }
 }

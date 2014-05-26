@@ -19,7 +19,7 @@ declare module goog.labs {
      * @implements {goog.Thenable.<TYPE>}
      * @template TYPE,RESOLVER_CONTEXT
      */
-    export class Promise<TYPE, RESOLVER_CONTEXT> {
+    class Promise<TYPE, RESOLVER_CONTEXT> {
         constructor(resolver: (arg0: (arg0: TYPE) => any, arg1: (arg0: any) => any) => void, opt_context?: RESOLVER_CONTEXT);
     }
 
@@ -31,6 +31,6 @@ declare module goog.labs {
      * @interface
      * @template TYPE
      */
-    export interface Resolver<TYPE> {
+    interface Resolver<TYPE> {
     }
 }

@@ -9,7 +9,7 @@ declare module goog.db {
      * @extends {goog.events.EventTarget}
      * @final
      */
-    export class Cursor extends goog.events.EventTarget {
+    class Cursor extends goog.events.EventTarget {
         constructor();
         
         /**
@@ -77,7 +77,7 @@ declare module goog.db.Cursor {
      *
      * @enum {string}
      */
-    export interface Direction {
+    interface Direction {
         NEXT: string;
         NEXT_NO_DUPLICATE: string;
         PREV: string;
@@ -91,7 +91,7 @@ declare module goog.db.Cursor {
      *
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         COMPLETE: string;
         ERROR: string;
         NEW_DATA: string;

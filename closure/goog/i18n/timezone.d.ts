@@ -17,7 +17,7 @@ declare module goog.i18n {
      * @constructor
      * @final
      */
-    export class TimeZone {
+    class TimeZone {
         constructor();
         
         /**
@@ -123,7 +123,7 @@ declare module goog.i18n.TimeZone {
      * Indices into the array of time zone names.
      * @enum {number}
      */
-    export interface NameType {
+    interface NameType {
         STD_SHORT_NAME: number;
         STD_LONG_NAME: number;
         DLT_SHORT_NAME: number;

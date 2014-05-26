@@ -6,7 +6,7 @@ declare module goog.dom.pattern {
      * @constructor
      * @extends {goog.dom.pattern.AbstractPattern}
      */
-    export class AllChildren extends goog.dom.pattern.AbstractPattern {
+    class AllChildren extends goog.dom.pattern.AbstractPattern {
         constructor();
         
         /**

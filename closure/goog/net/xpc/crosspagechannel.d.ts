@@ -10,7 +10,7 @@ declare module goog.net.xpc {
      * @constructor
      * @extends {goog.messaging.AbstractChannel}
      */
-    export class CrossPageChannel extends goog.messaging.AbstractChannel {
+    class CrossPageChannel extends goog.messaging.AbstractChannel {
         constructor(cfg: Object, opt_domHelper?: goog.dom.DomHelper);
         
         /**

@@ -8,7 +8,7 @@ declare module goog.ui.equation {
      * @extends {goog.ui.Dialog}
      * @final
      */
-    export class EquationEditorDialog extends goog.ui.Dialog {
+    class EquationEditorDialog extends goog.ui.Dialog {
         constructor(opt_equation?: string);
         
         /**

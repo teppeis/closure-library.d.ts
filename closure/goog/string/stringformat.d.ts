@@ -9,5 +9,5 @@ declare module goog.string$ {
      * @param {...string|number} var_args Values formatString is to be filled with.
      * @return {string} Formatted string.
      */
-    export function format(formatString: string, ...var_args: string[]): string;
+    function format(formatString: string, ...var_args: string[]): string;
 }

@@ -11,7 +11,7 @@ declare module goog.ui.tree {
      * @constructor
      * @extends {goog.ui.tree.BaseNode}
      */
-    export class TreeControl extends goog.ui.tree.BaseNode {
+    class TreeControl extends goog.ui.tree.BaseNode {
         constructor(html: string, opt_config?: Object, opt_domHelper?: goog.dom.DomHelper);
         
         /**

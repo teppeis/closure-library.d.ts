@@ -5,7 +5,7 @@ declare module goog.fs {
      *
      * @interface
      */
-    export interface FileSystem {
+    interface FileSystem {
         
         /**
          * @return {string} The name of the filesystem.

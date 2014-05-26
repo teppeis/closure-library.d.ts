@@ -5,6 +5,6 @@ declare module goog.ui {
      * of {@link goog.ui.Control}s.
      * @typedef {string|Node|Array.<Node>|NodeList}
      */
-    export interface ControlContent {
+    interface ControlContent {
     }
 }

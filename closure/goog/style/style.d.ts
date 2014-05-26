@@ -16,7 +16,7 @@ declare module goog.style {
      * @param {string|number|boolean=} opt_value If style was a string, then this
      *     should be the value.
      */
-    export function setStyle(element: Element, style: string, opt_value?: string): void;
+    function setStyle(element: Element, style: string, opt_value?: string): void;
 
     /**
      * Retrieves an explicitly-set style value of a node. This returns '' if there
@@ -28,7 +28,7 @@ declare module goog.style {
      * property, use element.style[style]).
      * @return {string} Style value.
      */
-    export function getStyle(element: Element, property: string): string;
+    function getStyle(element: Element, property: string): string;
 
     /**
      * Retrieves a computed style value of a node. It returns empty string if the
@@ -40,7 +40,7 @@ declare module goog.style {
      * @param {string} property Property to get (camel-case).
      * @return {string} Style value.
      */
-    export function getComputedStyle(element: Element, property: string): string;
+    function getComputedStyle(element: Element, property: string): string;
 
     /**
      * Gets the cascaded style value of a node, or null if the value cannot be
@@ -50,7 +50,7 @@ declare module goog.style {
      * @param {string} style Property to get (camel-case).
      * @return {string} Style value.
      */
-    export function getCascadedStyle(element: Element, style: string): string;
+    function getCascadedStyle(element: Element, style: string): string;
 
     /**
      * Retrieves the computed value of the box-sizing CSS attribute.
@@ -59,14 +59,14 @@ declare module goog.style {
      * @return {?string} 'content-box', 'border-box' or 'padding-box'. null if
      *     box-sizing is not supported (IE7 and below).
      */
-    export function getComputedBoxSizing(element: Element): string;
+    function getComputedBoxSizing(element: Element): string;
 
     /**
      * Retrieves the computed value of the position CSS attribute.
      * @param {Element} element The element to get the position of.
      * @return {string} Position value.
      */
-    export function getComputedPosition(element: Element): string;
+    function getComputedPosition(element: Element): string;
 
     /**
      * Retrieves the computed background color string for a given element. The
@@ -86,49 +86,49 @@ declare module goog.style {
      * @param {Element} element The element to get the background color of.
      * @return {string} The computed string value of the background color.
      */
-    export function getBackgroundColor(element: Element): string;
+    function getBackgroundColor(element: Element): string;
 
     /**
      * Retrieves the computed value of the overflow-x CSS attribute.
      * @param {Element} element The element to get the overflow-x of.
      * @return {string} The computed string value of the overflow-x attribute.
      */
-    export function getComputedOverflowX(element: Element): string;
+    function getComputedOverflowX(element: Element): string;
 
     /**
      * Retrieves the computed value of the overflow-y CSS attribute.
      * @param {Element} element The element to get the overflow-y of.
      * @return {string} The computed string value of the overflow-y attribute.
      */
-    export function getComputedOverflowY(element: Element): string;
+    function getComputedOverflowY(element: Element): string;
 
     /**
      * Retrieves the computed value of the z-index CSS attribute.
      * @param {Element} element The element to get the z-index of.
      * @return {string|number} The computed value of the z-index attribute.
      */
-    export function getComputedZIndex(element: Element): string;
+    function getComputedZIndex(element: Element): string;
 
     /**
      * Retrieves the computed value of the text-align CSS attribute.
      * @param {Element} element The element to get the text-align of.
      * @return {string} The computed string value of the text-align attribute.
      */
-    export function getComputedTextAlign(element: Element): string;
+    function getComputedTextAlign(element: Element): string;
 
     /**
      * Retrieves the computed value of the cursor CSS attribute.
      * @param {Element} element The element to get the cursor of.
      * @return {string} The computed string value of the cursor attribute.
      */
-    export function getComputedCursor(element: Element): string;
+    function getComputedCursor(element: Element): string;
 
     /**
      * Retrieves the computed value of the CSS transform attribute.
      * @param {Element} element The element to get the transform of.
      * @return {string} The computed string representation of the transform matrix.
      */
-    export function getComputedTransform(element: Element): string;
+    function getComputedTransform(element: Element): string;
 
     /**
      * Sets the top/left values of an element.  If no unit is specified in the
@@ -139,7 +139,7 @@ declare module goog.style {
      * @param {string|number|goog.math.Coordinate} arg1 Left position or coordinate.
      * @param {string|number=} opt_arg2 Top position.
      */
-    export function setPosition(el: Element, arg1: string, opt_arg2?: string): void;
+    function setPosition(el: Element, arg1: string, opt_arg2?: string): void;
 
     /**
      * Gets the offsetLeft and offsetTop properties of an element and returns them
@@ -147,7 +147,7 @@ declare module goog.style {
      * @param {Element} element Element.
      * @return {!goog.math.Coordinate} The position.
      */
-    export function getPosition(element: Element): goog.math.Coordinate;
+    function getPosition(element: Element): goog.math.Coordinate;
 
     /**
      * Returns the viewport element for a particular document
@@ -155,7 +155,7 @@ declare module goog.style {
      *     of.
      * @return {Element} document.documentElement or document.body.
      */
-    export function getClientViewportElement(opt_node?: Node): Element;
+    function getClientViewportElement(opt_node?: Node): Element;
 
     /**
      * Calculates the viewport coordinates relative to the page/document
@@ -164,14 +164,14 @@ declare module goog.style {
      * @param {!Document} doc The document to use as the reference point.
      * @return {!goog.math.Coordinate} The page offset of the viewport.
      */
-    export function getViewportPageOffset(doc: Document): goog.math.Coordinate;
+    function getViewportPageOffset(doc: Document): goog.math.Coordinate;
 
     /**
      * Returns the first parent that could affect the position of a given element.
      * @param {Element} element The element to get the offset parent for.
      * @return {Element} The first offset parent or null if one cannot be found.
      */
-    export function getOffsetParent(element: Element): Element;
+    function getOffsetParent(element: Element): Element;
 
     /**
      * Calculates and returns the visible rectangle for a given element. Returns a
@@ -182,7 +182,7 @@ declare module goog.style {
      * @return {goog.math.Box} Bounding elementBox describing the visible rect or
      *     null if scrollable ancestor isn't inside the visible viewport.
      */
-    export function getVisibleRectForElement(element: Element): goog.math.Box;
+    function getVisibleRectForElement(element: Element): goog.math.Box;
 
     /**
      * Calculate the scroll position of {@code container} with the minimum amount so
@@ -197,7 +197,7 @@ declare module goog.style {
      * @return {!goog.math.Coordinate} The new scroll position of the container,
      *     in form of goog.math.Coordinate(scrollLeft, scrollTop).
      */
-    export function getContainerOffsetToScrollInto(element: Element, container: Element, opt_center?: boolean): goog.math.Coordinate;
+    function getContainerOffsetToScrollInto(element: Element, container: Element, opt_center?: boolean): goog.math.Coordinate;
 
     /**
      * Changes the scroll position of {@code container} with the minimum amount so
@@ -210,7 +210,7 @@ declare module goog.style {
      * @param {boolean=} opt_center Whether to center the element in the container.
      *     Defaults to false.
      */
-    export function scrollIntoContainerView(element: Element, container: Element, opt_center?: boolean): void;
+    function scrollIntoContainerView(element: Element, container: Element, opt_center?: boolean): void;
 
     /**
      * Returns clientLeft (width of the left border and, if the directionality is
@@ -219,7 +219,7 @@ declare module goog.style {
      * @param {Element} el Element to get clientLeft for.
      * @return {!goog.math.Coordinate} Client left and top.
      */
-    export function getClientLeftTop(el: Element): goog.math.Coordinate;
+    function getClientLeftTop(el: Element): goog.math.Coordinate;
 
     /**
      * Returns a Coordinate object relative to the top-left of the HTML document.
@@ -231,21 +231,21 @@ declare module goog.style {
      * @param {Element} el Element to get the page offset for.
      * @return {!goog.math.Coordinate} The page offset.
      */
-    export function getPageOffset(el: Element): goog.math.Coordinate;
+    function getPageOffset(el: Element): goog.math.Coordinate;
 
     /**
      * Returns the left coordinate of an element relative to the HTML document
      * @param {Element} el Elements.
      * @return {number} The left coordinate.
      */
-    export function getPageOffsetLeft(el: Element): number;
+    function getPageOffsetLeft(el: Element): number;
 
     /**
      * Returns the top coordinate of an element relative to the HTML document
      * @param {Element} el Elements.
      * @return {number} The top coordinate.
      */
-    export function getPageOffsetTop(el: Element): number;
+    function getPageOffsetTop(el: Element): number;
 
     /**
      * Returns a Coordinate object relative to the top-left of an HTML document
@@ -258,7 +258,7 @@ declare module goog.style {
      *     the top-most window.
      * @return {!goog.math.Coordinate} The page offset.
      */
-    export function getFramedPageOffset(el: Element, relativeWin: Window): goog.math.Coordinate;
+    function getFramedPageOffset(el: Element, relativeWin: Window): goog.math.Coordinate;
 
     /**
      * Translates the specified rect relative to origBase page, for newBase page.
@@ -271,7 +271,7 @@ declare module goog.style {
      *     coordinate.  This must be a DOM for an ancestor frame of origBase
      *     or the same as origBase.
      */
-    export function translateRectForAnotherFrame(rect: goog.math.Rect, origBase: goog.dom.DomHelper, newBase: goog.dom.DomHelper): void;
+    function translateRectForAnotherFrame(rect: goog.math.Rect, origBase: goog.dom.DomHelper, newBase: goog.dom.DomHelper): void;
 
     /**
      * Returns the position of an element relative to another element in the
@@ -282,7 +282,7 @@ declare module goog.style {
      *     is relative to.
      * @return {!goog.math.Coordinate} The relative position.
      */
-    export function getRelativePosition(a: Element, b: Element): goog.math.Coordinate;
+    function getRelativePosition(a: Element, b: Element): goog.math.Coordinate;
 
     /**
      * Returns the position of the event or the element's border box relative to
@@ -290,7 +290,7 @@ declare module goog.style {
      * @param {Element|Event|goog.events.Event} el Element or a mouse / touch event.
      * @return {!goog.math.Coordinate} The position.
      */
-    export function getClientPosition(el: Element): goog.math.Coordinate;
+    function getClientPosition(el: Element): goog.math.Coordinate;
 
     /**
      * Moves an element to the given coordinates relative to the client viewport.
@@ -300,7 +300,7 @@ declare module goog.style {
      *     box or a coordinate object.
      * @param {number=} opt_y Top position of the element's margin box.
      */
-    export function setPageOffset(el: Element, x: number, opt_y?: number): void;
+    function setPageOffset(el: Element, x: number, opt_y?: number): void;
 
     /**
      * Sets the width/height values of an element.  If an argument is numeric,
@@ -315,7 +315,7 @@ declare module goog.style {
      * @param {string|number=} opt_h Height of the element. Required if w is not a
      *     size object.
      */
-    export function setSize(element: Element, w: string, opt_h?: string): void;
+    function setSize(element: Element, w: string, opt_h?: string): void;
 
     /**
      * Set the height of an element.  Sets the element's style property.
@@ -323,7 +323,7 @@ declare module goog.style {
      * @param {string|number} height The height value to set.  If a number, 'px'
      *     will be appended, otherwise the value will be applied directly.
      */
-    export function setHeight(element: Element, height: string): void;
+    function setHeight(element: Element, height: string): void;
 
     /**
      * Set the width of an element.  Sets the element's style property.
@@ -331,7 +331,7 @@ declare module goog.style {
      * @param {string|number} width The width value to set.  If a number, 'px'
      *     will be appended, otherwise the value will be applied directly.
      */
-    export function setWidth(element: Element, width: string): void;
+    function setWidth(element: Element, width: string): void;
 
     /**
      * Gets the height and width of an element, even if its display is none.
@@ -344,7 +344,7 @@ declare module goog.style {
      * @param {Element} element Element to get size of.
      * @return {!goog.math.Size} Object with width/height properties.
      */
-    export function getSize(element: Element): goog.math.Size;
+    function getSize(element: Element): goog.math.Size;
 
     /**
      * Gets the height and width of an element, post transform, even if its display
@@ -361,14 +361,14 @@ declare module goog.style {
      * @param {!Element} element Element to get size of.
      * @return {goog.math.Size} Object with width/height properties.
      */
-    export function getTransformedSize(element: Element): goog.math.Size;
+    function getTransformedSize(element: Element): goog.math.Size;
 
     /**
      * Returns a bounding rectangle for a given element in page space.
      * @param {Element} element Element to get bounds of. Must not be display none.
      * @return {!goog.math.Rect} Bounding rectangle for the element.
      */
-    export function getBounds(element: Element): goog.math.Rect;
+    function getBounds(element: Element): goog.math.Rect;
 
     /**
      * Converts a CSS selector in the form style-property to styleProperty.
@@ -376,7 +376,7 @@ declare module goog.style {
      * @return {string} Camel case selector.
      * @deprecated Use goog.string.toCamelCase instead.
      */
-    export function toCamelCase(selector: any): string;
+    function toCamelCase(selector: any): string;
 
     /**
      * Converts a CSS selector in the form styleProperty to style-property.
@@ -384,7 +384,7 @@ declare module goog.style {
      * @return {string} Selector cased.
      * @deprecated Use goog.string.toSelectorCase instead.
      */
-    export function toSelectorCase(selector: string): string;
+    function toSelectorCase(selector: string): string;
 
     /**
      * Gets the opacity of a node (x-browser). This gets the inline style opacity
@@ -394,7 +394,7 @@ declare module goog.style {
      * @return {number|string} Opacity between 0 and 1 or an empty string {@code ''}
      *     if the opacity is not set.
      */
-    export function getOpacity(el: Element): number;
+    function getOpacity(el: Element): number;
 
     /**
      * Sets the opacity of a node (x-browser).
@@ -402,7 +402,7 @@ declare module goog.style {
      * @param {number|string} alpha Opacity between 0 and 1 or an empty string
      *     {@code ''} to clear the opacity.
      */
-    export function setOpacity(el: Element, alpha: number): void;
+    function setOpacity(el: Element, alpha: number): void;
 
     /**
      * Sets the background of an element to a transparent image in a browser-
@@ -416,13 +416,13 @@ declare module goog.style {
      * @param {Element} el The element to set background on.
      * @param {string} src The image source URL.
      */
-    export function setTransparentBackgroundImage(el: Element, src: string): void;
+    function setTransparentBackgroundImage(el: Element, src: string): void;
 
     /**
      * Clears the background image of an element in a browser independent manner.
      * @param {Element} el The element to clear background image for.
      */
-    export function clearTransparentBackgroundImage(el: Element): void;
+    function clearTransparentBackgroundImage(el: Element): void;
 
     /**
      * Shows or hides an element from the page. Hiding the element is done by
@@ -444,7 +444,7 @@ declare module goog.style {
      *     false to disable rendering the element.
      * @deprecated Use goog.style.setElementShown instead.
      */
-    export function showElement(el: Element, display: any): void;
+    function showElement(el: Element, display: any): void;
 
     /**
      * Shows or hides an element from the page. Hiding the element is done by
@@ -466,7 +466,7 @@ declare module goog.style {
      * @param {*} isShown True to render the element in its default style,
      *     false to disable rendering the element.
      */
-    export function setElementShown(el: Element, isShown: any): void;
+    function setElementShown(el: Element, isShown: any): void;
 
     /**
      * Test whether the given element has been shown or hidden via a call to
@@ -481,7 +481,7 @@ declare module goog.style {
      * @return {boolean} Whether the element has been shown.
      * @see #setElementShown
      */
-    export function isElementShown(el: Element): boolean;
+    function isElementShown(el: Element): boolean;
 
     /**
      * Installs the styles string into the window that contains opt_element.  If
@@ -491,14 +491,14 @@ declare module goog.style {
      *     styles installed.
      * @return {Element|StyleSheet} The style element created.
      */
-    export function installStyles(stylesString: string, opt_node?: Node): Element;
+    function installStyles(stylesString: string, opt_node?: Node): Element;
 
     /**
      * Removes the styles added by {@link #installStyles}.
      * @param {Element|StyleSheet} styleSheet The value returned by
      *     {@link #installStyles}.
      */
-    export function uninstallStyles(styleSheet: Element): void;
+    function uninstallStyles(styleSheet: Element): void;
 
     /**
      * Sets the content of a style element.  The style element can be any valid
@@ -508,7 +508,7 @@ declare module goog.style {
      *     installStyles.
      * @param {string} stylesString The new content of the stylesheet.
      */
-    export function setStyles(element: Element, stylesString: string): void;
+    function setStyles(element: Element, stylesString: string): void;
 
     /**
      * Sets 'white-space: pre-wrap' for a node (x-browser).
@@ -522,7 +522,7 @@ declare module goog.style {
      *
      * @param {Element} el Element to enable pre-wrap for.
      */
-    export function setPreWrap(el: Element): void;
+    function setPreWrap(el: Element): void;
 
     /**
      * Sets 'display: inline-block' for an element (cross-browser).
@@ -531,14 +531,14 @@ declare module goog.style {
      * @see ../demos/inline_block_quirks.html
      * @see ../demos/inline_block_standards.html
      */
-    export function setInlineBlock(el: Element): void;
+    function setInlineBlock(el: Element): void;
 
     /**
      * Returns true if the element is using right to left (rtl) direction.
      * @param {Element} el  The element to test.
      * @return {boolean} True for right to left, false for left to right.
      */
-    export function isRightToLeft(el: Element): boolean;
+    function isRightToLeft(el: Element): boolean;
 
     /**
      * Returns true if the element is set to be unselectable, false otherwise.
@@ -548,7 +548,7 @@ declare module goog.style {
      * @param {Element} el  Element to check.
      * @return {boolean}  Whether the element is set to be unselectable.
      */
-    export function isUnselectable(el: Element): boolean;
+    function isUnselectable(el: Element): boolean;
 
     /**
      * Makes the element and its descendants selectable or unselectable.  Note
@@ -561,14 +561,14 @@ declare module goog.style {
      * @param {boolean=} opt_noRecurse  Whether to only alter the element's own
      *     selectable state, and leave its descendants alone; defaults to false.
      */
-    export function setUnselectable(el: Element, unselectable: boolean, opt_noRecurse?: boolean): void;
+    function setUnselectable(el: Element, unselectable: boolean, opt_noRecurse?: boolean): void;
 
     /**
      * Gets the border box size for an element.
      * @param {Element} element  The element to get the size for.
      * @return {!goog.math.Size} The border box size.
      */
-    export function getBorderBoxSize(element: Element): goog.math.Size;
+    function getBorderBoxSize(element: Element): goog.math.Size;
 
     /**
      * Sets the border box size of an element. This is potentially expensive in IE
@@ -576,7 +576,7 @@ declare module goog.style {
      * @param {Element} element  The element to set the size on.
      * @param {goog.math.Size} size  The new size.
      */
-    export function setBorderBoxSize(element: Element, size: goog.math.Size): void;
+    function setBorderBoxSize(element: Element, size: goog.math.Size): void;
 
     /**
      * Gets the content box size for an element.  This is potentially expensive in
@@ -584,7 +584,7 @@ declare module goog.style {
      * @param {Element} element  The element to get the size for.
      * @return {!goog.math.Size} The content box size.
      */
-    export function getContentBoxSize(element: Element): goog.math.Size;
+    function getContentBoxSize(element: Element): goog.math.Size;
 
     /**
      * Sets the content box size of an element. This is potentially expensive in IE
@@ -592,28 +592,28 @@ declare module goog.style {
      * @param {Element} element  The element to set the size on.
      * @param {goog.math.Size} size  The new size.
      */
-    export function setContentBoxSize(element: Element, size: goog.math.Size): void;
+    function setContentBoxSize(element: Element, size: goog.math.Size): void;
 
     /**
      * Gets the computed paddings (on all sides) in pixels.
      * @param {Element} element  The element to get the padding for.
      * @return {!goog.math.Box} The computed paddings.
      */
-    export function getPaddingBox(element: Element): goog.math.Box;
+    function getPaddingBox(element: Element): goog.math.Box;
 
     /**
      * Gets the computed margins (on all sides) in pixels.
      * @param {Element} element  The element to get the margins for.
      * @return {!goog.math.Box} The computed margins.
      */
-    export function getMarginBox(element: Element): goog.math.Box;
+    function getMarginBox(element: Element): goog.math.Box;
 
     /**
      * Gets the computed border widths (on all sides) in pixels
      * @param {Element} element  The element to get the border widths for.
      * @return {!goog.math.Box} The computed border widths.
      */
-    export function getBorderBox(element: Element): goog.math.Box;
+    function getBorderBox(element: Element): goog.math.Box;
 
     /**
      * Returns the font face applied to a given node. Opera and IE should return
@@ -622,28 +622,28 @@ declare module goog.style {
      * @param {Element} el  The element whose font family is returned.
      * @return {string} The font family applied to el.
      */
-    export function getFontFamily(el: Element): string;
+    function getFontFamily(el: Element): string;
 
     /**
      * Returns the units used for a CSS length measurement.
      * @param {string} value  A CSS length quantity.
      * @return {?string} The units of measurement.
      */
-    export function getLengthUnits(value: string): string;
+    function getLengthUnits(value: string): string;
 
     /**
      * Returns the font size, in pixels, of text in an element.
      * @param {Element} el  The element whose font size is returned.
      * @return {number} The font size (in pixels).
      */
-    export function getFontSize(el: Element): number;
+    function getFontSize(el: Element): number;
 
     /**
      * Parses a style attribute value.  Converts CSS property names to camel case.
      * @param {string} value The style attribute value.
      * @return {!Object} Map of CSS properties to string values.
      */
-    export function parseStyleAttribute(value: string): Object;
+    function parseStyleAttribute(value: string): Object;
 
     /**
      * Reverse of parseStyleAttribute; that is, takes a style object and returns the
@@ -652,14 +652,14 @@ declare module goog.style {
      * @param {Object} obj Map of CSS properties to values.
      * @return {string} The style attribute value.
      */
-    export function toStyleAttribute(obj: Object): string;
+    function toStyleAttribute(obj: Object): string;
 
     /**
      * Sets CSS float property on an element.
      * @param {Element} el The element to set float property on.
      * @param {string} value The value of float CSS property to set on this element.
      */
-    export function setFloat(el: Element, value: string): void;
+    function setFloat(el: Element, value: string): void;
 
     /**
      * Gets value of explicitly-set float CSS property on an element.
@@ -667,7 +667,7 @@ declare module goog.style {
      * @return {string} The value of explicitly-set float CSS property on this
      *     element.
      */
-    export function getFloat(el: Element): string;
+    function getFloat(el: Element): string;
 
     /**
      * Returns the scroll bar width (represents the width of both horizontal
@@ -678,7 +678,7 @@ declare module goog.style {
      *     if some scrollbars are styled differently than others.
      * @return {number} The scroll bar width in px.
      */
-    export function getScrollbarWidth(opt_className?: string): number;
+    function getScrollbarWidth(opt_className?: string): number;
 
     /**
      * Returns the x,y translation component of any CSS transforms applied to the
@@ -687,5 +687,5 @@ declare module goog.style {
      * @param {!Element} element The element to get the translation of.
      * @return {!goog.math.Coordinate} The CSS translation of the element in px.
      */
-    export function getCssTranslation(element: Element): goog.math.Coordinate;
+    function getCssTranslation(element: Element): goog.math.Coordinate;
 }

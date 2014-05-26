@@ -8,7 +8,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.ControlRenderer}
      */
-    export class DimensionPickerRenderer extends goog.ui.ControlRenderer {
+    class DimensionPickerRenderer extends goog.ui.ControlRenderer {
         constructor();
         
         /**

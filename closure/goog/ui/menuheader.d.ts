@@ -11,7 +11,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Control}
      */
-    export class MenuHeader extends goog.ui.Control {
+    class MenuHeader extends goog.ui.Control {
         constructor(content: goog.ui.ControlContent, opt_domHelper?: goog.dom.DomHelper, opt_renderer?: goog.ui.MenuHeaderRenderer);
     }
 }

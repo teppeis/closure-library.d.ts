@@ -8,7 +8,7 @@ declare module goog {
      * @extends {IThenable.<TYPE>}
      * @template TYPE
      */
-    export interface Thenable<TYPE> extends IThenable<TYPE> {
+    interface Thenable<TYPE> extends IThenable<TYPE> {
         
         /**
          * Adds callbacks that will operate on the result of the Thenable, returning a
@@ -51,7 +51,7 @@ declare module goog.Thenable {
      *
      * @const
      */
-    export var IMPLEMENTED_BY_PROP: any;
+    var IMPLEMENTED_BY_PROP: any;
 
     /**
      * Marks a given class (constructor) as an implementation of Thenable, so
@@ -63,12 +63,12 @@ declare module goog.Thenable {
      * @param {function(new:goog.Thenable,...[?])} ctor The class constructor. The
      *     corresponding class must have already implemented the interface.
      */
-    export function addImplementation(ctor: (...arg0: any[]) => any): void;
+    function addImplementation(ctor: (...arg0: any[]) => any): void;
 
     /**
      * @param {*} object
      * @return {boolean} Whether a given instance implements {@code goog.Thenable}.
      *     The class/superclass of the instance must call {@code addImplementation}.
      */
-    export function isImplementedBy(object: any): boolean;
+    function isImplementedBy(object: any): boolean;
 }

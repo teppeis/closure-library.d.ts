@@ -4,7 +4,7 @@ declare module goog.string$ {
      * An interface for parsing strings into objects.
      * @interface
      */
-    export interface Parser {
+    interface Parser {
         
         /**
          * Parses a string into an object and returns the result.

@@ -10,7 +10,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class HasEntriesMatcher {
+    class HasEntriesMatcher {
         constructor(entries: Object);
     }
 
@@ -25,7 +25,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class HasEntryMatcher {
+    class HasEntryMatcher {
         constructor(key: string, value: any);
     }
 
@@ -39,7 +39,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class HasKeyMatcher {
+    class HasKeyMatcher {
         constructor(key: string);
     }
 
@@ -53,7 +53,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class HasValueMatcher {
+    class HasValueMatcher {
         constructor(value: any);
     }
 }

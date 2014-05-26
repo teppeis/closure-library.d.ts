@@ -11,7 +11,7 @@ declare module goog.storage.mechanism {
      * @extends {goog.storage.mechanism.Mechanism}
      * @final
      */
-    export class ErrorHandlingMechanism extends goog.storage.mechanism.Mechanism {
+    class ErrorHandlingMechanism extends goog.storage.mechanism.Mechanism {
         constructor(mechanism: goog.storage.mechanism.Mechanism, errorHandler: goog.storage.mechanism.ErrorHandlingMechanism.ErrorHandler);
     }
 }
@@ -22,7 +22,7 @@ declare module goog.storage.mechanism.ErrorHandlingMechanism {
      * Valid storage mechanism operations.
      * @enum {string}
      */
-    export interface Operation {
+    interface Operation {
         SET: string;
         GET: string;
         REMOVE: string;
@@ -46,6 +46,6 @@ declare module goog.storage.mechanism.ErrorHandlingMechanism {
      *   string,
      *   *=)}
      */
-    export interface ErrorHandler {
+    interface ErrorHandler {
     }
 }

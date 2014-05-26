@@ -5,7 +5,7 @@ declare module goog.debug.reflect {
      * @param {!Function} classConstructor A object constructor to get the name of.
      * @return {string|undefined} The string name of the class.
      */
-    export function className(classConstructor: Function): string;
+    function className(classConstructor: Function): string;
 
     /**
      * Guesses the real type of the object, even if its {@code toString} method is
@@ -27,5 +27,5 @@ declare module goog.debug.reflect {
      *     property is undefined and they are not even the instances of the
      *     {@code Object} type. This method will recognize them as 'ActiveXObject'.
      */
-    export function typeOf(obj: any): string;
+    function typeOf(obj: any): string;
 }

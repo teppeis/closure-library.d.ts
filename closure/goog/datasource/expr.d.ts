@@ -9,7 +9,7 @@ declare module goog.ds {
      * @constructor
      * @final
      */
-    export class Expr {
+    class Expr {
         constructor(opt_expr?: string);
         
         /**
@@ -126,7 +126,7 @@ declare module goog.ds.Expr {
      * @enum {string}
      * @private
      */
-    export interface String_ {
+    interface String_ {
         SEPARATOR: string;
         CURRENT_NODE_EXPR: string;
         EMPTY_EXPR: string;

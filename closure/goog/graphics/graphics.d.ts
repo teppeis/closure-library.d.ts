@@ -18,7 +18,7 @@ declare module goog.graphics {
      *     differences before the canvas tag was widely supported.  See
      *     http://en.wikipedia.org/wiki/Canvas_element for details.
      */
-    export function createGraphics(width: string, height: string, opt_coordWidth?: number, opt_coordHeight?: number, opt_domHelper?: goog.dom.DomHelper): goog.graphics.AbstractGraphics;
+    function createGraphics(width: string, height: string, opt_coordWidth?: number, opt_coordHeight?: number, opt_domHelper?: goog.dom.DomHelper): goog.graphics.AbstractGraphics;
 
     /**
      * Returns an instance of goog.graphics.AbstractGraphics that knows how to draw
@@ -38,7 +38,7 @@ declare module goog.graphics {
      *     differences before the canvas tag was widely supported.  See
      *     http://en.wikipedia.org/wiki/Canvas_element for details.
      */
-    export function createSimpleGraphics(width: string, height: string, opt_coordWidth?: number, opt_coordHeight?: number, opt_domHelper?: goog.dom.DomHelper): goog.graphics.AbstractGraphics;
+    function createSimpleGraphics(width: string, height: string, opt_coordWidth?: number, opt_coordHeight?: number, opt_domHelper?: goog.dom.DomHelper): goog.graphics.AbstractGraphics;
 
     /**
      * Static function to check if the current browser has Graphics support.
@@ -47,5 +47,5 @@ declare module goog.graphics {
      *     differences before the canvas tag was widely supported.  See
      *     http://en.wikipedia.org/wiki/Canvas_element for details.
      */
-    export function isBrowserSupported(): boolean;
+    function isBrowserSupported(): boolean;
 }

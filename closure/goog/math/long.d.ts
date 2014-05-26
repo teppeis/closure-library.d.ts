@@ -24,7 +24,7 @@ declare module goog.math {
      * @constructor
      * @final
      */
-    export class Long {
+    class Long {
         constructor(low: number, high: number);
         
         /** @type {!goog.math.Long} */

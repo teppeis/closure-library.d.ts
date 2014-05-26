@@ -13,7 +13,7 @@ declare module goog.string$.html {
      * @constructor
      * @extends {goog.string.html.HtmlSaxHandler}
      */
-    export class HtmlSanitizer extends goog.string$.html.HtmlSaxHandler {
+    class HtmlSanitizer extends goog.string$.html.HtmlSaxHandler {
         constructor(stringBuffer: goog.string$.StringBuffer, opt_urlPolicy: (arg0: string) => string, opt_nmTokenPolicy: (arg0: string) => string);
     }
 
@@ -27,7 +27,7 @@ declare module goog.string$.html {
      *     names, IDs, and classes.
      * @return {string} A sanitized HTML, safe to be embedded on the page.
      */
-    export function htmlSanitize(htmlText: string, opt_urlPolicy?: (arg0: string) => string, opt_nmTokenPolicy?: (arg0: string) => string): string;
+    function htmlSanitize(htmlText: string, opt_urlPolicy?: (arg0: string) => string, opt_nmTokenPolicy?: (arg0: string) => string): string;
 }
 
 declare module goog.string$.html.HtmlSanitizer {
@@ -36,7 +36,7 @@ declare module goog.string$.html.HtmlSanitizer {
      * The HTML types the parser supports.
      * @enum {number}
      */
-    export interface AttributeType {
+    interface AttributeType {
         NONE: number;
         URI: number;
         URI_FRAGMENT: number;
@@ -55,7 +55,7 @@ declare module goog.string$.html.HtmlSanitizer {
      * A map of attributes to types it has.
      * @enum {number}
      */
-    export interface Attributes {
+    interface Attributes {
         '*::class': number;
         '*::dir': number;
         '*::id': number;

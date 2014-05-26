@@ -6,7 +6,7 @@ declare module goog.editor.plugins {
      * @extends {goog.editor.Plugin}
      * @final
      */
-    export class TableEditor extends goog.editor.Plugin {
+    class TableEditor extends goog.editor.Plugin {
         constructor();
         
         /**
@@ -33,7 +33,7 @@ declare module goog.editor.plugins.TableEditor {
      * Commands supported by goog.editor.plugins.TableEditor.
      * @enum {string}
      */
-    export interface COMMAND {
+    interface COMMAND {
         TABLE: string;
         INSERT_ROW_AFTER: string;
         INSERT_ROW_BEFORE: string;
@@ -55,7 +55,7 @@ declare module goog.editor.plugins.TableEditor {
      * @constructor
      * @private
      */
-    export interface CellSelection_ {
+    interface CellSelection_ {
         
         /**
          * Returns the EditableTable object of which this selection's cells are a

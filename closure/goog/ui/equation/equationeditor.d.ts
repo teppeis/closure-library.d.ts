@@ -10,7 +10,7 @@ declare module goog.ui.equation {
      * @extends {goog.ui.Component}
      * @final
      */
-    export class EquationEditor extends goog.ui.Component {
+    class EquationEditor extends goog.ui.Component {
         constructor(context: Object, opt_domHelper?: goog.dom.DomHelper, opt_helpUrl?: string);
         
         /**
@@ -51,7 +51,7 @@ declare module goog.ui.equation.EquationEditor {
      * Constants for event names.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         CHANGE: string;
     }
 }

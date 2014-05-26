@@ -6,7 +6,7 @@ declare module goog.disposable {
      * implement this interface (it may subclass goog.Disposable).
      * @interface
      */
-    export interface IDisposable {
+    interface IDisposable {
         
         /**
          * Disposes of the object and its resources.

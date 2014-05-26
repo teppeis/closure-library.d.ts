@@ -10,7 +10,7 @@ declare module goog.i18n.uChar {
      * @extends {goog.Disposable}
      * @final
      */
-    export class RemoteNameFetcher extends goog.Disposable {
+    class RemoteNameFetcher extends goog.Disposable {
         constructor(dataSourceUri: string);
     }
 }
@@ -23,7 +23,7 @@ declare module goog.i18n.uChar.RemoteNameFetcher {
      * @enum {string}
      * @private
      */
-    export interface RequestType_ {
+    interface RequestType_ {
         BASE_88: string;
         CODEPOINT: string;
     }

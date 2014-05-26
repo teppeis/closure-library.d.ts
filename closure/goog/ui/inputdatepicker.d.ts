@@ -13,7 +13,7 @@ declare module goog.ui {
      * @extends {goog.ui.Component}
      * @constructor
      */
-    export class InputDatePicker extends goog.ui.Component {
+    class InputDatePicker extends goog.ui.Component {
         constructor(dateTimeFormatter: goog.i18n.DateTimeFormat, dateTimeParser: goog.i18n.DateTimeParse, opt_datePicker?: goog.ui.DatePicker, opt_domHelper?: goog.dom.DomHelper);
         
         /**

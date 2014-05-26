@@ -9,7 +9,7 @@ declare module goog.net {
      * @constructor
      * @final
      */
-    export class CorsXmlHttpFactory extends goog.net.XmlHttpFactory {
+    class CorsXmlHttpFactory extends goog.net.XmlHttpFactory {
         constructor();
     }
 
@@ -23,7 +23,7 @@ declare module goog.net {
      * @struct
      * @final
      */
-    export class IeCorsXhrAdapter {
+    class IeCorsXhrAdapter {
         constructor();
         
         /**

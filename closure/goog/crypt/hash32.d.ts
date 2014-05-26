@@ -5,21 +5,21 @@ declare module goog.crypt.hash32 {
      * See SEED32 in http://go/base.hash.java
      * @type {number}
      */
-    export var SEED32: number;
+    var SEED32: number;
 
     /**
      * Arbitrary constant used during hashing.
      * See CONSTANT32 in http://go/base.hash.java
      * @type {number}
      */
-    export var CONSTANT32: number;
+    var CONSTANT32: number;
 
     /**
      * Hashes a string to a 32-bit value.
      * @param {string} str String to hash.
      * @return {number} 32-bit hash.
      */
-    export function encodeString(str: string): number;
+    function encodeString(str: string): number;
 
     /**
      * Hashes a string to a 32-bit value, converting the string to UTF-8 before
@@ -27,14 +27,14 @@ declare module goog.crypt.hash32 {
      * @param {string} str String to hash.
      * @return {number} 32-bit hash.
      */
-    export function encodeStringUtf8(str: string): number;
+    function encodeStringUtf8(str: string): number;
 
     /**
      * Hashes an integer to a 32-bit value.
      * @param {number} value Number to hash.
      * @return {number} 32-bit hash.
      */
-    export function encodeInteger(value: number): number;
+    function encodeInteger(value: number): number;
 
     /**
      * Hashes a "byte" array to a 32-bit value using the supplied seed.
@@ -45,5 +45,5 @@ declare module goog.crypt.hash32 {
      * @param {number=} opt_seed The seed.
      * @return {number} 32-bit hash.
      */
-    export function encodeByteArray(bytes: Array<number>, opt_offset?: number, opt_length?: number, opt_seed?: number): number;
+    function encodeByteArray(bytes: Array<number>, opt_offset?: number, opt_length?: number, opt_seed?: number): number;
 }

@@ -11,7 +11,7 @@ declare module goog.db {
      * @constructor
      * @final
      */
-    export class Index {
+    class Index {
         constructor(index: IDBIndex);
         
         /**

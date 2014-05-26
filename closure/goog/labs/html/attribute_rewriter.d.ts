@@ -9,7 +9,7 @@ declare module goog.labs.html {
      * @typedef {(string |
      *            goog.html.SafeHtml | goog.html.SafeStyle | goog.html.SafeUrl)}
      */
-    export interface AttributeValue {
+    interface AttributeValue {
     }
 
     /**
@@ -43,7 +43,7 @@ declare module goog.labs.html {
      * @typedef {function(goog.labs.html.AttributeValue) :
      *           goog.labs.html.AttributeValue}
      */
-    export interface AttributeRewriter {
+    interface AttributeRewriter {
     }
 
     /**
@@ -53,5 +53,5 @@ declare module goog.labs.html {
      * file is required.
      * Clients can mention this noop.
      */
-    export function attributeRewriterPresubmitWorkaround(): void;
+    function attributeRewriterPresubmitWorkaround(): void;
 }

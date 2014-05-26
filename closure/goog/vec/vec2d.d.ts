@@ -1,7 +1,7 @@
 declare module goog.vec.vec2d {
 
     /** @typedef {goog.vec.Float64} */
-    export interface Type {
+    interface Type {
     }
 
     /**
@@ -9,7 +9,7 @@ declare module goog.vec.vec2d {
      *
      * @return {!goog.vec.vec2d.Type} The new vec2d.
      */
-    export function create(): goog.vec.vec2d.Type;
+    function create(): goog.vec.vec2d.Type;
 
     /**
      * Initializes the vector with the given values.
@@ -20,7 +20,7 @@ declare module goog.vec.vec2d {
      * @return {!goog.vec.vec2d.Type} Return vec so that operations can be
      *     chained together.
      */
-    export function setFromValues(vec: goog.vec.vec2d.Type, v0: number, v1: number): goog.vec.vec2d.Type;
+    function setFromValues(vec: goog.vec.vec2d.Type, v0: number, v1: number): goog.vec.vec2d.Type;
 
     /**
      * Initializes vec2d vec from vec2d src.
@@ -30,7 +30,7 @@ declare module goog.vec.vec2d {
      * @return {!goog.vec.vec2d.Type} Return vec so that operations can be
      *     chained together.
      */
-    export function setFromVec2d(vec: goog.vec.vec2d.Type, src: goog.vec.vec2d.Type): goog.vec.vec2d.Type;
+    function setFromVec2d(vec: goog.vec.vec2d.Type, src: goog.vec.vec2d.Type): goog.vec.vec2d.Type;
 
     /**
      * Initializes vec2d vec from vec2f src (typed as a Float32Array to
@@ -41,7 +41,7 @@ declare module goog.vec.vec2d {
      * @return {!goog.vec.vec2d.Type} Return vec so that operations can be
      *     chained together.
      */
-    export function setFromVec2f(vec: goog.vec.vec2d.Type, src: Float32Array): goog.vec.vec2d.Type;
+    function setFromVec2f(vec: goog.vec.vec2d.Type, src: Float32Array): goog.vec.vec2d.Type;
 
     /**
      * Initializes vec2d vec from Array src.
@@ -51,7 +51,7 @@ declare module goog.vec.vec2d {
      * @return {!goog.vec.vec2d.Type} Return vec so that operations can be
      *     chained together.
      */
-    export function setFromArray(vec: goog.vec.vec2d.Type, src: Array<number>): goog.vec.vec2d.Type;
+    function setFromArray(vec: goog.vec.vec2d.Type, src: Array<number>): goog.vec.vec2d.Type;
 
     /**
      * Performs a component-wise addition of vec0 and vec1 together storing the
@@ -64,7 +64,7 @@ declare module goog.vec.vec2d {
      * @return {!goog.vec.vec2d.Type} Return resultVec so that operations can be
      *     chained together.
      */
-    export function add(vec0: goog.vec.vec2d.Type, vec1: goog.vec.vec2d.Type, resultVec: goog.vec.vec2d.Type): goog.vec.vec2d.Type;
+    function add(vec0: goog.vec.vec2d.Type, vec1: goog.vec.vec2d.Type, resultVec: goog.vec.vec2d.Type): goog.vec.vec2d.Type;
 
     /**
      * Performs a component-wise subtraction of vec1 from vec0 storing the
@@ -77,7 +77,7 @@ declare module goog.vec.vec2d {
      * @return {!goog.vec.vec2d.Type} Return resultVec so that operations can be
      *     chained together.
      */
-    export function subtract(vec0: goog.vec.vec2d.Type, vec1: goog.vec.vec2d.Type, resultVec: goog.vec.vec2d.Type): goog.vec.vec2d.Type;
+    function subtract(vec0: goog.vec.vec2d.Type, vec1: goog.vec.vec2d.Type, resultVec: goog.vec.vec2d.Type): goog.vec.vec2d.Type;
 
     /**
      * Multiplies each component of vec0 with the matching element of vec0
@@ -90,7 +90,7 @@ declare module goog.vec.vec2d {
      * @return {!goog.vec.vec2d.Type} Return resultVec so that operations can be
      *     chained together.
      */
-    export function componentMultiply(vec0: goog.vec.vec2d.Type, vec1: goog.vec.vec2d.Type, resultVec: goog.vec.vec2d.Type): goog.vec.vec2d.Type;
+    function componentMultiply(vec0: goog.vec.vec2d.Type, vec1: goog.vec.vec2d.Type, resultVec: goog.vec.vec2d.Type): goog.vec.vec2d.Type;
 
     /**
      * Divides each component of vec0 with the matching element of vec0
@@ -103,7 +103,7 @@ declare module goog.vec.vec2d {
      * @return {!goog.vec.vec2d.Type} Return resultVec so that operations can be
      *     chained together.
      */
-    export function componentDivide(vec0: goog.vec.vec2d.Type, vec1: goog.vec.vec2d.Type, resultVec: goog.vec.vec2d.Type): goog.vec.vec2d.Type;
+    function componentDivide(vec0: goog.vec.vec2d.Type, vec1: goog.vec.vec2d.Type, resultVec: goog.vec.vec2d.Type): goog.vec.vec2d.Type;
 
     /**
      * Negates vec0, storing the result into resultVec.
@@ -114,7 +114,7 @@ declare module goog.vec.vec2d {
      * @return {!goog.vec.vec2d.Type} Return resultVec so that operations can be
      *     chained together.
      */
-    export function negate(vec0: goog.vec.vec2d.Type, resultVec: goog.vec.vec2d.Type): goog.vec.vec2d.Type;
+    function negate(vec0: goog.vec.vec2d.Type, resultVec: goog.vec.vec2d.Type): goog.vec.vec2d.Type;
 
     /**
      * Takes the absolute value of each component of vec0 storing the result in
@@ -126,7 +126,7 @@ declare module goog.vec.vec2d {
      * @return {!goog.vec.vec2d.Type} Return resultVec so that operations can be
      *     chained together.
      */
-    export function abs(vec0: goog.vec.vec2d.Type, resultVec: goog.vec.vec2d.Type): goog.vec.vec2d.Type;
+    function abs(vec0: goog.vec.vec2d.Type, resultVec: goog.vec.vec2d.Type): goog.vec.vec2d.Type;
 
     /**
      * Multiplies each component of vec0 with scalar storing the product into
@@ -139,7 +139,7 @@ declare module goog.vec.vec2d {
      * @return {!goog.vec.vec2d.Type} Return resultVec so that operations can be
      *     chained together.
      */
-    export function scale(vec0: goog.vec.vec2d.Type, scalar: number, resultVec: goog.vec.vec2d.Type): goog.vec.vec2d.Type;
+    function scale(vec0: goog.vec.vec2d.Type, scalar: number, resultVec: goog.vec.vec2d.Type): goog.vec.vec2d.Type;
 
     /**
      * Returns the magnitudeSquared of the given vector.
@@ -147,7 +147,7 @@ declare module goog.vec.vec2d {
      * @param {goog.vec.vec2d.Type} vec0 The vector.
      * @return {number} The magnitude of the vector.
      */
-    export function magnitudeSquared(vec0: goog.vec.vec2d.Type): number;
+    function magnitudeSquared(vec0: goog.vec.vec2d.Type): number;
 
     /**
      * Returns the magnitude of the given vector.
@@ -155,7 +155,7 @@ declare module goog.vec.vec2d {
      * @param {goog.vec.vec2d.Type} vec0 The vector.
      * @return {number} The magnitude of the vector.
      */
-    export function magnitude(vec0: goog.vec.vec2d.Type): number;
+    function magnitude(vec0: goog.vec.vec2d.Type): number;
 
     /**
      * Normalizes the given vector storing the result into resultVec.
@@ -166,7 +166,7 @@ declare module goog.vec.vec2d {
      * @return {!goog.vec.vec2d.Type} Return resultVec so that operations can be
      *     chained together.
      */
-    export function normalize(vec0: goog.vec.vec2d.Type, resultVec: goog.vec.vec2d.Type): goog.vec.vec2d.Type;
+    function normalize(vec0: goog.vec.vec2d.Type, resultVec: goog.vec.vec2d.Type): goog.vec.vec2d.Type;
 
     /**
      * Returns the scalar product of vectors vec0 and vec1.
@@ -175,7 +175,7 @@ declare module goog.vec.vec2d {
      * @param {goog.vec.vec2d.Type} vec1 The second vector.
      * @return {number} The scalar product.
      */
-    export function dot(vec0: goog.vec.vec2d.Type, vec1: goog.vec.vec2d.Type): number;
+    function dot(vec0: goog.vec.vec2d.Type, vec1: goog.vec.vec2d.Type): number;
 
     /**
      * Returns the squared distance between two points.
@@ -184,7 +184,7 @@ declare module goog.vec.vec2d {
      * @param {goog.vec.vec2d.Type} vec1 Second point.
      * @return {number} The squared distance between the points.
      */
-    export function distanceSquared(vec0: goog.vec.vec2d.Type, vec1: goog.vec.vec2d.Type): number;
+    function distanceSquared(vec0: goog.vec.vec2d.Type, vec1: goog.vec.vec2d.Type): number;
 
     /**
      * Returns the distance between two points.
@@ -193,7 +193,7 @@ declare module goog.vec.vec2d {
      * @param {goog.vec.vec2d.Type} vec1 Second point.
      * @return {number} The distance between the points.
      */
-    export function distance(vec0: goog.vec.vec2d.Type, vec1: goog.vec.vec2d.Type): number;
+    function distance(vec0: goog.vec.vec2d.Type, vec1: goog.vec.vec2d.Type): number;
 
     /**
      * Returns a unit vector pointing from one point to another.
@@ -206,7 +206,7 @@ declare module goog.vec.vec2d {
      * @return {!goog.vec.vec2d.Type} Return resultVec so that operations can be
      *     chained together.
      */
-    export function direction(vec0: goog.vec.vec2d.Type, vec1: goog.vec.vec2d.Type, resultVec: goog.vec.vec2d.Type): goog.vec.vec2d.Type;
+    function direction(vec0: goog.vec.vec2d.Type, vec1: goog.vec.vec2d.Type, resultVec: goog.vec.vec2d.Type): goog.vec.vec2d.Type;
 
     /**
      * Linearly interpolate from vec0 to vec1 according to f. The value of f should
@@ -220,7 +220,7 @@ declare module goog.vec.vec2d {
      * @return {!goog.vec.vec2d.Type} Return resultVec so that operations can be
      *     chained together.
      */
-    export function lerp(vec0: goog.vec.vec2d.Type, vec1: goog.vec.vec2d.Type, f: number, resultVec: goog.vec.vec2d.Type): goog.vec.vec2d.Type;
+    function lerp(vec0: goog.vec.vec2d.Type, vec1: goog.vec.vec2d.Type, f: number, resultVec: goog.vec.vec2d.Type): goog.vec.vec2d.Type;
 
     /**
      * Compares the components of vec0 with the components of another vector or
@@ -233,7 +233,7 @@ declare module goog.vec.vec2d {
      * @return {!goog.vec.vec2d.Type} Return resultVec so that operations can be
      *     chained together.
      */
-    export function max(vec0: goog.vec.vec2d.Type, limit: goog.vec.vec2d.Type, resultVec: goog.vec.vec2d.Type): goog.vec.vec2d.Type;
+    function max(vec0: goog.vec.vec2d.Type, limit: goog.vec.vec2d.Type, resultVec: goog.vec.vec2d.Type): goog.vec.vec2d.Type;
 
     /**
      * Compares the components of vec0 with the components of another vector or
@@ -246,7 +246,7 @@ declare module goog.vec.vec2d {
      * @return {!goog.vec.vec2d.Type} Return resultVec so that operations can be
      *     chained together.
      */
-    export function min(vec0: goog.vec.vec2d.Type, limit: goog.vec.vec2d.Type, resultVec: goog.vec.vec2d.Type): goog.vec.vec2d.Type;
+    function min(vec0: goog.vec.vec2d.Type, limit: goog.vec.vec2d.Type, resultVec: goog.vec.vec2d.Type): goog.vec.vec2d.Type;
 
     /**
      * Returns true if the components of vec0 are equal to the components of vec1.
@@ -255,5 +255,5 @@ declare module goog.vec.vec2d {
      * @param {goog.vec.vec2d.Type} vec1 The second vector.
      * @return {boolean} True if the vectors are equal, false otherwise.
      */
-    export function equals(vec0: goog.vec.vec2d.Type, vec1: goog.vec.vec2d.Type): boolean;
+    function equals(vec0: goog.vec.vec2d.Type, vec1: goog.vec.vec2d.Type): boolean;
 }

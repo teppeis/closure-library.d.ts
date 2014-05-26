@@ -9,7 +9,7 @@ declare module goog.structs {
      * @constructor
      * @template VALUE
      */
-    export class Trie<VALUE> {
+    class Trie<VALUE> {
         constructor(opt_trie?: goog.structs.Trie<VALUE>);
         
         /**

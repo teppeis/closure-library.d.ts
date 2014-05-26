@@ -8,7 +8,7 @@ declare module goog.json {
      * @implements {goog.json.Processor}
      * @final
      */
-    export class HybridJsonProcessor {
+    class HybridJsonProcessor {
         constructor();
     }
 }

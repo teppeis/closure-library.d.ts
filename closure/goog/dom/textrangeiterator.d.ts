@@ -17,7 +17,7 @@ declare module goog.dom {
      * @extends {goog.dom.RangeIterator}
      * @final
      */
-    export class TextRangeIterator extends goog.dom.RangeIterator {
+    class TextRangeIterator extends goog.dom.RangeIterator {
         constructor(startNode: Node, startOffset: number, endNode: Node, endOffset: number, opt_reverse?: boolean);
         
         /**

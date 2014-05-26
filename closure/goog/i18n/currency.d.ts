@@ -21,13 +21,13 @@ declare module goog.i18n.currency {
      *
      * @type {!Object.<!Array>}
      */
-    export var CurrencyInfo: Object;
+    var CurrencyInfo: Object;
 
     /**
      * Tier 2 currency information.
      * @type {!Object.<!Array>}
      */
-    export var CurrencyInfoTier2: Object;
+    var CurrencyInfoTier2: Object;
 
     /**
      * This function will add tier2 currency support. Be default, only tier1
@@ -35,7 +35,7 @@ declare module goog.i18n.currency {
      * to support some of the rarely used currencies, it should call this function
      * before any other functions in this namespace.
      */
-    export function addTier2Support(): void;
+    function addTier2Support(): void;
 
     /**
      * Global currency pattern always uses ISO-4217 currency code as prefix. Local
@@ -47,7 +47,7 @@ declare module goog.i18n.currency {
      * @param {string} currencyCode ISO-4217 3-letter currency code.
      * @return {string} Global currency pattern string for given currency.
      */
-    export function getGlobalCurrencyPattern(currencyCode: string): string;
+    function getGlobalCurrencyPattern(currencyCode: string): string;
 
     /**
      * Return global currency sign string for those applications
@@ -56,7 +56,7 @@ declare module goog.i18n.currency {
      * @param {string} currencyCode ISO-4217 3-letter currency code.
      * @return {string} Global currency sign for given currency.
      */
-    export function getGlobalCurrencySign(currencyCode: string): string;
+    function getGlobalCurrencySign(currencyCode: string): string;
 
     /**
      * Local currency pattern is the most frequently used pattern in currency's
@@ -66,7 +66,7 @@ declare module goog.i18n.currency {
      * @param {string} currencyCode ISO-4217 3-letter currency code.
      * @return {string} Local currency pattern string for given currency.
      */
-    export function getLocalCurrencyPattern(currencyCode: string): string;
+    function getLocalCurrencyPattern(currencyCode: string): string;
 
     /**
      * Returns local currency sign string for those applications that need to
@@ -75,7 +75,7 @@ declare module goog.i18n.currency {
      * @param {string} currencyCode ISO-4217 3-letter currency code.
      * @return {string} Local currency sign for given currency.
      */
-    export function getLocalCurrencySign(currencyCode: string): string;
+    function getLocalCurrencySign(currencyCode: string): string;
 
     /**
      * Portable currency pattern is a compromise between local and global. It is
@@ -88,7 +88,7 @@ declare module goog.i18n.currency {
      * @param {string} currencyCode ISO-4217 3-letter currency code.
      * @return {string} Portable currency pattern string for given currency.
      */
-    export function getPortableCurrencyPattern(currencyCode: string): string;
+    function getPortableCurrencyPattern(currencyCode: string): string;
 
     /**
      * Return portable currency sign string for those applications that need to
@@ -97,7 +97,7 @@ declare module goog.i18n.currency {
      * @param {string} currencyCode ISO-4217 3-letter currency code.
      * @return {string} Portable currency sign for given currency.
      */
-    export function getPortableCurrencySign(currencyCode: string): string;
+    function getPortableCurrencySign(currencyCode: string): string;
 
     /**
      * This function returns the default currency sign position. Some applications
@@ -110,7 +110,7 @@ declare module goog.i18n.currency {
      * @param {string} currencyCode ISO-4217 3-letter currency code.
      * @return {boolean} true if currency should be positioned before amount field.
      */
-    export function isPrefixSignPosition(currencyCode: string): boolean;
+    function isPrefixSignPosition(currencyCode: string): boolean;
 
     /**
      * Modify currency pattern string by adjusting precision for given currency.
@@ -124,5 +124,5 @@ declare module goog.i18n.currency {
      * @param {string} currencyCode 3-letter currency code.
      * @return {string} modified currency pattern string.
      */
-    export function adjustPrecision(pattern: string, currencyCode: string): string;
+    function adjustPrecision(pattern: string, currencyCode: string): string;
 }

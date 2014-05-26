@@ -9,7 +9,7 @@ declare module goog.format {
      * @constructor
      * @final
      */
-    export class HtmlPrettyPrinter {
+    class HtmlPrettyPrinter {
         constructor(opt_timeOutMillis?: number);
         
         /**
@@ -37,7 +37,7 @@ declare module goog.format.HtmlPrettyPrinter {
      * @constructor
      * @final
      */
-    export class Buffer {
+    class Buffer {
         constructor();
         
         /**

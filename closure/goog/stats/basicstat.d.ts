@@ -15,7 +15,7 @@ declare module goog.stats {
      * @constructor
      * @final
      */
-    export class BasicStat {
+    class BasicStat {
         constructor(interval: number);
         
         /**
@@ -74,7 +74,7 @@ declare module goog.stats.BasicStat {
      * @constructor
      * @private
      */
-    export interface Slot_ {
+    interface Slot_ {
         
         /**
          * Aggregated count within this slot.

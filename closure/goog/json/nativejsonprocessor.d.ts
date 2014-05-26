@@ -19,7 +19,7 @@ declare module goog.json {
      * @implements {goog.json.Processor}
      * @final
      */
-    export class NativeJsonProcessor {
+    class NativeJsonProcessor {
         constructor(opt_replacer?: goog.json.Replacer, opt_reviver?: goog.json.Reviver);
     }
 }

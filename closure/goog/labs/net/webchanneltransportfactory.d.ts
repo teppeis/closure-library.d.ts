@@ -5,5 +5,5 @@ declare module goog.net {
      *
      * @return {!goog.net.WebChannelTransport} the newly created transport instance.
      */
-    export function createWebChannelTransport(): goog.net.WebChannelTransport;
+    function createWebChannelTransport(): goog.net.WebChannelTransport;
 }

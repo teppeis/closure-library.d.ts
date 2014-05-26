@@ -1,137 +1,137 @@
 declare module goog.ui.editor.DefaultToolbar {
 
     /** @desc Font menu item caption for the default sans-serif font. */
-    export var MSG_FONT_NORMAL: any;
+    var MSG_FONT_NORMAL: any;
 
     /** @desc Font menu item caption for the default serif font. */
-    export var MSG_FONT_NORMAL_SERIF: any;
+    var MSG_FONT_NORMAL_SERIF: any;
 
     /** @desc Font size menu item caption for the 'Small' size. */
-    export var MSG_FONT_SIZE_SMALL: any;
+    var MSG_FONT_SIZE_SMALL: any;
 
     /** @desc Font size menu item caption for the 'Normal' size. */
-    export var MSG_FONT_SIZE_NORMAL: any;
+    var MSG_FONT_SIZE_NORMAL: any;
 
     /** @desc Font size menu item caption for the 'Large' size. */
-    export var MSG_FONT_SIZE_LARGE: any;
+    var MSG_FONT_SIZE_LARGE: any;
 
     /** @desc Font size menu item caption for the 'Huge' size. */
-    export var MSG_FONT_SIZE_HUGE: any;
+    var MSG_FONT_SIZE_HUGE: any;
 
     /** @desc Caption for "Heading" block format option. */
-    export var MSG_FORMAT_HEADING: any;
+    var MSG_FORMAT_HEADING: any;
 
     /** @desc Caption for "Subheading" block format option. */
-    export var MSG_FORMAT_SUBHEADING: any;
+    var MSG_FORMAT_SUBHEADING: any;
 
     /** @desc Caption for "Minor heading" block format option. */
-    export var MSG_FORMAT_MINOR_HEADING: any;
+    var MSG_FORMAT_MINOR_HEADING: any;
 
     /** @desc Caption for "Normal" block format option. */
-    export var MSG_FORMAT_NORMAL: any;
+    var MSG_FORMAT_NORMAL: any;
 
     /**
      * A set of built-in buttons to display in the default editor toolbar.
      * @type {!Array.<string>}
      */
-    export var DEFAULT_BUTTONS: Array<string>;
+    var DEFAULT_BUTTONS: Array<string>;
 
     /**
      * A set of built-in buttons to display in the default editor toolbar when
      * the editor chrome is right-to-left (BiDi mode only).
      * @type {!Array.<string>}
      */
-    export var DEFAULT_BUTTONS_RTL: Array<string>;
+    var DEFAULT_BUTTONS_RTL: Array<string>;
 
     /** @desc Format menu tooltip. */
-    export var MSG_FORMAT_BLOCK_TITLE: any;
+    var MSG_FORMAT_BLOCK_TITLE: any;
 
     /** @desc Format menu caption. */
-    export var MSG_FORMAT_BLOCK_CAPTION: any;
+    var MSG_FORMAT_BLOCK_CAPTION: any;
 
     /** @desc Undo button tooltip. */
-    export var MSG_UNDO_TITLE: any;
+    var MSG_UNDO_TITLE: any;
 
     /** @desc Redo button tooltip. */
-    export var MSG_REDO_TITLE: any;
+    var MSG_REDO_TITLE: any;
 
     /** @desc Font menu tooltip. */
-    export var MSG_FONT_FACE_TITLE: any;
+    var MSG_FONT_FACE_TITLE: any;
 
     /** @desc Font size menu tooltip. */
-    export var MSG_FONT_SIZE_TITLE: any;
+    var MSG_FONT_SIZE_TITLE: any;
 
     /** @desc Text foreground color menu tooltip. */
-    export var MSG_FONT_COLOR_TITLE: any;
+    var MSG_FONT_COLOR_TITLE: any;
 
     /** @desc Bold button tooltip. */
-    export var MSG_BOLD_TITLE: any;
+    var MSG_BOLD_TITLE: any;
 
     /** @desc Italic button tooltip. */
-    export var MSG_ITALIC_TITLE: any;
+    var MSG_ITALIC_TITLE: any;
 
     /** @desc Underline button tooltip. */
-    export var MSG_UNDERLINE_TITLE: any;
+    var MSG_UNDERLINE_TITLE: any;
 
     /** @desc Text background color menu tooltip. */
-    export var MSG_BACKGROUND_COLOR_TITLE: any;
+    var MSG_BACKGROUND_COLOR_TITLE: any;
 
     /** @desc Link button tooltip. */
-    export var MSG_LINK_TITLE: any;
+    var MSG_LINK_TITLE: any;
 
     /** @desc Numbered list button tooltip. */
-    export var MSG_ORDERED_LIST_TITLE: any;
+    var MSG_ORDERED_LIST_TITLE: any;
 
     /** @desc Bullet list button tooltip. */
-    export var MSG_UNORDERED_LIST_TITLE: any;
+    var MSG_UNORDERED_LIST_TITLE: any;
 
     /** @desc Outdent button tooltip. */
-    export var MSG_OUTDENT_TITLE: any;
+    var MSG_OUTDENT_TITLE: any;
 
     /** @desc Indent button tooltip. */
-    export var MSG_INDENT_TITLE: any;
+    var MSG_INDENT_TITLE: any;
 
     /** @desc Align left button tooltip. */
-    export var MSG_ALIGN_LEFT_TITLE: any;
+    var MSG_ALIGN_LEFT_TITLE: any;
 
     /** @desc Align center button tooltip. */
-    export var MSG_ALIGN_CENTER_TITLE: any;
+    var MSG_ALIGN_CENTER_TITLE: any;
 
     /** @desc Align right button tooltip. */
-    export var MSG_ALIGN_RIGHT_TITLE: any;
+    var MSG_ALIGN_RIGHT_TITLE: any;
 
     /** @desc Justify button tooltip. */
-    export var MSG_JUSTIFY_TITLE: any;
+    var MSG_JUSTIFY_TITLE: any;
 
     /** @desc Remove formatting button tooltip. */
-    export var MSG_REMOVE_FORMAT_TITLE: any;
+    var MSG_REMOVE_FORMAT_TITLE: any;
 
     /** @desc Insert image button tooltip. */
-    export var MSG_IMAGE_TITLE: any;
+    var MSG_IMAGE_TITLE: any;
 
     /** @desc Strike through button tooltip. */
-    export var MSG_STRIKE_THROUGH_TITLE: any;
+    var MSG_STRIKE_THROUGH_TITLE: any;
 
     /** @desc Left-to-right button tooltip. */
-    export var MSG_DIR_LTR_TITLE: any;
+    var MSG_DIR_LTR_TITLE: any;
 
     /** @desc Right-to-left button tooltip. */
-    export var MSG_DIR_RTL_TITLE: any;
+    var MSG_DIR_RTL_TITLE: any;
 
     /** @desc Blockquote button tooltip. */
-    export var MSG_BLOCKQUOTE_TITLE: any;
+    var MSG_BLOCKQUOTE_TITLE: any;
 
     /** @desc Edit HTML button tooltip. */
-    export var MSG_EDIT_HTML_TITLE: any;
+    var MSG_EDIT_HTML_TITLE: any;
 
     /** @desc Subscript button tooltip. */
-    export var MSG_SUBSCRIPT: any;
+    var MSG_SUBSCRIPT: any;
 
     /** @desc Superscript button tooltip. */
-    export var MSG_SUPERSCRIPT: any;
+    var MSG_SUPERSCRIPT: any;
 
     /** @desc Edit HTML button caption. */
-    export var MSG_EDIT_HTML_CAPTION: any;
+    var MSG_EDIT_HTML_CAPTION: any;
 
     /**
      * Sets the locale for the font names.  If not set, defaults to 'en-us'.
@@ -139,7 +139,7 @@ declare module goog.ui.editor.DefaultToolbar {
      * before font name menu is created.
      * @param {string} locale Locale to use for the toolbar font names.
      */
-    export function setLocale(locale: string): void;
+    function setLocale(locale: string): void;
 
     /**
      * Initializes the given font menu button by adding default fonts to the menu.
@@ -148,21 +148,21 @@ declare module goog.ui.editor.DefaultToolbar {
      * common fonts.
      * @param {!goog.ui.Select} button Font menu button.
      */
-    export function addDefaultFonts(button: goog.ui.Select): void;
+    function addDefaultFonts(button: goog.ui.Select): void;
 
     /**
      * Initializes the given font size menu button by adding default font sizes to
      * it.
      * @param {!goog.ui.Select} button Font size menu button.
      */
-    export function addDefaultFontSizes(button: goog.ui.Select): void;
+    function addDefaultFontSizes(button: goog.ui.Select): void;
 
     /**
      * Initializes the given "Format block" menu button by adding default format
      * options to the menu.
      * @param {!goog.ui.Select} button "Format block" menu button.
      */
-    export function addDefaultFormatOptions(button: goog.ui.Select): void;
+    function addDefaultFormatOptions(button: goog.ui.Select): void;
 
     /**
      * Creates a {@link goog.ui.Toolbar} containing a default set of editor
@@ -175,7 +175,7 @@ declare module goog.ui.editor.DefaultToolbar {
      *     parent element.
      * @see goog.ui.editor.DefaultToolbar.DEFAULT_BUTTONS
      */
-    export function makeDefaultToolbar(elem: Element, opt_isRightToLeft?: boolean): goog.ui.Toolbar;
+    function makeDefaultToolbar(elem: Element, opt_isRightToLeft?: boolean): goog.ui.Toolbar;
 
     /**
      * Creates a {@link goog.ui.Toolbar} containing the specified set of
@@ -192,7 +192,7 @@ declare module goog.ui.editor.DefaultToolbar {
      * @return {!goog.ui.Toolbar} Editor toolbar, rendered into the given parent
      *     element.
      */
-    export function makeToolbar(items: Array<string>, elem: Element, opt_isRightToLeft?: boolean): goog.ui.Toolbar;
+    function makeToolbar(items: Array<string>, elem: Element, opt_isRightToLeft?: boolean): goog.ui.Toolbar;
 
     /**
      * Creates an instance of a subclass of {@link goog.ui.Button} for the given
@@ -205,7 +205,7 @@ declare module goog.ui.editor.DefaultToolbar {
      * @return {goog.ui.Button} Toolbar button (null if no built-in button exists
      *     for the command).
      */
-    export function makeBuiltInToolbarButton(command: string, opt_domHelper?: goog.dom.DomHelper): goog.ui.Button;
+    function makeBuiltInToolbarButton(command: string, opt_domHelper?: goog.dom.DomHelper): goog.ui.Button;
 }
 
 declare module goog.ui.editor {
@@ -217,7 +217,7 @@ declare module goog.ui.editor {
      *       goog.ui.ButtonRenderer, goog.dom.DomHelper):goog.ui.Button,
      *   queryable:?boolean}}
      */
-    export interface ButtonDescriptor {
+    interface ButtonDescriptor {
         command: string;
         tooltip: string;
         caption: goog.ui.ControlContent;

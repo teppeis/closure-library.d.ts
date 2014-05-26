@@ -7,7 +7,7 @@ declare module goog.dom {
      * @extends {goog.dom.AbstractRange}
      * @final
      */
-    export class TextRange extends goog.dom.AbstractRange {
+    class TextRange extends goog.dom.AbstractRange {
         constructor();
         
         /**
@@ -94,7 +94,7 @@ declare module goog.dom {
      * @extends {goog.dom.SavedRange}
      * @private
      */
-    export interface DomSavedTextRange_ extends goog.dom.SavedRange {
+    interface DomSavedTextRange_ extends goog.dom.SavedRange {
         
         /**
          * @return {!goog.dom.AbstractRange} The restored range.

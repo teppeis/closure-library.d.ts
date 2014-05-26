@@ -9,7 +9,7 @@ declare module goog.fs {
      * @constructor
      * @final
      */
-    export class ProgressEvent extends goog.events.Event {
+    class ProgressEvent extends goog.events.Event {
         constructor(event: ProgressEvent, target: Object);
         
         /**

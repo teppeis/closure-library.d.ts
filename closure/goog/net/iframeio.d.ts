@@ -5,7 +5,7 @@ declare module goog.net {
      * @constructor
      * @extends {goog.events.EventTarget}
      */
-    export class IframeIo extends goog.events.EventTarget {
+    class IframeIo extends goog.events.EventTarget {
         constructor();
         
         /**
@@ -251,7 +251,7 @@ declare module goog.net.IframeIo {
      * @constructor
      * @final
      */
-    export class IncrementalDataEvent extends goog.events.Event {
+    class IncrementalDataEvent extends goog.events.Event {
         constructor(data: Object);
     }
 }

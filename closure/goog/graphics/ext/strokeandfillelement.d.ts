@@ -10,7 +10,7 @@ declare module goog.graphics.ext {
      * @constructor
      * @extends {goog.graphics.ext.Element}
      */
-    export class StrokeAndFillElement extends goog.graphics.ext.Element {
+    class StrokeAndFillElement extends goog.graphics.ext.Element {
         constructor(group: goog.graphics.ext.Group, wrapper: goog.graphics.StrokeAndFillElement);
         
         /**

@@ -9,7 +9,7 @@ declare module goog.math {
      * @constructor
      * @final
      */
-    export class Line {
+    class Line {
         constructor(x0: number, y0: number, x1: number, y1: number);
         
         /**

@@ -3,39 +3,39 @@ declare module goog.labs.userAgent.browser {
     /**
      * @return {boolean} Whether the user's browser is Opera.
      */
-    export function isOpera(): boolean;
+    function isOpera(): boolean;
 
     /**
      * @return {boolean} Whether the user's browser is IE.
      */
-    export function isIE(): boolean;
+    function isIE(): boolean;
 
     /**
      * @return {boolean} Whether the user's browser is Firefox.
      */
-    export function isFirefox(): boolean;
+    function isFirefox(): boolean;
 
     /**
      * @return {boolean} Whether the user's browser is Safari.
      */
-    export function isSafari(): boolean;
+    function isSafari(): boolean;
 
     /**
      * @return {boolean} Whether the user's browser is Chrome.
      */
-    export function isChrome(): boolean;
+    function isChrome(): boolean;
 
     /**
      * @return {boolean} Whether the user's browser is the Android browser.
      */
-    export function isAndroidBrowser(): boolean;
+    function isAndroidBrowser(): boolean;
 
     /**
      * For more information, see:
      * http://docs.aws.amazon.com/silk/latest/developerguide/user-agent.html
      * @return {boolean} Whether the user's browser is Silk.
      */
-    export function isSilk(): boolean;
+    function isSilk(): boolean;
 
     /**
      * @return {string} The browser version or empty string if version cannot be
@@ -46,12 +46,12 @@ declare module goog.labs.userAgent.browser {
      *     http://msdn.microsoft.com/en-us/library/cc196988(v=vs.85).aspx for more
      *     details.)
      */
-    export function getVersion(): string;
+    function getVersion(): string;
 
     /**
      * @param {string|number} version The version to check.
      * @return {boolean} Whether the browser version is higher or the same as the
      *     given version.
      */
-    export function isVersionOrHigher(version: string): boolean;
+    function isVersionOrHigher(version: string): boolean;
 }

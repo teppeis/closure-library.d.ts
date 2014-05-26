@@ -12,7 +12,7 @@ declare module goog.module {
      * @extends {goog.Disposable}
      * @final
      */
-    export class ModuleInfo extends goog.Disposable {
+    class ModuleInfo extends goog.Disposable {
         constructor(deps: Array<string>, id: string);
         
         /**

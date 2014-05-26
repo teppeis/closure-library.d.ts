@@ -7,7 +7,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class AnythingMatcher {
+    class AnythingMatcher {
         constructor();
     }
 }

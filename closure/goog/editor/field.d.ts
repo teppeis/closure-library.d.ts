@@ -25,7 +25,7 @@ declare module goog.editor {
      * @constructor
      * @extends {goog.events.EventTarget}
      */
-    export class Field extends goog.events.EventTarget {
+    class Field extends goog.events.EventTarget {
         constructor(id: string, opt_doc?: Document);
         
         /**
@@ -652,7 +652,7 @@ declare module goog.editor.Field {
      * Event types that can be stopped/started.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         COMMAND_VALUE_CHANGE: string;
         LOAD: string;
         UNLOAD: string;
@@ -672,7 +672,7 @@ declare module goog.editor.Field {
      * @enum {number}
      * @private
      */
-    export interface LoadState_ {
+    interface LoadState_ {
         UNEDITABLE: number;
         LOADING: number;
         EDITABLE: number;
@@ -683,7 +683,7 @@ declare module goog.editor.Field {
      * @enum {number}
      * @private
      */
-    export interface SELECTION_CHANGE_KEYCODES_ {
+    interface SELECTION_CHANGE_KEYCODES_ {
         8: number;
         9: number;
         13: number;

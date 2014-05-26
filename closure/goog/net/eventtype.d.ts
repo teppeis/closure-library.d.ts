@@ -4,7 +4,7 @@ declare module goog.net {
      * Event names for network events
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         COMPLETE: string;
         SUCCESS: string;
         ERROR: string;

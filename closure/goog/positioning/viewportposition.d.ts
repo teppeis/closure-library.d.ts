@@ -11,7 +11,7 @@ declare module goog.positioning {
      * @constructor
      * @extends {goog.positioning.AbstractPosition}
      */
-    export class ViewportPosition extends goog.positioning.AbstractPosition {
+    class ViewportPosition extends goog.positioning.AbstractPosition {
         constructor(arg1: number, opt_arg2?: number);
         
         /**

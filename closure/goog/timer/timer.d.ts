@@ -9,7 +9,7 @@ declare module goog {
      * @constructor
      * @extends {goog.events.EventTarget}
      */
-    export class Timer extends goog.events.EventTarget {
+    class Timer extends goog.events.EventTarget {
         constructor(opt_interval?: number, opt_timerObject?: Object);
         
         /**

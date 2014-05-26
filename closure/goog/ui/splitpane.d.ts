@@ -15,7 +15,7 @@ declare module goog.ui {
      * @extends {goog.ui.Component}
      * @constructor
      */
-    export class SplitPane extends goog.ui.Component {
+    class SplitPane extends goog.ui.Component {
         constructor(firstComponent: goog.ui.Component, secondComponent: goog.ui.Component, orientation: goog.ui.SplitPane.Orientation, opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -106,7 +106,7 @@ declare module goog.ui.SplitPane {
      * Events.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         HANDLE_DRAG: string;
         HANDLE_DRAG_END: string;
         HANDLE_SNAP: string;
@@ -117,7 +117,7 @@ declare module goog.ui.SplitPane {
      * @enum {number}
      * @private
      */
-    export interface IframeOverlayIndex_ {
+    interface IframeOverlayIndex_ {
         HIDDEN: number;
         OVERLAY: number;
         SPLITTER_HANDLE: number;
@@ -127,7 +127,7 @@ declare module goog.ui.SplitPane {
     * Orientation values for the splitpane.
     * @enum {string}
     */
-    export interface Orientation {
+    interface Orientation {
         HORIZONTAL: string;
         VERTICAL: string;
     }

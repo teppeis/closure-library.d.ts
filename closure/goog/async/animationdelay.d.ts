@@ -21,7 +21,7 @@ declare module goog.async {
      * @extends {goog.Disposable}
      * @final
      */
-    export class AnimationDelay extends goog.Disposable {
+    class AnimationDelay extends goog.Disposable {
         constructor(listener: (arg0: number) => any, opt_window?: Window, opt_handler?: Object);
         
         /**

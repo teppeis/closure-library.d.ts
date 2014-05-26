@@ -13,7 +13,7 @@ declare module goog.labs.net.webChannel {
      *     WebChannelDebug instance to use for logging.
      * @implements {goog.labs.net.webChannel.Channel}
      */
-    export class BaseTestChannel {
+    class BaseTestChannel {
         constructor(channel: goog.labs.net.webChannel.Channel, channelDebug: goog.labs.net.webChannel.WebChannelDebug);
     }
 }

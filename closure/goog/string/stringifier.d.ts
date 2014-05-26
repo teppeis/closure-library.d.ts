@@ -4,7 +4,7 @@ declare module goog.string$ {
      * An interface for serializing objects into strings.
      * @interface
      */
-    export interface Stringifier {
+    interface Stringifier {
         
         /**
          * Serializes an object or a value to a string.

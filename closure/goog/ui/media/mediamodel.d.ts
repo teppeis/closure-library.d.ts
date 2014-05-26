@@ -27,7 +27,7 @@ declare module goog.ui.media {
      * @param {number=} opt_height The height of the media in pixels.
      * @constructor
      */
-    export class MediaModel {
+    class MediaModel {
         constructor(opt_url?: string, opt_caption?: string, opt_description?: string, opt_type?: goog.ui.media.MediaModel.MimeType, opt_medium?: goog.ui.media.MediaModel.Medium, opt_duration?: number, opt_width?: number, opt_height?: number);
         
         /**
@@ -229,7 +229,7 @@ declare module goog.ui.media.MediaModel {
      * {@link http://en.wikipedia.org/wiki/Internet_media_type}
      * @enum {string}
      */
-    export interface MimeType {
+    interface MimeType {
         HTML: string;
         PLAIN: string;
         FLASH: string;
@@ -243,7 +243,7 @@ declare module goog.ui.media.MediaModel {
      * {@link http://video.search.yahoo.com/mrss}
      * @enum {string}
      */
-    export interface Medium {
+    interface Medium {
         IMAGE: string;
         AUDIO: string;
         VIDEO: string;
@@ -259,7 +259,7 @@ declare module goog.ui.media.MediaModel {
      * @constructor
      * @final
      */
-    export class Thumbnail {
+    class Thumbnail {
         constructor(url: string, opt_size?: goog.math.Size);
         
         /**
@@ -300,7 +300,7 @@ declare module goog.ui.media.MediaModel {
      * @constructor
      * @final
      */
-    export class Player {
+    class Player {
         constructor(url: string, opt_vars?: Object, opt_size?: goog.math.Size);
         
         /**
@@ -356,7 +356,7 @@ declare module goog.ui.media.MediaModel {
      * @constructor
      * @final
      */
-    export class Category {
+    class Category {
         constructor(scheme: string, value: string, opt_label?: string);
         
         /**
@@ -413,7 +413,7 @@ declare module goog.ui.media.MediaModel {
      * @constructor
      * @final
      */
-    export class Credit {
+    class Credit {
         constructor(value: string, opt_role?: goog.ui.media.MediaModel.Credit.Role, opt_scheme?: goog.ui.media.MediaModel.Credit.Scheme);
         
         /**
@@ -469,7 +469,7 @@ declare module goog.ui.media.MediaModel {
      * @constructor
      * @final
      */
-    export class SubTitle {
+    class SubTitle {
         constructor(href: string, lang: string, type: string);
         
         /**
@@ -519,7 +519,7 @@ declare module goog.ui.media.MediaModel.Credit {
      * The types of known roles.
      * @enum {string}
      */
-    export interface Role {
+    interface Role {
         UPLOADER: string;
         OWNER: string;
     }
@@ -528,7 +528,7 @@ declare module goog.ui.media.MediaModel.Credit {
      * The types of known schemes.
      * @enum {string}
      */
-    export interface Scheme {
+    interface Scheme {
         EUROPEAN_BROADCASTING: string;
         YAHOO: string;
         YOUTUBE: string;

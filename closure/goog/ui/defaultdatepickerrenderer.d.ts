@@ -9,7 +9,7 @@ declare module goog.ui {
      * @constructor
      * @implements {goog.ui.DatePickerRenderer}
      */
-    export class DefaultDatePickerRenderer {
+    class DefaultDatePickerRenderer {
         constructor(baseCssClass: string, opt_domHelper?: goog.dom.DomHelper);
         
         /**

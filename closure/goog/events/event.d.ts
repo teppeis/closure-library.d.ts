@@ -8,7 +8,7 @@ declare module goog.events {
      * of the Event.
      * @typedef {string|Object|goog.events.Event|goog.events.EventId}
      */
-    export interface EventLike {
+    interface EventLike {
     }
 
     /**
@@ -21,7 +21,7 @@ declare module goog.events {
      *     declared at {@link http://developer.mozilla.org/en/DOM/EventTarget}.
      * @constructor
      */
-    export class Event {
+    class Event {
         constructor(type: string, opt_target?: Object);
         
         /**

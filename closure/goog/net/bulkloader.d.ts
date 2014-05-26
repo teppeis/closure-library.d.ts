@@ -7,7 +7,7 @@ declare module goog.net {
      * @extends {goog.events.EventTarget}
      * @final
      */
-    export class BulkLoader extends goog.events.EventTarget {
+    class BulkLoader extends goog.events.EventTarget {
         constructor(uris: Array<string>);
         
         /**

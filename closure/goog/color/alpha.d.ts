@@ -7,7 +7,7 @@ declare module goog.color.alpha {
      *     a hex representation of the color, and 'type' is a string
      *     containing the type of color format passed in ('hex', 'rgb', 'named').
      */
-    export function parse(str: string): {hex: string; type: string};
+    function parse(str: string): {hex: string; type: string};
 
     /**
      * Converts a hex representation of a color to RGBA.
@@ -15,7 +15,7 @@ declare module goog.color.alpha {
      * @return {string} string of the form 'rgba(R,G,B,A)' which can be used in
      *    styles.
      */
-    export function hexToRgbaStyle(hexColor: string): string;
+    function hexToRgbaStyle(hexColor: string): string;
 
     /**
      * Gets the hex color part of an alpha hex color. For example, from '#abcdef55'
@@ -23,7 +23,7 @@ declare module goog.color.alpha {
      * @param {string} colorWithAlpha The alpha hex color to get the hex color from.
      * @return {string} The hex color where the alpha part has been stripped off.
      */
-    export function extractHexColor(colorWithAlpha: string): string;
+    function extractHexColor(colorWithAlpha: string): string;
 
     /**
      * Gets the alpha color part of an alpha hex color. For example, from
@@ -31,7 +31,7 @@ declare module goog.color.alpha {
      * @param {string} colorWithAlpha The alpha hex color to get the hex color from.
      * @return {string} The hex color where the alpha part has been stripped off.
      */
-    export function extractAlpha(colorWithAlpha: string): string;
+    function extractAlpha(colorWithAlpha: string): string;
 
     /**
      * Converts an 8-hex representation of a color to RGBA.
@@ -39,7 +39,7 @@ declare module goog.color.alpha {
      * @return {!Array} array containing [r, g, b, a]. r, g, b are ints between 0
      *     and 255, and a is a value between 0 and 1.
      */
-    export function hexToRgba(hexColor: string): Array<any>;
+    function hexToRgba(hexColor: string): Array<any>;
 
     /**
      * Converts a color from RGBA to hex representation.
@@ -49,7 +49,7 @@ declare module goog.color.alpha {
      * @param {number} a Amount of alpha, float between 0 and 1.
      * @return {string} hex representation of the color.
      */
-    export function rgbaToHex(r: number, g: number, b: number, a: number): string;
+    function rgbaToHex(r: number, g: number, b: number, a: number): string;
 
     /**
      * Converts a color from HSLA to hex representation.
@@ -59,7 +59,7 @@ declare module goog.color.alpha {
      * @param {number} a Amount of alpha, float between 0 and 1.
      * @return {string} hex representation of the color.
      */
-    export function hslaToHex(h: number, s: number, l: number, a: number): string;
+    function hslaToHex(h: number, s: number, l: number, a: number): string;
 
     /**
      * Converts a color from RGBA to hex representation.
@@ -67,7 +67,7 @@ declare module goog.color.alpha {
      *     and a in [0, 1].
      * @return {string} hex representation of the color.
      */
-    export function rgbaArrayToHex(rgba: Array<number>): string;
+    function rgbaArrayToHex(rgba: Array<number>): string;
 
     /**
      * Converts a color from RGBA to an RGBA style string.
@@ -77,7 +77,7 @@ declare module goog.color.alpha {
      * @param {number} a Value of alpha, in [0, 1].
      * @return {string} An 'rgba(r,g,b,a)' string ready for use in a CSS rule.
      */
-    export function rgbaToRgbaStyle(r: number, g: number, b: number, a: number): string;
+    function rgbaToRgbaStyle(r: number, g: number, b: number, a: number): string;
 
     /**
      * Converts a color from RGBA to an RGBA style string.
@@ -85,7 +85,7 @@ declare module goog.color.alpha {
      *     with r, g, b in [0, 255] and a in [0, 1].
      * @return {string} An 'rgba(r,g,b,a)' string ready for use in a CSS rule.
      */
-    export function rgbaArrayToRgbaStyle(rgba: Array<number>): string;
+    function rgbaArrayToRgbaStyle(rgba: Array<number>): string;
 
     /**
      * Converts a color from HSLA to hex representation.
@@ -93,7 +93,7 @@ declare module goog.color.alpha {
      *     [0, 360], s and l are integers in [0, 100], and a is in [0, 1].
      * @return {string} hex representation of the color, such as '#af457eff'.
      */
-    export function hslaArrayToHex(hsla: Array<number>): string;
+    function hslaArrayToHex(hsla: Array<number>): string;
 
     /**
      * Converts a color from HSLA to an RGBA style string.
@@ -101,7 +101,7 @@ declare module goog.color.alpha {
      *     [0, 360], s and l are integers in [0, 100], and a is in [0, 1].
      * @return {string} An 'rgba(r,g,b,a)' string ready for use in a CSS rule.
      */
-    export function hslaArrayToRgbaStyle(hsla: Array<number>): string;
+    function hslaArrayToRgbaStyle(hsla: Array<number>): string;
 
     /**
      * Converts a color from HSLA to an RGBA style string.
@@ -112,7 +112,7 @@ declare module goog.color.alpha {
      * @return {string} An 'rgba(r,g,b,a)' string ready for use in a CSS rule.
      *     styles.
      */
-    export function hslaToRgbaStyle(h: number, s: number, l: number, a: number): string;
+    function hslaToRgbaStyle(h: number, s: number, l: number, a: number): string;
 
     /**
      * Converts a color from HSLA color space to RGBA color space.
@@ -123,7 +123,7 @@ declare module goog.color.alpha {
      * @return {!Array.<number>} [r, g, b, a] values for the color, where r, g, b
      *     are integers in [0, 255] and a is a float in [0, 1].
      */
-    export function hslaToRgba(h: number, s: number, l: number, a: number): Array<number>;
+    function hslaToRgba(h: number, s: number, l: number, a: number): Array<number>;
 
     /**
      * Converts a color from RGBA color space to HSLA color space.
@@ -135,7 +135,7 @@ declare module goog.color.alpha {
      * @return {!Array.<number>} [h, s, l, a] values for the color, with h an int in
      *     [0, 360] and s, l and a in [0, 1].
      */
-    export function rgbaToHsla(r: number, g: number, b: number, a: number): Array<number>;
+    function rgbaToHsla(r: number, g: number, b: number, a: number): Array<number>;
 
     /**
      * Converts a color from RGBA color space to HSLA color space.
@@ -144,7 +144,7 @@ declare module goog.color.alpha {
      * @return {!Array.<number>} [h, s, l, a] values for the color, with h in
      *     [0, 360] and s, l and a in [0, 1].
      */
-    export function rgbaArrayToHsla(rgba: Array<number>): Array<number>;
+    function rgbaArrayToHsla(rgba: Array<number>): Array<number>;
 
     /**
      * Converts from h,s,v,a values to a hex string
@@ -154,7 +154,7 @@ declare module goog.color.alpha {
      * @param {number} a Alpha, in [0, 1].
      * @return {string} hex representation of the color.
      */
-    export function hsvaToHex(h: number, s: number, v: number, a: number): string;
+    function hsvaToHex(h: number, s: number, v: number, a: number): string;
 
     /**
      * Converts from an HSVA array to a hex string
@@ -162,5 +162,5 @@ declare module goog.color.alpha {
      *     [[0, 1], [0, 1], [0, 255], [0, 1]].
      * @return {string} hex representation of the color.
      */
-    export function hsvaArrayToHex(hsva: Array<any>): string;
+    function hsvaArrayToHex(hsva: Array<any>): string;
 }

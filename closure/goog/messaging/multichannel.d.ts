@@ -14,7 +14,7 @@ declare module goog.messaging {
      * @extends {goog.Disposable}
      * @final
      */
-    export class MultiChannel extends goog.Disposable {
+    class MultiChannel extends goog.Disposable {
         constructor(underlyingChannel: goog.messaging.MessageChannel);
         
         /**
@@ -44,7 +44,7 @@ declare module goog.messaging.MultiChannel {
      * @extends {goog.Disposable}
      * @final
      */
-    export class VirtualChannel extends goog.Disposable {
+    class VirtualChannel extends goog.Disposable {
         constructor(parent: goog.messaging.MultiChannel, name: string);
     }
 }

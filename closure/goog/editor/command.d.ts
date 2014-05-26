@@ -4,7 +4,7 @@ declare module goog.editor {
      * Commands that the editor can excute via execCommand or queryCommandValue.
      * @enum {string}
      */
-    export interface Command {
+    interface Command {
         UNDO: string;
         REDO: string;
         LINK: string;

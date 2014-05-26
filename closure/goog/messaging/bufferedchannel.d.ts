@@ -15,7 +15,7 @@ declare module goog.messaging {
      * @implements {goog.messaging.MessageChannel};
      * @final
      */
-    export class BufferedChannel extends goog.Disposable {
+    class BufferedChannel extends goog.Disposable {
         constructor(messageChannel: goog.messaging.MessageChannel, opt_interval?: number);
         
         /**

@@ -25,7 +25,7 @@ declare module goog.string$ {
      * @struct
      * @implements {goog.string.TypedString}
      */
-    export class Const {
+    class Const {
         constructor();
         
         /**

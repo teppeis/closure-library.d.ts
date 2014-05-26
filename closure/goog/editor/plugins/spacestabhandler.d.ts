@@ -6,7 +6,7 @@ declare module goog.editor.plugins {
      * @extends {goog.editor.plugins.AbstractTabHandler}
      * @final
      */
-    export class SpacesTabHandler extends goog.editor.plugins.AbstractTabHandler {
+    class SpacesTabHandler extends goog.editor.plugins.AbstractTabHandler {
         constructor();
     }
 }

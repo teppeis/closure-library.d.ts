@@ -3,7 +3,7 @@ declare module goog {
     /**
      * Reference to the global context.  In most cases this will be 'window'.
      */
-    export var global: any;
+    var global: any;
 
     /**
      * @define {boolean} DEBUG is provided as a convenience so that debugging code
@@ -13,19 +13,19 @@ declare module goog {
      * because they are generally used for debugging purposes and it is difficult
      * for the JSCompiler to statically determine whether they are used.
      */
-    export var DEBUG: any;
+    var DEBUG: any;
 
     /**
      * Path for included scripts.
      * @type {string}
      */
-    export var basePath: string;
+    var basePath: string;
 
     /**
      * True if goog.dependencies_ is available.
      * @const {boolean}
      */
-    export var DEPENDENCIES_ENABLED: any;
+    var DEPENDENCIES_ENABLED: any;
 
     /**
      * Returns true if the specified value is not undefined.
@@ -35,7 +35,7 @@ declare module goog {
      * @param {?} val Variable to test.
      * @return {boolean} Whether variable is defined.
      */
-    export function isDef(val: any): boolean;
+    function isDef(val: any): boolean;
 
     /**
      * Defines a named value. In uncompiled mode, the value is retreived from
@@ -47,7 +47,7 @@ declare module goog {
      * @param {string} name The distinguished name to provide.
      * @param {string|number|boolean} defaultValue
      */
-    export function define(name: string, defaultValue: string): void;
+    function define(name: string, defaultValue: string): void;
 
     /**
      * Creates object stubs for a namespace.  The presence of one or more
@@ -59,7 +59,7 @@ declare module goog {
      * @param {string} name Namespace provided by this file in the form
      *     "goog.package.part".
      */
-    export function provide(name: string): void;
+    function provide(name: string): void;
 
     /**
      * Marks that the current file should only be used for testing, and never for
@@ -72,7 +72,7 @@ declare module goog {
      * @param {string=} opt_message Optional message to add to the error that's
      *     raised when used in production code.
      */
-    export function setTestOnly(opt_message?: string): void;
+    function setTestOnly(opt_message?: string): void;
 
     /**
      * Forward declares a symbol. This is an indication to the compiler that the
@@ -90,7 +90,7 @@ declare module goog {
      * @param {string} name The namespace to forward declare in the form of
      *     "goog.package.part".
      */
-    export function forwardDeclare(name: string): void;
+    function forwardDeclare(name: string): void;
 
     /**
      * Returns an object based on its fully qualified external name.  The object
@@ -103,7 +103,7 @@ declare module goog {
      *     |goog.global|.
      * @return {?} The value (object or primitive) or, if not found, null.
      */
-    export function getObjectByName(name: string, opt_obj?: Object): any;
+    function getObjectByName(name: string, opt_obj?: Object): any;
 
     /**
      * Globalizes a whole namespace, such as goog or goog.lang.
@@ -113,7 +113,7 @@ declare module goog {
      * @deprecated Properties may be explicitly exported to the global scope, but
      *     this should no longer be done in bulk.
      */
-    export function globalize(obj: Object, opt_global?: Object): void;
+    function globalize(obj: Object, opt_global?: Object): void;
 
     /**
      * Adds a dependency from a file to the files it requires.
@@ -123,7 +123,7 @@ declare module goog {
      * @param {Array} requires An array of strings with the names of the objects
      *                         this file requires.
      */
-    export function addDependency(relPath: string, provides: Array<any>, requires: Array<any>): void;
+    function addDependency(relPath: string, provides: Array<any>, requires: Array<any>): void;
 
     /**
      * Implements a system for the dynamic resolution of dependencies that works in
@@ -133,13 +133,13 @@ declare module goog {
      * @param {string} name Namespace to include (as was given in goog.provide()) in
      *     the form "goog.package.part".
      */
-    export function require(name: string): void;
+    function require(name: string): void;
 
     /**
      * Null function used for default values of callbacks, etc.
      * @return {void} Nothing.
      */
-    export function nullFunction(): void;
+    function nullFunction(): void;
 
     /**
      * The identity function. Returns its first argument.
@@ -150,7 +150,7 @@ declare module goog {
      *      without type.
      * @deprecated Use goog.functions.identity instead.
      */
-    export function identityFunction(opt_returnValue?: any, ...var_args: any[]): any;
+    function identityFunction(opt_returnValue?: any, ...var_args: any[]): any;
 
     /**
      * When defining a class Foo with an abstract method bar(), you can do:
@@ -165,7 +165,7 @@ declare module goog {
      * @type {!Function}
      * @throws {Error} when invoked to indicate the method should be overridden.
      */
-    export function abstractMethod(): void;
+    function abstractMethod(): void;
 
     /**
      * Adds a {@code getInstance} static method that always returns the same
@@ -173,7 +173,7 @@ declare module goog {
      * @param {!Function} ctor The constructor for the class to add the static
      *     method to.
      */
-    export function addSingletonGetter(ctor: Function): void;
+    function addSingletonGetter(ctor: Function): void;
 
     /**
      * This is a "fixed" version of the typeof operator.  It differs from the typeof
@@ -181,28 +181,28 @@ declare module goog {
      * @param {*} value The value to get the type of.
      * @return {string} The name of the type.
      */
-    export function typeOf(value: any): string;
+    function typeOf(value: any): string;
 
     /**
      * Returns true if the specified value is null.
      * @param {?} val Variable to test.
      * @return {boolean} Whether variable is null.
      */
-    export function isNull(val: any): boolean;
+    function isNull(val: any): boolean;
 
     /**
      * Returns true if the specified value is defined and not null.
      * @param {?} val Variable to test.
      * @return {boolean} Whether variable is defined and not null.
      */
-    export function isDefAndNotNull(val: any): boolean;
+    function isDefAndNotNull(val: any): boolean;
 
     /**
      * Returns true if the specified value is an array.
      * @param {?} val Variable to test.
      * @return {boolean} Whether variable is an array.
      */
-    export function isArray(val: any): boolean;
+    function isArray(val: any): boolean;
 
     /**
      * Returns true if the object looks like an array. To qualify as array like
@@ -211,7 +211,7 @@ declare module goog {
      * @param {?} val Variable to test.
      * @return {boolean} Whether variable is an array.
      */
-    export function isArrayLike(val: any): boolean;
+    function isArrayLike(val: any): boolean;
 
     /**
      * Returns true if the object looks like a Date. To qualify as Date-like the
@@ -219,35 +219,35 @@ declare module goog {
      * @param {?} val Variable to test.
      * @return {boolean} Whether variable is a like a Date.
      */
-    export function isDateLike(val: any): boolean;
+    function isDateLike(val: any): boolean;
 
     /**
      * Returns true if the specified value is a string.
      * @param {?} val Variable to test.
      * @return {boolean} Whether variable is a string.
      */
-    export function isString(val: any): boolean;
+    function isString(val: any): boolean;
 
     /**
      * Returns true if the specified value is a boolean.
      * @param {?} val Variable to test.
      * @return {boolean} Whether variable is boolean.
      */
-    export function isBoolean(val: any): boolean;
+    function isBoolean(val: any): boolean;
 
     /**
      * Returns true if the specified value is a number.
      * @param {?} val Variable to test.
      * @return {boolean} Whether variable is a number.
      */
-    export function isNumber(val: any): boolean;
+    function isNumber(val: any): boolean;
 
     /**
      * Returns true if the specified value is a function.
      * @param {?} val Variable to test.
      * @return {boolean} Whether variable is a function.
      */
-    export function isFunction(val: any): boolean;
+    function isFunction(val: any): boolean;
 
     /**
      * Returns true if the specified value is an object.  This includes arrays and
@@ -255,7 +255,7 @@ declare module goog {
      * @param {?} val Variable to test.
      * @return {boolean} Whether variable is an object.
      */
-    export function isObject(val: any): boolean;
+    function isObject(val: any): boolean;
 
     /**
      * Gets a unique ID for an object. This mutates the object so that further calls
@@ -268,7 +268,7 @@ declare module goog {
      * @param {Object} obj The object to get the unique ID for.
      * @return {number} The unique ID for the object.
      */
-    export function getUid(obj: Object): number;
+    function getUid(obj: Object): number;
 
     /**
      * Whether the given object is alreay assigned a unique ID.
@@ -278,7 +278,7 @@ declare module goog {
      * @param {Object} obj The object to check.
      * @return {boolean} Whether there an assigned unique id for the object.
      */
-    export function hasUid(obj: Object): boolean;
+    function hasUid(obj: Object): boolean;
 
     /**
      * Removes the unique ID from an object. This is useful if the object was
@@ -286,7 +286,7 @@ declare module goog {
      * undone.
      * @param {Object} obj The object to remove the unique ID field from.
      */
-    export function removeUid(obj: Object): void;
+    function removeUid(obj: Object): void;
 
     /**
      * Adds a hash code field to an object. The hash code is unique for the
@@ -295,14 +295,14 @@ declare module goog {
      * @return {number} The hash code for the object.
      * @deprecated Use goog.getUid instead.
      */
-    export function getHashCode(obj: Object): number;
+    function getHashCode(obj: Object): number;
 
     /**
      * Removes the hash code field from an object.
      * @param {Object} obj The object to remove the field from.
      * @deprecated Use goog.removeUid instead.
      */
-    export function removeHashCode(obj: Object): void;
+    function removeHashCode(obj: Object): void;
 
     /**
      * Clones a value. The input may be an Object, Array, or basic type. Objects and
@@ -319,7 +319,7 @@ declare module goog {
      * @return {*} A clone of the input value.
      * @deprecated goog.cloneObject is unsafe. Prefer the goog.object methods.
      */
-    export function cloneObject(obj: any): any;
+    function cloneObject(obj: any): any;
 
     /**
      * Partially applies this function to a particular 'this object' and zero or
@@ -345,7 +345,7 @@ declare module goog {
      * @template T
      * @suppress {deprecated} See above.
      */
-    export function bind<T>(fn: (...arg0: any[]) => any, selfObj: T, ...var_args: any[]): Function;
+    function bind<T>(fn: (...arg0: any[]) => any, selfObj: T, ...var_args: any[]): Function;
 
     /**
      * Like bind(), except that a 'this object' is not required. Useful when the
@@ -360,7 +360,7 @@ declare module goog {
      * @return {!Function} A partially-applied form of the function bind() was
      *     invoked as a method of.
      */
-    export function partial(fn: Function, ...var_args: any[]): Function;
+    function partial(fn: Function, ...var_args: any[]): Function;
 
     /**
      * Copies all the members of a source object to a target object. This method
@@ -369,13 +369,13 @@ declare module goog {
      * @param {Object} target Target.
      * @param {Object} source Source.
      */
-    export function mixin(target: Object, source: Object): void;
+    function mixin(target: Object, source: Object): void;
 
     /**
      * @return {number} An integer value representing the number of milliseconds
      *     between midnight, January 1, 1970 and the current time.
      */
-    export function now(): number;
+    function now(): number;
 
     /**
      * Evals JavaScript in the global scope.  In IE this uses execScript, other
@@ -384,7 +384,7 @@ declare module goog {
      * Throws an exception if neither execScript or eval is defined.
      * @param {string} script JavaScript string.
      */
-    export function globalEval(script: string): void;
+    function globalEval(script: string): void;
 
     /**
      * Handles strings that are intended to be used as CSS class names.
@@ -417,7 +417,7 @@ declare module goog {
      * @return {string} The class name or the concatenation of the class name and
      *     the modifier.
      */
-    export function getCssName(className: string, opt_modifier?: string): string;
+    function getCssName(className: string, opt_modifier?: string): string;
 
     /**
      * Sets the map to check when returning a value from goog.getCssName(). Example:
@@ -442,7 +442,7 @@ declare module goog {
      *     options: 'BY_PART', and 'BY_WHOLE'.
      * @see goog.getCssName for a description.
      */
-    export function setCssNameMapping(mapping: Object, opt_style?: string): void;
+    function setCssNameMapping(mapping: Object, opt_style?: string): void;
 
     /**
      * Gets a localized message.
@@ -460,7 +460,7 @@ declare module goog {
      * @param {Object=} opt_values Map of place holder name to value.
      * @return {string} message with placeholders filled.
      */
-    export function getMsg(str: string, opt_values?: Object): string;
+    function getMsg(str: string, opt_values?: Object): string;
 
     /**
      * Gets a localized message. If the message does not have a translation, gives a
@@ -477,7 +477,7 @@ declare module goog {
      * @param {string} b The fallback message.
      * @return {string} The best translated message.
      */
-    export function getMsgWithFallback(a: string, b: string): string;
+    function getMsgWithFallback(a: string, b: string): string;
 
     /**
      * Exposes an unobfuscated global namespace path for the given object.
@@ -500,7 +500,7 @@ declare module goog {
      * @param {Object=} opt_objectToExportTo The object to add the path to; default
      *     is goog.global.
      */
-    export function exportSymbol(publicPath: string, object: any, opt_objectToExportTo?: Object): void;
+    function exportSymbol(publicPath: string, object: any, opt_objectToExportTo?: Object): void;
 
     /**
      * Exports a property unobfuscated into the object's namespace.
@@ -510,7 +510,7 @@ declare module goog {
      * @param {string} publicName Unobfuscated name to export.
      * @param {*} symbol Object the name should point to.
      */
-    export function exportProperty(object: Object, publicName: string, symbol: any): void;
+    function exportProperty(object: Object, publicName: string, symbol: any): void;
 
     /**
      * Inherit the prototype methods from one constructor into another.
@@ -542,7 +542,7 @@ declare module goog {
      * @param {Function} childCtor Child class.
      * @param {Function} parentCtor Parent class.
      */
-    export function inherits(childCtor: Function, parentCtor: Function): void;
+    function inherits(childCtor: Function, parentCtor: Function): void;
 
     /**
      * Call up to the superclass.
@@ -569,7 +569,7 @@ declare module goog {
      * @suppress {es5Strict} This method can not be used in strict mode, but
      *     all Closure Library consumers must depend on this file.
      */
-    export function base(me: Object, opt_methodName?: any, ...var_args: any[]): any;
+    function base(me: Object, opt_methodName?: any, ...var_args: any[]): any;
 
     /**
      * Allow for aliasing within scope functions.  This function exists for
@@ -580,5 +580,5 @@ declare module goog {
      *     to namespaces (e.g. "var dom = goog.dom") or classes
      *     (e.g. "var Timer = goog.Timer").
      */
-    export function scope(fn: () => any): void;
+    function scope(fn: () => any): void;
 }

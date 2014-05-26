@@ -6,7 +6,7 @@ declare module goog.labs.structs {
      * @struct
      * @final
      */
-    export class Map {
+    class Map {
         constructor();
         
         /**
@@ -102,7 +102,7 @@ declare module goog.labs.structs.Map {
      * Browser feature enum necessary for map.
      * @enum {boolean}
      */
-    export interface BrowserFeature {
+    interface BrowserFeature {
         OBJECT_CREATE_SUPPORTED: boolean;
         OBJECT_KEYS_SUPPORTED: boolean;
     }

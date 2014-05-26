@@ -5,5 +5,5 @@ declare module goog.editor {
      * browser supports.
      * @type {Object}
      */
-    export var BrowserFeature: Object;
+    var BrowserFeature: Object;
 }

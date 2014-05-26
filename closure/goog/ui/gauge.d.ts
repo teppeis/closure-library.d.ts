@@ -9,7 +9,7 @@ declare module goog.ui {
      * @constructor
      * @final
      */
-    export class GaugeColoredRange {
+    class GaugeColoredRange {
         constructor(fromValue: number, toValue: number, backgroundColor: string);
     }
 
@@ -28,7 +28,7 @@ declare module goog.ui {
      * @extends {goog.ui.Component}
      * @final
      */
-    export class Gauge extends goog.ui.Component {
+    class Gauge extends goog.ui.Component {
         constructor(width: number, height: number, opt_domHelper?: goog.dom.DomHelper);
         
         /**

@@ -5,5 +5,5 @@ declare module goog.userAgent.keyboard {
      * keyboard shortcuts.
      * @type {boolean}
      */
-    export var MAC_KEYBOARD: boolean;
+    var MAC_KEYBOARD: boolean;
 }

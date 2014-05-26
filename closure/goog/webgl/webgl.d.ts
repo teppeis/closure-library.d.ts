@@ -4,1772 +4,1772 @@ declare module goog.webgl {
      * @const
      * @type {number}
      */
-    export var DEPTH_BUFFER_BIT: number;
+    var DEPTH_BUFFER_BIT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var STENCIL_BUFFER_BIT: number;
+    var STENCIL_BUFFER_BIT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var COLOR_BUFFER_BIT: number;
+    var COLOR_BUFFER_BIT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var POINTS: number;
+    var POINTS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var LINES: number;
+    var LINES: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var LINE_LOOP: number;
+    var LINE_LOOP: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var LINE_STRIP: number;
+    var LINE_STRIP: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TRIANGLES: number;
+    var TRIANGLES: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TRIANGLE_STRIP: number;
+    var TRIANGLE_STRIP: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TRIANGLE_FAN: number;
+    var TRIANGLE_FAN: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var ZERO: number;
+    var ZERO: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var ONE: number;
+    var ONE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var SRC_COLOR: number;
+    var SRC_COLOR: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var ONE_MINUS_SRC_COLOR: number;
+    var ONE_MINUS_SRC_COLOR: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var SRC_ALPHA: number;
+    var SRC_ALPHA: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var ONE_MINUS_SRC_ALPHA: number;
+    var ONE_MINUS_SRC_ALPHA: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var DST_ALPHA: number;
+    var DST_ALPHA: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var ONE_MINUS_DST_ALPHA: number;
+    var ONE_MINUS_DST_ALPHA: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var DST_COLOR: number;
+    var DST_COLOR: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var ONE_MINUS_DST_COLOR: number;
+    var ONE_MINUS_DST_COLOR: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var SRC_ALPHA_SATURATE: number;
+    var SRC_ALPHA_SATURATE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var FUNC_ADD: number;
+    var FUNC_ADD: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var BLEND_EQUATION: number;
+    var BLEND_EQUATION: number;
 
     /**
      * Same as BLEND_EQUATION
      * @const
      * @type {number}
      */
-    export var BLEND_EQUATION_RGB: number;
+    var BLEND_EQUATION_RGB: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var BLEND_EQUATION_ALPHA: number;
+    var BLEND_EQUATION_ALPHA: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var FUNC_SUBTRACT: number;
+    var FUNC_SUBTRACT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var FUNC_REVERSE_SUBTRACT: number;
+    var FUNC_REVERSE_SUBTRACT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var BLEND_DST_RGB: number;
+    var BLEND_DST_RGB: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var BLEND_SRC_RGB: number;
+    var BLEND_SRC_RGB: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var BLEND_DST_ALPHA: number;
+    var BLEND_DST_ALPHA: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var BLEND_SRC_ALPHA: number;
+    var BLEND_SRC_ALPHA: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var CONSTANT_COLOR: number;
+    var CONSTANT_COLOR: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var ONE_MINUS_CONSTANT_COLOR: number;
+    var ONE_MINUS_CONSTANT_COLOR: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var CONSTANT_ALPHA: number;
+    var CONSTANT_ALPHA: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var ONE_MINUS_CONSTANT_ALPHA: number;
+    var ONE_MINUS_CONSTANT_ALPHA: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var BLEND_COLOR: number;
+    var BLEND_COLOR: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var ARRAY_BUFFER: number;
+    var ARRAY_BUFFER: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var ELEMENT_ARRAY_BUFFER: number;
+    var ELEMENT_ARRAY_BUFFER: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var ARRAY_BUFFER_BINDING: number;
+    var ARRAY_BUFFER_BINDING: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var ELEMENT_ARRAY_BUFFER_BINDING: number;
+    var ELEMENT_ARRAY_BUFFER_BINDING: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var STREAM_DRAW: number;
+    var STREAM_DRAW: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var STATIC_DRAW: number;
+    var STATIC_DRAW: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var DYNAMIC_DRAW: number;
+    var DYNAMIC_DRAW: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var BUFFER_SIZE: number;
+    var BUFFER_SIZE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var BUFFER_USAGE: number;
+    var BUFFER_USAGE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var CURRENT_VERTEX_ATTRIB: number;
+    var CURRENT_VERTEX_ATTRIB: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var FRONT: number;
+    var FRONT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var BACK: number;
+    var BACK: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var FRONT_AND_BACK: number;
+    var FRONT_AND_BACK: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var CULL_FACE: number;
+    var CULL_FACE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var BLEND: number;
+    var BLEND: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var DITHER: number;
+    var DITHER: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var STENCIL_TEST: number;
+    var STENCIL_TEST: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var DEPTH_TEST: number;
+    var DEPTH_TEST: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var SCISSOR_TEST: number;
+    var SCISSOR_TEST: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var POLYGON_OFFSET_FILL: number;
+    var POLYGON_OFFSET_FILL: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var SAMPLE_ALPHA_TO_COVERAGE: number;
+    var SAMPLE_ALPHA_TO_COVERAGE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var SAMPLE_COVERAGE: number;
+    var SAMPLE_COVERAGE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var NO_ERROR: number;
+    var NO_ERROR: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var INVALID_ENUM: number;
+    var INVALID_ENUM: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var INVALID_VALUE: number;
+    var INVALID_VALUE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var INVALID_OPERATION: number;
+    var INVALID_OPERATION: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var OUT_OF_MEMORY: number;
+    var OUT_OF_MEMORY: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var CW: number;
+    var CW: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var CCW: number;
+    var CCW: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var LINE_WIDTH: number;
+    var LINE_WIDTH: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var ALIASED_POINT_SIZE_RANGE: number;
+    var ALIASED_POINT_SIZE_RANGE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var ALIASED_LINE_WIDTH_RANGE: number;
+    var ALIASED_LINE_WIDTH_RANGE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var CULL_FACE_MODE: number;
+    var CULL_FACE_MODE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var FRONT_FACE: number;
+    var FRONT_FACE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var DEPTH_RANGE: number;
+    var DEPTH_RANGE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var DEPTH_WRITEMASK: number;
+    var DEPTH_WRITEMASK: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var DEPTH_CLEAR_VALUE: number;
+    var DEPTH_CLEAR_VALUE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var DEPTH_FUNC: number;
+    var DEPTH_FUNC: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var STENCIL_CLEAR_VALUE: number;
+    var STENCIL_CLEAR_VALUE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var STENCIL_FUNC: number;
+    var STENCIL_FUNC: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var STENCIL_FAIL: number;
+    var STENCIL_FAIL: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var STENCIL_PASS_DEPTH_FAIL: number;
+    var STENCIL_PASS_DEPTH_FAIL: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var STENCIL_PASS_DEPTH_PASS: number;
+    var STENCIL_PASS_DEPTH_PASS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var STENCIL_REF: number;
+    var STENCIL_REF: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var STENCIL_VALUE_MASK: number;
+    var STENCIL_VALUE_MASK: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var STENCIL_WRITEMASK: number;
+    var STENCIL_WRITEMASK: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var STENCIL_BACK_FUNC: number;
+    var STENCIL_BACK_FUNC: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var STENCIL_BACK_FAIL: number;
+    var STENCIL_BACK_FAIL: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var STENCIL_BACK_PASS_DEPTH_FAIL: number;
+    var STENCIL_BACK_PASS_DEPTH_FAIL: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var STENCIL_BACK_PASS_DEPTH_PASS: number;
+    var STENCIL_BACK_PASS_DEPTH_PASS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var STENCIL_BACK_REF: number;
+    var STENCIL_BACK_REF: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var STENCIL_BACK_VALUE_MASK: number;
+    var STENCIL_BACK_VALUE_MASK: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var STENCIL_BACK_WRITEMASK: number;
+    var STENCIL_BACK_WRITEMASK: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var VIEWPORT: number;
+    var VIEWPORT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var SCISSOR_BOX: number;
+    var SCISSOR_BOX: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var COLOR_CLEAR_VALUE: number;
+    var COLOR_CLEAR_VALUE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var COLOR_WRITEMASK: number;
+    var COLOR_WRITEMASK: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var UNPACK_ALIGNMENT: number;
+    var UNPACK_ALIGNMENT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var PACK_ALIGNMENT: number;
+    var PACK_ALIGNMENT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var MAX_TEXTURE_SIZE: number;
+    var MAX_TEXTURE_SIZE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var MAX_VIEWPORT_DIMS: number;
+    var MAX_VIEWPORT_DIMS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var SUBPIXEL_BITS: number;
+    var SUBPIXEL_BITS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var RED_BITS: number;
+    var RED_BITS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var GREEN_BITS: number;
+    var GREEN_BITS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var BLUE_BITS: number;
+    var BLUE_BITS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var ALPHA_BITS: number;
+    var ALPHA_BITS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var DEPTH_BITS: number;
+    var DEPTH_BITS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var STENCIL_BITS: number;
+    var STENCIL_BITS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var POLYGON_OFFSET_UNITS: number;
+    var POLYGON_OFFSET_UNITS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var POLYGON_OFFSET_FACTOR: number;
+    var POLYGON_OFFSET_FACTOR: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE_BINDING_2D: number;
+    var TEXTURE_BINDING_2D: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var SAMPLE_BUFFERS: number;
+    var SAMPLE_BUFFERS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var SAMPLES: number;
+    var SAMPLES: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var SAMPLE_COVERAGE_VALUE: number;
+    var SAMPLE_COVERAGE_VALUE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var SAMPLE_COVERAGE_INVERT: number;
+    var SAMPLE_COVERAGE_INVERT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var COMPRESSED_TEXTURE_FORMATS: number;
+    var COMPRESSED_TEXTURE_FORMATS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var DONT_CARE: number;
+    var DONT_CARE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var FASTEST: number;
+    var FASTEST: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var NICEST: number;
+    var NICEST: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var GENERATE_MIPMAP_HINT: number;
+    var GENERATE_MIPMAP_HINT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var BYTE: number;
+    var BYTE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var UNSIGNED_BYTE: number;
+    var UNSIGNED_BYTE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var SHORT: number;
+    var SHORT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var UNSIGNED_SHORT: number;
+    var UNSIGNED_SHORT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var INT: number;
+    var INT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var UNSIGNED_INT: number;
+    var UNSIGNED_INT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var FLOAT: number;
+    var FLOAT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var DEPTH_COMPONENT: number;
+    var DEPTH_COMPONENT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var ALPHA: number;
+    var ALPHA: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var RGB: number;
+    var RGB: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var RGBA: number;
+    var RGBA: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var LUMINANCE: number;
+    var LUMINANCE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var LUMINANCE_ALPHA: number;
+    var LUMINANCE_ALPHA: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var UNSIGNED_SHORT_4_4_4_4: number;
+    var UNSIGNED_SHORT_4_4_4_4: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var UNSIGNED_SHORT_5_5_5_1: number;
+    var UNSIGNED_SHORT_5_5_5_1: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var UNSIGNED_SHORT_5_6_5: number;
+    var UNSIGNED_SHORT_5_6_5: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var FRAGMENT_SHADER: number;
+    var FRAGMENT_SHADER: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var VERTEX_SHADER: number;
+    var VERTEX_SHADER: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var MAX_VERTEX_ATTRIBS: number;
+    var MAX_VERTEX_ATTRIBS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var MAX_VERTEX_UNIFORM_VECTORS: number;
+    var MAX_VERTEX_UNIFORM_VECTORS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var MAX_VARYING_VECTORS: number;
+    var MAX_VARYING_VECTORS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var MAX_COMBINED_TEXTURE_IMAGE_UNITS: number;
+    var MAX_COMBINED_TEXTURE_IMAGE_UNITS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var MAX_VERTEX_TEXTURE_IMAGE_UNITS: number;
+    var MAX_VERTEX_TEXTURE_IMAGE_UNITS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var MAX_TEXTURE_IMAGE_UNITS: number;
+    var MAX_TEXTURE_IMAGE_UNITS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var MAX_FRAGMENT_UNIFORM_VECTORS: number;
+    var MAX_FRAGMENT_UNIFORM_VECTORS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var SHADER_TYPE: number;
+    var SHADER_TYPE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var DELETE_STATUS: number;
+    var DELETE_STATUS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var LINK_STATUS: number;
+    var LINK_STATUS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var VALIDATE_STATUS: number;
+    var VALIDATE_STATUS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var ATTACHED_SHADERS: number;
+    var ATTACHED_SHADERS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var ACTIVE_UNIFORMS: number;
+    var ACTIVE_UNIFORMS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var ACTIVE_ATTRIBUTES: number;
+    var ACTIVE_ATTRIBUTES: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var SHADING_LANGUAGE_VERSION: number;
+    var SHADING_LANGUAGE_VERSION: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var CURRENT_PROGRAM: number;
+    var CURRENT_PROGRAM: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var NEVER: number;
+    var NEVER: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var LESS: number;
+    var LESS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var EQUAL: number;
+    var EQUAL: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var LEQUAL: number;
+    var LEQUAL: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var GREATER: number;
+    var GREATER: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var NOTEQUAL: number;
+    var NOTEQUAL: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var GEQUAL: number;
+    var GEQUAL: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var ALWAYS: number;
+    var ALWAYS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var KEEP: number;
+    var KEEP: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var REPLACE: number;
+    var REPLACE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var INCR: number;
+    var INCR: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var DECR: number;
+    var DECR: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var INVERT: number;
+    var INVERT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var INCR_WRAP: number;
+    var INCR_WRAP: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var DECR_WRAP: number;
+    var DECR_WRAP: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var VENDOR: number;
+    var VENDOR: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var RENDERER: number;
+    var RENDERER: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var VERSION: number;
+    var VERSION: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var NEAREST: number;
+    var NEAREST: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var LINEAR: number;
+    var LINEAR: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var NEAREST_MIPMAP_NEAREST: number;
+    var NEAREST_MIPMAP_NEAREST: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var LINEAR_MIPMAP_NEAREST: number;
+    var LINEAR_MIPMAP_NEAREST: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var NEAREST_MIPMAP_LINEAR: number;
+    var NEAREST_MIPMAP_LINEAR: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var LINEAR_MIPMAP_LINEAR: number;
+    var LINEAR_MIPMAP_LINEAR: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE_MAG_FILTER: number;
+    var TEXTURE_MAG_FILTER: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE_MIN_FILTER: number;
+    var TEXTURE_MIN_FILTER: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE_WRAP_S: number;
+    var TEXTURE_WRAP_S: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE_WRAP_T: number;
+    var TEXTURE_WRAP_T: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE_2D: number;
+    var TEXTURE_2D: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE: number;
+    var TEXTURE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE_CUBE_MAP: number;
+    var TEXTURE_CUBE_MAP: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE_BINDING_CUBE_MAP: number;
+    var TEXTURE_BINDING_CUBE_MAP: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE_CUBE_MAP_POSITIVE_X: number;
+    var TEXTURE_CUBE_MAP_POSITIVE_X: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE_CUBE_MAP_NEGATIVE_X: number;
+    var TEXTURE_CUBE_MAP_NEGATIVE_X: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE_CUBE_MAP_POSITIVE_Y: number;
+    var TEXTURE_CUBE_MAP_POSITIVE_Y: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE_CUBE_MAP_NEGATIVE_Y: number;
+    var TEXTURE_CUBE_MAP_NEGATIVE_Y: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE_CUBE_MAP_POSITIVE_Z: number;
+    var TEXTURE_CUBE_MAP_POSITIVE_Z: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE_CUBE_MAP_NEGATIVE_Z: number;
+    var TEXTURE_CUBE_MAP_NEGATIVE_Z: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var MAX_CUBE_MAP_TEXTURE_SIZE: number;
+    var MAX_CUBE_MAP_TEXTURE_SIZE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE0: number;
+    var TEXTURE0: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE1: number;
+    var TEXTURE1: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE2: number;
+    var TEXTURE2: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE3: number;
+    var TEXTURE3: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE4: number;
+    var TEXTURE4: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE5: number;
+    var TEXTURE5: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE6: number;
+    var TEXTURE6: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE7: number;
+    var TEXTURE7: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE8: number;
+    var TEXTURE8: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE9: number;
+    var TEXTURE9: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE10: number;
+    var TEXTURE10: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE11: number;
+    var TEXTURE11: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE12: number;
+    var TEXTURE12: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE13: number;
+    var TEXTURE13: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE14: number;
+    var TEXTURE14: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE15: number;
+    var TEXTURE15: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE16: number;
+    var TEXTURE16: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE17: number;
+    var TEXTURE17: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE18: number;
+    var TEXTURE18: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE19: number;
+    var TEXTURE19: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE20: number;
+    var TEXTURE20: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE21: number;
+    var TEXTURE21: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE22: number;
+    var TEXTURE22: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE23: number;
+    var TEXTURE23: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE24: number;
+    var TEXTURE24: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE25: number;
+    var TEXTURE25: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE26: number;
+    var TEXTURE26: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE27: number;
+    var TEXTURE27: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE28: number;
+    var TEXTURE28: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE29: number;
+    var TEXTURE29: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE30: number;
+    var TEXTURE30: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var TEXTURE31: number;
+    var TEXTURE31: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var ACTIVE_TEXTURE: number;
+    var ACTIVE_TEXTURE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var REPEAT: number;
+    var REPEAT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var CLAMP_TO_EDGE: number;
+    var CLAMP_TO_EDGE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var MIRRORED_REPEAT: number;
+    var MIRRORED_REPEAT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var FLOAT_VEC2: number;
+    var FLOAT_VEC2: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var FLOAT_VEC3: number;
+    var FLOAT_VEC3: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var FLOAT_VEC4: number;
+    var FLOAT_VEC4: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var INT_VEC2: number;
+    var INT_VEC2: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var INT_VEC3: number;
+    var INT_VEC3: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var INT_VEC4: number;
+    var INT_VEC4: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var BOOL: number;
+    var BOOL: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var BOOL_VEC2: number;
+    var BOOL_VEC2: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var BOOL_VEC3: number;
+    var BOOL_VEC3: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var BOOL_VEC4: number;
+    var BOOL_VEC4: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var FLOAT_MAT2: number;
+    var FLOAT_MAT2: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var FLOAT_MAT3: number;
+    var FLOAT_MAT3: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var FLOAT_MAT4: number;
+    var FLOAT_MAT4: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var SAMPLER_2D: number;
+    var SAMPLER_2D: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var SAMPLER_CUBE: number;
+    var SAMPLER_CUBE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var VERTEX_ATTRIB_ARRAY_ENABLED: number;
+    var VERTEX_ATTRIB_ARRAY_ENABLED: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var VERTEX_ATTRIB_ARRAY_SIZE: number;
+    var VERTEX_ATTRIB_ARRAY_SIZE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var VERTEX_ATTRIB_ARRAY_STRIDE: number;
+    var VERTEX_ATTRIB_ARRAY_STRIDE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var VERTEX_ATTRIB_ARRAY_TYPE: number;
+    var VERTEX_ATTRIB_ARRAY_TYPE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var VERTEX_ATTRIB_ARRAY_NORMALIZED: number;
+    var VERTEX_ATTRIB_ARRAY_NORMALIZED: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var VERTEX_ATTRIB_ARRAY_POINTER: number;
+    var VERTEX_ATTRIB_ARRAY_POINTER: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var VERTEX_ATTRIB_ARRAY_BUFFER_BINDING: number;
+    var VERTEX_ATTRIB_ARRAY_BUFFER_BINDING: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var COMPILE_STATUS: number;
+    var COMPILE_STATUS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var LOW_FLOAT: number;
+    var LOW_FLOAT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var MEDIUM_FLOAT: number;
+    var MEDIUM_FLOAT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var HIGH_FLOAT: number;
+    var HIGH_FLOAT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var LOW_INT: number;
+    var LOW_INT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var MEDIUM_INT: number;
+    var MEDIUM_INT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var HIGH_INT: number;
+    var HIGH_INT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var FRAMEBUFFER: number;
+    var FRAMEBUFFER: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var RENDERBUFFER: number;
+    var RENDERBUFFER: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var RGBA4: number;
+    var RGBA4: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var RGB5_A1: number;
+    var RGB5_A1: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var RGB565: number;
+    var RGB565: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var DEPTH_COMPONENT16: number;
+    var DEPTH_COMPONENT16: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var STENCIL_INDEX: number;
+    var STENCIL_INDEX: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var STENCIL_INDEX8: number;
+    var STENCIL_INDEX8: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var DEPTH_STENCIL: number;
+    var DEPTH_STENCIL: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var RENDERBUFFER_WIDTH: number;
+    var RENDERBUFFER_WIDTH: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var RENDERBUFFER_HEIGHT: number;
+    var RENDERBUFFER_HEIGHT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var RENDERBUFFER_INTERNAL_FORMAT: number;
+    var RENDERBUFFER_INTERNAL_FORMAT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var RENDERBUFFER_RED_SIZE: number;
+    var RENDERBUFFER_RED_SIZE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var RENDERBUFFER_GREEN_SIZE: number;
+    var RENDERBUFFER_GREEN_SIZE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var RENDERBUFFER_BLUE_SIZE: number;
+    var RENDERBUFFER_BLUE_SIZE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var RENDERBUFFER_ALPHA_SIZE: number;
+    var RENDERBUFFER_ALPHA_SIZE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var RENDERBUFFER_DEPTH_SIZE: number;
+    var RENDERBUFFER_DEPTH_SIZE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var RENDERBUFFER_STENCIL_SIZE: number;
+    var RENDERBUFFER_STENCIL_SIZE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE: number;
+    var FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var FRAMEBUFFER_ATTACHMENT_OBJECT_NAME: number;
+    var FRAMEBUFFER_ATTACHMENT_OBJECT_NAME: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL: number;
+    var FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE: number;
+    var FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var COLOR_ATTACHMENT0: number;
+    var COLOR_ATTACHMENT0: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var DEPTH_ATTACHMENT: number;
+    var DEPTH_ATTACHMENT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var STENCIL_ATTACHMENT: number;
+    var STENCIL_ATTACHMENT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var DEPTH_STENCIL_ATTACHMENT: number;
+    var DEPTH_STENCIL_ATTACHMENT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var NONE: number;
+    var NONE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var FRAMEBUFFER_COMPLETE: number;
+    var FRAMEBUFFER_COMPLETE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var FRAMEBUFFER_INCOMPLETE_ATTACHMENT: number;
+    var FRAMEBUFFER_INCOMPLETE_ATTACHMENT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT: number;
+    var FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var FRAMEBUFFER_INCOMPLETE_DIMENSIONS: number;
+    var FRAMEBUFFER_INCOMPLETE_DIMENSIONS: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var FRAMEBUFFER_UNSUPPORTED: number;
+    var FRAMEBUFFER_UNSUPPORTED: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var FRAMEBUFFER_BINDING: number;
+    var FRAMEBUFFER_BINDING: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var RENDERBUFFER_BINDING: number;
+    var RENDERBUFFER_BINDING: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var MAX_RENDERBUFFER_SIZE: number;
+    var MAX_RENDERBUFFER_SIZE: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var INVALID_FRAMEBUFFER_OPERATION: number;
+    var INVALID_FRAMEBUFFER_OPERATION: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var UNPACK_FLIP_Y_WEBGL: number;
+    var UNPACK_FLIP_Y_WEBGL: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var UNPACK_PREMULTIPLY_ALPHA_WEBGL: number;
+    var UNPACK_PREMULTIPLY_ALPHA_WEBGL: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var CONTEXT_LOST_WEBGL: number;
+    var CONTEXT_LOST_WEBGL: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var UNPACK_COLORSPACE_CONVERSION_WEBGL: number;
+    var UNPACK_COLORSPACE_CONVERSION_WEBGL: number;
 
     /**
      * @const
      * @type {number}
      */
-    export var BROWSER_DEFAULT_WEBGL: number;
+    var BROWSER_DEFAULT_WEBGL: number;
 
     /**
      * From the OES_texture_half_float extension.
@@ -1777,7 +1777,7 @@ declare module goog.webgl {
      * @const
      * @type {number}
      */
-    export var HALF_FLOAT_OES: number;
+    var HALF_FLOAT_OES: number;
 
     /**
      * From the OES_standard_derivatives extension.
@@ -1785,7 +1785,7 @@ declare module goog.webgl {
      * @const
      * @type {number}
      */
-    export var FRAGMENT_SHADER_DERIVATIVE_HINT_OES: number;
+    var FRAGMENT_SHADER_DERIVATIVE_HINT_OES: number;
 
     /**
      * From the OES_vertex_array_object extension.
@@ -1793,7 +1793,7 @@ declare module goog.webgl {
      * @const
      * @type {number}
      */
-    export var VERTEX_ARRAY_BINDING_OES: number;
+    var VERTEX_ARRAY_BINDING_OES: number;
 
     /**
      * From the WEBGL_debug_renderer_info extension.
@@ -1801,7 +1801,7 @@ declare module goog.webgl {
      * @const
      * @type {number}
      */
-    export var UNMASKED_VENDOR_WEBGL: number;
+    var UNMASKED_VENDOR_WEBGL: number;
 
     /**
      * From the WEBGL_debug_renderer_info extension.
@@ -1809,7 +1809,7 @@ declare module goog.webgl {
      * @const
      * @type {number}
      */
-    export var UNMASKED_RENDERER_WEBGL: number;
+    var UNMASKED_RENDERER_WEBGL: number;
 
     /**
      * From the WEBGL_compressed_texture_s3tc extension.
@@ -1817,7 +1817,7 @@ declare module goog.webgl {
      * @const
      * @type {number}
      */
-    export var COMPRESSED_RGB_S3TC_DXT1_EXT: number;
+    var COMPRESSED_RGB_S3TC_DXT1_EXT: number;
 
     /**
      * From the WEBGL_compressed_texture_s3tc extension.
@@ -1825,7 +1825,7 @@ declare module goog.webgl {
      * @const
      * @type {number}
      */
-    export var COMPRESSED_RGBA_S3TC_DXT1_EXT: number;
+    var COMPRESSED_RGBA_S3TC_DXT1_EXT: number;
 
     /**
      * From the WEBGL_compressed_texture_s3tc extension.
@@ -1833,7 +1833,7 @@ declare module goog.webgl {
      * @const
      * @type {number}
      */
-    export var COMPRESSED_RGBA_S3TC_DXT3_EXT: number;
+    var COMPRESSED_RGBA_S3TC_DXT3_EXT: number;
 
     /**
      * From the WEBGL_compressed_texture_s3tc extension.
@@ -1841,7 +1841,7 @@ declare module goog.webgl {
      * @const
      * @type {number}
      */
-    export var COMPRESSED_RGBA_S3TC_DXT5_EXT: number;
+    var COMPRESSED_RGBA_S3TC_DXT5_EXT: number;
 
     /**
      * From the EXT_texture_filter_anisotropic extension.
@@ -1849,7 +1849,7 @@ declare module goog.webgl {
      * @const
      * @type {number}
      */
-    export var TEXTURE_MAX_ANISOTROPY_EXT: number;
+    var TEXTURE_MAX_ANISOTROPY_EXT: number;
 
     /**
      * From the EXT_texture_filter_anisotropic extension.
@@ -1857,5 +1857,5 @@ declare module goog.webgl {
      * @const
      * @type {number}
      */
-    export var MAX_TEXTURE_MAX_ANISOTROPY_EXT: number;
+    var MAX_TEXTURE_MAX_ANISOTROPY_EXT: number;
 }

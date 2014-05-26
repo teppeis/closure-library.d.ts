@@ -11,7 +11,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Control}
      */
-    export class Textarea extends goog.ui.Control {
+    class Textarea extends goog.ui.Control {
         constructor(content: string, opt_renderer?: goog.ui.TextareaRenderer, opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -74,7 +74,7 @@ declare module goog.ui.Textarea {
      * Constants for event names.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         RESIZE: string;
     }
 }

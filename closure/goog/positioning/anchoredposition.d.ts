@@ -17,7 +17,7 @@ declare module goog.positioning {
      * @constructor
      * @extends {goog.positioning.AbstractPosition}
      */
-    export class AnchoredPosition extends goog.positioning.AbstractPosition {
+    class AnchoredPosition extends goog.positioning.AbstractPosition {
         constructor(anchorElement: Element, corner: goog.positioning.Corner, opt_overflow?: number);
         
         /**

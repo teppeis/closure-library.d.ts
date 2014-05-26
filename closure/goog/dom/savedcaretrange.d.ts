@@ -12,7 +12,7 @@ declare module goog.dom {
      * @constructor
      * @extends {goog.dom.SavedRange}
      */
-    export class SavedCaretRange extends goog.dom.SavedRange {
+    class SavedCaretRange extends goog.dom.SavedRange {
         constructor(range: goog.dom.AbstractRange);
         
         /**

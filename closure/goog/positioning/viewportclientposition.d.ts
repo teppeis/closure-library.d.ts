@@ -10,7 +10,7 @@ declare module goog.positioning {
      * @constructor
      * @extends {goog.positioning.ClientPosition}
      */
-    export class ViewportClientPosition extends goog.positioning.ClientPosition {
+    class ViewportClientPosition extends goog.positioning.ClientPosition {
         constructor(arg1: number, opt_arg2?: number);
         
         /**

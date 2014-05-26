@@ -8,7 +8,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Container}
      */
-    export class Menu extends goog.ui.Container {
+    class Menu extends goog.ui.Container {
         constructor(opt_domHelper?: goog.dom.DomHelper, opt_renderer?: goog.ui.MenuRenderer);
         
         /**
@@ -181,7 +181,7 @@ declare module goog.ui.Menu {
      * @enum {string}
      * @deprecated Use goog.ui.Component.EventType.
      */
-    export interface EventType {
+    interface EventType {
         BEFORE_SHOW: string;
         SHOW: string;
         BEFORE_HIDE: string;

@@ -17,7 +17,7 @@ declare module goog.debug {
      * @extends {goog.Disposable}
      * @implements {goog.debug.EntryPointMonitor}
      */
-    export class ErrorHandler extends goog.Disposable {
+    class ErrorHandler extends goog.Disposable {
         constructor(handler: Function);
         
         /**
@@ -91,7 +91,7 @@ declare module goog.debug.ErrorHandler {
      * @extends {goog.debug.Error}
      * @final
      */
-    export class ProtectedFunctionError extends goog.debug.Error {
+    class ProtectedFunctionError extends goog.debug.Error {
         constructor(cause: any);
         
         /**

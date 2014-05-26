@@ -9,7 +9,7 @@ declare module goog.tweak {
      * @constructor
      * @final
      */
-    export class Registry {
+    class Registry {
         constructor(queryParams: string, compilerOverrides: Object);
         
         /**

@@ -13,7 +13,7 @@ declare module goog.editor.icontent {
      * @constructor
      * @final
      */
-    export class FieldFormatInfo {
+    class FieldFormatInfo {
         constructor(fieldId: string, standards: boolean, blended: boolean, fixedHeight: boolean, opt_extraStyles?: Object);
     }
 
@@ -25,14 +25,14 @@ declare module goog.editor.icontent {
      * @constructor
      * @final
      */
-    export class FieldStyleInfo {
+    class FieldStyleInfo {
         constructor(wrapper: Element, css: string);
     }
 
     /**
      * Sets up goog.editor.icontent to always use standards-mode iframes.
      */
-    export function forceStandardsModeIframes(): void;
+    function forceStandardsModeIframes(): void;
 
     /**
      * Write the initial iframe content in normal mode.
@@ -43,7 +43,7 @@ declare module goog.editor.icontent {
      *     the field, if needed.
      * @param {HTMLIFrameElement} iframe The iframe.
      */
-    export function writeNormalInitialBlendedIframe(info: goog.editor.icontent.FieldFormatInfo, bodyHtml: string, style: goog.editor.icontent.FieldStyleInfo, iframe: HTMLIFrameElement): void;
+    function writeNormalInitialBlendedIframe(info: goog.editor.icontent.FieldFormatInfo, bodyHtml: string, style: goog.editor.icontent.FieldStyleInfo, iframe: HTMLIFrameElement): void;
 
     /**
      * Write the initial iframe content in normal mode.
@@ -54,7 +54,7 @@ declare module goog.editor.icontent {
      *     the field, if needed.
      * @param {HTMLIFrameElement} iframe The iframe.
      */
-    export function writeNormalInitialIframe(info: goog.editor.icontent.FieldFormatInfo, bodyHtml: string, style: goog.editor.icontent.FieldStyleInfo, iframe: HTMLIFrameElement): void;
+    function writeNormalInitialIframe(info: goog.editor.icontent.FieldFormatInfo, bodyHtml: string, style: goog.editor.icontent.FieldStyleInfo, iframe: HTMLIFrameElement): void;
 
     /**
      * Write the initial iframe content in IE/HTTPS mode.
@@ -63,5 +63,5 @@ declare module goog.editor.icontent {
      * @param {Document} doc The iframe document.
      * @param {string} bodyHtml The HTML to insert as the iframe body.
      */
-    export function writeHttpsInitialIframe(info: goog.editor.icontent.FieldFormatInfo, doc: Document, bodyHtml: string): void;
+    function writeHttpsInitialIframe(info: goog.editor.icontent.FieldFormatInfo, doc: Document, bodyHtml: string): void;
 }

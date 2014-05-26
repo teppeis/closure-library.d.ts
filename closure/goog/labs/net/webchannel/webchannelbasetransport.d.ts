@@ -10,7 +10,7 @@ declare module goog.labs.net.webChannel {
      * @implements {goog.net.WebChannelTransport}
      * @final
      */
-    export class WebChannelBaseTransport {
+    class WebChannelBaseTransport {
         constructor();
     }
 }

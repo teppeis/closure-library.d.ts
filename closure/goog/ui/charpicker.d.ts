@@ -21,7 +21,7 @@ declare module goog.ui {
      * @extends {goog.ui.Component}
      * @final
      */
-    export class CharPicker extends goog.ui.Component {
+    class CharPicker extends goog.ui.Component {
         constructor(charPickerData: goog.i18n.CharPickerData, charNameFetcher: goog.i18n.uChar.NameFetcher, opt_recents?: Array<string>, opt_initCategory?: number, opt_initSubcategory?: number, opt_rowCount?: number, opt_columnCount?: number, opt_domHelper?: goog.dom.DomHelper);
         
         /**

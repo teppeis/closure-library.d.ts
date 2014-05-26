@@ -6,7 +6,7 @@ declare module goog.ui.equation {
      * @constructor
      * @extends {goog.ui.Component}
      */
-    export class EditorPane extends goog.ui.Component {
+    class EditorPane extends goog.ui.Component {
         constructor(opt_domHelper?: goog.dom.DomHelper);
         
         /**

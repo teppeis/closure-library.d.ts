@@ -11,7 +11,7 @@ declare module goog.html.legacyconversions {
      * @return {!goog.html.SafeHtml} The value of html, wrapped in a SafeHtml
      *     object.
      */
-    export function safeHtmlFromString(html: string): goog.html.SafeHtml;
+    function safeHtmlFromString(html: string): goog.html.SafeHtml;
 
     /**
      * Performs an "unchecked conversion" from string to TrustedResourceUrl for
@@ -24,7 +24,7 @@ declare module goog.html.legacyconversions {
      * @return {!goog.html.TrustedResourceUrl} The value of url, wrapped in a
      *     TrustedResourceUrl object.
      */
-    export function trustedResourceUrlFromString(url: string): goog.html.TrustedResourceUrl;
+    function trustedResourceUrlFromString(url: string): goog.html.TrustedResourceUrl;
 
     /**
      * Performs an "unchecked conversion" from string to SafeUrl for legacy API
@@ -37,7 +37,7 @@ declare module goog.html.legacyconversions {
      * @return {!goog.html.SafeUrl} The value of url, wrapped in a SafeUrl
      *     object.
      */
-    export function safeUrlFromString(url: string): goog.html.SafeUrl;
+    function safeUrlFromString(url: string): goog.html.SafeUrl;
 
     /**
      * Sets a function that will be called every time a legacy conversion is
@@ -46,5 +46,5 @@ declare module goog.html.legacyconversions {
      *
      * @param {function(): undefined} callback Error callback as defined above.
      */
-    export function setReportCallback(callback: () => void): void;
+    function setReportCallback(callback: () => void): void;
 }

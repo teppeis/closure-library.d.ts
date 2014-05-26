@@ -9,7 +9,7 @@ declare module goog.crypt {
      * @final
      * @struct
      */
-    export class Sha1 extends goog.crypt.Hash {
+    class Sha1 extends goog.crypt.Hash {
         constructor();
     }
 }

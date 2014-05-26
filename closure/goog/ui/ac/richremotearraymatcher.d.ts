@@ -12,7 +12,7 @@ declare module goog.ui.ac {
      * @constructor
      * @extends {goog.ui.ac.RemoteArrayMatcher}
      */
-    export class RichRemoteArrayMatcher extends goog.ui.ac.RemoteArrayMatcher {
+    class RichRemoteArrayMatcher extends goog.ui.ac.RemoteArrayMatcher {
         constructor(url: string, opt_noSimilar?: boolean);
         
         /**

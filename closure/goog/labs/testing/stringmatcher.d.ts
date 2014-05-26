@@ -10,7 +10,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class ContainsStringMatcher {
+    class ContainsStringMatcher {
         constructor(value: string);
     }
 
@@ -24,7 +24,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class EndsWithMatcher {
+    class EndsWithMatcher {
         constructor(value: string);
     }
 
@@ -38,7 +38,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class EqualToIgnoringWhitespaceMatcher {
+    class EqualToIgnoringWhitespaceMatcher {
         constructor(value: string);
     }
 
@@ -52,7 +52,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class EqualsMatcher {
+    class EqualsMatcher {
         constructor(value: string);
     }
 
@@ -66,7 +66,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class RegexMatcher {
+    class RegexMatcher {
         constructor(regex: RegExp);
     }
 
@@ -80,7 +80,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class StartsWithMatcher {
+    class StartsWithMatcher {
         constructor(value: string);
     }
 
@@ -94,7 +94,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class StringContainsInOrderMatcher {
+    class StringContainsInOrderMatcher {
         constructor(values: Array<string>);
     }
 }

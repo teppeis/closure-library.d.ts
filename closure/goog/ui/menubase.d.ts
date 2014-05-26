@@ -9,7 +9,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Popup}
      */
-    export class MenuBase extends goog.ui.Popup {
+    class MenuBase extends goog.ui.Popup {
         constructor(opt_element?: Element);
         
         /**
@@ -85,7 +85,7 @@ declare module goog.ui.MenuBase {
      * Events fired by the Menu
      * @enum {string}
      */
-    export interface Events {
+    interface Events {
         ITEM_ACTION: string;
     }
 }

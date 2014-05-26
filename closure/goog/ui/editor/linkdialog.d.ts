@@ -9,7 +9,7 @@ declare module goog.ui.editor {
      * @extends {goog.ui.editor.AbstractDialog}
      * @final
      */
-    export class LinkDialog extends goog.ui.editor.AbstractDialog {
+    class LinkDialog extends goog.ui.editor.AbstractDialog {
         constructor(domHelper: goog.dom.DomHelper, link: goog.editor.Link);
         
         /**
@@ -93,7 +93,7 @@ declare module goog.ui.editor.LinkDialog {
      * Events specific to the link dialog.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         BEFORE_TEST_LINK: string;
     }
 
@@ -102,7 +102,7 @@ declare module goog.ui.editor.LinkDialog {
      * @enum {string}
      * @private
      */
-    export interface Id_ {
+    interface Id_ {
         TEXT_TO_DISPLAY: string;
         ON_WEB_TAB: string;
         ON_WEB_INPUT: string;
@@ -124,7 +124,7 @@ declare module goog.ui.editor.LinkDialog {
      * @extends {goog.events.Event}
      * @final
      */
-    export class OkEvent extends goog.events.Event {
+    class OkEvent extends goog.events.Event {
         constructor(linkText: string, linkUrl: string, openInNewWindow: boolean, noFollow: boolean);
     }
 
@@ -136,7 +136,7 @@ declare module goog.ui.editor.LinkDialog {
      * @extends {goog.events.Event}
      * @final
      */
-    export class BeforeTestLinkEvent extends goog.events.Event {
+    class BeforeTestLinkEvent extends goog.events.Event {
         constructor(url: string);
     }
 }

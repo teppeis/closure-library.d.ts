@@ -37,7 +37,7 @@ declare module goog.html {
      * @implements {goog.i18n.bidi.DirectionalString}
      * @implements {goog.string.TypedString}
      */
-    export class SafeUrl {
+    class SafeUrl {
         constructor();
         
         /**

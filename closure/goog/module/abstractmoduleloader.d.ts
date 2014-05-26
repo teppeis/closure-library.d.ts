@@ -4,7 +4,7 @@ declare module goog.module {
      * An interface that loads JavaScript modules.
      * @interface
      */
-    export interface AbstractModuleLoader {
+    interface AbstractModuleLoader {
         
         /**
          * Loads a list of JavaScript modules.

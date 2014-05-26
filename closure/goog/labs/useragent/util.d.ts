@@ -6,25 +6,25 @@ declare module goog.labs.userAgent.util {
      * browser object instead.
      * @param {?string=} opt_userAgent The User-Agent override.
      */
-    export function setUserAgent(opt_userAgent?: string): void;
+    function setUserAgent(opt_userAgent?: string): void;
 
     /**
      * @return {string} The user agent string.
      */
-    export function getUserAgent(): string;
+    function getUserAgent(): string;
 
     /**
      * @param {string} str
      * @return {boolean} Whether the user agent contains the given string, ignoring
      *     case.
      */
-    export function matchUserAgent(str: string): boolean;
+    function matchUserAgent(str: string): boolean;
 
     /**
      * @param {string} str
      * @return {boolean} Whether the user agent contains the given string.
      */
-    export function matchUserAgentIgnoreCase(str: string): boolean;
+    function matchUserAgentIgnoreCase(str: string): boolean;
 
     /**
      * Parses the user agent into tuples for each section.
@@ -32,5 +32,5 @@ declare module goog.labs.userAgent.util {
      * @return {!Array.<!Array.<string>>} Tuples of key, version, and the contents
      *     of the parenthetical.
      */
-    export function extractVersionTuples(userAgent: string): Array<Array<string>>;
+    function extractVersionTuples(userAgent: string): Array<Array<string>>;
 }

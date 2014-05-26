@@ -8,7 +8,7 @@ declare module goog.ui.editor {
      * @extends {goog.events.Event}
      * @final
      */
-    export class EquationEditorOkEvent extends goog.events.Event {
+    class EquationEditorOkEvent extends goog.events.Event {
         constructor(equationHtml: string);
         
         /**

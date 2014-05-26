@@ -4,7 +4,7 @@ declare module goog.net {
      * Error codes
      * @enum {number}
      */
-    export interface ErrorCode {
+    interface ErrorCode {
         NO_ERROR: number;
         ACCESS_DENIED: number;
         FILE_NOT_FOUND: number;
@@ -26,5 +26,5 @@ declare module goog.net.ErrorCode {
      * @param {goog.net.ErrorCode} errorCode An error code.
      * @return {string} A message for debugging.
      */
-    export function getDebugMessage(errorCode: goog.net.ErrorCode): string;
+    function getDebugMessage(errorCode: goog.net.ErrorCode): string;
 }

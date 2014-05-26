@@ -19,7 +19,7 @@ declare module goog.ui {
      * @extends {goog.Disposable}
      * @final
      */
-    export class ContainerScroller extends goog.Disposable {
+    class ContainerScroller extends goog.Disposable {
         constructor(container: goog.ui.Container);
     }
 }

@@ -7,7 +7,7 @@ declare module goog.module {
      * @constructor
      * @extends {goog.Disposable}
      */
-    export class BaseModule extends goog.Disposable {
+    class BaseModule extends goog.Disposable {
         constructor();
         
         /**

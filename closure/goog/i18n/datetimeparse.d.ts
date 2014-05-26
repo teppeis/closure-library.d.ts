@@ -6,7 +6,7 @@ declare module goog.i18n {
      * @constructor
      * @final
      */
-    export class DateTimeParse {
+    class DateTimeParse {
         constructor(pattern: string);
         
         /**
@@ -47,7 +47,7 @@ declare module goog.i18n.DateTimeParse {
      * @constructor
      * @private
      */
-    export interface MyDate_ {
+    interface MyDate_ {
         
         /**
          * The date's era.

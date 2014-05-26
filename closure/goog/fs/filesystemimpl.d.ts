@@ -11,7 +11,7 @@ declare module goog.fs {
      * @implements {goog.fs.FileSystem}
      * @final
      */
-    export class FileSystemImpl {
+    class FileSystemImpl {
         constructor(fs: FileSystem);
         
         /**

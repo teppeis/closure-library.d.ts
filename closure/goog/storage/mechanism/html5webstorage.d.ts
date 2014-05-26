@@ -7,7 +7,7 @@ declare module goog.storage.mechanism {
      * @constructor
      * @extends {goog.storage.mechanism.IterableMechanism}
      */
-    export class HTML5WebStorage extends goog.storage.mechanism.IterableMechanism {
+    class HTML5WebStorage extends goog.storage.mechanism.IterableMechanism {
         constructor(storage: Storage);
         
         /**

@@ -4,13 +4,13 @@ declare module goog.ui.equation.ImageRenderer {
      * The longest equation which may be displayed, in characters.
      * @type {number}
      */
-    export var MAX_EQUATION_LENGTH: number;
+    var MAX_EQUATION_LENGTH: number;
 
     /**
      * Class to put on our equations IMG elements.
      * @type {string}
      */
-    export var EE_IMG_CLASS: string;
+    var EE_IMG_CLASS: string;
 
     /**
      * Non-standard to put on our equations IMG elements. Useful when classes need
@@ -19,26 +19,26 @@ declare module goog.ui.equation.ImageRenderer {
      *
      * @type {string}
      */
-    export var EE_IMG_ATTR: string;
+    var EE_IMG_ATTR: string;
 
     /**
      * Vertical alignment for the equations IMG elements.
      * @type {string}
      */
-    export var EE_IMG_VERTICAL_ALIGN: string;
+    var EE_IMG_VERTICAL_ALIGN: string;
 
     /**
      * The default background color as used in the img url, which is fully
      * transparent white.
      * @type {string}
      */
-    export var BACKGROUND_COLOR: string;
+    var BACKGROUND_COLOR: string;
 
     /**
      * The default foreground color as used in the img url, which is black.
      * @type {string}
      */
-    export var FOREGROUND_COLOR: string;
+    var FOREGROUND_COLOR: string;
 
     /**
      * Class to put on IMG elements to keep the resize property bubble from
@@ -47,7 +47,7 @@ declare module goog.ui.equation.ImageRenderer {
      * be reflected when the placeholder is replaced with the other content).
      * @type {string}
      */
-    export var NO_RESIZE_IMG_CLASS: string;
+    var NO_RESIZE_IMG_CLASS: string;
 
     /**
      * Returns the equation image src url given the equation.
@@ -55,14 +55,14 @@ declare module goog.ui.equation.ImageRenderer {
      * @return {string} The equation image src url (empty string in case the
      *   equation was empty).
      */
-    export function getImageUrl(equation: string): string;
+    function getImageUrl(equation: string): string;
 
     /**
      * Returns the equation string src for given image url.
      * @param {string} imageUrl The image url.
      * @return {string?} The equation string, null if imageUrl cannot be parsed.
      */
-    export function getEquationFromImageUrl(imageUrl: string): string;
+    function getEquationFromImageUrl(imageUrl: string): string;
 
     /**
      * Gets the equation string from the given equation IMG node. Returns empty
@@ -70,26 +70,26 @@ declare module goog.ui.equation.ImageRenderer {
      * @param {Element} equationNode The equation IMG element.
      * @return {string} The equation string.
      */
-    export function getEquationFromImage(equationNode: Element): string;
+    function getEquationFromImage(equationNode: Element): string;
 
     /**
      * Checks whether given node is an equation element.
      * @param {Node} node The node to check, must be an Element.
      * @return {boolean} Whether given node is an equation element.
      */
-    export function isEquationElement(node: Node): boolean;
+    function isEquationElement(node: Node): boolean;
 
     /**
      * Returns the html for the html image tag for the given equation.
      * @param {string} equation The equation.
      * @return {string} The html code to embed in the document.
      */
-    export function getHtml(equation: string): string;
+    function getHtml(equation: string): string;
 
     /**
      * Checks whether equation is too long to be displayed.
      * @param {string} equation The equation to test.
      * @return {boolean} Whether the equation is too long.
      */
-    export function isEquationTooLong(equation: string): boolean;
+    function isEquationTooLong(equation: string): boolean;
 }

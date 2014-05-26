@@ -16,7 +16,7 @@ declare module goog.structs {
      * @final
      * @template T
      */
-    export class Set<T> {
+    class Set<T> {
         constructor(opt_values?: Array<T>);
         
         /**

@@ -6,7 +6,7 @@ declare module goog.events {
      * @extends {goog.events.EventTarget}
      * @implements {goog.net.NetworkStatusMonitor}
      */
-    export class OnlineHandler extends goog.events.EventTarget {
+    class OnlineHandler extends goog.events.EventTarget {
         constructor();
     }
 }
@@ -18,5 +18,5 @@ declare module goog.events.OnlineHandler {
      * @enum {string}
      * @deprecated Use goog.net.NetworkStatusMonitor.EventType instead.
      */
-    export interface EventType extends goog.net.NetworkStatusMonitor.EventType {}
+    interface EventType extends goog.net.NetworkStatusMonitor.EventType {}
 }

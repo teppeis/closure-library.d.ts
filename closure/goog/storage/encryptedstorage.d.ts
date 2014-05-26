@@ -13,7 +13,7 @@ declare module goog.storage {
      * @extends {goog.storage.CollectableStorage}
      * @final
      */
-    export class EncryptedStorage extends goog.storage.CollectableStorage {
+    class EncryptedStorage extends goog.storage.CollectableStorage {
         constructor(mechanism: goog.storage.mechanism.IterableMechanism, secret: string);
         
         /**

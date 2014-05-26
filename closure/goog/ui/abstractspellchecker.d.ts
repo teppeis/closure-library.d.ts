@@ -11,7 +11,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Component}
      */
-    export class AbstractSpellChecker extends goog.ui.Component {
+    class AbstractSpellChecker extends goog.ui.Component {
         constructor(spellCheck: goog.spell.SpellCheck, opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -319,7 +319,7 @@ declare module goog.ui.AbstractSpellChecker {
      *
      * @enum {number}
      */
-    export interface Direction {
+    interface Direction {
         PREVIOUS: number;
         NEXT: number;
     }
@@ -328,7 +328,7 @@ declare module goog.ui.AbstractSpellChecker {
      * Constants for the result of asynchronous processing.
      * @enum {number}
      */
-    export interface AsyncResult {
+    interface AsyncResult {
         PENDING: number;
         DONE: number;
     }

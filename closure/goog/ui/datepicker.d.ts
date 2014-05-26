@@ -14,7 +14,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Component}
      */
-    export class DatePicker extends goog.ui.Component {
+    class DatePicker extends goog.ui.Component {
         constructor(opt_date?: goog.date.Date, opt_dateTimeSymbols?: Object, opt_domHelper?: goog.dom.DomHelper, opt_renderer?: goog.ui.DatePickerRenderer);
         
         /**
@@ -262,7 +262,7 @@ declare module goog.ui {
      * @extends {goog.events.Event}
      * @final
      */
-    export class DatePickerEvent extends goog.events.Event {
+    class DatePickerEvent extends goog.events.Event {
         constructor(type: string, target: goog.ui.DatePicker, date: goog.date.Date);
     }
 }

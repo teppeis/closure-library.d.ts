@@ -7,7 +7,7 @@ declare module goog.tweak {
      * @constructor
      * @final
      */
-    export class TweakUi {
+    class TweakUi {
         constructor(registry: goog.tweak.Registry, opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -46,7 +46,7 @@ declare module goog.tweak {
      * @constructor
      * @final
      */
-    export class EntriesPanel {
+    class EntriesPanel {
         constructor(entries: Array<goog.tweak.BaseEntry>, opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -93,7 +93,7 @@ declare module goog.tweak {
      * @extends {goog.tweak.BaseEntry}
      * @private
      */
-    export interface NamespaceEntry_ extends goog.tweak.BaseEntry {
+    interface NamespaceEntry_ extends goog.tweak.BaseEntry {
     }
 }
 
@@ -104,5 +104,5 @@ declare module goog.tweak.NamespaceEntry_ {
      * conflict with regular entries.
      * @type {string}
      */
-    export var ID_PREFIX: string;
+    var ID_PREFIX: string;
 }

@@ -7,7 +7,7 @@ declare module goog.ui.editor {
      * @constructor
      * @extends {goog.events.EventTarget}
      */
-    export class Bubble extends goog.events.EventTarget {
+    class Bubble extends goog.events.EventTarget {
         constructor(parent: Element, zIndex: number);
         
         /**
@@ -137,7 +137,7 @@ declare module goog.ui.editor.Bubble {
      * @constructor
      * @private
      */
-    export interface Panel_ {
+    interface Panel_ {
         
         /**
          * @return {Element} The element in the panel where content should go.

@@ -9,7 +9,7 @@ declare module goog.ui.editor {
      * @extends {goog.ui.Component}
      * @final
      */
-    export class TabPane extends goog.ui.Component {
+    class TabPane extends goog.ui.Component {
         constructor(dom: goog.dom.DomHelper, opt_caption?: string);
         
         /**

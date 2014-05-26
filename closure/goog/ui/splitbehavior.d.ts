@@ -17,7 +17,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.Disposable}
      */
-    export class SplitBehavior extends goog.Disposable {
+    class SplitBehavior extends goog.Disposable {
         constructor(first: goog.ui.Control, second: goog.ui.Control, opt_behaviorHandler?: (arg0: goog.ui.Control, arg1: Event) => any, opt_eventType?: string, opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -95,7 +95,7 @@ declare module goog.ui.SplitBehavior {
      * An emum of split behavior handlers.
      * @enum {function(goog.ui.Control,Event)}
      */
-    export interface DefaultHandlers {
+    interface DefaultHandlers {
         NONE: (arg0: goog.ui.Control, arg1: Event) => any;
         CAPTION: (arg0: goog.ui.Control, arg1: Event) => any;
         VALUE: (arg0: goog.ui.Control, arg1: Event) => any;

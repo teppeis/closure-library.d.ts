@@ -4,7 +4,7 @@ declare module goog.labs.testing {
      * A matcher object to be used in assertThat statements.
      * @interface
      */
-    export interface Matcher {
+    interface Matcher {
         
         /**
          * Determines whether a value matches the constraints of the match.
@@ -36,5 +36,5 @@ declare module goog.labs.testing.Matcher {
      * @param {Function=} opt_describeFunction The ‘describe’ function.
      * @return {!Function} The custom matcher.
      */
-    export function makeMatcher(matchesFunction: Function, opt_describeFunction?: Function): Function;
+    function makeMatcher(matchesFunction: Function, opt_describeFunction?: Function): Function;
 }

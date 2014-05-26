@@ -7,7 +7,7 @@ declare module goog.fx {
      * @implements {goog.fx.Transition}
      * @extends {goog.events.EventTarget}
      */
-    export class TransitionBase extends goog.events.EventTarget {
+    class TransitionBase extends goog.events.EventTarget {
         constructor();
         
         /**
@@ -136,7 +136,7 @@ declare module goog.fx.TransitionBase {
      * Enum for the possible states of an animation.
      * @enum {number}
      */
-    export interface State {
+    interface State {
         STOPPED: number;
         PAUSED: number;
         PLAYING: number;

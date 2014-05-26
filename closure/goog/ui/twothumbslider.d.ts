@@ -6,7 +6,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.SliderBase}
      */
-    export class TwoThumbSlider extends goog.ui.SliderBase {
+    class TwoThumbSlider extends goog.ui.SliderBase {
         constructor(opt_domHelper?: goog.dom.DomHelper);
         
         /**

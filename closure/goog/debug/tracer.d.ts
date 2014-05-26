@@ -7,7 +7,7 @@ declare module goog.debug {
      * @constructor
      * @private
      */
-    export interface Trace_ {
+    interface Trace_ {
         
         /**
          * Maximum size of the trace before we discard events
@@ -113,7 +113,7 @@ declare module goog.debug {
      * Singleton trace object
      * @type {goog.debug.Trace_}
      */
-    export var Trace: goog.debug.Trace_;
+    var Trace: goog.debug.Trace_;
 }
 
 declare module goog.debug.Trace_ {
@@ -122,7 +122,7 @@ declare module goog.debug.Trace_ {
      * Event type supported by tracer
      * @enum {number}
      */
-    export interface EventType {
+    interface EventType {
         START: number;
         STOP: number;
         COMMENT: number;
@@ -134,7 +134,7 @@ declare module goog.debug.Trace_ {
      * @constructor
      * @private
      */
-    export interface Stat_ {
+    interface Stat_ {
         
         /**
          * @type {string|null|undefined}
@@ -154,7 +154,7 @@ declare module goog.debug.Trace_ {
      * @constructor
      * @private
      */
-    export interface Event_ {
+    interface Event_ {
         
         /**
          * @type {string|null|undefined}
@@ -185,5 +185,5 @@ declare module goog.debug.Trace_ {
      * higher precision timing info.
      * @return {number} The current time in milliseconds.
      */
-    export function now(): number;
+    function now(): number;
 }

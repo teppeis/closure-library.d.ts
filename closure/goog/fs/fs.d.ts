@@ -6,7 +6,7 @@ declare module goog.fs {
      * @enum {number}
      * @private
      */
-    export interface FileSystemType_ {
+    interface FileSystemType_ {
         TEMPORARY: number;
         PERSISTENT: number;
     }
@@ -15,7 +15,7 @@ declare module goog.fs {
      * @typedef {!{createObjectURL: (function(!Blob): string),
      *            revokeObjectURL: function(string): void}}
      */
-    export interface UrlObject_ {
+    interface UrlObject_ {
     }
 
     /**
@@ -26,7 +26,7 @@ declare module goog.fs {
      * @return {!goog.async.Deferred} The deferred {@link goog.fs.FileSystem}. If an
      *     error occurs, the errback is called with a {@link goog.fs.Error}.
      */
-    export function getTemporary(size: number): goog.async.Deferred<any>;
+    function getTemporary(size: number): goog.async.Deferred<any>;
 
     /**
      * Returns a persistent FileSystem object. A persistent filesystem will never be
@@ -36,7 +36,7 @@ declare module goog.fs {
      * @return {!goog.async.Deferred} The deferred {@link goog.fs.FileSystem}. If an
      *     error occurs, the errback is called with a {@link goog.fs.Error}.
      */
-    export function getPersistent(size: number): goog.async.Deferred<any>;
+    function getPersistent(size: number): goog.async.Deferred<any>;
 
     /**
      * Creates a blob URL for a blob object.
@@ -45,7 +45,7 @@ declare module goog.fs {
      * @param {!Blob} blob The object for which to create the URL.
      * @return {string} The URL for the object.
      */
-    export function createObjectUrl(blob: Blob): string;
+    function createObjectUrl(blob: Blob): string;
 
     /**
      * Revokes a URL created by {@link goog.fs.createObjectUrl}.
@@ -53,7 +53,7 @@ declare module goog.fs {
      *
      * @param {string} url The URL to revoke.
      */
-    export function revokeObjectUrl(url: string): void;
+    function revokeObjectUrl(url: string): void;
 
     /**
      * Checks whether this browser supports Object Urls. If not, calls to
@@ -61,7 +61,7 @@ declare module goog.fs {
      *
      * @return {boolean} True if this browser supports Object Urls.
      */
-    export function browserSupportsObjectUrls(): boolean;
+    function browserSupportsObjectUrls(): boolean;
 
     /**
      * Concatenates one or more values together and converts them to a Blob.
@@ -70,7 +70,7 @@ declare module goog.fs {
      *     the resulting blob.
      * @return {!Blob} The blob.
      */
-    export function getBlob(...var_args: string[]): Blob;
+    function getBlob(...var_args: string[]): Blob;
 
     /**
      * Creates a blob with the given properties.
@@ -83,7 +83,7 @@ declare module goog.fs {
      *     be written out.
      * @return {!Blob} The blob.
      */
-    export function getBlobWithProperties(parts: Array<string>, opt_type?: string, opt_endings?: string): Blob;
+    function getBlobWithProperties(parts: Array<string>, opt_type?: string, opt_endings?: string): Blob;
 
     /**
      * Converts a Blob or a File into a string. This should only be used when the
@@ -95,7 +95,7 @@ declare module goog.fs {
      *     errback is called with a {@link goog.fs.Error}.
      * @deprecated Use {@link goog.fs.FileReader.readAsText} instead.
      */
-    export function blobToString(blob: Blob, opt_encoding?: string): goog.async.Deferred<any>;
+    function blobToString(blob: Blob, opt_encoding?: string): goog.async.Deferred<any>;
 
     /**
      * Slices the blob. The returned blob contains data from the start byte
@@ -109,5 +109,5 @@ declare module goog.fs {
      * @param {number=} opt_end Index of the ending byte.
      * @return {Blob} The blob slice or null if not supported.
      */
-    export function sliceBlob(blob: Blob, start: number, opt_end?: number): Blob;
+    function sliceBlob(blob: Blob, start: number, opt_end?: number): Blob;
 }

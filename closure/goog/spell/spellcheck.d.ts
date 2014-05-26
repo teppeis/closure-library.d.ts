@@ -14,7 +14,7 @@ declare module goog.spell {
      * @extends {goog.events.EventTarget}
      * @final
      */
-    export class SpellCheck extends goog.events.EventTarget {
+    class SpellCheck extends goog.events.EventTarget {
         constructor(opt_lookupFunction?: Function, opt_language?: string);
         
         /**
@@ -120,7 +120,7 @@ declare module goog.spell.SpellCheck {
      *
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         READY: string;
         ERROR: string;
         WORD_CHANGED: string;
@@ -131,7 +131,7 @@ declare module goog.spell.SpellCheck {
      *
      * @enum {number}
      */
-    export interface WordStatus {
+    interface WordStatus {
         UNKNOWN: number;
         VALID: number;
         INVALID: number;
@@ -144,7 +144,7 @@ declare module goog.spell.SpellCheck {
      *
      * @enum {number}
      */
-    export interface CacheIndex {
+    interface CacheIndex {
         STATUS: number;
         SUGGESTIONS: number;
     }
@@ -160,7 +160,7 @@ declare module goog.spell.SpellCheck {
      * @constructor
      * @final
      */
-    export class WordChangedEvent extends goog.events.Event {
+    class WordChangedEvent extends goog.events.Event {
         constructor(target: goog.spell.SpellCheck, word: string, status: goog.spell.SpellCheck.WordStatus);
     }
 }

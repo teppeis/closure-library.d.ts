@@ -4,19 +4,19 @@ declare module goog.window {
      * Default height for popup windows
      * @type {number}
      */
-    export var DEFAULT_POPUP_HEIGHT: number;
+    var DEFAULT_POPUP_HEIGHT: number;
 
     /**
      * Default width for popup windows
      * @type {number}
      */
-    export var DEFAULT_POPUP_WIDTH: number;
+    var DEFAULT_POPUP_WIDTH: number;
 
     /**
      * Default target for popup windows
      * @type {string}
      */
-    export var DEFAULT_POPUP_TARGET: string;
+    var DEFAULT_POPUP_TARGET: string;
 
     /**
      * Opens a new window.
@@ -49,7 +49,7 @@ declare module goog.window {
      *                  null if a popup blocker prevented the window from being
      *                  opened.
      */
-    export function open(linkRef: string, opt_options?: Object, opt_parentWin?: Window): Window;
+    function open(linkRef: string, opt_options?: Object, opt_parentWin?: Window): Window;
 
     /**
      * Opens a new window without any real content in it.
@@ -76,7 +76,7 @@ declare module goog.window {
      *                  null if a popup blocker prevented the window from being
      *                  opened.
      */
-    export function openBlank(opt_message?: string, opt_options?: Object, opt_parentWin?: Window): Window;
+    function openBlank(opt_message?: string, opt_options?: Object, opt_parentWin?: Window): Window;
 
     /**
      * Raise a help popup window, defaulting to "Google standard" size and name.
@@ -97,5 +97,5 @@ declare module goog.window {
      *
      * @return {boolean} true if the window was not popped up, false if it was.
      */
-    export function popup(linkRef: string, opt_options?: Object): boolean;
+    function popup(linkRef: string, opt_options?: Object): boolean;
 }

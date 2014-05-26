@@ -17,7 +17,7 @@ declare module goog.date {
      * @constructor
      * @extends {goog.date.DateTime}
      */
-    export class UtcDateTime extends goog.date.DateTime {
+    class UtcDateTime extends goog.date.DateTime {
         constructor(opt_year?: number, opt_month?: number, opt_date?: number, opt_hours?: number, opt_minutes?: number, opt_seconds?: number, opt_milliseconds?: number);
         
         /**

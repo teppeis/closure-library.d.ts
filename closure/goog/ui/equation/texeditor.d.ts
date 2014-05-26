@@ -9,7 +9,7 @@ declare module goog.ui.equation {
      * @extends {goog.ui.Component}
      * @final
      */
-    export class TexEditor extends goog.ui.Component {
+    class TexEditor extends goog.ui.Component {
         constructor(context: Object, helpUrl: string, opt_domHelper?: goog.dom.DomHelper);
         
         /**

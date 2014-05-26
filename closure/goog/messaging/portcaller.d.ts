@@ -13,7 +13,7 @@ declare module goog.messaging {
      * @implements {goog.messaging.PortNetwork}
      * @final
      */
-    export class PortCaller extends goog.Disposable {
+    class PortCaller extends goog.Disposable {
         constructor(operatorPort: goog.messaging.MessageChannel);
     }
 }

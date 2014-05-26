@@ -11,7 +11,7 @@ declare module goog.debug {
      * @constructor
      * @final
      */
-    export class RelativeTimeProvider {
+    class RelativeTimeProvider {
         constructor();
         
         /**

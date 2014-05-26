@@ -12,7 +12,7 @@ declare module goog.messaging {
      * @extends {goog.Disposable}
      * @final
      */
-    export class LoggerClient extends goog.Disposable {
+    class LoggerClient extends goog.Disposable {
         constructor(channel: goog.messaging.MessageChannel, serviceName: string);
     }
 }

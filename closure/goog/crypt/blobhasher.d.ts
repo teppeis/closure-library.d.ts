@@ -9,7 +9,7 @@ declare module goog.crypt {
      * @extends {goog.events.EventTarget}
      * @final
      */
-    export class BlobHasher extends goog.events.EventTarget {
+    class BlobHasher extends goog.events.EventTarget {
         constructor(hashFn: goog.crypt.Hash, opt_blockSize?: number);
         
         /**
@@ -54,7 +54,7 @@ declare module goog.crypt.BlobHasher {
      * Event names for hash computation events
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         STARTED: string;
         PROGRESS: string;
         THROTTLED: string;

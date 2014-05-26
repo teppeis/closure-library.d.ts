@@ -25,7 +25,7 @@ declare module goog.format {
      *     other pieces of the output.
      * @constructor
      */
-    export class JsonPrettyPrinter {
+    class JsonPrettyPrinter {
         constructor(delimiters: goog.format.JsonPrettyPrinter.TextDelimiters);
         
         /**
@@ -47,7 +47,7 @@ declare module goog.format.JsonPrettyPrinter {
      * the object, which makes it easy to tweak delimiters to specific environments.
      * @constructor
      */
-    export class TextDelimiters {
+    class TextDelimiters {
         constructor();
         
         /**
@@ -143,7 +143,7 @@ declare module goog.format.JsonPrettyPrinter {
      * @extends {goog.format.JsonPrettyPrinter.TextDelimiters}
      * @final
      */
-    export class HtmlDelimiters extends goog.format.JsonPrettyPrinter.TextDelimiters {
+    class HtmlDelimiters extends goog.format.JsonPrettyPrinter.TextDelimiters {
         constructor();
         
         /**

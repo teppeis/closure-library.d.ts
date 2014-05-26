@@ -22,7 +22,7 @@ declare module goog.dom.annotate {
      *
      * @return {boolean} Whether any terms were annotated.
      */
-    export function annotateTerms(node: Node, terms: Array<any>, annotateFn: Function, opt_ignoreCase?: any, opt_classesToSkip?: Array<string>, opt_maxMs?: number): boolean;
+    function annotateTerms(node: Node, terms: Array<any>, annotateFn: Function, opt_ignoreCase?: any, opt_classesToSkip?: Array<string>, opt_maxMs?: number): boolean;
 
     /**
      * Annotates occurrences of query terms in plain text. This process consists of
@@ -46,5 +46,5 @@ declare module goog.dom.annotate {
      * @return {?string} The HTML equivalent of {@code text} with terms
      *   annotated, or null if the text did not contain any of the terms.
      */
-    export function annotateText(text: string, terms: Array<any>, annotateFn: Function, opt_ignoreCase?: any): string;
+    function annotateText(text: string, terms: Array<any>, annotateFn: Function, opt_ignoreCase?: any): string;
 }

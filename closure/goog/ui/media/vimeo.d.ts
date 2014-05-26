@@ -21,7 +21,7 @@ declare module goog.ui.media {
      * @extends {goog.ui.media.MediaRenderer}
      * @final
      */
-    export class Vimeo extends goog.ui.media.MediaRenderer {
+    class Vimeo extends goog.ui.media.MediaRenderer {
         constructor();
         
         /**
@@ -79,7 +79,7 @@ declare module goog.ui.media {
      * @extends {goog.ui.media.MediaModel}
      * @final
      */
-    export class VimeoModel extends goog.ui.media.MediaModel {
+    class VimeoModel extends goog.ui.media.MediaModel {
         constructor(videoId: string, opt_caption?: string, opt_description?: string, opt_autoplay?: boolean);
         
         /**

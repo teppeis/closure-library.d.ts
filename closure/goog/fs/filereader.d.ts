@@ -8,7 +8,7 @@ declare module goog.fs {
      * @extends {goog.events.EventTarget}
      * @final
      */
-    export class FileReader extends goog.events.EventTarget {
+    class FileReader extends goog.events.EventTarget {
         constructor();
         
         /**
@@ -98,7 +98,7 @@ declare module goog.fs.FileReader {
      *
      * @enum {number}
      */
-    export interface ReadyState {
+    interface ReadyState {
         INIT: number;
         LOADING: number;
         DONE: number;
@@ -109,7 +109,7 @@ declare module goog.fs.FileReader {
      *
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         LOAD_START: string;
         PROGRESS: string;
         LOAD: string;

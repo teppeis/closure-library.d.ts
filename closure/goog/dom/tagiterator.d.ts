@@ -12,7 +12,7 @@ declare module goog.dom {
      *
      * @enum {number}
      */
-    export interface TagWalkType {
+    interface TagWalkType {
         START_TAG: number;
         OTHER: number;
         END_TAG: number;
@@ -68,7 +68,7 @@ declare module goog.dom {
      * @constructor
      * @extends {goog.iter.Iterator.<Node>}
      */
-    export class TagIterator extends goog.iter.Iterator<Node> {
+    class TagIterator extends goog.iter.Iterator<Node> {
         constructor(opt_node?: Node, opt_reversed?: boolean, opt_unconstrained?: boolean, opt_tagType?: goog.dom.TagWalkType, opt_depth?: number);
         
         /**

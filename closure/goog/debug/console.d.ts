@@ -4,7 +4,7 @@ declare module goog.debug {
      * Create and install a log handler that logs to window.console if available
      * @constructor
      */
-    export class Console {
+    class Console {
         constructor();
         
         /**

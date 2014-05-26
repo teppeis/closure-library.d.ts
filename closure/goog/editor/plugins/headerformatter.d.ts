@@ -6,7 +6,7 @@ declare module goog.editor.plugins {
      * @extends {goog.editor.Plugin}
      * @final
      */
-    export class HeaderFormatter extends goog.editor.Plugin {
+    class HeaderFormatter extends goog.editor.Plugin {
         constructor();
     }
 }
@@ -17,7 +17,7 @@ declare module goog.editor.plugins.HeaderFormatter {
      * Commands that can be passed as the optional argument to execCommand.
      * @enum {string}
      */
-    export interface HEADER_COMMAND {
+    interface HEADER_COMMAND {
         H1: string;
         H2: string;
         H3: string;

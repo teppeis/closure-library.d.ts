@@ -5,7 +5,7 @@ declare module goog.ui {
      * @constructor
      * @final
      */
-    export class IdGenerator {
+    class IdGenerator {
         constructor();
         
         /**

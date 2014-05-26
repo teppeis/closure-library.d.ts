@@ -7,7 +7,7 @@ declare module goog.ui {
      * @param {string=} opt_ariaRole Optional ARIA role used for the element.
      * @constructor
      */
-    export class ContainerRenderer {
+    class ContainerRenderer {
         constructor(opt_ariaRole?: string);
         
         /**

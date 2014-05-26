@@ -4,7 +4,7 @@ declare module goog.i18n.bidi {
      * Unicode formatting characters and directionality string constants.
      * @enum {string}
      */
-    export interface Format {
+    interface Format {
         LRE: string;
         RLE: string;
         PDF: string;
@@ -16,7 +16,7 @@ declare module goog.i18n.bidi {
      * Directionality enum.
      * @enum {number}
      */
-    export interface Dir {
+    interface Dir {
         LTR: number;
         RTL: number;
         NEUTRAL: number;
@@ -30,7 +30,7 @@ declare module goog.i18n.bidi {
      * attached direction, if known.
      * @interface
      */
-    export interface DirectionalString {
+    interface DirectionalString {
         
         /**
          * Interface marker of the DirectionalString interface.
@@ -71,31 +71,31 @@ declare module goog.i18n.bidi {
      *
      * TODO(user): write a test that checks that this is a compile-time constant.
      */
-    export var IS_RTL: boolean;
+    var IS_RTL: boolean;
 
     /**
      * 'right' string constant.
      * @type {string}
      */
-    export var RIGHT: string;
+    var RIGHT: string;
 
     /**
      * 'left' string constant.
      * @type {string}
      */
-    export var LEFT: string;
+    var LEFT: string;
 
     /**
      * 'left' if locale is RTL, 'right' if not.
      * @type {string}
      */
-    export var I18N_RIGHT: string;
+    var I18N_RIGHT: string;
 
     /**
      * 'right' if locale is RTL, 'left' if not.
      * @type {string}
      */
-    export var I18N_LEFT: string;
+    var I18N_LEFT: string;
 
     /**
      * Convert a directionality given in various formats to a goog.i18n.bidi.Dir
@@ -114,7 +114,7 @@ declare module goog.i18n.bidi {
      * @return {?goog.i18n.bidi.Dir} A goog.i18n.bidi.Dir constant matching the
      *     given directionality. If given null, returns null (i.e. unknown).
      */
-    export function toDir(givenDir: goog.i18n.bidi.Dir, opt_noNeutral?: boolean): goog.i18n.bidi.Dir;
+    function toDir(givenDir: goog.i18n.bidi.Dir, opt_noNeutral?: boolean): goog.i18n.bidi.Dir;
 
     /**
      * Test whether the given string has any RTL characters in it.
@@ -123,7 +123,7 @@ declare module goog.i18n.bidi {
      *     Default: false.
      * @return {boolean} Whether the string contains RTL characters.
      */
-    export function hasAnyRtl(str: string, opt_isHtml?: boolean): boolean;
+    function hasAnyRtl(str: string, opt_isHtml?: boolean): boolean;
 
     /**
      * Test whether the given string has any RTL characters in it.
@@ -131,7 +131,7 @@ declare module goog.i18n.bidi {
      * @return {boolean} Whether the string contains RTL characters.
      * @deprecated Use hasAnyRtl.
      */
-    export function hasRtlChar(str: string): boolean;
+    function hasRtlChar(str: string): boolean;
 
     /**
      * Test whether the given string has any LTR characters in it.
@@ -140,28 +140,28 @@ declare module goog.i18n.bidi {
      *     Default: false.
      * @return {boolean} Whether the string contains LTR characters.
      */
-    export function hasAnyLtr(str: string, opt_isHtml?: boolean): boolean;
+    function hasAnyLtr(str: string, opt_isHtml?: boolean): boolean;
 
     /**
      * Check if the first character in the string is RTL or not.
      * @param {string} str The given string that need to be tested.
      * @return {boolean} Whether the first character in str is an RTL char.
      */
-    export function isRtlChar(str: string): boolean;
+    function isRtlChar(str: string): boolean;
 
     /**
      * Check if the first character in the string is LTR or not.
      * @param {string} str The given string that need to be tested.
      * @return {boolean} Whether the first character in str is an LTR char.
      */
-    export function isLtrChar(str: string): boolean;
+    function isLtrChar(str: string): boolean;
 
     /**
      * Check if the first character in the string is neutral or not.
      * @param {string} str The given string that need to be tested.
      * @return {boolean} Whether the first character in str is a neutral char.
      */
-    export function isNeutralChar(str: string): boolean;
+    function isNeutralChar(str: string): boolean;
 
     /**
      * Check whether the first strongly directional character (if any) is RTL.
@@ -171,7 +171,7 @@ declare module goog.i18n.bidi {
      * @return {boolean} Whether RTL directionality is detected using the first
      *     strongly-directional character method.
      */
-    export function startsWithRtl(str: string, opt_isHtml?: boolean): boolean;
+    function startsWithRtl(str: string, opt_isHtml?: boolean): boolean;
 
     /**
      * Check whether the first strongly directional character (if any) is RTL.
@@ -182,7 +182,7 @@ declare module goog.i18n.bidi {
      *     strongly-directional character method.
      * @deprecated Use startsWithRtl.
      */
-    export function isRtlText(str: string, opt_isHtml?: boolean): boolean;
+    function isRtlText(str: string, opt_isHtml?: boolean): boolean;
 
     /**
      * Check whether the first strongly directional character (if any) is LTR.
@@ -192,7 +192,7 @@ declare module goog.i18n.bidi {
      * @return {boolean} Whether LTR directionality is detected using the first
      *     strongly-directional character method.
      */
-    export function startsWithLtr(str: string, opt_isHtml?: boolean): boolean;
+    function startsWithLtr(str: string, opt_isHtml?: boolean): boolean;
 
     /**
      * Check whether the first strongly directional character (if any) is LTR.
@@ -203,7 +203,7 @@ declare module goog.i18n.bidi {
      *     strongly-directional character method.
      * @deprecated Use startsWithLtr.
      */
-    export function isLtrText(str: string, opt_isHtml?: boolean): boolean;
+    function isLtrText(str: string, opt_isHtml?: boolean): boolean;
 
     /**
      * Check whether the input string either contains no strongly directional
@@ -213,7 +213,7 @@ declare module goog.i18n.bidi {
      *     Default: false.
      * @return {boolean} Whether neutral directionality is detected.
      */
-    export function isNeutralText(str: string, opt_isHtml?: boolean): boolean;
+    function isNeutralText(str: string, opt_isHtml?: boolean): boolean;
 
     /**
      * Check if the exit directionality a piece of text is LTR, i.e. if the last
@@ -223,7 +223,7 @@ declare module goog.i18n.bidi {
      *     Default: false.
      * @return {boolean} Whether LTR exit directionality was detected.
      */
-    export function endsWithLtr(str: string, opt_isHtml?: boolean): boolean;
+    function endsWithLtr(str: string, opt_isHtml?: boolean): boolean;
 
     /**
      * Check if the exit directionality a piece of text is LTR, i.e. if the last
@@ -234,7 +234,7 @@ declare module goog.i18n.bidi {
      * @return {boolean} Whether LTR exit directionality was detected.
      * @deprecated Use endsWithLtr.
      */
-    export function isLtrExitText(str: string, opt_isHtml?: boolean): boolean;
+    function isLtrExitText(str: string, opt_isHtml?: boolean): boolean;
 
     /**
      * Check if the exit directionality a piece of text is RTL, i.e. if the last
@@ -244,7 +244,7 @@ declare module goog.i18n.bidi {
      *     Default: false.
      * @return {boolean} Whether RTL exit directionality was detected.
      */
-    export function endsWithRtl(str: string, opt_isHtml?: boolean): boolean;
+    function endsWithRtl(str: string, opt_isHtml?: boolean): boolean;
 
     /**
      * Check if the exit directionality a piece of text is RTL, i.e. if the last
@@ -255,7 +255,7 @@ declare module goog.i18n.bidi {
      * @return {boolean} Whether RTL exit directionality was detected.
      * @deprecated Use endsWithRtl.
      */
-    export function isRtlExitText(str: string, opt_isHtml?: boolean): boolean;
+    function isRtlExitText(str: string, opt_isHtml?: boolean): boolean;
 
     /**
      * Check if a BCP 47 / III language code indicates an RTL language, i.e. either:
@@ -279,7 +279,7 @@ declare module goog.i18n.bidi {
      * @param {string} lang BCP 47 (a.k.a III) language code.
      * @return {boolean} Whether the language code is an RTL language.
      */
-    export function isRtlLanguage(lang: string): boolean;
+    function isRtlLanguage(lang: string): boolean;
 
     /**
      * Apply bracket guard using html span tag. This is to address the problem of
@@ -289,7 +289,7 @@ declare module goog.i18n.bidi {
      *     direction of the UI).
      * @return {string} The processed string, with all bracket guarded.
      */
-    export function guardBracketInHtml(s: string, opt_isRtlContext?: boolean): string;
+    function guardBracketInHtml(s: string, opt_isRtlContext?: boolean): string;
 
     /**
      * Apply bracket guard using LRM and RLM. This is to address the problem of
@@ -301,7 +301,7 @@ declare module goog.i18n.bidi {
      *     direction of the UI).
      * @return {string} The processed string, with all bracket guarded.
      */
-    export function guardBracketInText(s: string, opt_isRtlContext?: boolean): string;
+    function guardBracketInText(s: string, opt_isRtlContext?: boolean): string;
 
     /**
      * Enforce the html snippet in RTL directionality regardless overall context.
@@ -313,7 +313,7 @@ declare module goog.i18n.bidi {
      * @param {string} html The string that need to be processed.
      * @return {string} The processed string, with directionality enforced to RTL.
      */
-    export function enforceRtlInHtml(html: string): string;
+    function enforceRtlInHtml(html: string): string;
 
     /**
      * Enforce RTL on both end of the given text piece using unicode BiDi formatting
@@ -321,7 +321,7 @@ declare module goog.i18n.bidi {
      * @param {string} text The piece of text that need to be wrapped.
      * @return {string} The wrapped string after process.
      */
-    export function enforceRtlInText(text: string): string;
+    function enforceRtlInText(text: string): string;
 
     /**
      * Enforce the html snippet in RTL directionality regardless overall context.
@@ -333,7 +333,7 @@ declare module goog.i18n.bidi {
      * @param {string} html The string that need to be processed.
      * @return {string} The processed string, with directionality enforced to RTL.
      */
-    export function enforceLtrInHtml(html: string): string;
+    function enforceLtrInHtml(html: string): string;
 
     /**
      * Enforce LTR on both end of the given text piece using unicode BiDi formatting
@@ -341,7 +341,7 @@ declare module goog.i18n.bidi {
      * @param {string} text The piece of text that need to be wrapped.
      * @return {string} The wrapped string after process.
      */
-    export function enforceLtrInText(text: string): string;
+    function enforceLtrInText(text: string): string;
 
     /**
      * Swap location parameters and 'left'/'right' in CSS specification. The
@@ -351,7 +351,7 @@ declare module goog.i18n.bidi {
      * @param {string} cssStr CSS spefication string.
      * @return {string} Processed CSS specification string.
      */
-    export function mirrorCSS(cssStr: string): string;
+    function mirrorCSS(cssStr: string): string;
 
     /**
      * Replace the double and single quote directly after a Hebrew character with
@@ -359,7 +359,7 @@ declare module goog.i18n.bidi {
      * @param {string} str String that need to be processed.
      * @return {string} Processed string with double/single quote replaced.
      */
-    export function normalizeHebrewQuote(str: string): string;
+    function normalizeHebrewQuote(str: string): string;
 
     /**
      * Estimates the directionality of a string based on relative word counts.
@@ -373,7 +373,7 @@ declare module goog.i18n.bidi {
      *     Default: false.
      * @return {goog.i18n.bidi.Dir} Estimated overall directionality of {@code str}.
      */
-    export function estimateDirection(str: string, opt_isHtml?: boolean): goog.i18n.bidi.Dir;
+    function estimateDirection(str: string, opt_isHtml?: boolean): goog.i18n.bidi.Dir;
 
     /**
      * Check the directionality of a piece of text, return true if the piece of
@@ -383,7 +383,7 @@ declare module goog.i18n.bidi {
      *     Default: false.
      * @return {boolean} Whether this piece of text should be laid out in RTL.
      */
-    export function detectRtlDirectionality(str: string, opt_isHtml?: boolean): boolean;
+    function detectRtlDirectionality(str: string, opt_isHtml?: boolean): boolean;
 
     /**
      * Sets text input element's directionality and text alignment based on a
@@ -397,5 +397,5 @@ declare module goog.i18n.bidi {
      *     3. A boolean (true = RTL, false = LTR).
      *     4. A null for unknown directionality.
      */
-    export function setElementDirAndAlign(element: Element, dir: goog.i18n.bidi.Dir): void;
+    function setElementDirAndAlign(element: Element, dir: goog.i18n.bidi.Dir): void;
 }

@@ -4,7 +4,7 @@ declare module goog.fs {
      * The interface for entries in the filesystem.
      * @interface
      */
-    export interface Entry {
+    interface Entry {
         
         /**
          * @return {boolean} Whether or not this entry is a file.
@@ -121,7 +121,7 @@ declare module goog.fs {
      * @interface
      * @extends {goog.fs.Entry}
      */
-    export interface DirectoryEntry extends goog.fs.Entry {
+    interface DirectoryEntry extends goog.fs.Entry {
         
         /**
          * Get a file in the directory.
@@ -183,7 +183,7 @@ declare module goog.fs {
      * @interface
      * @extends {goog.fs.Entry}
      */
-    export interface FileEntry extends goog.fs.Entry {
+    interface FileEntry extends goog.fs.Entry {
         
         /**
          * Create a writer for writing to the file.
@@ -209,7 +209,7 @@ declare module goog.fs.DirectoryEntry {
      * Behaviors for getting files and directories.
      * @enum {number}
      */
-    export interface Behavior {
+    interface Behavior {
         DEFAULT: number;
         CREATE: number;
         CREATE_EXCLUSIVE: number;

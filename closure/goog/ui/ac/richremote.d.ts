@@ -14,7 +14,7 @@ declare module goog.ui.ac {
      * @constructor
      * @extends {goog.ui.ac.Remote}
      */
-    export class RichRemote extends goog.ui.ac.Remote {
+    class RichRemote extends goog.ui.ac.Remote {
         constructor(url: string, input: Element, opt_multi?: boolean, opt_useSimilar?: boolean);
         
         /**

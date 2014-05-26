@@ -5,7 +5,7 @@ declare module goog.fx {
      * {@code goog.events.EventTarget}.
      * @interface
      */
-    export interface Transition {
+    interface Transition {
         
         /**
          * Plays the transition.
@@ -25,7 +25,7 @@ declare module goog.fx.Transition {
      * Transition event types.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         PLAY: string;
         BEGIN: string;
         RESUME: string;

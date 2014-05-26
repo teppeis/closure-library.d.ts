@@ -4,7 +4,7 @@ declare module goog.date {
      * Constants for weekdays.
      * @enum {number}
      */
-    export interface weekDay {
+    interface weekDay {
         MON: number;
         TUE: number;
         WED: number;
@@ -18,7 +18,7 @@ declare module goog.date {
      * Constants for months.
      * @enum {number}
      */
-    export interface month {
+    interface month {
         JAN: number;
         FEB: number;
         MAR: number;
@@ -51,7 +51,7 @@ declare module goog.date {
      * @constructor
      * @final
      */
-    export class Interval {
+    class Interval {
         constructor(opt_years?: number, opt_months?: number, opt_days?: number, opt_hours?: number, opt_minutes?: number, opt_seconds?: number);
         
         /**
@@ -179,7 +179,7 @@ declare module goog.date {
      * @constructor
      * @see goog.date.DateTime
      */
-    export class Date {
+    class Date {
         constructor(opt_year?: number, opt_month?: number, opt_date?: number);
         
         /**
@@ -483,7 +483,7 @@ declare module goog.date {
      * @constructor
      * @extends {goog.date.Date}
      */
-    export class DateTime extends goog.date.Date {
+    class DateTime extends goog.date.Date {
         constructor(opt_year?: number, opt_month?: number, opt_date?: number, opt_hours?: number, opt_minutes?: number, opt_seconds?: number, opt_milliseconds?: number);
         
         /**
@@ -724,7 +724,7 @@ declare module goog.date {
      * @param {number} yearNum The numeric year to use in the result.
      * @return {string} A formatted month/year string.
      */
-    export function formatMonthAndYear(monthName: string, yearNum: number): string;
+    function formatMonthAndYear(monthName: string, yearNum: number): string;
 
     /**
      * Returns whether the given year is a leap year.
@@ -732,7 +732,7 @@ declare module goog.date {
      * @param {number} year Year part of date.
      * @return {boolean} Whether the given year is a leap year.
      */
-    export function isLeapYear(year: number): boolean;
+    function isLeapYear(year: number): boolean;
 
     /**
      * Returns whether the given year is a long ISO year.
@@ -741,7 +741,7 @@ declare module goog.date {
      * @param {number} year Full year part of date.
      * @return {boolean} Whether the given year is a long ISO year.
      */
-    export function isLongIsoYear(year: number): boolean;
+    function isLongIsoYear(year: number): boolean;
 
     /**
      * Returns the number of days for a given month.
@@ -750,7 +750,7 @@ declare module goog.date {
      * @param {number} month Month part of date.
      * @return {number} The number of days for the given month.
      */
-    export function getNumberOfDaysInMonth(year: number, month: number): number;
+    function getNumberOfDaysInMonth(year: number, month: number): number;
 
     /**
      * Returns true if the 2 dates are in the same day.
@@ -758,7 +758,7 @@ declare module goog.date {
      * @param {goog.date.DateLike=} opt_now The current time.
      * @return {boolean} Whether the dates are on the same day.
      */
-    export function isSameDay(date: goog.date.DateLike, opt_now?: goog.date.DateLike): boolean;
+    function isSameDay(date: goog.date.DateLike, opt_now?: goog.date.DateLike): boolean;
 
     /**
      * Returns true if the 2 dates are in the same month.
@@ -766,7 +766,7 @@ declare module goog.date {
      * @param {goog.date.DateLike=} opt_now The current time.
      * @return {boolean} Whether the dates are in the same calendar month.
      */
-    export function isSameMonth(date: goog.date.DateLike, opt_now?: goog.date.DateLike): boolean;
+    function isSameMonth(date: goog.date.DateLike, opt_now?: goog.date.DateLike): boolean;
 
     /**
      * Returns true if the 2 dates are in the same year.
@@ -774,7 +774,7 @@ declare module goog.date {
      * @param {goog.date.DateLike=} opt_now The current time.
      * @return {boolean} Whether the dates are in the same calendar year.
      */
-    export function isSameYear(date: goog.date.DateLike, opt_now?: goog.date.DateLike): boolean;
+    function isSameYear(date: goog.date.DateLike, opt_now?: goog.date.DateLike): boolean;
 
     /**
      * Static function for week number calculation. ISO 8601 implementation.
@@ -788,7 +788,7 @@ declare module goog.date {
      *     Monday=0, Sunday=6.
      * @return {number} The week number (1-53).
      */
-    export function getWeekNumber(year: number, month: number, date: number, opt_weekDay?: number, opt_firstDayOfWeek?: number): number;
+    function getWeekNumber(year: number, month: number, date: number, opt_weekDay?: number, opt_firstDayOfWeek?: number): number;
 
     /**
      * @param {!T} date1 A datelike object.
@@ -796,7 +796,7 @@ declare module goog.date {
      * @return {!(T|S)} The earlier of them in time.
      * @template T,S
      */
-    export function min<T, S>(date1: T, date2: S): T;
+    function min<T, S>(date1: T, date2: S): T;
 
     /**
      * @param {!T} date1 A datelike object.
@@ -804,7 +804,7 @@ declare module goog.date {
      * @return {!(T|S)} The later of them in time.
      * @template T,S
      */
-    export function max<T, S>(date1: T, date2: S): T;
+    function max<T, S>(date1: T, date2: S): T;
 
     /**
      * Creates a DateTime from a datetime string expressed in ISO 8601 format.
@@ -812,7 +812,7 @@ declare module goog.date {
      * @param {string} formatted A date or datetime expressed in ISO 8601 format.
      * @return {goog.date.DateTime} Parsed date or null if parse fails.
      */
-    export function fromIsoString(formatted: string): goog.date.DateTime;
+    function fromIsoString(formatted: string): goog.date.DateTime;
 
     /**
      * Parses a datetime string expressed in ISO 8601 format. Overwrites the date
@@ -822,5 +822,5 @@ declare module goog.date {
      * @param {string} formatted A date or datetime expressed in ISO 8601 format.
      * @return {boolean} Whether the parsing succeeded.
      */
-    export function setIso8601DateTime(dateTime: goog.date.DateTime, formatted: string): boolean;
+    function setIso8601DateTime(dateTime: goog.date.DateTime, formatted: string): boolean;
 }

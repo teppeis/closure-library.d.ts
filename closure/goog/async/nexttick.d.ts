@@ -7,7 +7,7 @@ declare module goog.async {
      * processed.
      * @param {*} exception
      */
-    export function throwException(exception: any): void;
+    function throwException(exception: any): void;
 
     /**
      * Fires the provided callbacks as soon as possible after the current JS
@@ -18,5 +18,5 @@ declare module goog.async {
      * @param {SCOPE=} opt_context Object in whose scope to call the listener.
      * @template SCOPE
      */
-    export function nextTick<SCOPE>(callback: () => any, opt_context?: SCOPE): void;
+    function nextTick<SCOPE>(callback: () => any, opt_context?: SCOPE): void;
 }

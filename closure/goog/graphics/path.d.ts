@@ -10,7 +10,7 @@ declare module goog.graphics {
      *
      * @constructor
      */
-    export class Path {
+    class Path {
         constructor();
         
         /**
@@ -206,7 +206,7 @@ declare module goog.graphics.Path {
      * Path segment types.
      * @enum {number}
      */
-    export interface Segment {
+    interface Segment {
         MOVETO: number;
         LINETO: number;
         CURVETO: number;

@@ -7,7 +7,7 @@ declare module goog.messaging {
      * @extends {goog.Disposable}
      * @implements {goog.messaging.MessageChannel}
      */
-    export class AbstractChannel extends goog.Disposable {
+    class AbstractChannel extends goog.Disposable {
         constructor();
         
         /**

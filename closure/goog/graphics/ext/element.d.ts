@@ -8,7 +8,7 @@ declare module goog.graphics.ext {
      * @constructor
      * @extends {goog.events.EventTarget}
      */
-    export class Element extends goog.events.EventTarget {
+    class Element extends goog.events.EventTarget {
         constructor(group: goog.graphics.ext.Group, wrapper: goog.graphics.Element);
         
         /** @return {goog.graphics.Element} The underlying thin wrapper. */
@@ -304,7 +304,7 @@ declare module goog.graphics.ext.Element {
      * @enum {number}
      * @private
      */
-    export interface PositionType_ {
+    interface PositionType_ {
         START: number;
         MIDDLE: number;
         END: number;
@@ -318,7 +318,7 @@ declare module goog.graphics.ext.Element {
      * @constructor
      * @private
      */
-    export interface Position_ {
+    interface Position_ {
         
         /**
          * @return {number} The minimum width/height of the element.

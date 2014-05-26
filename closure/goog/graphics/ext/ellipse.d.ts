@@ -7,7 +7,7 @@ declare module goog.graphics.ext {
      * @extends {goog.graphics.ext.StrokeAndFillElement}
      * @final
      */
-    export class Ellipse extends goog.graphics.ext.StrokeAndFillElement {
+    class Ellipse extends goog.graphics.ext.StrokeAndFillElement {
         constructor(group: goog.graphics.ext.Group);
     }
 }

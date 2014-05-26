@@ -13,7 +13,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Component}
      */
-    export class TableSorter extends goog.ui.Component {
+    class TableSorter extends goog.ui.Component {
         constructor(opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -111,7 +111,7 @@ declare module goog.ui.TableSorter {
      * Table sorter events.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         BEFORESORT: string;
         SORT: string;
     }

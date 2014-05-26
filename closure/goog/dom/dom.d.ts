@@ -4,7 +4,7 @@ declare module goog.dom {
      * Typedef for use with goog.dom.createDom and goog.dom.append.
      * @typedef {Object|string|Array|NodeList}
      */
-    export interface Appendable {
+    interface Appendable {
     }
 
     /**
@@ -13,7 +13,7 @@ declare module goog.dom {
      *     DOM helper.
      * @constructor
      */
-    export class DomHelper {
+    class DomHelper {
         constructor(opt_document?: Document);
         
         /**
@@ -634,13 +634,13 @@ declare module goog.dom {
      *     element.
      * @return {!goog.dom.DomHelper} The DomHelper.
      */
-    export function getDomHelper(opt_element?: Node): goog.dom.DomHelper;
+    function getDomHelper(opt_element?: Node): goog.dom.DomHelper;
 
     /**
      * Gets the document object being used by the dom library.
      * @return {!Document} Document object.
      */
-    export function getDocument(): Document;
+    function getDocument(): Document;
 
     /**
      * Gets an element from the current document by element id.
@@ -650,7 +650,7 @@ declare module goog.dom {
      * @param {string|Element} element Element ID or a DOM node.
      * @return {Element} The element with the given ID, or the node passed in.
      */
-    export function getElement(element: string): Element;
+    function getElement(element: string): Element;
 
     /**
      * Gets an element by id, asserting that the element is found.
@@ -661,7 +661,7 @@ declare module goog.dom {
      * @param {string} id Element ID.
      * @return {!Element} The element with the given ID, if it exists.
      */
-    export function getRequiredElement(id: string): Element;
+    function getRequiredElement(id: string): Element;
 
     /**
      * Alias for getElement.
@@ -669,7 +669,7 @@ declare module goog.dom {
      * @return {Element} The element with the given ID, or the node passed in.
      * @deprecated Use {@link goog.dom.getElement} instead.
      */
-    export function $(element: string): Element;
+    function $(element: string): Element;
 
     /**
      * Looks up elements by both tag and class name, using browser native functions
@@ -696,7 +696,7 @@ declare module goog.dom {
      * @return { {length: number} } Array-like list of elements (only a length
      *     property and numerical indices are guaranteed to exist).
      */
-    export function getElementsByTagNameAndClass(opt_tag?: string, opt_class?: string, opt_el?: Document): {length: number};
+    function getElementsByTagNameAndClass(opt_tag?: string, opt_class?: string, opt_el?: Document): {length: number};
 
     /**
      * Returns a static, array-like list of the elements with the provided
@@ -706,7 +706,7 @@ declare module goog.dom {
      * @param {(Document|Element)=} opt_el Optional element to look in.
      * @return { {length: number} } The items found with the class name provided.
      */
-    export function getElementsByClass(className: string, opt_el?: Document): {length: number};
+    function getElementsByClass(className: string, opt_el?: Document): {length: number};
 
     /**
      * Returns the first element with the provided className.
@@ -715,7 +715,7 @@ declare module goog.dom {
      * @param {Element|Document=} opt_el Optional element to look in.
      * @return {Element} The first item with the class name provided.
      */
-    export function getElementByClass(className: string, opt_el?: Element): Element;
+    function getElementByClass(className: string, opt_el?: Element): Element;
 
     /**
      * Ensures an element with the given className exists, and then returns the
@@ -727,7 +727,7 @@ declare module goog.dom {
      * @return {!Element} The first item with the class name provided.
      * @throws {goog.asserts.AssertionError} Thrown if no element is found.
      */
-    export function getRequiredElementByClass(className: string, opt_root?: Element): Element;
+    function getRequiredElementByClass(className: string, opt_root?: Element): Element;
 
     /**
      * Alias for {@code getElementsByTagNameAndClass}.
@@ -738,14 +738,14 @@ declare module goog.dom {
      *     property and numerical indices are guaranteed to exist).
      * @deprecated Use {@link goog.dom.getElementsByTagNameAndClass} instead.
      */
-    export function $$(opt_tag?: string, opt_class?: string, opt_el?: Element): {length: number};
+    function $$(opt_tag?: string, opt_class?: string, opt_el?: Element): {length: number};
 
     /**
      * Sets multiple properties on a node.
      * @param {Element} element DOM node to set properties on.
      * @param {Object} properties Hash of property:value pairs.
      */
-    export function setProperties(element: Element, properties: Object): void;
+    function setProperties(element: Element, properties: Object): void;
 
     /**
      * Gets the dimensions of the viewport.
@@ -812,14 +812,14 @@ declare module goog.dom {
      * @param {Window=} opt_window Optional window element to test.
      * @return {!goog.math.Size} Object with values 'width' and 'height'.
      */
-    export function getViewportSize(opt_window?: Window): goog.math.Size;
+    function getViewportSize(opt_window?: Window): goog.math.Size;
 
     /**
      * Calculates the height of the document.
      *
      * @return {number} The height of the current document.
      */
-    export function getDocumentHeight(): number;
+    function getDocumentHeight(): number;
 
     /**
      * Gets the page scroll distance as a coordinate object.
@@ -828,20 +828,20 @@ declare module goog.dom {
      * @return {!goog.math.Coordinate} Object with values 'x' and 'y'.
      * @deprecated Use {@link goog.dom.getDocumentScroll} instead.
      */
-    export function getPageScroll(opt_window?: Window): goog.math.Coordinate;
+    function getPageScroll(opt_window?: Window): goog.math.Coordinate;
 
     /**
      * Gets the document scroll distance as a coordinate object.
      *
      * @return {!goog.math.Coordinate} Object with values 'x' and 'y'.
      */
-    export function getDocumentScroll(): goog.math.Coordinate;
+    function getDocumentScroll(): goog.math.Coordinate;
 
     /**
      * Gets the document scroll element.
      * @return {!Element} Scrolling element.
      */
-    export function getDocumentScrollElement(): Element;
+    function getDocumentScrollElement(): Element;
 
     /**
      * Gets the window object associated with the given document.
@@ -849,7 +849,7 @@ declare module goog.dom {
      * @param {Document=} opt_doc  Document object to get window for.
      * @return {!Window} The window associated with the given document.
      */
-    export function getWindow(opt_doc?: Document): Window;
+    function getWindow(opt_doc?: Document): Window;
 
     /**
      * Returns a dom node with a set of attributes.  This function accepts varargs
@@ -870,7 +870,7 @@ declare module goog.dom {
      *     its elements will be added as childNodes instead.
      * @return {!Element} Reference to a DOM node.
      */
-    export function createDom(tagName: string, opt_attributes?: Object, ...var_args: Object[]): Element;
+    function createDom(tagName: string, opt_attributes?: Object, ...var_args: Object[]): Element;
 
     /**
      * Alias for {@code createDom}.
@@ -884,21 +884,21 @@ declare module goog.dom {
      * @return {!Element} Reference to a DOM node.
      * @deprecated Use {@link goog.dom.createDom} instead.
      */
-    export function $dom(tagName: string, opt_attributes?: string, ...var_args: Object[]): Element;
+    function $dom(tagName: string, opt_attributes?: string, ...var_args: Object[]): Element;
 
     /**
      * Creates a new element.
      * @param {string} name Tag name.
      * @return {!Element} The new element.
      */
-    export function createElement(name: string): Element;
+    function createElement(name: string): Element;
 
     /**
      * Creates a new text node.
      * @param {number|string} content Content.
      * @return {!Text} The new text node.
      */
-    export function createTextNode(content: number): Text;
+    function createTextNode(content: number): Text;
 
     /**
      * Create a table.
@@ -907,7 +907,7 @@ declare module goog.dom {
      * @param {boolean=} opt_fillWithNbsp If true, fills table entries with nsbps.
      * @return {!Element} The created table.
      */
-    export function createTable(rows: number, columns: number, opt_fillWithNbsp?: boolean): Element;
+    function createTable(rows: number, columns: number, opt_fillWithNbsp?: boolean): Element;
 
     /**
      * Converts an HTML string into a document fragment. The string must be
@@ -919,14 +919,14 @@ declare module goog.dom {
      * @param {string} htmlString The HTML string to convert.
      * @return {!Node} The resulting document fragment.
      */
-    export function htmlToDocumentFragment(htmlString: string): Node;
+    function htmlToDocumentFragment(htmlString: string): Node;
 
     /**
      * Returns true if the browser is in "CSS1-compatible" (standards-compliant)
      * mode, false otherwise.
      * @return {boolean} True if in CSS1-compatible mode.
      */
-    export function isCss1CompatMode(): boolean;
+    function isCss1CompatMode(): boolean;
 
     /**
      * Determines if the given node can contain children, intended to be used for
@@ -955,14 +955,14 @@ declare module goog.dom {
      * @param {Node} node The node to check.
      * @return {boolean} Whether the node can contain children.
      */
-    export function canHaveChildren(node: Node): boolean;
+    function canHaveChildren(node: Node): boolean;
 
     /**
      * Appends a child to a node.
      * @param {Node} parent Parent.
      * @param {Node} child Child.
      */
-    export function appendChild(parent: Node, child: Node): void;
+    function appendChild(parent: Node, child: Node): void;
 
     /**
      * Appends a node with text or other nodes.
@@ -972,13 +972,13 @@ declare module goog.dom {
      *     If this is a string then a text node is appended.
      *     If this is an array like object then fields 0 to length - 1 are appended.
      */
-    export function append(parent: Node, ...var_args: goog.dom.Appendable[]): void;
+    function append(parent: Node, ...var_args: goog.dom.Appendable[]): void;
 
     /**
      * Removes all the child nodes on a DOM node.
      * @param {Node} node Node to remove children from.
      */
-    export function removeChildren(node: Node): void;
+    function removeChildren(node: Node): void;
 
     /**
      * Inserts a new node before an existing reference node (i.e. as the previous
@@ -986,7 +986,7 @@ declare module goog.dom {
      * @param {Node} newNode Node to insert.
      * @param {Node} refNode Reference node to insert before.
      */
-    export function insertSiblingBefore(newNode: Node, refNode: Node): void;
+    function insertSiblingBefore(newNode: Node, refNode: Node): void;
 
     /**
      * Inserts a new node after an existing reference node (i.e. as the next
@@ -994,7 +994,7 @@ declare module goog.dom {
      * @param {Node} newNode Node to insert.
      * @param {Node} refNode Reference node to insert after.
      */
-    export function insertSiblingAfter(newNode: Node, refNode: Node): void;
+    function insertSiblingAfter(newNode: Node, refNode: Node): void;
 
     /**
      * Insert a child at a given index. If index is larger than the number of child
@@ -1005,14 +1005,14 @@ declare module goog.dom {
      * @param {number} index The index at which to insert the new child node. Must
      *     not be negative.
      */
-    export function insertChildAt(parent: Element, child: Node, index: number): void;
+    function insertChildAt(parent: Element, child: Node, index: number): void;
 
     /**
      * Removes a node from its parent.
      * @param {Node} node The node to remove.
      * @return {Node} The node removed if removed; else, null.
      */
-    export function removeNode(node: Node): Node;
+    function removeNode(node: Node): Node;
 
     /**
      * Replaces a node in the DOM tree. Will do nothing if {@code oldNode} has no
@@ -1020,7 +1020,7 @@ declare module goog.dom {
      * @param {Node} newNode Node to insert.
      * @param {Node} oldNode Node to replace.
      */
-    export function replaceNode(newNode: Node, oldNode: Node): void;
+    function replaceNode(newNode: Node, oldNode: Node): void;
 
     /**
      * Flattens an element. That is, removes it and replace it with its children.
@@ -1030,7 +1030,7 @@ declare module goog.dom {
      *     tree, sans children; or undefined, if the element was not in the document
      *     to begin with.
      */
-    export function flattenElement(element: Element): Element;
+    function flattenElement(element: Element): Element;
 
     /**
      * Returns an array containing just the element children of the given element.
@@ -1038,28 +1038,28 @@ declare module goog.dom {
      * @return {!(Array|NodeList)} An array or array-like list of just the element
      *     children of the given element.
      */
-    export function getChildren(element: Element): Array<any>;
+    function getChildren(element: Element): Array<any>;
 
     /**
      * Returns the first child node that is an element.
      * @param {Node} node The node to get the first child element of.
      * @return {Element} The first child node of {@code node} that is an element.
      */
-    export function getFirstElementChild(node: Node): Element;
+    function getFirstElementChild(node: Node): Element;
 
     /**
      * Returns the last child node that is an element.
      * @param {Node} node The node to get the last child element of.
      * @return {Element} The last child node of {@code node} that is an element.
      */
-    export function getLastElementChild(node: Node): Element;
+    function getLastElementChild(node: Node): Element;
 
     /**
      * Returns the first next sibling that is an element.
      * @param {Node} node The node to get the next sibling element of.
      * @return {Element} The next sibling of {@code node} that is an element.
      */
-    export function getNextElementSibling(node: Node): Element;
+    function getNextElementSibling(node: Node): Element;
 
     /**
      * Returns the first previous sibling that is an element.
@@ -1067,7 +1067,7 @@ declare module goog.dom {
      * @return {Element} The first previous sibling of {@code node} that is
      *     an element.
      */
-    export function getPreviousElementSibling(node: Node): Element;
+    function getPreviousElementSibling(node: Node): Element;
 
     /**
      * Returns the next node in source order from the given node.
@@ -1075,7 +1075,7 @@ declare module goog.dom {
      * @return {Node} The next node in the DOM tree, or null if this was the last
      *     node.
      */
-    export function getNextNode(node: Node): Node;
+    function getNextNode(node: Node): Node;
 
     /**
      * Returns the previous node in source order from the given node.
@@ -1083,21 +1083,21 @@ declare module goog.dom {
      * @return {Node} The previous node in the DOM tree, or null if this was the
      *     first node.
      */
-    export function getPreviousNode(node: Node): Node;
+    function getPreviousNode(node: Node): Node;
 
     /**
      * Whether the object looks like a DOM node.
      * @param {?} obj The object being tested for node likeness.
      * @return {boolean} Whether the object looks like a DOM node.
      */
-    export function isNodeLike(obj: any): boolean;
+    function isNodeLike(obj: any): boolean;
 
     /**
      * Whether the object looks like an Element.
      * @param {?} obj The object being tested for Element likeness.
      * @return {boolean} Whether the object looks like an Element.
      */
-    export function isElement(obj: any): boolean;
+    function isElement(obj: any): boolean;
 
     /**
      * Returns true if the specified value is a Window object. This includes the
@@ -1105,14 +1105,14 @@ declare module goog.dom {
      * @param {?} obj Variable to test.
      * @return {boolean} Whether the variable is a window.
      */
-    export function isWindow(obj: any): boolean;
+    function isWindow(obj: any): boolean;
 
     /**
      * Returns an element's parent, if it's an Element.
      * @param {Element} element The DOM element.
      * @return {Element} The parent, or null if not an Element.
      */
-    export function getParentElement(element: Element): Element;
+    function getParentElement(element: Element): Element;
 
     /**
      * Whether a node contains another node.
@@ -1120,7 +1120,7 @@ declare module goog.dom {
      * @param {Node} descendant The node to test presence of.
      * @return {boolean} Whether the parent node contains the descendent node.
      */
-    export function contains(parent: Node, descendant: Node): boolean;
+    function contains(parent: Node, descendant: Node): boolean;
 
     /**
      * Compares the document order of two nodes, returning 0 if they are the same
@@ -1134,7 +1134,7 @@ declare module goog.dom {
      * @return {number} 0 if the nodes are the same node, a negative number if node1
      *     is before node2, and a positive number if node2 is before node1.
      */
-    export function compareNodeOrder(node1: Node, node2: Node): number;
+    function compareNodeOrder(node1: Node, node2: Node): number;
 
     /**
      * Find the deepest common ancestor of the given nodes.
@@ -1143,35 +1143,35 @@ declare module goog.dom {
      *     null will only be returned if two or more of the nodes are from different
      *     documents.
      */
-    export function findCommonAncestor(...var_args: Node[]): Node;
+    function findCommonAncestor(...var_args: Node[]): Node;
 
     /**
      * Returns the owner document for a node.
      * @param {Node|Window} node The node to get the document for.
      * @return {!Document} The document owning the node.
      */
-    export function getOwnerDocument(node: Node): Document;
+    function getOwnerDocument(node: Node): Document;
 
     /**
      * Cross-browser function for getting the document element of a frame or iframe.
      * @param {Element} frame Frame element.
      * @return {!Document} The frame content document.
      */
-    export function getFrameContentDocument(frame: Element): Document;
+    function getFrameContentDocument(frame: Element): Document;
 
     /**
      * Cross-browser function for getting the window of a frame or iframe.
      * @param {Element} frame Frame element.
      * @return {Window} The window associated with the given frame.
      */
-    export function getFrameContentWindow(frame: Element): Window;
+    function getFrameContentWindow(frame: Element): Window;
 
     /**
      * Sets the text content of a node, with cross-browser support.
      * @param {Node} node The node to change the text content of.
      * @param {string|number} text The value that should replace the node's content.
      */
-    export function setTextContent(node: Node, text: string): void;
+    function setTextContent(node: Node, text: string): void;
 
     /**
      * Gets the outerHTML of a node, which islike innerHTML, except that it
@@ -1179,7 +1179,7 @@ declare module goog.dom {
      * @param {Element} element The element to get the HTML of.
      * @return {string} The outerHTML of the given element.
      */
-    export function getOuterHtml(element: Element): string;
+    function getOuterHtml(element: Element): string;
 
     /**
      * Finds the first descendant node that matches the filter function, using
@@ -1194,7 +1194,7 @@ declare module goog.dom {
      * @param {function(Node) : boolean} p The filter function.
      * @return {Node|undefined} The found node or undefined if none is found.
      */
-    export function findNode(root: Node, p: (arg0: Node) => boolean): Node;
+    function findNode(root: Node, p: (arg0: Node) => boolean): Node;
 
     /**
      * Finds all the descendant nodes that match the filter function, using a
@@ -1208,7 +1208,7 @@ declare module goog.dom {
      * @param {function(Node) : boolean} p The filter function.
      * @return {!Array.<!Node>} The found nodes or an empty array if none are found.
      */
-    export function findNodes(root: Node, p: (arg0: Node) => boolean): Array<Node>;
+    function findNodes(root: Node, p: (arg0: Node) => boolean): Array<Node>;
 
     /**
      * Returns true if the element has a tab index that allows it to receive
@@ -1219,7 +1219,7 @@ declare module goog.dom {
      *     focus.
      * @see http://fluidproject.org/blog/2008/01/09/getting-setting-and-removing-tabindex-values-with-javascript/
      */
-    export function isFocusableTabIndex(element: Element): boolean;
+    function isFocusableTabIndex(element: Element): boolean;
 
     /**
      * Enables or disables keyboard focus support on the element via its tab index.
@@ -1230,7 +1230,7 @@ declare module goog.dom {
      * @param {boolean} enable Whether to set or remove a tab index on the element
      *     that supports keyboard focus.
      */
-    export function setFocusableTabIndex(element: Element, enable: boolean): void;
+    function setFocusableTabIndex(element: Element, enable: boolean): void;
 
     /**
      * Returns true if the element can be focused, i.e. it has a tab index that
@@ -1239,7 +1239,7 @@ declare module goog.dom {
      * @param {Element} element Element to check.
      * @return {boolean} Whether the element allows keyboard focus.
      */
-    export function isFocusable(element: Element): boolean;
+    function isFocusable(element: Element): boolean;
 
     /**
      * Returns the text content of the current node, without markup and invisible
@@ -1252,7 +1252,7 @@ declare module goog.dom {
      * @param {Node} node The node from which we are getting content.
      * @return {string} The text content.
      */
-    export function getTextContent(node: Node): string;
+    function getTextContent(node: Node): string;
 
     /**
      * Returns the text content of the current node, without markup.
@@ -1263,7 +1263,7 @@ declare module goog.dom {
      * @param {Node} node The node from which we are getting content.
      * @return {string} The raw text content.
      */
-    export function getRawTextContent(node: Node): string;
+    function getRawTextContent(node: Node): string;
 
     /**
      * Returns the text length of the text contained in a node, without markup. This
@@ -1274,7 +1274,7 @@ declare module goog.dom {
      * @param {Node} node The node whose text content length is being calculated.
      * @return {number} The length of {@code node}'s text content.
      */
-    export function getNodeTextLength(node: Node): number;
+    function getNodeTextLength(node: Node): number;
 
     /**
      * Returns the text offset of a node relative to one of its ancestors. The text
@@ -1285,7 +1285,7 @@ declare module goog.dom {
      *     be calculated. Defaults to the node's owner document's body.
      * @return {number} The text offset.
      */
-    export function getNodeTextOffset(node: Node, opt_offsetParent?: Node): number;
+    function getNodeTextOffset(node: Node, opt_offsetParent?: Node): number;
 
     /**
      * Returns the node at a given offset in a parent node.  If an object is
@@ -1298,7 +1298,7 @@ declare module goog.dom {
      *     if this object is provided.
      * @return {Node} The node at the given offset.
      */
-    export function getNodeAtOffset(parent: Node, offset: number, opt_result?: Object): Node;
+    function getNodeAtOffset(parent: Node, offset: number, opt_result?: Object): Node;
 
     /**
      * Returns true if the object is a {@code NodeList}.  To qualify as a NodeList,
@@ -1307,7 +1307,7 @@ declare module goog.dom {
      * @param {Object} val Object to test.
      * @return {boolean} Whether the object is a NodeList.
      */
-    export function isNodeList(val: Object): boolean;
+    function isNodeList(val: Object): boolean;
 
     /**
      * Walks up the DOM hierarchy returning the first ancestor that has the passed
@@ -1321,7 +1321,7 @@ declare module goog.dom {
      * @return {Element} The first ancestor that matches the passed criteria, or
      *     null if no match is found.
      */
-    export function getAncestorByTagNameAndClass(element: Node, opt_tag?: goog.dom.TagName, opt_class?: string): Element;
+    function getAncestorByTagNameAndClass(element: Node, opt_tag?: goog.dom.TagName, opt_class?: string): Element;
 
     /**
      * Walks up the DOM hierarchy returning the first ancestor that has the passed
@@ -1332,7 +1332,7 @@ declare module goog.dom {
      * @return {Element} The first ancestor that matches the passed criteria, or
      *     null if none match.
      */
-    export function getAncestorByClass(element: Node, className: string): Element;
+    function getAncestorByClass(element: Node, className: string): Element;
 
     /**
      * Walks up the DOM hierarchy returning the first ancestor that passes the
@@ -1348,14 +1348,14 @@ declare module goog.dom {
      * @return {Node} DOM node that matched the matcher, or null if there was
      *     no match.
      */
-    export function getAncestor(element: Node, matcher: (arg0: Node) => boolean, opt_includeNode?: boolean, opt_maxSearchSteps?: number): Node;
+    function getAncestor(element: Node, matcher: (arg0: Node) => boolean, opt_includeNode?: boolean, opt_maxSearchSteps?: number): Node;
 
     /**
      * Determines the active element in the given document.
      * @param {Document} doc The document to look in.
      * @return {Element} The active element.
      */
-    export function getActiveElement(doc: Document): Element;
+    function getActiveElement(doc: Document): Element;
 
     /**
      * Gives the devicePixelRatio, or attempts to determine if not present.
@@ -1369,5 +1369,5 @@ declare module goog.dom {
      *
      * @return {number} The number of actual pixels per virtual pixel.
      */
-    export function getPixelRatio(): number;
+    function getPixelRatio(): number;
 }

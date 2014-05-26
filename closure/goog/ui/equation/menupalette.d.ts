@@ -8,7 +8,7 @@ declare module goog.ui.equation {
      * @constructor
      * @final
      */
-    export class MenuPalette extends goog.ui.equation.Palette {
+    class MenuPalette extends goog.ui.equation.Palette {
         constructor(paletteManager: goog.ui.equation.PaletteManager);
         
         /**
@@ -34,7 +34,7 @@ declare module goog.ui.equation {
      * @constructor
      * @final
      */
-    export class MenuPaletteRenderer extends goog.ui.equation.PaletteRenderer {
+    class MenuPaletteRenderer extends goog.ui.equation.PaletteRenderer {
         constructor();
     }
 }

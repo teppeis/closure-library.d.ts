@@ -8,7 +8,7 @@ declare module goog.structs {
      * @extends {goog.structs.Pool.<VALUE>}
      * @template VALUE
      */
-    export class PriorityPool<VALUE> extends goog.structs.Pool<VALUE> {
+    class PriorityPool<VALUE> extends goog.structs.Pool<VALUE> {
         constructor(opt_minCount?: number, opt_maxCount?: number);
         
         /**

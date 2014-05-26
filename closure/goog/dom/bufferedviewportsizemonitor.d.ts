@@ -10,7 +10,7 @@ declare module goog.dom {
      * @extends {goog.events.EventTarget}
      * @final
      */
-    export class BufferedViewportSizeMonitor extends goog.events.EventTarget {
+    class BufferedViewportSizeMonitor extends goog.events.EventTarget {
         constructor(viewportSizeMonitor: goog.dom.ViewportSizeMonitor, opt_bufferMs?: number);
         
         /**
@@ -27,7 +27,7 @@ declare module goog.dom.BufferedViewportSizeMonitor {
      * Additional events to dispatch.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         RESIZE_HEIGHT: string;
         RESIZE_WIDTH: string;
     }

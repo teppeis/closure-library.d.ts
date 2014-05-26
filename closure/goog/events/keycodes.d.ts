@@ -8,7 +8,7 @@ declare module goog.events {
      *
      * @enum {number}
      */
-    export interface KeyCodes {
+    interface KeyCodes {
         WIN_KEY_FF_LINUX: number;
         MAC_ENTER: number;
         BACKSPACE: number;
@@ -135,7 +135,7 @@ declare module goog.events.KeyCodes {
      * @param {goog.events.BrowserEvent} e A key event.
      * @return {boolean} Whether it's a text modifying key.
      */
-    export function isTextModifyingKeyEvent(e: goog.events.BrowserEvent): boolean;
+    function isTextModifyingKeyEvent(e: goog.events.BrowserEvent): boolean;
 
     /**
      * Returns true if the key fires a keypress event in the current browser.
@@ -164,7 +164,7 @@ declare module goog.events.KeyCodes {
      * @param {boolean=} opt_altKey Whether the alt key is held down.
      * @return {boolean} Whether it's a key that fires a keypress event.
      */
-    export function firesKeyPressEvent(keyCode: number, opt_heldKeyCode?: number, opt_shiftKey?: boolean, opt_ctrlKey?: boolean, opt_altKey?: boolean): boolean;
+    function firesKeyPressEvent(keyCode: number, opt_heldKeyCode?: number, opt_shiftKey?: boolean, opt_ctrlKey?: boolean, opt_altKey?: boolean): boolean;
 
     /**
      * Returns true if the key produces a character.
@@ -173,26 +173,26 @@ declare module goog.events.KeyCodes {
      * @param {number} keyCode A key code.
      * @return {boolean} Whether it's a character key.
      */
-    export function isCharacterKey(keyCode: number): boolean;
+    function isCharacterKey(keyCode: number): boolean;
 
     /**
      * Normalizes key codes from OS/Browser-specific value to the general one.
      * @param {number} keyCode The native key code.
      * @return {number} The normalized key code.
      */
-    export function normalizeKeyCode(keyCode: number): number;
+    function normalizeKeyCode(keyCode: number): number;
 
     /**
      * Normalizes key codes from their Gecko-specific value to the general one.
      * @param {number} keyCode The native key code.
      * @return {number} The normalized key code.
      */
-    export function normalizeGeckoKeyCode(keyCode: number): number;
+    function normalizeGeckoKeyCode(keyCode: number): number;
 
     /**
      * Normalizes key codes from their Mac WebKit-specific value to the general one.
      * @param {number} keyCode The native key code.
      * @return {number} The normalized key code.
      */
-    export function normalizeMacWebKitKeyCode(keyCode: number): number;
+    function normalizeMacWebKitKeyCode(keyCode: number): number;
 }

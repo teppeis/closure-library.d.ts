@@ -7,7 +7,7 @@ declare module goog.storage {
      *     storage mechanism.
      * @constructor
      */
-    export class Storage {
+    class Storage {
         constructor(mechanism: goog.storage.mechanism.Mechanism);
         
         /**

@@ -11,7 +11,7 @@ declare module goog.ui.ac {
      * @constructor
      * @extends {goog.Disposable}
      */
-    export class RemoteArrayMatcher extends goog.Disposable {
+    class RemoteArrayMatcher extends goog.Disposable {
         constructor(url: string, opt_noSimilar?: boolean);
         
         /**

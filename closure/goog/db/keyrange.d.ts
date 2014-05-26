@@ -10,7 +10,7 @@ declare module goog.db {
      * @constructor
      * @final
      */
-    export class KeyRange {
+    class KeyRange {
         constructor(range: IDBKeyRange);
         
         /**

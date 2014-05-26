@@ -5,7 +5,7 @@ declare module goog.debug {
      * @param {*=} opt_msg The message associated with the error.
      * @constructor
      */
-    export class Error {
+    class Error {
         constructor(opt_msg?: any);
     }
 }

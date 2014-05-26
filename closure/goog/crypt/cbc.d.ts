@@ -12,7 +12,7 @@ declare module goog.crypt {
      * @final
      * @struct
      */
-    export class Cbc {
+    class Cbc {
         constructor(cipher: goog.crypt.BlockCipher, opt_blockSize?: number);
         
         /**

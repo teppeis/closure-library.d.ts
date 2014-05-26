@@ -31,7 +31,7 @@ declare module goog.ui {
      *     goog.ui.Component} for semantics.
      * @extends {goog.ui.ModalPopup}
      */
-    export class Dialog extends goog.ui.ModalPopup {
+    class Dialog extends goog.ui.ModalPopup {
         constructor(opt_class?: string, opt_useIframeMask?: boolean, opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -274,7 +274,7 @@ declare module goog.ui.Dialog {
      * Events dispatched by dialogs.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         SELECT: string;
         AFTER_HIDE: string;
         AFTER_SHOW: string;
@@ -284,7 +284,7 @@ declare module goog.ui.Dialog {
      * The keys used to identify standard buttons in events.
      * @enum {string}
      */
-    export interface DefaultButtonKeys {
+    interface DefaultButtonKeys {
         OK: string;
         CANCEL: string;
         YES: string;
@@ -297,7 +297,7 @@ declare module goog.ui.Dialog {
      * The default captions for the default buttons.
      * @enum {string}
      */
-    export interface DefaultButtonCaptions {
+    interface DefaultButtonCaptions {
         OK: string;
         CANCEL: string;
         YES: string;
@@ -313,7 +313,7 @@ declare module goog.ui.Dialog {
      * @constructor
      * @extends {goog.events.Event}
      */
-    export class Event extends goog.events.Event {
+    class Event extends goog.events.Event {
         constructor(key: string, caption: string);
     }
 
@@ -325,7 +325,7 @@ declare module goog.ui.Dialog {
      * @constructor
      * @extends {goog.structs.Map}
      */
-    export class ButtonSet extends goog.structs.Map<any, any> {
+    class ButtonSet extends goog.structs.Map<any, any> {
         constructor(opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -486,7 +486,7 @@ declare module goog.ui.Dialog.ButtonSet {
      * The standard buttons (keys associated with captions).
      * @enum {!{key: string, caption: string}}
      */
-    export interface DefaultButtons {
+    interface DefaultButtons {
         OK: {key: string; caption: string};
         CANCEL: {key: string; caption: string};
         YES: {key: string; caption: string};

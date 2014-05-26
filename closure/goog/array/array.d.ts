@@ -3,7 +3,7 @@ declare module goog.array {
     /**
      * @typedef {Array|NodeList|Arguments|{length: number}}
      */
-    export interface ArrayLike {
+    interface ArrayLike {
     }
 
     /**
@@ -13,7 +13,7 @@ declare module goog.array {
      * @return {T} Last item in array.
      * @template T
      */
-    export function peek<T>(array: Array<T>): T;
+    function peek<T>(array: Array<T>): T;
 
     /**
      * Returns the last element in an array without removing it.
@@ -22,7 +22,7 @@ declare module goog.array {
      * @return {T} Last item in array.
      * @template T
      */
-    export function last<T>(array: Array<T>): T;
+    function last<T>(array: Array<T>): T;
 
     /**
      * Returns the index of the first element of an array with a specified value, or
@@ -37,7 +37,7 @@ declare module goog.array {
      * @return {number} The index of the first matching array element.
      * @template T
      */
-    export function indexOf<T>(arr: Array<T>, obj: T, opt_fromIndex?: number): number;
+    function indexOf<T>(arr: Array<T>, obj: T, opt_fromIndex?: number): number;
 
     /**
      * Returns the index of the last element of an array with a specified value, or
@@ -52,7 +52,7 @@ declare module goog.array {
      * @return {number} The index of the last matching array element.
      * @template T
      */
-    export function lastIndexOf<T>(arr: Array<T>, obj: T, opt_fromIndex?: number): number;
+    function lastIndexOf<T>(arr: Array<T>, obj: T, opt_fromIndex?: number): number;
 
     /**
      * Calls a function for each element in an array. Skips holes in the array.
@@ -66,7 +66,7 @@ declare module goog.array {
      * @param {S=} opt_obj The object to be used as the value of 'this' within f.
      * @template T,S
      */
-    export function forEach<T, S>(arr: Array<T>, f: (arg0: T, arg1: number, arg2: any) => any, opt_obj?: S): void;
+    function forEach<T, S>(arr: Array<T>, f: (arg0: T, arg1: number, arg2: any) => any, opt_obj?: S): void;
 
     /**
      * Calls a function for each element in an array, starting from the last
@@ -82,7 +82,7 @@ declare module goog.array {
      *     within f.
      * @template T,S
      */
-    export function forEachRight<T, S>(arr: Array<T>, f: (arg0: T, arg1: number, arg2: any) => any, opt_obj?: S): void;
+    function forEachRight<T, S>(arr: Array<T>, f: (arg0: T, arg1: number, arg2: any) => any, opt_obj?: S): void;
 
     /**
      * Calls a function for each element in an array, and if the function returns
@@ -103,7 +103,7 @@ declare module goog.array {
      *     are present.
      * @template T,S
      */
-    export function filter<T, S>(arr: Array<T>, f: (arg0: T, arg1: number, arg2: any) => boolean, opt_obj?: S): Array<T>;
+    function filter<T, S>(arr: Array<T>, f: (arg0: T, arg1: number, arg2: any) => boolean, opt_obj?: S): Array<T>;
 
     /**
      * Calls a function for each element in an array and inserts the result into a
@@ -121,7 +121,7 @@ declare module goog.array {
      * @return {!Array.<RESULT>} a new array with the results from f.
      * @template THIS, VALUE, RESULT
      */
-    export function map<THIS, VALUE, RESULT>(arr: Array<VALUE>, f: (arg0: VALUE, arg1: number, arg2: any) => RESULT, opt_obj?: THIS): Array<RESULT>;
+    function map<THIS, VALUE, RESULT>(arr: Array<VALUE>, f: (arg0: VALUE, arg1: number, arg2: any) => RESULT, opt_obj?: THIS): Array<RESULT>;
 
     /**
      * Passes every element of an array into a function and accumulates the result.
@@ -147,7 +147,7 @@ declare module goog.array {
      * @return {R} Result of evaluating f repeatedly across the values of the array.
      * @template T,S,R
      */
-    export function reduce<T, S, R>(arr: Array<T>, f: (arg0: R, arg1: T, arg2: number, arg3: any) => R, val: any, opt_obj?: S): R;
+    function reduce<T, S, R>(arr: Array<T>, f: (arg0: R, arg1: T, arg2: number, arg3: any) => R, val: any, opt_obj?: S): R;
 
     /**
      * Passes every element of an array into a function and accumulates the result,
@@ -175,7 +175,7 @@ declare module goog.array {
      *     values of the array.
      * @template T,S,R
      */
-    export function reduceRight<T, S, R>(arr: Array<T>, f: (arg0: R, arg1: T, arg2: number, arg3: any) => R, val: any, opt_obj?: S): R;
+    function reduceRight<T, S, R>(arr: Array<T>, f: (arg0: R, arg1: T, arg2: number, arg3: any) => R, val: any, opt_obj?: S): R;
 
     /**
      * Calls f for each element of an array. If any call returns true, some()
@@ -194,7 +194,7 @@ declare module goog.array {
      * @return {boolean} true if any element passes the test.
      * @template T,S
      */
-    export function some<T, S>(arr: Array<T>, f: (arg0: T, arg1: number, arg2: any) => boolean, opt_obj?: S): boolean;
+    function some<T, S>(arr: Array<T>, f: (arg0: T, arg1: number, arg2: any) => boolean, opt_obj?: S): boolean;
 
     /**
      * Call f for each element of an array. If all calls return true, every()
@@ -213,7 +213,7 @@ declare module goog.array {
      * @return {boolean} false if any element fails the test.
      * @template T,S
      */
-    export function every<T, S>(arr: Array<T>, f: (arg0: T, arg1: number, arg2: any) => boolean, opt_obj?: S): boolean;
+    function every<T, S>(arr: Array<T>, f: (arg0: T, arg1: number, arg2: any) => boolean, opt_obj?: S): boolean;
 
     /**
      * Counts the array elements that fulfill the predicate, i.e. for which the
@@ -227,7 +227,7 @@ declare module goog.array {
      * @return {number} The number of the matching elements.
      * @template T,S
      */
-    export function count<T, S>(arr: Array<T>, f: (arg0: T, arg1: number, arg2: any) => boolean, opt_obj?: S): number;
+    function count<T, S>(arr: Array<T>, f: (arg0: T, arg1: number, arg2: any) => boolean, opt_obj?: S): number;
 
     /**
      * Search an array for the first element that satisfies a given condition and
@@ -242,7 +242,7 @@ declare module goog.array {
      *     element is found.
      * @template T,S
      */
-    export function find<T, S>(arr: Array<T>, f: (arg0: T, arg1: number, arg2: any) => boolean, opt_obj?: S): T;
+    function find<T, S>(arr: Array<T>, f: (arg0: T, arg1: number, arg2: any) => boolean, opt_obj?: S): T;
 
     /**
      * Search an array for the first element that satisfies a given condition and
@@ -258,7 +258,7 @@ declare module goog.array {
      *     or -1 if no element is found.
      * @template T,S
      */
-    export function findIndex<T, S>(arr: Array<T>, f: (arg0: T, arg1: number, arg2: any) => boolean, opt_obj?: S): number;
+    function findIndex<T, S>(arr: Array<T>, f: (arg0: T, arg1: number, arg2: any) => boolean, opt_obj?: S): number;
 
     /**
      * Search an array (in reverse order) for the last element that satisfies a
@@ -274,7 +274,7 @@ declare module goog.array {
      *     element is found.
      * @template T,S
      */
-    export function findRight<T, S>(arr: Array<T>, f: (arg0: T, arg1: number, arg2: any) => boolean, opt_obj?: S): T;
+    function findRight<T, S>(arr: Array<T>, f: (arg0: T, arg1: number, arg2: any) => boolean, opt_obj?: S): T;
 
     /**
      * Search an array (in reverse order) for the last element that satisfies a
@@ -290,7 +290,7 @@ declare module goog.array {
      *     or -1 if no element is found.
      * @template T,S
      */
-    export function findIndexRight<T, S>(arr: Array<T>, f: (arg0: T, arg1: number, arg2: any) => boolean, opt_obj?: Object): number;
+    function findIndexRight<T, S>(arr: Array<T>, f: (arg0: T, arg1: number, arg2: any) => boolean, opt_obj?: Object): number;
 
     /**
      * Whether the array contains the given object.
@@ -299,20 +299,20 @@ declare module goog.array {
      * @param {*} obj The object for which to test.
      * @return {boolean} true if obj is present.
      */
-    export function contains(arr: goog.array.ArrayLike, obj: any): boolean;
+    function contains(arr: goog.array.ArrayLike, obj: any): boolean;
 
     /**
      * Whether the array is empty.
      * @param {goog.array.ArrayLike} arr The array to test.
      * @return {boolean} true if empty.
      */
-    export function isEmpty(arr: goog.array.ArrayLike): boolean;
+    function isEmpty(arr: goog.array.ArrayLike): boolean;
 
     /**
      * Clears the array.
      * @param {goog.array.ArrayLike} arr Array or array like object to clear.
      */
-    export function clear(arr: goog.array.ArrayLike): void;
+    function clear(arr: goog.array.ArrayLike): void;
 
     /**
      * Pushes an item into an array, if it's not already in the array.
@@ -320,7 +320,7 @@ declare module goog.array {
      * @param {T} obj Value to add.
      * @template T
      */
-    export function insert<T>(arr: Array<T>, obj: T): void;
+    function insert<T>(arr: Array<T>, obj: T): void;
 
     /**
      * Inserts an object at the given index of the array.
@@ -329,7 +329,7 @@ declare module goog.array {
      * @param {number=} opt_i The index at which to insert the object. If omitted,
      *      treated as 0. A negative index is counted from the end of the array.
      */
-    export function insertAt(arr: goog.array.ArrayLike, obj: any, opt_i?: number): void;
+    function insertAt(arr: goog.array.ArrayLike, obj: any, opt_i?: number): void;
 
     /**
      * Inserts at the given index of the array, all elements of another array.
@@ -338,7 +338,7 @@ declare module goog.array {
      * @param {number=} opt_i The index at which to insert the object. If omitted,
      *      treated as 0. A negative index is counted from the end of the array.
      */
-    export function insertArrayAt(arr: goog.array.ArrayLike, elementsToAdd: goog.array.ArrayLike, opt_i?: number): void;
+    function insertArrayAt(arr: goog.array.ArrayLike, elementsToAdd: goog.array.ArrayLike, opt_i?: number): void;
 
     /**
      * Inserts an object into an array before a specified object.
@@ -348,7 +348,7 @@ declare module goog.array {
      *     is omitted or not found, obj is inserted at the end of the array.
      * @template T
      */
-    export function insertBefore<T>(arr: Array<T>, obj: T, opt_obj2?: T): void;
+    function insertBefore<T>(arr: Array<T>, obj: T, opt_obj2?: T): void;
 
     /**
      * Removes the first occurrence of a particular value from an array.
@@ -358,7 +358,7 @@ declare module goog.array {
      * @return {boolean} True if an element was removed.
      * @template T
      */
-    export function remove<T>(arr: Array<T>, obj: T): boolean;
+    function remove<T>(arr: Array<T>, obj: T): boolean;
 
     /**
      * Removes from an array the element at index i
@@ -367,7 +367,7 @@ declare module goog.array {
      * @param {number} i The index to remove.
      * @return {boolean} True if an element was removed.
      */
-    export function removeAt(arr: goog.array.ArrayLike, i: number): boolean;
+    function removeAt(arr: goog.array.ArrayLike, i: number): boolean;
 
     /**
      * Removes the first value that satisfies the given condition.
@@ -381,7 +381,7 @@ declare module goog.array {
      * @return {boolean} True if an element was removed.
      * @template T,S
      */
-    export function removeIf<T, S>(arr: Array<T>, f: (arg0: T, arg1: number, arg2: any) => boolean, opt_obj?: S): boolean;
+    function removeIf<T, S>(arr: Array<T>, f: (arg0: T, arg1: number, arg2: any) => boolean, opt_obj?: S): boolean;
 
     /**
      * Returns a new array that is the result of joining the arguments.  If arrays
@@ -410,7 +410,7 @@ declare module goog.array {
      *     added, while primitives and objects will be added as is.
      * @return {!Array} The new resultant array.
      */
-    export function concat(...var_args: any[]): Array<any>;
+    function concat(...var_args: any[]): Array<any>;
 
     /**
      * Returns a new array that contains the contents of all the arrays passed.
@@ -418,7 +418,7 @@ declare module goog.array {
      * @return {!Array.<T>}
      * @template T
      */
-    export function join<T>(...var_args: Array<T>[]): Array<T>;
+    function join<T>(...var_args: Array<T>[]): Array<T>;
 
     /**
      * Converts an object to an array.
@@ -430,7 +430,7 @@ declare module goog.array {
      *     have a length property, an empty array will be returned.
      * @template T
      */
-    export function toArray<T>(object: Array<T>): Array<T>;
+    function toArray<T>(object: Array<T>): Array<T>;
 
     /**
      * Does a shallow copy of an array.
@@ -439,7 +439,7 @@ declare module goog.array {
      * @return {!Array.<T>} Clone of the input array.
      * @template T
      */
-    export function clone<T>(arr: Array<T>): Array<T>;
+    function clone<T>(arr: Array<T>): Array<T>;
 
     /**
      * Extends an array with another array, element, or "array like" object.
@@ -457,7 +457,7 @@ declare module goog.array {
      *     to add to arr1.
      * @template VALUE
      */
-    export function extend<VALUE>(arr1: Array<VALUE>, ...var_args: Array<VALUE>[]): void;
+    function extend<VALUE>(arr1: Array<VALUE>, ...var_args: Array<VALUE>[]): void;
 
     /**
      * Adds or removes elements from an array. This is a generic version of Array
@@ -475,7 +475,7 @@ declare module goog.array {
      * @return {!Array.<T>} the removed elements.
      * @template T
      */
-    export function splice<T>(arr: Array<T>, index: number, howMany: number, ...var_args: T[]): Array<T>;
+    function splice<T>(arr: Array<T>, index: number, howMany: number, ...var_args: T[]): Array<T>;
 
     /**
      * Returns a new array from a segment of an array. This is a generic version of
@@ -490,7 +490,7 @@ declare module goog.array {
      *     original array.
      * @template T
      */
-    export function slice<T>(arr: Array<T>, start: number, opt_end?: number): Array<T>;
+    function slice<T>(arr: Array<T>, start: number, opt_end?: number): Array<T>;
 
     /**
      * Removes all duplicates from an array (retaining only the first
@@ -516,7 +516,7 @@ declare module goog.array {
      *     value for each item in the array it should consider unique.
      * @template T
      */
-    export function removeDuplicates<T>(arr: Array<T>, opt_rv?: Array<any>, opt_hashFn?: (arg0: T) => string): void;
+    function removeDuplicates<T>(arr: Array<T>, opt_rv?: Array<any>, opt_hashFn?: (arg0: T) => string): void;
 
     /**
      * Searches the specified array for the specified target using the binary
@@ -544,7 +544,7 @@ declare module goog.array {
      *     iff target is found.
      * @template TARGET, VALUE
      */
-    export function binarySearch<TARGET, VALUE>(arr: Array<VALUE>, target: TARGET, opt_compareFn?: (arg0: TARGET, arg1: VALUE) => number): number;
+    function binarySearch<TARGET, VALUE>(arr: Array<VALUE>, target: TARGET, opt_compareFn?: (arg0: TARGET, arg1: VALUE) => number): number;
 
     /**
      * Selects an index in the specified array using the binary search algorithm.
@@ -570,7 +570,7 @@ declare module goog.array {
      *     iff a match is found.
      * @template THIS, VALUE
      */
-    export function binarySelect<THIS, VALUE>(arr: Array<VALUE>, evaluator: (arg0: VALUE, arg1: number, arg2: any) => number, opt_obj?: THIS): number;
+    function binarySelect<THIS, VALUE>(arr: Array<VALUE>, evaluator: (arg0: VALUE, arg1: number, arg2: any) => number, opt_obj?: THIS): number;
 
     /**
      * Sorts the specified array into ascending order.  If no opt_compareFn is
@@ -593,7 +593,7 @@ declare module goog.array {
      *     first argument is less than, equal to, or greater than the second.
      * @template T
      */
-    export function sort<T>(arr: Array<T>, opt_compareFn?: (arg0: T, arg1: T) => number): void;
+    function sort<T>(arr: Array<T>, opt_compareFn?: (arg0: T, arg1: T) => number): void;
 
     /**
      * Sorts the specified array into ascending order in a stable way.  If no
@@ -613,7 +613,7 @@ declare module goog.array {
      *     second.
      * @template T
      */
-    export function stableSort<T>(arr: Array<T>, opt_compareFn?: (arg0: T, arg1: T) => number): void;
+    function stableSort<T>(arr: Array<T>, opt_compareFn?: (arg0: T, arg1: T) => number): void;
 
     /**
      * Sorts an array of objects by the specified object key and compare
@@ -626,7 +626,7 @@ declare module goog.array {
      * @param {Function=} opt_compareFn The function to use to compare key
      *     values.
      */
-    export function sortObjectsByKey(arr: Array<Object>, key: string, opt_compareFn?: Function): void;
+    function sortObjectsByKey(arr: Array<Object>, key: string, opt_compareFn?: Function): void;
 
     /**
      * Tells if the array is sorted.
@@ -640,7 +640,7 @@ declare module goog.array {
      * @return {boolean} Whether the array is sorted.
      * @template T
      */
-    export function isSorted<T>(arr: Array<T>, opt_compareFn?: (arg0: T, arg1: T) => number, opt_strict?: boolean): boolean;
+    function isSorted<T>(arr: Array<T>, opt_compareFn?: (arg0: T, arg1: T) => number, opt_strict?: boolean): boolean;
 
     /**
      * Compares two arrays for equality. Two arrays are considered equal if they
@@ -655,7 +655,7 @@ declare module goog.array {
      *     compares the elements using the built-in '===' operator.
      * @return {boolean} Whether the two arrays are equal.
      */
-    export function equals(arr1: goog.array.ArrayLike, arr2: goog.array.ArrayLike, opt_equalsFn?: Function): boolean;
+    function equals(arr1: goog.array.ArrayLike, arr2: goog.array.ArrayLike, opt_equalsFn?: Function): boolean;
 
     /**
      * 3-way array compare function.
@@ -673,7 +673,7 @@ declare module goog.array {
      *     second.
      * @template VALUE
      */
-    export function compare3<VALUE>(arr1: Array<VALUE>, arr2: Array<VALUE>, opt_compareFn?: (arg0: VALUE, arg1: VALUE) => number): number;
+    function compare3<VALUE>(arr1: Array<VALUE>, arr2: Array<VALUE>, opt_compareFn?: (arg0: VALUE, arg1: VALUE) => number): number;
 
     /**
      * Compares its two arguments for order, using the built in < and >
@@ -684,7 +684,7 @@ declare module goog.array {
      *     argument is less than, equal to, or greater than the second.
      * @template VALUE
      */
-    export function defaultCompare<VALUE>(a: VALUE, b: VALUE): number;
+    function defaultCompare<VALUE>(a: VALUE, b: VALUE): number;
 
     /**
      * Compares its two arguments for equality, using the built in === operator.
@@ -692,7 +692,7 @@ declare module goog.array {
      * @param {*} b The second object to compare.
      * @return {boolean} True if the two arguments are equal, false otherwise.
      */
-    export function defaultCompareEquality(a: any, b: any): boolean;
+    function defaultCompareEquality(a: any, b: any): boolean;
 
     /**
      * Inserts a value into a sorted array. The array is not modified if the
@@ -707,7 +707,7 @@ declare module goog.array {
      * @return {boolean} True if an element was inserted.
      * @template VALUE
      */
-    export function binaryInsert<VALUE>(array: Array<VALUE>, value: VALUE, opt_compareFn?: (arg0: VALUE, arg1: VALUE) => number): boolean;
+    function binaryInsert<VALUE>(array: Array<VALUE>, value: VALUE, opt_compareFn?: (arg0: VALUE, arg1: VALUE) => number): boolean;
 
     /**
      * Removes a value from a sorted array.
@@ -721,7 +721,7 @@ declare module goog.array {
      * @return {boolean} True if an element was removed.
      * @template VALUE
      */
-    export function binaryRemove<VALUE>(array: Array<VALUE>, value: VALUE, opt_compareFn?: (arg0: VALUE, arg1: VALUE) => number): boolean;
+    function binaryRemove<VALUE>(array: Array<VALUE>, value: VALUE, opt_compareFn?: (arg0: VALUE, arg1: VALUE) => number): boolean;
 
     /**
      * Splits an array into disjoint buckets according to a splitting function.
@@ -737,7 +737,7 @@ declare module goog.array {
      *     which the splitter returned that key.
      * @template T,S
      */
-    export function bucket<T, S>(array: Array<T>, sorter: (arg0: T, arg1: number, arg2: Array<T>) => any, opt_obj?: S): Object;
+    function bucket<T, S>(array: Array<T>, sorter: (arg0: T, arg1: number, arg2: Array<T>) => any, opt_obj?: S): Object;
 
     /**
      * Creates a new object built from the provided array and the key-generation
@@ -755,7 +755,7 @@ declare module goog.array {
      * @return {!Object.<T>} The new object.
      * @template T,S
      */
-    export function toObject<T, S>(arr: Array<T>, keyFunc: (arg0: T, arg1: number, arg2: any) => string, opt_obj?: S): Object;
+    function toObject<T, S>(arr: Array<T>, keyFunc: (arg0: T, arg1: number, arg2: any) => string, opt_obj?: S): Object;
 
     /**
      * Creates a range of numbers in an arithmetic progression.
@@ -777,7 +777,7 @@ declare module goog.array {
      *     an empty array if adding the step would not converge toward the end
      *     value.
      */
-    export function range(startOrEnd: number, opt_end?: number, opt_step?: number): Array<number>;
+    function range(startOrEnd: number, opt_end?: number, opt_step?: number): Array<number>;
 
     /**
      * Returns an array consisting of the given value repeated N times.
@@ -787,7 +787,7 @@ declare module goog.array {
      * @return {!Array.<VALUE>} An array with the repeated value.
      * @template VALUE
      */
-    export function repeat<VALUE>(value: VALUE, n: number): Array<VALUE>;
+    function repeat<VALUE>(value: VALUE, n: number): Array<VALUE>;
 
     /**
      * Returns an array consisting of every argument with all arrays
@@ -796,7 +796,7 @@ declare module goog.array {
      * @param {...*} var_args The values to flatten.
      * @return {!Array} An array containing the flattened values.
      */
-    export function flatten(...var_args: any[]): Array<any>;
+    function flatten(...var_args: any[]): Array<any>;
 
     /**
      * Rotates an array in-place. After calling this method, the element at
@@ -812,7 +812,7 @@ declare module goog.array {
      * @return {!Array.<T>} The array.
      * @template T
      */
-    export function rotate<T>(array: Array<T>, n: number): Array<T>;
+    function rotate<T>(array: Array<T>, n: number): Array<T>;
 
     /**
      * Moves one item of an array to a new position keeping the order of the rest
@@ -824,7 +824,7 @@ declare module goog.array {
      *     {@code arr.length - 1}.
      * @param {number} toIndex Target index between 0 and {@code arr.length - 1}.
      */
-    export function moveItem(arr: Array<any>, fromIndex: number, toIndex: number): void;
+    function moveItem(arr: Array<any>, fromIndex: number, toIndex: number): void;
 
     /**
      * Creates a new array for which the element at position i is an array of the
@@ -838,7 +838,7 @@ declare module goog.array {
      * @param {...!goog.array.ArrayLike} var_args Arrays to be combined.
      * @return {!Array.<!Array>} A new array of arrays created from provided arrays.
      */
-    export function zip(...var_args: goog.array.ArrayLike[]): Array<Array<any>>;
+    function zip(...var_args: goog.array.ArrayLike[]): Array<Array<any>>;
 
     /**
      * Shuffles the values in the specified array using the Fisher-Yates in-place
@@ -854,5 +854,5 @@ declare module goog.array {
      *     Takes no arguments, and returns a random number on the interval [0, 1).
      *     Defaults to Math.random() using JavaScript's built-in Math library.
      */
-    export function shuffle(arr: Array<any>, opt_randFn?: () => number): void;
+    function shuffle(arr: Array<any>, opt_randFn?: () => number): void;
 }

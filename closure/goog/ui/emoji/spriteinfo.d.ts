@@ -17,7 +17,7 @@ declare module goog.ui.emoji {
      * @constructor
      * @final
      */
-    export class SpriteInfo {
+    class SpriteInfo {
         constructor(cssClass: string, opt_url?: string, opt_width?: number, opt_height?: number, opt_xOffset?: number, opt_yOffset?: number, opt_animated?: boolean);
         
         /**

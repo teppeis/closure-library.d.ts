@@ -6,7 +6,7 @@ declare module goog.editor.plugins {
      * @extends {goog.editor.Plugin}
      * @final
      */
-    export class RemoveFormatting extends goog.editor.Plugin {
+    class RemoveFormatting extends goog.editor.Plugin {
         constructor();
         
         /**

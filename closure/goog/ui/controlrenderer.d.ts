@@ -19,7 +19,7 @@ declare module goog.ui {
      * reusable.
      * @constructor
      */
-    export class ControlRenderer {
+    class ControlRenderer {
         constructor();
         
         /**

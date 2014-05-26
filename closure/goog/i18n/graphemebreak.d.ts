@@ -11,7 +11,7 @@ declare module goog.i18n.GraphemeBreak {
      * @enum {number}
      * @protected
      */
-    export interface property {
+    interface property {
         ANY: number;
         CONTROL: number;
         EXTEND: number;
@@ -38,5 +38,5 @@ declare module goog.i18n.GraphemeBreak {
      *     If false, indicates legacy cluster.
      * @return {boolean} True if a & b do not form a cluster; False otherwise.
      */
-    export function hasGraphemeBreak(a: number, b: number, opt_extended?: boolean): boolean;
+    function hasGraphemeBreak(a: number, b: number, opt_extended?: boolean): boolean;
 }

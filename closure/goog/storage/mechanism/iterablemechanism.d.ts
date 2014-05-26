@@ -6,7 +6,7 @@ declare module goog.storage.mechanism {
      * @constructor
      * @extends {goog.storage.mechanism.Mechanism}
      */
-    export class IterableMechanism extends goog.storage.mechanism.Mechanism {
+    class IterableMechanism extends goog.storage.mechanism.Mechanism {
         constructor();
         
         /**

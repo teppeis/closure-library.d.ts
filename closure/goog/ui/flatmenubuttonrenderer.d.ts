@@ -8,7 +8,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.FlatButtonRenderer}
      */
-    export class FlatMenuButtonRenderer extends goog.ui.FlatButtonRenderer {
+    class FlatMenuButtonRenderer extends goog.ui.FlatButtonRenderer {
         constructor();
         
         /**

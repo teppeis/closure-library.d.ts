@@ -14,7 +14,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Select}
      */
-    export class ToolbarSelect extends goog.ui.Select {
+    class ToolbarSelect extends goog.ui.Select {
         constructor(caption: goog.ui.ControlContent, opt_menu?: goog.ui.Menu, opt_renderer?: goog.ui.MenuButtonRenderer, opt_domHelper?: goog.dom.DomHelper);
     }
 }

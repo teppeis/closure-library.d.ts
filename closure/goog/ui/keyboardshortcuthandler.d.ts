@@ -15,7 +15,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.events.EventTarget}
      */
-    export class KeyboardShortcutHandler extends goog.events.EventTarget {
+    class KeyboardShortcutHandler extends goog.events.EventTarget {
         constructor(keyTarget: goog.events.EventTarget);
         
         /**
@@ -251,7 +251,7 @@ declare module goog.ui {
      * @constructor
      * @final
      */
-    export class KeyboardShortcutEvent extends goog.events.Event {
+    class KeyboardShortcutEvent extends goog.events.Event {
         constructor(type: string, identifier: string, target: Node);
     }
 }
@@ -262,7 +262,7 @@ declare module goog.ui.KeyboardShortcutHandler {
      * Bit values for modifier keys.
      * @enum {number}
      */
-    export interface Modifiers {
+    interface Modifiers {
         NONE: number;
         SHIFT: number;
         CTRL: number;
@@ -274,7 +274,7 @@ declare module goog.ui.KeyboardShortcutHandler {
      * Events.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         SHORTCUT_TRIGGERED: string;
         SHORTCUT_PREFIX: string;
     }

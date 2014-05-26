@@ -6,7 +6,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.ControlRenderer}
      */
-    export class CheckboxRenderer extends goog.ui.ControlRenderer {
+    class CheckboxRenderer extends goog.ui.ControlRenderer {
         constructor();
         
         /**

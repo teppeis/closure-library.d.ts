@@ -5,7 +5,7 @@ declare module goog.ui {
      * navigation header and footer.
      * @interface
      */
-    export interface DatePickerRenderer {
+    interface DatePickerRenderer {
         
         /**
          * Render the navigation row.

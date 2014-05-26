@@ -17,7 +17,7 @@ declare module goog.ui.ac {
      *     default.
      * @extends {goog.events.EventTarget}
      */
-    export class Renderer extends goog.events.EventTarget {
+    class Renderer extends goog.events.EventTarget {
         constructor(opt_parentNode?: Element, opt_customRenderer?: {renderRow: any}, opt_rightAlign?: boolean, opt_useStandardHighlighting?: boolean);
         
         /**
@@ -210,7 +210,7 @@ declare module goog.ui.ac.Renderer {
      * Extending classes should override the render function.
      * @constructor
      */
-    export class CustomRenderer {
+    class CustomRenderer {
         constructor();
         
         /**

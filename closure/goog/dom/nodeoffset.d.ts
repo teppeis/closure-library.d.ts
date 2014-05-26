@@ -9,7 +9,7 @@ declare module goog.dom {
      * @constructor
      * @final
      */
-    export class NodeOffset extends goog.Disposable {
+    class NodeOffset extends goog.Disposable {
         constructor(node: Node, baseNode: Node);
         
         /**

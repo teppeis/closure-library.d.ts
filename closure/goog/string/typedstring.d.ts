@@ -11,7 +11,7 @@ declare module goog.string$ {
      * to assert type membership, such as {@code goog.html.SafeHtml.unwrap}.
      * @interface
      */
-    export interface TypedString {
+    interface TypedString {
         
         /**
          * Interface marker of the TypedString interface.

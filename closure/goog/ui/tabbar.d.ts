@@ -25,7 +25,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Container}
      */
-    export class TabBar extends goog.ui.Container {
+    class TabBar extends goog.ui.Container {
         constructor(opt_location?: goog.ui.TabBar.Location, opt_renderer?: goog.ui.TabBarRenderer, opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -174,7 +174,7 @@ declare module goog.ui.TabBar {
      * Tab bar location relative to tab contents.
      * @enum {string}
      */
-    export interface Location {
+    interface Location {
         TOP: string;
         BOTTOM: string;
         START: string;

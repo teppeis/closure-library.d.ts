@@ -10,7 +10,7 @@ declare module goog.ui.registry {
      *     singleton instance of {@code goog.ui.ButtonRenderer}), or null if
      *     no default renderer was found.
      */
-    export function getDefaultRenderer(componentCtor: Function): goog.ui.ControlRenderer;
+    function getDefaultRenderer(componentCtor: Function): goog.ui.ControlRenderer;
 
     /**
      * Sets the default renderer for the given {@link goog.ui.Component}
@@ -21,7 +21,7 @@ declare module goog.ui.registry {
      *     {@code goog.ui.ButtonRenderer}).
      * @throws {Error} If the arguments aren't functions.
      */
-    export function setDefaultRenderer(componentCtor: Function, rendererCtor: Function): void;
+    function setDefaultRenderer(componentCtor: Function, rendererCtor: Function): void;
 
     /**
      * Returns the {@link goog.ui.Component} instance created by the decorator
@@ -30,7 +30,7 @@ declare module goog.ui.registry {
      * @param {string} className CSS class name.
      * @return {goog.ui.Component?} Component instance.
      */
-    export function getDecoratorByClassName(className: string): goog.ui.Component;
+    function getDecoratorByClassName(className: string): goog.ui.Component;
 
     /**
      * Maps a CSS class name to a function that returns a new instance of
@@ -41,7 +41,7 @@ declare module goog.ui.registry {
      *     instance of a {@link goog.ui.Component} to decorate an element.
      * @throws {Error} If the class name or the decorator function is invalid.
      */
-    export function setDecoratorByClassName(className: string, decoratorFn: Function): void;
+    function setDecoratorByClassName(className: string, decoratorFn: Function): void;
 
     /**
      * Returns an instance of {@link goog.ui.Component} or a subclass suitable to
@@ -53,10 +53,10 @@ declare module goog.ui.registry {
      * @return {goog.ui.Component?} Component to decorate the element (null if
      *     none).
      */
-    export function getDecorator(element: Element): goog.ui.Component;
+    function getDecorator(element: Element): goog.ui.Component;
 
     /**
      * Resets the global renderer and decorator registry.
      */
-    export function reset(): void;
+    function reset(): void;
 }

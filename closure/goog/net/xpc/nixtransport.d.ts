@@ -13,7 +13,7 @@ declare module goog.net.xpc {
      * @extends {goog.net.xpc.Transport}
      * @final
      */
-    export class NixTransport extends goog.net.xpc.Transport {
+    class NixTransport extends goog.net.xpc.Transport {
         constructor(channel: goog.net.xpc.CrossPageChannel, opt_domHelper?: goog.dom.DomHelper);
         
         /**

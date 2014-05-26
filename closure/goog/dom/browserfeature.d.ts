@@ -4,7 +4,7 @@ declare module goog.dom {
      * Enum of browser capabilities.
      * @enum {boolean}
      */
-    export interface BrowserFeature {
+    interface BrowserFeature {
         CAN_ADD_NAME_OR_TYPE_ATTRIBUTES: boolean;
         CAN_USE_CHILDREN_ATTRIBUTE: boolean;
         CAN_USE_INNER_TEXT: boolean;

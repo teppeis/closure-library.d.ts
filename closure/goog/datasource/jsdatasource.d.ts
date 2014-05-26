@@ -15,7 +15,7 @@ declare module goog.ds {
      * @constructor
      * @extends {goog.ds.DataNode}
      */
-    export class JsDataSource extends goog.ds.DataNode {
+    class JsDataSource extends goog.ds.DataNode {
         constructor(root: Object, dataName: string, opt_parent?: Object);
         
         /**
@@ -121,7 +121,7 @@ declare module goog.ds {
      * @extends {goog.ds.BaseDataNode}
      * @final
      */
-    export class JsPropertyDataSource extends goog.ds.BaseDataNode {
+    class JsPropertyDataSource extends goog.ds.BaseDataNode {
         constructor(parent: goog.ds.DataNode, dataName: string, opt_parentDataNode?: goog.ds.DataNode);
         
         /**

@@ -10,7 +10,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class GreaterThanMatcher {
+    class GreaterThanMatcher {
         constructor(value: number);
     }
 
@@ -24,7 +24,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class LessThanMatcher {
+    class LessThanMatcher {
         constructor(value: number);
     }
 
@@ -38,7 +38,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class GreaterThanEqualToMatcher {
+    class GreaterThanEqualToMatcher {
         constructor(value: number);
     }
 
@@ -52,7 +52,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class LessThanEqualToMatcher {
+    class LessThanEqualToMatcher {
         constructor(value: number);
     }
 
@@ -66,7 +66,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class EqualToMatcher {
+    class EqualToMatcher {
         constructor(value: number);
     }
 
@@ -81,7 +81,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class CloseToMatcher {
+    class CloseToMatcher {
         constructor(value: number, range: number);
     }
 }

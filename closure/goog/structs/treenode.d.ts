@@ -12,7 +12,7 @@ declare module goog.structs {
      * @extends {goog.structs.Node.<KEY, VALUE>}
      * @template KEY, VALUE
      */
-    export class TreeNode<KEY, VALUE> extends goog.structs.Node<KEY, VALUE> {
+    class TreeNode<KEY, VALUE> extends goog.structs.Node<KEY, VALUE> {
         constructor(key: KEY, value: VALUE);
         
         /**

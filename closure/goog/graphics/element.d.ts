@@ -14,7 +14,7 @@ declare module goog.graphics {
      *     differences before the canvas tag was widely supported.  See
      *     http://en.wikipedia.org/wiki/Canvas_element for details.
      */
-    export class Element extends goog.events.EventTarget {
+    class Element extends goog.events.EventTarget {
         constructor(element: Element, graphics: goog.graphics.AbstractGraphics);
         
         /**

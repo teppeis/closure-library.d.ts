@@ -15,7 +15,7 @@ declare module goog.ui.media {
      * @extends {goog.ui.media.MediaRenderer}
      * @final
      */
-    export class Photo extends goog.ui.media.MediaRenderer {
+    class Photo extends goog.ui.media.MediaRenderer {
         constructor();
         
         /**

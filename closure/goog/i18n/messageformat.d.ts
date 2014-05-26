@@ -7,7 +7,7 @@ declare module goog.i18n {
      * @constructor
      * @final
      */
-    export class MessageFormat {
+    class MessageFormat {
         constructor(pattern: string);
         
         /**
@@ -44,7 +44,7 @@ declare module goog.i18n.MessageFormat {
      * @enum {number}
      * @private
      */
-    export interface Element_ {
+    interface Element_ {
         STRING: number;
         BLOCK: number;
     }
@@ -54,7 +54,7 @@ declare module goog.i18n.MessageFormat {
      * @enum {number}
      * @private
      */
-    export interface BlockType_ {
+    interface BlockType_ {
         PLURAL: number;
         ORDINAL: number;
         SELECT: number;

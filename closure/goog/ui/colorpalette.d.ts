@@ -16,7 +16,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Palette}
      */
-    export class ColorPalette extends goog.ui.Palette {
+    class ColorPalette extends goog.ui.Palette {
         constructor(opt_colors?: Array<string>, opt_renderer?: goog.ui.PaletteRenderer, opt_domHelper?: goog.dom.DomHelper);
         
         /**

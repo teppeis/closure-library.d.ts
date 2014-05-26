@@ -6,7 +6,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.CustomButtonRenderer}
      */
-    export class ToolbarButtonRenderer extends goog.ui.CustomButtonRenderer {
+    class ToolbarButtonRenderer extends goog.ui.CustomButtonRenderer {
         constructor();
         
         /**

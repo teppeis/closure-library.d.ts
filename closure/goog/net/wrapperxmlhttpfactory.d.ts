@@ -12,7 +12,7 @@ declare module goog.net {
      * @constructor
      * @final
      */
-    export class WrapperXmlHttpFactory extends goog.net.XmlHttpFactory {
+    class WrapperXmlHttpFactory extends goog.net.XmlHttpFactory {
         constructor(xhrFactory: () => goog.net.XhrLike.OrNative, optionsFactory: () => Object);
     }
 }

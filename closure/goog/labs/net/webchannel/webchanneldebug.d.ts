@@ -7,7 +7,7 @@ declare module goog.labs.net.webChannel {
      * @struct
      * @final
      */
-    export class WebChannelDebug {
+    class WebChannelDebug {
         constructor();
     }
 }

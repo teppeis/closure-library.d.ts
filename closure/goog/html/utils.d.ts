@@ -11,5 +11,5 @@ declare module goog.html.utils {
      * @return {string} A representation of value without tags, HTML comments, or
      *     other non-text content.
      */
-    export function stripHtmlTags(value: string): string;
+    function stripHtmlTags(value: string): string;
 }

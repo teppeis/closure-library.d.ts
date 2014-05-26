@@ -5,7 +5,7 @@ declare module goog.dom {
      * @constructor
      * @extends {goog.Disposable}
      */
-    export class SavedRange extends goog.Disposable {
+    class SavedRange extends goog.Disposable {
         constructor();
         
         /**

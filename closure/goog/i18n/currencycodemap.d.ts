@@ -13,7 +13,7 @@ declare module goog.i18n {
      * @type {Object}
      * @const
      */
-    export var currencyCodeMap: Object;
+    var currencyCodeMap: Object;
 
     /**
      * This group of currency data is unlikely to be used. In case they are,
@@ -22,5 +22,5 @@ declare module goog.i18n {
      * @type {Object}
      * @const
      */
-    export var currencyCodeMapTier2: Object;
+    var currencyCodeMapTier2: Object;
 }

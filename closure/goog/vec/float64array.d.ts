@@ -9,7 +9,7 @@ declare module goog.vec {
      * @constructor
      * @final
      */
-    export class Float64Array {
+    class Float64Array {
         constructor(p0: goog.vec.Float64Array);
         
         /**

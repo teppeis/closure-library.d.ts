@@ -25,7 +25,7 @@ declare module goog.ui.ac {
      * @constructor
      * @extends {goog.events.EventTarget}
      */
-    export class AutoComplete extends goog.events.EventTarget {
+    class AutoComplete extends goog.events.EventTarget {
         constructor(matcher: Object, renderer: goog.events.EventTarget, selectionHandler: Object);
         
         /**
@@ -323,7 +323,7 @@ declare module goog.ui.ac.AutoComplete {
      * Events associated with the autocomplete
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         ROW_HILITE: string;
         HILITE: string;
         SELECT: string;
@@ -339,7 +339,7 @@ declare module goog.ui.ac.AutoComplete {
      *   isRowDisabled:(!Function|undefined)
      * }}
      */
-    export interface Matcher {
+    interface Matcher {
         requestMatchingRows: Function;
         isRowDisabled: Function;
     }

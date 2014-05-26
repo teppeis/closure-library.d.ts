@@ -15,7 +15,7 @@ declare module goog.editor.plugins {
      * @constructor
      * @extends {goog.editor.Plugin}
      */
-    export class AbstractBubblePlugin extends goog.editor.Plugin {
+    class AbstractBubblePlugin extends goog.editor.Plugin {
         constructor();
         
         /**

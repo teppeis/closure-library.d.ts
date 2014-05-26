@@ -7,7 +7,7 @@ declare module goog.ui.editor {
      * @constructor
      * @extends {goog.events.EventTarget}
      */
-    export class AbstractDialog extends goog.events.EventTarget {
+    class AbstractDialog extends goog.events.EventTarget {
         constructor(domHelper: goog.dom.DomHelper);
         
         /**
@@ -116,7 +116,7 @@ declare module goog.ui.editor.AbstractDialog {
      * Event type constants for events the dialog fires.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         AFTER_HIDE: string;
         CANCEL: string;
         OK: string;
@@ -128,7 +128,7 @@ declare module goog.ui.editor.AbstractDialog {
      *     that will wrap the wrapped dialog object this builder will create.
      * @constructor
      */
-    export class Builder {
+    class Builder {
         constructor(editorDialog: goog.ui.editor.AbstractDialog);
         
         /**

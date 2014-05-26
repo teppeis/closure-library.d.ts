@@ -10,7 +10,7 @@ declare module goog.dom.pattern.callback {
      *     finished.
      * @return {boolean} Returns true to indicate tree changes were made.
      */
-    export function removeNode(node: Node, position: goog.dom.TagIterator): boolean;
+    function removeNode(node: Node, position: goog.dom.TagIterator): boolean;
 
     /**
      * Callback function for use in {@link goog.dom.pattern.Matcher.addPattern}
@@ -23,5 +23,5 @@ declare module goog.dom.pattern.callback {
      *     finished.
      * @return {boolean} Returns true to indicate tree changes were made.
      */
-    export function flattenElement(node: Element, position: goog.dom.TagIterator): boolean;
+    function flattenElement(node: Element, position: goog.dom.TagIterator): boolean;
 }

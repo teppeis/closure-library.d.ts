@@ -9,7 +9,7 @@ declare module goog.module {
      * @constructor
      * @final
      */
-    export class Loader {
+    class Loader {
         constructor();
         
         /**

@@ -5,7 +5,7 @@ declare module goog.debug {
      * @constructor
      * @final
      */
-    export class LogBuffer {
+    class LogBuffer {
         constructor();
         
         /**

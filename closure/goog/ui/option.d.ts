@@ -13,7 +13,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.MenuItem}
      */
-    export class Option extends goog.ui.MenuItem {
+    class Option extends goog.ui.MenuItem {
         constructor(content: goog.ui.ControlContent, opt_model?: any, opt_domHelper?: goog.dom.DomHelper);
         
         /**

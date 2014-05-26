@@ -7,7 +7,7 @@ declare module goog.locale.timeZoneDetection {
      * @param {Date} date Date for calculating the fingerprint.
      * @return {number} Fingerprint of user's time zone setting.
      */
-    export function getFingerprint(date: Date): number;
+    function getFingerprint(date: Date): number;
 
     /**
      * Detects browser's time zone setting. If user's country is known, a better
@@ -17,7 +17,7 @@ declare module goog.locale.timeZoneDetection {
      *     current date.
      * @return {string} Time zone ID of best guess.
      */
-    export function detectTimeZone(opt_country?: string, opt_date?: Date): string;
+    function detectTimeZone(opt_country?: string, opt_date?: Date): string;
 
     /**
      * Returns an array of time zones that are consistent with user's platform
@@ -29,5 +29,5 @@ declare module goog.locale.timeZoneDetection {
      *     current date.
      * @return {!Array.<string>} Array of time zone IDs.
      */
-    export function getTimeZoneList(opt_country?: string, opt_date?: Date): Array<string>;
+    function getTimeZoneList(opt_country?: string, opt_date?: Date): Array<string>;
 }

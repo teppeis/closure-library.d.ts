@@ -21,7 +21,7 @@ declare module goog.math {
      * @param {number} sign The sign of the number: -1 for negative and 0 positive.
      * @final
      */
-    export class Integer {
+    class Integer {
         constructor(bits: Array<number>, sign: number);
         
         /** @type {!goog.math.Integer} */

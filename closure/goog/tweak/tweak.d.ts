@@ -13,14 +13,14 @@ declare module goog.tweak {
      *     token:(string|undefined)
      *     }|!Object}
      */
-    export interface ConfigParams {
+    interface ConfigParams {
     }
 
     /**
      * Returns/creates the registry singleton.
      * @return {!goog.tweak.Registry} The tweak registry.
      */
-    export function getRegistry(): goog.tweak.Registry;
+    function getRegistry(): goog.tweak.Registry;
 
     /**
      * Creates and registers a group of BooleanSettings that are all set by a
@@ -32,12 +32,12 @@ declare module goog.tweak {
      * @param {goog.tweak.ConfigParams=} opt_configParams Extra configuration
      *     parameters.
      */
-    export function beginBooleanGroup(id: string, description: string, opt_configParams?: goog.tweak.ConfigParams): void;
+    function beginBooleanGroup(id: string, description: string, opt_configParams?: goog.tweak.ConfigParams): void;
 
     /**
      * Stops adding boolean entries to the active boolean group.
      */
-    export function endBooleanGroup(): void;
+    function endBooleanGroup(): void;
 
     /**
      * Creates and registers a BooleanSetting.
@@ -47,7 +47,7 @@ declare module goog.tweak {
      * @param {goog.tweak.ConfigParams=} opt_configParams Extra configuration
      *     parameters.
      */
-    export function registerBoolean(id: string, description: string, opt_defaultValue?: boolean, opt_configParams?: goog.tweak.ConfigParams): void;
+    function registerBoolean(id: string, description: string, opt_defaultValue?: boolean, opt_configParams?: goog.tweak.ConfigParams): void;
 
     /**
      * Creates and registers a StringSetting.
@@ -57,7 +57,7 @@ declare module goog.tweak {
      * @param {goog.tweak.ConfigParams=} opt_configParams Extra configuration
      *     parameters.
      */
-    export function registerString(id: string, description: string, opt_defaultValue?: string, opt_configParams?: goog.tweak.ConfigParams): void;
+    function registerString(id: string, description: string, opt_defaultValue?: string, opt_configParams?: goog.tweak.ConfigParams): void;
 
     /**
      * Creates and registers a NumericSetting.
@@ -67,7 +67,7 @@ declare module goog.tweak {
      * @param {goog.tweak.ConfigParams=} opt_configParams Extra configuration
      *     parameters.
      */
-    export function registerNumber(id: string, description: string, opt_defaultValue?: number, opt_configParams?: goog.tweak.ConfigParams): void;
+    function registerNumber(id: string, description: string, opt_defaultValue?: number, opt_configParams?: goog.tweak.ConfigParams): void;
 
     /**
      * Creates and registers a ButtonAction.
@@ -76,7 +76,7 @@ declare module goog.tweak {
      * @param {!Function} callback Function to call when the button is clicked.
      * @param {string=} opt_label The button text (instead of the ID).
      */
-    export function registerButton(id: string, description: string, callback: Function, opt_label?: string): void;
+    function registerButton(id: string, description: string, callback: Function, opt_label?: string): void;
 
     /**
      * Sets a default value to use for the given tweak instead of the one passed
@@ -85,26 +85,26 @@ declare module goog.tweak {
      * @param {string} id The unique string that identifies the entry.
      * @param {string|number|boolean} value The new default value for the tweak.
      */
-    export function overrideDefaultValue(id: string, value: string): void;
+    function overrideDefaultValue(id: string, value: string): void;
 
     /**
      * Returns the value of the boolean setting with the given ID.
      * @param {string} id The unique string that identifies this entry.
      * @return {boolean} The value of the tweak.
      */
-    export function getBoolean(id: string): boolean;
+    function getBoolean(id: string): boolean;
 
     /**
      * Returns the value of the string setting with the given ID,
      * @param {string} id The unique string that identifies this entry.
      * @return {string} The value of the tweak.
      */
-    export function getString(id: string): string;
+    function getString(id: string): string;
 
     /**
      * Returns the value of the numeric setting with the given ID.
      * @param {string} id The unique string that identifies this entry.
      * @return {number} The value of the tweak.
      */
-    export function getNumber(id: string): number;
+    function getNumber(id: string): number;
 }

@@ -4,7 +4,7 @@ declare module goog.date.relative {
      * Enumeration used to identify time units internally.
      * @enum {number}
      */
-    export interface Unit {
+    interface Unit {
         MINUTES: number;
         HOURS: number;
         DAYS: number;
@@ -13,7 +13,7 @@ declare module goog.date.relative {
     /**
      * @typedef {function(number, boolean, goog.date.relative.Unit): string}
      */
-    export interface TimeDeltaFormatter {
+    interface TimeDeltaFormatter {
     }
 
     /**
@@ -23,7 +23,7 @@ declare module goog.date.relative {
      * @param {goog.date.relative.TimeDeltaFormatter} formatter The function to use
      *     for formatting time deltas (i.e. relative times).
      */
-    export function setTimeDeltaFormatter(formatter: goog.date.relative.TimeDeltaFormatter): void;
+    function setTimeDeltaFormatter(formatter: goog.date.relative.TimeDeltaFormatter): void;
 
     /**
      * Accepts a timestamp in milliseconds and outputs a relative time in the form
@@ -32,7 +32,7 @@ declare module goog.date.relative {
      * @param {number} dateMs Date in milliseconds.
      * @return {string} The formatted date.
      */
-    export function format(dateMs: number): string;
+    function format(dateMs: number): string;
 
     /**
      * Accepts a timestamp in milliseconds and outputs a relative time in the form
@@ -46,7 +46,7 @@ declare module goog.date.relative {
      * @param {number} dateMs Date in milliseconds.
      * @return {string} The formatted date.
      */
-    export function formatPast(dateMs: number): string;
+    function formatPast(dateMs: number): string;
 
     /**
      * Accepts a timestamp in milliseconds and outputs a relative day. i.e. "Today",
@@ -57,7 +57,7 @@ declare module goog.date.relative {
      *     Defaults to form 'MMM dd'.
      * @return {string} The formatted date.
      */
-    export function formatDay(dateMs: number, opt_formatter?: (arg0: Date) => string): string;
+    function formatDay(dateMs: number, opt_formatter?: (arg0: Date) => string): string;
 
     /**
      * Formats a date, adding the relative date in parenthesis.  If the date is less
@@ -74,7 +74,7 @@ declare module goog.date.relative {
      *     provided if available, so that it's not recalculated in this function.
      * @return {string} The date string in the above form.
      */
-    export function getDateString(date: Date, opt_shortTimeMsg?: string, opt_fullDateMsg?: string): string;
+    function getDateString(date: Date, opt_shortTimeMsg?: string, opt_fullDateMsg?: string): string;
 
     /**
      * Formats a date, adding the relative date in parenthesis.   Functions the same
@@ -92,5 +92,5 @@ declare module goog.date.relative {
      *     provided if available, so that it's not recalculated in this function.
      * @return {string} The date string in the above form.
      */
-    export function getPastDateString(date: Date, opt_shortTimeMsg?: string, opt_fullDateMsg?: string): string;
+    function getPastDateString(date: Date, opt_shortTimeMsg?: string, opt_fullDateMsg?: string): string;
 }

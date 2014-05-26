@@ -8,7 +8,7 @@ declare module goog.json {
      *
      * @typedef {function(this:Object, string, *): *}
      */
-    export interface Replacer {
+    interface Replacer {
     }
 
     /**
@@ -17,7 +17,7 @@ declare module goog.json {
      *
      * @typedef {function(this:Object, string, *): *}
      */
-    export interface Reviver {
+    interface Reviver {
     }
 
     /**
@@ -25,7 +25,7 @@ declare module goog.json {
      * @param {?goog.json.Replacer=} opt_replacer Replacer.
      * @constructor
      */
-    export class Serializer {
+    class Serializer {
         constructor(opt_replacer?: goog.json.Replacer);
         
         /**
@@ -66,7 +66,7 @@ declare module goog.json {
      * @throws Error if s is invalid JSON.
      * @return {Object} The object generated from the JSON string, or null.
      */
-    export function parse(s: any): Object;
+    function parse(s: any): Object;
 
     /**
      * Parses a JSON string and returns the result. This uses eval so it is open
@@ -75,7 +75,7 @@ declare module goog.json {
      * @param {string} s The JSON string to parse.
      * @return {Object} The object generated from the JSON string.
      */
-    export function unsafeParse(s: string): Object;
+    function unsafeParse(s: string): Object;
 
     /**
      * Serializes an object or a value to a JSON string.
@@ -88,5 +88,5 @@ declare module goog.json {
      * @throws Error if there are loops in the object graph.
      * @return {string} A JSON string representation of the input.
      */
-    export function serialize(object: any, opt_replacer?: goog.json.Replacer): string;
+    function serialize(object: any, opt_replacer?: goog.json.Replacer): string;
 }

@@ -5,7 +5,7 @@ declare module goog.userAgent.product {
      * 'b' (as in beta) as well as multiple dots.
      * @type {string}
      */
-    export var VERSION: string;
+    var VERSION: string;
 
     /**
      * Whether the user agent product version is higher or the same as the given
@@ -15,5 +15,5 @@ declare module goog.userAgent.product {
      * @return {boolean} Whether the user agent product version is higher or the
      *     same as the given version.
      */
-    export function isVersion(version: string): boolean;
+    function isVersion(version: string): boolean;
 }

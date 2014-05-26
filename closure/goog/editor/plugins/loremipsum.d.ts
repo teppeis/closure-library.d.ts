@@ -7,7 +7,7 @@ declare module goog.editor.plugins {
      * @extends {goog.editor.Plugin}
      * @final
      */
-    export class LoremIpsum extends goog.editor.Plugin {
+    class LoremIpsum extends goog.editor.Plugin {
         constructor(message: string);
         
         /**

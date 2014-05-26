@@ -3,7 +3,7 @@ declare module goog.debug {
     /**
      * @interface
      */
-    export interface EntryPointMonitor {
+    interface EntryPointMonitor {
         
         /**
          * Instruments a function.
@@ -47,7 +47,7 @@ declare module goog.debug.entryPointRegistry {
      *     is responsible for wrapping the relevant entry point with the
      *     transforming function.
      */
-    export function register(callback: (arg0: Function) => any): void;
+    function register(callback: (arg0: Function) => any): void;
 
     /**
      * Configures a monitor to wrap all entry points.
@@ -58,7 +58,7 @@ declare module goog.debug.entryPointRegistry {
      *
      * @param {!goog.debug.EntryPointMonitor} monitor An entry point monitor.
      */
-    export function monitorAll(monitor: goog.debug.EntryPointMonitor): void;
+    function monitorAll(monitor: goog.debug.EntryPointMonitor): void;
 
     /**
      * Try to unmonitor all the entry points that have already been registered. If
@@ -70,5 +70,5 @@ declare module goog.debug.entryPointRegistry {
      *     the entry points.
      * @throws {Error} If the monitor is not the most recently configured monitor.
      */
-    export function unmonitorAllIfPossible(monitor: goog.debug.EntryPointMonitor): void;
+    function unmonitorAllIfPossible(monitor: goog.debug.EntryPointMonitor): void;
 }

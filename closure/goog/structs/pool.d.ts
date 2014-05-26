@@ -8,7 +8,7 @@ declare module goog.structs {
      * @extends {goog.Disposable}
      * @template T
      */
-    export class Pool<T> extends goog.Disposable {
+    class Pool<T> extends goog.Disposable {
         constructor(opt_minCount?: number, opt_maxCount?: number);
         
         /**

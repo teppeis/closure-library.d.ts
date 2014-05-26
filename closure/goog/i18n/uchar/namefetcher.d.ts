@@ -6,7 +6,7 @@ declare module goog.i18n.uChar {
      *
      * @interface
      */
-    export interface NameFetcher {
+    interface NameFetcher {
         
         /**
          * Retrieves the names of a given set of characters and stores them in a cache

@@ -4,7 +4,7 @@ declare module goog.dom.browserrange {
      * Common error constants.
      * @enum {string}
      */
-    export interface Error {
+    interface Error {
         NOT_IMPLEMENTED: string;
     }
 
@@ -13,14 +13,14 @@ declare module goog.dom.browserrange {
      * @param {Range|TextRange} range A browser range object.
      * @return {!goog.dom.browserrange.AbstractRange} A wrapper object.
      */
-    export function createRange(range: Range): goog.dom.browserrange.AbstractRange;
+    function createRange(range: Range): goog.dom.browserrange.AbstractRange;
 
     /**
      * Static method that returns the proper type of browser range.
      * @param {Node} node The node to select.
      * @return {!goog.dom.browserrange.AbstractRange} A wrapper object.
      */
-    export function createRangeFromNodeContents(node: Node): goog.dom.browserrange.AbstractRange;
+    function createRangeFromNodeContents(node: Node): goog.dom.browserrange.AbstractRange;
 
     /**
      * Static method that returns the proper type of browser range.
@@ -34,12 +34,12 @@ declare module goog.dom.browserrange {
      *     the index into the character array for text endNodes.
      * @return {!goog.dom.browserrange.AbstractRange} A wrapper object.
      */
-    export function createRangeFromNodes(startNode: Node, startOffset: number, endNode: Node, endOffset: number): goog.dom.browserrange.AbstractRange;
+    function createRangeFromNodes(startNode: Node, startOffset: number, endNode: Node, endOffset: number): goog.dom.browserrange.AbstractRange;
 
     /**
      * Tests whether the given node can contain a range end point.
      * @param {Node} node The node to check.
      * @return {boolean} Whether the given node can contain a range end point.
      */
-    export function canContainRangeEndpoint(node: Node): boolean;
+    function canContainRangeEndpoint(node: Node): boolean;
 }

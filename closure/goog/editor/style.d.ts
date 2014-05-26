@@ -5,7 +5,7 @@ declare module goog.editor.style {
      * @param {Node} node The Node to check.
      * @return {boolean} Whether the element inherits CSS display: block.
      */
-    export function isDisplayBlock(node: Node): boolean;
+    function isDisplayBlock(node: Node): boolean;
 
     /**
      * Returns true if the element is a container of other non-inline HTML
@@ -16,7 +16,7 @@ declare module goog.editor.style {
      * @param {Node} element The element to check.
      * @return {boolean} Whether the element is a container.
      */
-    export function isContainer(element: Node): boolean;
+    function isContainer(element: Node): boolean;
 
     /**
      * Return the first ancestor of this node that is a container, inclusive.
@@ -24,7 +24,7 @@ declare module goog.editor.style {
      * @param {Node} node Node to find the container of.
      * @return {Element} The element which contains node.
      */
-    export function getContainer(node: Node): Element;
+    function getContainer(node: Node): Element;
 
     /**
      * Makes the given element unselectable, as well as all of its children, except
@@ -34,7 +34,7 @@ declare module goog.editor.style {
      *     the event with. Assumes when the node is destroyed, the eventHandler's
      *     listeners are destroyed as well.
      */
-    export function makeUnselectable(element: Element, eventHandler: goog.events.EventHandler<any>): void;
+    function makeUnselectable(element: Element, eventHandler: goog.events.EventHandler<any>): void;
 
     /**
      * Make the given element selectable.
@@ -66,5 +66,5 @@ declare module goog.editor.style {
      *
      * @param {Element} element The element to make selectable.
      */
-    export function makeSelectable(element: Element): void;
+    function makeSelectable(element: Element): void;
 }

@@ -5,7 +5,7 @@ declare module goog.dom.classes {
      * @param {Node} element DOM node to set class of.
      * @param {string} className Class name(s) to apply to element.
      */
-    export function set(element: Node, className: string): void;
+    function set(element: Node, className: string): void;
 
     /**
      * Gets an array of class names on an element
@@ -13,7 +13,7 @@ declare module goog.dom.classes {
      * @return {!Array} Class names on {@code element}. Some browsers add extra
      *     properties to the array. Do not depend on any of these!
      */
-    export function get(element: Node): Array<any>;
+    function get(element: Node): Array<any>;
 
     /**
      * Adds a class or classes to an element. Does not add multiples of class names.
@@ -21,7 +21,7 @@ declare module goog.dom.classes {
      * @param {...string} var_args Class names to add.
      * @return {boolean} Whether class was added (or all classes were added).
      */
-    export function add(element: Node, ...var_args: string[]): boolean;
+    function add(element: Node, ...var_args: string[]): boolean;
 
     /**
      * Removes a class or classes from an element.
@@ -30,7 +30,7 @@ declare module goog.dom.classes {
      * @return {boolean} Whether all classes in {@code var_args} were found and
      *     removed.
      */
-    export function remove(element: Node, ...var_args: string[]): boolean;
+    function remove(element: Node, ...var_args: string[]): boolean;
 
     /**
      * Switches a class on an element from one to another without disturbing other
@@ -40,7 +40,7 @@ declare module goog.dom.classes {
      * @param {string} toClass Class to add.
      * @return {boolean} Whether classes were switched.
      */
-    export function swap(element: Node, fromClass: string, toClass: string): boolean;
+    function swap(element: Node, fromClass: string, toClass: string): boolean;
 
     /**
      * Adds zero or more classes to an element and removes zero or more as a single
@@ -58,7 +58,7 @@ declare module goog.dom.classes {
      * @param {?(string|Array.<string>)} classesToAdd Class or classes to add, if
      *     null no classes are added.
      */
-    export function addRemove(element: Node, classesToRemove: string, classesToAdd: string): void;
+    function addRemove(element: Node, classesToRemove: string, classesToAdd: string): void;
 
     /**
      * Returns true if an element has a class.
@@ -66,7 +66,7 @@ declare module goog.dom.classes {
      * @param {string} className Class name to test for.
      * @return {boolean} Whether element has the class.
      */
-    export function has(element: Node, className: string): boolean;
+    function has(element: Node, className: string): boolean;
 
     /**
      * Adds or removes a class depending on the enabled argument.
@@ -75,7 +75,7 @@ declare module goog.dom.classes {
      * @param {boolean} enabled Whether to add or remove the class (true adds,
      *     false removes).
      */
-    export function enable(element: Node, className: string, enabled: boolean): void;
+    function enable(element: Node, className: string, enabled: boolean): void;
 
     /**
      * Removes a class if an element has it, and adds it the element doesn't have
@@ -86,5 +86,5 @@ declare module goog.dom.classes {
      *     (in other words, whether element has the class after this function has
      *     been called).
      */
-    export function toggle(element: Node, className: string): boolean;
+    function toggle(element: Node, className: string): boolean;
 }

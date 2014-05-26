@@ -16,7 +16,7 @@ declare module goog.html.testing {
      *     within goog.html.  DO NOT call SafeHtml.create... from outside this
      *     package; use appropriate wrappers instead.
      */
-    export function newSafeHtmlForTest(html: string, opt_dir?: goog.i18n.bidi.Dir): goog.html.SafeHtml;
+    function newSafeHtmlForTest(html: string, opt_dir?: goog.i18n.bidi.Dir): goog.html.SafeHtml;
 
     /**
      * Creates a SafeStyle wrapping the given value. No validation is performed.
@@ -31,7 +31,7 @@ declare module goog.html.testing {
      *     within goog.html.  DO NOT call SafeStyle.create... from outside this
      *     package; use appropriate wrappers instead.
      */
-    export function newSafeStyleForTest(style: string): goog.html.SafeStyle;
+    function newSafeStyleForTest(style: string): goog.html.SafeStyle;
 
     /**
      * Creates a SafeUrl wrapping the given value. No validation is performed.
@@ -46,7 +46,7 @@ declare module goog.html.testing {
      *     within goog.html.  DO NOT call SafeUrl.create... from outside this
      *     package; use appropriate wrappers instead.
      */
-    export function newSafeUrlForTest(url: string): goog.html.SafeUrl;
+    function newSafeUrlForTest(url: string): goog.html.SafeUrl;
 
     /**
      * Creates a TrustedResourceUrl wrapping the given value. No validation is
@@ -63,5 +63,5 @@ declare module goog.html.testing {
      *     TrustedResourceUrl.create... from outside this package; use appropriate
      *     wrappers instead.
      */
-    export function newTrustedResourceUrlForTest(url: string): goog.html.TrustedResourceUrl;
+    function newTrustedResourceUrlForTest(url: string): goog.html.TrustedResourceUrl;
 }

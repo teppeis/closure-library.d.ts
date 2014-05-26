@@ -6,7 +6,7 @@ declare module goog.module {
      * @constructor
      * @extends {goog.Disposable}
      */
-    export class ModuleManager extends goog.Disposable {
+    class ModuleManager extends goog.Disposable {
         constructor();
         
         /**
@@ -256,7 +256,7 @@ declare module goog.module.ModuleManager {
     * The type of callbacks that can be registered with the module manager,.
     * @enum {string}
     */
-    export interface CallbackType {
+    interface CallbackType {
         ERROR: string;
         IDLE: string;
         ACTIVE: string;
@@ -268,7 +268,7 @@ declare module goog.module.ModuleManager {
      * The possible reasons for a module load failure callback being fired.
      * @enum {number}
      */
-    export interface FailureType {
+    interface FailureType {
         UNAUTHORIZED: number;
         CONSECUTIVE_FAILURES: number;
         TIMEOUT: number;

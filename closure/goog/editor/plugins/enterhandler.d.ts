@@ -11,7 +11,7 @@ declare module goog.editor.plugins {
      * @constructor
      * @extends {goog.editor.Plugin}
      */
-    export class EnterHandler extends goog.editor.Plugin {
+    class EnterHandler extends goog.editor.Plugin {
         constructor();
         
         /**

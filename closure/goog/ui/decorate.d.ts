@@ -6,5 +6,5 @@ declare module goog.ui {
      * @param {Element} element Element to decorate.
      * @return {goog.ui.Component?} New component instance, decorating the element.
      */
-    export function decorate(element: Element): goog.ui.Component;
+    function decorate(element: Element): goog.ui.Component;
 }

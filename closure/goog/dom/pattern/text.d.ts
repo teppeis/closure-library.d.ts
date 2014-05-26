@@ -8,7 +8,7 @@ declare module goog.dom.pattern {
      * @extends {goog.dom.pattern.AbstractPattern}
      * @final
      */
-    export class Text extends goog.dom.pattern.AbstractPattern {
+    class Text extends goog.dom.pattern.AbstractPattern {
         constructor(match: string);
         
         /**

@@ -12,7 +12,7 @@ declare module goog.fx.dom {
      * @extends {goog.fx.Animation}
      * @constructor
      */
-    export class PredefinedEffect extends goog.fx.Animation {
+    class PredefinedEffect extends goog.fx.Animation {
         constructor(element: Element, start: Array<number>, end: Array<number>, time: number, opt_acc?: Function);
         
         /**
@@ -43,7 +43,7 @@ declare module goog.fx.dom {
      * @extends {goog.fx.dom.PredefinedEffect}
      * @constructor
      */
-    export class Slide extends goog.fx.dom.PredefinedEffect {
+    class Slide extends goog.fx.dom.PredefinedEffect {
         constructor(element: Element, start: Array<number>, end: Array<number>, time: number, opt_acc?: Function);
     }
 
@@ -57,7 +57,7 @@ declare module goog.fx.dom {
      * @extends {goog.fx.dom.Slide}
      * @constructor
      */
-    export class SlideFrom extends goog.fx.dom.Slide {
+    class SlideFrom extends goog.fx.dom.Slide {
         constructor(element: Element, end: Array<number>, time: number, opt_acc?: Function);
     }
 
@@ -73,7 +73,7 @@ declare module goog.fx.dom {
      * @extends {goog.fx.dom.PredefinedEffect}
      * @constructor
      */
-    export class Swipe extends goog.fx.dom.PredefinedEffect {
+    class Swipe extends goog.fx.dom.PredefinedEffect {
         constructor(element: Element, start: Array<number>, end: Array<number>, time: number, opt_acc?: Function);
     }
 
@@ -90,7 +90,7 @@ declare module goog.fx.dom {
      * @extends {goog.fx.dom.PredefinedEffect}
      * @constructor
      */
-    export class Scroll extends goog.fx.dom.PredefinedEffect {
+    class Scroll extends goog.fx.dom.PredefinedEffect {
         constructor(element: Element, start: Array<number>, end: Array<number>, time: number, opt_acc?: Function);
     }
 
@@ -108,7 +108,7 @@ declare module goog.fx.dom {
      * @extends {goog.fx.dom.PredefinedEffect}
      * @constructor
      */
-    export class Resize extends goog.fx.dom.PredefinedEffect {
+    class Resize extends goog.fx.dom.PredefinedEffect {
         constructor(element: Element, start: Array<number>, end: Array<number>, time: number, opt_acc?: Function);
     }
 
@@ -125,7 +125,7 @@ declare module goog.fx.dom {
      * @extends {goog.fx.dom.PredefinedEffect}
      * @constructor
      */
-    export class ResizeWidth extends goog.fx.dom.PredefinedEffect {
+    class ResizeWidth extends goog.fx.dom.PredefinedEffect {
         constructor(element: Element, start: number, end: number, time: number, opt_acc?: Function);
     }
 
@@ -142,7 +142,7 @@ declare module goog.fx.dom {
      * @extends {goog.fx.dom.PredefinedEffect}
      * @constructor
      */
-    export class ResizeHeight extends goog.fx.dom.PredefinedEffect {
+    class ResizeHeight extends goog.fx.dom.PredefinedEffect {
         constructor(element: Element, start: number, end: number, time: number, opt_acc?: Function);
     }
 
@@ -160,7 +160,7 @@ declare module goog.fx.dom {
      * @extends {goog.fx.dom.PredefinedEffect}
      * @constructor
      */
-    export class Fade extends goog.fx.dom.PredefinedEffect {
+    class Fade extends goog.fx.dom.PredefinedEffect {
         constructor(element: Element, start: Array<number>, end: Array<number>, time: number, opt_acc?: Function);
         
         /**
@@ -183,7 +183,7 @@ declare module goog.fx.dom {
      * @extends {goog.fx.dom.Fade}
      * @constructor
      */
-    export class FadeOut extends goog.fx.dom.Fade {
+    class FadeOut extends goog.fx.dom.Fade {
         constructor(element: Element, time: number, opt_acc?: Function);
     }
 
@@ -196,7 +196,7 @@ declare module goog.fx.dom {
      * @extends {goog.fx.dom.Fade}
      * @constructor
      */
-    export class FadeIn extends goog.fx.dom.Fade {
+    class FadeIn extends goog.fx.dom.Fade {
         constructor(element: Element, time: number, opt_acc?: Function);
     }
 
@@ -210,7 +210,7 @@ declare module goog.fx.dom {
      * @extends {goog.fx.dom.Fade}
      * @constructor
      */
-    export class FadeOutAndHide extends goog.fx.dom.Fade {
+    class FadeOutAndHide extends goog.fx.dom.Fade {
         constructor(element: Element, time: number, opt_acc?: Function);
     }
 
@@ -224,7 +224,7 @@ declare module goog.fx.dom {
      * @extends {goog.fx.dom.Fade}
      * @constructor
      */
-    export class FadeInAndShow extends goog.fx.dom.Fade {
+    class FadeInAndShow extends goog.fx.dom.Fade {
         constructor(element: Element, time: number, opt_acc?: Function);
     }
 
@@ -241,7 +241,7 @@ declare module goog.fx.dom {
      * @extends {goog.fx.dom.PredefinedEffect}
      * @constructor
      */
-    export class BgColorTransform extends goog.fx.dom.PredefinedEffect {
+    class BgColorTransform extends goog.fx.dom.PredefinedEffect {
         constructor(element: Element, start: Array<number>, end: Array<number>, time: number, opt_acc?: Function);
         
         /**
@@ -261,7 +261,7 @@ declare module goog.fx.dom {
      * @constructor
      * @extends {goog.fx.dom.PredefinedEffect}
      */
-    export class ColorTransform extends goog.fx.dom.PredefinedEffect {
+    class ColorTransform extends goog.fx.dom.PredefinedEffect {
         constructor(element: Element, start: Array<number>, end: Array<number>, time: number, opt_acc?: Function);
     }
 
@@ -277,5 +277,5 @@ declare module goog.fx.dom {
      * @param {goog.events.EventHandler=} opt_eventHandler Optional event handler
      *     to use when listening for events.
      */
-    export function bgColorFadeIn(element: Element, start: Array<number>, time: number, opt_eventHandler?: goog.events.EventHandler<any>): void;
+    function bgColorFadeIn(element: Element, start: Array<number>, time: number, opt_eventHandler?: goog.events.EventHandler<any>): void;
 }

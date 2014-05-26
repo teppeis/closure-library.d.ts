@@ -6,7 +6,7 @@ declare module goog.net {
      * @constructor
      * @final
      */
-    export class CrossDomainRpc extends goog.events.EventTarget {
+    class CrossDomainRpc extends goog.events.EventTarget {
         constructor();
         
         /**

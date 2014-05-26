@@ -18,7 +18,7 @@ declare module goog.dom {
      * @extends {goog.events.EventTarget}
      * @final
      */
-    export class FontSizeMonitor extends goog.events.EventTarget {
+    class FontSizeMonitor extends goog.events.EventTarget {
         constructor(opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -36,7 +36,7 @@ declare module goog.dom.FontSizeMonitor {
      * The event types that the FontSizeMonitor fires.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         CHANGE: string;
     }
 }

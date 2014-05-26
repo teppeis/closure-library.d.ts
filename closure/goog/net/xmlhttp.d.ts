@@ -6,18 +6,18 @@ declare module goog.net {
      * @extends {goog.net.XmlHttpFactory}
      * @constructor
      */
-    export class DefaultXmlHttpFactory extends goog.net.XmlHttpFactory {
+    class DefaultXmlHttpFactory extends goog.net.XmlHttpFactory {
         constructor();
     }
 
     /** @const */
-    export var XmlHttpDefines: any;
+    var XmlHttpDefines: any;
 
     /**
      * Static class for creating XMLHttpRequest objects.
      * @return {!goog.net.XhrLike.OrNative} A new XMLHttpRequest object.
      */
-    export function XmlHttp(): goog.net.XhrLike.OrNative;
+    function XmlHttp(): goog.net.XhrLike.OrNative;
 }
 
 declare module goog.net.XmlHttp {
@@ -26,7 +26,7 @@ declare module goog.net.XmlHttp {
      * Type of options that an XmlHttp object can have.
      * @enum {number}
      */
-    export interface OptionType {
+    interface OptionType {
         USE_NULL_FUNCTION: number;
         LOCAL_REQUEST_ERROR: number;
     }
@@ -37,7 +37,7 @@ declare module goog.net.XmlHttp {
      *   en-us/xmlsdk/html/0e6a34e4-f90c-489d-acff-cb44242fafc6.asp
      * @enum {number}
      */
-    export interface ReadyState {
+    interface ReadyState {
         UNINITIALIZED: number;
         LOADING: number;
         LOADED: number;
@@ -50,7 +50,7 @@ declare module goog.net.XmlHttp {
      * the static methods.
      * @return {Object} The options.
      */
-    export function getOptions(): Object;
+    function getOptions(): Object;
 
     /**
      * Sets the factories for creating XMLHttpRequest objects and their options.
@@ -58,11 +58,11 @@ declare module goog.net.XmlHttp {
      * @param {Function} optionsFactory The factory for options.
      * @deprecated Use setGlobalFactory instead.
      */
-    export function setFactory(factory: Function, optionsFactory: Function): void;
+    function setFactory(factory: Function, optionsFactory: Function): void;
 
     /**
      * Sets the global factory object.
      * @param {!goog.net.XmlHttpFactory} factory New global factory object.
      */
-    export function setGlobalFactory(factory: goog.net.XmlHttpFactory): void;
+    function setGlobalFactory(factory: goog.net.XmlHttpFactory): void;
 }

@@ -12,7 +12,7 @@ declare module goog.ui.ac {
      * @constructor
      * @extends {goog.ui.ac.AutoComplete}
      */
-    export class Remote extends goog.ui.ac.AutoComplete {
+    class Remote extends goog.ui.ac.AutoComplete {
         constructor(url: string, input: Element, opt_multi?: boolean, opt_useSimilar?: boolean);
         
         /**

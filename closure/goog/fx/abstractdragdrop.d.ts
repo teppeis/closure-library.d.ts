@@ -16,7 +16,7 @@ declare module goog.fx {
      * @extends {goog.events.EventTarget}
      * @constructor
      */
-    export class AbstractDragDrop extends goog.events.EventTarget {
+    class AbstractDragDrop extends goog.events.EventTarget {
         constructor();
         
         /**
@@ -306,7 +306,7 @@ declare module goog.fx {
      * @extends {goog.events.Event}
      * @constructor
      */
-    export class DragDropEvent extends goog.events.Event {
+    class DragDropEvent extends goog.events.Event {
         constructor(type: string, source: goog.fx.AbstractDragDrop, sourceItem: goog.fx.DragDropItem, opt_target?: goog.fx.AbstractDragDrop, opt_targetItem?: goog.fx.DragDropItem, opt_targetElement?: Element, opt_clientX?: number, opt_clientY?: number, opt_x?: number, opt_y?: number, opt_subtarget?: Object);
     }
 
@@ -320,7 +320,7 @@ declare module goog.fx {
      * @extends {goog.events.EventTarget}
      * @constructor
      */
-    export class DragDropItem extends goog.events.EventTarget {
+    class DragDropItem extends goog.events.EventTarget {
         constructor(element: Element, opt_data?: Object);
         
         /**
@@ -374,7 +374,7 @@ declare module goog.fx {
      * @constructor
      * @private
      */
-    export interface ActiveDropTarget_ {
+    interface ActiveDropTarget_ {
     }
 
     /**
@@ -383,6 +383,6 @@ declare module goog.fx {
      * @constructor
      * @private
      */
-    export interface ScrollableContainer_ {
+    interface ScrollableContainer_ {
     }
 }

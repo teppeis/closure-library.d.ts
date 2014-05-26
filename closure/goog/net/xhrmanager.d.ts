@@ -12,7 +12,7 @@ declare module goog.net {
      * @constructor
      * @extends {goog.events.EventTarget}
      */
-    export class XhrManager extends goog.events.EventTarget {
+    class XhrManager extends goog.events.EventTarget {
         constructor(opt_maxRetries?: number, opt_headers?: goog.structs.Map<any, any>, opt_minCount?: number, opt_maxCount?: number, opt_timeoutInterval?: number);
         
         /**
@@ -87,7 +87,7 @@ declare module goog.net.XhrManager {
      * @extends {goog.events.Event}
      * @final
      */
-    export class Event extends goog.events.Event {
+    class Event extends goog.events.Event {
         constructor(type: goog.net.EventType, target: goog.net.XhrManager, id: string, xhrIo: goog.net.XhrIo);
     }
 
@@ -113,7 +113,7 @@ declare module goog.net.XhrManager {
      * @constructor
      * @final
      */
-    export class Request {
+    class Request {
         constructor(url: string, xhrEventCallback: Function, opt_method?: string, opt_content?: ArrayBuffer, opt_headers?: Object, opt_callback?: Function, opt_maxRetries?: number, opt_responseType?: goog.net.XhrIo.ResponseType);
         
         /**

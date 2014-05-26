@@ -21,7 +21,7 @@ declare module goog.ui.media {
      * @extends {goog.ui.media.MediaRenderer}
      * @final
      */
-    export class Mp3 extends goog.ui.media.MediaRenderer {
+    class Mp3 extends goog.ui.media.MediaRenderer {
         constructor();
         
         /**

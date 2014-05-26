@@ -13,7 +13,7 @@ declare module goog.net {
      * @extends {goog.Disposable}
      * @final
      */
-    export class FileDownloader extends goog.Disposable {
+    class FileDownloader extends goog.Disposable {
         constructor(dir: goog.fs.DirectoryEntry, opt_pool?: goog.net.XhrIoPool);
         
         /**
@@ -153,7 +153,7 @@ declare module goog.net.FileDownloader {
      * @extends {goog.debug.Error}
      * @final
      */
-    export class Error extends goog.debug.Error {
+    class Error extends goog.debug.Error {
         constructor(download: goog.net.FileDownloader.Download_, opt_fsErr?: goog.fs.Error);
         
         /**
@@ -185,6 +185,6 @@ declare module goog.net.FileDownloader {
      * @constructor
      * @private
      */
-    export interface Download_ extends goog.Disposable {
+    interface Download_ extends goog.Disposable {
     }
 }

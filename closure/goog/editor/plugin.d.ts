@@ -5,7 +5,7 @@ declare module goog.editor {
      * @constructor
      * @extends {goog.events.EventTarget}
      */
-    export class Plugin extends goog.events.EventTarget {
+    class Plugin extends goog.events.EventTarget {
         constructor();
         
         /**
@@ -276,7 +276,7 @@ declare module goog.editor.Plugin {
      * An enum of operations that plugins may support.
      * @enum {number}
      */
-    export interface Op {
+    interface Op {
         KEYDOWN: number;
         KEYPRESS: number;
         KEYUP: number;

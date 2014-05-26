@@ -6,7 +6,7 @@ declare module goog.labs.structs {
      * @struct
      * @final
      */
-    export class Multimap {
+    class Multimap {
         constructor();
         
         /**

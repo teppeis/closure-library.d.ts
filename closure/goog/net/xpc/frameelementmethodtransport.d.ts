@@ -15,7 +15,7 @@ declare module goog.net.xpc {
      * @extends {goog.net.xpc.Transport}
      * @final
      */
-    export class FrameElementMethodTransport extends goog.net.xpc.Transport {
+    class FrameElementMethodTransport extends goog.net.xpc.Transport {
         constructor(channel: goog.net.xpc.CrossPageChannel, opt_domHelper?: goog.dom.DomHelper);
         
         /**

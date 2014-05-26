@@ -12,5 +12,5 @@ declare module goog.labs.object {
      * @return {boolean} Whether two values are not observably distinguishable.
      * @see http://wiki.ecmascript.org/doku.php?id=harmony:egal
      */
-    export function is(v: any, v2: any): boolean;
+    function is(v: any, v2: any): boolean;
 }

@@ -7,7 +7,7 @@ declare module goog.dom.pattern {
      * @extends {goog.dom.pattern.AbstractPattern}
      * @final
      */
-    export class NodeType extends goog.dom.pattern.AbstractPattern {
+    class NodeType extends goog.dom.pattern.AbstractPattern {
         constructor(nodeType: goog.dom.NodeType);
         
         /**

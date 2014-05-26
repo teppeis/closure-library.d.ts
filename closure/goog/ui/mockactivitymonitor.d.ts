@@ -8,7 +8,7 @@ declare module goog.ui {
      * @extends {goog.ui.ActivityMonitor}
      * @final
      */
-    export class MockActivityMonitor extends goog.ui.ActivityMonitor {
+    class MockActivityMonitor extends goog.ui.ActivityMonitor {
         constructor();
         
         /**

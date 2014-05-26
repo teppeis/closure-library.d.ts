@@ -8,7 +8,7 @@ declare module goog.dom.browserrange {
      * @extends {goog.dom.browserrange.AbstractRange}
      * @final
      */
-    export class IeRange extends goog.dom.browserrange.AbstractRange {
+    class IeRange extends goog.dom.browserrange.AbstractRange {
         constructor(range: TextRange, doc: Document);
         
         /**

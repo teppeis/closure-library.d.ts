@@ -5,14 +5,14 @@ declare module goog.dom.classlist {
      * @param {Element} element DOM node to get the classes of.
      * @return {!goog.array.ArrayLike} Class names on {@code element}.
      */
-    export function get(element: Element): goog.array.ArrayLike;
+    function get(element: Element): goog.array.ArrayLike;
 
     /**
      * Sets the entire class name of an element.
      * @param {Element} element DOM node to set class of.
      * @param {string} className Class name(s) to apply to element.
      */
-    export function set(element: Element, className: string): void;
+    function set(element: Element, className: string): void;
 
     /**
      * Returns true if an element has a class.  This method may throw a DOM
@@ -21,7 +21,7 @@ declare module goog.dom.classlist {
      * @param {string} className Class name to test for.
      * @return {boolean} Whether element has the class.
      */
-    export function contains(element: Element, className: string): boolean;
+    function contains(element: Element, className: string): boolean;
 
     /**
      * Adds a class to an element.  Does not add multiples of class names.  This
@@ -30,7 +30,7 @@ declare module goog.dom.classlist {
      * @param {Element} element DOM node to add class to.
      * @param {string} className Class name to add.
      */
-    export function add(element: Element, className: string): void;
+    function add(element: Element, className: string): void;
 
     /**
      * Convenience method to add a number of class names at once.
@@ -40,7 +40,7 @@ declare module goog.dom.classlist {
      * This method may throw a DOM exception if classesToAdd contains invalid
      * or empty class names.
      */
-    export function addAll(element: Element, classesToAdd: goog.array.ArrayLike): void;
+    function addAll(element: Element, classesToAdd: goog.array.ArrayLike): void;
 
     /**
      * Removes a class from an element.  This method may throw a DOM exception
@@ -48,7 +48,7 @@ declare module goog.dom.classlist {
      * @param {Element} element DOM node to remove class from.
      * @param {string} className Class name to remove.
      */
-    export function remove(element: Element, className: string): void;
+    function remove(element: Element, className: string): void;
 
     /**
      * Removes a set of classes from an element.  Prefer this call to
@@ -60,7 +60,7 @@ declare module goog.dom.classlist {
      * This method may throw a DOM exception if classesToRemove contains invalid
      * or empty class names.
      */
-    export function removeAll(element: Element, classesToRemove: goog.array.ArrayLike): void;
+    function removeAll(element: Element, classesToRemove: goog.array.ArrayLike): void;
 
     /**
      * Adds or removes a class depending on the enabled argument.  This method
@@ -71,7 +71,7 @@ declare module goog.dom.classlist {
      * @param {boolean} enabled Whether to add or remove the class (true adds,
      *     false removes).
      */
-    export function enable(element: Element, className: string, enabled: boolean): void;
+    function enable(element: Element, className: string, enabled: boolean): void;
 
     /**
      * Adds or removes a set of classes depending on the enabled argument.  This
@@ -83,7 +83,7 @@ declare module goog.dom.classlist {
      * @param {boolean} enabled Whether to add or remove the classes (true adds,
      *     false removes).
      */
-    export function enableAll(element: Element, classesToEnable: goog.array.ArrayLike, enabled: boolean): void;
+    function enableAll(element: Element, classesToEnable: goog.array.ArrayLike, enabled: boolean): void;
 
     /**
      * Switches a class on an element from one to another without disturbing other
@@ -94,7 +94,7 @@ declare module goog.dom.classlist {
      * @param {string} toClass Class to add.
      * @return {boolean} Whether classes were switched.
      */
-    export function swap(element: Element, fromClass: string, toClass: string): boolean;
+    function swap(element: Element, fromClass: string, toClass: string): boolean;
 
     /**
      * Removes a class if an element has it, and adds it the element doesn't have
@@ -106,7 +106,7 @@ declare module goog.dom.classlist {
      *     (in other words, whether element has the class after this function has
      *     been called).
      */
-    export function toggle(element: Element, className: string): boolean;
+    function toggle(element: Element, className: string): boolean;
 
     /**
      * Adds and removes a class of an element.  Unlike
@@ -118,5 +118,5 @@ declare module goog.dom.classlist {
      * @param {string} classToRemove Class to remove.
      * @param {string} classToAdd Class to add.
      */
-    export function addRemove(element: Element, classToRemove: string, classToAdd: string): void;
+    function addRemove(element: Element, classToRemove: string, classToAdd: string): void;
 }

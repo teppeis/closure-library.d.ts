@@ -4,7 +4,7 @@ declare module goog.a11y.aria {
      * ARIA role values.
      * @enum {string}
      */
-    export interface Role {
+    interface Role {
         ALERT: string;
         ALERTDIALOG: string;
         APPLICATION: string;

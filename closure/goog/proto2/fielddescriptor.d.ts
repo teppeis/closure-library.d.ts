@@ -12,7 +12,7 @@ declare module goog.proto2 {
      * @constructor
      * @final
      */
-    export class FieldDescriptor {
+    class FieldDescriptor {
         constructor(messageType: Function, tag: number, metadata: Object);
         
         /**
@@ -104,7 +104,7 @@ declare module goog.proto2.FieldDescriptor {
      *
      * @enum {number}
      */
-    export interface FieldType {
+    interface FieldType {
         DOUBLE: number;
         FLOAT: number;
         INT64: number;

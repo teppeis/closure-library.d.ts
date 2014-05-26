@@ -16,7 +16,7 @@ declare module goog.db {
      *
      * @typedef {function(!goog.db.IndexedDb.VersionChangeEvent)}
      */
-    export interface BlockedCallback {
+    interface BlockedCallback {
     }
 
     /**
@@ -38,7 +38,7 @@ declare module goog.db {
      *                    !goog.db.IndexedDb,
      *                    !goog.db.Transaction)}
      */
-    export interface UpgradeNeededCallback {
+    interface UpgradeNeededCallback {
     }
 
     /**
@@ -56,7 +56,7 @@ declare module goog.db {
      *     connections to the database.
      * @return {!goog.async.Deferred} The deferred database object.
      */
-    export function openDatabase(name: string, opt_version?: number, opt_onUpgradeNeeded?: goog.db.UpgradeNeededCallback, opt_onBlocked?: goog.db.BlockedCallback): goog.async.Deferred<any>;
+    function openDatabase(name: string, opt_version?: number, opt_onUpgradeNeeded?: goog.db.UpgradeNeededCallback, opt_onBlocked?: goog.db.BlockedCallback): goog.async.Deferred<any>;
 
     /**
      * Deletes a database once all open connections have been closed.
@@ -67,5 +67,5 @@ declare module goog.db {
      * @return {!goog.async.Deferred} A deferred object that will fire once the
      *     database is deleted.
      */
-    export function deleteDatabase(name: string, opt_onBlocked?: goog.db.BlockedCallback): goog.async.Deferred<any>;
+    function deleteDatabase(name: string, opt_onBlocked?: goog.db.BlockedCallback): goog.async.Deferred<any>;
 }

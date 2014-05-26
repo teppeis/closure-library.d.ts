@@ -20,7 +20,7 @@ declare module goog.crypt {
      * @final
      * @struct
      */
-    export class Aes {
+    class Aes {
         constructor(key: Array<number>);
     }
 }

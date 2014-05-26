@@ -17,7 +17,7 @@ declare module goog.fx {
      * @extends {goog.Disposable}
      * @see ../demos/dragscrollsupport.html
      */
-    export class DragScrollSupport extends goog.Disposable {
+    class DragScrollSupport extends goog.Disposable {
         constructor(containerNode: Element, opt_margin?: number, opt_externalMouseMoveTracking?: boolean);
         
         /**

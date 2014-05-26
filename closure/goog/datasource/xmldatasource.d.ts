@@ -10,7 +10,7 @@ declare module goog.ds {
      * @extends {goog.ds.DataNode}
      * @constructor
      */
-    export class XmlDataSource extends goog.ds.DataNode {
+    class XmlDataSource extends goog.ds.DataNode {
         constructor(node: Node, parent: goog.ds.XmlDataSource, opt_name?: string);
         
         /**
@@ -88,7 +88,7 @@ declare module goog.ds {
      * @extends {goog.ds.XmlDataSource}
      * @final
      */
-    export class XmlHttpDataSource extends goog.ds.XmlDataSource {
+    class XmlHttpDataSource extends goog.ds.XmlDataSource {
         constructor(uri: any, name: string);
         
         /**

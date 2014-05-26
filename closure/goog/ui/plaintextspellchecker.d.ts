@@ -11,7 +11,7 @@ declare module goog.ui {
      * @extends {goog.ui.AbstractSpellChecker}
      * @final
      */
-    export class PlainTextSpellChecker extends goog.ui.AbstractSpellChecker {
+    class PlainTextSpellChecker extends goog.ui.AbstractSpellChecker {
         constructor(handler: goog.spell.SpellCheck, opt_domHelper?: goog.dom.DomHelper);
         
         /**

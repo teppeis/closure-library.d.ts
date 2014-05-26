@@ -9,12 +9,12 @@ declare module goog.i18n.mime {
      *     quoted string for a parameter value in a MIME header).
      * @return {string} The encoded string.
      */
-    export function encode(str: string, opt_noquote?: boolean): string;
+    function encode(str: string, opt_noquote?: boolean): string;
 
     /**
      * Get an array of UTF-8 hex codes for a given character.
      * @param {string} c The matched character.
      * @return {!Array.<string>} A hex array representing the character.
      */
-    export function getHexCharArray(c: string): Array<string>;
+    function getHexCharArray(c: string): Array<string>;
 }

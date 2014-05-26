@@ -8,7 +8,7 @@ declare module goog.events {
      * @constructor
      * @extends {goog.events.EventTarget}
      */
-    export class InputHandler extends goog.events.EventTarget {
+    class InputHandler extends goog.events.EventTarget {
         constructor(element: Element);
         
         /**
@@ -25,7 +25,7 @@ declare module goog.events.InputHandler {
      * Enum type for the events fired by the input handler
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         INPUT: string;
     }
 }

@@ -7,7 +7,7 @@ declare module goog.fs {
      * @constructor
      * @implements {goog.fs.Entry}
      */
-    export class EntryImpl {
+    class EntryImpl {
         constructor(fs: goog.fs.FileSystem, entry: Entry);
     }
 
@@ -25,7 +25,7 @@ declare module goog.fs {
      * @implements {goog.fs.DirectoryEntry}
      * @final
      */
-    export class DirectoryEntryImpl extends goog.fs.EntryImpl {
+    class DirectoryEntryImpl extends goog.fs.EntryImpl {
         constructor(fs: goog.fs.FileSystem, dir: DirectoryEntry);
     }
 
@@ -42,7 +42,7 @@ declare module goog.fs {
      * @implements {goog.fs.FileEntry}
      * @final
      */
-    export class FileEntryImpl extends goog.fs.EntryImpl {
+    class FileEntryImpl extends goog.fs.EntryImpl {
         constructor(fs: goog.fs.FileSystem, file: FileEntry);
     }
 }

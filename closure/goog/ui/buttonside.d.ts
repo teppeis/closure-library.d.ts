@@ -5,7 +5,7 @@ declare module goog.ui {
      * for details.
      * @enum {number}
      */
-    export interface ButtonSide {
+    interface ButtonSide {
         NONE: number;
         START: number;
         END: number;

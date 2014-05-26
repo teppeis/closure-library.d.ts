@@ -7,7 +7,7 @@ declare module goog.date {
      * @param {goog.date.Date} endDate The last date in the range.
      * @final
      */
-    export class DateRange {
+    class DateRange {
         constructor(startDate: goog.date.Date, endDate: goog.date.Date);
         
         /**
@@ -158,7 +158,7 @@ declare module goog.date.DateRange {
      *
      * @enum {string}
      */
-    export interface StandardDateRangeKeys {
+    interface StandardDateRangeKeys {
         YESTERDAY: string;
         TODAY: string;
         LAST_7_DAYS: string;
@@ -177,7 +177,7 @@ declare module goog.date.DateRange {
      * @param {goog.date.DateRange} dateRange The date range to iterate.
      * @final
      */
-    export class Iterator extends goog.iter.Iterator<goog.date.Date> {
+    class Iterator extends goog.iter.Iterator<goog.date.Date> {
         constructor(dateRange: goog.date.DateRange);
     }
 }

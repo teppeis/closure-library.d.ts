@@ -7,7 +7,7 @@ declare module goog.editor.plugins {
      * @extends {goog.editor.plugins.AbstractDialogPlugin}
      * @final
      */
-    export class EquationEditorPlugin extends goog.editor.plugins.AbstractDialogPlugin {
+    class EquationEditorPlugin extends goog.editor.plugins.AbstractDialogPlugin {
         constructor(opt_helpUrl?: string);
     }
 }

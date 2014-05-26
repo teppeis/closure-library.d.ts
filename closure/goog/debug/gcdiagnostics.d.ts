@@ -12,7 +12,7 @@ declare module goog.debug {
      * @constructor
      * @private
      */
-    export interface GcDiagnostics_ {
+    interface GcDiagnostics_ {
         
         /**
          * Install the GcDiagnostics tool.
@@ -37,5 +37,5 @@ declare module goog.debug {
      * Singleton GcDiagnostics object
      * @type {goog.debug.GcDiagnostics_}
      */
-    export var GcDiagnostics: goog.debug.GcDiagnostics_;
+    var GcDiagnostics: goog.debug.GcDiagnostics_;
 }

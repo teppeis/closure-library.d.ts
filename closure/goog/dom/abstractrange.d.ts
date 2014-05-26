@@ -4,7 +4,7 @@ declare module goog.dom {
      * Types of ranges.
      * @enum {string}
      */
-    export interface RangeType {
+    interface RangeType {
         TEXT: string;
         CONTROL: string;
         MULTI: string;
@@ -15,7 +15,7 @@ declare module goog.dom {
      * use one of the goog.dom.Range.from* methods instead.
      * @constructor
      */
-    export class AbstractRange {
+    class AbstractRange {
         constructor();
         
         /**
@@ -321,7 +321,7 @@ declare module goog.dom {
      * @constructor
      * @extends {goog.dom.TagIterator}
      */
-    export class RangeIterator extends goog.dom.TagIterator {
+    class RangeIterator extends goog.dom.TagIterator {
         constructor(node: Node, opt_reverse?: boolean);
         
         /**

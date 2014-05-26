@@ -5,7 +5,7 @@ declare module goog.ui.tree {
      * @constructor
      * @final
      */
-    export class TypeAhead {
+    class TypeAhead {
         constructor();
         
         /**
@@ -53,7 +53,7 @@ declare module goog.ui.tree.TypeAhead {
      *
      * @enum {number}
      */
-    export interface Offset {
+    interface Offset {
         DOWN: number;
         UP: number;
     }

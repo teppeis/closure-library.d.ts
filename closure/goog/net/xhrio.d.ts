@@ -7,7 +7,7 @@ declare module goog.net {
      * @constructor
      * @extends {goog.events.EventTarget}
      */
-    export class XhrIo extends goog.events.EventTarget {
+    class XhrIo extends goog.events.EventTarget {
         constructor(opt_xmlHttpFactory?: goog.net.XmlHttpFactory);
         
         /**
@@ -319,7 +319,7 @@ declare module goog.net.XhrIo {
      * @enum {string}
      * @see http://www.w3.org/TR/XMLHttpRequest/#the-responsetype-attribute
      */
-    export interface ResponseType {
+    interface ResponseType {
         DEFAULT: string;
         TEXT: string;
         DOCUMENT: string;

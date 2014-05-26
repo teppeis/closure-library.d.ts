@@ -14,7 +14,7 @@ declare module goog.net {
      * @constructor
      * @extends {goog.events.EventTarget}
      */
-    export class WebSocket extends goog.events.EventTarget {
+    class WebSocket extends goog.events.EventTarget {
         constructor(opt_autoReconnect?: boolean, opt_getNextReconnect?: (arg0: number) => number);
         
         /**
@@ -70,7 +70,7 @@ declare module goog.net.WebSocket {
      * The events fired by the web socket.
      * @enum {string} The event types for the web socket.
      */
-    export interface EventType {
+    interface EventType {
         CLOSED: string;
         ERROR: string;
         MESSAGE: string;
@@ -82,7 +82,7 @@ declare module goog.net.WebSocket {
      * @enum {number} The states of the web socket.
      * @private
      */
-    export interface ReadyState_ {
+    interface ReadyState_ {
         CONNECTING: number;
         OPEN: number;
         CLOSING: number;
@@ -97,7 +97,7 @@ declare module goog.net.WebSocket {
      * @constructor
      * @final
      */
-    export class MessageEvent extends goog.events.Event {
+    class MessageEvent extends goog.events.Event {
         constructor(message: string);
     }
 
@@ -110,7 +110,7 @@ declare module goog.net.WebSocket {
      * @constructor
      * @final
      */
-    export class ErrorEvent extends goog.events.Event {
+    class ErrorEvent extends goog.events.Event {
         constructor(data: string);
     }
 }

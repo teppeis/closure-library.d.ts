@@ -6,7 +6,7 @@ declare module goog.math {
      * @param {number=} opt_y Top, defaults to 0.
      * @constructor
      */
-    export class Coordinate {
+    class Coordinate {
         constructor(opt_x?: number, opt_y?: number);
         
         /**

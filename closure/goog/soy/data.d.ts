@@ -7,7 +7,7 @@ declare module goog.soy.data {
      *
      * @enum {!Object}
      */
-    export interface SanitizedContentKind {
+    interface SanitizedContentKind {
         HTML: Object;
         JS: Object;
         JS_STR_CHARS: Object;
@@ -28,7 +28,7 @@ declare module goog.soy.data {
      *
      * @constructor
      */
-    export class SanitizedContent {
+    class SanitizedContent {
         constructor();
         
         /**

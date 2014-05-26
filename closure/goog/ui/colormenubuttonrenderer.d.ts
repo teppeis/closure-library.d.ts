@@ -5,7 +5,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.MenuButtonRenderer}
      */
-    export class ColorMenuButtonRenderer extends goog.ui.MenuButtonRenderer {
+    class ColorMenuButtonRenderer extends goog.ui.MenuButtonRenderer {
         constructor();
         
         /**

@@ -5,7 +5,7 @@ declare module goog.ui {
      * @extends {goog.events.EventTarget}
      * @constructor
      */
-    export class RangeModel extends goog.events.EventTarget {
+    class RangeModel extends goog.events.EventTarget {
         constructor();
         
         /**

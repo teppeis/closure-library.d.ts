@@ -13,7 +13,7 @@ declare module goog.ui.emoji {
      * @extends {goog.ui.emoji.EmojiPaletteRenderer}
      * @final
      */
-    export class ProgressiveEmojiPaletteRenderer extends goog.ui.emoji.EmojiPaletteRenderer {
+    class ProgressiveEmojiPaletteRenderer extends goog.ui.emoji.EmojiPaletteRenderer {
         constructor(defaultImgUrl: string);
     }
 }

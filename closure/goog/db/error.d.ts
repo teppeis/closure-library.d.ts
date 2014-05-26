@@ -12,7 +12,7 @@ declare module goog.db {
      * @extends {goog.debug.Error}
      * @final
      */
-    export class Error extends goog.debug.Error {
+    class Error extends goog.debug.Error {
         constructor(error: number, context: string, opt_message?: string);
         
         /**
@@ -83,7 +83,7 @@ declare module goog.db.Error {
      * @enum {number}
      * @private
      */
-    export interface DatabaseErrorCode_ {
+    interface DatabaseErrorCode_ {
         UNKNOWN_ERR: number;
         NON_TRANSIENT_ERR: number;
         NOT_FOUND_ERR: number;
@@ -106,7 +106,7 @@ declare module goog.db.Error {
      *
      * @enum {number}
      */
-    export interface ErrorCode {
+    interface ErrorCode {
         UNKNOWN_ERR: number;
         NON_TRANSIENT_ERR: number;
         NOT_FOUND_ERR: number;
@@ -127,7 +127,7 @@ declare module goog.db.Error {
      * @see http://www.w3.org/TR/IndexedDB/#exceptions
      * @enum {string}
      */
-    export interface ErrorName {
+    interface ErrorName {
         ABORT_ERR: string;
         CONSTRAINT_ERR: string;
         DATA_CLONE_ERR: string;
@@ -153,7 +153,7 @@ declare module goog.db.Error {
      * @extends {goog.debug.Error}
      * @final
      */
-    export class VersionChangeBlockedError extends goog.debug.Error {
+    class VersionChangeBlockedError extends goog.debug.Error {
         constructor();
     }
 }

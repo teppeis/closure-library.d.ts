@@ -8,7 +8,7 @@ declare module goog.module {
      * @constructor
      * @final
      */
-    export class ModuleLoadCallback {
+    class ModuleLoadCallback {
         constructor(fn: Function, opt_handler?: Object);
         
         /**

@@ -14,7 +14,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Zippy}
      */
-    export class AnimatedZippy extends goog.ui.Zippy {
+    class AnimatedZippy extends goog.ui.Zippy {
         constructor(header: Element, content: Element, opt_expanded?: boolean, opt_domHelper?: goog.dom.DomHelper);
         
         /**

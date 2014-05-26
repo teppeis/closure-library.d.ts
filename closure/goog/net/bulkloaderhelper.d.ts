@@ -7,7 +7,7 @@ declare module goog.net {
      * @extends {goog.Disposable}
      * @final
      */
-    export class BulkLoaderHelper extends goog.Disposable {
+    class BulkLoaderHelper extends goog.Disposable {
         constructor(uris: Array<string>);
         
         /**

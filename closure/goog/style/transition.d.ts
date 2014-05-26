@@ -15,7 +15,7 @@ declare module goog.style.transition {
      *   delay: number
      * } | string }
      */
-    export interface Css3Property {
+    interface Css3Property {
     }
 
     /**
@@ -25,16 +25,16 @@ declare module goog.style.transition {
      *     Array.<goog.style.transition.Css3Property>} properties A single CSS3
      *     transition property or array of properties.
      */
-    export function set(element: Element, properties: goog.style.transition.Css3Property): void;
+    function set(element: Element, properties: goog.style.transition.Css3Property): void;
 
     /**
      * Removes any programmatically-added CSS3 transition in the given element.
      * @param {Element} element The element to remove transition from.
      */
-    export function removeAll(element: Element): void;
+    function removeAll(element: Element): void;
 
     /**
      * @return {boolean} Whether CSS3 transition is supported.
      */
-    export function isSupported(): boolean;
+    function isSupported(): boolean;
 }

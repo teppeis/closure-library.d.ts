@@ -3,7 +3,7 @@ declare module goog.labs.classdef {
     /** @typedef {
          {constructor:!Function}|
          {constructor:!Function, statics:(Object|function(Function):void)}} */
-    export interface ClassDescriptor {
+    interface ClassDescriptor {
     }
 
     /**
@@ -27,5 +27,5 @@ declare module goog.labs.classdef {
      *     all other properties are added to the prototype.
      * @return {!Function} The class constructor.
      */
-    export function defineClass(superClass: Function, def: goog.labs.classdef.ClassDescriptor): Function;
+    function defineClass(superClass: Function, def: goog.labs.classdef.ClassDescriptor): Function;
 }

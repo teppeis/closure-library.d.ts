@@ -14,7 +14,7 @@ declare module goog.async {
      * @extends {goog.Disposable}
      * @final
      */
-    export class Delay extends goog.Disposable {
+    class Delay extends goog.Disposable {
         constructor(listener: Function, opt_interval?: number, opt_handler?: Object);
         
         /**
@@ -59,7 +59,7 @@ declare module goog {
      * @constructor
      * @final
      */
-    export class Delay {
+    class Delay {
         constructor();
     }
 }

@@ -11,7 +11,7 @@ declare module goog.fs {
      * @extends {goog.debug.Error}
      * @final
      */
-    export class Error extends goog.debug.Error {
+    class Error extends goog.debug.Error {
         constructor(error: DOMError, action: string);
     }
 }
@@ -27,7 +27,7 @@ declare module goog.fs.Error {
      * @see http://dev.w3.org/2009/dap/file-system/file-writer.html#definitions
      * @enum {string}
      */
-    export interface ErrorName {
+    interface ErrorName {
         ABORT: string;
         ENCODING: string;
         INVALID_MODIFICATION: string;
@@ -49,7 +49,7 @@ declare module goog.fs.Error {
      * @enum {number}
      * @deprecated Use the 'name' or 'message' attribute instead.
      */
-    export interface ErrorCode {
+    interface ErrorCode {
         NOT_FOUND: number;
         SECURITY: number;
         ABORT: number;

@@ -7,7 +7,7 @@ declare module goog.editor.range {
      * @constructor
      * @final
      */
-    export class Point {
+    class Point {
         constructor(node: Node, offset: number);
         
         /**
@@ -50,7 +50,7 @@ declare module goog.editor.range {
      * @extends {goog.dom.SavedCaretRange}
      * @private
      */
-    export interface NormalizedCaretRange_ extends goog.dom.SavedCaretRange {
+    interface NormalizedCaretRange_ extends goog.dom.SavedCaretRange {
         
         /**
          * Normalizes text nodes whenever carets are removed from the document.
@@ -75,7 +75,7 @@ declare module goog.editor.range {
      * @return {goog.dom.AbstractRange} A new narrowed range, or null if the
      *     element does not contain any part of the given range.
      */
-    export function narrow(range: goog.dom.AbstractRange, el: Element): goog.dom.AbstractRange;
+    function narrow(range: goog.dom.AbstractRange, el: Element): goog.dom.AbstractRange;
 
     /**
      * Given a range, expand the range to include outer tags if the full contents of
@@ -87,13 +87,13 @@ declare module goog.editor.range {
      * @param {Node=} opt_stopNode Optional node to stop expanding past.
      * @return {!goog.dom.AbstractRange} The expanded range.
      */
-    export function expand(range: goog.dom.AbstractRange, opt_stopNode?: Node): goog.dom.AbstractRange;
+    function expand(range: goog.dom.AbstractRange, opt_stopNode?: Node): goog.dom.AbstractRange;
 
     /**
      * Cause the window's selection to be the start of this node.
      * @param {Node} node The node to select the start of.
      */
-    export function selectNodeStart(node: Node): void;
+    function selectNodeStart(node: Node): void;
 
     /**
      * Position the cursor immediately to the left or right of "node".
@@ -107,7 +107,7 @@ declare module goog.editor.range {
      * @param {boolean} toLeft True to place it to the left, false to the right.
      * @return {!goog.dom.AbstractRange} The newly selected range.
      */
-    export function placeCursorNextTo(node: Node, toLeft: boolean): goog.dom.AbstractRange;
+    function placeCursorNextTo(node: Node, toLeft: boolean): goog.dom.AbstractRange;
 
     /**
      * Normalizes the node, preserving the selection of the document.
@@ -116,13 +116,13 @@ declare module goog.editor.range {
      *
      * @param {Node} node The node to normalize.
      */
-    export function selectionPreservingNormalize(node: Node): void;
+    function selectionPreservingNormalize(node: Node): void;
 
     /**
      * Normalizes the given node.
      * @param {Node} node The node to normalize.
      */
-    export function normalizeNode(node: Node): void;
+    function normalizeNode(node: Node): void;
 
     /**
      * Normalizes the node, preserving a range of the document.
@@ -133,7 +133,7 @@ declare module goog.editor.range {
      * @param {goog.dom.AbstractRange?} range The range to normalize.
      * @return {goog.dom.AbstractRange?} The range, adjusted for normalization.
      */
-    export function rangePreservingNormalize(node: Node, range: goog.dom.AbstractRange): goog.dom.AbstractRange;
+    function rangePreservingNormalize(node: Node, range: goog.dom.AbstractRange): goog.dom.AbstractRange;
 
     /**
      * Get the deepest point in the DOM that's equivalent to the endpoint of the
@@ -144,7 +144,7 @@ declare module goog.editor.range {
      * @return {!goog.editor.range.Point} The end point, expressed as a node
      *    and an offset.
      */
-    export function getDeepEndPoint(range: goog.dom.AbstractRange, atStart: boolean): goog.editor.range.Point;
+    function getDeepEndPoint(range: goog.dom.AbstractRange, atStart: boolean): goog.editor.range.Point;
 
     /**
      * Given a range in the current DOM, create a factory for a range that
@@ -170,14 +170,14 @@ declare module goog.editor.range {
      * @return {function(): goog.dom.AbstractRange} A factory for a normalized
      *    range. Should be called after body.normalize() is called.
      */
-    export function normalize(range: goog.dom.AbstractRange): () => goog.dom.AbstractRange;
+    function normalize(range: goog.dom.AbstractRange): () => goog.dom.AbstractRange;
 
     /**
      * Checks if a range is completely inside an editable region.
      * @param {goog.dom.AbstractRange} range The range to test.
      * @return {boolean} Whether the range is completely inside an editable region.
      */
-    export function isEditable(range: goog.dom.AbstractRange): boolean;
+    function isEditable(range: goog.dom.AbstractRange): boolean;
 
     /**
      * Returns whether the given range intersects with any instance of the given
@@ -187,7 +187,7 @@ declare module goog.editor.range {
      * @return {boolean} Whether the given range intersects with any instance of
      *     the given tag.
      */
-    export function intersectsTag(range: goog.dom.AbstractRange, tagName: goog.dom.TagName): boolean;
+    function intersectsTag(range: goog.dom.AbstractRange, tagName: goog.dom.TagName): boolean;
 
     /**
      * Saves the range by inserting carets into the HTML.
@@ -200,5 +200,5 @@ declare module goog.editor.range {
      * @return {!goog.dom.SavedCaretRange} A saved caret range that normalizes
      *     text nodes.
      */
-    export function saveUsingNormalizedCarets(range: goog.dom.AbstractRange): goog.dom.SavedCaretRange;
+    function saveUsingNormalizedCarets(range: goog.dom.AbstractRange): goog.dom.SavedCaretRange;
 }

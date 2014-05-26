@@ -5,7 +5,7 @@ declare module goog.format {
      * @private
      * @enum {number}
      */
-    export interface WbrToken_ {
+    interface WbrToken_ {
         LT: number;
         GT: number;
         AMP: number;
@@ -20,7 +20,7 @@ declare module goog.format {
      * Other browsers just use <wbr>.
      * @type {string}
      */
-    export var WORD_BREAK_HTML: string;
+    var WORD_BREAK_HTML: string;
 
     /**
      * Formats a number of bytes in human readable form.
@@ -29,7 +29,7 @@ declare module goog.format {
      * @param {number=} opt_decimals The number of decimals to use.  Defaults to 2.
      * @return {string} The human readable form of the byte size.
      */
-    export function fileSize(bytes: number, opt_decimals?: number): string;
+    function fileSize(bytes: number, opt_decimals?: number): string;
 
     /**
      * Checks whether string value containing scaling units (K, M, G, T, P, m,
@@ -46,7 +46,7 @@ declare module goog.format {
      * @param {string} val String value to check.
      * @return {boolean} True if string could be converted to a numeric value.
      */
-    export function isConvertableScaledNumber(val: string): boolean;
+    function isConvertableScaledNumber(val: string): boolean;
 
     /**
      * Converts a string to numeric value, taking into account the units.
@@ -54,7 +54,7 @@ declare module goog.format {
      * @param {string} stringValue String to be converted to numeric value.
      * @return {number} Numeric value for string.
      */
-    export function stringToNumericValue(stringValue: string): number;
+    function stringToNumericValue(stringValue: string): number;
 
     /**
      * Converts a string to number of bytes, taking into account the units.
@@ -62,7 +62,7 @@ declare module goog.format {
      * @param {string} stringValue String to be converted to numeric value.
      * @return {number} Numeric value for string.
      */
-    export function stringToNumBytes(stringValue: string): number;
+    function stringToNumBytes(stringValue: string): number;
 
     /**
      * Converts a numeric value to string representation. SI conversion.
@@ -70,7 +70,7 @@ declare module goog.format {
      * @param {number=} opt_decimals The number of decimals to use.  Defaults to 2.
      * @return {string} String representation of number.
      */
-    export function numericValueToString(val: number, opt_decimals?: number): string;
+    function numericValueToString(val: number, opt_decimals?: number): string;
 
     /**
      * Converts number of bytes to string representation. Binary conversion.
@@ -84,7 +84,7 @@ declare module goog.format {
      *     separated by a no break space. Default is false.
      * @return {string} String representation of number of bytes.
      */
-    export function numBytesToString(val: number, opt_decimals?: number, opt_suffix?: boolean, opt_useSeparator?: boolean): string;
+    function numBytesToString(val: number, opt_decimals?: number, opt_suffix?: boolean, opt_useSeparator?: boolean): string;
 
     /**
      * Inserts word breaks into an HTML string at a given interval.
@@ -99,7 +99,7 @@ declare module goog.format {
      *     break.  Default is 10 characters.
      * @return {string} The string including word breaks.
      */
-    export function insertWordBreaks(str: string, opt_maxlen?: number): string;
+    function insertWordBreaks(str: string, opt_maxlen?: number): string;
 
     /**
      * Inserts word breaks into an HTML string at a given interval.
@@ -116,5 +116,5 @@ declare module goog.format {
      *     break.  Default is 10 characters.
      * @return {string} The string including word breaks.
      */
-    export function insertWordBreaksBasic(str: string, opt_maxlen?: number): string;
+    function insertWordBreaksBasic(str: string, opt_maxlen?: number): string;
 }

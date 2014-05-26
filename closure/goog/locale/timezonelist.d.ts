@@ -17,7 +17,7 @@ declare module goog.locale {
      * @return {!Array.<Object>} Localized and relevant list of timezone names
      *    and ids.
      */
-    export function getTimeZoneSelectedShortNames(opt_regionOrLang?: string): Array<Object>;
+    function getTimeZoneSelectedShortNames(opt_regionOrLang?: string): Array<Object>;
 
     /**
      * Returns the displayable list of long timezone names paired with its id for
@@ -36,7 +36,7 @@ declare module goog.locale {
      * @return {!Array.<Object>} Localized and relevant list of timezone names
      *    and ids.
      */
-    export function getTimeZoneSelectedLongNames(opt_regionOrLang?: string): Array<Object>;
+    function getTimeZoneSelectedLongNames(opt_regionOrLang?: string): Array<Object>;
 
     /**
      * Returns the displayable list of long timezone names paired with its id for
@@ -49,5 +49,5 @@ declare module goog.locale {
      * @return {Array.<Object>} localized and relevant list of timezone names
      *    and ids.
      */
-    export function getTimeZoneAllLongNames(): Array<Object>;
+    function getTimeZoneAllLongNames(): Array<Object>;
 }

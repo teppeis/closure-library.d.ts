@@ -12,7 +12,7 @@ declare module goog.dom.pattern {
      * @extends {goog.dom.pattern.AbstractPattern}
      * @final
      */
-    export class Repeat extends goog.dom.pattern.AbstractPattern {
+    class Repeat extends goog.dom.pattern.AbstractPattern {
         constructor(pattern: goog.dom.pattern.AbstractPattern, opt_minimum?: number, opt_maximum?: number);
         
         /**

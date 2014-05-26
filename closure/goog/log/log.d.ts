@@ -4,7 +4,7 @@ declare module goog.log {
      * @constructor
      * @final
      */
-    export class Logger {
+    class Logger {
         constructor();
     }
 
@@ -12,7 +12,7 @@ declare module goog.log {
      * @constructor
      * @final
      */
-    export class Level {
+    class Level {
         constructor();
     }
 
@@ -20,7 +20,7 @@ declare module goog.log {
      * @constructor
      * @final
      */
-    export class LogRecord {
+    class LogRecord {
         constructor();
     }
 
@@ -39,7 +39,7 @@ declare module goog.log {
      *     default logging level with the provided level.
      * @return {goog.log.Logger} The named logger or null if logging is disabled.
      */
-    export function getLogger(name: string, opt_level?: goog.log.Level): goog.log.Logger;
+    function getLogger(name: string, opt_level?: goog.log.Level): goog.log.Logger;
 
     /**
      * Adds a handler to the logger. This doesn't use the event system because
@@ -47,7 +47,7 @@ declare module goog.log {
      * @param {goog.log.Logger} logger
      * @param {Function} handler Handler function to add.
      */
-    export function addHandler(logger: goog.log.Logger, handler: Function): void;
+    function addHandler(logger: goog.log.Logger, handler: Function): void;
 
     /**
      * Removes a handler from the logger. This doesn't use the event system because
@@ -56,7 +56,7 @@ declare module goog.log {
      * @param {Function} handler Handler function to remove.
      * @return {boolean} Whether the handler was removed.
      */
-    export function removeHandler(logger: goog.log.Logger, handler: Function): boolean;
+    function removeHandler(logger: goog.log.Logger, handler: Function): boolean;
 
     /**
      * Logs a message. If the logger is currently enabled for the
@@ -68,7 +68,7 @@ declare module goog.log {
      * @param {Error|Object=} opt_exception An exception associated with the
      *     message.
      */
-    export function log(logger: goog.log.Logger, level: goog.log.Level, msg: goog.debug.Loggable, opt_exception?: Error): void;
+    function log(logger: goog.log.Logger, level: goog.log.Level, msg: goog.debug.Loggable, opt_exception?: Error): void;
 
     /**
      * Logs a message at the Level.SEVERE level.
@@ -78,7 +78,7 @@ declare module goog.log {
      * @param {goog.debug.Loggable} msg The message to log.
      * @param {Error=} opt_exception An exception associated with the message.
      */
-    export function error(logger: goog.log.Logger, msg: goog.debug.Loggable, opt_exception?: Error): void;
+    function error(logger: goog.log.Logger, msg: goog.debug.Loggable, opt_exception?: Error): void;
 
     /**
      * Logs a message at the Level.WARNING level.
@@ -88,7 +88,7 @@ declare module goog.log {
      * @param {goog.debug.Loggable} msg The message to log.
      * @param {Error=} opt_exception An exception associated with the message.
      */
-    export function warning(logger: goog.log.Logger, msg: goog.debug.Loggable, opt_exception?: Error): void;
+    function warning(logger: goog.log.Logger, msg: goog.debug.Loggable, opt_exception?: Error): void;
 
     /**
      * Logs a message at the Level.INFO level.
@@ -98,7 +98,7 @@ declare module goog.log {
      * @param {goog.debug.Loggable} msg The message to log.
      * @param {Error=} opt_exception An exception associated with the message.
      */
-    export function info(logger: goog.log.Logger, msg: goog.debug.Loggable, opt_exception?: Error): void;
+    function info(logger: goog.log.Logger, msg: goog.debug.Loggable, opt_exception?: Error): void;
 
     /**
      * Logs a message at the Level.Fine level.
@@ -108,5 +108,5 @@ declare module goog.log {
      * @param {goog.debug.Loggable} msg The message to log.
      * @param {Error=} opt_exception An exception associated with the message.
      */
-    export function fine(logger: goog.log.Logger, msg: goog.debug.Loggable, opt_exception?: Error): void;
+    function fine(logger: goog.log.Logger, msg: goog.debug.Loggable, opt_exception?: Error): void;
 }

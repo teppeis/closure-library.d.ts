@@ -7,7 +7,7 @@ declare module goog.ds {
      * @constructor
      * @extends {goog.ds.DataNodeList}
      */
-    export class AbstractFastDataNode extends goog.ds.DataNodeList {
+    class AbstractFastDataNode extends goog.ds.DataNodeList {
         constructor(dataName: string, opt_parent?: goog.ds.DataNode);
         
         /**
@@ -40,7 +40,7 @@ declare module goog.ds {
      * @extends {goog.ds.AbstractFastDataNode}
      * @constructor
      */
-    export class FastDataNode extends goog.ds.AbstractFastDataNode {
+    class FastDataNode extends goog.ds.AbstractFastDataNode {
         constructor(root: Object, dataName: string, opt_parent?: goog.ds.DataNode);
         
         /**
@@ -166,7 +166,7 @@ declare module goog.ds {
      * @constructor
      * @final
      */
-    export class PrimitiveFastDataNode extends goog.ds.AbstractFastDataNode {
+    class PrimitiveFastDataNode extends goog.ds.AbstractFastDataNode {
         constructor(value: number, dataName: string, opt_parent?: goog.ds.DataNode);
         
         /**
@@ -241,7 +241,7 @@ declare module goog.ds {
      * @constructor
      * @final
      */
-    export class FastListNode extends goog.ds.AbstractFastDataNode {
+    class FastListNode extends goog.ds.AbstractFastDataNode {
         constructor(values: Array<any>, dataName: string, opt_parent?: goog.ds.DataNode);
         
         /**

@@ -14,7 +14,7 @@ declare module goog.graphics {
      *     http://en.wikipedia.org/wiki/Canvas_element for details.
      * @final
      */
-    export class SvgGroupElement extends goog.graphics.GroupElement {
+    class SvgGroupElement extends goog.graphics.GroupElement {
         constructor(element: Element, graphics: goog.graphics.SvgGraphics);
         
         /**
@@ -40,7 +40,7 @@ declare module goog.graphics {
      * @extends {goog.graphics.EllipseElement}
      * @final
      */
-    export class SvgEllipseElement extends goog.graphics.EllipseElement {
+    class SvgEllipseElement extends goog.graphics.EllipseElement {
         constructor(element: Element, graphics: goog.graphics.SvgGraphics, stroke: goog.graphics.Stroke, fill: goog.graphics.Fill);
         
         /**
@@ -74,7 +74,7 @@ declare module goog.graphics {
      * @extends {goog.graphics.RectElement}
      * @final
      */
-    export class SvgRectElement extends goog.graphics.RectElement {
+    class SvgRectElement extends goog.graphics.RectElement {
         constructor(element: Element, graphics: goog.graphics.SvgGraphics, stroke: goog.graphics.Stroke, fill: goog.graphics.Fill);
         
         /**
@@ -108,7 +108,7 @@ declare module goog.graphics {
      * @extends {goog.graphics.PathElement}
      * @final
      */
-    export class SvgPathElement extends goog.graphics.PathElement {
+    class SvgPathElement extends goog.graphics.PathElement {
         constructor(element: Element, graphics: goog.graphics.SvgGraphics, stroke: goog.graphics.Stroke, fill: goog.graphics.Fill);
         
         /**
@@ -133,7 +133,7 @@ declare module goog.graphics {
      * @extends {goog.graphics.TextElement}
      * @final
      */
-    export class SvgTextElement extends goog.graphics.TextElement {
+    class SvgTextElement extends goog.graphics.TextElement {
         constructor(element: Element, graphics: goog.graphics.SvgGraphics, stroke: goog.graphics.Stroke, fill: goog.graphics.Fill);
         
         /**
@@ -156,7 +156,7 @@ declare module goog.graphics {
      * @extends {goog.graphics.ImageElement}
      * @final
      */
-    export class SvgImageElement extends goog.graphics.ImageElement {
+    class SvgImageElement extends goog.graphics.ImageElement {
         constructor(element: Element, graphics: goog.graphics.SvgGraphics);
         
         /**

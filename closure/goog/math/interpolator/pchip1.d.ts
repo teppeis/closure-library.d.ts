@@ -6,7 +6,7 @@ declare module goog.math.interpolator {
      * @constructor
      * @final
      */
-    export class Pchip1 extends goog.math.interpolator.Spline1 {
+    class Pchip1 extends goog.math.interpolator.Spline1 {
         constructor();
     }
 }

@@ -10,7 +10,7 @@ declare module goog.graphics {
      *     http://en.wikipedia.org/wiki/Canvas_element for details.
      * @final
      */
-    export class Font {
+    class Font {
         constructor(size: number, family: string);
         
         /**

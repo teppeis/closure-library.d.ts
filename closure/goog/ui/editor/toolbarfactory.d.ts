@@ -6,7 +6,7 @@ declare module goog.ui.editor.ToolbarFactory {
      * @param {string} fontSpec Font specification.
      * @return {string} The primary font name, in lowercase.
      */
-    export function getPrimaryFont(fontSpec: string): string;
+    function getPrimaryFont(fontSpec: string): string;
 
     /**
      * Bulk-adds fonts to the given font menu button.  The argument must be an
@@ -21,7 +21,7 @@ declare module goog.ui.editor.ToolbarFactory {
      * @param {!Array.<{caption: string, value: string}>} fonts Array of
      *     font descriptors.
      */
-    export function addFonts(button: goog.ui.Select, fonts: Array<{caption: string; value: string}>): void;
+    function addFonts(button: goog.ui.Select, fonts: Array<{caption: string; value: string}>): void;
 
     /**
      * Adds a menu item to the given font menu button.  The first font listed in
@@ -31,7 +31,7 @@ declare module goog.ui.editor.ToolbarFactory {
      * @param {string} caption Caption to show for the font menu.
      * @param {string} value Value for the corresponding 'font-family' CSS style.
      */
-    export function addFont(button: goog.ui.Select, caption: string, value: string): void;
+    function addFont(button: goog.ui.Select, caption: string, value: string): void;
 
     /**
      * Bulk-adds font sizes to the given font size menu button.  The argument must
@@ -45,7 +45,7 @@ declare module goog.ui.editor.ToolbarFactory {
      * @param {!Array.<{caption: string, value:number}>} sizes Array of font
      *     size descriptors.
      */
-    export function addFontSizes(button: goog.ui.Select, sizes: Array<{caption: string; value: number}>): void;
+    function addFontSizes(button: goog.ui.Select, sizes: Array<{caption: string; value: number}>): void;
 
     /**
      * Adds a menu item to the given font size menu button.  The {@code value}
@@ -54,7 +54,7 @@ declare module goog.ui.editor.ToolbarFactory {
      * @param {string} caption Caption to show in the font size menu.
      * @param {number} value Value for the corresponding HTML font size.
      */
-    export function addFontSize(button: goog.ui.Select, caption: string, value: number): void;
+    function addFontSize(button: goog.ui.Select, caption: string, value: number): void;
 
     /**
      * Converts a legacy font size specification into an equivalent pixel size.
@@ -62,7 +62,7 @@ declare module goog.ui.editor.ToolbarFactory {
      * @param {number} fontSize Legacy font size spec in the 0-7 range.
      * @return {number} Equivalent pixel size.
      */
-    export function getPxFromLegacySize(fontSize: number): number;
+    function getPxFromLegacySize(fontSize: number): number;
 
     /**
      * Converts a pixel font size specification into an equivalent legacy size.
@@ -73,7 +73,7 @@ declare module goog.ui.editor.ToolbarFactory {
      * @return {number} Equivalent legacy size spec in the 0-7 range, or -1 if none
      *     exists.
      */
-    export function getLegacySizeFromPx(px: number): number;
+    function getLegacySizeFromPx(px: number): number;
 
     /**
      * Bulk-adds format options to the given "Format block" menu button.  The
@@ -88,7 +88,7 @@ declare module goog.ui.editor.ToolbarFactory {
      * @param {!Array.<{caption: string, command: goog.dom.TagName}>} formats Array
      *     of format option descriptors.
      */
-    export function addFormatOptions(button: goog.ui.Select, formats: Array<{caption: string; command: goog.dom.TagName}>): void;
+    function addFormatOptions(button: goog.ui.Select, formats: Array<{caption: string; command: goog.dom.TagName}>): void;
 
     /**
      * Adds a menu item to the given "Format block" menu button.
@@ -96,7 +96,7 @@ declare module goog.ui.editor.ToolbarFactory {
      * @param {string} caption Caption to show in the menu.
      * @param {goog.dom.TagName} tag Corresponding block format tag.
      */
-    export function addFormatOption(button: goog.ui.Select, caption: string, tag: goog.dom.TagName): void;
+    function addFormatOption(button: goog.ui.Select, caption: string, tag: goog.dom.TagName): void;
 
     /**
      * Creates a {@link goog.ui.Toolbar} containing the specified set of
@@ -111,7 +111,7 @@ declare module goog.ui.editor.ToolbarFactory {
      * @return {!goog.ui.Toolbar} Editor toolbar, rendered into the given parent
      *     element.
      */
-    export function makeToolbar(items: Array<goog.ui.Control>, elem: Element, opt_isRightToLeft?: boolean): goog.ui.Toolbar;
+    function makeToolbar(items: Array<goog.ui.Control>, elem: Element, opt_isRightToLeft?: boolean): goog.ui.Toolbar;
 
     /**
      * Creates a toolbar button with the given ID, tooltip, and caption.  Applies
@@ -128,7 +128,7 @@ declare module goog.ui.editor.ToolbarFactory {
      *     creation; defaults to the current document if unspecified.
      * @return {!goog.ui.Button} A toolbar button.
      */
-    export function makeButton(id: string, tooltip: string, caption: goog.ui.ControlContent, opt_classNames?: string, opt_renderer?: goog.ui.ButtonRenderer, opt_domHelper?: goog.dom.DomHelper): goog.ui.Button;
+    function makeButton(id: string, tooltip: string, caption: goog.ui.ControlContent, opt_classNames?: string, opt_renderer?: goog.ui.ButtonRenderer, opt_domHelper?: goog.dom.DomHelper): goog.ui.Button;
 
     /**
      * Creates a toggle button with the given ID, tooltip, and caption. Applies
@@ -146,7 +146,7 @@ declare module goog.ui.editor.ToolbarFactory {
      *     creation; defaults to the current document if unspecified.
      * @return {!goog.ui.Button} A toggle button.
      */
-    export function makeToggleButton(id: string, tooltip: string, caption: goog.ui.ControlContent, opt_classNames?: string, opt_renderer?: goog.ui.ButtonRenderer, opt_domHelper?: goog.dom.DomHelper): goog.ui.Button;
+    function makeToggleButton(id: string, tooltip: string, caption: goog.ui.ControlContent, opt_classNames?: string, opt_renderer?: goog.ui.ButtonRenderer, opt_domHelper?: goog.dom.DomHelper): goog.ui.Button;
 
     /**
      * Creates a menu button with the given ID, tooltip, and caption. Applies
@@ -166,7 +166,7 @@ declare module goog.ui.editor.ToolbarFactory {
      *     creation; defaults to the current document if unspecified.
      * @return {!goog.ui.MenuButton} A menu button.
      */
-    export function makeMenuButton(id: string, tooltip: string, caption: goog.ui.ControlContent, opt_classNames?: string, opt_renderer?: goog.ui.ButtonRenderer, opt_domHelper?: goog.dom.DomHelper): goog.ui.MenuButton;
+    function makeMenuButton(id: string, tooltip: string, caption: goog.ui.ControlContent, opt_classNames?: string, opt_renderer?: goog.ui.ButtonRenderer, opt_domHelper?: goog.dom.DomHelper): goog.ui.MenuButton;
 
     /**
      * Creates a select button with the given ID, tooltip, and caption. Applies
@@ -187,7 +187,7 @@ declare module goog.ui.editor.ToolbarFactory {
      *     creation; defaults to the current document if unspecified.
      * @return {!goog.ui.Select} A select button.
      */
-    export function makeSelectButton(id: string, tooltip: string, caption: goog.ui.ControlContent, opt_classNames?: string, opt_renderer?: goog.ui.MenuButtonRenderer, opt_domHelper?: goog.dom.DomHelper): goog.ui.Select;
+    function makeSelectButton(id: string, tooltip: string, caption: goog.ui.ControlContent, opt_classNames?: string, opt_renderer?: goog.ui.MenuButtonRenderer, opt_domHelper?: goog.dom.DomHelper): goog.ui.Select;
 
     /**
      * Creates a color menu button with the given ID, tooltip, and caption.
@@ -207,5 +207,5 @@ declare module goog.ui.editor.ToolbarFactory {
      *     creation; defaults to the current document if unspecified.
      * @return {!goog.ui.ColorMenuButton} A color menu button.
      */
-    export function makeColorMenuButton(id: string, tooltip: string, caption: goog.ui.ControlContent, opt_classNames?: string, opt_renderer?: goog.ui.ColorMenuButtonRenderer, opt_domHelper?: goog.dom.DomHelper): goog.ui.ColorMenuButton;
+    function makeColorMenuButton(id: string, tooltip: string, caption: goog.ui.ControlContent, opt_classNames?: string, opt_renderer?: goog.ui.ColorMenuButtonRenderer, opt_domHelper?: goog.dom.DomHelper): goog.ui.ColorMenuButton;
 }

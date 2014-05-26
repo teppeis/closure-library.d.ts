@@ -9,7 +9,7 @@ declare module goog.editor.plugins {
      * @constructor
      * @extends {goog.events.EventTarget}
      */
-    export class UndoRedoState extends goog.events.EventTarget {
+    class UndoRedoState extends goog.events.EventTarget {
         constructor(asynchronous: boolean);
         
         /**

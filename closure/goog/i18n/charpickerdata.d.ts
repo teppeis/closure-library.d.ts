@@ -4,7 +4,7 @@ declare module goog.i18n {
      * Object holding two level character organization and character listing.
      * @constructor
      */
-    export class CharPickerData {
+    class CharPickerData {
         constructor();
         
         /**

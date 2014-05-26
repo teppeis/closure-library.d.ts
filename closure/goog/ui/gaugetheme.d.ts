@@ -7,7 +7,7 @@ declare module goog.ui {
      * @constructor
      * @final
      */
-    export class GaugeTheme {
+    class GaugeTheme {
         constructor();
         
         /**

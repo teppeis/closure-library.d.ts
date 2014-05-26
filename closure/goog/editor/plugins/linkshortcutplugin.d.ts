@@ -6,7 +6,7 @@ declare module goog.editor.plugins {
      * @extends {goog.editor.Plugin}
      * @final
      */
-    export class LinkShortcutPlugin extends goog.editor.Plugin {
+    class LinkShortcutPlugin extends goog.editor.Plugin {
         constructor();
     }
 }

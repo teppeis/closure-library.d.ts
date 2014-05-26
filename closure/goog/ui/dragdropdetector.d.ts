@@ -9,7 +9,7 @@ declare module goog.ui {
      * @extends {goog.events.EventTarget}
      * @final
      */
-    export class DragDropDetector extends goog.events.EventTarget {
+    class DragDropDetector extends goog.events.EventTarget {
         constructor(opt_filePath?: string);
         
         /**
@@ -26,7 +26,7 @@ declare module goog.ui.DragDropDetector {
      * Drag and drop event types.
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         IMAGE_DROPPED: string;
         LINK_DROPPED: string;
     }
@@ -40,7 +40,7 @@ declare module goog.ui.DragDropDetector {
      * @extends {goog.events.Event}
      * @final
      */
-    export class ImageDropEvent extends goog.events.Event {
+    class ImageDropEvent extends goog.events.Event {
         constructor(url: string, position: goog.math.Coordinate);
         
         /**
@@ -63,7 +63,7 @@ declare module goog.ui.DragDropDetector {
      * @extends {goog.events.Event}
      * @final
      */
-    export class LinkDropEvent extends goog.events.Event {
+    class LinkDropEvent extends goog.events.Event {
         constructor(url: string);
         
         /**

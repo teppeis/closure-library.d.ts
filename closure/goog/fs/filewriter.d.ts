@@ -12,7 +12,7 @@ declare module goog.fs {
      * @extends {goog.fs.FileSaver}
      * @final
      */
-    export class FileWriter extends goog.fs.FileSaver {
+    class FileWriter extends goog.fs.FileSaver {
         constructor(writer: FileWriter);
         
         /**

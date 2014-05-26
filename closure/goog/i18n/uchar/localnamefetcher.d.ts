@@ -9,7 +9,7 @@ declare module goog.i18n.uChar {
      * @implements {goog.i18n.uChar.NameFetcher}
      * @final
      */
-    export class LocalNameFetcher {
+    class LocalNameFetcher {
         constructor();
     }
 }

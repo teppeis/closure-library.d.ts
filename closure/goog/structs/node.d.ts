@@ -8,7 +8,7 @@ declare module goog.structs {
      * @constructor
      * @template K, V
      */
-    export class Node<K, V> {
+    class Node<K, V> {
         constructor(key: K, value: V);
         
         /**

@@ -11,7 +11,7 @@ declare module goog.labs.events.touch {
      *   target: EventTarget
      * }}
      */
-    export interface TouchData {
+    interface TouchData {
         clientX: number;
         clientY: number;
         screenX: number;
@@ -25,5 +25,5 @@ declare module goog.labs.events.touch {
      * @param {!Event} e A mouse or touch event.
      * @return {!goog.labs.events.touch.TouchData}
      */
-    export function getTouchData(e: Event): goog.labs.events.touch.TouchData;
+    function getTouchData(e: Event): goog.labs.events.touch.TouchData;
 }

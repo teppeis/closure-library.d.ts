@@ -8,7 +8,7 @@ declare module goog.events {
      * @implements {goog.events.EventWrapper}
      * @private
      */
-    export interface ActionEventWrapper_ {
+    interface ActionEventWrapper_ {
         
         /**
          * Adds an event listener using the wrapper on a DOM Node or an object that has
@@ -47,5 +47,5 @@ declare module goog.events {
      * Singleton instance of ActionEventWrapper_.
      * @type {goog.events.ActionEventWrapper_}
      */
-    export var actionEventWrapper: goog.events.ActionEventWrapper_;
+    var actionEventWrapper: goog.events.ActionEventWrapper_;
 }

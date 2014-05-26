@@ -13,7 +13,7 @@ declare module goog.net {
      * @constructor
      * @final
      */
-    export class MultiIframeLoadMonitor {
+    class MultiIframeLoadMonitor {
         constructor(iframes: Array<HTMLIFrameElement>, callback: () => void, opt_hasContent?: boolean);
         
         /**

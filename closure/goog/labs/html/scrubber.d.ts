@@ -5,7 +5,7 @@ declare module goog.labs.html.scrubber {
      * @enum {number}
      * @private
      */
-    export interface Group_ {
+    interface Group_ {
         BLOCK_: number;
         INLINE_: number;
         INLINE_MINUS_A_: number;
@@ -38,7 +38,7 @@ declare module goog.labs.html.scrubber {
      * @enum {number}
      * @private
      */
-    export interface Scope_ {
+    interface Scope_ {
         COMMON_: number;
         BUTTON_: number;
         LIST_ITEM_: number;
@@ -46,19 +46,19 @@ declare module goog.labs.html.scrubber {
     }
 
     /** Character code constant for {@code '<'}.  @private */
-    export var CC_LT_: any;
+    var CC_LT_: any;
 
     /** Character code constant for {@code '!'}.  @private */
-    export var CC_BANG_: any;
+    var CC_BANG_: any;
 
     /** Character code constant for {@code '/'}.  @private */
-    export var CC_SLASH_: any;
+    var CC_SLASH_: any;
 
     /** Character code constant for {@code '?'}.  @private */
-    export var CC_QMARK_: any;
+    var CC_QMARK_: any;
 
     /** @const @private */
-    export var ALL_SCOPES_: any;
+    var ALL_SCOPES_: any;
 
     /**
      * Replaces tags not on the white-list with empty text nodes, dropping all
@@ -81,7 +81,7 @@ declare module goog.labs.html.scrubber {
      * @param {string} html a string of HTML
      * @return {string} the input but with potentially dangerous tokens removed.
      */
-    export function scrub(tagWhitelist: Object, attrWhitelist: Object, html: string): string;
+    function scrub(tagWhitelist: Object, attrWhitelist: Object, html: string): string;
 
     /**
      * Balances tags in trusted HTML.
@@ -90,5 +90,5 @@ declare module goog.labs.html.scrubber {
      *     and only for non-void start tags, and with start and end tags nesting
      *     properly.
      */
-    export function balance(html: string): string;
+    function balance(html: string): string;
 }

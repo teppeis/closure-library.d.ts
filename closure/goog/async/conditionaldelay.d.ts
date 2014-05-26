@@ -18,7 +18,7 @@ declare module goog.async {
      * @constructor
      * @extends {goog.Disposable}
      */
-    export class ConditionalDelay extends goog.Disposable {
+    class ConditionalDelay extends goog.Disposable {
         constructor(listener: () => boolean, opt_handler?: Object);
         
         /**

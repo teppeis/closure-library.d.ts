@@ -18,7 +18,7 @@ declare module goog.ui.equation {
      * @extends {goog.ui.Palette}
      * @constructor
      */
-    export class Palette extends goog.ui.Palette {
+    class Palette extends goog.ui.Palette {
         constructor(paletteManager: goog.ui.equation.PaletteManager, type: goog.ui.equation.Palette.Type, spriteX: number, spriteY: number, itemWidth: number, itemHeight: number, opt_actions?: Array<string>, opt_renderer?: goog.ui.PaletteRenderer);
         
         /**
@@ -91,7 +91,7 @@ declare module goog.ui.equation {
      * @extends {goog.events.Event}
      * @final
      */
-    export class PaletteEvent extends goog.events.Event {
+    class PaletteEvent extends goog.events.Event {
         constructor(type: string, palette: goog.ui.equation.Palette, opt_target?: Element);
         
         /**
@@ -107,7 +107,7 @@ declare module goog.ui.equation {
      * @extends {goog.ui.PaletteRenderer}
      * @constructor
      */
-    export class PaletteRenderer extends goog.ui.PaletteRenderer {
+    class PaletteRenderer extends goog.ui.PaletteRenderer {
         constructor();
         
         /**
@@ -124,7 +124,7 @@ declare module goog.ui.equation.Palette {
      * The type of possible palettes. They are made short to minimize JS size.
      * @enum {string}
      */
-    export interface Type {
+    interface Type {
         MENU: string;
         GREEK: string;
         SYMBOL: string;
@@ -140,7 +140,7 @@ declare module goog.ui.equation.PaletteEvent {
      * The type of events that can be fired on palettes.
      * @enum {string}
      */
-    export interface Type {
+    interface Type {
         ACTION: string;
     }
 }

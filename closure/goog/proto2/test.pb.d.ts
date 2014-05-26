@@ -6,7 +6,7 @@ declare module proto2 {
      * @extends {goog.proto2.Message}
      * @final
      */
-    export class TestAllTypes extends goog.proto2.Message {
+    class TestAllTypes extends goog.proto2.Message {
         constructor();
         
         /**
@@ -1503,7 +1503,7 @@ declare module proto2 {
      * @extends {goog.proto2.Message}
      * @final
      */
-    export class TestDefaultParent extends goog.proto2.Message {
+    class TestDefaultParent extends goog.proto2.Message {
         constructor();
         
         /**
@@ -1553,7 +1553,7 @@ declare module proto2 {
      * @extends {goog.proto2.Message}
      * @final
      */
-    export class TestDefaultChild extends goog.proto2.Message {
+    class TestDefaultChild extends goog.proto2.Message {
         constructor();
         
         /**
@@ -1604,7 +1604,7 @@ declare module proto2.TestAllTypes {
      * Enumeration NestedEnum.
      * @enum {number}
      */
-    export interface NestedEnum {
+    interface NestedEnum {
         FOO: number;
         BAR: number;
         BAZ: number;
@@ -1616,7 +1616,7 @@ declare module proto2.TestAllTypes {
      * @extends {goog.proto2.Message}
      * @final
      */
-    export class NestedMessage extends goog.proto2.Message {
+    class NestedMessage extends goog.proto2.Message {
         constructor();
         
         /**
@@ -1699,7 +1699,7 @@ declare module proto2.TestAllTypes {
      * @extends {goog.proto2.Message}
      * @final
      */
-    export class OptionalGroup extends goog.proto2.Message {
+    class OptionalGroup extends goog.proto2.Message {
         constructor();
         
         /**
@@ -1749,7 +1749,7 @@ declare module proto2.TestAllTypes {
      * @extends {goog.proto2.Message}
      * @final
      */
-    export class RepeatedGroup extends goog.proto2.Message {
+    class RepeatedGroup extends goog.proto2.Message {
         constructor();
         
         /**

@@ -10,7 +10,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class ObjectEqualsMatcher {
+    class ObjectEqualsMatcher {
         constructor(expectedObject: Object);
     }
 
@@ -24,7 +24,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class HasPropertyMatcher {
+    class HasPropertyMatcher {
         constructor(property: string);
     }
 
@@ -38,7 +38,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class InstanceOfMatcher {
+    class InstanceOfMatcher {
         constructor(object: Object);
     }
 
@@ -50,7 +50,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class IsNullOrUndefinedMatcher {
+    class IsNullOrUndefinedMatcher {
         constructor();
     }
 
@@ -62,7 +62,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class IsNullMatcher {
+    class IsNullMatcher {
         constructor();
     }
 
@@ -74,7 +74,7 @@ declare module goog.labs.testing {
      * @implements {goog.labs.testing.Matcher}
      * @final
      */
-    export class IsUndefinedMatcher {
+    class IsUndefinedMatcher {
         constructor();
     }
 }

@@ -19,7 +19,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.Control}
      */
-    export class Palette extends goog.ui.Control {
+    class Palette extends goog.ui.Control {
         constructor(items: Array<Node>, opt_renderer?: goog.ui.PaletteRenderer, opt_domHelper?: goog.dom.DomHelper);
         
         /**
@@ -179,7 +179,7 @@ declare module goog.ui.Palette {
      * Events fired by the palette object
      * @enum {string}
      */
-    export interface EventType {
+    interface EventType {
         AFTER_HIGHLIGHT: string;
     }
 
@@ -189,7 +189,7 @@ declare module goog.ui.Palette {
      * @extends {goog.ui.Control}
      * @private
      */
-    export interface CurrentCell_ extends goog.ui.Control {
+    interface CurrentCell_ extends goog.ui.Control {
         
         /**
          * @param {boolean} highlight Whether to highlight or unhighlight the component.

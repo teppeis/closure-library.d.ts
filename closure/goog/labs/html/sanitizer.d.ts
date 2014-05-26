@@ -6,7 +6,7 @@ declare module goog.labs.html {
      * arbitrary JavaScript.
      * @constructor
      */
-    export class Sanitizer {
+    class Sanitizer {
         constructor();
         
         /**

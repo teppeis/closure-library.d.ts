@@ -10,7 +10,7 @@ declare module goog.ui {
      * @extends {goog.ui.Component}
      * @constructor
      */
-    export class ComboBox extends goog.ui.Component {
+    class ComboBox extends goog.ui.Component {
         constructor(opt_domHelper?: goog.dom.DomHelper, opt_menu?: goog.ui.Menu, opt_labelInput?: goog.ui.LabelInput);
         
         /**
@@ -190,7 +190,7 @@ declare module goog.ui {
      * @constructor
      * @extends {goog.ui.MenuItem}
      */
-    export class ComboBoxItem extends goog.ui.MenuItem {
+    class ComboBoxItem extends goog.ui.MenuItem {
         constructor(content: goog.ui.ControlContent, opt_data?: Object, opt_domHelper?: goog.dom.DomHelper, opt_renderer?: goog.ui.MenuItemRenderer);
         
         /**

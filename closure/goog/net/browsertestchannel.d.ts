@@ -10,7 +10,7 @@ declare module goog.net {
      *     logging.
      * @final
      */
-    export class BrowserTestChannel {
+    class BrowserTestChannel {
         constructor(channel: goog.net.BrowserChannel, channelDebug: goog.net.ChannelDebug);
         
         /**
@@ -108,7 +108,7 @@ declare module goog.net.BrowserTestChannel {
      * @enum {number}
      * @private
      */
-    export interface State_ {
+    interface State_ {
         INIT: number;
         CHECKING_BLOCKED: number;
         CONNECTION_TESTING: number;

@@ -32,7 +32,7 @@ declare module goog.events {
      * @extends {goog.Disposable}
      * @implements {goog.events.Listenable}
      */
-    export class EventTarget extends goog.Disposable {
+    class EventTarget extends goog.Disposable {
         constructor();
         
         /**

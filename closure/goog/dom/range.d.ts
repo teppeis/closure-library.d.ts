@@ -9,7 +9,7 @@ declare module goog.dom.Range {
      * @return {goog.dom.AbstractRange?} A range wrapper object, or null if there
      *     was an error.
      */
-    export function createFromWindow(opt_win?: Window): goog.dom.AbstractRange;
+    function createFromWindow(opt_win?: Window): goog.dom.AbstractRange;
 
     /**
      * Create a new range wrapper from the given browser selection object.  Note
@@ -19,7 +19,7 @@ declare module goog.dom.Range {
      * @return {goog.dom.AbstractRange?} A range wrapper object or null if there
      *    was an error.
      */
-    export function createFromBrowserSelection(selection: Object): goog.dom.AbstractRange;
+    function createFromBrowserSelection(selection: Object): goog.dom.AbstractRange;
 
     /**
      * Create a new range wrapper from the given browser range object.
@@ -28,7 +28,7 @@ declare module goog.dom.Range {
      *     node.
      * @return {!goog.dom.AbstractRange} A range wrapper object.
      */
-    export function createFromBrowserRange(range: Range, opt_isReversed?: boolean): goog.dom.AbstractRange;
+    function createFromBrowserRange(range: Range, opt_isReversed?: boolean): goog.dom.AbstractRange;
 
     /**
      * Create a new range wrapper that selects the given node's text.
@@ -37,7 +37,7 @@ declare module goog.dom.Range {
      *     node.
      * @return {!goog.dom.AbstractRange} A range wrapper object.
      */
-    export function createFromNodeContents(node: Node, opt_isReversed?: boolean): goog.dom.AbstractRange;
+    function createFromNodeContents(node: Node, opt_isReversed?: boolean): goog.dom.AbstractRange;
 
     /**
      * Create a new range wrapper that represents a caret at the given node,
@@ -47,7 +47,7 @@ declare module goog.dom.Range {
      * @param {number} offset The offset within the node to place the caret at.
      * @return {!goog.dom.AbstractRange} A range wrapper object.
      */
-    export function createCaret(node: Node, offset: number): goog.dom.AbstractRange;
+    function createCaret(node: Node, offset: number): goog.dom.AbstractRange;
 
     /**
      * Create a new range wrapper that selects the area between the given nodes,
@@ -58,14 +58,14 @@ declare module goog.dom.Range {
      * @param {number} focusOffset The offset within the node to focus on.
      * @return {!goog.dom.AbstractRange} A range wrapper object.
      */
-    export function createFromNodes(anchorNode: Node, anchorOffset: number, focusNode: Node, focusOffset: number): goog.dom.AbstractRange;
+    function createFromNodes(anchorNode: Node, anchorOffset: number, focusNode: Node, focusOffset: number): goog.dom.AbstractRange;
 
     /**
      * Clears the window's selection.
      * @param {Window=} opt_win The window to get the selection of.  Defaults to the
      *     window this class was defined in.
      */
-    export function clearSelection(opt_win?: Window): void;
+    function clearSelection(opt_win?: Window): void;
 
     /**
      * Tests if the window has a selection.
@@ -73,7 +73,7 @@ declare module goog.dom.Range {
      *     the window this class was defined in.
      * @return {boolean} Whether the window has a selection.
      */
-    export function hasSelection(opt_win?: Window): boolean;
+    function hasSelection(opt_win?: Window): boolean;
 
     /**
      * Returns whether the focus position occurs before the anchor position.
@@ -84,5 +84,5 @@ declare module goog.dom.Range {
      * @return {boolean} Whether the focus position occurs before the anchor
      *     position.
      */
-    export function isReversed(anchorNode: Node, anchorOffset: number, focusNode: Node, focusOffset: number): boolean;
+    function isReversed(anchorNode: Node, anchorOffset: number, focusNode: Node, focusOffset: number): boolean;
 }

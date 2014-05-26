@@ -8,7 +8,7 @@ declare module goog.string$ {
      *     append, e.g., new goog.string.StringBuffer('foo', 'bar').
      * @constructor
      */
-    export class StringBuffer {
+    class StringBuffer {
         constructor(opt_a1?: any, ...var_args: any[]);
         
         /**

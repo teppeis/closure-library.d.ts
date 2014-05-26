@@ -9,7 +9,7 @@ declare module goog.ui.equation {
      * @extends {goog.events.EventTarget}
      * @final
      */
-    export class PaletteManager extends goog.events.EventTarget {
+    class PaletteManager extends goog.events.EventTarget {
         constructor(domHelper: goog.dom.DomHelper);
         
         /**

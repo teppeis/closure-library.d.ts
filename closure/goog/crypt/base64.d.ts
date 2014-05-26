@@ -5,19 +5,19 @@ declare module goog.crypt.base64 {
      * ENCODED_VALS and ENCODED_VALS_WEBSAFE
      * @type {string}
      */
-    export var ENCODED_VALS_BASE: string;
+    var ENCODED_VALS_BASE: string;
 
     /**
      * Our default alphabet. Value 64 (=) is special; it means "nothing."
      * @type {string}
      */
-    export var ENCODED_VALS: string;
+    var ENCODED_VALS: string;
 
     /**
      * Our websafe alphabet.
      * @type {string}
      */
-    export var ENCODED_VALS_WEBSAFE: string;
+    var ENCODED_VALS_WEBSAFE: string;
 
     /**
      * Whether this browser supports the atob and btoa functions. This extension
@@ -27,7 +27,7 @@ declare module goog.crypt.base64 {
      *
      * @type {boolean}
      */
-    export var HAS_NATIVE_SUPPORT: boolean;
+    var HAS_NATIVE_SUPPORT: boolean;
 
     /**
      * Base64-encode an array of bytes.
@@ -38,7 +38,7 @@ declare module goog.crypt.base64 {
      *     alternative alphabet.
      * @return {string} The base64 encoded string.
      */
-    export function encodeByteArray(input: Array<number>, opt_webSafe?: boolean): string;
+    function encodeByteArray(input: Array<number>, opt_webSafe?: boolean): string;
 
     /**
      * Base64-encode a string.
@@ -48,7 +48,7 @@ declare module goog.crypt.base64 {
      *     alternative alphabet.
      * @return {string} The base64 encoded string.
      */
-    export function encodeString(input: string, opt_webSafe?: boolean): string;
+    function encodeString(input: string, opt_webSafe?: boolean): string;
 
     /**
      * Base64-decode a string.
@@ -58,7 +58,7 @@ declare module goog.crypt.base64 {
      *     alternative alphabet.
      * @return {string} string representing the decoded value.
      */
-    export function decodeString(input: string, opt_webSafe?: boolean): string;
+    function decodeString(input: string, opt_webSafe?: boolean): string;
 
     /**
      * Base64-decode a string.
@@ -75,5 +75,5 @@ declare module goog.crypt.base64 {
      * @param {boolean=} opt_webSafe True if we should use the web-safe alphabet.
      * @return {!Array} bytes representing the decoded value.
      */
-    export function decodeStringToByteArray(input: string, opt_webSafe?: boolean): Array<any>;
+    function decodeStringToByteArray(input: string, opt_webSafe?: boolean): Array<any>;
 }

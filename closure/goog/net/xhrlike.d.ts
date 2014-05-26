@@ -8,7 +8,7 @@ declare module goog.net {
      * @interface
      * @see http://www.w3.org/TR/XMLHttpRequest/
      */
-    export interface XhrLike {
+    interface XhrLike {
         
         /**
          * @type {function()|null|undefined}
@@ -95,6 +95,6 @@ declare module goog.net.XhrLike {
      * Typedef that refers to either native or custom-implemented XHR objects.
      * @typedef {!goog.net.XhrLike|!XMLHttpRequest}
      */
-    export interface OrNative {
+    interface OrNative {
     }
 }

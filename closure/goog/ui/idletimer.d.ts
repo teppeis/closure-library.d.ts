@@ -15,7 +15,7 @@ declare module goog.ui {
      * @extends {goog.events.EventTarget}
      * @final
      */
-    export class IdleTimer extends goog.events.EventTarget {
+    class IdleTimer extends goog.events.EventTarget {
         constructor(idleThreshold: number, opt_activityMonitor?: goog.ui.ActivityMonitor);
         
         /**
@@ -45,7 +45,7 @@ declare module goog.ui.IdleTimer {
      * Event constants for the idle timer event target
      * @enum {string}
      */
-    export interface Event {
+    interface Event {
         BECOME_ACTIVE: string;
         BECOME_IDLE: string;
     }

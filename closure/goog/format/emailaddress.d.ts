@@ -8,7 +8,7 @@ declare module goog.format {
      * @constructor
      * @final
      */
-    export class EmailAddress {
+    class EmailAddress {
         constructor(opt_address?: string, opt_name?: string);
         
         /**
