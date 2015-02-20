@@ -17,6 +17,12 @@ declare module goog.ui {
         constructor(content: goog.ui.ControlContent, opt_model?: any, opt_domHelper?: goog.dom.DomHelper, opt_renderer?: goog.ui.MenuItemRenderer);
         
         /**
+         * The class set on an element that contains a keyboard accelerator hint.
+         * @type {string}
+         */
+        static ACCELERATOR_CLASS: string;
+        
+        /**
          * Returns the value associated with the menu item.  The default implementation
          * returns the model object associated with the item (if any), or its caption.
          * @return {*} Value associated with the menu item, if any, or its caption.
@@ -45,6 +51,12 @@ declare module goog.ui {
         setCheckable(checkable: boolean): void;
         
         /**
+         * @return {?string} The keyboard accelerator text, or null if the menu item
+         *     doesn't have one.
+         */
+        getAccelerator(): string;
+        
+        /**
          * Sets the mnemonic key code. The mnemonic is the key associated with this
          * action.
          * @param {goog.events.KeyCodes} key The key code.
@@ -57,5 +69,17 @@ declare module goog.ui {
          * @return {goog.events.KeyCodes} The key code of the mnemonic key.
          */
         getMnemonic(): goog.events.KeyCodes;
+        
+        /**
+         * @override
+         * @return {goog.ui.Menu}
+         */
+        getParent(): goog.ui.Menu;
+        
+        /**
+         * @override
+         * @return {goog.ui.Menu}
+         */
+        getParentEventTarget(): goog.ui.Menu;
     }
 }

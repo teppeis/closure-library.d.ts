@@ -87,7 +87,7 @@ declare module goog.labs.testing {
     /**
      * The StringContainsInOrdermatcher.
      *
-     * @param {Array.<string>} values The expected string values.
+     * @param {Array<string>} values The expected string values.
      *
      * @constructor
      * @struct

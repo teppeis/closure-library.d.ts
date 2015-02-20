@@ -66,7 +66,7 @@ declare module goog.dom {
      *     the end of the node for reverse iterators.
      * @param {number=} opt_depth The starting tree depth.
      * @constructor
-     * @extends {goog.iter.Iterator.<Node>}
+     * @extends {goog.iter.Iterator<Node>}
      */
     class TagIterator extends goog.iter.Iterator<Node> {
         constructor(opt_node?: Node, opt_reversed?: boolean, opt_unconstrained?: boolean, opt_tagType?: goog.dom.TagWalkType, opt_depth?: number);

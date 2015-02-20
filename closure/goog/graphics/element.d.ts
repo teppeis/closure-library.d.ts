@@ -31,7 +31,10 @@ declare module goog.graphics {
         getGraphics(): goog.graphics.AbstractGraphics;
         
         /**
-         * Set the transformation of the element.
+         * Set the translation and rotation of the element.
+         *
+         * If a more general affine transform is needed than this provides
+         * (e.g. skew and scale) then use setTransform.
          * @param {number} x The x coordinate of the translation transform.
          * @param {number} y The y coordinate of the translation transform.
          * @param {number} rotate The angle of the rotation transform.
@@ -45,5 +48,12 @@ declare module goog.graphics {
          *     this element.
          */
         getTransform(): goog.graphics.AffineTransform;
+        
+        /**
+         * Set the affine transform of the element.
+         * @param {!goog.graphics.AffineTransform} affineTransform The
+         *     transformation applied to this element.
+         */
+        setTransform(affineTransform: goog.graphics.AffineTransform): void;
     }
 }

@@ -69,16 +69,6 @@ declare module goog.ui {
 declare module goog.ui.Popup {
 
     /**
-     * Enum for representing an element corner for positioning the popup.
-     *
-     * @enum {number}
-     *
-     * @deprecated Use {@link goog.positioning.Corner} instead, this alias will be
-     *     removed at the end of Q1 2009.
-     */
-    interface Corner extends goog.positioning.Corner {}
-
-    /**
      * Enum for representing position handling in cases where the element would be
      * positioned outside the viewport.
      *

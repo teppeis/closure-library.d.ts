@@ -67,7 +67,7 @@ declare module goog.net.jsloader {
      * If you need to load a large number of scripts on the same domain,
      * you may want to use goog.module.ModuleLoader.
      *
-     * @param {Array.<string>} uris The URIs to load.
+     * @param {Array<string>} uris The URIs to load.
      * @param {goog.net.jsloader.Options=} opt_options Optional parameters. See
      *     goog.net.jsloader.options documentation for details.
      */

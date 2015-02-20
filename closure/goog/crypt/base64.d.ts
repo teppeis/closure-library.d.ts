@@ -32,7 +32,7 @@ declare module goog.crypt.base64 {
     /**
      * Base64-encode an array of bytes.
      *
-     * @param {Array.<number>|Uint8Array} input An array of bytes (numbers with
+     * @param {Array<number>|Uint8Array} input An array of bytes (numbers with
      *     value in [0, 255]) to encode.
      * @param {boolean=} opt_webSafe Boolean indicating we should use the
      *     alternative alphabet.
@@ -73,7 +73,7 @@ declare module goog.crypt.base64 {
      *
      * @param {string} input Input to decode.
      * @param {boolean=} opt_webSafe True if we should use the web-safe alphabet.
-     * @return {!Array} bytes representing the decoded value.
+     * @return {!Array<number>} bytes representing the decoded value.
      */
-    function decodeStringToByteArray(input: string, opt_webSafe?: boolean): Array<any>;
+    function decodeStringToByteArray(input: string, opt_webSafe?: boolean): Array<number>;
 }

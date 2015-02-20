@@ -4,7 +4,7 @@ declare module goog.ui {
      * A custom color palette is a grid of color swatches and a button that allows
      * the user to add additional colors to the palette
      *
-     * @param {Array.<string>} initColors Array of initial colors to populate the
+     * @param {Array<string>} initColors Array of initial colors to populate the
      *     palette with.
      * @param {goog.ui.PaletteRenderer=} opt_renderer Renderer used to render or
      *     decorate the palette; defaults to {@link goog.ui.PaletteRenderer}.
@@ -20,7 +20,7 @@ declare module goog.ui {
         /**
          * Returns an array of DOM nodes for each color, and an additional cell with a
          * '+'.
-         * @return {!Array.<Node>} Array of div elements.
+         * @return {!Array<Node>} Array of div elements.
          * @override
          */
         createColorNodes(): Array<Node>;

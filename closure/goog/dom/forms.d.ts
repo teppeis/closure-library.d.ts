@@ -4,10 +4,10 @@ declare module goog.dom.forms {
      * Returns form data as a map of name to value arrays. This doesn't
      * support file inputs.
      * @param {HTMLFormElement} form The form.
-     * @return {!goog.structs.Map} A map of the form data as form name to arrays of
-     *     values.
+     * @return {!goog.structs.Map.<string, !Array.<string>>} A map of the form data
+     *     as field name to arrays of values.
      */
-    function getFormDataMap(form: HTMLFormElement): goog.structs.Map<any, any>;
+    function getFormDataMap(form: HTMLFormElement): goog.structs.Map<string, Array<string>>;
 
     /**
      * Returns the form data as an application/x-www-url-encoded string. This
@@ -55,7 +55,7 @@ declare module goog.dom.forms {
     /**
      * Gets the current value of any element with a type.
      * @param {Element} el The element.
-     * @return {string|Array.<string>|null} The current value of the element
+     * @return {string|Array<string>|null} The current value of the element
      *     (or null).
      */
     function getValue(el: Element): string;
@@ -67,7 +67,7 @@ declare module goog.dom.forms {
      * @param {HTMLFormElement} form The form element.
      * @param {string} name Name of an input to the form.
      *
-     * @return {Array.<string>|string|null} The value of the form element, or
+     * @return {Array<string>|string|null} The value of the form element, or
      *     null if the form element does not exist or has no value.
      */
     function getValueByName(form: HTMLFormElement, name: string): Array<string>;
@@ -88,6 +88,7 @@ declare module goog.dom {
      * Alias for goog.dom.form.element.getValue
      * @type {Function}
      * @deprecated Use {@link goog.dom.forms.getValue} instead.
+     * @suppress {missingProvide}
      */
     var $F: Function;
 }

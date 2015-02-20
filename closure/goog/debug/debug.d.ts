@@ -40,19 +40,28 @@ declare module goog.debug {
 
     /**
      * Recursively outputs a nested array as a string.
-     * @param {Array} arr The array.
+     * @param {Array<?>} arr The array.
      * @return {string} String representing nested array.
      */
     function exposeArray(arr: Array<any>): string;
 
     /**
      * Exposes an exception that has been caught by a try...catch and outputs the
+     * error as HTML with a stack trace.
+     * @param {Object} err Error object or string.
+     * @param {Function=} opt_fn Optional function to start stack trace from.
+     * @return {string} Details of exception, as HTML.
+     */
+    function exposeException(err: Object, opt_fn?: Function): string;
+
+    /**
+     * Exposes an exception that has been caught by a try...catch and outputs the
      * error with a stack trace.
      * @param {Object} err Error object or string.
      * @param {Function=} opt_fn Optional function to start stack trace from.
-     * @return {string} Details of exception.
+     * @return {!goog.html.SafeHtml} Details of exception.
      */
-    function exposeException(err: Object, opt_fn?: Function): string;
+    function exposeExceptionAsHtml(err: Object, opt_fn?: Function): goog.html.SafeHtml;
 
     /**
      * Normalizes the error/exception object between browsers.

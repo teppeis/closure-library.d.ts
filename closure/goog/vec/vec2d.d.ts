@@ -47,7 +47,7 @@ declare module goog.vec.vec2d {
      * Initializes vec2d vec from Array src.
      *
      * @param {goog.vec.vec2d.Type} vec The destination vector.
-     * @param {Array.<number>} src The source vector.
+     * @param {Array<number>} src The source vector.
      * @return {!goog.vec.vec2d.Type} Return vec so that operations can be
      *     chained together.
      */

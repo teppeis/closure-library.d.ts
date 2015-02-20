@@ -9,6 +9,7 @@ declare module goog.math {
      * New ranges added to the set which overlap the values in one or more existing
      * ranges will be merged.
      *
+     * @struct
      * @constructor
      * @final
      */

@@ -87,16 +87,20 @@ declare module goog.ui {
         /**
          * Set the size of the left/top component, and resize the other component based
          * on that size and handle size.
-         * @param {?number=} opt_size The size of the top or left, in pixels.
+         * @param {?number=} opt_size The size of the top or left, in pixels. If
+         *     unspecified, leaves the size of the first component unchanged but adjusts
+         *     the size of the second component to fit the split pane size.
          */
         setFirstComponentSize(opt_size?: number): void;
         
         /**
-          * Set the size of the splitpane.  This is usually called by the controlling
-          * application.  This will set the SplitPane BorderBoxSize.
-          * @param {goog.math.Size} size The size to set the splitpane.
-          */
-        setSize(size: goog.math.Size): void;
+         * Set the size of the splitpane.  This is usually called by the controlling
+         * application.  This will set the SplitPane BorderBoxSize.
+         * @param {!goog.math.Size} size The size to set the splitpane.
+         * @param {?number=} opt_firstComponentSize The size of the top or left
+         *     component, in pixels.
+         */
+        setSize(size: goog.math.Size, opt_firstComponentSize?: number): void;
     }
 }
 

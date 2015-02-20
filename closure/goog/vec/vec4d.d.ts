@@ -49,7 +49,7 @@ declare module goog.vec.vec4d {
      * Initializes vec4d vec from Array src.
      *
      * @param {goog.vec.vec4d.Type} vec The destination vector.
-     * @param {Array.<number>} src The source vector.
+     * @param {Array<number>} src The source vector.
      * @return {!goog.vec.vec4d.Type} Return vec so that operations can be
      *     chained together.
      */

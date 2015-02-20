@@ -10,7 +10,7 @@ declare module goog.ui {
      * pickers.  Use {@link #setContent} to set/change the items in the palette
      * after construction.  See palette.html demo for example usage.
      *
-     * @param {Array.<Node>} items Array of DOM nodes to be displayed as items
+     * @param {Array<Node>} items Array of DOM nodes to be displayed as items
      *     in the palette grid (limited to one per cell).
      * @param {goog.ui.PaletteRenderer=} opt_renderer Renderer used to render or
      *     decorate the palette; defaults to {@link goog.ui.PaletteRenderer}.

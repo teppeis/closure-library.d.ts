@@ -145,9 +145,10 @@ declare module goog.debug {
         writeSavedMessages(): void;
         
         /**
-         * @return {string} The style rule text, for inclusion in the initial HTML.
+         * @return {!goog.html.SafeStyleSheet} The stylesheet, for inclusion in the
+         *     initial HTML.
          */
-        getStyleRules(): string;
+        getStyleRules(): goog.html.SafeStyleSheet;
         
         /**
          * Writes the initial HTML of the debug window.

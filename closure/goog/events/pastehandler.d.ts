@@ -29,7 +29,7 @@ declare module goog.events {
         
         /**
          * Returns the event handler.
-         * @return {goog.events.EventHandler.<T>} The event handler.
+         * @return {goog.events.EventHandler<T>} The event handler.
          * @protected
          * @this T
          * @template T

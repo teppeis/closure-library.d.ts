@@ -2,9 +2,9 @@ declare module goog.structs {
 
     /**
      * Maps ranges to values.
-     * @param {Array.<number>} rangeArray An array of monotonically
+     * @param {Array<number>} rangeArray An array of monotonically
      *     increasing integer values, with at least one instance.
-     * @param {Array.<T>} valueArray An array of corresponding values.
+     * @param {Array<T>} valueArray An array of corresponding values.
      *     Length must be the same as rangeArray.
      * @param {boolean=} opt_delta If true, saves only delta from previous value.
      * @constructor
@@ -15,9 +15,9 @@ declare module goog.structs {
         
         /**
          * Splices a range -> value map into this inversion map.
-         * @param {Array.<number>} rangeArray An array of monotonically
+         * @param {Array<number>} rangeArray An array of monotonically
          *     increasing integer values, with at least one instance.
-         * @param {Array.<T>} valueArray An array of corresponding values.
+         * @param {Array<T>} valueArray An array of corresponding values.
          *     Length must be the same as rangeArray.
          * @param {boolean=} opt_delta If true, saves only delta from previous value.
          */

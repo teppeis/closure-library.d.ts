@@ -5,7 +5,7 @@ declare module goog.structs {
      * @param {number=} opt_minCount Min. number of objects (Default: 1).
      * @param {number=} opt_maxCount Max. number of objects (Default: 10).
      * @constructor
-     * @extends {goog.structs.Pool.<VALUE>}
+     * @extends {goog.structs.Pool<VALUE>}
      * @template VALUE
      */
     class PriorityPool<VALUE> extends goog.structs.Pool<VALUE> {

@@ -8,7 +8,7 @@ declare module goog.vec {
     interface Float64 {
     }
 
-    /** @typedef {!Array.<number>} */
+    /** @typedef {!Array<number>} */
     interface Number {
     }
 
@@ -18,7 +18,7 @@ declare module goog.vec {
 
     /**
      * @deprecated Use AnyType.
-     * @typedef {!Float32Array|!Array.<number>}
+     * @typedef {!Float32Array|!Array<number>}
      */
     interface ArrayType {
     }

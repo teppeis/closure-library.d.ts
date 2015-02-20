@@ -117,7 +117,7 @@ declare module goog.ui {
          * @param {string} identifier Identifier for the task performed by the keyboard
          *                 combination. Multiple shortcuts can be provided for the same
          *                 task by specifying the same identifier.
-         * @param {...(number|string|Array.<number>)} var_args See below.
+         * @param {...(number|string|Array<number>)} var_args See below.
          *
          * param {number} keyCode Numeric code for key
          * param {number=} opt_modifiers Bitmap indicating required modifier keys.
@@ -166,7 +166,7 @@ declare module goog.ui {
          * {@link #registerShortcut} for syntax. In that case the method only takes one
          * argument.
          *
-         * @param {...(number|string|Array.<number>)} var_args String representation, or
+         * @param {...(number|string|Array<number>)} var_args String representation, or
          *     array or list of alternating key codes and modifiers.
          */
         unregisterShortcut(...var_args: number[]): void;
@@ -187,7 +187,7 @@ declare module goog.ui {
          * {@link #registerShortcut} for syntax. In that case the method only takes one
          * argument.
          *
-         * @param {...(number|string|Array.<number>)} var_args String representation, or
+         * @param {...(number|string|Array<number>)} var_args String representation, or
          *     array or list of alternating key codes and modifiers.
          * @return {boolean} Whether the specified keyboard shortcut is registered.
          */
@@ -201,12 +201,12 @@ declare module goog.ui {
         /**
          * Sets the global keys; keys that are safe to always regarded as shortcuts,
          * even if entered in a textarea or input field.
-         * @param {Array.<number>} keys List of keys.
+         * @param {Array<number>} keys List of keys.
          */
         setGlobalKeys(keys: Array<number>): void;
         
         /**
-         * @return {!Array.<string>} The global keys, i.e. keys that are safe to always
+         * @return {!Array<string>} The global keys, i.e. keys that are safe to always
          *     regard as shortcuts, even if entered in a textarea or input field.
          */
         getGlobalKeys(): Array<string>;
@@ -221,9 +221,10 @@ declare module goog.ui {
         /**
          * Builds stroke array from string representation of shortcut.
          * @param {string} s String representation of shortcut.
-         * @return {!Array.<Object>} The stroke array.
+         * @return {!Array<!{keyCode: ?number, modifiers: number}>} The stroke array.  A
+         *     null keyCode means no non-modifier key was part of the stroke.
          */
-        static parseStringShortcut(s: string): Array<Object>;
+        static parseStringShortcut(s: string): Array<{keyCode: number; modifiers: number}>;
         
         /**
          * Adds a key event listener that triggers {@link #handleKeyDown_} when keys
@@ -277,5 +278,31 @@ declare module goog.ui.KeyboardShortcutHandler {
     interface EventType {
         SHORTCUT_TRIGGERED: string;
         SHORTCUT_PREFIX: string;
+    }
+
+    /**
+     * A map of strokes (represented as numbers) to the nodes reached by those
+     * strokes.
+     * @typedef {Object<number, goog.ui.KeyboardShortcutHandler.SequenceNode_>}
+     * @private
+     */
+    interface SequenceTree_ {
+    }
+
+    /**
+     * A node in a keyboard shortcut sequence tree. A node is either:
+     * 1. A terminal node with a non-nullable shortcut string which is the
+     *    identifier for the shortcut triggered by traversing the tree to that node.
+     * 2. An internal node with a null shortcut string and a
+     *    {@code goog.ui.KeyboardShortcutHandler.SequenceTree_} representing the
+     *    continued stroke sequences from this node.
+     * For clarity, the static factory methods for creating internal and terminal
+     * nodes below should be used rather than using this constructor directly.
+     * @param {string=} opt_shortcut The shortcut identifier, for terminal nodes.
+     * @constructor
+     * @struct
+     * @private
+     */
+    interface SequenceNode_ {
     }
 }

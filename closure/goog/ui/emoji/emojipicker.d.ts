@@ -52,7 +52,7 @@ declare module goog.ui.emoji {
          * Adds a group of emoji to the picker.
          *
          * @param {string|Element} title Title for the group.
-         * @param {Array.<Array.<string>>} emojiGroup A new group of emoji to be added
+         * @param {Array<Array<string>>} emojiGroup A new group of emoji to be added
          *    Each internal array contains [emojiUrl, emojiId].
          */
         addEmojiGroup(title: string, emojiGroup: Array<Array<string>>): void;
@@ -212,7 +212,7 @@ declare module goog.ui.emoji {
          * Returns all the pages from the picker. This should be considered protected,
          * and is ONLY FOR TESTING.
          *
-         * @return {Array.<goog.ui.emoji.EmojiPalette>?} the pages in the picker or
+         * @return {Array<goog.ui.emoji.EmojiPalette>?} the pages in the picker or
          *     null if none exist.
          */
         getPages(): Array<goog.ui.emoji.EmojiPalette>;

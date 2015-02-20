@@ -72,17 +72,30 @@ declare module goog.functions {
      * and replaces it with a new one.
      * @param {Function} f A function.
      * @param {T} retValue A new return value.
-     * @return {function(...[?]):T} A new function.
+     * @return {function(...?):T} A new function.
      * @template T
      */
     function withReturnValue<T>(f: Function, retValue: T): (...arg0: any[]) => T;
 
     /**
+     * Creates a function that returns whether its arguement equals the given value.
+     *
+     * Example:
+     * var key = goog.object.findKey(obj, goog.functions.equalTo('needle'));
+     *
+     * @param {*} value The value to compare to.
+     * @param {boolean=} opt_useLooseComparison Whether to use a loose (==)
+     *     comparison rather than a strict (===) one. Defaults to false.
+     * @return {function(*):boolean} The new function.
+     */
+    function equalTo(value: any, opt_useLooseComparison?: boolean): (arg0: any) => boolean;
+
+    /**
      * Creates the composition of the functions passed in.
      * For example, (goog.functions.compose(f, g))(a) is equivalent to f(g(a)).
-     * @param {function(...[?]):T} fn The final function.
+     * @param {function(...?):T} fn The final function.
      * @param {...Function} var_args A list of functions.
-     * @return {function(...[?]):T} The composition of all inputs.
+     * @return {function(...?):T} The composition of all inputs.
      * @template T
      */
     function compose<T>(fn: (...arg0: any[]) => T, ...var_args: Function[]): (...arg0: any[]) => T;
@@ -102,7 +115,7 @@ declare module goog.functions {
      * short-circuited as soon as a function returns false.
      * For example, (goog.functions.and(f, g))(x) is equivalent to f(x) && g(x).
      * @param {...Function} var_args A list of functions.
-     * @return {function(...[?]):boolean} A function that ANDs its component
+     * @return {function(...?):boolean} A function that ANDs its component
      *      functions.
      */
     function and(...var_args: Function[]): (...arg0: any[]) => boolean;
@@ -113,7 +126,7 @@ declare module goog.functions {
      * short-circuited as soon as a function returns true.
      * For example, (goog.functions.or(f, g))(x) is equivalent to f(x) || g(x).
      * @param {...Function} var_args A list of functions.
-     * @return {function(...[?]):boolean} A function that ORs its component
+     * @return {function(...?):boolean} A function that ORs its component
      *    functions.
      */
     function or(...var_args: Function[]): (...arg0: any[]) => boolean;
@@ -122,7 +135,7 @@ declare module goog.functions {
      * Creates a function that returns the Boolean opposite of a provided function.
      * For example, (goog.functions.not(f))(x) is equivalent to !f(x).
      * @param {!Function} f The original function.
-     * @return {function(...[?]):boolean} A function that delegates to f and returns
+     * @return {function(...?):boolean} A function that delegates to f and returns
      * opposite.
      */
     function not(f: Function): (...arg0: any[]) => boolean;
@@ -131,13 +144,16 @@ declare module goog.functions {
      * Generic factory function to construct an object given the constructor
      * and the arguments. Intended to be bound to create object factories.
      *
-     * Callers should cast the result to the appropriate type for proper type
-     * checking by the compiler.
-     * @param {!Function} constructor The constructor for the Object.
+     * Example:
+     *
+     * var factory = goog.partial(goog.functions.create, Class);
+     *
+     * @param {function(new:T, ...)} constructor The constructor for the Object.
      * @param {...*} var_args The arguments to be passed to the constructor.
-     * @return {!Object} A new instance of the class given in {@code constructor}.
+     * @return {T} A new instance of the class given in {@code constructor}.
+     * @template T
      */
-    function create(constructor: Function, ...var_args: any[]): Object;
+    function create<T>(constructor: (...arg0: any[]) => any, ...var_args: any[]): T;
 
     /**
      * Gives a wrapper function that caches the return value of a parameterless

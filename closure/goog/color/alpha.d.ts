@@ -36,10 +36,11 @@ declare module goog.color.alpha {
     /**
      * Converts an 8-hex representation of a color to RGBA.
      * @param {string} hexColor Color to convert.
-     * @return {!Array} array containing [r, g, b, a]. r, g, b are ints between 0
+     * @return {!Array<number>} array containing [r, g, b, a].
+     *     r, g, b are ints between 0
      *     and 255, and a is a value between 0 and 1.
      */
-    function hexToRgba(hexColor: string): Array<any>;
+    function hexToRgba(hexColor: string): Array<number>;
 
     /**
      * Converts a color from RGBA to hex representation.
@@ -63,7 +64,7 @@ declare module goog.color.alpha {
 
     /**
      * Converts a color from RGBA to hex representation.
-     * @param {Array.<number>} rgba Array of [r, g, b, a], with r, g, b in [0, 255]
+     * @param {Array<number>} rgba Array of [r, g, b, a], with r, g, b in [0, 255]
      *     and a in [0, 1].
      * @return {string} hex representation of the color.
      */
@@ -81,7 +82,7 @@ declare module goog.color.alpha {
 
     /**
      * Converts a color from RGBA to an RGBA style string.
-     * @param {(Array.<number>|Float32Array)} rgba Array of [r, g, b, a],
+     * @param {(Array<number>|Float32Array)} rgba Array of [r, g, b, a],
      *     with r, g, b in [0, 255] and a in [0, 1].
      * @return {string} An 'rgba(r,g,b,a)' string ready for use in a CSS rule.
      */
@@ -89,7 +90,7 @@ declare module goog.color.alpha {
 
     /**
      * Converts a color from HSLA to hex representation.
-     * @param {Array.<number>} hsla Array of [h, s, l, a], where h is an integer in
+     * @param {Array<number>} hsla Array of [h, s, l, a], where h is an integer in
      *     [0, 360], s and l are integers in [0, 100], and a is in [0, 1].
      * @return {string} hex representation of the color, such as '#af457eff'.
      */
@@ -97,7 +98,7 @@ declare module goog.color.alpha {
 
     /**
      * Converts a color from HSLA to an RGBA style string.
-     * @param {Array.<number>} hsla Array of [h, s, l, a], where h is and integer in
+     * @param {Array<number>} hsla Array of [h, s, l, a], where h is and integer in
      *     [0, 360], s and l are integers in [0, 100], and a is in [0, 1].
      * @return {string} An 'rgba(r,g,b,a)' string ready for use in a CSS rule.
      */
@@ -120,7 +121,7 @@ declare module goog.color.alpha {
      * @param {number} s Amount of saturation, int between 0 and 100.
      * @param {number} l Amount of lightness, int between 0 and 100.
      * @param {number} a Amount of alpha, float between 0 and 1.
-     * @return {!Array.<number>} [r, g, b, a] values for the color, where r, g, b
+     * @return {!Array<number>} [r, g, b, a] values for the color, where r, g, b
      *     are integers in [0, 255] and a is a float in [0, 1].
      */
     function hslaToRgba(h: number, s: number, l: number, a: number): Array<number>;
@@ -132,16 +133,16 @@ declare module goog.color.alpha {
      * @param {number} g Value of green, in [0, 255].
      * @param {number} b Value of blue, in [0, 255].
      * @param {number} a Value of alpha, in [0, 255].
-     * @return {!Array.<number>} [h, s, l, a] values for the color, with h an int in
+     * @return {!Array<number>} [h, s, l, a] values for the color, with h an int in
      *     [0, 360] and s, l and a in [0, 1].
      */
     function rgbaToHsla(r: number, g: number, b: number, a: number): Array<number>;
 
     /**
      * Converts a color from RGBA color space to HSLA color space.
-     * @param {Array.<number>} rgba [r, g, b, a] values for the color, each in
+     * @param {Array<number>} rgba [r, g, b, a] values for the color, each in
      *     [0, 255].
-     * @return {!Array.<number>} [h, s, l, a] values for the color, with h in
+     * @return {!Array<number>} [h, s, l, a] values for the color, with h in
      *     [0, 360] and s, l and a in [0, 1].
      */
     function rgbaArrayToHsla(rgba: Array<number>): Array<number>;
@@ -158,9 +159,9 @@ declare module goog.color.alpha {
 
     /**
      * Converts from an HSVA array to a hex string
-     * @param {Array} hsva Array of [h, s, v, a] in
+     * @param {Array<number>} hsva Array of [h, s, v, a] in
      *     [[0, 1], [0, 1], [0, 255], [0, 1]].
      * @return {string} hex representation of the color.
      */
-    function hsvaArrayToHex(hsva: Array<any>): string;
+    function hsvaArrayToHex(hsva: Array<number>): string;
 }

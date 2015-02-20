@@ -56,7 +56,7 @@ declare module goog.string$.path {
      * is everything after the final slash. Either part may return an empty string.
      * See http://docs.python.org/library/os.path.html#os.path.split
      * @param {string} path A pathname.
-     * @return {!Array.<string>} An array of [dirname, basename].
+     * @return {!Array<string>} An array of [dirname, basename].
      */
     function split(path: string): Array<string>;
 }

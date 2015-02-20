@@ -26,21 +26,21 @@ declare module goog.net.xpc {
     /**
      * Enum containing transport names. These need to correspond to the
      * transport class names for createTransport_() to work.
-     * @type {Object}
+     * @const {!Object<string,string>}
      */
-    var TransportNames: Object;
+    var TransportNames: any;
 
     /**
      * Field names used on configuration object.
-     * @type {Object}
+     * @const
      */
-    var CfgFields: Object;
+    var CfgFields: any;
 
     /**
      * Config properties that need to be URL sanitized.
-     * @type {Array}.<string>
+     * @type {Array<string>}
      */
-    var UriCfgFields: Array<any>;
+    var UriCfgFields: Array<string>;
 
     /**
      * The name of the transport service (used for internal signalling).
@@ -76,11 +76,10 @@ declare module goog.net.xpc {
 
     /**
      * Object holding active channels.
-     * Package private. Do not call from outside goog.net.xpc.
      *
-     * @type {Object.<string, goog.net.xpc.CrossPageChannel>}
+     * @package {Object<string, goog.net.xpc.CrossPageChannel>}
      */
-    var channels: Object;
+    var channels: any;
 
     /**
      * The logger.

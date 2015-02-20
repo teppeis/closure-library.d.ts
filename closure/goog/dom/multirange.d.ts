@@ -21,7 +21,7 @@ declare module goog.dom {
         /**
          * Creates a new range wrapper from the given browser ranges.  Do not
          * use this method directly - please use goog.dom.Range.createFrom* instead.
-         * @param {Array.<Range>} browserRanges The browser ranges.
+         * @param {Array<Range>} browserRanges The browser ranges.
          * @return {!goog.dom.MultiRange} A range wrapper object.
          */
         static createFromBrowserRanges(browserRanges: Array<Range>): goog.dom.MultiRange;
@@ -29,7 +29,7 @@ declare module goog.dom {
         /**
          * Creates a new range wrapper from the given goog.dom.TextRange objects.  Do
          * not use this method directly - please use goog.dom.Range.createFrom* instead.
-         * @param {Array.<goog.dom.TextRange>} textRanges The text range objects.
+         * @param {Array<goog.dom.TextRange>} textRanges The text range objects.
          * @return {!goog.dom.MultiRange} A range wrapper object.
          */
         static createFromTextRanges(textRanges: Array<goog.dom.TextRange>): goog.dom.MultiRange;
@@ -41,7 +41,7 @@ declare module goog.dom {
         clone(): goog.dom.MultiRange;
         
         /**
-         * @return {!Array.<goog.dom.TextRange>} An array of sub-ranges, sorted by start
+         * @return {!Array<goog.dom.TextRange>} An array of sub-ranges, sorted by start
          *     point.
          */
         getSortedRanges(): Array<goog.dom.TextRange>;

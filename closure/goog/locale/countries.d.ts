@@ -2,7 +2,7 @@ declare module goog.locale {
 
     /**
      * List of codes for countries valid today.
-     * @type {Array}
+     * @type {!Array<string>}
      */
-    var countries: Array<any>;
+    var countries: Array<string>;
 }

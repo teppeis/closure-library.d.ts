@@ -71,10 +71,16 @@ declare module goog.editor {
         
         /**
          * List of mutation events in Gecko browsers.
-         * @type {Array.<string>}
+         * @type {Array<string>}
          * @protected
          */
         static MUTATION_EVENTS_GECKO: Array<string>;
+        
+        /**
+         * Keycodes that result in a selectionchange event (e.g. the cursor moving).
+         * @type {!Object<number, number>}
+         */
+        static SELECTION_CHANGE_KEYCODES: Object;
         
         /**
          * Sets the active field id.
@@ -137,7 +143,7 @@ declare module goog.editor {
          * Registers a keyboard event listener on the field.  This is necessary for
          * Gecko since the fields are contained in an iFrame and there is no way to
          * auto-propagate key events up to the main window.
-         * @param {string|Array.<string>} type Event type to listen for or array of
+         * @param {string|Array<string>} type Event type to listen for or array of
          *    event types, for example goog.events.EventType.KEYDOWN.
          * @param {Function} listener Function to be used as the listener.
          * @param {boolean=} opt_capture Whether to use capture phase (optional,
@@ -268,6 +274,13 @@ declare module goog.editor {
         removeAllWrappers(): void;
         
         /**
+         * Sets whether activating a hyperlink in this editable field will open a new
+         *     window or not.
+         * @param {boolean} followLinkInNewWindow
+         */
+        setFollowLinkInNewWindow(followLinkInNewWindow: boolean): void;
+        
+        /**
          * Mutation events tell us when something has changed for mozilla.
          * @protected
          */
@@ -302,7 +315,7 @@ declare module goog.editor {
         
         /**
          * Gets the value of command(s).
-         * @param {string|Array.<string>} commands String name(s) of the command.
+         * @param {string|Array<string>} commands String name(s) of the command.
          * @return {*} Value of each command. Returns false (or array of falses)
          *     if designMode is off or the field is otherwise uneditable, and
          *     there are no activeOnUneditable plugins for the command.
@@ -423,7 +436,7 @@ declare module goog.editor {
         
         /**
          * Dispatches a command value change event.
-         * @param {Array.<string>=} opt_commands Commands whose state has
+         * @param {Array<string>=} opt_commands Commands whose state has
          *     changed.
          */
         dispatchCommandValueChange(opt_commands?: Array<string>): void;
@@ -676,25 +689,5 @@ declare module goog.editor.Field {
         UNEDITABLE: number;
         LOADING: number;
         EDITABLE: number;
-    }
-
-    /**
-     * Keycodes that result in a selectionchange event (e.g. the cursor moving).
-     * @enum {number}
-     * @private
-     */
-    interface SELECTION_CHANGE_KEYCODES_ {
-        8: number;
-        9: number;
-        13: number;
-        33: number;
-        34: number;
-        35: number;
-        36: number;
-        37: number;
-        38: number;
-        39: number;
-        40: number;
-        46: number;
     }
 }

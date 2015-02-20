@@ -8,11 +8,13 @@ declare module goog.ui.ac {
      *     similarity matches for the input token against the dictionary.
      *     The value is sent to the server as the 'use_similar' query param which is
      *     either "1" (opt_noSimilar==false) or "0" (opt_noSimilar==true).
+     * @param {goog.net.XmlHttpFactory=} opt_xmlHttpFactory Specify the
+     *     XmlHttpFactory used to retrieve the matches.
      * @constructor
      * @extends {goog.Disposable}
      */
     class RemoteArrayMatcher extends goog.Disposable {
-        constructor(url: string, opt_noSimilar?: boolean);
+        constructor(url: string, opt_noSimilar?: boolean, opt_xmlHttpFactory?: goog.net.XmlHttpFactory);
         
         /**
          * Set the send method ("GET", "POST").
@@ -72,7 +74,7 @@ declare module goog.ui.ac {
          * Parses and retrieves the array of suggestions from XHR response.
          * <b>Override this if the response is not a simple JSON array.</b>
          * @param {string} responseText The XHR response text.
-         * @return {Array.<string>} The array of suggestions.
+         * @return {Array<string>} The array of suggestions.
          * @protected
          */
         parseResponseText(responseText: string): Array<string>;

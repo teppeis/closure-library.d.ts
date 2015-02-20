@@ -52,14 +52,17 @@ declare module goog.dom.iframe {
      * in quirks mode.
      *
      * @param {goog.dom.DomHelper} domHelper The dom helper to use.
-     * @param {string=} opt_styles CSS styles for the iframe.
+     * @param {!goog.html.SafeStyle|string=} opt_styles CSS styles for the
+     *     iframe. If possible pass a SafeStyle; string is supported for
+     *     backwards-compatibility only.
      * @return {!HTMLIFrameElement} A completely blank iframe.
      */
-    function createBlank(domHelper: goog.dom.DomHelper, opt_styles?: string): HTMLIFrameElement;
+    function createBlank(domHelper: goog.dom.DomHelper, opt_styles?: goog.html.SafeStyle): HTMLIFrameElement;
 
     /**
      * Writes the contents of a blank iframe that has already been inserted
-     * into the document.
+     * into the document. If possible use {@link #writeSafeContent},
+     * this function exists for backwards-compatibility only.
      * @param {!HTMLIFrameElement} iframe An iframe with no contents, such as
      *     one created by goog.dom.iframe.createBlank, but already appended to
      *     a parent document.
@@ -67,6 +70,17 @@ declare module goog.dom.iframe {
      *     the HTML close tag.
      */
     function writeContent(iframe: HTMLIFrameElement, content: string): void;
+
+    /**
+     * Writes the contents of a blank iframe that has already been inserted
+     * into the document.
+     * @param {!HTMLIFrameElement} iframe An iframe with no contents, such as
+     *     one created by {@link #createBlank}, but already appended to
+     *     a parent document.
+     * @param {!goog.html.SafeHtml} content Content to write to the iframe,
+     *     from doctype to the HTML close tag.
+     */
+    function writeSafeContent(iframe: HTMLIFrameElement, content: goog.html.SafeHtml): void;
 
     /**
      * Creates a same-domain iframe containing preloaded content.
@@ -80,12 +94,17 @@ declare module goog.dom.iframe {
      *
      * @param {!Element} parentElement The parent element in which to append the
      *     iframe.
-     * @param {string=} opt_headContents Contents to go into the iframe's head.
-     * @param {string=} opt_bodyContents Contents to go into the iframe's body.
-     * @param {string=} opt_styles CSS styles for the iframe itself, before adding
-     *     to the parent element.
+     * @param {!goog.html.SafeHtml|string=} opt_headContents Contents to go into
+     *     the iframe's head. If possible pass a SafeHtml; string is supported for
+     *     backwards-compatibility only.
+     * @param {!goog.html.SafeHtml|string=} opt_bodyContents Contents to go into
+     *     the iframe's body. If possible pass a SafeHtml; string is supported for
+     *     backwards-compatibility only.
+     * @param {!goog.html.SafeStyle|string=} opt_styles CSS styles for the iframe
+     *     itself, before adding to the parent element. If possible pass a
+     *     SafeStyle; string is supported for backwards-compatibility only.
      * @param {boolean=} opt_quirks Whether to use quirks mode (false by default).
      * @return {!HTMLIFrameElement} An iframe that has the specified contents.
      */
-    function createWithContent(parentElement: Element, opt_headContents?: string, opt_bodyContents?: string, opt_styles?: string, opt_quirks?: boolean): HTMLIFrameElement;
+    function createWithContent(parentElement: Element, opt_headContents?: goog.html.SafeHtml, opt_bodyContents?: goog.html.SafeHtml, opt_styles?: goog.html.SafeStyle, opt_quirks?: boolean): HTMLIFrameElement;
 }

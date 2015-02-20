@@ -49,6 +49,12 @@ declare module goog.ui {
         mouseUpListener: goog.events.Key;
         
         /**
+         * Hex representation of the color.
+         * @protected {string}
+         */
+        color(): void;
+        
+        /**
          * Gets the color that is currently selected in this color picker.
          * @return {string} The string of the selected color.
          */

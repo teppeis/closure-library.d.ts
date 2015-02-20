@@ -3,7 +3,7 @@ declare module goog.dom.pattern {
     /**
      * Pattern object that matches a sequence of other patterns.
      *
-     * @param {Array.<goog.dom.pattern.AbstractPattern>} patterns Ordered array of
+     * @param {Array<goog.dom.pattern.AbstractPattern>} patterns Ordered array of
      *     patterns to match.
      * @param {boolean=} opt_ignoreWhitespace Optional flag to ignore text nodes
      *     consisting entirely of whitespace.  The default is to not ignore them.
@@ -17,7 +17,7 @@ declare module goog.dom.pattern {
         /**
          * Ordered array of patterns to match.
          *
-         * @type {Array.<goog.dom.pattern.AbstractPattern>}
+         * @type {Array<goog.dom.pattern.AbstractPattern>}
          */
         patterns: Array<goog.dom.pattern.AbstractPattern>;
         

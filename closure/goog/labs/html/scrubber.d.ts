@@ -64,9 +64,9 @@ declare module goog.labs.html.scrubber {
      * Replaces tags not on the white-list with empty text nodes, dropping all
      * attributes, and drops other non-text nodes such as comments.
      *
-     * @param {!Object.<string, boolean>} tagWhitelist a set of lower-case tag names
+     * @param {!Object<string, boolean>} tagWhitelist a set of lower-case tag names
      *    following the convention established by {@link goog.object.createSet}.
-     * @param {!Object.<string, Object.<string, goog.labs.html.AttributeRewriter>>}
+     * @param {!Object<string, Object<string, goog.labs.html.AttributeRewriter>>}
      *        attrWhitelist
      *    maps lower-case tag names and the special string {@code "*"} to functions
      *    from decoded attribute values to sanitized values or {@code null} to

@@ -18,13 +18,13 @@ declare module goog.structs {
         
         /**
          * Returns the values of the map.
-         * @return {!Array.<V>} The values in the map.
+         * @return {!Array<V>} The values in the map.
          */
         getValues(): Array<V>;
         
         /**
          * Returns the keys of the map.
-         * @return {!Array.<string>} Array of string values.
+         * @return {!Array<string>} Array of string values.
          */
         getKeys(): Array<string>;
         
@@ -106,7 +106,7 @@ declare module goog.structs {
         
         /**
          * Calls the given function on each entry in the map.
-         * @param {function(this:T, V, K, goog.structs.Map.<K,V>)} f
+         * @param {function(this:T, V, K, goog.structs.Map<K,V>)} f
          * @param {T=} opt_obj The value of "this" inside f.
          * @template T
          */

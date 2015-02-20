@@ -11,15 +11,6 @@ declare module goog.ui {
         constructor(opt_domHelper?: goog.dom.DomHelper);
         
         /**
-         * DomHelper used to interact with the document, allowing components to be
-         * created in a different window.
-         * @type {!goog.dom.DomHelper}
-         * @protected
-         * @suppress {underscore|visibility}
-         */
-        dom_: goog.dom.DomHelper;
-        
-        /**
          * Static helper method; returns the type of event components are expected to
          * dispatch when transitioning to or from the given state.
          * @param {goog.ui.Component.State} state State to/from which the component
@@ -114,7 +105,7 @@ declare module goog.ui {
         /**
          * Returns the event handler for this component, lazily created the first time
          * this method is called.
-         * @return {!goog.events.EventHandler.<T>} Event handler for this component.
+         * @return {!goog.events.EventHandler<T>} Event handler for this component.
          * @protected
          * @this T
          * @template T
@@ -385,7 +376,7 @@ declare module goog.ui {
         /**
          * Returns an array containing the IDs of the children of this component, or an
          * empty array if the component has no children.
-         * @return {!Array.<string>} Child component IDs.
+         * @return {!Array<string>} Child component IDs.
          */
         getChildIds(): Array<string>;
         
@@ -463,7 +454,7 @@ declare module goog.ui {
          * @see goog.ui.Component#removeChild
          * @param {boolean=} opt_unrender If true, calls {@link #exitDocument} on the
          *    removed child components, and detaches their DOM from the document.
-         * @return {!Array.<goog.ui.Component>} The removed components if any.
+         * @return {!Array<goog.ui.Component>} The removed components if any.
          */
         removeChildren(opt_unrender?: boolean): Array<goog.ui.Component>;
     }

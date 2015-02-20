@@ -2,7 +2,7 @@ declare module goog.net {
 
     /**
      * Class used to load multiple URIs.
-     * @param {Array.<string|goog.Uri>} uris The URIs to load.
+     * @param {Array<string|goog.Uri>} uris The URIs to load.
      * @constructor
      * @extends {goog.events.EventTarget}
      * @final
@@ -12,13 +12,13 @@ declare module goog.net {
         
         /**
          * Gets the response texts, in order.
-         * @return {Array.<string>} The response texts.
+         * @return {Array<string>} The response texts.
          */
         getResponseTexts(): Array<string>;
         
         /**
          * Gets the request Uris.
-         * @return {Array.<string>} The request URIs, in order.
+         * @return {Array<string>} The request URIs, in order.
          */
         getRequestUris(): Array<string>;
         

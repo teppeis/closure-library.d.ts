@@ -1,6 +1,7 @@
 declare module goog.math {
 
     /**
+     * @struct
      * @constructor
      *
      * @param {number} initialValue The initial backoff value.

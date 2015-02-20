@@ -41,19 +41,27 @@ declare module goog.json {
          * Serializes a generic value to a JSON string
          * @protected
          * @param {*} object The object to serialize.
-         * @param {Array} sb Array used as a string builder.
+         * @param {Array<string>} sb Array used as a string builder.
          * @throws Error if there are loops in the object graph.
          */
-        serializeInternal(object: any, sb: Array<any>): void;
+        serializeInternal(object: any, sb: Array<string>): void;
         
         /**
          * Serializes an array to a JSON string
-         * @param {Array} arr The array to serialize.
-         * @param {Array} sb Array used as a string builder.
+         * @param {Array<string>} arr The array to serialize.
+         * @param {Array<string>} sb Array used as a string builder.
          * @protected
          */
-        serializeArray(arr: Array<any>, sb: Array<any>): void;
+        serializeArray(arr: Array<string>, sb: Array<string>): void;
     }
+
+    /**
+     * Tests if a string is an invalid JSON string. This only ensures that we are
+     * not using any invalid characters
+     * @param {string} s The string to test.
+     * @return {boolean} True if the input is a valid JSON string.
+     */
+    function isValid(s: string): boolean;
 
     /**
      * Parses a JSON string and returns the result. This throws an exception if

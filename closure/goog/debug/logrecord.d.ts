@@ -49,20 +49,6 @@ declare module goog.debug {
         setException(exception: Object): void;
         
         /**
-         * Get the exception text that is part of the log record.
-         *
-         * @return {?string} Exception text.
-         */
-        getExceptionText(): string;
-        
-        /**
-         * Set the exception text that is part of the log record.
-         *
-         * @param {string} text The exception text.
-         */
-        setExceptionText(text: string): void;
-        
-        /**
          * Get the source Logger's name.
          *
          * @param {string} loggerName source logger name (may be null).

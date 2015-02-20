@@ -18,7 +18,7 @@ declare module goog.soy {
          * Renders a Soy template into a single node or a document fragment.
          * Delegates to {@code goog.soy.renderAsFragment}.
          *
-         * @param {null|function(ARG_TYPES, null=, Object.<string, *>=):*} template
+         * @param {null|function(ARG_TYPES, null=, Object<string, *>=):*} template
          *     The Soy template defining the element's content.
          * @param {ARG_TYPES=} opt_templateData The data for the template.
          * @return {!Node} The resulting node or document fragment.
@@ -32,7 +32,7 @@ declare module goog.soy {
          * Otherwise, a DIV element is returned containing the rendered nodes.
          * Delegates to {@code goog.soy.renderAsElement}.
          *
-         * @param {null|function(ARG_TYPES, null=, Object.<string, *>=):*} template
+         * @param {null|function(ARG_TYPES, null=, Object<string, *>=):*} template
          *     The Soy template defining the element's content.
          * @param {ARG_TYPES=} opt_templateData The data for the template.
          * @return {!Element} Rendered template contents, wrapped in a parent DIV
@@ -46,7 +46,7 @@ declare module goog.soy {
          * innerHTML of the given element. Delegates to {@code goog.soy.renderElement}.
          *
          * @param {Element} element The element whose content we are rendering.
-         * @param {null|function(ARG_TYPES, null=, Object.<string, *>=):*} template
+         * @param {null|function(ARG_TYPES, null=, Object<string, *>=):*} template
          *     The Soy template defining the element's content.
          * @param {ARG_TYPES=} opt_templateData The data for the template.
          * @template ARG_TYPES
@@ -59,7 +59,7 @@ declare module goog.soy {
          * templates of other kinds, use {@code renderText} (for {@code kind="text"}) or
          * {@code renderStrict}.
          *
-         * @param {null|function(ARG_TYPES, null=, Object.<string, *>=):*} template
+         * @param {null|function(ARG_TYPES, null=, Object<string, *>=):*} template
          *     The Soy template to render.
          * @param {ARG_TYPES=} opt_templateData The data for the template.
          * @return {string} The return value of rendering the template directly.
@@ -72,7 +72,7 @@ declare module goog.soy {
          * It is an error to use renderText on non-strict templates, or strict templates
          * of kinds other than "text".
          *
-         * @param {null|function(ARG_TYPES, null=, Object.<string, *>=):
+         * @param {null|function(ARG_TYPES, null=, Object<string, *>=):
          *     goog.soy.data.SanitizedContent} template The Soy template to render.
          * @param {ARG_TYPES=} opt_templateData The data for the template.
          * @return {string} The return value of rendering the template directly.
@@ -83,7 +83,7 @@ declare module goog.soy {
         /**
          * Renders a strict Soy template and returns the output SanitizedContent object.
          *
-         * @param {null|function(ARG_TYPES, null=, Object.<string, *>=):RETURN_TYPE}
+         * @param {null|function(ARG_TYPES, null=, Object<string, *>=):RETURN_TYPE}
          *     template The Soy template to render.
          * @param {ARG_TYPES=} opt_templateData The data for the template.
          * @param {goog.soy.data.SanitizedContentKind=} opt_kind The output kind to
@@ -103,7 +103,7 @@ declare module goog.soy {
          * Rendering a template that is not a strict template of kind="html" results in
          * a runtime error.
          *
-         * @param {null|function(ARG_TYPES, null=, Object.<string, *>=):
+         * @param {null|function(ARG_TYPES, null=, Object<string, *>=):
          *     goog.soy.data.SanitizedContent} template The Soy template to render.
          * @param {ARG_TYPES=} opt_templateData The data for the template.
          * @return {!goog.html.SafeHtml}
@@ -147,7 +147,7 @@ declare module goog.soy {
 declare module goog.soy.Renderer {
 
     /**
-     * @typedef {Array.<{template: string, data: Object, ijData: Object}>}
+     * @typedef {Array<{template: string, data: Object, ijData: Object}>}
      */
     interface SavedTemplateRender {
     }

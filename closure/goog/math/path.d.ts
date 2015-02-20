@@ -8,11 +8,37 @@ declare module goog.math {
      * A "simple" path does not contain any arcs and may be transformed using
      * the {@code transform} method.
      *
+     * @struct
      * @constructor
      * @final
      */
     class Path {
         constructor();
+        
+        /**
+         * Returns an array of the segment types in this path, in the order of their
+         * appearance. Adjacent segments of the same type are collapsed into a single
+         * entry in the array. The returned array is a copy; modifications are not
+         * reflected in the Path object.
+         * @return {!Array<number>}
+         */
+        getSegmentTypes(): Array<number>;
+        
+        /**
+         * Returns an array of the number of times each segment type repeats in this
+         * path, in order. The returned array is a copy; modifications are not reflected
+         * in the Path object.
+         * @return {!Array<number>}
+         */
+        getSegmentCounts(): Array<number>;
+        
+        /**
+         * Returns an array of all arguments for the segments of this path object, in
+         * order. The returned array is a copy; modifications are not reflected in the
+         * Path object.
+         * @return {!Array<number>}
+         */
+        getSegmentArgs(): Array<number>;
         
         /**
          * Returns the number of points for a segment type.
@@ -59,7 +85,7 @@ declare module goog.math {
         /**
          * Adds points to the path by drawing a straight line to each point.
          *
-         * @param {!Array.<number>} coordinates The coordinates of each
+         * @param {!Array<number>} coordinates The coordinates of each
          *     destination point as x, y value pairs.
          * @return {!goog.math.Path} The path itself.
          */
@@ -82,7 +108,7 @@ declare module goog.math {
          * specified using 3 points (6 coordinates) - two control points and the end
          * point of the curve.
          *
-         * @param {!Array.<number>} coordinates The coordinates specifiying
+         * @param {!Array<number>} coordinates The coordinates specifiying
          *     each curve in sets of 6 points: {@code [x1, y1]} the first control point,
          *     {@code [x2, y2]} the second control point and {@code [x, y]} the end
          *     point.
@@ -161,15 +187,15 @@ declare module goog.math {
          * As a convenience the {@code ARCTO} segment also includes the end point as the
          * last two arguments: {@code rx, ry, fromAngle, extent, x, y}.
          *
-         * @param {function(number, Array)} callback The function to call with each
-         *     path segment.
+         * @param {function(!goog.math.Path.Segment, !Array<number>)} callback
+         *     The function to call with each path segment.
          */
-        forEachSegment(callback: (arg0: number, arg1: Array<any>) => any): void;
+        forEachSegment(callback: (arg0: goog.math.Path.Segment, arg1: Array<number>) => any): void;
         
         /**
          * Returns the coordinates most recently added to the end of the path.
          *
-         * @return {Array.<number>?} An array containing the ending coordinates of the
+         * @return {Array<number>?} An array containing the ending coordinates of the
          *     path of the form {@code [x, y]}.
          */
         getCurrentPoint(): Array<number>;

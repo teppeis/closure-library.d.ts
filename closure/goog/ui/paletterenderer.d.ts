@@ -47,17 +47,17 @@ declare module goog.ui {
          * {@code size.height} rows.  If the table is too big, empty cells will be
          * created as needed.  If the table is too small, the items that don't fit
          * will not be rendered.
-         * @param {Array.<Node>} items Palette items.
+         * @param {Array<Node>} items Palette items.
          * @param {goog.math.Size} size Palette size (columns x rows); both dimensions
          *     must be specified as numbers.
          * @param {goog.dom.DomHelper} dom DOM helper for document interaction.
-         * @return {Element} Palette table element.
+         * @return {!Element} Palette table element.
          */
         createGrid(items: Array<Node>, size: goog.math.Size, dom: goog.dom.DomHelper): Element;
         
         /**
          * Returns a table element (or equivalent) that wraps the given rows.
-         * @param {Array.<Element>} rows Array of row elements.
+         * @param {Array<Element>} rows Array of row elements.
          * @param {goog.dom.DomHelper} dom DOM helper for document interaction.
          * @return {!Element} Palette table element.
          */
@@ -65,7 +65,7 @@ declare module goog.ui {
         
         /**
          * Returns a table row element (or equivalent) that wraps the given cells.
-         * @param {Array.<Element>} cells Array of cell elements.
+         * @param {Array<Element>} cells Array of cell elements.
          * @param {goog.dom.DomHelper} dom DOM helper for document interaction.
          * @return {!Element} Row element.
          */

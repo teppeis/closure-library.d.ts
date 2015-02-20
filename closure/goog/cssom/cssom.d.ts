@@ -26,7 +26,7 @@ declare module goog.cssom {
      * CSSStyleSheet.
      * Note that this excludes any CSSImportRules, CSSMediaRules, etc..
      * @param {(CSSStyleSheet|StyleSheetList)=} opt_styleSheet The CSSStyleSheet.
-     * @return {Array.<CSSStyleRule>} A list of CSSStyleRules.
+     * @return {Array<CSSStyleRule>} A list of CSSStyleRules.
      */
     function getAllCssStyleRules(opt_styleSheet?: CSSStyleSheet): Array<CSSStyleRule>;
 
@@ -52,7 +52,7 @@ declare module goog.cssom {
      * @param {(CSSStyleSheet|StyleSheetList)=} opt_styleSheet A CSSStyleSheet.
      * @param {boolean=} opt_includeDisabled If true, includes disabled stylesheets,
      *    defaults to false.
-     * @return {!Array.<CSSStyleSheet>} A list of CSSStyleSheet objects.
+     * @return {!Array<CSSStyleSheet>} A list of CSSStyleSheet objects.
      */
     function getAllCssStyleSheets(opt_styleSheet?: CSSStyleSheet, opt_includeDisabled?: boolean): Array<CSSStyleSheet>;
 

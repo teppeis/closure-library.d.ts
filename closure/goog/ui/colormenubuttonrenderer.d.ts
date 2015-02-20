@@ -38,7 +38,7 @@ declare module goog.ui {
          * @param {goog.ui.ControlContent} content Text caption or DOM structure.
          * @param {string} cssClass Dummy parameter for compatibility to goog.ui.MenuButtonRenderer.
          * @param {goog.dom.DomHelper} dom DOM helper, used for document interaction.
-         * @return {Element} Caption element.
+         * @return {!Element} Caption element.
          */
         static wrapCaption(content: goog.ui.ControlContent, cssClass: string, dom: goog.dom.DomHelper): Element;
         

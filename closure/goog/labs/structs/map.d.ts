@@ -67,18 +67,18 @@ declare module goog.labs.structs {
         containsValue(value: any): boolean;
         
         /**
-         * @return {!Array.<string>} An array of all the keys contained in this map.
+         * @return {!Array<string>} An array of all the keys contained in this map.
          */
         getKeys(): Array<string>;
         
         /**
-         * @return {!Array.<*>} An array of all the values contained in this map.
+         * @return {!Array<*>} An array of all the values contained in this map.
          *     There may be duplicates.
          */
         getValues(): Array<any>;
         
         /**
-         * @return {!Array.<Array>} An array of entries. Each entry is of the
+         * @return {!Array<Array<?>>} An array of entries. Each entry is of the
          *     form [key, value]. Do not rely on consistent ordering of entries.
          */
         getEntries(): Array<Array<any>>;

@@ -29,7 +29,7 @@ declare module goog.ui {
          *    </div>
          * Overrides {@link goog.ui.ButtonRenderer#createDom}.
          * @param {goog.ui.Control} control goog.ui.Button to render.
-         * @return {Element} Root element for the button.
+         * @return {!Element} Root element for the button.
          * @override
          */
         createDom(control: goog.ui.Control): Element;

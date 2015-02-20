@@ -12,8 +12,9 @@ declare module goog.ui {
      *     should handle the TOGGLE event in its own way. If a function is passed,
      *     then if will be called to create the content element the first time the
      *     zippy is expanded.
-     * @param {boolean=} opt_expanded Initial expanded/visibility state. Defaults to
-     *     false.
+     * @param {boolean=} opt_expanded Initial expanded/visibility state. If
+     *     undefined, attempts to infer the state from the DOM. Setting visibility
+     *     using one of the standard Soy templates guarantees correct inference.
      * @param {Element|string=} opt_expandedHeader Element to use as the header when
      *     the zippy is expanded.
      * @param {goog.dom.DomHelper=} opt_domHelper An optional DOM helper.
@@ -25,9 +26,9 @@ declare module goog.ui {
         /**
          * Constants for event names
          *
-         * @type {Object}
+         * @const
          */
-        static Events: Object;
+        static Events: any;
         
         /**
          * @return {goog.a11y.aria.Role} The ARIA role to be applied to Zippy element.

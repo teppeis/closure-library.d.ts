@@ -63,7 +63,7 @@ declare module goog.ui {
         /**
          * Handles key down for overlay.
          * @param {goog.events.BrowserEvent} e The browser event.
-         * @return {boolean|undefined} The handled value.
+         * @return {boolean} The handled value.
          */
         handleOverlayKeyEvent(e: goog.events.BrowserEvent): boolean;
         

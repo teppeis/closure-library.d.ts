@@ -17,6 +17,18 @@ declare module goog.ui {
          * never been updated.
          */
         static INIT_POSITION: any;
+        
+        /**
+         * @desc Message shown to users to inform them that they can't drag and drop
+         *     local files.
+         */
+        static MSG_DRAG_DROP_LOCAL_FILE_ERROR: any;
+        
+        /**
+         * @desc Message shown to users trying to drag and drop protected images from
+         *     Flickr, etc.
+         */
+        static MSG_DRAG_DROP_PROTECTED_FILE_ERROR: any;
     }
 }
 

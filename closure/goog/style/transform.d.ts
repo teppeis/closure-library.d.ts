@@ -25,10 +25,31 @@ declare module goog.style.transform {
 
     /**
      * Translates an element's position using the CSS3 transform property.
+     * NOTE: This replaces all other transforms already defined on the element.
      * @param {Element} element The element to translate.
      * @param {number} x The horizontal translation.
      * @param {number} y The vertical translation.
      * @return {boolean} Whether the CSS translation was set.
      */
     function setTranslation(element: Element, x: number, y: number): boolean;
+
+    /**
+     * Returns the scale of the x, y and z dimensions of CSS transforms applied to
+     * the element.
+     *
+     * @param {!Element} element The element to get the scale of.
+     * @return {!goog.math.Coordinate3} The scale of the element.
+     */
+    function getScale(element: Element): goog.math.Coordinate3;
+
+    /**
+     * Scales an element using the CSS3 transform property.
+     * NOTE: This replaces all other transforms already defined on the element.
+     * @param {!Element} element The element to scale.
+     * @param {number} x The horizontal scale.
+     * @param {number} y The vertical scale.
+     * @param {number} z The depth scale.
+     * @return {boolean} Whether the CSS scale was set.
+     */
+    function setScale(element: Element, x: number, y: number, z: number): boolean;
 }

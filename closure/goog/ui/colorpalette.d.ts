@@ -7,7 +7,7 @@ declare module goog.ui {
      * component fires an ACTION event.  Event listeners may retrieve the selected
      * color using the {@link #getSelectedColor} method.
      *
-     * @param {Array.<string>=} opt_colors Array of colors in any valid CSS color
+     * @param {Array<string>=} opt_colors Array of colors in any valid CSS color
      *     format.
      * @param {goog.ui.PaletteRenderer=} opt_renderer Renderer used to render or
      *     decorate the palette; defaults to {@link goog.ui.PaletteRenderer}.
@@ -21,14 +21,14 @@ declare module goog.ui {
         
         /**
          * Returns the array of colors represented in the color palette.
-         * @return {Array.<string>} Array of colors.
+         * @return {Array<string>} Array of colors.
          */
         getColors(): Array<string>;
         
         /**
          * Sets the colors that are contained in the palette.
-         * @param {Array.<string>} colors Array of colors in any valid CSS color format.
-         * @param {Array.<string>=} opt_labels The array of labels to be used as
+         * @param {Array<string>} colors Array of colors in any valid CSS color format.
+         * @param {Array<string>=} opt_labels The array of labels to be used as
          *        tooltips. When not provided, the color value will be used.
          */
         setColors(colors: Array<string>, opt_labels?: Array<string>): void;
@@ -47,7 +47,7 @@ declare module goog.ui {
         setSelectedColor(color: string): void;
         
         /**
-         * @return {!Array.<!Node>} An array of DOM nodes for each color.
+         * @return {!Array<!Node>} An array of DOM nodes for each color.
          * @protected
          */
         createColorNodes(): Array<Node>;

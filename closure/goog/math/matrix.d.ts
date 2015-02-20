@@ -19,11 +19,12 @@ declare module goog.math {
      *   [  .      .      .            .          .   ]
      *   [ am,0   am,1   am,2   ...   am,j  ...  am,n ]
      *
-     * @param {goog.math.Matrix|Array.<Array.<number>>|goog.math.Size|number} m
+     * @param {!goog.math.Matrix|!Array<!Array<number>>|!goog.math.Size|number} m
      *     A matrix to copy, a 2D-array to take as a template, a size object for
      *     dimensions, or the number of rows.
      * @param {number=} opt_n Number of columns of the matrix (only applicable if
      *     the first argument is also numeric).
+     * @struct
      * @constructor
      * @final
      */
@@ -45,35 +46,38 @@ declare module goog.math {
         /**
          * Calls a function for each cell in a matrix.
          * @param {goog.math.Matrix} matrix The matrix to iterate over.
-         * @param {Function} fn The function to call for every element. This function
+         * @param {function(this:T, number, number, number, !goog.math.Matrix)} fn
+         *     The function to call for every element. This function
          *     takes 4 arguments (value, i, j, and the matrix)
          *     and the return value is irrelevant.
-         * @param {Object=} opt_obj The object to be used as the value of 'this'
+         * @param {T=} opt_obj The object to be used as the value of 'this'
          *     within {@code fn}.
+         * @template T
          */
-        static forEach(matrix: goog.math.Matrix, fn: Function, opt_obj?: Object): void;
+        static forEach<T>(matrix: goog.math.Matrix, fn: (arg0: number, arg1: number, arg2: number, arg3: goog.math.Matrix) => any, opt_obj?: T): void;
         
         /**
          * Tests whether an array is a valid matrix.  A valid array is an array of
          * arrays where all arrays are of the same length and all elements are numbers.
-         * @param {Array} arr An array to test.
+         * @param {!Array<!Array<number>>} arr An array to test.
          * @return {boolean} Whether the array is a valid matrix.
          */
-        static isValidArray(arr: Array<any>): boolean;
+        static isValidArray(arr: Array<Array<number>>): boolean;
         
         /**
          * Calls a function for every cell in a matrix and inserts the result into a
          * new matrix of equal dimensions.
-         * @param {goog.math.Matrix} matrix The matrix to iterate over.
-         * @param {Function} fn The function to call for every element. This function
-         *                     takes 4 arguments (value, i, j and the matrix)
-         *                     and should return something. The result will be inserted
-         *                     into a new matrix.
-         * @param {Object=} opt_obj The object to be used as the value of 'this'
+         * @param {!goog.math.Matrix} matrix The matrix to iterate over.
+         * @param {function(this:T, number, number, number, !goog.math.Matrix): number}
+         *     fn The function to call for every element. This function
+         *     takes 4 arguments (value, i, j and the matrix)
+         *     and should return a number, which will be inserted into a new matrix.
+         * @param {T=} opt_obj The object to be used as the value of 'this'
          *     within {@code fn}.
          * @return {!goog.math.Matrix} A new matrix with the results from {@code fn}.
+         * @template T
          */
-        static map(matrix: goog.math.Matrix, fn: Function, opt_obj?: Object): goog.math.Matrix;
+        static map<T>(matrix: goog.math.Matrix, fn: (arg0: number, arg1: number, arg2: number, arg3: goog.math.Matrix) => number, opt_obj?: T): goog.math.Matrix;
         
         /**
          * Returns a new matrix that is the sum of this and the provided matrix.
@@ -187,7 +191,7 @@ declare module goog.math {
         subtract(m: goog.math.Matrix): goog.math.Matrix;
         
         /**
-         * @return {!Array.<!Array.<number>>} A 2D internal array representing this
+         * @return {!Array<!Array<number>>} A 2D internal array representing this
          *     matrix.  Not a clone.
          */
         toArray(): Array<Array<number>>;

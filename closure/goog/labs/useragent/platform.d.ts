@@ -31,6 +31,8 @@ declare module goog.labs.userAgent.platform {
     function isMacintosh(): boolean;
 
     /**
+     * Note: ChromeOS is not considered to be Linux as it does not report itself
+     * as Linux in the user agent string.
      * @return {boolean} Whether the platform is Linux.
      */
     function isLinux(): boolean;

@@ -12,10 +12,10 @@ declare module goog.proto {
         /**
          * Serializes an array to a protocol buffer string. This overrides the JSON
          * method to output empty slots when the value is null or undefined.
-         * @param {Array} arr The array to serialize.
-         * @param {Array} sb Array used as a string builder.
+         * @param {Array<*>} arr The array to serialize.
+         * @param {Array<string>} sb Array used as a string builder.
          * @override
          */
-        serializeArray(arr: Array<any>, sb: Array<any>): void;
+        serializeArray(arr: Array<any>, sb: Array<string>): void;
     }
 }

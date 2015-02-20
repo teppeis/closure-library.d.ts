@@ -1,8 +1,9 @@
 declare module goog.net {
 
     /**
-     * HTTP Status Codes defined in RFC 2616.
+     * HTTP Status Codes defined in RFC 2616 and RFC 6585.
      * @see http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
+     * @see http://tools.ietf.org/html/rfc6585
      * @enum {number}
      */
     interface HttpStatus {
@@ -40,12 +41,16 @@ declare module goog.net {
         UNSUPPORTED_MEDIA_TYPE: number;
         REQUEST_RANGE_NOT_SATISFIABLE: number;
         EXPECTATION_FAILED: number;
+        PRECONDITION_REQUIRED: number;
+        TOO_MANY_REQUESTS: number;
+        REQUEST_HEADER_FIELDS_TOO_LARGE: number;
         INTERNAL_SERVER_ERROR: number;
         NOT_IMPLEMENTED: number;
         BAD_GATEWAY: number;
         SERVICE_UNAVAILABLE: number;
         GATEWAY_TIMEOUT: number;
         HTTP_VERSION_NOT_SUPPORTED: number;
+        NETWORK_AUTHENTICATION_REQUIRED: number;
         QUIRK_IE_NO_CONTENT: number;
     }
 }

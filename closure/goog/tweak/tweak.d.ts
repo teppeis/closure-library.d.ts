@@ -6,7 +6,7 @@ declare module goog.tweak {
      *     implemented.
      * @typedef {{
      *     label:(string|undefined),
-     *     validValues:(!Array.<string>|!Array.<number>|undefined),
+     *     validValues:(!Array<string>|!Array<number>|undefined),
      *     paramName:(string|undefined),
      *     restartRequired:(boolean|undefined),
      *     callback:(Function|undefined),

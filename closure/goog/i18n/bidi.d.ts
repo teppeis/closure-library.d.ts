@@ -20,7 +20,6 @@ declare module goog.i18n.bidi {
         LTR: number;
         RTL: number;
         NEUTRAL: number;
-        UNKNOWN: number;
     }
 
     /**

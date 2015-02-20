@@ -78,7 +78,7 @@ declare module goog.module.ModuleLoader {
 
     /**
      * @param {goog.module.ModuleLoader.EventType} type The type.
-     * @param {Array.<string>} moduleIds The ids of the modules being evaluated.
+     * @param {Array<string>} moduleIds The ids of the modules being evaluated.
      * @constructor
      * @extends {goog.events.Event}
      * @final

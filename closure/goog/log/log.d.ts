@@ -24,6 +24,9 @@ declare module goog.log {
         constructor();
     }
 
+    /** @const */
+    var ROOT_LOGGER_NAME: any;
+
     /**
      * Finds or creates a logger for a named subsystem. If a logger has already been
      * created with the given name it is returned. Otherwise a new logger is

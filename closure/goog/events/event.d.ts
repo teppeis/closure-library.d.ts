@@ -25,20 +25,6 @@ declare module goog.events {
         constructor(type: string, opt_target?: Object);
         
         /**
-         * For backwards compatibility (goog.events.Event used to inherit
-         * goog.Disposable).
-         * @deprecated Events don't need to be disposed.
-         */
-        disposeInternal(): void;
-        
-        /**
-         * For backwards compatibility (goog.events.Event used to inherit
-         * goog.Disposable).
-         * @deprecated Events don't need to be disposed.
-         */
-        dispose(): void;
-        
-        /**
          * Stops event propagation.
          */
         stopPropagation(): void;

@@ -106,11 +106,6 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_en_IN: any;
 
     /**
-     * List formatting symbols for locale en_ISO.
-     */
-    var ListFormatSymbols_en_ISO: any;
-
-    /**
      * List formatting symbols for locale en_SG.
      */
     var ListFormatSymbols_en_SG: any;
@@ -174,6 +169,11 @@ declare module goog.labs.i18n {
      * List formatting symbols for locale fr_CA.
      */
     var ListFormatSymbols_fr_CA: any;
+
+    /**
+     * List formatting symbols for locale ga.
+     */
+    var ListFormatSymbols_ga: any;
 
     /**
      * List formatting symbols for locale gl.

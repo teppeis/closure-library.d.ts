@@ -3,6 +3,12 @@ declare module goog.ui.ac {
     /**
      * An array matcher that requests rich matches via ajax and converts them into
      * rich rows.
+     *
+     * This class makes use of goog.html.legacyconversions and provides no
+     * HTML-type-safe alternative. As such, it is not compatible with
+     * code that sets goog.html.legacyconversions.ALLOW_LEGACY_CONVERSIONS to
+     * false.
+     *
      * @param {string} url The Uri which generates the auto complete matches.  The
      *     search term is passed to the server as the 'token' query param.
      * @param {boolean=} opt_noSimilar If true, request that the server does not do

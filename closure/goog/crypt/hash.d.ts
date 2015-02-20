@@ -26,13 +26,13 @@ declare module goog.crypt {
          * size (often 64 bytes). Please see the implementation and performance tests
          * of your favourite hash.
          *
-         * @param {Array.<number>|Uint8Array|string} bytes Data used for the update.
+         * @param {Array<number>|Uint8Array|string} bytes Data used for the update.
          * @param {number=} opt_length Number of bytes to use.
          */
         update(bytes: Array<number>, opt_length?: number): void;
         
         /**
-         * @return {!Array.<number>} The finalized hash computed
+         * @return {!Array<number>} The finalized hash computed
          *     from the internal accumulator.
          */
         digest(): Array<number>;

@@ -3,7 +3,7 @@ declare module goog.ui.ac {
     /**
      * Factory function for building a basic autocomplete widget that autocompletes
      * an inputbox or text area from a data array.
-     * @param {Array} data Data array.
+     * @param {Array<?>} data Data array.
      * @param {Element} input Input element or text area.
      * @param {boolean=} opt_multi Whether to allow multiple entries separated with
      *     semi-colons or commas.

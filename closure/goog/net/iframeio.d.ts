@@ -204,21 +204,6 @@ declare module goog.net {
         getErrorChecker(): Function;
         
         /**
-         * Returns the number of milliseconds after which an incomplete request will be
-         * aborted, or 0 if no timeout is set.
-         * @return {number} Timeout interval in milliseconds.
-         */
-        getTimeoutInterval(): number;
-        
-        /**
-         * Sets the number of milliseconds after which an incomplete request will be
-         * aborted and a {@link goog.net.EventType.TIMEOUT} event raised; 0 means no
-         * timeout is set.
-         * @param {number} ms Timeout interval in milliseconds; 0 means none.
-         */
-        setTimeoutInterval(ms: number): void;
-        
-        /**
          * @return {boolean} Whether the server response is being ignored.
          */
         isIgnoringResponse(): boolean;

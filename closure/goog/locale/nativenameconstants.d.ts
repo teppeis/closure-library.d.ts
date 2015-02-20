@@ -2,7 +2,7 @@ declare module goog.locale {
 
     /**
      * Native country and language names
-     * @type {Object}
+     * @const {!Object<string, !Object<string, string>>}
      */
-    var nativeNameConstants: Object;
+    var nativeNameConstants: any;
 }

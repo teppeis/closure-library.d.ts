@@ -4,7 +4,7 @@ declare module goog.module {
      * A ModuleInfo object is used by the ModuleManager to hold information about a
      * module of js code that may or may not yet be loaded into the environment.
      *
-     * @param {Array.<string>} deps Ids of the modules that must be loaded before
+     * @param {Array<string>} deps Ids of the modules that must be loaded before
      *     this one. The ids must be in dependency order (i.e. if the ith module
      *     depends on the jth module, then i > j).
      * @param {string} id The module's ID.
@@ -17,7 +17,7 @@ declare module goog.module {
         
         /**
          * Gets the dependencies of this module.
-         * @return {Array.<string>} The ids of the modules that this module depends on.
+         * @return {Array<string>} The ids of the modules that this module depends on.
          */
         getDependencies(): Array<string>;
         
@@ -29,13 +29,13 @@ declare module goog.module {
         
         /**
          * Sets the uris of this module.
-         * @param {Array.<string>} uris Uris for this module's code.
+         * @param {Array<string>} uris Uris for this module's code.
          */
         setUris(uris: Array<string>): void;
         
         /**
          * Gets the uris of this module.
-         * @return {Array.<string>?} Uris for this module's code.
+         * @return {Array<string>?} Uris for this module's code.
          */
         getUris(): Array<string>;
         

@@ -9,7 +9,6 @@ declare module goog.ui {
      * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper.
      * @constructor
      * @extends {goog.ui.AbstractSpellChecker}
-     * @final
      */
     class RichTextSpellChecker extends goog.ui.AbstractSpellChecker {
         constructor(handler: goog.spell.SpellCheck, opt_domHelper?: goog.dom.DomHelper);
@@ -21,10 +20,10 @@ declare module goog.ui {
         wordClassName: string;
         
         /**
-         * Tag name porition of the marker for the text that does not need to be checked
+         * Tag name portion of the marker for the text that does not need to be checked
          * for spelling.
          *
-         * @type {Array.<string|undefined>}
+         * @type {Array<string|undefined>}
          */
         excludeTags: Array<string>;
         
@@ -89,5 +88,23 @@ declare module goog.ui {
          * @override
          */
         getElementProperties(status: goog.spell.SpellCheck.WordStatus): Object;
+        
+        /**
+         * Returns whether the editor node is an iframe.
+         *
+         * @return {boolean} true the editor node is an iframe, otherwise false.
+         * @protected
+         */
+        isEditorIframe(): boolean;
+        
+        /**
+         * Handles keyboard events inside the editor to allow keyboard navigation
+         * between misspelled words and activation of the suggestion menu.
+         *
+         * @param {goog.events.BrowserEvent} e the key event.
+         * @return {boolean} The handled value.
+         * @protected
+         */
+        handleRootNodeKeyEvent(e: goog.events.BrowserEvent): boolean;
     }
 }

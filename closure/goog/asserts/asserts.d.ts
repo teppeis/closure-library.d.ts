@@ -3,7 +3,7 @@ declare module goog.asserts {
     /**
      * Error object for failed assertions.
      * @param {string} messagePattern The pattern that was used to form message.
-     * @param {!Array.<*>} messageArgs The items to substitute into the pattern.
+     * @param {!Array<*>} messageArgs The items to substitute into the pattern.
      * @constructor
      * @extends {goog.debug.Error}
      * @final
@@ -11,6 +11,20 @@ declare module goog.asserts {
     class AssertionError extends goog.debug.Error {
         constructor(messagePattern: string, messageArgs: Array<any>);
     }
+
+    /**
+     * The default error handler.
+     * @param {!goog.asserts.AssertionError} e The exception to be handled.
+     */
+    function DEFAULT_ERROR_HANDLER(e: goog.asserts.AssertionError): void;
+
+    /**
+     * Sets a custom error handler that can be used to customize the behavior of
+     * assertion failures, for example by turning all assertion failures into log
+     * messages.
+     * @param {function(!goog.asserts.AssertionError)} errorHandler
+     */
+    function setErrorHandler(errorHandler: (arg0: goog.asserts.AssertionError) => any): void;
 
     /**
      * Checks if the condition evaluates to true if goog.asserts.ENABLE_ASSERTS is
@@ -90,7 +104,7 @@ declare module goog.asserts {
      * @param {*} value The value to check.
      * @param {string=} opt_message Error message in case of failure.
      * @param {...*} var_args The items to substitute into the failure message.
-     * @return {!Array} The value, guaranteed to be a non-null array.
+     * @return {!Array<?>} The value, guaranteed to be a non-null array.
      * @throws {goog.asserts.AssertionError} When the value is not an array.
      */
     function assertArray(value: any, opt_message?: string, ...var_args: any[]): Array<any>;
@@ -113,7 +127,7 @@ declare module goog.asserts {
      * @param {...*} var_args The items to substitute into the failure message.
      * @return {!Element} The value, likely to be a DOM Element when asserts are
      *     enabled.
-     * @throws {goog.asserts.AssertionError} When the value is not a boolean.
+     * @throws {goog.asserts.AssertionError} When the value is not an Element.
      */
     function assertElement(value: any, opt_message?: string, ...var_args: any[]): Element;
 
@@ -129,7 +143,7 @@ declare module goog.asserts {
      * @param {...*} var_args The items to substitute into the failure message.
      * @throws {goog.asserts.AssertionError} When the value is not an instance of
      *     type.
-     * @return {!T}
+     * @return {T}
      * @template T
      */
     function assertInstanceof<T>(value: any, type: (...arg0: any[]) => any, opt_message?: string, ...var_args: any[]): T;

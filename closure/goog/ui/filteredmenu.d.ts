@@ -50,7 +50,7 @@ declare module goog.ui {
         
         /**
          * Gets a list of items entered in the search box.
-         * @return {!Array.<string>} The entered items.
+         * @return {!Array<string>} The entered items.
          */
         getEnteredItems(): Array<string>;
         

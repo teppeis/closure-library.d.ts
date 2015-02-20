@@ -16,14 +16,6 @@ declare module goog.fs {
         constructor(fileSaver: FileSaver);
         
         /**
-         * A wrapper for the progress events emitted by the FileSaver.
-         *
-         * @deprecated Use {goog.fs.ProgressEvent}.
-         * @final
-         */
-        static ProgressEvent: any;
-        
-        /**
          * Abort the writing of the file.
          */
         abort(): void;

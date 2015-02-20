@@ -5,7 +5,7 @@ declare module goog.debug {
      * reporter see the {@see #install} method below.
      *
      * @param {string} handlerUrl The URL to which all errors will be reported.
-     * @param {function(!Error, !Object.<string, string>)=}
+     * @param {function(!Error, !Object<string, string>)=}
      *     opt_contextProvider When a report is to be sent to the server,
      *     this method will be called, and given an opportunity to modify the
      *     context object before submission to the server.
@@ -37,7 +37,7 @@ declare module goog.debug {
          *
          * @param {string} loggingUrl The URL to which the errors caught will be
          *     reported.
-         * @param {function(!Error, !Object.<string, string>)=}
+         * @param {function(!Error, !Object<string, string>)=}
          *     opt_contextProvider When a report is to be sent to the server,
          *     this method will be called, and given an opportunity to modify the
          *     context object before submission to the server.
@@ -82,7 +82,7 @@ declare module goog.debug {
          * notifies any listeners.
          *
          * @param {Object} e The exception.
-         * @param {!Object.<string, string>=} opt_context Context values to optionally
+         * @param {!Object<string, string>=} opt_context Context values to optionally
          *     include in the error report.
          */
         handleException(e: Object, opt_context?: Object): void;
@@ -95,7 +95,7 @@ declare module goog.debug {
          * @param {string} fileName URL of the JavaScript file with the error.
          * @param {number} line Line number of the error.
          * @param {string=} opt_trace Call stack trace of the error.
-         * @param {!Object.<string, string>=} opt_context Context information to include
+         * @param {!Object<string, string>=} opt_context Context information to include
          *     in the request.
          */
         sendErrorReport(message: string, fileName: string, line: number, opt_trace?: string, opt_context?: Object): void;
@@ -113,7 +113,7 @@ declare module goog.debug {
         setTruncationLimit(limit: number): void;
         
         /**
-         * @param {!Object.<string,string>} urlArgs Set of key-value pairs to append
+         * @param {!Object<string,string>} urlArgs Set of key-value pairs to append
          *     to handlerUrl_ before sending XHR.
          */
         setAdditionalArguments(urlArgs: Object): void;
@@ -125,7 +125,7 @@ declare module goog.debug.ErrorReporter {
     /**
      * Event broadcast when an exception is logged.
      * @param {Error} error The exception that was was reported.
-     * @param {!Object.<string, string>} context The context values sent to the
+     * @param {!Object<string, string>} context The context values sent to the
      *     server alongside this error.
      * @constructor
      * @extends {goog.events.Event}

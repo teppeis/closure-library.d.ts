@@ -45,7 +45,7 @@ declare module goog.ui.editor {
         getContainerElement(): Element;
         
         /**
-         * @return {goog.events.EventHandler.<T>} The event handler.
+         * @return {goog.events.EventHandler<T>} The event handler.
          * @protected
          * @this T
          * @template T

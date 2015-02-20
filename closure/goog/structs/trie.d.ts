@@ -4,7 +4,7 @@ declare module goog.structs {
      * Class for a Trie datastructure.  Trie data structures are made out of trees
      * of Trie classes.
      *
-     * @param {goog.structs.Trie.<VALUE>|Object.<string, VALUE>=} opt_trie Optional
+     * @param {goog.structs.Trie<VALUE>|Object<string, VALUE>=} opt_trie Optional
      *     goog.structs.Trie or Object to initialize trie with.
      * @constructor
      * @template VALUE
@@ -31,7 +31,7 @@ declare module goog.structs {
         /**
          * Adds multiple key/value pairs from another goog.structs.Trie or Object.
          * O(N) where N is the number of nodes in the trie.
-         * @param {!Object.<string, VALUE>|!goog.structs.Trie.<VALUE>} trie Object
+         * @param {!Object<string, VALUE>|!goog.structs.Trie<VALUE>} trie Object
          *     containing the data to add.
          */
         setAll(trie: Object): void;
@@ -53,7 +53,7 @@ declare module goog.structs {
          *     prefixes of the key are retrieved.
          * @param {?number=} opt_keyStartIndex Optional position in key to start lookup
          *     from. Defaults to 0 if not specified.
-         * @return {!Object.<string, VALUE>} Map of end index of matching prefixes and
+         * @return {!Object<string, VALUE>} Map of end index of matching prefixes and
          *     corresponding values. Empty if no match found.
          */
         getKeyAndPrefixes(key: string, opt_keyStartIndex?: number): Object;
@@ -61,7 +61,7 @@ declare module goog.structs {
         /**
          * Gets the values of the trie.  Not returned in any reliable order.  O(N) where
          * N is the number of nodes in the trie.  Calls getValuesInternal_.
-         * @return {!Array.<VALUE>} The values in the trie.
+         * @return {!Array<VALUE>} The values in the trie.
          */
         getValues(): Array<VALUE>;
         
@@ -69,7 +69,7 @@ declare module goog.structs {
          * Gets the keys of the trie.  Not returned in any reliable order.  O(N) where
          * N is the number of nodes in the trie (or prefix subtree).
          * @param {string=} opt_prefix Find only keys with this optional prefix.
-         * @return {!Array.<string>} The keys in the trie.
+         * @return {!Array<string>} The keys in the trie.
          */
         getKeys(opt_prefix?: string): Array<string>;
         
@@ -92,7 +92,7 @@ declare module goog.structs {
         /**
          * Checks to see if a certain value is in the trie.  Worst case is O(N) where
          * N is the number of nodes in the trie.
-         * @param {!VALUE} value A value that may be in the trie.
+         * @param {VALUE} value A value that may be in the trie.
          * @return {boolean} Whether the trie contains the value.
          */
         containsValue(value: VALUE): boolean;
@@ -106,14 +106,14 @@ declare module goog.structs {
          * Removes a key from the trie or throws an exception if the key is not in the
          * trie.  O(L), where L is the length of the key.
          * @param {string} key A key that should be removed from the trie.
-         * @return {!VALUE} The value whose key was removed.
+         * @return {VALUE} The value whose key was removed.
          */
         remove(key: string): VALUE;
         
         /**
          * Clones a trie and returns a new trie.  O(N), where N is the number of nodes
          * in the trie.
-         * @return {!goog.structs.Trie.<VALUE>} A new goog.structs.Trie with the same
+         * @return {!goog.structs.Trie<VALUE>} A new goog.structs.Trie with the same
          *     key value pairs.
          */
         clone(): goog.structs.Trie<VALUE>;

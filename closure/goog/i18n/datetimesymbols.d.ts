@@ -176,6 +176,11 @@ declare module goog.i18n {
     var DateTimeSymbols_fr_CA: any;
 
     /**
+     * Date/time formatting symbols for locale ga.
+     */
+    var DateTimeSymbols_ga: any;
+
+    /**
      * Date/time formatting symbols for locale gl.
      */
     var DateTimeSymbols_gl: any;

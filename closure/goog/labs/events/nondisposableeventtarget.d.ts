@@ -29,7 +29,7 @@ declare module goog.labs.events {
      *   source.dispatchEvent('foo'); // will call handleEvent
      * </pre>
      *
-     * TODO(user|johnlenz): Consider a more modern, less viral
+     * TODO(chrishenry|johnlenz): Consider a more modern, less viral
      * (not based on inheritance) replacement of goog.Disposable, which will allow
      * goog.events.EventTarget to not be disposable.
      *

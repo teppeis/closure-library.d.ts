@@ -201,10 +201,20 @@ declare module goog.dom {
          * Create a table.
          * @param {number} rows The number of rows in the table.  Must be >= 1.
          * @param {number} columns The number of columns in the table.  Must be >= 1.
-         * @param {boolean=} opt_fillWithNbsp If true, fills table entries with nsbps.
-         * @return {!Element} The created table.
+         * @param {boolean=} opt_fillWithNbsp If true, fills table entries with
+         *     {@code goog.string.Unicode.NBSP} characters.
+         * @return {!HTMLElement} The created table.
          */
-        createTable(rows: number, columns: number, opt_fillWithNbsp?: boolean): Element;
+        createTable(rows: number, columns: number, opt_fillWithNbsp?: boolean): HTMLElement;
+        
+        /**
+         * Converts an HTML into a node or a document fragment. A single Node is used if
+         * {@code html} only generates a single node. If {@code html} generates multiple
+         * nodes then these are put inside a {@code DocumentFragment}.
+         * @param {!goog.html.SafeHtml} html The HTML markup to convert.
+         * @return {!Node} The resulting node.
+         */
+        safeHtmlToNode(html: goog.html.SafeHtml): Node;
         
         /**
          * Converts an HTML string into a node or a document fragment.  A single Node
@@ -495,7 +505,7 @@ declare module goog.dom {
          * depth first search.
          * @param {Node} root The root of the tree to search.
          * @param {function(Node) : boolean} p The filter function.
-         * @return {Array.<Node>} The found nodes or an empty array if none are found.
+         * @return {Array<Node>} The found nodes or an empty array if none are found.
          */
         findNodes(root: Node, p: (arg0: Node) => boolean): Array<Node>;
         
@@ -503,7 +513,7 @@ declare module goog.dom {
          * Returns true if the element has a tab index that allows it to receive
          * keyboard focus (tabIndex >= 0), false otherwise.  Note that some elements
          * natively support keyboard focus, even if they have no tab index.
-         * @param {Element} element Element to check.
+         * @param {!Element} element Element to check.
          * @return {boolean} Whether the element has a tab index that allows keyboard
          *     focus.
          */
@@ -524,7 +534,7 @@ declare module goog.dom {
          * Returns true if the element can be focused, i.e. it has a tab index that
          * allows it to receive keyboard focus (tabIndex >= 0), or it is an element
          * that natively supports keyboard focus.
-         * @param {Element} element Element to check.
+         * @param {!Element} element Element to check.
          * @return {boolean} Whether the element allows keyboard focus.
          */
         isFocusable(element: Element): boolean;
@@ -595,10 +605,12 @@ declare module goog.dom {
          *     null/undefined to match only based on class name).
          * @param {?string=} opt_class The class name to match (or null/undefined to
          *     match only based on tag name).
+         * @param {number=} opt_maxSearchSteps Maximum number of levels to search up the
+         *     dom.
          * @return {Element} The first ancestor that matches the passed criteria, or
          *     null if no match is found.
          */
-        getAncestorByTagNameAndClass(element: Node, opt_tag?: goog.dom.TagName, opt_class?: string): Element;
+        getAncestorByTagNameAndClass(element: Node, opt_tag?: goog.dom.TagName, opt_class?: string, opt_maxSearchSteps?: number): Element;
         
         /**
          * Walks up the DOM hierarchy returning the first ancestor that has the passed
@@ -606,10 +618,12 @@ declare module goog.dom {
          * element itself is returned.
          * @param {Node} element The DOM node to start with.
          * @param {string} class The class name to match.
+         * @param {number=} opt_maxSearchSteps Maximum number of levels to search up the
+         *     dom.
          * @return {Element} The first ancestor that matches the passed criteria, or
          *     null if none match.
          */
-        getAncestorByClass(element: Node, class_: string): Element;
+        getAncestorByClass(element: Node, class_: string, opt_maxSearchSteps?: number): Element;
         
         /**
          * Walks up the DOM hierarchy returning the first ancestor that passes the
@@ -861,7 +875,7 @@ declare module goog.dom {
      * would return a div with two child paragraphs
      *
      * @param {string} tagName Tag to create.
-     * @param {(Object|Array.<string>|string)=} opt_attributes If object, then a map
+     * @param {(Object|Array<string>|string)=} opt_attributes If object, then a map
      *     of name-value pairs for attributes. If a string, then this is the
      *     className of the new element. If an array, the elements will be joined
      *     together as the className of the new element.
@@ -904,10 +918,18 @@ declare module goog.dom {
      * Create a table.
      * @param {number} rows The number of rows in the table.  Must be >= 1.
      * @param {number} columns The number of columns in the table.  Must be >= 1.
-     * @param {boolean=} opt_fillWithNbsp If true, fills table entries with nsbps.
+     * @param {boolean=} opt_fillWithNbsp If true, fills table entries with
+     *     {@code goog.string.Unicode.NBSP} characters.
      * @return {!Element} The created table.
      */
     function createTable(rows: number, columns: number, opt_fillWithNbsp?: boolean): Element;
+
+    /**
+     * Converts HTML markup into a node.
+     * @param {!goog.html.SafeHtml} html The HTML markup to convert.
+     * @return {!Node} The resulting node.
+     */
+    function safeHtmlToNode(html: goog.html.SafeHtml): Node;
 
     /**
      * Converts an HTML string into a document fragment. The string must be
@@ -1206,7 +1228,7 @@ declare module goog.dom {
     
      * @param {Node} root The root of the tree to search.
      * @param {function(Node) : boolean} p The filter function.
-     * @return {!Array.<!Node>} The found nodes or an empty array if none are found.
+     * @return {!Array<!Node>} The found nodes or an empty array if none are found.
      */
     function findNodes(root: Node, p: (arg0: Node) => boolean): Array<Node>;
 
@@ -1214,7 +1236,7 @@ declare module goog.dom {
      * Returns true if the element has a tab index that allows it to receive
      * keyboard focus (tabIndex >= 0), false otherwise.  Note that some elements
      * natively support keyboard focus, even if they have no tab index.
-     * @param {Element} element Element to check.
+     * @param {!Element} element Element to check.
      * @return {boolean} Whether the element has a tab index that allows keyboard
      *     focus.
      * @see http://fluidproject.org/blog/2008/01/09/getting-setting-and-removing-tabindex-values-with-javascript/
@@ -1236,7 +1258,7 @@ declare module goog.dom {
      * Returns true if the element can be focused, i.e. it has a tab index that
      * allows it to receive keyboard focus (tabIndex >= 0), or it is an element
      * that natively supports keyboard focus.
-     * @param {Element} element Element to check.
+     * @param {!Element} element Element to check.
      * @return {boolean} Whether the element allows keyboard focus.
      */
     function isFocusable(element: Element): boolean;
@@ -1318,10 +1340,12 @@ declare module goog.dom {
      *     null/undefined to match only based on class name).
      * @param {?string=} opt_class The class name to match (or null/undefined to
      *     match only based on tag name).
+     * @param {number=} opt_maxSearchSteps Maximum number of levels to search up the
+     *     dom.
      * @return {Element} The first ancestor that matches the passed criteria, or
      *     null if no match is found.
      */
-    function getAncestorByTagNameAndClass(element: Node, opt_tag?: goog.dom.TagName, opt_class?: string): Element;
+    function getAncestorByTagNameAndClass(element: Node, opt_tag?: goog.dom.TagName, opt_class?: string, opt_maxSearchSteps?: number): Element;
 
     /**
      * Walks up the DOM hierarchy returning the first ancestor that has the passed
@@ -1329,10 +1353,12 @@ declare module goog.dom {
      * element itself is returned.
      * @param {Node} element The DOM node to start with.
      * @param {string} className The class name to match.
+     * @param {number=} opt_maxSearchSteps Maximum number of levels to search up the
+     *     dom.
      * @return {Element} The first ancestor that matches the passed criteria, or
      *     null if none match.
      */
-    function getAncestorByClass(element: Node, className: string): Element;
+    function getAncestorByClass(element: Node, className: string, opt_maxSearchSteps?: number): Element;
 
     /**
      * Walks up the DOM hierarchy returning the first ancestor that passes the
@@ -1358,14 +1384,16 @@ declare module goog.dom {
     function getActiveElement(doc: Document): Element;
 
     /**
-     * Gives the devicePixelRatio, or attempts to determine if not present.
+     * Gives the current devicePixelRatio.
      *
-     * By default, this is the same value given by window.devicePixelRatio. If
-     * devicePixelRatio is not defined, the ratio is calculated with
+     * By default, this is the value of window.devicePixelRatio (which should be
+     * preferred if present).
+     *
+     * If window.devicePixelRatio is not present, the ratio is calculated with
      * window.matchMedia, if present. Otherwise, gives 1.0.
      *
-     * This function is cached so that the pixel ratio is calculated only once
-     * and only calculated when first requested.
+     * Some browsers (including Chrome) consider the browser zoom level in the pixel
+     * ratio, so the value may change across multiple calls.
      *
      * @return {number} The number of actual pixels per virtual pixel.
      */

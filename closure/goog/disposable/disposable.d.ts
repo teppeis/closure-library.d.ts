@@ -12,14 +12,7 @@ declare module goog {
         constructor();
         
         /**
-         * If monitoring the goog.Disposable instances is enabled, stores the creation
-         * stack trace of the Disposable instance.
-         * @type {string}
-         */
-        creationStack: string;
-        
-        /**
-         * @return {!Array.<!goog.Disposable>} All {@code goog.Disposable} objects that
+         * @return {!Array<!goog.Disposable>} All {@code goog.Disposable} objects that
          *     haven't been disposed of.
          */
         static getUndisposedObjects(): Array<goog.Disposable>;
@@ -28,6 +21,13 @@ declare module goog {
          * Clears the registry of undisposed objects but doesn't dispose of them.
          */
         static clearUndisposedObjects(): void;
+        
+        /**
+         * If monitoring the goog.Disposable instances is enabled, stores the creation
+         * stack trace of the Disposable instance.
+         * @const {string}
+         */
+        creationStack(): void;
         
         /**
          * @return {boolean} Whether the object has been disposed of.
@@ -62,7 +62,8 @@ declare module goog {
         
         /**
          * Invokes a callback function when this object is disposed. Callbacks are
-         * invoked in the order in which they were added.
+         * invoked in the order in which they were added. If a callback is added to
+         * an already disposed Disposable, it will be called immediately.
          * @param {function(this:T):?} callback The callback function.
          * @param {T=} opt_scope An optional scope to call the callback in.
          * @template T
@@ -79,7 +80,7 @@ declare module goog {
          * For example:
          * <pre>
          *   mypackage.MyClass = function() {
-         *     goog.base(this);
+         *     mypackage.MyClass.base(this, 'constructor');
          *     // Constructor logic specific to MyClass.
          *     ...
          *   };
@@ -90,7 +91,7 @@ declare module goog {
          *     ...
          *     // Call superclass's disposeInternal at the end of the subclass's, like
          *     // in C++, to avoid hard-to-catch issues.
-         *     goog.base(this, 'disposeInternal');
+         *     mypackage.MyClass.base(this, 'disposeInternal');
          *   };
          * </pre>
          * @protected

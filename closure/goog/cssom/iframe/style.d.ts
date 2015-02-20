@@ -44,7 +44,7 @@ declare module goog.cssom.iframe.style {
          * Serializes this CssRuleSet_ into an array as a series of strings.
          * The array can then be join()-ed to get a string representation
          * of this ruleset.
-         * @param {Array.<string>} array The array to which to append strings.
+         * @param {Array<string>} array The array to which to append strings.
          */
         writeToArray(array: Array<string>): void;
     }
@@ -172,7 +172,7 @@ declare module goog.cssom.iframe.style.ruleSetCache_ {
      * Retrieves the array of css rulesets for this document. A cached
      * version will be used when possible.
      * @param {Document} doc The document for which to get rulesets.
-     * @return {!Array.<goog.cssom.iframe.style.CssRuleSet_>} An array of CssRuleSet
+     * @return {!Array<goog.cssom.iframe.style.CssRuleSet_>} An array of CssRuleSet
      *     objects representing the css rule sets in the supplied document.
      */
     function getRuleSetsForDocument(doc: Document): Array<goog.cssom.iframe.style.CssRuleSet_>;

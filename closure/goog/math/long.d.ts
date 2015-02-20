@@ -21,6 +21,7 @@ declare module goog.math {
      *
      * @param {number} low  The low (signed) 32 bits of the long.
      * @param {number} high  The high (signed) 32 bits of the long.
+     * @struct
      * @constructor
      * @final
      */

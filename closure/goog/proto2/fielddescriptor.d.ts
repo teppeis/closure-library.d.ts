@@ -3,8 +3,8 @@ declare module goog.proto2 {
     /**
      * A class which describes a field in a Protocol Buffer 2 Message.
      *
-     * @param {Function} messageType Constructor for the message
-     *     class to which the field described by this class belongs.
+     * @param {function(new:goog.proto2.Message)} messageType Constructor for the
+     *     message class to which the field described by this class belongs.
      * @param {number|string} tag The field's tag index.
      * @param {Object} metadata The metadata about this field that will be used
      *     to construct this descriptor.
@@ -13,7 +13,7 @@ declare module goog.proto2 {
      * @final
      */
     class FieldDescriptor {
-        constructor(messageType: Function, tag: number, metadata: Object);
+        constructor(messageType: () => any, tag: number, metadata: Object);
         
         /**
          * Returns the tag of the field that this descriptor represents.
@@ -24,7 +24,7 @@ declare module goog.proto2 {
         
         /**
          * Returns the descriptor describing the message that defined this field.
-         * @return {goog.proto2.Descriptor} The descriptor.
+         * @return {!goog.proto2.Descriptor} The descriptor.
          */
         getContainingType(): goog.proto2.Descriptor;
         
@@ -66,7 +66,7 @@ declare module goog.proto2 {
          * Returns the descriptor of the message type of this field. Only valid
          * for fields of type GROUP and MESSAGE.
          *
-         * @return {goog.proto2.Descriptor} The message descriptor.
+         * @return {!goog.proto2.Descriptor} The message descriptor.
          */
         getFieldMessageType(): goog.proto2.Descriptor;
         
@@ -75,6 +75,12 @@ declare module goog.proto2 {
          *     composite data (message or group).
          */
         isCompositeType(): boolean;
+        
+        /**
+         * Returns whether the field described by this descriptor is packed.
+         * @return {boolean} Whether the field is packed.
+         */
+        isPacked(): boolean;
         
         /**
          * Returns whether the field described by this descriptor is repeating.

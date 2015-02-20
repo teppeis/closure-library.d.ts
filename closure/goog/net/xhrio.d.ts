@@ -39,8 +39,8 @@ declare module goog.net {
          * request.
          * @see goog.net.XhrIo.cleanup
          * @param {string|goog.Uri} url Uri to make request to.
-         * @param {Function=} opt_callback Callback function for when request is
-         *     complete.
+         * @param {?function(this:goog.net.XhrIo, ?)=} opt_callback Callback function
+         *     for when request is complete.
          * @param {string=} opt_method Send method, default: GET.
          * @param {ArrayBuffer|ArrayBufferView|Blob|Document|FormData|string=}
          *     opt_content Body data.
@@ -50,8 +50,9 @@ declare module goog.net {
          *     incomplete request will be aborted; 0 means no timeout is set.
          * @param {boolean=} opt_withCredentials Whether to send credentials with the
          *     request. Default to false. See {@link goog.net.XhrIo#setWithCredentials}.
+         * @return {!goog.net.XhrIo} The sent XhrIo.
          */
-        static send(url: string, opt_callback?: Function, opt_method?: string, opt_content?: ArrayBuffer, opt_headers?: Object, opt_timeoutInterval?: number, opt_withCredentials?: boolean): void;
+        static send(url: string, opt_callback?: (arg0: any) => any, opt_method?: string, opt_content?: ArrayBuffer, opt_headers?: Object, opt_timeoutInterval?: number, opt_withCredentials?: boolean): goog.net.XhrIo;
         
         /**
          * Disposes all non-disposed instances of goog.net.XhrIo created by
@@ -293,7 +294,7 @@ declare module goog.net {
          * include any case normalization logic, it will just return a key-value
          * representation of the headers.
          * See: http://www.w3.org/TR/XMLHttpRequest/#the-getresponseheader()-method
-         * @return {!Object.<string, string>} An object with the header keys as keys
+         * @return {!Object<string, string>} An object with the header keys as keys
          *     and header values as values.
          */
         getResponseHeaders(): Object;

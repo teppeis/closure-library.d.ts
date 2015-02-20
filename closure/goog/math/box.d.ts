@@ -4,10 +4,14 @@ declare module goog.math {
      * Class for representing a box. A box is specified as a top, right, bottom,
      * and left. A box is useful for representing margins and padding.
      *
+     * This class assumes 'screen coordinates': larger Y coordinates are further
+     * from the top of the screen.
+     *
      * @param {number} top Top.
      * @param {number} right Right.
      * @param {number} bottom Bottom.
      * @param {number} left Left.
+     * @struct
      * @constructor
      */
     class Box {
@@ -20,6 +24,16 @@ declare module goog.math {
          * @return {!goog.math.Box} A Box containing all the specified Coordinates.
          */
         static boundingBox(...var_args: goog.math.Coordinate[]): goog.math.Box;
+        
+        /**
+         * @return {number} width The width of this Box.
+         */
+        getWidth(): number;
+        
+        /**
+         * @return {number} height The height of this Box.
+         */
+        getHeight(): number;
         
         /**
          * Creates a copy of the box with the same dimensions.

@@ -123,7 +123,7 @@ declare module goog.ui {
         /**
          * Returns any additional class name(s) to be applied to the component's
          * root element, or null if no extra class names are needed.
-         * @return {Array.<string>?} Additional class names to be applied to
+         * @return {Array<string>?} Additional class names to be applied to
          *     the component's root element (null if none).
          */
         getExtraClassNames(): Array<string>;
@@ -172,6 +172,20 @@ declare module goog.ui {
          * @param {goog.a11y.aria.Role} role This control's preferred ARIA role.
          */
         setPreferredAriaRole(role: goog.a11y.aria.Role): void;
+        
+        /**
+         * Gets the control's aria label.
+         * @return {?string} This control's aria label.
+         */
+        getAriaLabel(): string;
+        
+        /**
+         * Sets the control's aria label. This can be used to assign aria label to the
+         * element after it is rendered.
+         * @param {string} label The string to set as the aria label for this control.
+         *     No escaping is done on this value.
+         */
+        setAriaLabel(label: string): void;
         
         /**
          * Returns the DOM element into which child components are to be rendered,
@@ -412,8 +426,9 @@ declare module goog.ui {
          * transition events; use advisedly.
          * @param {goog.ui.Component.State} state State to set or clear.
          * @param {boolean} enable Whether to set or clear the state (if supported).
+         * @param {boolean=} opt_calledFrom Prevents looping with setEnabled.
          */
-        setState(state: goog.ui.Component.State, enable: boolean): void;
+        setState(state: goog.ui.Component.State, enable: boolean, opt_calledFrom?: boolean): void;
         
         /**
          * Sets the component's state to the state represented by a bit mask of

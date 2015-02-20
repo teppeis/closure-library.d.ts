@@ -5,7 +5,7 @@ declare module goog.ui.tree {
      *
      * @param {string|!goog.html.SafeHtml} html The html content of the node label.
      * @param {Object=} opt_config The configuration for the tree. See
-     *    {@link goog.ui.tree.TreeControl.defaultConfig}. If not specified the
+     *    {@link goog.ui.tree.BaseNode.defaultConfig}. If not specified the
      *    default config will be used.
      * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper.
      * @constructor
@@ -27,6 +27,11 @@ declare module goog.ui.tree {
          * @deprecated Use {@link #removeChild}.
          */
         remove: any;
+        
+        /**
+         * A default configuration for the tree.
+         */
+        static defaultConfig: any;
         
         /**
          * Adds roles and states.
@@ -81,7 +86,7 @@ declare module goog.ui.tree {
         
         /**
          * Returns the children of this node.
-         * @return {!Array.<!goog.ui.tree.BaseNode>} The children.
+         * @return {!Array<!goog.ui.tree.BaseNode>} The children.
          */
         getChildren(): Array<goog.ui.tree.BaseNode>;
         
@@ -280,14 +285,14 @@ declare module goog.ui.tree {
         getExpandIconClass(): string;
         
         /**
-         * @return {string} The line style.
+         * @return {!goog.html.SafeStyle} The line style.
          */
-        getLineStyle(): string;
+        getLineStyle(): goog.html.SafeStyle;
         
         /**
-         * @return {string} The line style.
+         * @return {string} The background position style value.
          */
-        getLineStyle2(): string;
+        getBackgroundPosition(): string;
         
         /**
          * @return {Element} The element for the tree node.

@@ -11,7 +11,7 @@ declare module goog.pubsub {
         
         /**
          * See {@code goog.pubsub.PubSub.subscribe}.
-         * @param {!goog.pubsub.TopicId.<PAYLOAD>} topic Topic to subscribe to.
+         * @param {!goog.pubsub.TopicId<PAYLOAD>} topic Topic to subscribe to.
          * @param {function(this:CONTEXT, PAYLOAD)} fn Function to be invoked when a
          *     message is published to the given topic.
          * @param {CONTEXT=} opt_context Object in whose context the function is to be
@@ -23,7 +23,7 @@ declare module goog.pubsub {
         
         /**
          * See {@code goog.pubsub.PubSub.subscribeOnce}.
-         * @param {!goog.pubsub.TopicId.<PAYLOAD>} topic Topic to subscribe to.
+         * @param {!goog.pubsub.TopicId<PAYLOAD>} topic Topic to subscribe to.
          * @param {function(this:CONTEXT, PAYLOAD)} fn Function to be invoked once and
          *     then unsubscribed when a message is published to the given topic.
          * @param {CONTEXT=} opt_context Object in whose context the function is to be
@@ -35,7 +35,7 @@ declare module goog.pubsub {
         
         /**
          * See {@code goog.pubsub.PubSub.unsubscribe}.
-         * @param {!goog.pubsub.TopicId.<PAYLOAD>} topic Topic to unsubscribe from.
+         * @param {!goog.pubsub.TopicId<PAYLOAD>} topic Topic to unsubscribe from.
          * @param {function(this:CONTEXT, PAYLOAD)} fn Function to unsubscribe.
          * @param {CONTEXT=} opt_context Object in whose context the function was to be
          *     called (the global scope if none).
@@ -53,7 +53,7 @@ declare module goog.pubsub {
         
         /**
          * See {@code goog.pubsub.PubSub.publish}.
-         * @param {!goog.pubsub.TopicId.<PAYLOAD>} topic Topic to publish to.
+         * @param {!goog.pubsub.TopicId<PAYLOAD>} topic Topic to publish to.
          * @param {PAYLOAD} payload Payload passed to each subscription function.
          * @return {boolean} Whether any subscriptions were called.
          * @template PAYLOAD
@@ -62,7 +62,7 @@ declare module goog.pubsub {
         
         /**
          * See {@code goog.pubsub.PubSub.clear}.
-         * @param {!goog.pubsub.TopicId.<PAYLOAD>=} opt_topic Topic to clear (all topics
+         * @param {!goog.pubsub.TopicId<PAYLOAD>=} opt_topic Topic to clear (all topics
          *     if unspecified).
          * @template PAYLOAD
          */
@@ -70,7 +70,7 @@ declare module goog.pubsub {
         
         /**
          * See {@code goog.pubsub.PubSub.getCount}.
-         * @param {!goog.pubsub.TopicId.<PAYLOAD>=} opt_topic The topic (all topics if
+         * @param {!goog.pubsub.TopicId<PAYLOAD>=} opt_topic The topic (all topics if
          *     unspecified).
          * @return {number} Number of subscriptions to the topic.
          * @template PAYLOAD

@@ -44,17 +44,17 @@ declare module goog.net.xpc {
         
         /**
          * Returns the window object the foreign document resides in.
-         * Package private. Do not call from outside goog.net.xpc.
          *
          * @return {Object} The window object of the peer.
+         * @package
          */
         getPeerWindowObject(): Object;
         
         /**
          * Determines whether the peer window is available (e.g. not closed).
-         * Package private. Do not call from outside goog.net.xpc.
          *
          * @return {boolean} Whether the peer window is available.
+         * @package
          */
         isPeerAvailable(): boolean;
         
@@ -137,14 +137,13 @@ declare module goog.net.xpc {
          * avoid name conflict with {@code deliver} function in superclass
          * goog.messaging.AbstractChannel.
          *
-         * Package private. Do not call from outside goog.net.xpc.
-         *
          * @param {string} serviceName The name of the port.
          * @param {string} payload The payload.
          * @param {string=} opt_origin An optional origin for the message, where the
          *     underlying transport makes that available.  If this is specified, and
          *     the PEER_HOSTNAME parameter was provided, they must match or the message
          *     will be rejected.
+         * @package
          */
         xpcDeliver(serviceName: string, payload: string, opt_origin?: string): void;
         

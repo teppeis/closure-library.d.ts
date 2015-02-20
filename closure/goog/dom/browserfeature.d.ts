@@ -10,5 +10,6 @@ declare module goog.dom {
         CAN_USE_INNER_TEXT: boolean;
         CAN_USE_PARENT_ELEMENT_PROPERTY: boolean;
         INNER_HTML_NEEDS_SCOPED_ELEMENT: boolean;
+        LEGACY_IE_RANGES: boolean;
     }
 }

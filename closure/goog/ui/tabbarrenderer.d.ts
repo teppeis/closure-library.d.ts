@@ -50,7 +50,7 @@ declare module goog.ui {
          * class name to the list.
          * @param {goog.ui.Container} tabBar Tab bar whose CSS classes are to be
          *     returned.
-         * @return {!Array.<string>} Array of CSS class names applicable to the tab bar.
+         * @return {!Array<string>} Array of CSS class names applicable to the tab bar.
          * @override
          */
         getClassNames(tabBar: goog.ui.Container): Array<string>;

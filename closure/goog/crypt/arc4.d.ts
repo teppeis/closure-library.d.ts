@@ -11,7 +11,7 @@ declare module goog.crypt {
         
         /**
          * Initialize the cipher for use with new key.
-         * @param {Array.<number>} key A byte array containing the key.
+         * @param {Array<number>} key A byte array containing the key.
          * @param {number=} opt_length Indicates # of bytes to take from the key.
          */
         setKey(key: Array<number>, opt_length?: number): void;
@@ -38,7 +38,7 @@ declare module goog.crypt {
         
         /**
          * En- or decrypt (same operation for streamciphers like ARC4)
-         * @param {Array.<number>|Uint8Array} data The data to be xor-ed in place.
+         * @param {Array<number>|Uint8Array} data The data to be xor-ed in place.
          * @param {number=} opt_length The number of bytes to crypt.
          */
         crypt(data: Array<number>, opt_length?: number): void;

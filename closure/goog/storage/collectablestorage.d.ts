@@ -14,9 +14,9 @@ declare module goog.storage {
         /**
          * Cleans up the storage by removing expired keys.
          *
-         * @param {Array.<string>} keys List of all keys.
+         * @param {Array<string>} keys List of all keys.
          * @param {boolean=} opt_strict Also remove invalid keys.
-         * @return {!Array.<string>} a list of expired keys.
+         * @return {!Array<string>} a list of expired keys.
          * @protected
          */
         collectInternal(keys: Array<string>, opt_strict?: boolean): Array<string>;

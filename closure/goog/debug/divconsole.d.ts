@@ -34,9 +34,9 @@ declare module goog.debug {
         
         /**
          * Sets the formatter for outputting to the console.
-         * @param {goog.debug.Formatter} formatter The formatter to use.
+         * @param {goog.debug.HtmlFormatter} formatter The formatter to use.
          */
-        setFormatter(formatter: goog.debug.Formatter): void;
+        setFormatter(formatter: goog.debug.HtmlFormatter): void;
         
         /**
          * Adds a separator to the debug window.

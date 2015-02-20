@@ -8,7 +8,7 @@ declare module goog.ui {
      *     display as the tab's caption (if any).
      * @param {goog.ui.TabRenderer=} opt_renderer Optional renderer used to render
      *     or decorate the tab.
-     * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM hepler, used for
+     * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper, used for
      *     document interaction.
      * @constructor
      * @extends {goog.ui.Control}

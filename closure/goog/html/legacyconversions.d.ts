@@ -14,6 +14,19 @@ declare module goog.html.legacyconversions {
     function safeHtmlFromString(html: string): goog.html.SafeHtml;
 
     /**
+     * Performs an "unchecked conversion" from string to SafeStyle for legacy API
+     * purposes.
+     *
+     * Unchecked conversion will not proceed if ALLOW_LEGACY_CONVERSIONS is false,
+     * and instead this function unconditionally throws an exception.
+     *
+     * @param {string} style A string to be converted to SafeStyle.
+     * @return {!goog.html.SafeStyle} The value of style, wrapped in a SafeStyle
+     *     object.
+     */
+    function safeStyleFromString(style: string): goog.html.SafeStyle;
+
+    /**
      * Performs an "unchecked conversion" from string to TrustedResourceUrl for
      * legacy API purposes.
      *
@@ -47,4 +60,11 @@ declare module goog.html.legacyconversions {
      * @param {function(): undefined} callback Error callback as defined above.
      */
     function setReportCallback(callback: () => void): void;
+
+    /**
+     * Throws an exception if ALLOW_LEGACY_CONVERSIONS is false. This is useful
+     * for legacy APIs which consume HTML in the form of plain string types, but
+     * do not provide an alternative HTML-type-safe API.
+     */
+    function throwIfConversionsDisallowed(): void;
 }

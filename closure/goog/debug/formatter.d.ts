@@ -54,6 +54,13 @@ declare module goog.debug {
         formatRecord(logRecord: goog.debug.LogRecord): string;
         
         /**
+         * Formats a record as SafeHtml.
+         * @param {goog.debug.LogRecord} logRecord the logRecord to format.
+         * @return {!goog.html.SafeHtml} The formatted string as SafeHtml.
+         */
+        formatRecordAsHtml(logRecord: goog.debug.LogRecord): goog.html.SafeHtml;
+        
+        /**
          * Sets the start time provider. By default, this is the default instance
          * but can be changed.
          * @param {goog.debug.RelativeTimeProvider} provider The provider to use.
@@ -98,6 +105,14 @@ declare module goog.debug {
          * @override
          */
         formatRecord(logRecord: goog.debug.LogRecord): string;
+        
+        /**
+         * Formats a record.
+         * @param {goog.debug.LogRecord} logRecord the logRecord to format.
+         * @return {!goog.html.SafeHtml} The formatted string as SafeHtml.
+         * @override
+         */
+        formatRecordAsHtml(logRecord: goog.debug.LogRecord): goog.html.SafeHtml;
     }
 
     /**
@@ -118,5 +133,14 @@ declare module goog.debug {
          * @override
          */
         formatRecord(logRecord: goog.debug.LogRecord): string;
+        
+        /**
+         * Formats a record as text
+         * @param {goog.debug.LogRecord} logRecord the logRecord to format.
+         * @return {!goog.html.SafeHtml} The formatted string as SafeHtml. This is
+         *     just an HTML-escaped version of the text obtained from formatRecord().
+         * @override
+         */
+        formatRecordAsHtml(logRecord: goog.debug.LogRecord): goog.html.SafeHtml;
     }
 }

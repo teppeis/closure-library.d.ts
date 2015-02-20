@@ -33,7 +33,7 @@ declare module goog.fx.css3 {
      * @param {Object} finalStyle Final style properties of the element after
      *     animating. Set using {@code goog.style.setStyle}.
      * @param {goog.style.transition.Css3Property|
-     *     Array.<goog.style.transition.Css3Property>} transitions A single CSS3
+     *     Array<goog.style.transition.Css3Property>} transitions A single CSS3
      *     transition property or an array of it.
      * @extends {goog.fx.TransitionBase}
      * @constructor

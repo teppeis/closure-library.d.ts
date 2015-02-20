@@ -266,9 +266,14 @@ declare module goog.i18n {
     var DateTimePatterns_bm: any;
 
     /**
-     * Extended set of localized date/time patterns for locale bm_ML.
+     * Extended set of localized date/time patterns for locale bm_Latn.
      */
-    var DateTimePatterns_bm_ML: any;
+    var DateTimePatterns_bm_Latn: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale bm_Latn_ML.
+     */
+    var DateTimePatterns_bm_Latn_ML: any;
 
     /**
      * Extended set of localized date/time patterns for locale bn_BD.
@@ -429,6 +434,16 @@ declare module goog.i18n {
      * Extended set of localized date/time patterns for locale dje_NE.
      */
     var DateTimePatterns_dje_NE: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale dsb.
+     */
+    var DateTimePatterns_dsb: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale dsb_DE.
+     */
+    var DateTimePatterns_dsb_DE: any;
 
     /**
      * Extended set of localized date/time patterns for locale dua.
@@ -739,6 +754,11 @@ declare module goog.i18n {
      * Extended set of localized date/time patterns for locale en_MW.
      */
     var DateTimePatterns_en_MW: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale en_MY.
+     */
+    var DateTimePatterns_en_MY: any;
 
     /**
      * Extended set of localized date/time patterns for locale en_NA.
@@ -1086,6 +1106,21 @@ declare module goog.i18n {
     var DateTimePatterns_ff: any;
 
     /**
+     * Extended set of localized date/time patterns for locale ff_CM.
+     */
+    var DateTimePatterns_ff_CM: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale ff_GN.
+     */
+    var DateTimePatterns_ff_GN: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale ff_MR.
+     */
+    var DateTimePatterns_ff_MR: any;
+
+    /**
      * Extended set of localized date/time patterns for locale ff_SN.
      */
     var DateTimePatterns_ff_SN: any;
@@ -1336,14 +1371,39 @@ declare module goog.i18n {
     var DateTimePatterns_fr_YT: any;
 
     /**
-     * Extended set of localized date/time patterns for locale ga.
+     * Extended set of localized date/time patterns for locale fur.
      */
-    var DateTimePatterns_ga: any;
+    var DateTimePatterns_fur: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale fur_IT.
+     */
+    var DateTimePatterns_fur_IT: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale fy.
+     */
+    var DateTimePatterns_fy: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale fy_NL.
+     */
+    var DateTimePatterns_fy_NL: any;
 
     /**
      * Extended set of localized date/time patterns for locale ga_IE.
      */
     var DateTimePatterns_ga_IE: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale gd.
+     */
+    var DateTimePatterns_gd: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale gd_GB.
+     */
+    var DateTimePatterns_gd_GB: any;
 
     /**
      * Extended set of localized date/time patterns for locale gl_ES.
@@ -1354,6 +1414,11 @@ declare module goog.i18n {
      * Extended set of localized date/time patterns for locale gsw_CH.
      */
     var DateTimePatterns_gsw_CH: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale gsw_FR.
+     */
+    var DateTimePatterns_gsw_FR: any;
 
     /**
      * Extended set of localized date/time patterns for locale gsw_LI.
@@ -1434,6 +1499,16 @@ declare module goog.i18n {
      * Extended set of localized date/time patterns for locale hr_HR.
      */
     var DateTimePatterns_hr_HR: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale hsb.
+     */
+    var DateTimePatterns_hsb: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale hsb_DE.
+     */
+    var DateTimePatterns_hsb_DE: any;
 
     /**
      * Extended set of localized date/time patterns for locale hu_HU.
@@ -1686,6 +1761,16 @@ declare module goog.i18n {
     var DateTimePatterns_ksf_CM: any;
 
     /**
+     * Extended set of localized date/time patterns for locale ksh.
+     */
+    var DateTimePatterns_ksh: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale ksh_DE.
+     */
+    var DateTimePatterns_ksh_DE: any;
+
+    /**
      * Extended set of localized date/time patterns for locale kw.
      */
     var DateTimePatterns_kw: any;
@@ -1714,6 +1799,16 @@ declare module goog.i18n {
      * Extended set of localized date/time patterns for locale lag_TZ.
      */
     var DateTimePatterns_lag_TZ: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale lb.
+     */
+    var DateTimePatterns_lb: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale lb_LU.
+     */
+    var DateTimePatterns_lb_LU: any;
 
     /**
      * Extended set of localized date/time patterns for locale lg.
@@ -2076,6 +2171,21 @@ declare module goog.i18n {
     var DateTimePatterns_or_IN: any;
 
     /**
+     * Extended set of localized date/time patterns for locale os.
+     */
+    var DateTimePatterns_os: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale os_GE.
+     */
+    var DateTimePatterns_os_GE: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale os_RU.
+     */
+    var DateTimePatterns_os_RU: any;
+
+    /**
      * Extended set of localized date/time patterns for locale pa_Arab.
      */
     var DateTimePatterns_pa_Arab: any;
@@ -2144,6 +2254,26 @@ declare module goog.i18n {
      * Extended set of localized date/time patterns for locale pt_TL.
      */
     var DateTimePatterns_pt_TL: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale qu.
+     */
+    var DateTimePatterns_qu: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale qu_BO.
+     */
+    var DateTimePatterns_qu_BO: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale qu_EC.
+     */
+    var DateTimePatterns_qu_EC: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale qu_PE.
+     */
+    var DateTimePatterns_qu_PE: any;
 
     /**
      * Extended set of localized date/time patterns for locale rm.
@@ -2236,6 +2366,16 @@ declare module goog.i18n {
     var DateTimePatterns_rwk_TZ: any;
 
     /**
+     * Extended set of localized date/time patterns for locale sah.
+     */
+    var DateTimePatterns_sah: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale sah_RU.
+     */
+    var DateTimePatterns_sah_RU: any;
+
+    /**
      * Extended set of localized date/time patterns for locale saq.
      */
     var DateTimePatterns_saq: any;
@@ -2254,6 +2394,26 @@ declare module goog.i18n {
      * Extended set of localized date/time patterns for locale sbp_TZ.
      */
     var DateTimePatterns_sbp_TZ: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale se.
+     */
+    var DateTimePatterns_se: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale se_FI.
+     */
+    var DateTimePatterns_se_FI: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale se_NO.
+     */
+    var DateTimePatterns_se_NO: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale se_SE.
+     */
+    var DateTimePatterns_se_SE: any;
 
     /**
      * Extended set of localized date/time patterns for locale seh.
@@ -2324,6 +2484,16 @@ declare module goog.i18n {
      * Extended set of localized date/time patterns for locale sl_SI.
      */
     var DateTimePatterns_sl_SI: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale smn.
+     */
+    var DateTimePatterns_smn: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale smn_FI.
+     */
+    var DateTimePatterns_smn_FI: any;
 
     /**
      * Extended set of localized date/time patterns for locale sn.
@@ -2671,6 +2841,16 @@ declare module goog.i18n {
     var DateTimePatterns_vun_TZ: any;
 
     /**
+     * Extended set of localized date/time patterns for locale wae.
+     */
+    var DateTimePatterns_wae: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale wae_CH.
+     */
+    var DateTimePatterns_wae_CH: any;
+
+    /**
      * Extended set of localized date/time patterns for locale xog.
      */
     var DateTimePatterns_xog: any;
@@ -2689,6 +2869,16 @@ declare module goog.i18n {
      * Extended set of localized date/time patterns for locale yav_CM.
      */
     var DateTimePatterns_yav_CM: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale yi.
+     */
+    var DateTimePatterns_yi: any;
+
+    /**
+     * Extended set of localized date/time patterns for locale yi_001.
+     */
+    var DateTimePatterns_yi_001: any;
 
     /**
      * Extended set of localized date/time patterns for locale yo.

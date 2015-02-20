@@ -95,7 +95,7 @@ declare module goog.spell {
          *
          * @param {string} word Word to set status for.
          * @param {goog.spell.SpellCheck.WordStatus} status Status of word.
-         * @param {Array.<string>=} opt_suggestions Suggestions.
+         * @param {Array<string>=} opt_suggestions Suggestions.
          *
          * Example:
          * obj.setWordStatus('word', VALID);
@@ -107,7 +107,7 @@ declare module goog.spell {
          * Returns suggestions for the given word.
          *
          * @param {string} word Word to get suggestions for.
-         * @return {Array.<string>} An array of suggestions for the given word.
+         * @return {Array<string>} An array of suggestions for the given word.
          */
         getSuggestions(word: string): Array<string>;
     }

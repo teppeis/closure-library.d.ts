@@ -38,9 +38,9 @@ declare module svgpan {
          * Handles mouse motion for the given coordinates.
          * @param {number} x The x coordinate.
          * @param {number} y The y coordinate.
-         * @param {Element} svgDoc The svg document.
+         * @param {Document} svgDoc The svg document.
          */
-        handleMove(x: number, y: number, svgDoc: Element): void;
+        handleMove(x: number, y: number, svgDoc: Document): void;
         
         /**
          * Ends pan/drag mode.

@@ -12,20 +12,20 @@ declare module goog.promise {
         
         /**
          * The promise that created this resolver.
-         * @const {!goog.Promise.<TYPE>}
+         * @type {!goog.Promise<TYPE>}
          */
-        promise(): void;
+        promise: goog.Promise<TYPE, any>;
         
         /**
          * Resolves this resolver with the specified value.
-         * @const {function((TYPE|goog.Promise.<TYPE>|Thenable))}
+         * @type {function((TYPE|goog.Promise<TYPE>|Thenable)=)}
          */
-        resolve(): void;
+        resolve: (arg0?: TYPE) => any;
         
         /**
          * Rejects this resolver with the specified reason.
-         * @const {function(*): void}
+         * @type {function(*): void}
          */
-        reject(): void;
+        reject: (arg0: any) => void;
     }
 }

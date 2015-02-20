@@ -3,7 +3,7 @@ declare module goog.labs.testing {
     /**
      * The AllOf matcher.
      *
-     * @param {!Array.<!goog.labs.testing.Matcher>} matchers Input matchers.
+     * @param {!Array<!goog.labs.testing.Matcher>} matchers Input matchers.
      *
      * @constructor
      * @struct
@@ -17,7 +17,7 @@ declare module goog.labs.testing {
     /**
      * The AnyOf matcher.
      *
-     * @param {!Array.<!goog.labs.testing.Matcher>} matchers Input matchers.
+     * @param {!Array<!goog.labs.testing.Matcher>} matchers Input matchers.
      *
      * @constructor
      * @struct

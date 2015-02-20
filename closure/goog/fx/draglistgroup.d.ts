@@ -32,9 +32,9 @@ declare module goog.fx {
         
         /**
          * Events dispatched by this class.
-         * @type {Object}
+         * @const
          */
-        static EventType: Object;
+        static EventType: any;
         
         /**
          * Sets the property of the currDragItem that it is always displayed in the

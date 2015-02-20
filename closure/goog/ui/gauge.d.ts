@@ -210,7 +210,7 @@ declare module goog.ui {
         
         /**
          * Sets the labels of the major ticks.
-         * @param {Array.<string>} tickLabels A text label for each major tick value.
+         * @param {Array<string>} tickLabels A text label for each major tick value.
          */
         setMajorTickLabels(tickLabels: Array<string>): void;
         

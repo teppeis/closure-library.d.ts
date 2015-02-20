@@ -173,6 +173,12 @@ declare module goog.ui.ac {
         setPreventDefaultOnTab(newValue: boolean): void;
         
         /**
+         * Sets whether we will prevent highlighted item selection on TAB.
+         * @param {boolean} newValue Whether to prevent selection on TAB.
+         */
+        setPreventSelectionOnTab(newValue: boolean): void;
+        
+        /**
          * Sets whether separators perform autocomplete.
          * @param {boolean} newValue Whether to autocomplete on separators.
          */

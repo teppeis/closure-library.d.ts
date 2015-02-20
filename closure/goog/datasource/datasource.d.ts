@@ -250,7 +250,7 @@ declare module goog.ds {
      * names: eval, toSource, toString, unwatch, valueOf, watch. Behavior is
      * undefined if these names are used.
      *
-     * @param {Array.<goog.ds.DataNode>=} opt_nodes optional nodes to add to list.
+     * @param {Array<goog.ds.DataNode>=} opt_nodes optional nodes to add to list.
      * @constructor
      * @extends {goog.ds.DataNodeList}
      */
@@ -353,7 +353,7 @@ declare module goog.ds {
      *     node list is sorted. Should take 2 arguments to compare, and return a
      *     negative integer, zero, or a positive integer depending on whether the
      *     first argument is less than, equal to, or greater than the second.
-     * @param {Array.<goog.ds.DataNode>=} opt_nodes optional nodes to add to list;
+     * @param {Array<goog.ds.DataNode>=} opt_nodes optional nodes to add to list;
      *    these are assumed to be in sorted order.
      * @extends {goog.ds.BasicNodeList}
      * @constructor

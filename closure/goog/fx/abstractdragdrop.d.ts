@@ -21,9 +21,9 @@ declare module goog.fx {
         
         /**
          * Constants for event names
-         * @type {Object}
+         * @const
          */
-        static EventType: Object;
+        static EventType: any;
         
         /**
          * Constant for distance threshold, in pixels, an element has to be moved to
@@ -242,7 +242,7 @@ declare module goog.fx {
          * {@code createDragElement()} before the drag class is added.
          *
          * @param {Element} sourceEl Drag source element.
-         * @return {Element} The new drag element.
+         * @return {!Element} The new drag element.
          * @protected
          * @suppress {deprecated}
          */
@@ -351,7 +351,7 @@ declare module goog.fx {
         /**
          * Gets all the elements of this item that are potentially draggable/
          *
-         * @return {!Array.<Element>} The draggable elements.
+         * @return {!Array<Element>} The draggable elements.
          */
         getDraggableElements(): Array<Element>;
         

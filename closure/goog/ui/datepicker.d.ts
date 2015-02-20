@@ -20,9 +20,9 @@ declare module goog.ui {
         /**
          * Constants for event names
          *
-         * @type {Object}
+         * @const
          */
-        static Events: Object;
+        static Events: any;
         
         /**
          * @deprecated Use isInDocument.
@@ -243,6 +243,25 @@ declare module goog.ui {
          * @return {goog.date.Date} The selected date or null if nothing is selected.
          */
         getDate(): goog.date.Date;
+        
+        /**
+         * @param {number} row The row in the grid.
+         * @param {number} col The column in the grid.
+         * @return {goog.date.Date} The date in the grid or null if there is none.
+         */
+        getDateAt(row: number, col: number): goog.date.Date;
+        
+        /**
+         * Returns a date element given a row and column. In elTable_, the elements that
+         * represent dates are 1 indexed because of other elements such as headers.
+         * This corrects for the offset and makes the API 0 indexed.
+         *
+         * @param {number} row The row in the element table.
+         * @param {number} col The column in the element table.
+         * @return {Element} The element in the grid or null if there is none.
+         * @protected
+         */
+        getDateElementAt(row: number, col: number): Element;
         
         /**
          * Sets the selected date.

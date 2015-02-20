@@ -47,7 +47,10 @@ declare module goog.graphics {
         setElementStroke(element: goog.graphics.StrokeAndFillElement, stroke: goog.graphics.Stroke): void;
         
         /**
-         * Set the transformation of an element.
+         * Set the translation and rotation of an element.
+         *
+         * If a more general affine transform is needed than this provides
+         * (e.g. skew and scale) then use setElementAffineTransform.
          * @param {goog.graphics.Element} element The element wrapper.
          * @param {number} x The x coordinate of the translation transform.
          * @param {number} y The y coordinate of the translation transform.
@@ -57,6 +60,15 @@ declare module goog.graphics {
          * @override
          */
         setElementTransform(element: goog.graphics.Element, x: number, y: number, angle: number, centerX: number, centerY: number): void;
+        
+        /**
+         * Set the transformation of an element.
+         * @param {goog.graphics.Element} element The element wrapper.
+         * @param {!goog.graphics.AffineTransform} affineTransform The
+         *     transformation applied to this element.
+         * @override
+         */
+        setElementAffineTransform(element: goog.graphics.Element, affineTransform: goog.graphics.AffineTransform): void;
         
         /**
          * Changes the coordinate system position.

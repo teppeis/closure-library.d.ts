@@ -66,7 +66,7 @@ declare module goog.uri.utils {
      * ];
      * </pre>
      *
-     * @typedef {!Array.<string|goog.uri.utils.QueryValue>}
+     * @typedef {!Array<string|goog.uri.utils.QueryValue>}
      */
     interface QueryArray {
     }
@@ -99,7 +99,7 @@ declare module goog.uri.utils {
      * </pre>
      *
      * @param {string} uri The URI string to examine.
-     * @return {!Array.<string|undefined>} Each component still URI-encoded.
+     * @return {!Array<string|undefined>} Each component still URI-encoded.
      *     Each component that is present will contain the encoded value, whereas
      *     components that are not present will be undefined or empty, depending
      *     on the browser's regular expression implementation.  Never null, since
@@ -225,9 +225,27 @@ declare module goog.uri.utils {
      *
      * @param {string} uri1 The first URI.
      * @param {string} uri2 The second URI.
-     * @return {boolean} Whether they have the same domain and port.
+     * @return {boolean} Whether they have the same scheme, domain and port.
      */
     function haveSameDomain(uri1: string, uri2: string): boolean;
+
+    /**
+     * Parses encoded query parameters and calls callback function for every
+     * parameter found in the string.
+     *
+     * Missing value of parameter (e.g. “…&key&…”) is treated as if the value was an
+     * empty string.  Keys may be empty strings (e.g. “…&=value&…”) which also means
+     * that “…&=&…” and “…&&…” will result in an empty key and value.
+     *
+     * @param {string} encodedQuery Encoded query string excluding question mark at
+     *     the beginning.
+     * @param {function(string, string)} callback Function called for every
+     *     parameter found in query string.  The first argument (name) will not be
+     *     urldecoded (so the function is consistent with buildQueryData), but the
+     *     second will.  If the parameter has no value (i.e. “=” was not present)
+     *     the second argument (value) will be an empty string.
+     */
+    function parseQueryData(encodedQuery: string, callback: (arg0: string, arg1: string) => any): void;
 
     /**
      * Builds a query data string from a sequence of alternating keys and values.
@@ -244,9 +262,9 @@ declare module goog.uri.utils {
      * Builds a query data string from a map.
      * Currently generates "&key&" for empty args.
      *
-     * @param {Object} map An object where keys are URI-encoded parameter keys,
-     *     and the values are arbitrary types or arrays.  Keys with a null value
-     *     are dropped.
+     * @param {!Object<string, goog.uri.utils.QueryValue>} map An object where keys
+     *     are URI-encoded parameter keys, and the values are arbitrary types
+     *     or arrays. Keys with a null value are dropped.
      * @return {string} The encoded query string, in the form 'a=1&b=2'.
      */
     function buildQueryDataFromMap(map: Object): string;
@@ -284,9 +302,9 @@ declare module goog.uri.utils {
      * Appends query parameters from a map.
      *
      * @param {string} uri The original URI, which may already have query data.
-     * @param {Object} map An object where keys are URI-encoded parameter keys,
-     *     and the values are arbitrary types or arrays.  Keys with a null value
-     *     are dropped.
+     * @param {!Object<goog.uri.utils.QueryValue>} map An object where keys are
+     *     URI-encoded parameter keys, and the values are arbitrary types or arrays.
+     *     Keys with a null value are dropped.
      * @return {string} The new parameters.
      */
     function appendParamsFromMap(uri: string, map: Object): string;
@@ -331,7 +349,7 @@ declare module goog.uri.utils {
      * Gets all values of a query parameter.
      * @param {string} uri The URI to process.  May contain a framgnet.
      * @param {string} keyEncoded The URI-encoded key.  Case-snsitive.
-     * @return {!Array.<string>} All URI-decoded values with the given key.
+     * @return {!Array<string>} All URI-decoded values with the given key.
      *     If the key is not found, this will have length 0, but never be null.
      */
     function getParamValues(uri: string, keyEncoded: string): Array<string>;

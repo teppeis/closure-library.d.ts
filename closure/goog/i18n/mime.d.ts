@@ -14,7 +14,7 @@ declare module goog.i18n.mime {
     /**
      * Get an array of UTF-8 hex codes for a given character.
      * @param {string} c The matched character.
-     * @return {!Array.<string>} A hex array representing the character.
+     * @return {!Array<string>} A hex array representing the character.
      */
     function getHexCharArray(c: string): Array<string>;
 }

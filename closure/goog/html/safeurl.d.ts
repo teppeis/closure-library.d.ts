@@ -23,9 +23,9 @@ declare module goog.html {
      * trusted code, e.g., as the src of a script tag.
      *
      * Instances of this type must be created via the factory methods
-     * ({@code goog.html.SafeUrl.from}, {@code goog.html.SafeUrl.sanitize}), etc and
-     * not by invoking its constructor.  The constructor intentionally takes no
-     * parameters and the type is immutable; hence only a default instance
+     * ({@code goog.html.SafeUrl.fromConstant}, {@code goog.html.SafeUrl.sanitize}),
+     * etc and not by invoking its constructor.  The constructor intentionally
+     * takes no parameters and the type is immutable; hence only a default instance
      * corresponding to the empty string can be obtained via constructor invocation.
      *
      * @see goog.html.SafeUrl#fromConstant
@@ -105,7 +105,7 @@ declare module goog.html {
          * string wrapped by the created SafeUrl will thus contain only ASCII printable
          * characters.
          *
-         * {@code url} may be a URL with the http, https, or mailto scheme,
+         * {@code url} may be a URL with the http, https, mailto or ftp scheme,
          * or a relative URL (i.e., a URL without a scheme; specifically, a
          * scheme-relative, absolute-path-relative, or path-relative URL).
          *
@@ -125,5 +125,14 @@ declare module goog.html {
          * @return {!goog.html.SafeUrl} The validated URL, wrapped as a SafeUrl.
          */
         static sanitize(url: string): goog.html.SafeUrl;
+        
+        /**
+         * Package-internal utility method to create SafeUrl instances.
+         *
+         * @param {string} url The string to initialize the SafeUrl object with.
+         * @return {!goog.html.SafeUrl} The initialized SafeUrl object.
+         * @package
+         */
+        static createSafeUrlSecurityPrivateDoNotAccessOrElse(url: string): goog.html.SafeUrl;
     }
 }

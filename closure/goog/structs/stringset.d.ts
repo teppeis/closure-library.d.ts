@@ -2,7 +2,7 @@ declare module goog.structs {
 
     /**
      * Creates a set of strings.
-     * @param {!Array=} opt_elements Elements to add to the set. The non-string
+     * @param {!Array<?>=} opt_elements Elements to add to the set. The non-string
      *     items will be converted to strings, so 15 and '15' will mean the same.
      * @constructor
      * @final
@@ -18,7 +18,7 @@ declare module goog.structs {
         
         /**
          * Adds a the elements of an array to this set.
-         * @param {!Array} arr The array to add the elements of.
+         * @param {!Array<?>} arr The array to add the elements of.
          */
         addArray(arr: Array<any>): void;
         
@@ -47,7 +47,7 @@ declare module goog.structs {
         
         /**
          * Tells if the set contains all elements of the array.
-         * @param {!Array} arr The elements to check.
+         * @param {!Array<?>} arr The elements to check.
          * @return {boolean} Whether they are in the set.
          */
         containsArray(arr: Array<any>): boolean;
@@ -112,7 +112,7 @@ declare module goog.structs {
         getUnion(stringSet: goog.structs.StringSet): goog.structs.StringSet;
         
         /**
-         * @return {!Array.<string>} The elements of the set.
+         * @return {!Array<string>} The elements of the set.
          */
         getValues(): Array<string>;
         
@@ -151,7 +151,7 @@ declare module goog.structs {
         
         /**
          * Removes all elements of the given array from this set.
-         * @param {!Array} arr The elements to remove.
+         * @param {!Array<?>} arr The elements to remove.
          */
         removeArray(arr: Array<any>): void;
         

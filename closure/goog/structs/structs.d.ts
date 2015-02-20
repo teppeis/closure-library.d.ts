@@ -10,7 +10,7 @@ declare module goog.structs {
     /**
      * Returns the values of the collection-like object.
      * @param {Object} col The collection-like object.
-     * @return {!Array} The values in the collection-like object.
+     * @return {!Array<?>} The values in the collection-like object.
      */
     function getValues(col: Object): Array<any>;
 
@@ -75,7 +75,7 @@ declare module goog.structs {
      *     is false the value is not included.
      * @param {T=} opt_obj The object to be used as the value of 'this'
      *     within {@code f}.
-     * @return {!Object|!Array} A new collection where the passed values are
+     * @return {!Object|!Array<?>} A new collection where the passed values are
      *     present. If col is a key-less collection an array is returned.  If col
      *     has keys and values a plain old JS object is returned.
      * @template T,S
@@ -93,7 +93,7 @@ declare module goog.structs {
      *     something. The result will be used as the value in the new collection.
      * @param {T=} opt_obj  The object to be used as the value of 'this'
      *     within {@code f}.
-     * @return {!Object.<V>|!Array.<V>} A new collection with the new values.  If
+     * @return {!Object<V>|!Array<V>} A new collection with the new values.  If
      *     col is a key-less collection an array is returned.  If col has keys and
      *     values a plain old JS object is returned.
      * @template T,S,V

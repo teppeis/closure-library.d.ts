@@ -4,7 +4,7 @@ declare module goog.net {
      * Provides a wrapper around IframeLoadMonitor, to allow the caller to wait for
      * multiple iframes to load.
      *
-     * @param {Array.<HTMLIFrameElement>} iframes Array of iframe elements to
+     * @param {Array<HTMLIFrameElement>} iframes Array of iframe elements to
      *     wait until they are loaded.
      * @param {function():void} callback The callback to invoke once the frames have
      *     loaded.

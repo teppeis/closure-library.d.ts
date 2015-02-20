@@ -61,13 +61,20 @@ declare module goog.dom.animationFrame {
      * other functions scheduled under this key and the function under "mutate" will
      * run after that.
      *
-     * @param {!{
+     * @param {{
      *   measure: (function(this:THIS, !goog.dom.animationFrame.State)|undefined),
      *   mutate: (function(this:THIS, !goog.dom.animationFrame.State)|undefined)
      * }} spec
      * @param {THIS=} opt_context Context in which to run the function.
-     * @return {function(...[?])}
+     * @return {function(...?)}
      * @template THIS
      */
     function createTask<THIS>(spec: {measure: (arg0: goog.dom.animationFrame.State) => any; mutate: (arg0: goog.dom.animationFrame.State) => any}, opt_context?: THIS): (...arg0: any[]) => any;
+
+    /**
+     * @return {boolean} Whether the animationframe is currently running. For use
+     *     by callers who need not to delay tasks scheduled during runTasks_ for an
+     *     additional frame.
+     */
+    function isRunning(): boolean;
 }

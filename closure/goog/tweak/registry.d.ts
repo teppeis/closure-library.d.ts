@@ -4,7 +4,7 @@ declare module goog.tweak {
      * Singleton that manages all tweaks. This should be instantiated only from
      * goog.tweak.getRegistry().
      * @param {string} queryParams Value of window.location.search.
-     * @param {!Object.<string|number|boolean>} compilerOverrides Default value
+     * @param {!Object<string|number|boolean>} compilerOverrides Default value
      *     overrides set by the compiler.
      * @constructor
      * @final
@@ -15,7 +15,7 @@ declare module goog.tweak {
         /**
          * Simple parser for query params. Makes all keys lower-case.
          * @param {string} queryParams The part of the url between the ? and the #.
-         * @return {!Object.<string>} map of key->value.
+         * @return {!Object<string>} map of key->value.
          */
         static parseQueryParams(queryParams: string): Object;
         
@@ -74,7 +74,7 @@ declare module goog.tweak {
          * @param {boolean} excludeChildEntries Exclude BooleanInGroupSettings.
          * @param {boolean} excludeNonSettings Exclude entries that are not subclasses
          *     of BaseSetting.
-         * @return {!Array.<!goog.tweak.BaseSetting>} The settings.
+         * @return {!Array<!goog.tweak.BaseSetting>} The settings.
          */
         extractEntries(excludeChildEntries: boolean, excludeNonSettings: boolean): Array<goog.tweak.BaseSetting>;
         

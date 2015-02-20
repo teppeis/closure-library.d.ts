@@ -57,9 +57,8 @@ declare module goog.structs {
         /**
          * Sets a value for a given key. If this is a caching LinkedMap, this entry
          * will become the most recently used.
-         * @param {string} key The key to retrieve the value for.
-         * @param {VALUE} value A default value that will be returned if the key is
-         *     not found.
+         * @param {string} key Key with which the specified value is to be associated.
+         * @param {VALUE} value Value to be associated with the specified key.
          */
         set(key: string, value: VALUE): void;
         
@@ -123,13 +122,13 @@ declare module goog.structs {
         setMaxCount(maxCount: number): void;
         
         /**
-         * @return {!Array.<string>} The list of the keys in the appropriate order for
+         * @return {!Array<string>} The list of the keys in the appropriate order for
          *     this LinkedMap.
          */
         getKeys(): Array<string>;
         
         /**
-         * @return {!Array.<VALUE>} The list of the values in the appropriate order for
+         * @return {!Array<VALUE>} The list of the values in the appropriate order for
          *     this LinkedMap.
          */
         getValues(): Array<VALUE>;
@@ -159,55 +158,63 @@ declare module goog.structs {
          * Calls a function on each item in the LinkedMap.
          *
          * @see goog.structs.forEach
-         * @param {Function} f The function to call for each item. The function takes
-         *     three arguments: the value, the key, and the LinkedMap.
-         * @param {Object=} opt_obj The object context to use as "this" for the
-         *     function.
+         * @param {function(this:T, VALUE, KEY, goog.structs.LinkedMap<KEY,VALUE>)} f
+         * @param {T=} opt_obj The value of "this" inside f.
+         * @template T
          */
-        forEach(f: Function, opt_obj?: Object): void;
+        forEach<T>(f: (arg0: VALUE, arg1: KEY, arg2: goog.structs.LinkedMap<KEY, VALUE>) => any, opt_obj?: T): void;
         
         /**
          * Calls a function on each item in the LinkedMap and returns the results of
          * those calls in an array.
          *
          * @see goog.structs.map
-         * @param {!Function} f The function to call for each item. The function takes
+         * @param {function(this:T, VALUE, KEY,
+         *         goog.structs.LinkedMap<KEY,VALUE>): RESULT} f
+         *     The function to call for each item. The function takes
          *     three arguments: the value, the key, and the LinkedMap.
-         * @param {Object=} opt_obj The object context to use as "this" for the
+         * @param {T=} opt_obj The object context to use as "this" for the
          *     function.
-         * @return {!Array.<VALUE>} The results of the function calls for each item in
+         * @return {!Array<RESULT>} The results of the function calls for each item in
          *     the LinkedMap.
+         * @template T,RESULT
          */
-        map(f: Function, opt_obj?: Object): Array<VALUE>;
+        map<T, RESULT>(f: (arg0: VALUE, arg1: KEY, arg2: goog.structs.LinkedMap<KEY, VALUE>) => RESULT, opt_obj?: T): Array<RESULT>;
         
         /**
          * Calls a function on each item in the LinkedMap and returns true if any of
          * those function calls returns a true-like value.
          *
          * @see goog.structs.some
-         * @param {Function} f The function to call for each item. The function takes
+         * @param {function(this:T, VALUE, KEY,
+         *         goog.structs.LinkedMap<KEY,VALUE>):boolean} f
+         *     The function to call for each item. The function takes
          *     three arguments: the value, the key, and the LinkedMap, and returns a
          *     boolean.
-         * @param {Object=} opt_obj The object context to use as "this" for the
+         * @param {T=} opt_obj The object context to use as "this" for the
          *     function.
          * @return {boolean} Whether f evaluates to true for at least one item in the
          *     LinkedMap.
+         * @template T
          */
-        some(f: Function, opt_obj?: Object): boolean;
+        some<T>(f: (arg0: VALUE, arg1: KEY, arg2: goog.structs.LinkedMap<KEY, VALUE>) => boolean, opt_obj?: T): boolean;
         
         /**
          * Calls a function on each item in the LinkedMap and returns true only if every
          * function call returns a true-like value.
          *
          * @see goog.structs.some
-         * @param {Function} f The function to call for each item. The function takes
+         * @param {function(this:T, VALUE, KEY,
+         *         goog.structs.LinkedMap<KEY,VALUE>):boolean} f
+         *     The function to call for each item. The function takes
          *     three arguments: the value, the key, and the Cache, and returns a
          *     boolean.
-         * @param {Object=} opt_obj The object context to use as "this" for the
+         * @param {T=} opt_obj The object context to use as "this" for the
          *     function.
          * @return {boolean} Whether f evaluates to true for every item in the Cache.
+         * @template T
          */
-        every(f: Function, opt_obj?: Object): boolean;
+        every<T>(f: (arg0: VALUE, arg1: KEY, arg2: goog.structs.LinkedMap<KEY, VALUE>) => boolean, opt_obj?: T): boolean;
     }
 }
 

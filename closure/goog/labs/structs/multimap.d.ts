@@ -33,7 +33,7 @@ declare module goog.labs.structs {
          * Stores a collection of values to the given key. Does not replace
          * existing (key, value) pairs.
          * @param {string} key The key to add.
-         * @param {!Array.<*>} values The values to add.
+         * @param {!Array<*>} values The values to add.
          */
         addAllValues(key: string, values: Array<any>): void;
         
@@ -47,7 +47,7 @@ declare module goog.labs.structs {
         /**
          * Replaces all the values for the given key with the given values.
          * @param {string} key The key whose values are to be replaced.
-         * @param {!Array.<*>} values The new values. If empty, this is
+         * @param {!Array<*>} values The new values. If empty, this is
          *     equivalent to {@code removaAll(key)}.
          */
         replaceValues(key: string, values: Array<any>): void;
@@ -55,7 +55,7 @@ declare module goog.labs.structs {
         /**
          * Gets the values correspond to the given key.
          * @param {string} key The key to retrieve.
-         * @return {!Array.<*>} An array of values corresponding to the given
+         * @return {!Array<*>} An array of values corresponding to the given
          *     key. May be empty. Note that the ordering of values are not
          *     guaranteed to be consistent.
          */
@@ -108,17 +108,17 @@ declare module goog.labs.structs {
         containsValue(value: any): boolean;
         
         /**
-         * @return {!Array.<string>} An array of unique keys.
+         * @return {!Array<string>} An array of unique keys.
          */
         getKeys(): Array<string>;
         
         /**
-         * @return {!Array.<*>} An array of values. There may be duplicates.
+         * @return {!Array<*>} An array of values. There may be duplicates.
          */
         getValues(): Array<any>;
         
         /**
-         * @return {!Array.<!Array>} An array of entries. Each entry is of the
+         * @return {!Array<!Array<?>>} An array of entries. Each entry is of the
          *     form [key, value].
          */
         getEntries(): Array<Array<any>>;

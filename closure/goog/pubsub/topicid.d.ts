@@ -6,7 +6,7 @@ declare module goog.pubsub {
      *
      * Typical usage for a publisher:
      * <code>
-     *   /** @type {!goog.pubsub.TopicId.<!zorg.State>}
+     *   /** @type {!goog.pubsub.TopicId<!zorg.State>}
      *   zorg.TopicId.STATE_CHANGE = new goog.pubsub.TopicId(
      *       goog.events.getUniqueId('state-change'));
      *

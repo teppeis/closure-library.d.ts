@@ -171,6 +171,11 @@ declare module goog.i18n {
     var DateTimePatterns_fr_CA: any;
 
     /**
+     * Extended set of localized date/time patterns for locale ga.
+     */
+    var DateTimePatterns_ga: any;
+
+    /**
      * Extended set of localized date/time patterns for locale gl.
      */
     var DateTimePatterns_gl: any;
@@ -511,7 +516,7 @@ declare module goog.i18n {
     var DateTimePatterns_zu: any;
 
     /**
-    /* Select date/time pattern by locale.
+     * Select date/time pattern by locale.
      */
     var DateTimePatterns: any;
 }

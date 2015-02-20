@@ -36,26 +36,6 @@ declare module goog.editor.plugins {
         logger: goog.log.Logger;
         
         /**
-         * Checks if a node is a blockquote node.  If isAlreadySetup is set, it also
-         * makes sure the node has the blockquote classname applied.  Otherwise, it
-         * ensures that the blockquote does not already have the classname applied.
-         * @param {Node} node DOM node to check.
-         * @param {boolean} isAlreadySetup True to enforce that the classname must be
-         *                  set in order for it to count as a blockquote, false to
-         *                  enforce that the classname must not be set in order for
-         *                  it to count as a blockquote.
-         * @param {boolean} requiresClassNameToSplit Whether only blockquotes with the
-         *     class name should be split.
-         * @param {string} className The official blockquote class name.
-         * @return {boolean} Whether node is a blockquote and if isAlreadySetup is
-         *    true, then whether this is a setup blockquote.
-         * @deprecated Use {@link #isSplittableBlockquote},
-         *     {@link #isSetupBlockquote}, or {@link #isUnsetupBlockquote} instead
-         *     since this has confusing behavior.
-         */
-        static isBlockquote(node: Node, isAlreadySetup: boolean, requiresClassNameToSplit: boolean, className: string): boolean;
-        
-        /**
          * Checks if a node is a blockquote which can be split. A splittable blockquote
          * meets the following criteria:
          * <ol>
@@ -96,10 +76,10 @@ declare module goog.editor.plugins {
          * function returns true, the event that caused it to be called should be
          * canceled.
          * @param {string} command The command to execute.
-         * @param {...*} var_args Single additional argument representing the
-         *     current cursor position.  In IE, it is a single node.  In any other
-         *     browser, it is an object with a {@code node} key and an {@code offset}
-         *     key.
+         * @param {...*} var_args Single additional argument representing the current
+         *     cursor position. If BrowserFeature.HAS_W3C_RANGES it is an object with a
+         *     {@code node} key and an {@code offset} key. In other cases (legacy IE)
+         *     it is a single node.
          * @return {boolean|undefined} Boolean true when the quoted region has been
          *     split, false or undefined otherwise.
          * @override

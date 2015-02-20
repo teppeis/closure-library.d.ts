@@ -3,7 +3,7 @@ declare module goog.ui {
     /**
      * Single-selection model.  Dispatches a {@link goog.events.EventType.SELECT}
      * event when a selection is made.
-     * @param {Array.<Object>=} opt_items Array of items; defaults to empty.
+     * @param {Array<Object>=} opt_items Array of items; defaults to empty.
      * @extends {goog.events.EventTarget}
      * @constructor
      */
@@ -64,7 +64,7 @@ declare module goog.ui {
         /**
          * Bulk-adds items to the selection model.  This is more efficient than calling
          * {@link #addItem} for each new item.
-         * @param {Array.<Object>|undefined} items New items to add.
+         * @param {Array<Object>|undefined} items New items to add.
          */
         addItems(items: Array<Object>): void;
         
@@ -100,7 +100,7 @@ declare module goog.ui {
         getSelectedItem(): Object;
         
         /**
-         * @return {!Array.<Object>} All items in the selection model.
+         * @return {!Array<Object>} All items in the selection model.
          */
         getItems(): Array<Object>;
         

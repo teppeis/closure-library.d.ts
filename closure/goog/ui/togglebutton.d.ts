@@ -9,7 +9,7 @@ declare module goog.ui {
      *     structure to display as the button's caption.
      * @param {goog.ui.ButtonRenderer=} opt_renderer Renderer used to render or
      *     decorate the button; defaults to {@link goog.ui.CustomButtonRenderer}.
-     * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM hepler, used for
+     * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper, used for
      *     document interaction.
      * @constructor
      * @extends {goog.ui.Button}

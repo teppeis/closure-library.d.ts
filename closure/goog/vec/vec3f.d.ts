@@ -48,7 +48,7 @@ declare module goog.vec.vec3f {
      * Initializes vec3f vec from Array src.
      *
      * @param {goog.vec.vec3f.Type} vec The destination vector.
-     * @param {Array.<number>} src The source vector.
+     * @param {Array<number>} src The source vector.
      * @return {!goog.vec.vec3f.Type} Return vec so that operations can be
      *     chained together.
      */

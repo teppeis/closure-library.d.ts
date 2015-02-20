@@ -66,6 +66,11 @@ declare module goog.userAgent {
 
     /**
      * Whether the user agent is running on a Linux operating system.
+     *
+     * Note that goog.userAgent.LINUX considers ChromeOS to be Linux,
+     * while goog.labs.userAgent.platform considers ChromeOS and
+     * Linux to be different OSes.
+     *
      * @type {boolean}
      */
     var LINUX: boolean;

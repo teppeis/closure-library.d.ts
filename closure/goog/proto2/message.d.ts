@@ -64,7 +64,7 @@ declare module goog.proto2 {
          * @param {goog.proto2.FieldDescriptor} field The field for which to
          *     return the values.
          *
-         * @return {!Array} The values found.
+         * @return {!Array<?>} The values found.
          */
         arrayOf(field: goog.proto2.FieldDescriptor): Array<any>;
         
@@ -217,7 +217,7 @@ declare module goog.proto2 {
          *
          * @param {number} tag The field's tag index.
          *
-         * @return {!Array} The values found. If none, returns an empty array.
+         * @return {!Array<*>} The values found. If none, returns an empty array.
          * @protected
          */
         array$Values(tag: number): Array<any>;
@@ -267,15 +267,14 @@ declare module goog.proto2 {
         clear$Field(tag: number): void;
         
         /**
-         * Sets the metadata that represents the definition of this message.
+         * Creates the metadata descriptor representing the definition of this message.
          *
-         * GENERATED CODE USE ONLY. Called when constructing message classes.
-         *
-         * @param {!Function} messageType Constructor for the
+         * @param {function(new:goog.proto2.Message)} messageType Constructor for the
          *     message type to which this metadata applies.
-         * @param {Object} metadataObj The object containing the metadata.
+         * @param {!Object} metadataObj The object containing the metadata.
+         * @return {!goog.proto2.Descriptor} The new descriptor.
          */
-        static set$Metadata(messageType: Function, metadataObj: Object): void;
+        static createDescriptor(messageType: () => any, metadataObj: Object): goog.proto2.Descriptor;
     }
 }
 

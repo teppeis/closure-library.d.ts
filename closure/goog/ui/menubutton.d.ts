@@ -9,7 +9,7 @@ declare module goog.ui {
      * @param {goog.ui.Menu=} opt_menu Menu to render under the button when clicked.
      * @param {goog.ui.ButtonRenderer=} opt_renderer Renderer used to render or
      *     decorate the menu button; defaults to {@link goog.ui.MenuButtonRenderer}.
-     * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM hepler, used for
+     * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper, used for
      *     document interaction.
      * @param {!goog.ui.MenuRenderer=} opt_menuRenderer Renderer used to render or
      *     decorate the menu; defaults to {@link goog.ui.MenuRenderer}.
@@ -136,6 +136,15 @@ declare module goog.ui {
          * @param {goog.math.Box} margin Margin to apply.
          */
         setMenuMargin(margin: goog.math.Box): void;
+        
+        /**
+         * Sets whether to select the first item in the menu when it is opened using
+         * enter or space. By default, the first item is selected only when
+         * opened by a key up or down event. When this is on, the first item will
+         * be selected due to any of the four events.
+         * @param {boolean} select
+         */
+        setSelectFirstOnEnterOrSpace(select: boolean): void;
         
         /**
          * Adds a new menu item at the end of the menu.
@@ -300,5 +309,11 @@ declare module goog.ui {
          * @param {goog.events.Event} e Unhighlight event to handle.
          */
         handleUnHighlightItem(e: goog.events.Event): void;
+        
+        /**
+         * Handles {@code CLOSE} events dispatched by the associated menu.
+         * @param {goog.events.Event} e Close event to handle.
+         */
+        handleCloseItem(e: goog.events.Event): void;
     }
 }

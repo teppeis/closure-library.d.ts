@@ -98,7 +98,7 @@ declare module goog.i18n {
          * parsing stops after the call. If an error occurs, opt_pos won't be updated.
          *
          * @param {string} text The string to be parsed.
-         * @param {Array.<number>=} opt_pos Position to pass in and get back.
+         * @param {Array<number>=} opt_pos Position to pass in and get back.
          * @return {number} Parsed number. This throws an error if the text cannot be
          *     parsed.
          */

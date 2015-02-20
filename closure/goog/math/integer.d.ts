@@ -16,8 +16,9 @@ declare module goog.math {
      * pieces, which can easily be multiplied within Javascript's floating-point
      * representation without overflow or change in sign.
      *
+     * @struct
      * @constructor
-     * @param {Array.<number>} bits Array containing the bits of the number.
+     * @param {Array<number>} bits Array containing the bits of the number.
      * @param {number} sign The sign of the number: -1 for negative and 0 positive.
      * @final
      */
@@ -50,7 +51,7 @@ declare module goog.math {
          * given entries, each is assumed to be 32 signed bits, given in little-endian
          * order (lowest order bits in the lowest index), and sign-extending the highest
          * order 32-bit value.
-         * @param {Array.<number>} bits The bits of the number, in 32-bit signed pieces,
+         * @param {Array<number>} bits The bits of the number, in 32-bit signed pieces,
          *     in little-endian order.
          * @return {!goog.math.Integer} The corresponding Integer value.
          */

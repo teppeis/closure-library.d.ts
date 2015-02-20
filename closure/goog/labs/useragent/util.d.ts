@@ -29,7 +29,7 @@ declare module goog.labs.userAgent.util {
     /**
      * Parses the user agent into tuples for each section.
      * @param {string} userAgent
-     * @return {!Array.<!Array.<string>>} Tuples of key, version, and the contents
+     * @return {!Array<!Array<string>>} Tuples of key, version, and the contents
      *     of the parenthetical.
      */
     function extractVersionTuples(userAgent: string): Array<Array<string>>;

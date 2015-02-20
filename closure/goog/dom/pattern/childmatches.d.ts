@@ -17,7 +17,7 @@ declare module goog.dom.pattern {
         /**
          * Array of matched child nodes.
          *
-         * @type {Array.<Node>}
+         * @type {Array<Node>}
          */
         matches: Array<Node>;
         

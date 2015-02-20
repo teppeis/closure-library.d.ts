@@ -13,12 +13,12 @@ declare module goog.html {
      * result in a Cross-Site-Scripting vulnerability.
      *
      * Instances of this type must be created via the factory methods
-     * ({@code goog.html.SafeHtml.from}, {@code goog.html.SafeHtml.htmlEscape}), etc
-     * and not by invoking its constructor.  The constructor intentionally takes no
-     * parameters and the type is immutable; hence only a default instance
+     * ({@code goog.html.SafeHtml.create}, {@code goog.html.SafeHtml.htmlEscape}),
+     * etc and not by invoking its constructor.  The constructor intentionally
+     * takes no parameters and the type is immutable; hence only a default instance
      * corresponding to the empty string can be obtained via constructor invocation.
      *
-     * @see goog.html.SafeHtml#from
+     * @see goog.html.SafeHtml#create
      * @see goog.html.SafeHtml#htmlEscape
      * @constructor
      * @final
@@ -55,17 +55,33 @@ declare module goog.html {
          * Otherwise, the directionality of the resulting SafeHtml is unknown (i.e.,
          * {@code null}).
          *
-         * @param {!goog.html.SafeHtml.StringLike_} text The string to escape.
-         * @return {!goog.html.SafeHtml} The escaped string, wrapped as a SafeHtml.
+         * @param {!goog.html.SafeHtml.TextOrHtml_} textOrHtml The text to escape. If
+         *     the parameter is of type SafeHtml it is returned directly (no escaping
+         *     is done).
+         * @return {!goog.html.SafeHtml} The escaped text, wrapped as a SafeHtml.
          */
-        static htmlEscape(text: goog.html.SafeHtml.StringLike_): goog.html.SafeHtml;
+        static htmlEscape(textOrHtml: goog.html.SafeHtml.TextOrHtml_): goog.html.SafeHtml;
         
         /**
-         * Returns HTML-escaped text as a SafeHtml object with newlines changed to <br>.
-         * @param {!goog.html.SafeHtml.StringLike_} text The string to escape.
-         * @return {!goog.html.SafeHtml} The escaped string, wrapped as a SafeHtml.
+         * Returns HTML-escaped text as a SafeHtml object, with newlines changed to
+         * &lt;br&gt;.
+         * @param {!goog.html.SafeHtml.TextOrHtml_} textOrHtml The text to escape. If
+         *     the parameter is of type SafeHtml it is returned directly (no escaping
+         *     is done).
+         * @return {!goog.html.SafeHtml} The escaped text, wrapped as a SafeHtml.
          */
-        static htmlEscapePreservingNewlines(text: goog.html.SafeHtml.StringLike_): goog.html.SafeHtml;
+        static htmlEscapePreservingNewlines(textOrHtml: goog.html.SafeHtml.TextOrHtml_): goog.html.SafeHtml;
+        
+        /**
+         * Returns HTML-escaped text as a SafeHtml object, with newlines changed to
+         * &lt;br&gt; and escaping whitespace to preserve spatial formatting. Character
+         * entity #160 is used to make it safer for XML.
+         * @param {!goog.html.SafeHtml.TextOrHtml_} textOrHtml The text to escape. If
+         *     the parameter is of type SafeHtml it is returned directly (no escaping
+         *     is done).
+         * @return {!goog.html.SafeHtml} The escaped text, wrapped as a SafeHtml.
+         */
+        static htmlEscapePreservingNewlinesAndSpaces(textOrHtml: goog.html.SafeHtml.TextOrHtml_): goog.html.SafeHtml;
         
         /**
          * Coerces an arbitrary object into a SafeHtml object.
@@ -79,26 +95,54 @@ declare module goog.html {
          * @param {!goog.html.SafeHtml.TextOrHtml_} textOrHtml The text or SafeHtml to
          *     coerce.
          * @return {!goog.html.SafeHtml} The resulting SafeHtml object.
+         * @deprecated Use goog.html.SafeHtml.htmlEscape.
          */
         static from(textOrHtml: goog.html.SafeHtml.TextOrHtml_): goog.html.SafeHtml;
         
         /**
          * Creates a SafeHtml content consisting of a tag with optional attributes and
          * optional content.
+         *
+         * For convenience tag names and attribute names are accepted as regular
+         * strings, instead of goog.string.Const. Nevertheless, you should not pass
+         * user-controlled values to these parameters. Note that these parameters are
+         * syntactically validated at runtime, and invalid values will result in
+         * an exception.
+         *
+         * Example usage:
+         *
+         * goog.html.SafeHtml.create('br');
+         * goog.html.SafeHtml.create('div', {'class': 'a'});
+         * goog.html.SafeHtml.create('p', {}, 'a');
+         * goog.html.SafeHtml.create('p', {}, goog.html.SafeHtml.create('br'));
+         *
+         * goog.html.SafeHtml.create('span', {
+         *   'style': {'margin': '0'}
+         * });
+         *
+         * To guarantee SafeHtml's type contract is upheld there are restrictions on
+         * attribute values and tag names.
+         *
+         * - For attributes which contain script code (on*), a goog.string.Const is
+         *   required.
+         * - For attributes which contain style (style), a goog.html.SafeStyle or a
+         *   goog.html.SafeStyle.PropertyMap is required.
+         * - For attributes which are interpreted as URLs (e.g. src, href) a
+         *   goog.html.SafeUrl or goog.string.Const is required.
+         * - For tags which can load code, more specific goog.html.SafeHtml.create*()
+         *   functions must be used. Tags which can load code and are not supported by
+         *   this function are embed, iframe, link, object, script, style, and template.
+         *
          * @param {string} tagName The name of the tag. Only tag names consisting of
-         *     [a-zA-Z0-9-] are allowed. <link>, <script> and <style> tags are not
-         *     supported.
-         * @param {!Object.<string, goog.html.SafeHtml.AttributeValue_>=}
+         *     [a-zA-Z0-9-] are allowed. Tag names documented above are disallowed.
+         * @param {!Object<string, goog.html.SafeHtml.AttributeValue_>=}
          *     opt_attributes Mapping from attribute names to their values. Only
-         *     attribute names consisting of [a-zA-Z0-9-] are allowed. Attributes with
-         *     a special meaning (e.g. on*) require goog.string.Const value, attributes
-         *     containing URL require goog.string.Const or goog.html.SafeUrl. Value of
-         *     null or undefined causes the attribute to be omitted. Values are
-         *     HTML-escaped before usage.
+         *     attribute names consisting of [a-zA-Z0-9-] are allowed. Value of null or
+         *     undefined causes the attribute to be omitted.
          * @param {!goog.html.SafeHtml.TextOrHtml_|
-         *     !Array.<!goog.html.SafeHtml.TextOrHtml_>=} opt_content Content to put
-         *     inside the tag. This must be empty for void tags like <br>. Array
-         *     elements are concatenated.
+         *     !Array<!goog.html.SafeHtml.TextOrHtml_>=} opt_content Content to
+         *     HTML-escape and put inside the tag. This must be empty for void tags
+         *     like <br>. Array elements are concatenated.
          * @return {!goog.html.SafeHtml} The SafeHtml content with the tag.
          * @throws {Error} If invalid tag name, attribute name, or attribute value is
          *     provided.
@@ -107,22 +151,63 @@ declare module goog.html {
         static create(tagName: string, opt_attributes?: Object, opt_content?: goog.html.SafeHtml.TextOrHtml_): goog.html.SafeHtml;
         
         /**
+         * Creates a SafeHtml representing an iframe tag.
+         *
+         * By default the sandbox attribute is set to an empty value, which is the most
+         * secure option, as it confers the iframe the least privileges. If this
+         * is too restrictive then granting individual privileges is the preferable
+         * option. Unsetting the attribute entirely is the least secure option and
+         * should never be done unless it's stricly necessary.
+         *
+         * @param {goog.html.TrustedResourceUrl=} opt_src The value of the src
+         *     attribute. If null or undefined src will not be set.
+         * @param {goog.html.SafeHtml=} opt_srcdoc The value of the srcdoc attribute.
+         *     If null or undefined srcdoc will not be set.
+         * @param {!Object<string, goog.html.SafeHtml.AttributeValue_>=}
+         *     opt_attributes Mapping from attribute names to their values. Only
+         *     attribute names consisting of [a-zA-Z0-9-] are allowed. Value of null or
+         *     undefined causes the attribute to be omitted.
+         * @param {!goog.html.SafeHtml.TextOrHtml_|
+         *     !Array<!goog.html.SafeHtml.TextOrHtml_>=} opt_content Content to
+         *     HTML-escape and put inside the tag. Array elements are concatenated.
+         * @return {!goog.html.SafeHtml} The SafeHtml content with the tag.
+         * @throws {Error} If invalid tag name, attribute name, or attribute value is
+         *     provided. If opt_attributes contains the src or srcdoc attributes.
+         */
+        static createIframe(opt_src?: goog.html.TrustedResourceUrl, opt_srcdoc?: goog.html.SafeHtml, opt_attributes?: Object, opt_content?: goog.html.SafeHtml.TextOrHtml_): goog.html.SafeHtml;
+        
+        /**
+         * Creates a SafeHtml representing a style tag. The type attribute is set
+         * to "text/css".
+         * @param {!goog.html.SafeStyleSheet|!Array<!goog.html.SafeStyleSheet>}
+         *     styleSheet Content to put inside the tag. Array elements are
+         *     concatenated.
+         * @param {!Object<string, goog.html.SafeHtml.AttributeValue_>=}
+         *     opt_attributes Mapping from attribute names to their values. Only
+         *     attribute names consisting of [a-zA-Z0-9-] are allowed. Value of null or
+         *     undefined causes the attribute to be omitted.
+         * @return {!goog.html.SafeHtml} The SafeHtml content with the tag.
+         * @throws {Error} If invalid attribute name or attribute value is provided. If
+         *     opt_attributes contains the type attribute.
+         */
+        static createStyle(styleSheet: goog.html.SafeStyleSheet, opt_attributes?: Object): goog.html.SafeHtml;
+        
+        /**
          * Creates a SafeHtml content with known directionality consisting of a tag with
          * optional attributes and optional content.
          * @param {!goog.i18n.bidi.Dir} dir Directionality.
          * @param {string} tagName
-         * @param {!Object.<string, goog.html.SafeHtml.AttributeValue_>=} opt_attributes
+         * @param {!Object<string, goog.html.SafeHtml.AttributeValue_>=} opt_attributes
          * @param {!goog.html.SafeHtml.TextOrHtml_|
-         *     !Array.<!goog.html.SafeHtml.TextOrHtml_>=} opt_content
+         *     !Array<!goog.html.SafeHtml.TextOrHtml_>=} opt_content
          * @return {!goog.html.SafeHtml} The SafeHtml content with the tag.
          */
         static createWithDir(dir: goog.i18n.bidi.Dir, tagName: string, opt_attributes?: Object, opt_content?: goog.html.SafeHtml.TextOrHtml_): goog.html.SafeHtml;
         
         /**
-         * Creates a new SafeHtml object by concatenating the values.
-         * @param {...!goog.html.SafeHtml.TextOrHtml_|
-         *     !Array.<!goog.html.SafeHtml.TextOrHtml_>} var_args Elements of array
-         *     arguments would be processed recursively.
+         * Creates a new SafeHtml object by concatenating values.
+         * @param {...(!goog.html.SafeHtml.TextOrHtml_|
+         *     !Array<!goog.html.SafeHtml.TextOrHtml_>)} var_args Values to concatenate.
          * @return {!goog.html.SafeHtml}
          */
         static concat(...var_args: goog.html.SafeHtml.TextOrHtml_[]): goog.html.SafeHtml;
@@ -131,37 +216,68 @@ declare module goog.html {
          * Creates a new SafeHtml object with known directionality by concatenating the
          * values.
          * @param {!goog.i18n.bidi.Dir} dir Directionality.
-         * @param {...!goog.html.SafeHtml.TextOrHtml_|
-         *     !Array.<!goog.html.SafeHtml.TextOrHtml_>} var_args Elements of array
+         * @param {...(!goog.html.SafeHtml.TextOrHtml_|
+         *     !Array<!goog.html.SafeHtml.TextOrHtml_>)} var_args Elements of array
          *     arguments would be processed recursively.
          * @return {!goog.html.SafeHtml}
          */
         static concatWithDir(dir: goog.i18n.bidi.Dir, ...var_args: goog.html.SafeHtml.TextOrHtml_[]): goog.html.SafeHtml;
+        
+        /**
+         * Package-internal utility method to create SafeHtml instances.
+         *
+         * @param {string} html The string to initialize the SafeHtml object with.
+         * @param {?goog.i18n.bidi.Dir} dir The directionality of the SafeHtml to be
+         *     constructed, or null if unknown.
+         * @return {!goog.html.SafeHtml} The initialized SafeHtml object.
+         * @package
+         */
+        static createSafeHtmlSecurityPrivateDoNotAccessOrElse(html: string, dir: goog.i18n.bidi.Dir): goog.html.SafeHtml;
+        
+        /**
+         * Like create() but does not restrict which tags can be constructed.
+         *
+         * @param {string} tagName Tag name. Set or validated by caller.
+         * @param {!Object<string, goog.html.SafeHtml.AttributeValue_>=} opt_attributes
+         * @param {(!goog.html.SafeHtml.TextOrHtml_|
+         *     !Array<!goog.html.SafeHtml.TextOrHtml_>)=} opt_content
+         * @return {!goog.html.SafeHtml}
+         * @throws {Error} If invalid or unsafe attribute name or value is provided.
+         * @throws {goog.asserts.AssertionError} If content for void tag is provided.
+         * @package
+         */
+        static createSafeHtmlTagSecurityPrivateDoNotAccessOrElse(tagName: string, opt_attributes?: Object, opt_content?: goog.html.SafeHtml.TextOrHtml_): goog.html.SafeHtml;
+        
+        /**
+         * @param {!Object<string, string>} fixedAttributes
+         * @param {!Object<string, string>} defaultAttributes
+         * @param {!Object<string, goog.html.SafeHtml.AttributeValue_>=}
+         *     opt_attributes Optional attributes passed to create*().
+         * @return {!Object<string, goog.html.SafeHtml.AttributeValue_>}
+         * @throws {Error} If opt_attributes contains an attribute with the same name
+         *     as an attribute in fixedAttributes.
+         * @package
+         */
+        static combineAttributes(fixedAttributes: Object, defaultAttributes: Object, opt_attributes?: Object): Object;
     }
 }
 
 declare module goog.html.SafeHtml {
 
     /**
-     * Shorthand for union of types that can be sensibly converted to strings.
+     * Shorthand for union of types that can sensibly be converted to strings
+     * or might already be SafeHtml (as SafeHtml is a goog.string.TypedString).
      * @private
      * @typedef {string|number|boolean|!goog.string.TypedString|
      *           !goog.i18n.bidi.DirectionalString}
-     */
-    interface StringLike_ {
-    }
-
-    /**
-     * Shorthand for union of types that can be sensibly converted to SafeHtml.
-     * @private
-     * @typedef {!goog.html.SafeHtml.StringLike_|!goog.html.SafeHtml}
      */
     interface TextOrHtml_ {
     }
 
     /**
+     * @typedef {string|number|goog.string.TypedString|
+     *     goog.html.SafeStyle.PropertyMap}
      * @private
-     * @typedef {string|goog.string.Const|goog.html.SafeUrl|goog.html.SafeStyle}
      */
     interface AttributeValue_ {
     }

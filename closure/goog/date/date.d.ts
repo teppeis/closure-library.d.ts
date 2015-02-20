@@ -171,9 +171,9 @@ declare module goog.date {
      * expecting Date objects this class is marked as extending the built in Date
      * object even though that's not strictly true.
      *
-     * @param {number|Object=} opt_year Four digit year or a date-like object. If
-     *     not set, the created object will contain the date determined by
-     *     goog.now().
+     * @param {number|goog.date.DateLike=} opt_year Four digit year or a date-like
+     *     object. If not set, the created object will contain the date
+     *     determined by goog.now().
      * @param {number=} opt_month Month, 0 = Jan, 11 = Dec.
      * @param {number=} opt_date Date of month, 1 - 31.
      * @constructor
@@ -476,7 +476,7 @@ declare module goog.date {
      *     goog.now().
      * @param {number=} opt_month Month, 0 = Jan, 11 = Dec.
      * @param {number=} opt_date Date of month, 1 - 31.
-     * @param {number=} opt_hours Hours, 0 - 24.
+     * @param {number=} opt_hours Hours, 0 - 23.
      * @param {number=} opt_minutes Minutes, 0 - 59.
      * @param {number=} opt_seconds Seconds, 0 - 61.
      * @param {number=} opt_milliseconds Milliseconds, 0 - 999.
@@ -717,6 +717,12 @@ declare module goog.date {
     }
 
     /**
+     * Number of milliseconds in a day.
+     * @type {number}
+     */
+    var MS_PER_DAY: number;
+
+    /**
      * Formats a month/year string.
      * Example: "January 2008"
      *
@@ -791,17 +797,17 @@ declare module goog.date {
     function getWeekNumber(year: number, month: number, date: number, opt_weekDay?: number, opt_firstDayOfWeek?: number): number;
 
     /**
-     * @param {!T} date1 A datelike object.
-     * @param {!S} date2 Another datelike object.
-     * @return {!(T|S)} The earlier of them in time.
+     * @param {T} date1 A datelike object.
+     * @param {S} date2 Another datelike object.
+     * @return {T|S} The earlier of them in time.
      * @template T,S
      */
     function min<T, S>(date1: T, date2: S): T;
 
     /**
-     * @param {!T} date1 A datelike object.
-     * @param {!S} date2 Another datelike object.
-     * @return {!(T|S)} The later of them in time.
+     * @param {T} date1 A datelike object.
+     * @param {S} date2 Another datelike object.
+     * @return {T|S} The later of them in time.
      * @template T,S
      */
     function max<T, S>(date1: T, date2: S): T;

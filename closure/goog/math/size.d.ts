@@ -5,6 +5,7 @@ declare module goog.math {
      * width and height support is deprecated and results in compiler warning.
      * @param {number} width Width.
      * @param {number} height Height.
+     * @struct
      * @constructor
      */
     class Size {
@@ -89,6 +90,18 @@ declare module goog.math {
          * @return {!goog.math.Size} This Size object after scaling.
          */
         scale(sx: number, opt_sy?: number): goog.math.Size;
+        
+        /**
+         * Uniformly scales the size to perfectly cover the dimensions of a given size.
+         * If the size is already larger than the target, it will be scaled down to the
+         * minimum size at which it still covers the entire target. The original aspect
+         * ratio will be preserved.
+         *
+         * This function assumes that both Sizes contain strictly positive dimensions.
+         * @param {!goog.math.Size} target The target size.
+         * @return {!goog.math.Size} This Size object, after optional scaling.
+         */
+        scaleToCover(target: goog.math.Size): goog.math.Size;
         
         /**
          * Uniformly scales the size to fit inside the dimensions of a given size. The

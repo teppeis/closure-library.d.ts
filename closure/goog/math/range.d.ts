@@ -4,6 +4,7 @@ declare module goog.math {
      * A number range.
      * @param {number} a One end of the range.
      * @param {number} b The other end of the range.
+     * @struct
      * @constructor
      */
     class Range {
@@ -11,7 +12,7 @@ declare module goog.math {
         
         /**
          * Creates a goog.math.Range from an array of two numbers.
-         * @param {!Array.<number>} pair
+         * @param {!Array<number>} pair
          * @return {!goog.math.Range}
          */
         static fromPair(pair: Array<number>): goog.math.Range;

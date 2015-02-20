@@ -15,7 +15,7 @@ declare module goog.events {
         
         /**
          * Static data for mapping mouse buttons.
-         * @type {!Array.<number>}
+         * @type {!Array<number>}
          */
         static IEButtonMap: Array<number>;
         

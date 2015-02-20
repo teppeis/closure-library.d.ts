@@ -4,7 +4,7 @@ declare module goog.ui {
      * Once initialized with a document, the activity monitor can be queried for
      * the current idle time.
      *
-     * @param {goog.dom.DomHelper|Array.<goog.dom.DomHelper>=} opt_domHelper
+     * @param {goog.dom.DomHelper|Array<goog.dom.DomHelper>=} opt_domHelper
      *     DomHelper which contains the document(s) to listen to.  If null, the
      *     default document is usedinstead.
      * @param {boolean=} opt_useBubble Whether to use the bubble phase to listen for

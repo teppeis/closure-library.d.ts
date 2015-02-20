@@ -23,26 +23,26 @@ declare module goog.ui {
         
         /**
          * Array of colors for a 7-cell wide simple-grid color picker.
-         * @type {Array.<string>}
+         * @type {Array<string>}
          */
         static SIMPLE_GRID_COLORS: Array<string>;
         
         /**
          * Gets the array of colors displayed by the color picker.
          * Modifying this array will lead to unexpected behavior.
-         * @return {Array.<string>?} The colors displayed by this widget.
+         * @return {Array<string>?} The colors displayed by this widget.
          */
         getColors(): Array<string>;
         
         /**
          * Sets the array of colors to be displayed by the color picker.
-         * @param {Array.<string>} colors The array of colors to be added.
+         * @param {Array<string>} colors The array of colors to be added.
          */
         setColors(colors: Array<string>): void;
         
         /**
          * Sets the array of colors to be displayed by the color picker.
-         * @param {Array.<string>} colors The array of colors to be added.
+         * @param {Array<string>} colors The array of colors to be added.
          * @deprecated Use setColors.
          */
         addColors(colors: Array<string>): void;

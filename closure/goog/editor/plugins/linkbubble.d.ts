@@ -11,6 +11,27 @@ declare module goog.editor.plugins {
         constructor(...var_args: goog.editor.plugins.LinkBubble.Action[]);
         
         /**
+         * @desc Text label for link that lets the user click it to see where the link
+         *     this bubble is for point to.
+         */
+        static MSG_LINK_BUBBLE_TEST_LINK: any;
+        
+        /**
+         * @desc Label that pops up a dialog to change the link.
+         */
+        static MSG_LINK_BUBBLE_CHANGE: any;
+        
+        /**
+         * @desc Label that allow the user to remove this link.
+         */
+        static MSG_LINK_BUBBLE_REMOVE: any;
+        
+        /**
+         * @desc Message shown in a link bubble when the link is not a valid url.
+         */
+        static MSG_INVALID_URL_LINK_BUBBLE: any;
+        
+        /**
          * Tells the plugin to stop leaking the page's url via the referrer header when
          * the link text link is clicked. When the user clicks on a link, the
          * browser makes a request for the link url, passing the url of the current page
@@ -36,7 +57,7 @@ declare module goog.editor.plugins {
          * Schemes should all be in lowercase. If the plugin is set to block opening
          * unsafe schemes, user-entered URLs will be converted to lowercase and checked
          * against this list. The whitelist has no effect if blocking is not enabled.
-         * @param {Array.<string>} schemes String array of URL schemes to allow (http,
+         * @param {Array<string>} schemes String array of URL schemes to allow (http,
          *     https, etc.).
          */
         setSafeToOpenSchemes(schemes: Array<string>): void;

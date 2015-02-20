@@ -23,9 +23,9 @@ declare module goog.ui {
         /**
          * Constants for event names
          *
-         * @type {Object}
+         * @const
          */
-        static Events: Object;
+        static Events: any;
         
         /**
          * Adds a page to the tab pane.

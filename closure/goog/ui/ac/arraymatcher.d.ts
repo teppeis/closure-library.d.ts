@@ -3,7 +3,7 @@ declare module goog.ui.ac {
     /**
      * Basic class for matching words in an array
      * @constructor
-     * @param {Array} rows Dictionary of items to match.  Can be objects if they
+     * @param {Array<?>} rows Dictionary of items to match.  Can be objects if they
      *     have a toString method that returns the value to match against.
      * @param {boolean=} opt_noSimilar if true, do not do similarity matches for the
      *     input token against the dictionary.
@@ -13,7 +13,7 @@ declare module goog.ui.ac {
         
         /**
          * Replaces the rows that this object searches over.
-         * @param {Array} rows Dictionary of items to match.
+         * @param {Array<?>} rows Dictionary of items to match.
          */
         setRows(rows: Array<any>): void;
         
@@ -32,9 +32,9 @@ declare module goog.ui.ac {
          *
          * @param {string} token Token to match.
          * @param {number} maxMatches Max number of matches to return.
-         * @param {!Array} rows Rows to search for matches. Can be objects if they have
-         *     a toString method that returns the value to match against.
-         * @return {!Array} Rows that match.
+         * @param {!Array<?>} rows Rows to search for matches. Can be objects if they
+         *     have a toString method that returns the value to match against.
+         * @return {!Array<?>} Rows that match.
          */
         static getMatchesForRows(token: string, maxMatches: number, rows: Array<any>): Array<any>;
         
@@ -42,7 +42,7 @@ declare module goog.ui.ac {
          * Matches the token against the start of words in the row.
          * @param {string} token Token to match.
          * @param {number} maxMatches Max number of matches to return.
-         * @return {!Array} Rows that match.
+         * @return {!Array<?>} Rows that match.
          */
         getPrefixMatches(token: string, maxMatches: number): Array<any>;
         
@@ -50,9 +50,9 @@ declare module goog.ui.ac {
          * Matches the token against the start of words in the row.
          * @param {string} token Token to match.
          * @param {number} maxMatches Max number of matches to return.
-         * @param {!Array} rows Rows to search for matches. Can be objects if they have
+         * @param {!Array<?>} rows Rows to search for matches. Can be objects if they have
          *     a toString method that returns the value to match against.
-         * @return {!Array} Rows that match.
+         * @return {!Array<?>} Rows that match.
          */
         static getPrefixMatchesForRows(token: string, maxMatches: number, rows: Array<any>): Array<any>;
         
@@ -61,7 +61,7 @@ declare module goog.ui.ac {
          * terms.
          * @param {string} token Token to match.
          * @param {number} maxMatches Max number of matches to return.
-         * @return {!Array} The best maxMatches rows.
+         * @return {!Array<?>} The best maxMatches rows.
          */
         getSimilarRows(token: string, maxMatches: number): Array<any>;
         
@@ -70,9 +70,10 @@ declare module goog.ui.ac {
          * terms.
          * @param {string} token Token to match.
          * @param {number} maxMatches Max number of matches to return.
-         * @param {!Array} rows Rows to search for matches. Can be objects if they have
-         *     a toString method that returns the value to match against.
-         * @return {!Array} The best maxMatches rows.
+         * @param {!Array<?>} rows Rows to search for matches. Can be objects
+         *     if they have a toString method that returns the value to
+         *     match against.
+         * @return {!Array<?>} The best maxMatches rows.
          */
         static getSimilarMatchesForRows(token: string, maxMatches: number, rows: Array<any>): Array<any>;
     }

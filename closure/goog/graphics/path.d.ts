@@ -146,7 +146,7 @@ declare module goog.graphics {
         /**
          * Returns the coordinates most recently added to the end of the path.
          *
-         * @return {Array.<number>?} An array containing the ending coordinates of the
+         * @return {Array<number>?} An array containing the ending coordinates of the
          *     path of the form {@code [x, y]}.
          */
         getCurrentPoint(): Array<number>;

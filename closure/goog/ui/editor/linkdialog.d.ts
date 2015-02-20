@@ -15,10 +15,10 @@ declare module goog.ui.editor {
         /**
          * Sets the warning message to show to users about including email addresses on
          * public web pages.
-         * @param {string} emailWarning Warning message to show users about including
-         *     email addresses on the web.
+         * @param {!goog.html.SafeHtml} emailWarning Warning message to show users about
+         *     including email addresses on the web.
          */
-        setEmailWarning(emailWarning: string): void;
+        setEmailWarning(emailWarning: goog.html.SafeHtml): void;
         
         /**
          * Tells the dialog to show a checkbox where the user can choose to have the
@@ -104,6 +104,7 @@ declare module goog.ui.editor.LinkDialog {
      */
     interface Id_ {
         TEXT_TO_DISPLAY: string;
+        TEXT_TO_DISPLAY_LABEL: string;
         ON_WEB_TAB: string;
         ON_WEB_INPUT: string;
         EMAIL_ADDRESS_TAB: string;

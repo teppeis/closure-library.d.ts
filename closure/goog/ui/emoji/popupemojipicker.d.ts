@@ -18,7 +18,7 @@ declare module goog.ui.emoji {
          * Adds a group of emoji to the picker.
          *
          * @param {string|Element} title Title for the group.
-         * @param {Array.<Array>} emojiGroup A new group of emoji to be added. Each
+         * @param {Array<Array<?>>} emojiGroup A new group of emoji to be added. Each
          *    internal array contains [emojiUrl, emojiId].
          */
         addEmojiGroup(title: string, emojiGroup: Array<Array<any>>): void;

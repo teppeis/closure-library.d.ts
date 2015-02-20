@@ -152,8 +152,8 @@ declare module goog.i18n {
          * Formats a string of unknown directionality for use in HTML output of the
          * context directionality, so an opposite-directionality string is neither
          * garbled nor garbles what follows it.
-         * The algorithm: estimates the directionality of input argument {@code str}. In
-         * case its directionality doesn't match the context directionality, wraps it
+         * The algorithm: estimates the directionality of input argument {@code html}.
+         * In case its directionality doesn't match the context directionality, wraps it
          * with a 'span' tag and adds a "dir" attribute (either 'dir="rtl"' or
          * 'dir="ltr"'). If setAlwaysSpan(true) was used, the input is always wrapped
          * with 'span', skipping just the dir attribute when it's not needed.
@@ -162,6 +162,17 @@ declare module goog.i18n {
          * directionality of {@code str} are opposite to the context directionality, a
          * trailing unicode BiDi mark matching the context directionality is appened
          * (LRM or RLM).
+         *
+         * @param {!goog.html.SafeHtml} html The input HTML.
+         * @param {boolean=} opt_dirReset Whether to append a trailing unicode bidi mark
+         *     matching the context directionality, when needed, to prevent the possible
+         *     garbling of whatever may follow {@code html}. Default: true.
+         * @return {!goog.html.SafeHtml} Input text after applying the processing.
+         */
+        spanWrapSafeHtml(html: goog.html.SafeHtml, opt_dirReset?: boolean): goog.html.SafeHtml;
+        
+        /**
+         * String version of {@link #spanWrapSafeHtml}.
          *
          * If !{@code opt_isHtml}, HTML-escapes {@code str} regardless of wrapping.
          *
@@ -180,13 +191,26 @@ declare module goog.i18n {
          * context directionality, so an opposite-directionality string is neither
          * garbled nor garbles what follows it.
          * The algorithm: If {@code dir} doesn't match the context directionality, wraps
-         * {@code str} with a 'span' tag and adds a "dir" attribute (either 'dir="rtl"'
+         * {@code html} with a 'span' tag and adds a "dir" attribute (either 'dir="rtl"'
          * or 'dir="ltr"'). If setAlwaysSpan(true) was used, the input is always wrapped
          * with 'span', skipping just the dir attribute when it's not needed.
          *
          * If {@code opt_dirReset}, and if {@code dir} or the exit directionality of
-         * {@code str} are opposite to the context directionality, a trailing unicode
+         * {@code html} are opposite to the context directionality, a trailing unicode
          * BiDi mark matching the context directionality is appened (LRM or RLM).
+         *
+         * @param {?goog.i18n.bidi.Dir} dir {@code html}'s overall directionality, or
+         *     null if unknown and needs to be estimated.
+         * @param {!goog.html.SafeHtml} html The input HTML.
+         * @param {boolean=} opt_dirReset Whether to append a trailing unicode bidi mark
+         *     matching the context directionality, when needed, to prevent the possible
+         *     garbling of whatever may follow {@code html}. Default: true.
+         * @return {!goog.html.SafeHtml} Input text after applying the processing.
+         */
+        spanWrapSafeHtmlWithKnownDir(dir: goog.i18n.bidi.Dir, html: goog.html.SafeHtml, opt_dirReset?: boolean): goog.html.SafeHtml;
+        
+        /**
+         * String version of {@link #spanWrapSafeHtmlWithKnownDir}.
          *
          * If !{@code opt_isHtml}, HTML-escapes {@code str} regardless of wrapping.
          *

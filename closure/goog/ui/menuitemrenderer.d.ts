@@ -103,8 +103,8 @@ declare module goog.ui {
          * Adds or removes extra markup and CSS styling to the menu item to make it
          * selectable or non-selectable, depending on the value of the
          * {@code selectable} argument.
-         * @param {goog.ui.Control} item Menu item to update.
-         * @param {Element} element Menu item element to update.
+         * @param {!goog.ui.Control} item Menu item to update.
+         * @param {!Element} element Menu item element to update.
          * @param {boolean} enable Whether to add or remove the checkbox structure.
          * @protected
          */
@@ -134,13 +134,6 @@ declare module goog.ui {
          * @override
          */
         getStateFromClass(className: string): goog.ui.Component.State;
-        
-        /**
-         * Corrects the ARIA role based on checkable and selectable.
-         * @param {goog.ui.Control} item The owner menu item.
-         * @param {Element} element The element.
-         */
-        correctAriaRole(item: goog.ui.Control, element: Element): void;
     }
 }
 

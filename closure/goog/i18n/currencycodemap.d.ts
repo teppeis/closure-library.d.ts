@@ -10,17 +10,15 @@ declare module goog.i18n {
      *     goog.object.extend(goog.i18n.currencyCodeMap,
      *                        goog.i18n.currencyCodeMapTier2);
      *
-     * @type {Object}
-     * @const
+     * @const {!Object<string, string>}
      */
-    var currencyCodeMap: Object;
+    var currencyCodeMap: any;
 
     /**
      * This group of currency data is unlikely to be used. In case they are,
      * program need to merge it into goog.locale.CurrencyCodeMap.
      *
-     * @type {Object}
-     * @const
+     * @const {!Object<string, string>}
      */
-    var currencyCodeMapTier2: Object;
+    var currencyCodeMapTier2: any;
 }

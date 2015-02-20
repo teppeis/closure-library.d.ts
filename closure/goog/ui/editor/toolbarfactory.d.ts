@@ -18,7 +18,7 @@ declare module goog.ui.editor.ToolbarFactory {
      *       (e.g. 'Tahoma, Arial, sans-serif')
      * </ul>
      * @param {!goog.ui.Select} button Font menu button.
-     * @param {!Array.<{caption: string, value: string}>} fonts Array of
+     * @param {!Array<{caption: string, value: string}>} fonts Array of
      *     font descriptors.
      */
     function addFonts(button: goog.ui.Select, fonts: Array<{caption: string; value: string}>): void;
@@ -42,7 +42,7 @@ declare module goog.ui.editor.ToolbarFactory {
      *   <li>{@code value} - Value for the corresponding HTML font size (e.g. 6)
      * </ul>
      * @param {!goog.ui.Select} button Font size menu button.
-     * @param {!Array.<{caption: string, value:number}>} sizes Array of font
+     * @param {!Array<{caption: string, value:number}>} sizes Array of font
      *     size descriptors.
      */
     function addFontSizes(button: goog.ui.Select, sizes: Array<{caption: string; value: number}>): void;
@@ -85,7 +85,7 @@ declare module goog.ui.editor.ToolbarFactory {
      *       'H4')
      * </ul>
      * @param {!goog.ui.Select} button "Format block" menu button.
-     * @param {!Array.<{caption: string, command: goog.dom.TagName}>} formats Array
+     * @param {!Array<{caption: string, command: goog.dom.TagName}>} formats Array
      *     of format option descriptors.
      */
     function addFormatOptions(button: goog.ui.Select, formats: Array<{caption: string; command: goog.dom.TagName}>): void;
@@ -102,7 +102,7 @@ declare module goog.ui.editor.ToolbarFactory {
      * Creates a {@link goog.ui.Toolbar} containing the specified set of
      * toolbar buttons, and renders it into the given parent element.  Each
      * item in the {@code items} array must a {@link goog.ui.Control}.
-     * @param {!Array.<goog.ui.Control>} items Toolbar items; each must
+     * @param {!Array<goog.ui.Control>} items Toolbar items; each must
      *     be a {@link goog.ui.Control}.
      * @param {!Element} elem Toolbar parent element.
      * @param {boolean=} opt_isRightToLeft Whether the editor chrome is

@@ -30,7 +30,7 @@ declare module goog.ui {
          * @param {goog.ui.Control} separator goog.ui.MenuSeparator to decorate the
          *     element.
          * @param {Element} element Element to decorate.
-         * @return {Element} Decorated element.
+         * @return {!Element} Decorated element.
          * @override
          */
         decorate(separator: goog.ui.Control, element: Element): Element;

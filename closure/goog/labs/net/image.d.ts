@@ -10,7 +10,7 @@ declare module goog.labs.net.image {
      *     can be used to control exactly how Image instances are created, for
      *     example if they should be created in a particular document element, or
      *     have fields that will trigger CORS image fetches.
-     * @return {!goog.Promise.<!Image>} A Promise that will be resolved with the
+     * @return {!goog.Promise<!Image>} A Promise that will be resolved with the
      *     given image if the image successfully loads.
      */
     function load(uri: string, opt_image?: Image): goog.Promise<Image, any>;

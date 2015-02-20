@@ -8,7 +8,6 @@ declare module goog.html.uncheckedconversions {
      * that the value of {@code html} satisfies the SafeHtml type contract in all
      * possible program states.
      *
-     * TODO(user): Link to guidelines on appropriate uses.
      *
      * @param {!goog.string.Const} justification A constant string explaining why
      *     this use of this method is safe. May include a security review ticket
@@ -28,6 +27,24 @@ declare module goog.html.uncheckedconversions {
     function safeHtmlFromStringKnownToSatisfyTypeContract(justification: goog.string$.Const, html: string, opt_dir?: goog.i18n.bidi.Dir): goog.html.SafeHtml;
 
     /**
+     * Performs an "unchecked conversion" to SafeScript from a plain string that is
+     * known to satisfy the SafeScript type contract.
+     *
+     * IMPORTANT: Uses of this method must be carefully security-reviewed to ensure
+     * that the value of {@code script} satisfies the SafeScript type contract in
+     * all possible program states.
+     *
+     *
+     * @param {!goog.string.Const} justification A constant string explaining why
+     *     this use of this method is safe. May include a security review ticket
+     *     number.
+     * @param {string} script The string to wrap as a SafeScript.
+     * @return {!goog.html.SafeScript} The value of {@code script}, wrapped in a
+     *     SafeScript object.
+     */
+    function safeScriptFromStringKnownToSatisfyTypeContract(justification: goog.string$.Const, script: string): goog.html.SafeScript;
+
+    /**
      * Performs an "unchecked conversion" to SafeStyle from a plain string that is
      * known to satisfy the SafeStyle type contract.
      *
@@ -35,21 +52,33 @@ declare module goog.html.uncheckedconversions {
      * that the value of {@code style} satisfies the SafeUrl type contract in all
      * possible program states.
      *
-     * TODO(user): Link to guidelines on appropriate uses.
      *
      * @param {!goog.string.Const} justification A constant string explaining why
      *     this use of this method is safe. May include a security review ticket
      *     number.
      * @param {string} style The string to wrap as a SafeStyle.
-     *     contract.
      * @return {!goog.html.SafeStyle} The value of {@code style}, wrapped in a
      *     SafeStyle object.
-     * @suppress {visibility} For access to SafeStyle.create...  Note that this
-     *     use is appropriate since this method is intended to be "package private"
-     *     withing goog.html.  DO NOT call SafeStyle.create... from outside this
-     *     package; use appropriate wrappers instead.
      */
     function safeStyleFromStringKnownToSatisfyTypeContract(justification: goog.string$.Const, style: string): goog.html.SafeStyle;
+
+    /**
+     * Performs an "unchecked conversion" to SafeStyleSheet from a plain string
+     * that is known to satisfy the SafeStyleSheet type contract.
+     *
+     * IMPORTANT: Uses of this method must be carefully security-reviewed to ensure
+     * that the value of {@code styleSheet} satisfies the SafeUrl type contract in
+     * all possible program states.
+     *
+     *
+     * @param {!goog.string.Const} justification A constant string explaining why
+     *     this use of this method is safe. May include a security review ticket
+     *     number.
+     * @param {string} styleSheet The string to wrap as a SafeStyleSheet.
+     * @return {!goog.html.SafeStyleSheet} The value of {@code styleSheet}, wrapped
+     *     in a SafeStyleSheet object.
+     */
+    function safeStyleSheetFromStringKnownToSatisfyTypeContract(justification: goog.string$.Const, styleSheet: string): goog.html.SafeStyleSheet;
 
     /**
      * Performs an "unchecked conversion" to SafeUrl from a plain string that is
@@ -59,19 +88,13 @@ declare module goog.html.uncheckedconversions {
      * that the value of {@code url} satisfies the SafeUrl type contract in all
      * possible program states.
      *
-     * TODO(user): Link to guidelines on appropriate uses.
      *
      * @param {!goog.string.Const} justification A constant string explaining why
      *     this use of this method is safe. May include a security review ticket
      *     number.
      * @param {string} url The string to wrap as a SafeUrl.
-     *     contract.
      * @return {!goog.html.SafeUrl} The value of {@code url}, wrapped in a SafeUrl
      *     object.
-     * @suppress {visibility} For access to SafeUrl.create...  Note that this
-     *     use is appropriate since this method is intended to be "package private"
-     *     withing goog.html.  DO NOT call SafeUrl.create... from outside this
-     *     package; use appropriate wrappers instead.
      */
     function safeUrlFromStringKnownToSatisfyTypeContract(justification: goog.string$.Const, url: string): goog.html.SafeUrl;
 
@@ -83,19 +106,13 @@ declare module goog.html.uncheckedconversions {
      * that the value of {@code url} satisfies the TrustedResourceUrl type contract
      * in all possible program states.
      *
-     * TODO(user): Link to guidelines on appropriate uses.
      *
      * @param {!goog.string.Const} justification A constant string explaining why
      *     this use of this method is safe. May include a security review ticket
      *     number.
      * @param {string} url The string to wrap as a TrustedResourceUrl.
-     *     contract.
      * @return {!goog.html.TrustedResourceUrl} The value of {@code url}, wrapped in
      *     a TrustedResourceUrl object.
-     * @suppress {visibility} For access to TrustedResourceUrl.create...  Note that
-     *     this use is appropriate since this method is intended to be
-     *     "package private" withing goog.html.  DO NOT call SafeUrl.create... from
-     *     outside this package; use appropriate wrappers instead.
      */
     function trustedResourceUrlFromStringKnownToSatisfyTypeContract(justification: goog.string$.Const, url: string): goog.html.TrustedResourceUrl;
 }

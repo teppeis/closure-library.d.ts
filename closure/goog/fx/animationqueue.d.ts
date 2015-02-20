@@ -5,6 +5,8 @@ declare module goog.fx {
      *
      * @constructor
      * @extends {goog.fx.TransitionBase}
+     * @struct
+     * @suppress {checkStructDictInheritance}
      */
     class AnimationQueue extends goog.fx.TransitionBase {
         constructor();
@@ -33,6 +35,7 @@ declare module goog.fx {
      * Constructor for AnimationParallelQueue object.
      * @constructor
      * @extends {goog.fx.AnimationQueue}
+     * @struct
      */
     class AnimationParallelQueue extends goog.fx.AnimationQueue {
         constructor();
@@ -42,6 +45,7 @@ declare module goog.fx {
      * Constructor for AnimationSerialQueue object.
      * @constructor
      * @extends {goog.fx.AnimationQueue}
+     * @struct
      */
     class AnimationSerialQueue extends goog.fx.AnimationQueue {
         constructor();

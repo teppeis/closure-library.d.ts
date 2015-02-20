@@ -10,6 +10,7 @@ declare module goog.math {
      * @param {number} y2 Y coordinate of the second control point.
      * @param {number} x3 X coordinate of the end point.
      * @param {number} y3 Y coordinate of the end point.
+     * @struct
      * @constructor
      * @final
      */

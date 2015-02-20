@@ -3,16 +3,16 @@ declare module goog.labs.mock {
     /**
      * Error thrown when verification failed.
      *
-     * @param {Array} recordedCalls The recorded calls that didn't match the
-     *     expectation.
+     * @param {Array<!goog.labs.mock.MethodBinding_>} recordedCalls
+     *     The recorded calls that didn't match the expectation.
      * @param {!string} methodName The expected method call.
-     * @param {!Array} args The expected arguments.
+     * @param {!Array<?>} args The expected arguments.
      * @constructor
      * @extends {goog.debug.Error}
      * @final
      */
     class VerificationError extends goog.debug.Error {
-        constructor(recordedCalls: Array<any>, methodName: string, args: Array<any>);
+        constructor(recordedCalls: Array<goog.labs.mock.MethodBinding_>, methodName: string, args: Array<any>);
     }
 
     /**
@@ -39,7 +39,7 @@ declare module goog.labs.mock {
          * Adds a binding for the method name and arguments to be stubbed.
          *
          * @param {?string} methodName The name of the stubbed method.
-         * @param {!Array} args The arguments passed to the method.
+         * @param {!Array<?>} args The arguments passed to the method.
          * @param {!Function} func The stub function.
          *
          */
@@ -47,20 +47,22 @@ declare module goog.labs.mock {
         
         /**
          * Returns a stub, if defined, for the method name and arguments passed in.
+         * If there are multiple stubs for this method name and arguments, then
+         * the first one is returned and removed from the list.
          *
          * @param {string} methodName The name of the stubbed method.
-         * @param {!Array} args The arguments passed to the method.
+         * @param {!Array<?>} args The arguments passed to the method.
          * @return {Function} The stub function or undefined.
          * @protected
          */
-        findBinding(methodName: string, args: Array<any>): Function;
+        getNextBinding(methodName: string, args: Array<any>): Function;
         
         /**
          * Returns a stub, if defined, for the method name and arguments passed in as
          * parameters.
          *
          * @param {string} methodName The name of the stubbed method.
-         * @param {!Array} args The arguments passed to the method.
+         * @param {!Array<?>} args The arguments passed to the method.
          * @return {Function} The stub function or undefined.
          * @protected
          */
@@ -71,20 +73,20 @@ declare module goog.labs.mock {
          * function associated with that stub.
          *
          * @param {string} methodName The name of the method to execute.
-         * @param {...} var_args The arguments passed to the method.
+         * @param {...*} var_args The arguments passed to the method.
          * @return {*} Value returned by the stub function.
          * @protected
          */
-        executeStub(methodName: string, var_args: any): any;
+        executeStub(methodName: string, ...var_args: any[]): any;
         
         /**
          * Verify invocation of a method with specific arguments.
          *
          * @param {string} methodName The name of the method.
-         * @param {...} var_args The arguments passed.
+         * @param {...*} var_args The arguments passed.
          * @protected
          */
-        verifyInvocation(methodName: string, var_args: any): void;
+        verifyInvocation(methodName: string, ...var_args: any[]): void;
     }
 
     /**
@@ -122,7 +124,7 @@ declare module goog.labs.mock {
          * @return {!Function} The stub or the invocation logger, if defined.
          * @override
          */
-        findBinding(): Function;
+        getNextBinding(): Function;
     }
 
     /**
@@ -147,7 +149,7 @@ declare module goog.labs.mock {
      * @param {!goog.labs.mock.MockManager_}
      *   mockManager The mock manager.
      * @param {?string} name The method name.
-     * @param {!Array} args The other arguments to the method.
+     * @param {!Array<?>} args The other arguments to the method.
      *
      * @constructor
      * @struct
@@ -176,7 +178,7 @@ declare module goog.labs.mock {
      * Represents a binding between a method name, args and a stub.
      *
      * @param {?string} methodName The name of the method being stubbed.
-     * @param {!Array} args The arguments passed to the method.
+     * @param {!Array<?>} args The arguments passed to the method.
      * @param {!Function} stub The stub function to be called for the given method.
      * @constructor
      * @struct
@@ -206,7 +208,7 @@ declare module goog.labs.mock {
          * which stub to invoke for a method.
          *
          * @param {string} methodName The name of the method being stubbed.
-         * @param {!Array} args An array of arguments.
+         * @param {!Array<?>} args An array of arguments.
          * @param {boolean} isVerification Whether this is a function verification call
          *     or not.
          * @return {boolean} If it matches the stored arguments.

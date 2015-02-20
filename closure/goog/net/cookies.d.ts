@@ -111,13 +111,13 @@ declare module goog.net {
         
         /**
          * Gets the names for all the cookies.
-         * @return {Array.<string>} An array with the names of the cookies.
+         * @return {Array<string>} An array with the names of the cookies.
          */
         getKeys(): Array<string>;
         
         /**
          * Gets the values for all the cookies.
-         * @return {Array.<string>} An array with the values of the cookies.
+         * @return {Array<string>} An array with the values of the cookies.
          */
         getValues(): Array<string>;
         

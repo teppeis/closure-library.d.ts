@@ -13,7 +13,6 @@ declare module goog.debug.logRecordSerializer {
         LOGGER_NAME: string;
         SEQUENCE_NUMBER: string;
         EXCEPTION: string;
-        EXCEPTION_TEXT: string;
     }
 
     /**

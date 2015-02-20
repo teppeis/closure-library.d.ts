@@ -188,7 +188,7 @@ declare module goog.fs {
         /**
          * Create a writer for writing to the file.
          *
-         * @return {!goog.async.Deferred.<!goog.fs.FileWriter>} If an error occurs, the
+         * @return {!goog.async.Deferred<!goog.fs.FileWriter>} If an error occurs, the
          *     errback is called with a {@link goog.fs.Error}.
          */
         createWriter(): goog.async.Deferred<goog.fs.FileWriter>;
@@ -196,7 +196,7 @@ declare module goog.fs {
         /**
          * Get the file contents as a File blob.
          *
-         * @return {!goog.async.Deferred.<!File>} If an error occurs, the errback is
+         * @return {!goog.async.Deferred<!File>} If an error occurs, the errback is
          *     called with a {@link goog.fs.Error}.
          */
         file(): goog.async.Deferred<File>;

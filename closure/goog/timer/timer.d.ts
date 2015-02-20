@@ -91,5 +91,15 @@ declare module goog {
          * @param {?number} timerId a timer ID.
          */
         static clear(timerId: number): void;
+        
+        /**
+         * @param {number} delay Milliseconds to wait.
+         * @param {(RESULT|goog.Thenable<RESULT>|Thenable)=} opt_result The value
+         *     with which the promise will be resolved.
+         * @return {!goog.Promise<RESULT>} A promise that will be resolved after
+         *     the specified delay, unless it is canceled first.
+         * @template RESULT
+         */
+        static promise<RESULT>(delay: number, opt_result?: RESULT): goog.Promise<RESULT, any>;
     }
 }

@@ -142,7 +142,7 @@ declare module goog.ui {
         /**
          * Add an array of colors to the colors displayed by the color picker.
          * Does not add duplicated colors.
-         * @param {Array.<string>} colors The array of colors to be added.
+         * @param {Array<string>} colors The array of colors to be added.
          */
         addColors(colors: Array<string>): void;
         

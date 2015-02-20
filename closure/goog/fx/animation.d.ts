@@ -2,8 +2,8 @@ declare module goog.fx {
 
     /**
      * Constructor for an animation object.
-     * @param {Array.<number>} start Array for start coordinates.
-     * @param {Array.<number>} end Array for end coordinates.
+     * @param {Array<number>} start Array for start coordinates.
+     * @param {Array<number>} end Array for end coordinates.
      * @param {number} duration Length of animation in milliseconds.
      * @param {Function=} opt_acc Acceleration function, returns 0-1 for inputs 0-1.
      * @constructor
@@ -18,20 +18,6 @@ declare module goog.fx {
          * @deprecated Use goog.fx.anim.TIMEOUT.
          */
         static TIMEOUT: any;
-        
-        /**
-         * Percent of the way through the animation.
-         * @type {number}
-         * @protected
-         */
-        progress: number;
-        
-        /**
-         * Timestamp for when last frame was run.
-         * @type {?number}
-         * @protected
-         */
-        lastFrame: number;
         
         /**
          * Sets whether the animation should use "right" rather than "left" to position
@@ -128,7 +114,7 @@ declare module goog.fx {
         
         /**
          * Returns the coordinates as integers (rounded to nearest integer).
-         * @return {!Array.<number>} An array of the coordinates rounded to
+         * @return {!Array<number>} An array of the coordinates rounded to
          *     the nearest integer.
          */
         coordsAsInts(): Array<number>;

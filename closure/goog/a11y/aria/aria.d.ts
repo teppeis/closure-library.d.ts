@@ -16,7 +16,7 @@ declare module goog.a11y.aria {
     /**
      * Gets role of an element.
      * @param {!Element} element DOM element to get role of.
-     * @return {!goog.a11y.aria.Role} ARIA Role name.
+     * @return {goog.a11y.aria.Role} ARIA Role name.
      */
     function getRole(element: Element): goog.a11y.aria.Role;
 
@@ -32,10 +32,23 @@ declare module goog.a11y.aria {
      * @param {!(goog.a11y.aria.State|string)} stateName State attribute being set.
      *     Automatically adds prefix 'aria-' to the state name if the attribute is
      *     not an extra attribute.
-     * @param {string|boolean|number|!goog.array.ArrayLike.<string>} value Value
+     * @param {string|boolean|number|!Array<string>} value Value
      * for the state attribute.
      */
     function setState(element: Element, stateName: goog.a11y.aria.State, value: string): void;
+
+    /**
+     * Toggles the ARIA attribute of an element.
+     * Meant for attributes with a true/false value, but works with any attribute.
+     * If the attribute does not have a true/false value, the following rules apply:
+     * A not empty attribute will be removed.
+     * An empty attribute will be set to true.
+     * @param {!Element} el DOM node for which to set attribute.
+     * @param {!(goog.a11y.aria.State|string)} attr ARIA attribute being set.
+     *     Automatically adds prefix 'aria-' to the attribute name if the attribute
+     *     is not an extra attribute.
+     */
+    function toggleState(el: Element, attr: goog.a11y.aria.State): void;
 
     /**
      * Remove the state or property for the element.
@@ -88,7 +101,7 @@ declare module goog.a11y.aria {
      * semantics is well supported by most screen readers.
      * Only to be used internally by the ARIA library in goog.a11y.aria.*.
      * @param {!Element} element The element to assert an ARIA role set.
-     * @param {!goog.array.ArrayLike.<string>} allowedRoles The child roles of
+     * @param {!goog.array.ArrayLike<string>} allowedRoles The child roles of
      * the roles.
      */
     function assertRoleIsSetInternalUtil(element: Element, allowedRoles: goog.array.ArrayLike): void;
@@ -126,7 +139,7 @@ declare module goog.a11y.aria {
      * Only to be used internally by the ARIA library in goog.a11y.aria.*.
      * @param {!Element} element DOM node to get state from.
      * @param {!goog.a11y.aria.State} stateName State name.
-     * @return {!goog.array.ArrayLike.<string>} string Array
+     * @return {!goog.array.ArrayLike<string>} string Array
      *     value of the state attribute.
      */
     function getStringArrayStateInternalUtil(element: Element, stateName: goog.a11y.aria.State): goog.array.ArrayLike;

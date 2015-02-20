@@ -74,7 +74,7 @@ declare module goog.dom {
         /**
          * Gets an array of all text ranges this range is comprised of.  For non-multi
          * ranges, returns a single element array containing this.
-         * @return {!Array.<goog.dom.TextRange>} Array of text ranges.
+         * @return {!Array<goog.dom.TextRange>} Array of text ranges.
          */
         getTextRanges(): Array<goog.dom.TextRange>;
         

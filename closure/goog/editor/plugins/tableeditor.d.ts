@@ -90,7 +90,7 @@ declare module goog.editor.plugins.TableEditor {
         
         /**
          * Returns the cells in this selection.
-         * @return {!Array.<Element>} Cells in this selection.
+         * @return {!Array<Element>} Cells in this selection.
          */
         getCells(): Array<Element>;
         

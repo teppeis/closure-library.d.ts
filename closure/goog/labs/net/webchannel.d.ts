@@ -70,10 +70,16 @@ declare module goog.net.WebChannel {
      * when a new instance of WebChannel is created via {@link WebChannelTransport}.
      *
      * messageHeaders: custom headers to be added to every message sent to the
-     * server.
+     * server. This object is mutable, and custom headers may be changed, removed,
+     * or added during the runtime after a channel has been opened.
      *
      * messageUrlParams: custom url query parameters to be added to every message
-     * sent to the server.
+     * sent to the server. This object is mutable, and custom parameters may be
+     * changed, removed or added during the runtime after a channel has been opened.
+     *
+     * clientProtocolHeaderRequired: whether a special header should be added to
+     * each message so that the server can dispatch webchannel messages without
+     * knowing the URL path prefix. Defaults to false.
      *
      * concurrentRequestLimit: the maximum number of in-flight HTTP requests allowed
      * when SPDY is enabled. Currently we only detect SPDY in Chrome.
@@ -89,8 +95,9 @@ declare module goog.net.WebChannel {
      *
      *
      * @typedef {{
-     *   messageHeaders: (!Object.<string, string>|undefined),
-     *   messageUrlParams: (!Object.<string, string>|undefined),
+     *   messageHeaders: (!Object<string, string>|undefined),
+     *   messageUrlParams: (!Object<string, string>|undefined),
+     *   clientProtocolHeaderRequired: (boolean|undefined),
      *   concurrentRequestLimit: (number|undefined),
      *   supportsCrossDomainXhr: (boolean|undefined),
      *   testUrl: (string|undefined)
@@ -99,6 +106,7 @@ declare module goog.net.WebChannel {
     interface Options {
         messageHeaders: Object;
         messageUrlParams: Object;
+        clientProtocolHeaderRequired: boolean;
         concurrentRequestLimit: number;
         supportsCrossDomainXhr: boolean;
         testUrl: string;
@@ -107,7 +115,7 @@ declare module goog.net.WebChannel {
     /**
      * Types that are allowed as message data.
      *
-     * @typedef {(ArrayBuffer|Blob|Object.<string, string>|Array)}
+     * @typedef {(ArrayBuffer|Blob|Object<string, string>|Array)}
      */
     interface MessageData {
     }
@@ -147,10 +155,10 @@ declare module goog.net.WebChannel {
     }
 
     /**
-     * The readonly runtime properties of the WebChannel instance.
+     * The runtime properties of the WebChannel instance.
      *
-     * This class is defined for debugging and monitoring purposes, and for
-     * optimization functions that the application may choose to manage by itself.
+     * This class is defined for debugging and monitoring purposes, as well as for
+     * runtime functions that the application may choose to manage by itself.
      *
      * @interface
      */
@@ -194,5 +202,25 @@ declare module goog.net.WebChannel {
          * ack from the server and therefore remain in the buffer.
          */
         getNonAckedMessageCount(): number;
+        
+        /**
+         * @return {number} The last HTTP status code received by the channel.
+         */
+        getLastStatusCode(): number;
     }
+
+    /**
+     * A special header to indicate to the server what messaging protocol
+     * each HTTP message is speaking.
+     *
+     * @type {string}
+     */
+    var X_CLIENT_PROTOCOL: string;
+
+    /**
+     * The value for x-client-protocol when the messaging protocol is WebChannel.
+     *
+     * @type {string}
+     */
+    var X_CLIENT_PROTOCOL_WEB_CHANNEL: string;
 }

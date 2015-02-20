@@ -6,6 +6,7 @@ declare module goog.math {
      *
      * @param {number} x The x coordinate for the vector.
      * @param {number} y The y coordinate for the vector.
+     * @struct
      * @constructor
      * @extends {goog.math.Coordinate}
      */

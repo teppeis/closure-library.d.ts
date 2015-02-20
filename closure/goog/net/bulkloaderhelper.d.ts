@@ -2,7 +2,7 @@ declare module goog.net {
 
     /**
      * Helper class used to load multiple URIs.
-     * @param {Array.<string|goog.Uri>} uris The URIs to load.
+     * @param {Array<string|goog.Uri>} uris The URIs to load.
      * @constructor
      * @extends {goog.Disposable}
      * @final
@@ -19,13 +19,13 @@ declare module goog.net {
         
         /**
          * Gets the URIs.
-         * @return {Array.<string|goog.Uri>} The URIs.
+         * @return {Array<string|goog.Uri>} The URIs.
          */
         getUris(): Array<string>;
         
         /**
          * Gets the response texts.
-         * @return {Array.<string>} The response texts.
+         * @return {Array<string>} The response texts.
          */
         getResponseTexts(): Array<string>;
         

@@ -6,6 +6,12 @@ declare module goog {
      * -- so<code>goog.Uri.parse('/foo%20bar').getPath()</code> will return the
      * decoded path, <code>/foo bar</code>.
      *
+     * Reserved characters (see RFC 3986 section 2.2) can be present in
+     * their percent-encoded form in scheme, domain, and path URI components and
+     * will not be auto-decoded. For example:
+     * <code>goog.Uri.parse('rel%61tive/path%2fto/resource').getPath()</code> will
+     * return <code>relative/path%2fto/resource</code>.
+     *
      * The constructor accepts an optional unparsed, raw URI string.  The parser
      * is relaxed, so special characters that aren't escaped but don't cause
      * ambiguities will not cause parse failures.
@@ -20,6 +26,7 @@ declare module goog {
      * the case of the parameter name.
      *
      * @constructor
+     * @struct
      */
     class Uri {
         constructor(opt_uri?: any, opt_ignoreCase?: boolean);
@@ -65,7 +72,7 @@ declare module goog {
          * Additionally, if relative URI has a non-empty path, all ".." and "."
          * segments will be resolved, as described in RFC 3986.
          *
-         * @param {goog.Uri} relativeUri The relative URI to resolve.
+         * @param {!goog.Uri} relativeUri The relative URI to resolve.
          * @return {!goog.Uri} The resolved URI.
          */
         resolve(relativeUri: goog.Uri): goog.Uri;
@@ -240,7 +247,7 @@ declare module goog {
          * Returns the value<b>s</b> for a given cgi parameter as a list of decoded
          * query parameter values.
          * @param {string} name The parameter to get values for.
-         * @return {!Array} The values for a given cgi parameter as a list of
+         * @return {!Array<?>} The values for a given cgi parameter as a list of
          *     decoded query parameter values.
          */
         getParameterValues(name: string): Array<any>;
@@ -275,7 +282,7 @@ declare module goog {
         
         /**
          * Returns true if this has the same domain as that of uri2.
-         * @param {goog.Uri} uri2 The URI object to compare to.
+         * @param {!goog.Uri} uri2 The URI object to compare to.
          * @return {boolean} true if same domain; false otherwise.
          */
         hasSameDomainAs(uri2: goog.Uri): boolean;
@@ -402,6 +409,7 @@ declare module goog.Uri {
      * @param {boolean=} opt_ignoreCase If true, ignore the case of the parameter
      *     name in #get.
      * @constructor
+     * @struct
      * @final
      */
     class QueryData {
@@ -410,7 +418,7 @@ declare module goog.Uri {
         /**
          * Creates a new query data instance from a map of names and values.
          *
-         * @param {!goog.structs.Map|!Object} map Map of string parameter
+         * @param {!goog.structs.Map<string, ?>|!Object} map Map of string parameter
          *     names to parameter value. If parameter value is an array, it is
          *     treated as if the key maps to each individual value in the
          *     array.
@@ -420,15 +428,15 @@ declare module goog.Uri {
          *     name in #get.
          * @return {!goog.Uri.QueryData} The populated query data instance.
          */
-        static createFromMap(map: goog.structs.Map<any, any>, opt_uri?: goog.Uri, opt_ignoreCase?: boolean): goog.Uri.QueryData;
+        static createFromMap(map: goog.structs.Map<string, any>, opt_uri?: goog.Uri, opt_ignoreCase?: boolean): goog.Uri.QueryData;
         
         /**
          * Creates a new query data instance from parallel arrays of parameter names
          * and values. Allows for duplicate parameter names. Throws an error if the
          * lengths of the arrays differ.
          *
-         * @param {Array.<string>} keys Parameter names.
-         * @param {Array} values Parameter values.
+         * @param {!Array<string>} keys Parameter names.
+         * @param {!Array<?>} values Parameter values.
          * @param {goog.Uri=} opt_uri URI object that should have its cache
          *     invalidated when this object updates.
          * @param {boolean=} opt_ignoreCase If true, ignore the case of the parameter
@@ -484,7 +492,7 @@ declare module goog.Uri {
         /**
          * Returns all the keys of the parameters. If a key is used multiple times
          * it will be included multiple times in the returned array
-         * @return {!Array.<string>} All the keys of the parameters.
+         * @return {!Array<string>} All the keys of the parameters.
          */
         getKeys(): Array<string>;
         
@@ -493,7 +501,7 @@ declare module goog.Uri {
          * data has no such key this will return an empty array. If no key is given
          * all values wil be returned.
          * @param {string=} opt_key The name of the parameter to get the values for.
-         * @return {!Array} All the values of the parameters with the given name.
+         * @return {!Array<?>} All the values of the parameters with the given name.
          */
         getValues(opt_key?: string): Array<any>;
         
@@ -521,7 +529,7 @@ declare module goog.Uri {
          * Sets the values for a key. If the key already exists, this will
          * override all of the existing values that correspond to the key.
          * @param {string} key The key to set values for.
-         * @param {Array} values The values to set.
+         * @param {!Array<?>} values The values to set.
          */
         setValues(key: string, values: Array<any>): void;
         
@@ -538,7 +546,7 @@ declare module goog.Uri {
         
         /**
          * Removes all keys that are not in the provided list. (Modifies this object.)
-         * @param {Array.<string>} keys The desired keys.
+         * @param {Array<string>} keys The desired keys.
          * @return {!goog.Uri.QueryData} a reference to this object.
          */
         filterKeys(keys: Array<string>): goog.Uri.QueryData;
@@ -561,8 +569,8 @@ declare module goog.Uri {
          * Extends a query data object with another query data or map like object. This
          * operates 'in-place', it does not create a new QueryData object.
          *
-         * @param {...(goog.Uri.QueryData|goog.structs.Map|Object)} var_args The object
-         *     from which key value pairs will be copied.
+         * @param {...(goog.Uri.QueryData|goog.structs.Map<?, ?>|Object)} var_args
+         *     The object from which key value pairs will be copied.
          */
         extend(...var_args: goog.Uri.QueryData[]): void;
     }

@@ -26,6 +26,15 @@ declare module goog.async.run {
     }
 
     /**
+     * Forces goog.async.run to use nextTick instead of Promise.
+     *
+     * This should only be done in unit tests. It's useful because MockClock
+     * replaces nextTick, but not the browser Promise implementation, so it allows
+     * Promise-based code to be tested with MockClock.
+     */
+    function forceNextTick(): void;
+
+    /**
      * Run any pending goog.async.run work items. This function is not intended
      * for general use, but for use by entry point handlers to run items ahead of
      * goog.async.nextTick.

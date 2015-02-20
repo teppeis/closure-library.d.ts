@@ -61,7 +61,7 @@ declare module goog.ui.ac {
          *
          * Default value: {@link goog.ui.ac.ArrayMatcher.getMatchesForRows}.
          *
-         * @param {function(string, number, !Array.<!Object>): !Array.<!Object>}
+         * @param {function(string, number, !Array<!Object>): !Array<!Object>}
          *     localMatcher
          */
         setLocalMatcher(localMatcher: (arg0: string, arg1: number, arg2: Array<Object>) => Array<Object>): void;

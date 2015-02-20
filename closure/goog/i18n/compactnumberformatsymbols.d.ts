@@ -36,11 +36,6 @@ declare module goog.i18n {
     var CompactNumberFormatSymbols_az: any;
 
     /**
-     * Compact number formatting symbols for locale az_Cyrl_AZ.
-     */
-    var CompactNumberFormatSymbols_az_Cyrl_AZ: any;
-
-    /**
      * Compact number formatting symbols for locale az_Latn_AZ.
      */
     var CompactNumberFormatSymbols_az_Latn_AZ: any;
@@ -439,6 +434,16 @@ declare module goog.i18n {
      * Compact number formatting symbols for locale fr_YT.
      */
     var CompactNumberFormatSymbols_fr_YT: any;
+
+    /**
+     * Compact number formatting symbols for locale ga.
+     */
+    var CompactNumberFormatSymbols_ga: any;
+
+    /**
+     * Compact number formatting symbols for locale ga_IE.
+     */
+    var CompactNumberFormatSymbols_ga_IE: any;
 
     /**
      * Compact number formatting symbols for locale gl.

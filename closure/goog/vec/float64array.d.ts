@@ -30,7 +30,7 @@ declare module goog.vec {
         
         /**
          * Sets elements of the array.
-         * @param {Array.<number>|Float64Array} values The array of values.
+         * @param {Array<number>|Float64Array} values The array of values.
          * @param {number=} opt_offset The offset in this array to start.
          */
         set(values: Array<number>, opt_offset?: number): void;

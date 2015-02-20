@@ -22,7 +22,7 @@ declare module goog.ui.style.app {
          * Array of arrays of CSS classes that we want composite classes added and
          * removed for in IE6 and lower as a workaround for lack of multi-class CSS
          * selector support.
-         * @type {Array.<Array.<string>>}
+         * @type {Array<Array<string>>}
          */
         static IE6_CLASS_COMBINATIONS: Array<Array<string>>;
         
@@ -84,7 +84,7 @@ declare module goog.ui.style.app {
          * Inserts dropdown element as last child of existing content.
          * @param {goog.ui.ControlContent} content Text caption or DOM structure.
          * @param {goog.dom.DomHelper} dom DOM helper, used for document ineraction.
-         * @return {Array.<Node>} DOM structure to be set as the button's content.
+         * @return {Array<Node>} DOM structure to be set as the button's content.
          */
         createContentWithDropdown(content: goog.ui.ControlContent, dom: goog.dom.DomHelper): Array<Node>;
         

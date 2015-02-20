@@ -7,7 +7,7 @@ declare module goog.structs {
      *
      * @param {Function=} opt_comparator Function used to order the tree's nodes.
      * @constructor
-     * @implements {goog.structs.Collection.<T>}
+     * @implements {goog.structs.Collection<T>}
      * @final
      * @template T
      */
@@ -53,6 +53,19 @@ declare module goog.structs {
         contains(value: T): boolean;
         
         /**
+         * Returns the index (in an in-order traversal) of the node in the tree with
+         * the specified value. For example, the minimum value in the tree will
+         * return an index of 0 and the maximum will return an index of n - 1 (where
+         * n is the number of nodes in the tree).  If the value is not found then -1
+         * is returned.
+         *
+         * @param {T} value Value in the tree whose in-order index is returned.
+         * @return {!number} The in-order index of the given value in the
+         *     tree or -1 if the value is not found.
+         */
+        indexOf(value: T): number;
+        
+        /**
          * Returns the number of values stored in the tree.
          *
          * @return {number} The number of values stored in the tree.
@@ -96,7 +109,7 @@ declare module goog.structs {
         /**
          * Inserts the values stored in the tree into a new Array and returns the Array.
          *
-         * @return {!Array.<T>} An array containing all of the trees values in sorted
+         * @return {!Array<T>} An array containing all of the trees values in sorted
          *     order.
          */
         getValues(): Array<T>;
@@ -135,7 +148,7 @@ declare module goog.structs.AvlTree {
      * defaults to 1 and its children default to null.
      *
      * @param {T} value Value to store in the node.
-     * @param {goog.structs.AvlTree.Node.<T>=} opt_parent Optional parent node.
+     * @param {goog.structs.AvlTree.Node<T>=} opt_parent Optional parent node.
      * @constructor
      * @final
      * @template T
@@ -146,14 +159,14 @@ declare module goog.structs.AvlTree {
         /**
          * The node's left child. Null if the node does not have a left child.
          *
-         * @type {?goog.structs.AvlTree.Node.<T>}
+         * @type {?goog.structs.AvlTree.Node<T>}
          */
         left: goog.structs.AvlTree.Node<T>;
         
         /**
          * The node's right child. Null if the node does not have a right child.
          *
-         * @type {?goog.structs.AvlTree.Node.<T>}
+         * @type {?goog.structs.AvlTree.Node<T>}
          */
         right: goog.structs.AvlTree.Node<T>;
         

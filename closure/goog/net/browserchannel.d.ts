@@ -5,7 +5,7 @@ declare module goog.net {
      *
      * @param {string=} opt_clientVersion An application-specific version number
      *        that is sent to the server when connected.
-     * @param {Array.<string>=} opt_firstTestResults Previously determined results
+     * @param {Array<string>=} opt_firstTestResults Previously determined results
      *        of the first browser channel test.
      * @param {boolean=} opt_secondTestResults Previously determined results
      *        of the second browser channel test.
@@ -367,7 +367,7 @@ declare module goog.net {
         
         /**
          * Gets the results for the first browser channel test
-         * @return {Array.<string>} The results.
+         * @return {Array<string>} The results.
          */
         getFirstTestResults(): Array<string>;
         
@@ -650,7 +650,7 @@ declare module goog.net.BrowserChannel {
         /**
          * Callback handler for when a batch of response arrays is received from the
          * server.
-         * @type {?function(!goog.net.BrowserChannel, !Array.<!Array>)}
+         * @type {?function(!goog.net.BrowserChannel, !Array<!Array<?>>)}
          */
         channelHandleMultipleArrays: (arg0: goog.net.BrowserChannel, arg1: Array<Array<any>>) => any;
         
@@ -676,7 +676,7 @@ declare module goog.net.BrowserChannel {
          * New input is available for the application to process.
          *
          * @param {goog.net.BrowserChannel} browserChannel The browser channel.
-         * @param {Array} array The data array.
+         * @param {Array<?>} array The data array.
          */
         channelHandleArray(browserChannel: goog.net.BrowserChannel, array: Array<any>): void;
         
@@ -684,7 +684,7 @@ declare module goog.net.BrowserChannel {
          * Indicates maps were successfully sent on the BrowserChannel.
          *
          * @param {goog.net.BrowserChannel} browserChannel The browser channel.
-         * @param {Array.<goog.net.BrowserChannel.QueuedMap>} deliveredMaps The
+         * @param {Array<goog.net.BrowserChannel.QueuedMap>} deliveredMaps The
          *     array of maps that have been delivered to the server. This is a direct
          *     reference to the internal BrowserChannel array, so a copy should be made
          *     if the caller desires a reference to the data.
@@ -703,10 +703,10 @@ declare module goog.net.BrowserChannel {
          * Indicates the BrowserChannel is closed. Also notifies about which maps,
          * if any, that may not have been delivered to the server.
          * @param {goog.net.BrowserChannel} browserChannel The browser channel.
-         * @param {Array.<goog.net.BrowserChannel.QueuedMap>=} opt_pendingMaps The
+         * @param {Array<goog.net.BrowserChannel.QueuedMap>=} opt_pendingMaps The
          *     array of pending maps, which may or may not have been delivered to the
          *     server.
-         * @param {Array.<goog.net.BrowserChannel.QueuedMap>=} opt_undeliveredMaps
+         * @param {Array<goog.net.BrowserChannel.QueuedMap>=} opt_undeliveredMaps
          *     The array of undelivered maps, which have definitely not been delivered
          *     to the server.
          */

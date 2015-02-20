@@ -124,6 +124,7 @@ declare module goog.events {
         MAC_WK_CMD_LEFT: number;
         MAC_WK_CMD_RIGHT: number;
         WIN_IME: number;
+        VK_NONAME: number;
         PHANTOM: number;
     }
 }

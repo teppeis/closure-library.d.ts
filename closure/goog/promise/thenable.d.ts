@@ -5,7 +5,7 @@ declare module goog {
      * http://promisesaplus.com for interop with {@see goog.Promise}.
      *
      * @interface
-     * @extends {IThenable.<TYPE>}
+     * @extends {IThenable<TYPE>}
      * @template TYPE
      */
     interface Thenable<TYPE> extends IThenable<TYPE> {
@@ -25,7 +25,7 @@ declare module goog {
          * with the return value of the callback or thrown value.
          *
          * @param {?(function(this:THIS, TYPE):
-         *             (RESULT|IThenable.<RESULT>|Thenable))=} opt_onFulfilled A
+         *             (RESULT|IThenable<RESULT>|Thenable))=} opt_onFulfilled A
          *     function that will be invoked with the fulfillment value if the Promise
          *     is fullfilled.
          * @param {?(function(this:THIS, *): *)=} opt_onRejected A function that will
@@ -33,7 +33,7 @@ declare module goog {
          * @param {THIS=} opt_context An optional context object that will be the
          *     execution context for the callbacks. By default, functions are executed
          *     with the default this.
-         * @return {!goog.Promise.<RESULT>} A new Promise that will receive the result
+         * @return {!goog.Promise<RESULT>} A new Promise that will receive the result
          *     of the fulfillment or rejection callback.
          * @template RESULT,THIS
          */
@@ -60,7 +60,7 @@ declare module goog.Thenable {
      * Exports a 'then' method on the constructor prototype, so that the objects
      * also implement the extern {@see goog.Thenable} interface for interop with
      * other Promise implementations.
-     * @param {function(new:goog.Thenable,...[?])} ctor The class constructor. The
+     * @param {function(new:goog.Thenable,...?)} ctor The class constructor. The
      *     corresponding class must have already implemented the interface.
      */
     function addImplementation(ctor: (...arg0: any[]) => any): void;

@@ -22,7 +22,7 @@ declare module goog.ui.style.app {
          * Array of arrays of CSS classes that we want composite classes added and
          * removed for in IE6 and lower as a workaround for lack of multi-class CSS
          * selector support.
-         * @type {Array.<Array.<string>>}
+         * @type {Array<Array<string>>}
          */
         static IE6_CLASS_COMBINATIONS: Array<Array<string>>;
     }

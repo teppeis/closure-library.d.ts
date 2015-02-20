@@ -48,7 +48,7 @@ declare module goog.ui.editor {
         /**
          * Returns the event handler object for the editor toolbar.  Useful for classes
          * that extend {@code goog.ui.editor.ToolbarController}.
-         * @return {!goog.events.EventHandler.<T>} The event handler object.
+         * @return {!goog.events.EventHandler<T>} The event handler object.
          * @protected
          * @this T
          * @template T

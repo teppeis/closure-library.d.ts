@@ -3,7 +3,7 @@ declare module goog.crypt {
     /**
      * @constructor
      * @param {!goog.crypt.Hash} hasher An object to serve as a hash function.
-     * @param {Array.<number>} key The secret key to use to calculate the hmac.
+     * @param {Array<number>} key The secret key to use to calculate the hmac.
      *     Should be an array of not more than {@code blockSize} integers in
            {0, 255}.
      * @param {number=} opt_blockSize Optional. The block size {@code hasher} uses.
@@ -19,8 +19,8 @@ declare module goog.crypt {
         /**
          * Calculates an HMAC for a given message.
          *
-         * @param {Array.<number>} message  An array of integers in {0, 255}.
-         * @return {!Array.<number>} the digest of the given message.
+         * @param {Array<number>|Uint8Array|string} message  Data to Hmac.
+         * @return {!Array<number>} the digest of the given message.
          */
         getHmac(message: Array<number>): Array<number>;
     }

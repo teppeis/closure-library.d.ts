@@ -56,13 +56,13 @@ declare module goog.ui {
         
         /**
          * Sets the visibility of the modal popup box and focus to the popup.
-         * Lazily renders the component if needed.
          * @param {boolean} visible Whether the modal popup should be visible.
          */
         setVisible(visible: boolean): void;
         
         /**
-         * Sets aria-hidden of the rest of the page to restrict keyboard focus.
+         * Sets aria-hidden on the rest of the page to restrict screen reader focus.
+         * Top-level elements with an explicit aria-hidden state are not altered.
          * @param {boolean} hide Whether to hide or show the rest of the page.
          * @protected
          */

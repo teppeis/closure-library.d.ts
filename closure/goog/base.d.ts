@@ -6,16 +6,6 @@ declare module goog {
     var global: any;
 
     /**
-     * @define {boolean} DEBUG is provided as a convenience so that debugging code
-     * that should not be included in a production js_binary can be easily stripped
-     * by specifying --define goog.DEBUG=false to the JSCompiler. For example, most
-     * toString() methods should be declared inside an "if (goog.DEBUG)" conditional
-     * because they are generally used for debugging purposes and it is difficult
-     * for the JSCompiler to statically determine whether they are used.
-     */
-    var DEBUG: any;
-
-    /**
      * Path for included scripts.
      * @type {string}
      */
@@ -28,6 +18,12 @@ declare module goog {
     var DEPENDENCIES_ENABLED: any;
 
     /**
+     * Name for unsealable tag property.
+     * @const @private {string}
+     */
+    var UNSEALABLE_CONSTRUCTOR_PROPERTY_: any;
+
+    /**
      * Returns true if the specified value is not undefined.
      * WARNING: Do not use this to test if an object has a property. Use the in
      * operator instead.
@@ -38,11 +34,11 @@ declare module goog {
     function isDef(val: any): boolean;
 
     /**
-     * Defines a named value. In uncompiled mode, the value is retreived from
+     * Defines a named value. In uncompiled mode, the value is retrieved from
      * CLOSURE_DEFINES or CLOSURE_UNCOMPILED_DEFINES if the object is defined and
      * has the property specified, and otherwise used the defined defaultValue.
-     * When compiled, the default can be overridden using compiler command-line
-     * options.
+     * When compiled the default can be overridden using the compiler
+     * options or the value set in the CLOSURE_DEFINES object.
      *
      * @param {string} name The distinguished name to provide.
      * @param {string|number|boolean} defaultValue
@@ -50,16 +46,60 @@ declare module goog {
     function define(name: string, defaultValue: string): void;
 
     /**
-     * Creates object stubs for a namespace.  The presence of one or more
-     * goog.provide() calls indicate that the file defines the given
-     * objects/namespaces.  Provided objects must not be null or undefined.
-     * Build tools also scan for provide/require statements
+     * Defines a namespace in Closure.
+     *
+     * A namespace may only be defined once in a codebase. It may be defined using
+     * goog.provide() or goog.module().
+     *
+     * The presence of one or more goog.provide() calls in a file indicates
+     * that the file defines the given objects/namespaces.
+     * Provided symbols must not be null or undefined.
+     *
+     * In addition, goog.provide() creates the object stubs for a namespace
+     * (for example, goog.provide("goog.foo.bar") will create the object
+     * goog.foo.bar if it does not already exist).
+     *
+     * Build tools also scan for provide/require/module statements
      * to discern dependencies, build dependency files (see deps.js), etc.
+     *
      * @see goog.require
+     * @see goog.module
      * @param {string} name Namespace provided by this file in the form
      *     "goog.package.part".
      */
     function provide(name: string): void;
+
+    /**
+     * Defines a module in Closure.
+     *
+     * Marks that this file must be loaded as a module and claims the namespace.
+     *
+     * A namespace may only be defined once in a codebase. It may be defined using
+     * goog.provide() or goog.module().
+     *
+     * goog.module() has three requirements:
+     * - goog.module may not be used in the same file as goog.provide.
+     * - goog.module must be the first statement in the file.
+     * - only one goog.module is allowed per file.
+     *
+     * When a goog.module annotated file is loaded, it is enclosed in
+     * a strict function closure. This means that:
+     * - any variables declared in a goog.module file are private to the file
+     * (not global), though the compiler is expected to inline the module.
+     * - The code must obey all the rules of "strict" JavaScript.
+     * - the file will be marked as "use strict"
+     *
+     * NOTE: unlike goog.provide, goog.module does not declare any symbols by
+     * itself. If declared symbols are desired, use
+     * goog.module.declareLegacyNamespace().
+     *
+     *
+     * See the public goog.module proposal: http://goo.gl/Va1hin
+     *
+     * @param {string} name Namespace provided by this file in the form
+     *     "goog.package.part", is expected but not required.
+     */
+    function module(name: string): void;
 
     /**
      * Marks that the current file should only be used for testing, and never for
@@ -108,7 +148,7 @@ declare module goog {
     /**
      * Globalizes a whole namespace, such as goog or goog.lang.
      *
-     * @param {Object} obj The namespace to globalize.
+     * @param {!Object} obj The namespace to globalize.
      * @param {Object=} opt_global The object to add the properties to.
      * @deprecated Properties may be explicitly exported to the global scope, but
      *     this should no longer be done in bulk.
@@ -118,12 +158,14 @@ declare module goog {
     /**
      * Adds a dependency from a file to the files it requires.
      * @param {string} relPath The path to the js file.
-     * @param {Array} provides An array of strings with the names of the objects
-     *                         this file provides.
-     * @param {Array} requires An array of strings with the names of the objects
-     *                         this file requires.
+     * @param {!Array<string>} provides An array of strings with
+     *     the names of the objects this file provides.
+     * @param {!Array<string>} requires An array of strings with
+     *     the names of the objects this file requires.
+     * @param {boolean=} opt_isModule Whether this dependency must be loaded as
+     *     a module as declared by goog.module.
      */
-    function addDependency(relPath: string, provides: Array<any>, requires: Array<any>): void;
+    function addDependency(relPath: string, provides: Array<string>, requires: Array<string>, opt_isModule?: boolean): void;
 
     /**
      * Implements a system for the dynamic resolution of dependencies that works in
@@ -132,8 +174,10 @@ declare module goog {
      * @see goog.provide
      * @param {string} name Namespace to include (as was given in goog.provide()) in
      *     the form "goog.package.part".
+     * @return {?} If called within a goog.module file, the associated namespace or
+     *     module otherwise null.
      */
-    function require(name: string): void;
+    function require(name: string): any;
 
     /**
      * Null function used for default values of callbacks, etc.
@@ -207,7 +251,8 @@ declare module goog {
     /**
      * Returns true if the object looks like an array. To qualify as array like
      * the value needs to be either a NodeList or an object with a Number length
-     * property.
+     * property. As a special case, a function value is not array like, because its
+     * length property is fixed to correspond to the number of expected arguments.
      * @param {?} val Variable to test.
      * @return {boolean} Whether variable is an array.
      */
@@ -271,12 +316,12 @@ declare module goog {
     function getUid(obj: Object): number;
 
     /**
-     * Whether the given object is alreay assigned a unique ID.
+     * Whether the given object is already assigned a unique ID.
      *
      * This does not modify the object.
      *
-     * @param {Object} obj The object to check.
-     * @return {boolean} Whether there an assigned unique id for the object.
+     * @param {!Object} obj The object to check.
+     * @return {boolean} Whether there is an assigned unique id for the object.
      */
     function hasUid(obj: Object): boolean;
 
@@ -457,7 +502,7 @@ declare module goog {
      * </code>
      *
      * @param {string} str Translatable string, places holders in the form {$foo}.
-     * @param {Object=} opt_values Map of place holder name to value.
+     * @param {Object<string, string>=} opt_values Maps place holder name to value.
      * @return {string} message with placeholders filled.
      */
     function getMsg(str: string, opt_values?: Object): string;
@@ -518,25 +563,15 @@ declare module goog {
      * Usage:
      * <pre>
      * function ParentClass(a, b) { }
-     * ParentClass.prototype.foo = function(a) { }
+     * ParentClass.prototype.foo = function(a) { };
      *
      * function ChildClass(a, b, c) {
-     *   goog.base(this, a, b);
+     *   ChildClass.base(this, 'constructor', a, b);
      * }
      * goog.inherits(ChildClass, ParentClass);
      *
      * var child = new ChildClass('a', 'b', 'see');
      * child.foo(); // This works.
-     * </pre>
-     *
-     * In addition, a superclass' implementation of a method can be invoked as
-     * follows:
-     *
-     * <pre>
-     * ChildClass.prototype.foo = function(a) {
-     *   ChildClass.superClass_.foo.call(this, a);
-     *   // Other code here.
-     * };
      * </pre>
      *
      * @param {Function} childCtor Child class.
@@ -576,9 +611,92 @@ declare module goog {
      * uncompiled code - in compiled code the calls will be inlined and the aliases
      * applied.  In uncompiled code the function is simply run since the aliases as
      * written are valid JavaScript.
+     *
+     *
      * @param {function()} fn Function to call.  This function can contain aliases
      *     to namespaces (e.g. "var dom = goog.dom") or classes
      *     (e.g. "var Timer = goog.Timer").
      */
     function scope(fn: () => any): void;
+
+    /**
+     * Creates a restricted form of a Closure "class":
+     *   - from the compiler's perspective, the instance returned from the
+     *     constructor is sealed (no new properties may be added).  This enables
+     *     better checks.
+     *   - the compiler will rewrite this definition to a form that is optimal
+     *     for type checking and optimization (initially this will be a more
+     *     traditional form).
+     *
+     * @param {Function} superClass The superclass, Object or null.
+     * @param {goog.defineClass.ClassDescriptor} def
+     *     An object literal describing
+     *     the class.  It may have the following properties:
+     *     "constructor": the constructor function
+     *     "statics": an object literal containing methods to add to the constructor
+     *        as "static" methods or a function that will receive the constructor
+     *        function as its only parameter to which static properties can
+     *        be added.
+     *     all other properties are added to the prototype.
+     * @return {!Function} The class constructor.
+     */
+    function defineClass(superClass: Function, def: goog.defineClass.ClassDescriptor): Function;
+
+    /**
+     * Sealing classes breaks the older idiom of assigning properties on the
+     * prototype rather than in the constructor.  As such, goog.defineClass
+     * must not seal subclasses of these old-style classes until they are fixed.
+     * Until then, this marks a class as "broken", instructing defineClass
+     * not to seal subclasses.
+     * @param {!Function} ctr The legacy constructor to tag as unsealable.
+     */
+    function tagUnsealableClass(ctr: Function): void;
+}
+
+declare module goog.module {
+
+    /**
+     * @param {string} name The module identifier.
+     * @return {?} The module exports for an already loaded module or null.
+     *
+     * Note: This is not an alternative to goog.require, it does not
+     * indicate a hard dependency, instead it is used to indicate
+     * an optional dependency or to access the exports of a module
+     * that has already been loaded.
+     * @suppress {missingProvide}
+     */
+    function get(name: string): any;
+
+    /**
+     * Indicate that a module's exports that are known test methods should
+     * be copied to the global object.  This makes the test methods visible to
+     * test runners that inspect the global object.
+     *
+     * TODO(johnlenz): Make the test framework aware of goog.module so
+     * that this isn't necessary. Alternately combine this with goog.setTestOnly
+     * to minimize boiler plate.
+     * @suppress {missingProvide}
+     */
+    function declareTestMethods(): void;
+
+    /**
+     * Provide the module's exports as a globally accessible object under the
+     * module's declared name.  This is intended to ease migration to goog.module
+     * for files that have existing usages.
+     * @suppress {missingProvide}
+     */
+    function declareLegacyNamespace(): void;
+}
+
+declare module goog.defineClass {
+
+    /**
+     * @typedef {
+     *     !Object|
+     *     {constructor:!Function}|
+     *     {constructor:!Function, statics:(Object|function(Function):void)}}
+     * @suppress {missingProvide}
+     */
+    interface ClassDescriptor {
+    }
 }

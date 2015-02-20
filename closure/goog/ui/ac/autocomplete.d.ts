@@ -79,7 +79,7 @@ declare module goog.ui.ac {
         /**
          * Sets the current token (without changing the rendered autocompletion).
          *
-         * NOTE(user): This method will likely go away when we figure
+         * NOTE(chrishenry): This method will likely go away when we figure
          * out a better API.
          *
          * @param {?string} token The new token.
@@ -96,7 +96,7 @@ declare module goog.ui.ac {
         getSuggestion(index: number): Object;
         
         /**
-         * @return {!Array} The current autocomplete suggestion items.
+         * @return {!Array<?>} The current autocomplete suggestion items.
          */
         getAllSuggestions(): Array<any>;
         
@@ -109,17 +109,6 @@ declare module goog.ui.ac {
          * @return {number} The id (not index!) of the currently highlighted row.
          */
         getHighlightedId(): number;
-        
-        /**
-         * Sets the current highlighted row to the given id (not index). Note
-         * that this does not change any rendering.
-         *
-         * NOTE(user): This method will likely go away when we figure
-         * out a better API.
-         *
-         * @param {number} id The new highlighted row id.
-         */
-        setHighlightedIdInternal(id: number): void;
         
         /**
          * Generic event handler that handles any events this object is listening to.
@@ -267,7 +256,7 @@ declare module goog.ui.ac {
         
         /**
          * Renders the rows and adds highlighting.
-         * @param {!Array} rows Set of data that match the given token.
+         * @param {!Array<?>} rows Set of data that match the given token.
          * @param {(boolean|goog.ui.ac.RenderOptions)=} opt_options If true,
          *     keeps the currently hilited (by index) element hilited. If false not.
          *     Otherwise a RenderOptions object.

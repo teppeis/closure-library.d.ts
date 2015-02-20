@@ -50,18 +50,18 @@ declare module goog.structs {
          */
         clear(): void;
         
-        /** @return {!Array.<T>} The values in the buffer. */
+        /** @return {!Array<T>} The values in the buffer. */
         getValues(): Array<T>;
         
         /**
          * Returns the newest values in the buffer up to {@code count}.
          * @param {number} maxCount The maximum number of values to get. Should be a
          *     positive number.
-         * @return {!Array.<T>} The newest values in the buffer up to {@code count}.
+         * @return {!Array<T>} The newest values in the buffer up to {@code count}.
          */
         getNewestValues(maxCount: number): Array<T>;
         
-        /** @return {!Array.<number>} The indexes in the buffer. */
+        /** @return {!Array<number>} The indexes in the buffer. */
         getKeys(): Array<number>;
         
         /**

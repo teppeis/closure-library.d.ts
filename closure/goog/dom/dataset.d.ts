@@ -32,7 +32,7 @@ declare module goog.dom.dataset {
      *
      * @param {Element} element DOM node to get the custom data attribute from.
      * @param {string} key Key for the custom data attribute.
-     * @return {boolean} Whether the attibute exists.
+     * @return {boolean} Whether the attribute exists.
      */
     function has(element: Element, key: string): boolean;
 

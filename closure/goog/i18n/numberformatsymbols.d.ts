@@ -107,12 +107,6 @@ declare module goog.i18n {
     }
 
     /**
-     * Number formatting symbols for locale az_Cyrl_AZ.
-     * @enum {string}
-     */
-    interface NumberFormatSymbols_az_Cyrl_AZ extends goog.i18n.NumberFormatSymbols_az {}
-
-    /**
      * Number formatting symbols for locale az_Latn_AZ.
      * @enum {string}
      */
@@ -1039,6 +1033,34 @@ declare module goog.i18n {
      * @enum {string}
      */
     interface NumberFormatSymbols_fr_YT extends goog.i18n.NumberFormatSymbols_fr {}
+
+    /**
+     * Number formatting symbols for locale ga.
+     * @enum {string}
+     */
+    interface NumberFormatSymbols_ga {
+        DECIMAL_SEP: string;
+        GROUP_SEP: string;
+        PERCENT: string;
+        ZERO_DIGIT: string;
+        PLUS_SIGN: string;
+        MINUS_SIGN: string;
+        EXP_SYMBOL: string;
+        PERMILL: string;
+        INFINITY: string;
+        NAN: string;
+        DECIMAL_PATTERN: string;
+        SCIENTIFIC_PATTERN: string;
+        PERCENT_PATTERN: string;
+        CURRENCY_PATTERN: string;
+        DEF_CURRENCY_CODE: string;
+    }
+
+    /**
+     * Number formatting symbols for locale ga_IE.
+     * @enum {string}
+     */
+    interface NumberFormatSymbols_ga_IE extends goog.i18n.NumberFormatSymbols_ga {}
 
     /**
      * Number formatting symbols for locale gl.

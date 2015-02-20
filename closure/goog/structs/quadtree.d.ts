@@ -73,13 +73,13 @@ declare module goog.structs {
         
         /**
          * Returns an array containing the coordinates of each point stored in the tree.
-         * @return {!Array.<goog.math.Coordinate?>} Array of coordinates.
+         * @return {!Array<goog.math.Coordinate?>} Array of coordinates.
          */
         getKeys(): Array<goog.math.Coordinate>;
         
         /**
          * Returns an array containing all values stored within the tree.
-         * @return {!Array.<Object>} The values stored within the tree.
+         * @return {!Array<Object>} The values stored within the tree.
          */
         getValues(): Array<Object>;
         

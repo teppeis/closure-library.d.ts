@@ -21,6 +21,17 @@ declare module goog.labs.userAgent.browser {
     function isSafari(): boolean;
 
     /**
+     * @return {boolean} Whether the user's browser is Coast (Opera's Webkit-based
+     *     iOS browser).
+     */
+    function isCoast(): boolean;
+
+    /**
+     * @return {boolean} Whether the user's browser is iOS Webview.
+     */
+    function isIosWebview(): boolean;
+
+    /**
      * @return {boolean} Whether the user's browser is Chrome.
      */
     function isChrome(): boolean;

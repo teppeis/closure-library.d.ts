@@ -34,7 +34,7 @@ declare module goog {
      *
      * @param {function(
      *             this:RESOLVER_CONTEXT,
-     *             function((TYPE|IThenable.<TYPE>|Thenable)=),
+     *             function((TYPE|IThenable<TYPE>|Thenable)=),
      *             function(*)): void} resolver
      *     Initialization function that is invoked immediately with {@code resolve}
      *     and {@code reject} functions as arguments. The Promise is resolved or
@@ -45,15 +45,15 @@ declare module goog {
      * @constructor
      * @struct
      * @final
-     * @implements {goog.Thenable.<TYPE>}
+     * @implements {goog.Thenable<TYPE>}
      * @template TYPE,RESOLVER_CONTEXT
      */
     class Promise<TYPE, RESOLVER_CONTEXT> {
         constructor(resolver: (arg0: (arg0?: TYPE) => any, arg1: (arg0: any) => any) => void, opt_context?: RESOLVER_CONTEXT);
         
         /**
-         * @param {(TYPE|goog.Thenable.<TYPE>|Thenable)=} opt_value
-         * @return {!goog.Promise.<TYPE>} A new Promise that is immediately resolved
+         * @param {(TYPE|goog.Thenable<TYPE>|Thenable)=} opt_value
+         * @return {!goog.Promise<TYPE>} A new Promise that is immediately resolved
          *     with the given value.
          * @template TYPE
          */
@@ -67,16 +67,16 @@ declare module goog {
         static reject(opt_reason?: any): goog.Promise<any, any>;
         
         /**
-         * @param {!Array.<!(goog.Thenable.<TYPE>|Thenable)>} promises
-         * @return {!goog.Promise.<TYPE>} A Promise that receives the result of the
+         * @param {!Array<!(goog.Thenable<TYPE>|Thenable)>} promises
+         * @return {!goog.Promise<TYPE>} A Promise that receives the result of the
          *     first Promise (or Promise-like) input to complete.
          * @template TYPE
          */
         static race<TYPE>(promises: Array<goog.Thenable<TYPE>>): goog.Promise<TYPE, any>;
         
         /**
-         * @param {!Array.<!(goog.Thenable.<TYPE>|Thenable)>} promises
-         * @return {!goog.Promise.<!Array.<TYPE>>} A Promise that receives a list of
+         * @param {!Array<!(goog.Thenable<TYPE>|Thenable)>} promises
+         * @return {!goog.Promise<!Array<TYPE>>} A Promise that receives a list of
          *     every fulfilled value once every input Promise (or Promise-like) is
          *     successfully fulfilled, or is rejected by the first rejection result.
          * @template TYPE
@@ -84,8 +84,8 @@ declare module goog {
         static all<TYPE>(promises: Array<goog.Thenable<TYPE>>): goog.Promise<Array<TYPE>, any>;
         
         /**
-         * @param {!Array.<!(goog.Thenable.<TYPE>|Thenable)>} promises
-         * @return {!goog.Promise.<TYPE>} A Promise that receives the value of the first
+         * @param {!Array<!(goog.Thenable<TYPE>|Thenable)>} promises
+         * @return {!goog.Promise<TYPE>} A Promise that receives the value of the first
          *     input to be fulfilled, or is rejected with a list of every rejection
          *     reason if all inputs are rejected.
          * @template TYPE
@@ -93,7 +93,7 @@ declare module goog {
         static firstFulfilled<TYPE>(promises: Array<goog.Thenable<TYPE>>): goog.Promise<TYPE, any>;
         
         /**
-         * @return {!goog.promise.Resolver.<TYPE>} Resolver wrapping the promise and its
+         * @return {!goog.promise.Resolver<TYPE>} Resolver wrapping the promise and its
          *     resolve / reject functions. Resolving or rejecting the resolver
          *     resolves or rejects the promise.
          * @template TYPE
@@ -141,13 +141,15 @@ declare module goog {
          * not prevented by adding callbacks with {@code thenAlways}. A Promise that has
          * a cleanup handler added with {@code thenAlways} will be canceled if all of
          * its children created by {@code then} (or {@code thenCatch}) are canceled.
+         * Additionally, since any rejections are not passed to the callback, it does
+         * not stop the unhandled rejection handler from running.
          *
          * @param {function(this:THIS): void} onResolved A function that will be invoked
          *     when the Promise is resolved.
          * @param {THIS=} opt_context An optional context object that will be the
          *     execution context for the callbacks. By default, functions are executed
          *     in the global scope.
-         * @return {!goog.Promise.<TYPE>} This Promise, for chaining additional calls.
+         * @return {!goog.Promise<TYPE>} This Promise, for chaining additional calls.
          * @template THIS
          */
         thenAlways<THIS>(onResolved: () => void, opt_context?: THIS): goog.Promise<TYPE, any>;
@@ -245,10 +247,10 @@ declare module goog.Promise {
     /**
      * Internal implementation of the resolver interface.
      *
-     * @param {!goog.Promise.<TYPE>} promise
-     * @param {function((TYPE|goog.Promise.<TYPE>|Thenable))} resolve
+     * @param {!goog.Promise<TYPE>} promise
+     * @param {function((TYPE|goog.Promise<TYPE>|Thenable)=)} resolve
      * @param {function(*): void} reject
-     * @implements {goog.promise.Resolver.<TYPE>}
+     * @implements {goog.promise.Resolver<TYPE>}
      * @final @struct
      * @constructor
      * @private

@@ -2,7 +2,7 @@ declare module goog.ui {
 
     /**
      * A UI Control used for rating things, i.e. videos on Google Video.
-     * @param {Array.<string>=} opt_ratings Ratings. Default: [1,2,3,4,5].
+     * @param {Array<string>=} opt_ratings Ratings. Default: [1,2,3,4,5].
      * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper.
      * @constructor
      * @extends {goog.ui.Component}
@@ -76,13 +76,13 @@ declare module goog.ui {
         
         /**
          * Sets the array of ratings that the comonent
-         * @param {Array.<string>} ratings Array of value to use as ratings.
+         * @param {Array<string>} ratings Array of value to use as ratings.
          */
         setRatings(ratings: Array<string>): void;
         
         /**
          * Gets the array of ratings that the component
-         * @return {Array.<string>} Array of ratings.
+         * @return {Array<string>} Array of ratings.
          */
         getRatings(): Array<string>;
         

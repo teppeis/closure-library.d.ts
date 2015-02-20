@@ -16,7 +16,7 @@ declare module goog.editor {
         getAnchor(): HTMLAnchorElement;
         
         /**
-         * @return {!Array.<HTMLAnchorElement>} The extra anchor elements, if any,
+         * @return {!Array<HTMLAnchorElement>} The extra anchor elements, if any,
          *     created by the browser from a selection.
          */
         getExtraAnchors(): Array<HTMLAnchorElement>;
@@ -81,11 +81,20 @@ declare module goog.editor {
          * @param {HTMLAnchorElement} anchor The anchor element.
          * @param {string} url The initial URL.
          * @param {string=} opt_target The target.
-         * @param {Array.<HTMLAnchorElement>=} opt_extraAnchors Extra anchors created
+         * @param {Array<HTMLAnchorElement>=} opt_extraAnchors Extra anchors created
          *     by the browser when parsing a selection.
          * @return {!goog.editor.Link} The link.
          */
         static createNewLink(anchor: HTMLAnchorElement, url: string, opt_target?: string, opt_extraAnchors?: Array<HTMLAnchorElement>): goog.editor.Link;
+        
+        /**
+         * Initialize a new link using text in anchor, or empty string if there is no
+         * likely url in the anchor.
+         * @param {HTMLAnchorElement} anchor The anchor element with likely url content.
+         * @param {string=} opt_target The target.
+         * @return {!goog.editor.Link} The link.
+         */
+        static createNewLinkFromText(anchor: HTMLAnchorElement, opt_target?: string): goog.editor.Link;
         
         /**
          * Returns true if str could be a URL, false otherwise

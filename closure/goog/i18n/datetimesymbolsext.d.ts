@@ -296,9 +296,14 @@ declare module goog.i18n {
     var DateTimeSymbols_bm: any;
 
     /**
-     * Date/time formatting symbols for locale bm_ML.
+     * Date/time formatting symbols for locale bm_Latn.
      */
-    var DateTimeSymbols_bm_ML: any;
+    var DateTimeSymbols_bm_Latn: any;
+
+    /**
+     * Date/time formatting symbols for locale bm_Latn_ML.
+     */
+    var DateTimeSymbols_bm_Latn_ML: any;
 
     /**
      * Date/time formatting symbols for locale bn_BD.
@@ -364,16 +369,6 @@ declare module goog.i18n {
      * Date/time formatting symbols for locale bs_Latn_BA.
      */
     var DateTimeSymbols_bs_Latn_BA: any;
-
-    /**
-     * Date/time formatting symbols for locale byn.
-     */
-    var DateTimeSymbols_byn: any;
-
-    /**
-     * Date/time formatting symbols for locale byn_ER.
-     */
-    var DateTimeSymbols_byn_ER: any;
 
     /**
      * Date/time formatting symbols for locale ca_AD.
@@ -514,6 +509,16 @@ declare module goog.i18n {
      * Date/time formatting symbols for locale dje_NE.
      */
     var DateTimeSymbols_dje_NE: any;
+
+    /**
+     * Date/time formatting symbols for locale dsb.
+     */
+    var DateTimeSymbols_dsb: any;
+
+    /**
+     * Date/time formatting symbols for locale dsb_DE.
+     */
+    var DateTimeSymbols_dsb_DE: any;
 
     /**
      * Date/time formatting symbols for locale dua.
@@ -824,6 +829,11 @@ declare module goog.i18n {
      * Date/time formatting symbols for locale en_MW.
      */
     var DateTimeSymbols_en_MW: any;
+
+    /**
+     * Date/time formatting symbols for locale en_MY.
+     */
+    var DateTimeSymbols_en_MY: any;
 
     /**
      * Date/time formatting symbols for locale en_NA.
@@ -1456,11 +1466,6 @@ declare module goog.i18n {
     var DateTimeSymbols_fy_NL: any;
 
     /**
-     * Date/time formatting symbols for locale ga.
-     */
-    var DateTimeSymbols_ga: any;
-
-    /**
      * Date/time formatting symbols for locale ga_IE.
      */
     var DateTimeSymbols_ga_IE: any;
@@ -1484,6 +1489,11 @@ declare module goog.i18n {
      * Date/time formatting symbols for locale gsw_CH.
      */
     var DateTimeSymbols_gsw_CH: any;
+
+    /**
+     * Date/time formatting symbols for locale gsw_FR.
+     */
+    var DateTimeSymbols_gsw_FR: any;
 
     /**
      * Date/time formatting symbols for locale gsw_LI.
@@ -1564,6 +1574,16 @@ declare module goog.i18n {
      * Date/time formatting symbols for locale hr_HR.
      */
     var DateTimeSymbols_hr_HR: any;
+
+    /**
+     * Date/time formatting symbols for locale hsb.
+     */
+    var DateTimeSymbols_hsb: any;
+
+    /**
+     * Date/time formatting symbols for locale hsb_DE.
+     */
+    var DateTimeSymbols_hsb_DE: any;
 
     /**
      * Date/time formatting symbols for locale hu_HU.
@@ -1864,6 +1884,16 @@ declare module goog.i18n {
      * Date/time formatting symbols for locale lag_TZ.
      */
     var DateTimeSymbols_lag_TZ: any;
+
+    /**
+     * Date/time formatting symbols for locale lb.
+     */
+    var DateTimeSymbols_lb: any;
+
+    /**
+     * Date/time formatting symbols for locale lb_LU.
+     */
+    var DateTimeSymbols_lb_LU: any;
 
     /**
      * Date/time formatting symbols for locale lg.
@@ -2331,6 +2361,26 @@ declare module goog.i18n {
     var DateTimeSymbols_pt_TL: any;
 
     /**
+     * Date/time formatting symbols for locale qu.
+     */
+    var DateTimeSymbols_qu: any;
+
+    /**
+     * Date/time formatting symbols for locale qu_BO.
+     */
+    var DateTimeSymbols_qu_BO: any;
+
+    /**
+     * Date/time formatting symbols for locale qu_EC.
+     */
+    var DateTimeSymbols_qu_EC: any;
+
+    /**
+     * Date/time formatting symbols for locale qu_PE.
+     */
+    var DateTimeSymbols_qu_PE: any;
+
+    /**
      * Date/time formatting symbols for locale rm.
      */
     var DateTimeSymbols_rm: any;
@@ -2466,6 +2516,11 @@ declare module goog.i18n {
     var DateTimeSymbols_se_NO: any;
 
     /**
+     * Date/time formatting symbols for locale se_SE.
+     */
+    var DateTimeSymbols_se_SE: any;
+
+    /**
      * Date/time formatting symbols for locale seh.
      */
     var DateTimeSymbols_seh: any;
@@ -2534,6 +2589,16 @@ declare module goog.i18n {
      * Date/time formatting symbols for locale sl_SI.
      */
     var DateTimeSymbols_sl_SI: any;
+
+    /**
+     * Date/time formatting symbols for locale smn.
+     */
+    var DateTimeSymbols_smn: any;
+
+    /**
+     * Date/time formatting symbols for locale smn_FI.
+     */
+    var DateTimeSymbols_smn_FI: any;
 
     /**
      * Date/time formatting symbols for locale sn.
@@ -2661,21 +2726,6 @@ declare module goog.i18n {
     var DateTimeSymbols_ssy_ER: any;
 
     /**
-     * Date/time formatting symbols for locale st.
-     */
-    var DateTimeSymbols_st: any;
-
-    /**
-     * Date/time formatting symbols for locale st_LS.
-     */
-    var DateTimeSymbols_st_LS: any;
-
-    /**
-     * Date/time formatting symbols for locale st_ZA.
-     */
-    var DateTimeSymbols_st_ZA: any;
-
-    /**
      * Date/time formatting symbols for locale sv_AX.
      */
     var DateTimeSymbols_sv_AX: any;
@@ -2756,21 +2806,6 @@ declare module goog.i18n {
     var DateTimeSymbols_teo_UG: any;
 
     /**
-     * Date/time formatting symbols for locale tg.
-     */
-    var DateTimeSymbols_tg: any;
-
-    /**
-     * Date/time formatting symbols for locale tg_Cyrl.
-     */
-    var DateTimeSymbols_tg_Cyrl: any;
-
-    /**
-     * Date/time formatting symbols for locale tg_Cyrl_TJ.
-     */
-    var DateTimeSymbols_tg_Cyrl_TJ: any;
-
-    /**
      * Date/time formatting symbols for locale th_TH.
      */
     var DateTimeSymbols_th_TH: any;
@@ -2789,16 +2824,6 @@ declare module goog.i18n {
      * Date/time formatting symbols for locale ti_ET.
      */
     var DateTimeSymbols_ti_ET: any;
-
-    /**
-     * Date/time formatting symbols for locale tig.
-     */
-    var DateTimeSymbols_tig: any;
-
-    /**
-     * Date/time formatting symbols for locale tig_ER.
-     */
-    var DateTimeSymbols_tig_ER: any;
 
     /**
      * Date/time formatting symbols for locale tn.
@@ -3001,26 +3026,6 @@ declare module goog.i18n {
     var DateTimeSymbols_wae_CH: any;
 
     /**
-     * Date/time formatting symbols for locale wal.
-     */
-    var DateTimeSymbols_wal: any;
-
-    /**
-     * Date/time formatting symbols for locale wal_ET.
-     */
-    var DateTimeSymbols_wal_ET: any;
-
-    /**
-     * Date/time formatting symbols for locale xh.
-     */
-    var DateTimeSymbols_xh: any;
-
-    /**
-     * Date/time formatting symbols for locale xh_ZA.
-     */
-    var DateTimeSymbols_xh_ZA: any;
-
-    /**
      * Date/time formatting symbols for locale xog.
      */
     var DateTimeSymbols_xog: any;
@@ -3039,6 +3044,16 @@ declare module goog.i18n {
      * Date/time formatting symbols for locale yav_CM.
      */
     var DateTimeSymbols_yav_CM: any;
+
+    /**
+     * Date/time formatting symbols for locale yi.
+     */
+    var DateTimeSymbols_yi: any;
+
+    /**
+     * Date/time formatting symbols for locale yi_001.
+     */
+    var DateTimeSymbols_yi_001: any;
 
     /**
      * Date/time formatting symbols for locale yo.

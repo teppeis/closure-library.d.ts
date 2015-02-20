@@ -32,8 +32,8 @@ declare module goog.events {
      *
      * @param {EventTarget|goog.events.Listenable} src The node to listen
      *     to events on.
-     * @param {string|Array.<string>|
-     *     !goog.events.EventId.<EVENTOBJ>|!Array.<!goog.events.EventId.<EVENTOBJ>>}
+     * @param {string|Array<string>|
+     *     !goog.events.EventId<EVENTOBJ>|!Array<!goog.events.EventId<EVENTOBJ>>}
      *     type Event type or array of event types.
      * @param {function(this:T, EVENTOBJ):?|{handleEvent:function(?):?}|null}
      *     listener Callback method, or an object with a handleEvent function.
@@ -67,8 +67,8 @@ declare module goog.events {
      *
      * @param {EventTarget|goog.events.Listenable} src The node to listen
      *     to events on.
-     * @param {string|Array.<string>|
-     *     !goog.events.EventId.<EVENTOBJ>|!Array.<!goog.events.EventId.<EVENTOBJ>>}
+     * @param {string|Array<string>|
+     *     !goog.events.EventId<EVENTOBJ>|!Array<!goog.events.EventId<EVENTOBJ>>}
      *     type Event type or array of event types.
      * @param {function(this:T, EVENTOBJ):?|{handleEvent:function(?):?}|null}
      *     listener Callback method.
@@ -101,8 +101,8 @@ declare module goog.events {
      *
      * @param {EventTarget|goog.events.Listenable} src The target to stop
      *     listening to events on.
-     * @param {string|Array.<string>|
-     *     !goog.events.EventId.<EVENTOBJ>|!Array.<!goog.events.EventId.<EVENTOBJ>>}
+     * @param {string|Array<string>|
+     *     !goog.events.EventId<EVENTOBJ>|!Array<!goog.events.EventId<EVENTOBJ>>}
      *     type Event type or array of event types to unlisten to.
      * @param {function(?):?|{handleEvent:function(?):?}|null} listener The
      *     listener function to remove.
@@ -144,25 +144,13 @@ declare module goog.events {
      * Removes all listeners from an object. You can also optionally
      * remove listeners of a particular type.
      *
-     * @param {Object=} opt_obj Object to remove listeners from. Not
-     *     specifying opt_obj is now DEPRECATED (it used to remove all
-     *     registered listeners).
+     * @param {Object|undefined} obj Object to remove listeners from. Must be an
+     *     EventTarget or a goog.events.Listenable.
      * @param {string|!goog.events.EventId=} opt_type Type of event to remove.
      *     Default is all types.
      * @return {number} Number of listeners removed.
      */
-    function removeAll(opt_obj?: Object, opt_type?: string): number;
-
-    /**
-     * Removes all native listeners registered via goog.events. Native
-     * listeners are listeners on native browser objects (such as DOM
-     * elements). In particular, goog.events.Listenable and
-     * goog.events.EventTarget listeners will NOT be removed.
-     * @return {number} Number of listeners removed.
-     * @deprecated This doesn't do anything, now that Closure no longer
-     * stores a central listener registry.
-     */
-    function removeAllNativeListeners(): number;
+    function removeAll(obj: Object, opt_type?: string): number;
 
     /**
      * Gets the listeners for a given object, type and capture phase.
@@ -170,7 +158,7 @@ declare module goog.events {
      * @param {Object} obj Object to get listeners for.
      * @param {string|!goog.events.EventId} type Event type.
      * @param {boolean} capture Capture phase?.
-     * @return {Array.<goog.events.Listener>} Array of listener objects.
+     * @return {Array<goog.events.Listener>} Array of listener objects.
      */
     function getListeners(obj: Object, type: string, capture: boolean): Array<goog.events.Listener>;
 
@@ -180,7 +168,7 @@ declare module goog.events {
      *
      * @param {EventTarget|goog.events.Listenable} src The target from
      *     which to get listeners.
-     * @param {?string|!goog.events.EventId.<EVENTOBJ>} type The type of the event.
+     * @param {?string|!goog.events.EventId<EVENTOBJ>} type The type of the event.
      * @param {function(EVENTOBJ):?|{handleEvent:function(?):?}|null} listener The
      *     listener function to get.
      * @param {boolean=} opt_capt In DOM-compliant browsers, this determines

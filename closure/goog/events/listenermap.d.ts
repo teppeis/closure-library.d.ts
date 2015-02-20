@@ -72,7 +72,7 @@ declare module goog.events {
          * @param {string|!goog.events.EventId} type The type of the listeners
          *     to retrieve.
          * @param {boolean} capture The capture mode of the listeners to retrieve.
-         * @return {!Array.<goog.events.ListenableKey>} An array of matching
+         * @return {!Array<goog.events.ListenableKey>} An array of matching
          *     listeners.
          */
         getListeners(type: string, capture: boolean): Array<goog.events.ListenableKey>;

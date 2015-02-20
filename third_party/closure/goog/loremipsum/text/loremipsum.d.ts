@@ -59,7 +59,7 @@ declare module goog.text {
         
         /**
          * Find the number in the list of values that is closest to the target.
-         * @param {Array.<number>} values The values.
+         * @param {Array<number>} values The values.
          * @param {number} target The target value.
          * @return {number} The closest value.
          */

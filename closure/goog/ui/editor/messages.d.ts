@@ -66,4 +66,14 @@ declare module goog.ui.editor.messages {
 
     /** @desc Image bubble caption. */
     var MSG_IMAGE_CAPTION: any;
+
+    /**
+     * @return {!goog.html.SafeHtml} SafeHtml version of MSG_TR_LINK_EXPLANATION.
+     */
+    function getTrLinkExplanationSafeHtml(): goog.html.SafeHtml;
+
+    /**
+     * @return {!goog.html.SafeHtml} SafeHtml version of MSG_EMAIL_EXPLANATION.
+     */
+    function getEmailExplanationSafeHtml(): goog.html.SafeHtml;
 }

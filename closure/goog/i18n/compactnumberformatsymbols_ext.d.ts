@@ -216,6 +216,11 @@ declare module goog.i18n {
     var CompactNumberFormatSymbols_az_Cyrl: any;
 
     /**
+     * Compact number formatting symbols for locale az_Cyrl_AZ.
+     */
+    var CompactNumberFormatSymbols_az_Cyrl_AZ: any;
+
+    /**
      * Compact number formatting symbols for locale az_Latn.
      */
     var CompactNumberFormatSymbols_az_Latn: any;
@@ -266,9 +271,14 @@ declare module goog.i18n {
     var CompactNumberFormatSymbols_bm: any;
 
     /**
-     * Compact number formatting symbols for locale bm_ML.
+     * Compact number formatting symbols for locale bm_Latn.
      */
-    var CompactNumberFormatSymbols_bm_ML: any;
+    var CompactNumberFormatSymbols_bm_Latn: any;
+
+    /**
+     * Compact number formatting symbols for locale bm_Latn_ML.
+     */
+    var CompactNumberFormatSymbols_bm_Latn_ML: any;
 
     /**
      * Compact number formatting symbols for locale bn_IN.
@@ -324,16 +334,6 @@ declare module goog.i18n {
      * Compact number formatting symbols for locale bs_Latn_BA.
      */
     var CompactNumberFormatSymbols_bs_Latn_BA: any;
-
-    /**
-     * Compact number formatting symbols for locale byn.
-     */
-    var CompactNumberFormatSymbols_byn: any;
-
-    /**
-     * Compact number formatting symbols for locale byn_ER.
-     */
-    var CompactNumberFormatSymbols_byn_ER: any;
 
     /**
      * Compact number formatting symbols for locale cgg.
@@ -409,6 +409,16 @@ declare module goog.i18n {
      * Compact number formatting symbols for locale dje_NE.
      */
     var CompactNumberFormatSymbols_dje_NE: any;
+
+    /**
+     * Compact number formatting symbols for locale dsb.
+     */
+    var CompactNumberFormatSymbols_dsb: any;
+
+    /**
+     * Compact number formatting symbols for locale dsb_DE.
+     */
+    var CompactNumberFormatSymbols_dsb_DE: any;
 
     /**
      * Compact number formatting symbols for locale dua.
@@ -674,6 +684,11 @@ declare module goog.i18n {
      * Compact number formatting symbols for locale en_MW.
      */
     var CompactNumberFormatSymbols_en_MW: any;
+
+    /**
+     * Compact number formatting symbols for locale en_MY.
+     */
+    var CompactNumberFormatSymbols_en_MY: any;
 
     /**
      * Compact number formatting symbols for locale en_NA.
@@ -1186,16 +1201,6 @@ declare module goog.i18n {
     var CompactNumberFormatSymbols_fy_NL: any;
 
     /**
-     * Compact number formatting symbols for locale ga.
-     */
-    var CompactNumberFormatSymbols_ga: any;
-
-    /**
-     * Compact number formatting symbols for locale ga_IE.
-     */
-    var CompactNumberFormatSymbols_ga_IE: any;
-
-    /**
      * Compact number formatting symbols for locale gd.
      */
     var CompactNumberFormatSymbols_gd: any;
@@ -1204,6 +1209,11 @@ declare module goog.i18n {
      * Compact number formatting symbols for locale gd_GB.
      */
     var CompactNumberFormatSymbols_gd_GB: any;
+
+    /**
+     * Compact number formatting symbols for locale gsw_FR.
+     */
+    var CompactNumberFormatSymbols_gsw_FR: any;
 
     /**
      * Compact number formatting symbols for locale guz.
@@ -1254,6 +1264,16 @@ declare module goog.i18n {
      * Compact number formatting symbols for locale hr_BA.
      */
     var CompactNumberFormatSymbols_hr_BA: any;
+
+    /**
+     * Compact number formatting symbols for locale hsb.
+     */
+    var CompactNumberFormatSymbols_hsb: any;
+
+    /**
+     * Compact number formatting symbols for locale hsb_DE.
+     */
+    var CompactNumberFormatSymbols_hsb_DE: any;
 
     /**
      * Compact number formatting symbols for locale ia.
@@ -1489,6 +1509,16 @@ declare module goog.i18n {
      * Compact number formatting symbols for locale lag_TZ.
      */
     var CompactNumberFormatSymbols_lag_TZ: any;
+
+    /**
+     * Compact number formatting symbols for locale lb.
+     */
+    var CompactNumberFormatSymbols_lb: any;
+
+    /**
+     * Compact number formatting symbols for locale lb_LU.
+     */
+    var CompactNumberFormatSymbols_lb_LU: any;
 
     /**
      * Compact number formatting symbols for locale lg.
@@ -1866,6 +1896,26 @@ declare module goog.i18n {
     var CompactNumberFormatSymbols_pt_TL: any;
 
     /**
+     * Compact number formatting symbols for locale qu.
+     */
+    var CompactNumberFormatSymbols_qu: any;
+
+    /**
+     * Compact number formatting symbols for locale qu_BO.
+     */
+    var CompactNumberFormatSymbols_qu_BO: any;
+
+    /**
+     * Compact number formatting symbols for locale qu_EC.
+     */
+    var CompactNumberFormatSymbols_qu_EC: any;
+
+    /**
+     * Compact number formatting symbols for locale qu_PE.
+     */
+    var CompactNumberFormatSymbols_qu_PE: any;
+
+    /**
      * Compact number formatting symbols for locale rm.
      */
     var CompactNumberFormatSymbols_rm: any;
@@ -1991,6 +2041,11 @@ declare module goog.i18n {
     var CompactNumberFormatSymbols_se_NO: any;
 
     /**
+     * Compact number formatting symbols for locale se_SE.
+     */
+    var CompactNumberFormatSymbols_se_SE: any;
+
+    /**
      * Compact number formatting symbols for locale seh.
      */
     var CompactNumberFormatSymbols_seh: any;
@@ -2044,6 +2099,16 @@ declare module goog.i18n {
      * Compact number formatting symbols for locale shi_Tfng_MA.
      */
     var CompactNumberFormatSymbols_shi_Tfng_MA: any;
+
+    /**
+     * Compact number formatting symbols for locale smn.
+     */
+    var CompactNumberFormatSymbols_smn: any;
+
+    /**
+     * Compact number formatting symbols for locale smn_FI.
+     */
+    var CompactNumberFormatSymbols_smn_FI: any;
 
     /**
      * Compact number formatting symbols for locale sn.
@@ -2161,21 +2226,6 @@ declare module goog.i18n {
     var CompactNumberFormatSymbols_ssy_ER: any;
 
     /**
-     * Compact number formatting symbols for locale st.
-     */
-    var CompactNumberFormatSymbols_st: any;
-
-    /**
-     * Compact number formatting symbols for locale st_LS.
-     */
-    var CompactNumberFormatSymbols_st_LS: any;
-
-    /**
-     * Compact number formatting symbols for locale st_ZA.
-     */
-    var CompactNumberFormatSymbols_st_ZA: any;
-
-    /**
      * Compact number formatting symbols for locale sv_AX.
      */
     var CompactNumberFormatSymbols_sv_AX: any;
@@ -2236,21 +2286,6 @@ declare module goog.i18n {
     var CompactNumberFormatSymbols_teo_UG: any;
 
     /**
-     * Compact number formatting symbols for locale tg.
-     */
-    var CompactNumberFormatSymbols_tg: any;
-
-    /**
-     * Compact number formatting symbols for locale tg_Cyrl.
-     */
-    var CompactNumberFormatSymbols_tg_Cyrl: any;
-
-    /**
-     * Compact number formatting symbols for locale tg_Cyrl_TJ.
-     */
-    var CompactNumberFormatSymbols_tg_Cyrl_TJ: any;
-
-    /**
      * Compact number formatting symbols for locale ti.
      */
     var CompactNumberFormatSymbols_ti: any;
@@ -2264,16 +2299,6 @@ declare module goog.i18n {
      * Compact number formatting symbols for locale ti_ET.
      */
     var CompactNumberFormatSymbols_ti_ET: any;
-
-    /**
-     * Compact number formatting symbols for locale tig.
-     */
-    var CompactNumberFormatSymbols_tig: any;
-
-    /**
-     * Compact number formatting symbols for locale tig_ER.
-     */
-    var CompactNumberFormatSymbols_tig_ER: any;
 
     /**
      * Compact number formatting symbols for locale tn.
@@ -2451,26 +2476,6 @@ declare module goog.i18n {
     var CompactNumberFormatSymbols_wae_CH: any;
 
     /**
-     * Compact number formatting symbols for locale wal.
-     */
-    var CompactNumberFormatSymbols_wal: any;
-
-    /**
-     * Compact number formatting symbols for locale wal_ET.
-     */
-    var CompactNumberFormatSymbols_wal_ET: any;
-
-    /**
-     * Compact number formatting symbols for locale xh.
-     */
-    var CompactNumberFormatSymbols_xh: any;
-
-    /**
-     * Compact number formatting symbols for locale xh_ZA.
-     */
-    var CompactNumberFormatSymbols_xh_ZA: any;
-
-    /**
      * Compact number formatting symbols for locale xog.
      */
     var CompactNumberFormatSymbols_xog: any;
@@ -2489,6 +2494,16 @@ declare module goog.i18n {
      * Compact number formatting symbols for locale yav_CM.
      */
     var CompactNumberFormatSymbols_yav_CM: any;
+
+    /**
+     * Compact number formatting symbols for locale yi.
+     */
+    var CompactNumberFormatSymbols_yi: any;
+
+    /**
+     * Compact number formatting symbols for locale yi_001.
+     */
+    var CompactNumberFormatSymbols_yi_001: any;
 
     /**
      * Compact number formatting symbols for locale yo.

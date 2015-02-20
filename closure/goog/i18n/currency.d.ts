@@ -19,15 +19,15 @@ declare module goog.i18n.currency {
      * 18: two decimals precision (2), currency sign last (16), no space (0)
      * 50: two decimals precision (2), currency sign last (16), space (32)
      *
-     * @type {!Object.<!Array>}
+     * @const {!Object<!Array<?>>}
      */
-    var CurrencyInfo: Object;
+    var CurrencyInfo: any;
 
     /**
      * Tier 2 currency information.
-     * @type {!Object.<!Array>}
+     * @const {!Object<!Array<?>>}
      */
-    var CurrencyInfoTier2: Object;
+    var CurrencyInfoTier2: any;
 
     /**
      * This function will add tier2 currency support. Be default, only tier1

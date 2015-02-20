@@ -76,6 +76,8 @@ declare module goog.proto2.TextFormatSerializer {
      * @param {string} data The string data to tokenize.
      * @param {boolean=} opt_ignoreWhitespace If true, whitespace tokens will not
      *    be reported by the tokenizer.
+     * @param {boolean=} opt_ignoreComments If true, comment tokens will not be
+     *    reported by the tokenizer.
      * @constructor
      * @private
      */
@@ -125,24 +127,24 @@ declare module goog.proto2.TextFormatSerializer.Tokenizer_ {
 
     /**
      * An enumeration of all the token types.
-     * @enum {*}
+     * @enum {!RegExp}
      */
     interface TokenTypes {
-        END: any;
-        IDENTIFIER: any;
-        NUMBER: any;
-        COMMENT: any;
-        OPEN_BRACE: any;
-        CLOSE_BRACE: any;
-        OPEN_TAG: any;
-        CLOSE_TAG: any;
-        OPEN_LIST: any;
-        CLOSE_LIST: any;
-        STRING: any;
-        COLON: any;
-        COMMA: any;
-        SEMI: any;
-        WHITESPACE: any;
+        END: RegExp;
+        IDENTIFIER: RegExp;
+        NUMBER: RegExp;
+        COMMENT: RegExp;
+        OPEN_BRACE: RegExp;
+        CLOSE_BRACE: RegExp;
+        OPEN_TAG: RegExp;
+        CLOSE_TAG: RegExp;
+        OPEN_LIST: RegExp;
+        CLOSE_LIST: RegExp;
+        STRING: RegExp;
+        COLON: RegExp;
+        COMMA: RegExp;
+        SEMI: RegExp;
+        WHITESPACE: RegExp;
     }
 
     /**

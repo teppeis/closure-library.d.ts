@@ -27,7 +27,7 @@ declare module goog.locale.timeZoneDetection {
      *     a better guess for user's time zone.
      * @param {Date=} opt_date Date for retrieving timezone list. Defaults to the
      *     current date.
-     * @return {!Array.<string>} Array of time zone IDs.
+     * @return {!Array<string>} Array of time zone IDs.
      */
     function getTimeZoneList(opt_country?: string, opt_date?: Date): Array<string>;
 }

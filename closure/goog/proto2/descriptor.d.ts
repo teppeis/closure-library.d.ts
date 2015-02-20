@@ -18,7 +18,7 @@ declare module goog.proto2 {
      *      the message class that this descriptor describes.
      * @param {!goog.proto2.Metadata} metadata The metadata about the message that
      *      will be used to construct this descriptor.
-     * @param {Array.<!goog.proto2.FieldDescriptor>} fields The fields of the
+     * @param {Array<!goog.proto2.FieldDescriptor>} fields The fields of the
      *      message described by this descriptor.
      *
      * @constructor
@@ -52,7 +52,7 @@ declare module goog.proto2 {
          * Returns the fields in the message described by this descriptor ordered by
          * tag.
          *
-         * @return {!Array.<!goog.proto2.FieldDescriptor>} The array of field
+         * @return {!Array<!goog.proto2.FieldDescriptor>} The array of field
          *     descriptors.
          */
         getFields(): Array<goog.proto2.FieldDescriptor>;
@@ -63,7 +63,7 @@ declare module goog.proto2 {
          * the actual, internal, fields map for performance reasons, and changing the
          * map can result in undefined behavior of this library.
          *
-         * @return {!Object.<number, !goog.proto2.FieldDescriptor>} The field map.
+         * @return {!Object<number, !goog.proto2.FieldDescriptor>} The field map.
          */
         getFieldsMap(): Object;
         

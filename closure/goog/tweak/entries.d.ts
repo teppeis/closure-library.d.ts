@@ -246,13 +246,13 @@ declare module goog.tweak {
         
         /**
          * Sets the valid values for the setting.
-         * @param {Array.<string>|undefined} values Valid values.
+         * @param {Array<string>|undefined} values Valid values.
          */
         setValidValues(values: Array<string>): void;
         
         /**
          * Returns the valid values for the setting.
-         * @return {Array.<string>|undefined} Valid values.
+         * @return {Array<string>|undefined} Valid values.
          */
         getValidValues(): Array<string>;
     }
@@ -308,13 +308,13 @@ declare module goog.tweak {
         
         /**
          * Sets the valid values for the setting.
-         * @param {Array.<number>|undefined} values Valid values.
+         * @param {Array<number>|undefined} values Valid values.
          */
         setValidValues(values: Array<number>): void;
         
         /**
          * Returns the valid values for the setting.
-         * @return {Array.<number>|undefined} Valid values.
+         * @return {Array<number>|undefined} Valid values.
          */
         getValidValues(): Array<number>;
     }
@@ -432,7 +432,7 @@ declare module goog.tweak {
         
         /**
          * Returns the map of token->boolean settings.
-         * @return {!Object.<!goog.tweak.BooleanSetting>} The child settings.
+         * @return {!Object<!goog.tweak.BooleanSetting>} The child settings.
          */
         getChildEntries(): Object;
         

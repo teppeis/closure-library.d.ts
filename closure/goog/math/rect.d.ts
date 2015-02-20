@@ -6,6 +6,7 @@ declare module goog.math {
      * @param {number} y Top.
      * @param {number} w Width.
      * @param {number} h Height.
+     * @struct
      * @constructor
      */
     class Rect {
@@ -83,7 +84,7 @@ declare module goog.math {
          * rectangle after the second has been subtracted.
          * @param {goog.math.Rect} a A Rectangle.
          * @param {goog.math.Rect} b A Rectangle.
-         * @return {!Array.<!goog.math.Rect>} An array with 0 to 4 rectangles which
+         * @return {!Array<!goog.math.Rect>} An array with 0 to 4 rectangles which
          *     together define the difference area of rectangle a minus rectangle b.
          */
         static difference(a: goog.math.Rect, b: goog.math.Rect): Array<goog.math.Rect>;
@@ -93,7 +94,7 @@ declare module goog.math {
          * return value is an array of 0 to 4 rectangles defining the remaining regions
          * of this rectangle after the other has been subtracted.
          * @param {goog.math.Rect} rect A Rectangle.
-         * @return {!Array.<!goog.math.Rect>} An array with 0 to 4 rectangles which
+         * @return {!Array<!goog.math.Rect>} An array with 0 to 4 rectangles which
          *     together define the difference area of rectangle a minus rectangle b.
          */
         difference(rect: goog.math.Rect): Array<goog.math.Rect>;

@@ -44,9 +44,8 @@ declare module goog.editor.plugins {
         setBubbleFactory(bubbleFactory: (arg0: Element, arg1: number) => goog.ui.editor.Bubble): void;
         
         /**
-         * Sets whether the bubble should support tabbing through the link elements.
-         * @param {boolean} keyboardNavigationEnabled Whether the bubble should support
-         *     tabbing through the link elements.
+         * Sets whether the bubble should support tabbing through elements.
+         * @param {boolean} keyboardNavigationEnabled
          */
         enableKeyboardNavigation(keyboardNavigationEnabled: boolean): void;
         
@@ -60,7 +59,7 @@ declare module goog.editor.plugins {
         
         /**
          * Returns the bubble map.  Subclasses may override to use a separate map.
-         * @return {!Object.<goog.ui.editor.Bubble>}
+         * @return {!Object<goog.ui.editor.Bubble>}
          * @protected
          */
         getBubbleMap(): Object;
@@ -188,8 +187,9 @@ declare module goog.editor.plugins {
         createLinkOption(id: string): Element;
         
         /**
-         * Helper method that creates a link with text set to linkText and optionaly
-         * wires up a listener for the CLICK event or the link.
+         * Helper method that creates a link with text set to linkText and optionally
+         * wires up a listener for the CLICK event or the link. The link is navigable by
+         * tabs if {@code enableKeyboardNavigation(true)} was called.
          * @param {string} linkId The id of the link.
          * @param {string} linkText Text of the link.
          * @param {Function=} opt_onClick Optional function to call when the link is
@@ -202,7 +202,8 @@ declare module goog.editor.plugins {
         createLink(linkId: string, linkText: string, opt_onClick?: Function, opt_container?: Element): Element;
         
         /**
-         * Helper method to create a link to insert into the bubble.
+         * Helper method to create a link to insert into the bubble. The link is
+         * navigable by tabs if {@code enableKeyboardNavigation(true)} was called.
          * @param {string} linkId The id of the link.
          * @param {string} linkText Text of the link.
          * @param {boolean} isAnchor Set to true to create an actual anchor tag
@@ -214,6 +215,20 @@ declare module goog.editor.plugins {
          * @protected
          */
         createLinkHelper(linkId: string, linkText: string, isAnchor: boolean, opt_container?: Element): Element;
+        
+        /**
+         * Makes the given element tabbable.
+         *
+         * <p>Elements created by createLink[Helper] are tabbable even without
+         * calling this method. Call it for other elements if needed.
+         *
+         * <p>If tabindex is not already set in the element, this function sets it to 0.
+         * You'll usually want to also call {@code enableKeyboardNavigation(true)}.
+         *
+         * @param {!Element} element
+         * @protected
+         */
+        setTabbable(element: Element): void;
         
         /**
          * Inserts a link in the given container if it is specified or removes

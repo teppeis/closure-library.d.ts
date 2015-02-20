@@ -52,5 +52,16 @@ declare module goog.html {
          *     initialized to {@code url}.
          */
         static fromConstant(url: goog.string$.Const): goog.html.TrustedResourceUrl;
+        
+        /**
+         * Package-internal utility method to create TrustedResourceUrl instances.
+         *
+         * @param {string} url The string to initialize the TrustedResourceUrl object
+         *     with.
+         * @return {!goog.html.TrustedResourceUrl} The initialized TrustedResourceUrl
+         *     object.
+         * @package
+         */
+        static createTrustedResourceUrlSecurityPrivateDoNotAccessOrElse(url: string): goog.html.TrustedResourceUrl;
     }
 }

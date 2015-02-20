@@ -6,6 +6,7 @@ declare module goog.events {
      */
     interface EventType {
         CLICK: string;
+        RIGHTCLICK: string;
         DBLCLICK: string;
         MOUSEDOWN: string;
         MOUSEUP: string;
@@ -15,6 +16,7 @@ declare module goog.events {
         MOUSEENTER: string;
         MOUSELEAVE: string;
         SELECTSTART: string;
+        WHEEL: string;
         KEYPRESS: string;
         KEYDOWN: string;
         KEYUP: string;
@@ -97,6 +99,7 @@ declare module goog.events {
         MSPOINTEROUT: string;
         MSPOINTEROVER: string;
         MSPOINTERUP: string;
+        TEXT: string;
         TEXTINPUT: string;
         COMPOSITIONSTART: string;
         COMPOSITIONUPDATE: string;

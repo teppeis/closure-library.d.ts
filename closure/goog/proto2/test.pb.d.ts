@@ -4,7 +4,6 @@ declare module proto2 {
      * Message TestAllTypes.
      * @constructor
      * @extends {goog.proto2.Message}
-     * @final
      */
     class TestAllTypes extends goog.proto2.Message {
         constructor();
@@ -1495,13 +1494,545 @@ declare module proto2 {
          * Clears the values in the repeated_int64_string field.
          */
         clearRepeatedInt64String(): void;
+        
+        /**
+         * Gets the value of the packed_int32 field at the index given.
+         * @param {number} index The index to lookup.
+         * @return {?number} The value.
+         */
+        getPackedInt32(index: number): number;
+        
+        /**
+         * Gets the value of the packed_int32 field at the index given or the default value if not set.
+         * @param {number} index The index to lookup.
+         * @return {number} The value.
+         */
+        getPackedInt32OrDefault(index: number): number;
+        
+        /**
+         * Adds a value to the packed_int32 field.
+         * @param {number} value The value to add.
+         */
+        addPackedInt32(value: number): void;
+        
+        /**
+         * Returns the array of values in the packed_int32 field.
+         * @return {!Array.<number>} The values in the field.
+         */
+        packedInt32Array(): Array<number>;
+        
+        /**
+         * @return {boolean} Whether the packed_int32 field has a value.
+         */
+        hasPackedInt32(): boolean;
+        
+        /**
+         * @return {number} The number of values in the packed_int32 field.
+         */
+        packedInt32Count(): number;
+        
+        /**
+         * Clears the values in the packed_int32 field.
+         */
+        clearPackedInt32(): void;
+        
+        /**
+         * Gets the value of the packed_int64 field at the index given.
+         * @param {number} index The index to lookup.
+         * @return {?number} The value.
+         */
+        getPackedInt64(index: number): number;
+        
+        /**
+         * Gets the value of the packed_int64 field at the index given or the default value if not set.
+         * @param {number} index The index to lookup.
+         * @return {number} The value.
+         */
+        getPackedInt64OrDefault(index: number): number;
+        
+        /**
+         * Adds a value to the packed_int64 field.
+         * @param {number} value The value to add.
+         */
+        addPackedInt64(value: number): void;
+        
+        /**
+         * Returns the array of values in the packed_int64 field.
+         * @return {!Array.<number>} The values in the field.
+         */
+        packedInt64Array(): Array<number>;
+        
+        /**
+         * @return {boolean} Whether the packed_int64 field has a value.
+         */
+        hasPackedInt64(): boolean;
+        
+        /**
+         * @return {number} The number of values in the packed_int64 field.
+         */
+        packedInt64Count(): number;
+        
+        /**
+         * Clears the values in the packed_int64 field.
+         */
+        clearPackedInt64(): void;
+        
+        /**
+         * Gets the value of the packed_uint32 field at the index given.
+         * @param {number} index The index to lookup.
+         * @return {?number} The value.
+         */
+        getPackedUint32(index: number): number;
+        
+        /**
+         * Gets the value of the packed_uint32 field at the index given or the default value if not set.
+         * @param {number} index The index to lookup.
+         * @return {number} The value.
+         */
+        getPackedUint32OrDefault(index: number): number;
+        
+        /**
+         * Adds a value to the packed_uint32 field.
+         * @param {number} value The value to add.
+         */
+        addPackedUint32(value: number): void;
+        
+        /**
+         * Returns the array of values in the packed_uint32 field.
+         * @return {!Array.<number>} The values in the field.
+         */
+        packedUint32Array(): Array<number>;
+        
+        /**
+         * @return {boolean} Whether the packed_uint32 field has a value.
+         */
+        hasPackedUint32(): boolean;
+        
+        /**
+         * @return {number} The number of values in the packed_uint32 field.
+         */
+        packedUint32Count(): number;
+        
+        /**
+         * Clears the values in the packed_uint32 field.
+         */
+        clearPackedUint32(): void;
+        
+        /**
+         * Gets the value of the packed_uint64 field at the index given.
+         * @param {number} index The index to lookup.
+         * @return {?number} The value.
+         */
+        getPackedUint64(index: number): number;
+        
+        /**
+         * Gets the value of the packed_uint64 field at the index given or the default value if not set.
+         * @param {number} index The index to lookup.
+         * @return {number} The value.
+         */
+        getPackedUint64OrDefault(index: number): number;
+        
+        /**
+         * Adds a value to the packed_uint64 field.
+         * @param {number} value The value to add.
+         */
+        addPackedUint64(value: number): void;
+        
+        /**
+         * Returns the array of values in the packed_uint64 field.
+         * @return {!Array.<number>} The values in the field.
+         */
+        packedUint64Array(): Array<number>;
+        
+        /**
+         * @return {boolean} Whether the packed_uint64 field has a value.
+         */
+        hasPackedUint64(): boolean;
+        
+        /**
+         * @return {number} The number of values in the packed_uint64 field.
+         */
+        packedUint64Count(): number;
+        
+        /**
+         * Clears the values in the packed_uint64 field.
+         */
+        clearPackedUint64(): void;
+        
+        /**
+         * Gets the value of the packed_sint32 field at the index given.
+         * @param {number} index The index to lookup.
+         * @return {?number} The value.
+         */
+        getPackedSint32(index: number): number;
+        
+        /**
+         * Gets the value of the packed_sint32 field at the index given or the default value if not set.
+         * @param {number} index The index to lookup.
+         * @return {number} The value.
+         */
+        getPackedSint32OrDefault(index: number): number;
+        
+        /**
+         * Adds a value to the packed_sint32 field.
+         * @param {number} value The value to add.
+         */
+        addPackedSint32(value: number): void;
+        
+        /**
+         * Returns the array of values in the packed_sint32 field.
+         * @return {!Array.<number>} The values in the field.
+         */
+        packedSint32Array(): Array<number>;
+        
+        /**
+         * @return {boolean} Whether the packed_sint32 field has a value.
+         */
+        hasPackedSint32(): boolean;
+        
+        /**
+         * @return {number} The number of values in the packed_sint32 field.
+         */
+        packedSint32Count(): number;
+        
+        /**
+         * Clears the values in the packed_sint32 field.
+         */
+        clearPackedSint32(): void;
+        
+        /**
+         * Gets the value of the packed_sint64 field at the index given.
+         * @param {number} index The index to lookup.
+         * @return {?number} The value.
+         */
+        getPackedSint64(index: number): number;
+        
+        /**
+         * Gets the value of the packed_sint64 field at the index given or the default value if not set.
+         * @param {number} index The index to lookup.
+         * @return {number} The value.
+         */
+        getPackedSint64OrDefault(index: number): number;
+        
+        /**
+         * Adds a value to the packed_sint64 field.
+         * @param {number} value The value to add.
+         */
+        addPackedSint64(value: number): void;
+        
+        /**
+         * Returns the array of values in the packed_sint64 field.
+         * @return {!Array.<number>} The values in the field.
+         */
+        packedSint64Array(): Array<number>;
+        
+        /**
+         * @return {boolean} Whether the packed_sint64 field has a value.
+         */
+        hasPackedSint64(): boolean;
+        
+        /**
+         * @return {number} The number of values in the packed_sint64 field.
+         */
+        packedSint64Count(): number;
+        
+        /**
+         * Clears the values in the packed_sint64 field.
+         */
+        clearPackedSint64(): void;
+        
+        /**
+         * Gets the value of the packed_fixed32 field at the index given.
+         * @param {number} index The index to lookup.
+         * @return {?number} The value.
+         */
+        getPackedFixed32(index: number): number;
+        
+        /**
+         * Gets the value of the packed_fixed32 field at the index given or the default value if not set.
+         * @param {number} index The index to lookup.
+         * @return {number} The value.
+         */
+        getPackedFixed32OrDefault(index: number): number;
+        
+        /**
+         * Adds a value to the packed_fixed32 field.
+         * @param {number} value The value to add.
+         */
+        addPackedFixed32(value: number): void;
+        
+        /**
+         * Returns the array of values in the packed_fixed32 field.
+         * @return {!Array.<number>} The values in the field.
+         */
+        packedFixed32Array(): Array<number>;
+        
+        /**
+         * @return {boolean} Whether the packed_fixed32 field has a value.
+         */
+        hasPackedFixed32(): boolean;
+        
+        /**
+         * @return {number} The number of values in the packed_fixed32 field.
+         */
+        packedFixed32Count(): number;
+        
+        /**
+         * Clears the values in the packed_fixed32 field.
+         */
+        clearPackedFixed32(): void;
+        
+        /**
+         * Gets the value of the packed_fixed64 field at the index given.
+         * @param {number} index The index to lookup.
+         * @return {?number} The value.
+         */
+        getPackedFixed64(index: number): number;
+        
+        /**
+         * Gets the value of the packed_fixed64 field at the index given or the default value if not set.
+         * @param {number} index The index to lookup.
+         * @return {number} The value.
+         */
+        getPackedFixed64OrDefault(index: number): number;
+        
+        /**
+         * Adds a value to the packed_fixed64 field.
+         * @param {number} value The value to add.
+         */
+        addPackedFixed64(value: number): void;
+        
+        /**
+         * Returns the array of values in the packed_fixed64 field.
+         * @return {!Array.<number>} The values in the field.
+         */
+        packedFixed64Array(): Array<number>;
+        
+        /**
+         * @return {boolean} Whether the packed_fixed64 field has a value.
+         */
+        hasPackedFixed64(): boolean;
+        
+        /**
+         * @return {number} The number of values in the packed_fixed64 field.
+         */
+        packedFixed64Count(): number;
+        
+        /**
+         * Clears the values in the packed_fixed64 field.
+         */
+        clearPackedFixed64(): void;
+        
+        /**
+         * Gets the value of the packed_sfixed32 field at the index given.
+         * @param {number} index The index to lookup.
+         * @return {?number} The value.
+         */
+        getPackedSfixed32(index: number): number;
+        
+        /**
+         * Gets the value of the packed_sfixed32 field at the index given or the default value if not set.
+         * @param {number} index The index to lookup.
+         * @return {number} The value.
+         */
+        getPackedSfixed32OrDefault(index: number): number;
+        
+        /**
+         * Adds a value to the packed_sfixed32 field.
+         * @param {number} value The value to add.
+         */
+        addPackedSfixed32(value: number): void;
+        
+        /**
+         * Returns the array of values in the packed_sfixed32 field.
+         * @return {!Array.<number>} The values in the field.
+         */
+        packedSfixed32Array(): Array<number>;
+        
+        /**
+         * @return {boolean} Whether the packed_sfixed32 field has a value.
+         */
+        hasPackedSfixed32(): boolean;
+        
+        /**
+         * @return {number} The number of values in the packed_sfixed32 field.
+         */
+        packedSfixed32Count(): number;
+        
+        /**
+         * Clears the values in the packed_sfixed32 field.
+         */
+        clearPackedSfixed32(): void;
+        
+        /**
+         * Gets the value of the packed_sfixed64 field at the index given.
+         * @param {number} index The index to lookup.
+         * @return {?number} The value.
+         */
+        getPackedSfixed64(index: number): number;
+        
+        /**
+         * Gets the value of the packed_sfixed64 field at the index given or the default value if not set.
+         * @param {number} index The index to lookup.
+         * @return {number} The value.
+         */
+        getPackedSfixed64OrDefault(index: number): number;
+        
+        /**
+         * Adds a value to the packed_sfixed64 field.
+         * @param {number} value The value to add.
+         */
+        addPackedSfixed64(value: number): void;
+        
+        /**
+         * Returns the array of values in the packed_sfixed64 field.
+         * @return {!Array.<number>} The values in the field.
+         */
+        packedSfixed64Array(): Array<number>;
+        
+        /**
+         * @return {boolean} Whether the packed_sfixed64 field has a value.
+         */
+        hasPackedSfixed64(): boolean;
+        
+        /**
+         * @return {number} The number of values in the packed_sfixed64 field.
+         */
+        packedSfixed64Count(): number;
+        
+        /**
+         * Clears the values in the packed_sfixed64 field.
+         */
+        clearPackedSfixed64(): void;
+        
+        /**
+         * Gets the value of the packed_float field at the index given.
+         * @param {number} index The index to lookup.
+         * @return {?number} The value.
+         */
+        getPackedFloat(index: number): number;
+        
+        /**
+         * Gets the value of the packed_float field at the index given or the default value if not set.
+         * @param {number} index The index to lookup.
+         * @return {number} The value.
+         */
+        getPackedFloatOrDefault(index: number): number;
+        
+        /**
+         * Adds a value to the packed_float field.
+         * @param {number} value The value to add.
+         */
+        addPackedFloat(value: number): void;
+        
+        /**
+         * Returns the array of values in the packed_float field.
+         * @return {!Array.<number>} The values in the field.
+         */
+        packedFloatArray(): Array<number>;
+        
+        /**
+         * @return {boolean} Whether the packed_float field has a value.
+         */
+        hasPackedFloat(): boolean;
+        
+        /**
+         * @return {number} The number of values in the packed_float field.
+         */
+        packedFloatCount(): number;
+        
+        /**
+         * Clears the values in the packed_float field.
+         */
+        clearPackedFloat(): void;
+        
+        /**
+         * Gets the value of the packed_double field at the index given.
+         * @param {number} index The index to lookup.
+         * @return {?number} The value.
+         */
+        getPackedDouble(index: number): number;
+        
+        /**
+         * Gets the value of the packed_double field at the index given or the default value if not set.
+         * @param {number} index The index to lookup.
+         * @return {number} The value.
+         */
+        getPackedDoubleOrDefault(index: number): number;
+        
+        /**
+         * Adds a value to the packed_double field.
+         * @param {number} value The value to add.
+         */
+        addPackedDouble(value: number): void;
+        
+        /**
+         * Returns the array of values in the packed_double field.
+         * @return {!Array.<number>} The values in the field.
+         */
+        packedDoubleArray(): Array<number>;
+        
+        /**
+         * @return {boolean} Whether the packed_double field has a value.
+         */
+        hasPackedDouble(): boolean;
+        
+        /**
+         * @return {number} The number of values in the packed_double field.
+         */
+        packedDoubleCount(): number;
+        
+        /**
+         * Clears the values in the packed_double field.
+         */
+        clearPackedDouble(): void;
+        
+        /**
+         * Gets the value of the packed_bool field at the index given.
+         * @param {number} index The index to lookup.
+         * @return {?boolean} The value.
+         */
+        getPackedBool(index: number): boolean;
+        
+        /**
+         * Gets the value of the packed_bool field at the index given or the default value if not set.
+         * @param {number} index The index to lookup.
+         * @return {boolean} The value.
+         */
+        getPackedBoolOrDefault(index: number): boolean;
+        
+        /**
+         * Adds a value to the packed_bool field.
+         * @param {boolean} value The value to add.
+         */
+        addPackedBool(value: boolean): void;
+        
+        /**
+         * Returns the array of values in the packed_bool field.
+         * @return {!Array.<boolean>} The values in the field.
+         */
+        packedBoolArray(): Array<boolean>;
+        
+        /**
+         * @return {boolean} Whether the packed_bool field has a value.
+         */
+        hasPackedBool(): boolean;
+        
+        /**
+         * @return {number} The number of values in the packed_bool field.
+         */
+        packedBoolCount(): number;
+        
+        /**
+         * Clears the values in the packed_bool field.
+         */
+        clearPackedBool(): void;
     }
 
     /**
      * Message TestDefaultParent.
      * @constructor
      * @extends {goog.proto2.Message}
-     * @final
      */
     class TestDefaultParent extends goog.proto2.Message {
         constructor();
@@ -1551,7 +2082,6 @@ declare module proto2 {
      * Message TestDefaultChild.
      * @constructor
      * @extends {goog.proto2.Message}
-     * @final
      */
     class TestDefaultChild extends goog.proto2.Message {
         constructor();
@@ -1614,7 +2144,6 @@ declare module proto2.TestAllTypes {
      * Message NestedMessage.
      * @constructor
      * @extends {goog.proto2.Message}
-     * @final
      */
     class NestedMessage extends goog.proto2.Message {
         constructor();
@@ -1697,7 +2226,6 @@ declare module proto2.TestAllTypes {
      * Message OptionalGroup.
      * @constructor
      * @extends {goog.proto2.Message}
-     * @final
      */
     class OptionalGroup extends goog.proto2.Message {
         constructor();
@@ -1747,7 +2275,6 @@ declare module proto2.TestAllTypes {
      * Message RepeatedGroup.
      * @constructor
      * @extends {goog.proto2.Message}
-     * @final
      */
     class RepeatedGroup extends goog.proto2.Message {
         constructor();

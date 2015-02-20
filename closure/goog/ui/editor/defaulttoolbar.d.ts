@@ -32,14 +32,14 @@ declare module goog.ui.editor.DefaultToolbar {
 
     /**
      * A set of built-in buttons to display in the default editor toolbar.
-     * @type {!Array.<string>}
+     * @type {!Array<string>}
      */
     var DEFAULT_BUTTONS: Array<string>;
 
     /**
      * A set of built-in buttons to display in the default editor toolbar when
      * the editor chrome is right-to-left (BiDi mode only).
-     * @type {!Array.<string>}
+     * @type {!Array<string>}
      */
     var DEFAULT_BUTTONS_RTL: Array<string>;
 
@@ -183,7 +183,7 @@ declare module goog.ui.editor.DefaultToolbar {
      * item in the {@code items} array must either be a
      * {@link goog.editor.Command} (to create a built-in button) or a subclass
      * of {@link goog.ui.Control} (to create a custom control).
-     * @param {!Array.<string|goog.ui.Control>} items Toolbar items; each must
+     * @param {!Array<string|goog.ui.Control>} items Toolbar items; each must
      *     be a {@link goog.editor.Command} or a {@link goog.ui.Control}.
      * @param {!Element} elem Toolbar parent element.
      * @param {boolean=} opt_isRightToLeft Whether the editor chrome is

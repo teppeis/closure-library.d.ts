@@ -40,7 +40,7 @@ declare module goog.ui {
          *
          * Used exclusively by the derived classes
          *
-         * @type {Array.<string>|string|RegExp|undefined}
+         * @type {Array<string>|string|RegExp|undefined}
          * @protected
          */
         excludeMarker: Array<string>;
@@ -78,17 +78,24 @@ declare module goog.ui {
         getMenuEdit(): goog.ui.MenuItem;
         
         /**
-         * @return {number} The next unique instance ID for a misspelled word.
+         * @return {number} The index of the latest misspelled word to be added.
          * @protected
          */
-        static getNextId(): number;
+        getLastIndex(): number;
+        
+        /**
+         * @return {number} Increments and returns the index for the next misspelled
+         *     word to be added.
+         * @protected
+         */
+        getNextIndex(): number;
         
         /**
          * Sets the marker for the excluded text.
          *
          * {@see goog.ui.AbstractSpellChecker.prototype.excludeMarker}
          *
-         * @param {Array.<string>|string|RegExp|null} marker A RegExp for plain text
+         * @param {Array<string>|string|RegExp|null} marker A RegExp for plain text
          *        or class names for the rich text spell checker for the elements to
          *        exclude from checking.
          */
@@ -188,12 +195,12 @@ declare module goog.ui {
         makeElementId(opt_id?: number): string;
         
         /**
-         * Returns the span element that matches the given number id.
-         * @param {number} id Number id to make the element id.
+         * Returns the span element that matches the given number index.
+         * @param {number} index Number index that is used in the element id.
          * @return {Element} The matching span element or null if no span matches.
          * @protected
          */
-        getElementById(id: number): Element;
+        getElementByIndex(index: number): Element;
         
         /**
          * Creates an element for a specified word and stores a reference to it.
@@ -309,6 +316,43 @@ declare module goog.ui {
          * @protected
          */
         continueAsyncProcessing(): goog.ui.AbstractSpellChecker.AsyncResult;
+        
+        /**
+         * Navigate keyboard focus in the given direction.
+         *
+         * @param {goog.ui.AbstractSpellChecker.Direction} direction The direction to
+         *     navigate in.
+         * @return {boolean} Whether the action is handled here.  If not handled
+         *     here, the initiating event may be propagated.
+         * @protected
+         */
+        navigate(direction: goog.ui.AbstractSpellChecker.Direction): boolean;
+        
+        /**
+         * Returns the index of the currently focussed invalid word element. This index
+         * starts at one instead of zero.
+         *
+         * @return {number} the index of the currently focussed element
+         * @protected
+         */
+        getFocusedElementIndex(): number;
+        
+        /**
+         * Sets the index of the currently focussed invalid word element. This index
+         * should start at one instead of zero.
+         *
+         * @param {number} focusElementIndex the index of the currently focussed element
+         * @protected
+         */
+        setFocusedElementIndex(focusElementIndex: number): void;
+        
+        /**
+         * Sets the focus on the provided word element.
+         *
+         * @param {Element} element The word element that should receive focus.
+         * @protected
+         */
+        focusOnElement(element: Element): void;
     }
 }
 

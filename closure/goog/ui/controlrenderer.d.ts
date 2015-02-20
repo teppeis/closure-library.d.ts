@@ -47,7 +47,7 @@ declare module goog.ui {
          * Members of each class name combination will be joined with underscores in the
          * order that they're defined in the array. You should alphabetize them (for
          * compatibility with the CSS compiler) unless you are doing something special.
-         * @type {Array.<Array.<string>>}
+         * @type {Array<Array<string>>}
          */
         static IE6_CLASS_COMBINATIONS: Array<Array<string>>;
         
@@ -186,6 +186,14 @@ declare module goog.ui {
         setAriaStates(control: goog.ui.Control, element: Element): void;
         
         /**
+         * Sets the element's ARIA label. This should be overriden by subclasses that
+         * don't apply the role directly on control.element_.
+         * @param {!Element} element Element whose ARIA label is to be updated.
+         * @param {string} ariaLabel Label to add to the element.
+         */
+        setAriaLabel(element: Element, ariaLabel: string): void;
+        
+        /**
          * Allows or disallows text selection within the control's DOM.
          * @param {Element} element The control's root element.
          * @param {boolean} allow Whether the element should allow text selection.
@@ -285,7 +293,7 @@ declare module goog.ui {
          * method doesn't reference {@link IE6_CLASS_COMBINATIONS} so that it can be
          * compiled out, but subclasses should return their IE6_CLASS_COMBINATIONS
          * static constant instead.
-         * @return {Array.<Array.<string>>} Array of class name combinations.
+         * @return {Array<Array<string>>} Array of class name combinations.
          */
         getIe6ClassCombinations(): Array<Array<string>>;
         
@@ -323,7 +331,7 @@ declare module goog.ui {
          * method is guaranteed to return an array of at least one element.
          * @param {goog.ui.Control} control Control whose CSS classes are to be
          *     returned.
-         * @return {!Array.<string>} Array of CSS class names applicable to the control.
+         * @return {!Array<string>} Array of CSS class names applicable to the control.
          * @protected
          */
         getClassNames(control: goog.ui.Control): Array<string>;
@@ -336,7 +344,7 @@ declare module goog.ui {
          * implementation uses the renderer's {@link getClassForState} method to
          * generate each state-specific class.
          * @param {number} state Bit mask of component states.
-         * @return {!Array.<string>} Array of CSS class names representing the given
+         * @return {!Array<string>} Array of CSS class names representing the given
          *     state.
          * @protected
          */

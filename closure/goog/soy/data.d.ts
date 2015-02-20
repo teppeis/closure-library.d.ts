@@ -10,7 +10,6 @@ declare module goog.soy.data {
     interface SanitizedContentKind {
         HTML: Object;
         JS: Object;
-        JS_STR_CHARS: Object;
         URI: Object;
         ATTRIBUTES: Object;
         CSS: Object;
@@ -46,9 +45,15 @@ declare module goog.soy.data {
         
         /**
          * The already-safe content.
-         * @type {string}
+         * @protected {string}
          */
-        content: string;
+        content(): void;
+        
+        /**
+         * Gets the already-safe content.
+         * @return {string}
+         */
+        getContent(): string;
         
         /**
          * Converts sanitized content of kind TEXT or HTML into SafeHtml. HTML content

@@ -23,7 +23,7 @@ declare module goog.ui.emoji {
          * @param {goog.ui.emoji.SpriteInfo} spriteInfo Spriting info for the emoji.
          * @param {string} displayUrl URL of the image served for this cell, whether
          *     an individual emoji image or a sprite.
-         * @return {HTMLDivElement} The palette item for this emoji.
+         * @return {!HTMLDivElement} The palette item for this emoji.
          */
         createPaletteItem(dom: goog.dom.DomHelper, id: string, spriteInfo: goog.ui.emoji.SpriteInfo, displayUrl: string): HTMLDivElement;
         

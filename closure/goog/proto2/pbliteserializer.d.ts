@@ -25,7 +25,7 @@ declare module goog.proto2 {
          * Serializes a message to a PB-Lite object.
          *
          * @param {goog.proto2.Message} message The message to be serialized.
-         * @return {!Array} The serialized form of the message.
+         * @return {!Array<?>} The serialized form of the message.
          * @override
          */
         serialize(message: goog.proto2.Message): Array<any>;

@@ -42,7 +42,7 @@ declare module goog.crypt {
         getBytesProcessed(): number;
         
         /**
-         * @return {Array.<number>} The computed hash value or null if not ready.
+         * @return {Array<number>} The computed hash value or null if not ready.
          */
         getHash(): Array<number>;
     }

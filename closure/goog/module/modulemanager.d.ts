@@ -5,6 +5,8 @@ declare module goog.module {
      * Since modules may not have their code loaded, we must keep track of them.
      * @constructor
      * @extends {goog.Disposable}
+     * @struct
+     * @suppress {checkStructDictInheritance}
      */
     class ModuleManager extends goog.Disposable {
         constructor();
@@ -37,7 +39,7 @@ declare module goog.module {
         /**
          * Sets the module info for all modules. Should only be called once.
          *
-         * @param {Object.<Array.<string>>} infoMap An object that contains a mapping
+         * @param {Object<Array<string>>} infoMap An object that contains a mapping
          *    from module id (String) to list of required module ids (Array).
          */
         setAllModuleInfo(infoMap: Object): void;
@@ -49,7 +51,7 @@ declare module goog.module {
          * @param {string=} opt_info A string representation of the module dependency
          *      graph, in the form: module1:dep1,dep2/module2:dep1,dep2 etc.
          *     Where depX is the base-36 encoded position of the dep in the module list.
-         * @param {Array.<string>=} opt_loadingModuleIds A list of moduleIds that
+         * @param {Array<string>=} opt_loadingModuleIds A list of moduleIds that
          *     are currently being loaded.
          */
         setAllModuleInfoString(opt_info?: string, opt_loadingModuleIds?: Array<string>): void;
@@ -57,7 +59,7 @@ declare module goog.module {
         /**
          * Gets a module info object by id.
          * @param {string} id A module identifier.
-         * @return {goog.module.ModuleInfo} The module info.
+         * @return {!goog.module.ModuleInfo} The module info.
          */
         getModuleInfo(id: string): goog.module.ModuleInfo;
         
@@ -161,7 +163,7 @@ declare module goog.module {
          *     user initiated.
          * @param {boolean=} opt_preferSynchronous TRUE iff the function should be
          *     executed synchronously if the module has already been loaded.
-         * @return {goog.module.ModuleLoadCallback} A callback wrapper that exposes
+         * @return {!goog.module.ModuleLoadCallback} A callback wrapper that exposes
          *     an abort and execute method.
          */
         execOnLoad(moduleId: string, fn: Function, opt_handler?: Object, opt_noLoad?: boolean, opt_userInitiated?: boolean, opt_preferSynchronous?: boolean): goog.module.ModuleLoadCallback;
@@ -180,9 +182,9 @@ declare module goog.module {
          * Loads a list of modules, returning a goog.async.Deferred for keeping track of
          * the result.
          *
-         * @param {Array.<string>} moduleIds A list of module ids.
+         * @param {Array<string>} moduleIds A list of module ids.
          * @param {boolean=} opt_userInitiated If the load is a result of a user action.
-         * @return {!Object.<string, !goog.async.Deferred>} A mapping from id (String)
+         * @return {!Object<string, !goog.async.Deferred>} A mapping from id (String)
          *     to deferred objects that will callback or errback when the load for that
          *     id is finished.
          */
@@ -242,7 +244,7 @@ declare module goog.module {
         
         /**
          * The function to call if the module manager is in error.
-         * @param {goog.module.ModuleManager.CallbackType|Array.<goog.module.ModuleManager.CallbackType>} types
+         * @param {goog.module.ModuleManager.CallbackType|Array<goog.module.ModuleManager.CallbackType>} types
          *  The callback type.
          * @param {Function} fn The function to register as a callback.
          */

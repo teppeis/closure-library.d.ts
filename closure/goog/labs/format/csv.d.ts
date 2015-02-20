@@ -2,7 +2,7 @@ declare module goog.labs.format.csv {
 
     /**
      * Sentinel tracking objects.
-     * @enum {Object}
+     * @enum {!Object}
      * @private
      */
     interface Sentinels_ {
@@ -53,7 +53,7 @@ declare module goog.labs.format.csv {
      * @param {string} text The entire CSV text to be parsed.
      * @param {boolean=} opt_ignoreErrors Whether to ignore parsing errors and
      *      instead try to recover and keep going.
-     * @return {!Array.<!Array.<string>>} The parsed CSV.
+     * @return {!Array<!Array<string>>} The parsed CSV.
      */
     function parse(text: string, opt_ignoreErrors?: boolean): Array<Array<string>>;
 }

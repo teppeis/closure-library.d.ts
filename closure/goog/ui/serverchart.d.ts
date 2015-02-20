@@ -174,7 +174,7 @@ declare module goog.ui {
         /**
          * Sets the background fill.
          *
-         * @param {Array.<Object>} fill An array of background fill specification
+         * @param {Array<Object>} fill An array of background fill specification
          *     objects. Each object may have the following properties:
          *     {string} area The area to fill, either 'bg' for background or 'c' for
          *         chart area.  The default is 'bg'.
@@ -187,7 +187,7 @@ declare module goog.ui {
         /**
          * Returns the background fill.
          *
-         * @return {!Array.<Object>} An array of background fill specifications.
+         * @return {!Array<Object>} An array of background fill specifications.
          *     If the fill specification string is in an unsupported format, the method
          *    returns an empty array.
          */
@@ -232,7 +232,7 @@ declare module goog.ui {
         /**
          * Returns the chart size.
          *
-         * @return {!Array.<string>} [Width, Height].
+         * @return {!Array<string>} [Width, Height].
          */
         getSize(): Array<string>;
         
@@ -297,12 +297,12 @@ declare module goog.ui {
         /**
          * Sets the X Labels for the chart.
          *
-         * @param {Array.<string>} labels The X Labels for the chart.
+         * @param {Array<string>} labels The X Labels for the chart.
          */
         setXLabels(labels: Array<string>): void;
         
         /**
-         * @return {Array.<string>} The X Labels for the chart.
+         * @return {Array<string>} The X Labels for the chart.
          */
         getXLabels(): Array<string>;
         
@@ -353,12 +353,12 @@ declare module goog.ui {
          *       from 0 to 100 with 0 at bottom of the graph, then you would
          *       want to pass something like [0,25,50,75,100].
          *
-         * @param {Array.<string>} labels The Left Labels for the chart.
+         * @param {Array<string>} labels The Left Labels for the chart.
          */
         setLeftLabels(labels: Array<string>): void;
         
         /**
-         * @return {Array.<string>} The Left Labels for the chart.
+         * @return {Array<string>} The Left Labels for the chart.
          */
         getLeftLabels(): Array<string>;
         
@@ -385,12 +385,12 @@ declare module goog.ui {
          *       from 0 to 100 with 0 at bottom of the graph, then you would
          *       want to pass something like [0,25,50,75,100].
          *
-         * @param {Array.<string>} labels The Right Labels for the chart.
+         * @param {Array<string>} labels The Right Labels for the chart.
          */
         setRightLabels(labels: Array<string>): void;
         
         /**
-         * @return {Array.<string>} The Right Labels for the chart.
+         * @return {Array<string>} The Right Labels for the chart.
          */
         getRightLabels(): Array<string>;
         
@@ -444,9 +444,9 @@ declare module goog.ui {
          *     weights[1] is relative area of circle B.
          *     weights[2] is relative area of overlap of circles A and B.
          *
-         * @param {Array.<number>} weights The relative weights of the circles.
-         * @param {Array.<string>=} opt_legendText The legend labels for the circles.
-         * @param {Array.<string>=} opt_colors The colors for the circles.
+         * @param {Array<number>} weights The relative weights of the circles.
+         * @param {Array<string>=} opt_legendText The legend labels for the circles.
+         * @param {Array<string>=} opt_colors The colors for the circles.
          */
         setVennSeries(weights: Array<number>, opt_legendText?: Array<string>, opt_colors?: Array<string>): void;
         
@@ -486,7 +486,7 @@ declare module goog.ui {
         /**
          * Adds a legend to the chart.
          *
-         * @param {Array.<string>} legend The legend to add.
+         * @param {Array<string>} legend The legend to add.
          */
         setLegend(legend: Array<string>): void;
         
@@ -546,7 +546,7 @@ declare module goog.ui {
          *
          * @param {number=} opt_axisNumber The axis index, as returned by addMultiAxis.
          * @return {goog.ui.ServerChart.MultiAxisType|
-         *     Array.<goog.ui.ServerChart.MultiAxisType>}
+         *     Array<goog.ui.ServerChart.MultiAxisType>}
          *     The axis type for the given axis, or all of them in an array if the
          *     axis number is not given.
          */
@@ -557,7 +557,7 @@ declare module goog.ui {
          * any existing values.
          *
          * @param {number} axisNumber The axis index, as returned by addMultiAxis.
-         * @param {Array.<string>} labelText The actual label text to be added.
+         * @param {Array<string>} labelText The actual label text to be added.
          */
         setMultiAxisLabelText(axisNumber: number, labelText: Array<string>): void;
         
@@ -566,7 +566,7 @@ declare module goog.ui {
          * axis number is not given.
          *
          * @param {number=} opt_axisNumber The axis index, as returned by addMultiAxis.
-         * @return {Object|Array.<string>} The label text, or all of them in a
+         * @return {Object|Array<string>} The label text, or all of them in a
          *     two-dimensional array if the axis number is not given.
          */
         getMultiAxisLabelText(opt_axisNumber?: number): Object;
@@ -577,7 +577,7 @@ declare module goog.ui {
          * range of the axis.
          *
          * @param {number} axisNumber The axis index, as returned by addMultiAxis.
-         * @param {Array.<number>} labelPosition The actual label positions to be added.
+         * @param {Array<number>} labelPosition The actual label positions to be added.
          */
         setMultiAxisLabelPosition(axisNumber: number, labelPosition: Array<number>): void;
         
@@ -586,7 +586,7 @@ declare module goog.ui {
          * two-dimensional array if the axis number is not given.
          *
          * @param {number=} opt_axisNumber The axis index, as returned by addMultiAxis.
-         * @return {Object|Array.<number>} The label positions for a given axis number,
+         * @return {Object|Array<number>} The label positions for a given axis number,
          *     or all of them in a two-dimensional array if the axis number is not
          *     given.
          */
@@ -611,7 +611,7 @@ declare module goog.ui {
          * axis number is not given.
          *
          * @param {number=} opt_axisNumber The axis index, as returned by addMultiAxis.
-         * @return {Object|Array.<number>} The label range for a given axis number as a
+         * @return {Object|Array<number>} The label range for a given axis number as a
          *     two-element array of (range start, range end), or all of them in a
          *     two-dimensional array if the axis number is not given.
          */
@@ -641,7 +641,7 @@ declare module goog.ui {
          * given.
          *
          * @param {number=} opt_axisNumber The axis index, as returned by addMultiAxis.
-         * @return {Object|Array.<number>} The label style for a given axis number as a
+         * @return {Object|Array<number>} The label style for a given axis number as a
          *     one- to three-element array, or all of them in a two-dimensional array if
          *     the axis number is not given.
          */
@@ -651,7 +651,7 @@ declare module goog.ui {
          * Adds a data set.
          * NOTE: The color string should NOT have a '#' at the beginning of it.
          *
-         * @param {Array.<number|null>} data An array of numbers (values can be
+         * @param {Array<number|null>} data An array of numbers (values can be
          *     NaN or null).
          * @param {string} color The hex value for this data set's color.
          * @param {string=} opt_legendText The legend text, if any, for this data
@@ -671,8 +671,8 @@ declare module goog.ui {
          * the set number is not given.
          *
          * @param {number=} opt_setNumber Optional data set number to get.
-         * @return {Array} The given data set or all of them in a two-dimensional array
-         *     if the set number is not given.
+         * @return {Array<?>} The given data set or all of them in a two-dimensional
+         *     array if the set number is not given.
          */
         getData(opt_setNumber?: number): Array<any>;
     }

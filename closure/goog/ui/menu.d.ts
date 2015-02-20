@@ -98,7 +98,7 @@ declare module goog.ui {
         
         /**
          * Returns an array containing the menu items contained in the menu.
-         * @return {!Array.<goog.ui.MenuItem>} An array of menu items.
+         * @return {!Array<goog.ui.MenuItem>} An array of menu items.
          * @deprecated Use getChildAt, forEachChild, and getChildCount.
          */
         getItems(): Array<goog.ui.MenuItem>;

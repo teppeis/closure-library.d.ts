@@ -97,13 +97,13 @@ declare module goog.ui.media {
         
         /**
          * Gets the thumbnail urls.
-         * @return {Array.<goog.ui.media.MediaModel.Thumbnail>} The list of thumbnails.
+         * @return {Array<goog.ui.media.MediaModel.Thumbnail>} The list of thumbnails.
          */
         getThumbnails(): Array<goog.ui.media.MediaModel.Thumbnail>;
         
         /**
          * Sets the thumbnail list.
-         * @param {Array.<goog.ui.media.MediaModel.Thumbnail>} thumbnails The list of
+         * @param {Array<goog.ui.media.MediaModel.Thumbnail>} thumbnails The list of
          *     thumbnail.
          * @return {!goog.ui.media.MediaModel} The object itself, used for chaining.
          */
@@ -163,14 +163,14 @@ declare module goog.ui.media {
         
         /**
          * Gets the categories of the media.
-         * @return {Array.<goog.ui.media.MediaModel.Category>} The categories of the
+         * @return {Array<goog.ui.media.MediaModel.Category>} The categories of the
          *     media.
          */
         getCategories(): Array<goog.ui.media.MediaModel.Category>;
         
         /**
          * Sets the categories of the media
-         * @param {Array.<goog.ui.media.MediaModel.Category>} categories The categories
+         * @param {Array<goog.ui.media.MediaModel.Category>} categories The categories
          *     of the media.
          * @return {!goog.ui.media.MediaModel} The object itself, used for chaining.
          */
@@ -186,13 +186,13 @@ declare module goog.ui.media {
         
         /**
          * Gets the credits of the media.
-         * @return {!Array.<goog.ui.media.MediaModel.Credit>} The credits of the media.
+         * @return {!Array<goog.ui.media.MediaModel.Credit>} The credits of the media.
          */
         getCredits(): Array<goog.ui.media.MediaModel.Credit>;
         
         /**
          * Sets the credits of the media
-         * @param {!Array.<goog.ui.media.MediaModel.Credit>} credits The credits of the
+         * @param {!Array<goog.ui.media.MediaModel.Credit>} credits The credits of the
          *     media.
          * @return {!goog.ui.media.MediaModel} The object itself, used for chaining.
          */
@@ -201,20 +201,20 @@ declare module goog.ui.media {
         /**
          * Finds all credits with the given role.
          * @param {string} role The role to search for.
-         * @return {!Array.<!goog.ui.media.MediaModel.Credit>} An array of credits
+         * @return {!Array<!goog.ui.media.MediaModel.Credit>} An array of credits
          *     with the given role. May be empty.
          */
         findCreditsWithRole(role: string): Array<goog.ui.media.MediaModel.Credit>;
         
         /**
          * Gets the subtitles for the media.
-         * @return {Array.<goog.ui.media.MediaModel.SubTitle>} The subtitles.
+         * @return {Array<goog.ui.media.MediaModel.SubTitle>} The subtitles.
          */
         getSubTitles(): Array<goog.ui.media.MediaModel.SubTitle>;
         
         /**
          * Sets the subtitles for the media
-         * @param {Array.<goog.ui.media.MediaModel.SubTitle>} subtitles The subtitles.
+         * @param {Array<goog.ui.media.MediaModel.SubTitle>} subtitles The subtitles.
          * @return {!goog.ui.media.MediaModel} The object itself.
          */
         setSubTitles(subtitles: Array<goog.ui.media.MediaModel.SubTitle>): goog.ui.media.MediaModel;
@@ -294,7 +294,7 @@ declare module goog.ui.media.MediaModel {
     /**
      * Constructs a player containing details of the player's URL and
      * optionally its size.
-     * @param {string} url The URL of the player.
+     * @param {string|!goog.html.TrustedResourceUrl} url The URL of the player.
      * @param {Object=} opt_vars Optional map of arguments to the player.
      * @param {goog.math.Size=} opt_size The size of the player if known.
      * @constructor
@@ -304,14 +304,20 @@ declare module goog.ui.media.MediaModel {
         constructor(url: string, opt_vars?: Object, opt_size?: goog.math.Size);
         
         /**
-         * Gets the player url.
-         * @return {string} The thumbnail's image URL.
+         * Gets the player URL.
+         * @return {!goog.html.TrustedResourceUrl} The player's URL.
+         */
+        getTrustedResourceUrl(): goog.html.TrustedResourceUrl;
+        
+        /**
+         * Gets the player URL.
+         * @return {string} The player's URL.
          */
         getUrl(): string;
         
         /**
-         * Sets the player url.
-         * @param {string} url The thumbnail's image URL.
+         * Sets the player URL.
+         * @param {string|!goog.html.TrustedResourceUrl} url The player's URL.
          * @return {!goog.ui.media.MediaModel.Player} The object itself, used for
          *     chaining.
          */

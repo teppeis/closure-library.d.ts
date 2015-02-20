@@ -141,6 +141,31 @@ declare module goog.positioning {
     function positionAtCoordinate(absolutePos: goog.math.Coordinate, movableElement: Element, movableElementCorner: goog.positioning.Corner, opt_margin?: goog.math.Box, opt_viewport?: goog.math.Box, opt_overflow?: number, opt_preferredSize?: goog.math.Size): goog.positioning.OverflowStatus;
 
     /**
+     * Computes the position for an element to be placed on-screen at the
+     * specified coordinates. Returns an object containing both the resulting
+     * rectangle, and the overflow status bitmap.
+     *
+     * @param {!goog.math.Coordinate} absolutePos The coordinate to position the
+     *     element at.
+     * @param {!goog.math.Size} elementSize The size of the element to be
+     *     positioned.
+     * @param {goog.positioning.Corner} elementCorner The corner of the
+     *     movableElement that that should be positioned.
+     * @param {goog.math.Box=} opt_margin A margin specified in pixels.
+     *    After the normal positioning algorithm is applied and any offset, the
+     *    margin is then applied. Positive coordinates move the popup away from the
+     *    spot it was positioned towards its center. Negative coordinates move it
+     *    towards the spot it was positioned away from its center.
+     * @param {goog.math.Box=} opt_viewport Box object describing the dimensions of
+     *     the viewport. Required if opt_overflow is specified.
+     * @param {?number=} opt_overflow Overflow handling mode. Defaults to IGNORE
+     *     if not specified, {@see goog.positioning.Overflow}.
+     * @return {{rect:!goog.math.Rect, status:goog.positioning.OverflowStatus}}
+     *     Object containing the computed position and status bitmap.
+     */
+    function getPositionAtCoordinate(absolutePos: goog.math.Coordinate, elementSize: goog.math.Size, elementCorner: goog.positioning.Corner, opt_margin?: goog.math.Box, opt_viewport?: goog.math.Box, opt_overflow?: number): {rect: goog.math.Rect; status: goog.positioning.OverflowStatus};
+
+    /**
      * Returns an absolute corner (top/bottom left/right) given an absolute
      * or relative (top/bottom start/end) corner and the direction of an element.
      * Absolute corners remain unchanged.

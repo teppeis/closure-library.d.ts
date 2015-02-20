@@ -1,13 +1,31 @@
 declare module goog.net {
 
     /**
-     * Creates a new instance of cross domain RPC
+     * Creates a new instance of cross domain RPC.
+     *
+     * This class makes use of goog.html.legacyconversions and provides no
+     * HTML-type-safe alternative. As such, it is not compatible with
+     * code that sets goog.html.legacyconversions.ALLOW_LEGACY_CONVERSIONS to
+     * false.
+     *
      * @extends {goog.events.EventTarget}
      * @constructor
      * @final
      */
     class CrossDomainRpc extends goog.events.EventTarget {
         constructor();
+        
+        /** @type {Object} */
+        responseHeaders: Object;
+        
+        /** @type {string} */
+        responseText: string;
+        
+        /** @type {number} */
+        status: number;
+        
+        /** @type {number} */
+        timeWaitedAfterResponseReady_: number;
         
         /**
          * Header prefix.

@@ -34,7 +34,7 @@ declare module goog.net {
          * Returns an array of request ids that are either in flight, or waiting to
          * be sent. The id of the current request will be included if used within a
          * COMPLETE event handler or callback.
-         * @return {!Array.<string>} Request ids in flight or pending send.
+         * @return {!Array<string>} Request ids in flight or pending send.
          */
         getOutstandingRequestIds(): Array<string>;
         

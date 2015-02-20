@@ -2,7 +2,7 @@ declare module goog.editor.style {
 
     /**
      * Checks whether the given element inherits display: block.
-     * @param {Node} node The Node to check.
+     * @param {!Node} node The Node to check.
      * @return {boolean} Whether the element inherits CSS display: block.
      */
     function isDisplayBlock(node: Node): boolean;

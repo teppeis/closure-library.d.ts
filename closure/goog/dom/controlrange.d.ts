@@ -27,12 +27,12 @@ declare module goog.dom {
         static createFromElements(...var_args: Element[]): goog.dom.ControlRange;
         
         /**
-         * @return {!Array.<Element>} Array of elements in the control range.
+         * @return {!Array<Element>} Array of elements in the control range.
          */
         getElements(): Array<Element>;
         
         /**
-         * @return {!Array.<Element>} Array of elements comprising the control range,
+         * @return {!Array<Element>} Array of elements comprising the control range,
          *     sorted by document order.
          */
         getSortedElements(): Array<Element>;

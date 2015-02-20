@@ -21,7 +21,7 @@ declare module goog.ui {
          * The CSS class name to add to the input when the user has not entered a
          * value.
          */
-        LABEL_CLASS_NAME: any;
+        labelCssClassName: any;
         
         /**
          * Decorates an existing HTML input element as a label input. If the element
@@ -67,7 +67,7 @@ declare module goog.ui {
         getValue(): string;
         
         /**
-         * Sets the label text.
+         * Sets the label text as aria-label, and placeholder when supported.
          * @param {string} label The text to show as the label.
          */
         setLabel(label: string): void;

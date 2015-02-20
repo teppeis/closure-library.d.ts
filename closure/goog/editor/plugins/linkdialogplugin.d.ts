@@ -31,7 +31,7 @@ declare module goog.editor.plugins {
          * Schemes should all be in lowercase. If the plugin is set to block opening
          * unsafe schemes, user-entered URLs will be converted to lowercase and checked
          * against this list. The whitelist has no effect if blocking is not enabled.
-         * @param {Array.<string>} schemes String array of URL schemes to allow (http,
+         * @param {Array<string>} schemes String array of URL schemes to allow (http,
          *     https, etc.).
          */
         setSafeToOpenSchemes(schemes: Array<string>): void;
@@ -74,10 +74,10 @@ declare module goog.editor.plugins {
         /**
          * Sets the warning message to show to users about including email addresses on
          * public web pages.
-         * @param {string} emailWarning Warning message to show users about including
-         *     email addresses on the web.
+         * @param {!goog.html.SafeHtml} emailWarning Warning message to show users about
+         *     including email addresses on the web.
          */
-        setEmailWarning(emailWarning: string): void;
+        setEmailWarning(emailWarning: goog.html.SafeHtml): void;
         
         /**
          * Handles execCommand by opening the dialog.
@@ -99,7 +99,7 @@ declare module goog.editor.plugins {
         handleAfterHide(e: goog.events.Event): void;
         
         /**
-         * @return {goog.events.EventHandler.<T>} The event handler.
+         * @return {goog.events.EventHandler<T>} The event handler.
          * @protected
          * @this T
          * @template T

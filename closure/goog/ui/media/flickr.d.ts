@@ -54,9 +54,10 @@ declare module goog.ui.media {
          * A static method that sets which flash URL this class should use. Use this if
          * you want to host your own flash flickr player.
          *
-         * @param {string} flashUrl The URL of the flash flickr player.
+         * @param {!goog.html.TrustedResourceUrl} flashUrl The URL of the flash flickr
+         *     player.
          */
-        static setFlashUrl(flashUrl: string): void;
+        static setFlashUrl(flashUrl: goog.html.TrustedResourceUrl): void;
         
         /**
          * Creates the initial DOM structure of the flickr set, which is basically a

@@ -8,7 +8,7 @@ declare module goog.ui {
      * @param {goog.ui.ButtonRenderer=} opt_renderer Optional renderer used to
      *     render or decorate the button; defaults to
      *     {@link goog.ui.ToolbarButtonRenderer}.
-     * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM hepler, used for
+     * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper, used for
      *     document interaction.
      * @constructor
      * @extends {goog.ui.Button}

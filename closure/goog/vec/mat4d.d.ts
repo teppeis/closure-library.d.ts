@@ -63,7 +63,7 @@ declare module goog.vec.mat4d {
      * Initializes mat4d mat from Array src.
      *
      * @param {goog.vec.mat4d.Type} mat The destination matrix.
-     * @param {Array.<number>} src The source matrix.
+     * @param {Array<number>} src The source matrix.
      * @return {!goog.vec.mat4d.Type} Return mat so that operations can be
      *     chained together.
      */

@@ -14,7 +14,7 @@ declare module goog.crypt {
      *
      * @constructor
      * @implements {goog.crypt.BlockCipher}
-     * @param {!Array.<number>} key The key as an array of integers in {0, 255}.
+     * @param {!Array<number>} key The key as an array of integers in {0, 255}.
      *     The key must have lengths of 16, 24, or 32 integers for 128-,
      *     192-, or 256-bit encryption, respectively.
      * @final

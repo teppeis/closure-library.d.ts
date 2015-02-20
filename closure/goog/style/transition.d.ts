@@ -22,7 +22,7 @@ declare module goog.style.transition {
      * Sets the element CSS3 transition to properties.
      * @param {Element} element The element to set transition on.
      * @param {goog.style.transition.Css3Property|
-     *     Array.<goog.style.transition.Css3Property>} properties A single CSS3
+     *     Array<goog.style.transition.Css3Property>} properties A single CSS3
      *     transition property or array of properties.
      */
     function set(element: Element, properties: goog.style.transition.Css3Property): void;

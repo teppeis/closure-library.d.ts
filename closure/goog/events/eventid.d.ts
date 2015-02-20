@@ -3,7 +3,7 @@ declare module goog.events {
     /**
      * A templated class that is used when registering for events. Typical usage:
      * <code>
-     *   /** @type {goog.events.EventId.<MyEventObj>}
+     *   /** @type {goog.events.EventId<MyEventObj>}
      *   var myEventId = new goog.events.EventId(
      *       goog.events.getUniqueId(('someEvent'));
      *

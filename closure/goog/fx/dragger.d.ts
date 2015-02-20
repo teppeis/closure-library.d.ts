@@ -113,7 +113,7 @@ declare module goog.fx {
         
         /**
          * Returns the event handler, intended for subclass use.
-         * @return {goog.events.EventHandler.<T>} The event handler.
+         * @return {!goog.events.EventHandler<T>} The event handler.
          * @this T
          * @template T
          */

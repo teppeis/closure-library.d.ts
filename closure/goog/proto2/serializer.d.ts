@@ -20,9 +20,10 @@ declare module goog.proto2 {
         serialize(message: goog.proto2.Message): any;
         
         /**
-         * Returns the serialized form of the given value for the given field
-         * if the field is a Message or Group and returns the value unchanged
-         * otherwise.
+         * Returns the serialized form of the given value for the given field if the
+         * field is a Message or Group and returns the value unchanged otherwise, except
+         * for Infinity, -Infinity and NaN numerical values which are converted to
+         * string representation.
          *
          * @param {goog.proto2.FieldDescriptor} field The field from which this
          *     value came.

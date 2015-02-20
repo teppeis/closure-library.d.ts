@@ -164,7 +164,7 @@ declare module goog.ui {
          * this handler are removed when the tooltip is hidden. Therefore,
          * the recommended usage of this handler is to listen on events in
          * {@link #onShow_}.
-         * @return {goog.events.EventHandler.<T>} Event handler for this popup.
+         * @return {goog.events.EventHandler<T>} Event handler for this popup.
          * @protected
          * @this T
          * @template T

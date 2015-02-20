@@ -32,6 +32,9 @@ declare module goog.debug {
     class Logger {
         constructor(name: string);
         
+        /** @const */
+        static ROOT_LOGGER_NAME: any;
+        
         /**
          * Finds or creates a logger for a named subsystem. If a logger has already been
          * created with the given name it is returned. Otherwise a new logger is
@@ -50,7 +53,7 @@ declare module goog.debug {
         
         /**
          * Logs a message to profiling tools, if available.
-         * {@see http://code.google.com/webtoolkit/speedtracer/logging-api.html}
+         * {@see https://developers.google.com/web-toolkit/speedtracer/logging-api}
          * {@see http://msdn.microsoft.com/en-us/library/dd433074(VS.85).aspx}
          * @param {string} msg The message to log.
          */
@@ -144,12 +147,10 @@ declare module goog.debug {
          * @param {string} msg The string message.
          * @param {Error|Object=} opt_exception An exception associated with the
          *     message.
-         * @param {Function=} opt_fnStackContext A function to use as the base
-         *     of the stack trace used in the log record.
          * @return {!goog.debug.LogRecord} A log record.
          * @suppress {es5Strict}
          */
-        getLogRecord(level: goog.debug.Logger.Level, msg: string, opt_exception?: Error, opt_fnStackContext?: Function): goog.debug.LogRecord;
+        getLogRecord(level: goog.debug.Logger.Level, msg: string, opt_exception?: Error): goog.debug.LogRecord;
         
         /**
          * Logs a message at the Logger.Level.SHOUT level.
@@ -338,7 +339,7 @@ declare module goog.debug.Logger {
         
         /**
          * The predefined levels.
-         * @type {!Array.<!goog.debug.Logger.Level>}
+         * @type {!Array<!goog.debug.Logger.Level>}
          * @final
          */
         static PREDEFINED_LEVELS: Array<goog.debug.Logger.Level>;
@@ -374,7 +375,7 @@ declare module goog.debug.LogManager {
 
     /**
      * Returns all the loggers.
-     * @return {!Object.<string, !goog.debug.Logger>} Map of logger names to logger
+     * @return {!Object<string, !goog.debug.Logger>} Map of logger names to logger
      *     objects.
      */
     function getLoggers(): Object;

@@ -25,7 +25,7 @@ declare module goog.net {
         equals(other: goog.net.IpAddress): boolean;
         
         /**
-         * @return {goog.math.Integer} The IP Address, as an Integer.
+         * @return {!goog.math.Integer} The IP Address, as an Integer.
          */
         toInteger(): goog.math.Integer;
         

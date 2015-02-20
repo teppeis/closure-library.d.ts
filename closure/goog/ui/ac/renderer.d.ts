@@ -114,12 +114,12 @@ declare module goog.ui.ac {
         /**
          * Render the autocomplete UI
          *
-         * @param {Array} rows Matching UI rows.
+         * @param {Array<!Object>} rows Matching UI rows.
          * @param {string} token Token we are currently matching against.
          * @param {Element=} opt_target Current HTML node, will position popup beneath
          *     this node.
          */
-        renderRows(rows: Array<any>, token: string, opt_target?: Element): void;
+        renderRows(rows: Array<Object>, token: string, opt_target?: Element): void;
         
         /**
          * Hide the object.

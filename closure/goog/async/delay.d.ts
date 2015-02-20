@@ -6,16 +6,18 @@ declare module goog.async {
      * each time the delay is started. Calling start on an active delay will reset
      * the timer.
      *
-     * @param {Function} listener Function to call when the delay completes.
+     * @param {function(this:THIS)} listener Function to call when the
+     *     delay completes.
      * @param {number=} opt_interval The default length of the invocation delay (in
      *     milliseconds).
-     * @param {Object=} opt_handler The object scope to invoke the function in.
+     * @param {THIS=} opt_handler The object scope to invoke the function in.
+     * @template THIS
      * @constructor
      * @extends {goog.Disposable}
      * @final
      */
-    class Delay extends goog.Disposable {
-        constructor(listener: Function, opt_interval?: number, opt_handler?: Object);
+    class Delay<THIS> extends goog.Disposable {
+        constructor(listener: () => any, opt_interval?: number, opt_handler?: THIS);
         
         /**
          * Starts the delay timer. The provided listener function will be called after

@@ -40,7 +40,7 @@ declare module goog.tweak {
 
     /**
      * The body of the tweaks UI and also used for BooleanGroup.
-     * @param {!Array.<!goog.tweak.BaseEntry>} entries The entries to show in the
+     * @param {!Array<!goog.tweak.BaseEntry>} entries The entries to show in the
      *     panel.
      * @param {goog.dom.DomHelper=} opt_domHelper The DomHelper to render with.
      * @constructor
@@ -88,7 +88,7 @@ declare module goog.tweak {
      * never registered with the TweakRegistry, but are contained within the
      * collection of entries within TweakPanels.
      * @param {string} namespace The namespace for the entry.
-     * @param {!Array.<!goog.tweak.BaseEntry>} entries Entries within the namespace.
+     * @param {!Array<!goog.tweak.BaseEntry>} entries Entries within the namespace.
      * @constructor
      * @extends {goog.tweak.BaseEntry}
      * @private

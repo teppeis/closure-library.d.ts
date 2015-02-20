@@ -56,7 +56,7 @@ declare module goog.labs.html {
          * attribute by returning {@code null} or substitute a new value
          * by returning a string with the new value.
          *
-         * @param {!Array.<string>|string} elementNames names (or name) on which the
+         * @param {!Array<string>|string} elementNames names (or name) on which the
          *     attributes are allowed.
          *
          *     Element names should be allowed via {@code allowElements(...)} prior
@@ -71,7 +71,7 @@ declare module goog.labs.html {
          *     differs based on the element on which it appears:
          *     e.g. {@code <input type=text>} vs {@code <style type=text/css>}.
          *
-         * @param {!Array.<string>|string} attrNames names (or name) of the attribute
+         * @param {!Array<string>|string} attrNames names (or name) of the attribute
          *     that should be allowed.
          *
          * @param {goog.labs.html.AttributeRewriter=} opt_rewriteValue A function
@@ -92,20 +92,5 @@ declare module goog.labs.html {
          * @return {!goog.labs.html.Sanitizer} {@code this}.
          */
         allowAttributes(elementNames: Array<string>, attrNames: Array<string>, opt_rewriteValue?: goog.labs.html.AttributeRewriter): goog.labs.html.Sanitizer;
-        
-        /**
-         * A new object that is as blank as possible.
-         *
-         * Using {@code Object.create} to create an object with
-         * no prototype speeds up whitelist access since there's fewer prototypes
-         * to fall-back to for a common case where an element is not in the
-         * white-list, and reduces the chance of confusing a member of
-         * {@code Object.prototype} with a whitelist entry.
-         *
-         * @return {!Object.<string, ?>} a reference to a newly allocated object that
-         *    does not alias any reference that existed prior.
-         * @private
-         */
-        static createBlankObject_(): void;
     }
 }

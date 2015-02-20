@@ -44,14 +44,14 @@ declare module goog.string$.newlines {
      * @param {string} str String to split.
      * @param {boolean=} opt_keepNewlines Whether to keep the newlines in the
      *     resulting strings. Defaults to false.
-     * @return {!Array.<string>} String split into lines.
+     * @return {!Array<string>} String split into lines.
      */
     function splitLines(str: string, opt_keepNewlines?: boolean): Array<string>;
 
     /**
      * Splits a string into an array of line metadata.
      * @param {string} str String to split.
-     * @return {!Array.<!goog.string.newlines.Line>} Array of line metadata.
+     * @return {!Array<!goog.string.newlines.Line>} Array of line metadata.
      */
     function getLines(str: string): Array<goog.string$.newlines.Line>;
 }

@@ -23,7 +23,7 @@ declare module goog.async {
      * Deferreds may be templated to a specific type they produce using generics
      * with syntax such as:
      * <code>
-     *   /** @type {goog.async.Deferred.<string>} *&#47;
+     *   /** @type {goog.async.Deferred<string>} *&#47;
      *   var d = new goog.async.Deferred();
      *   // Compiler can infer that foo is a string.
      *   d.addCallback(function(foo) {...});
@@ -39,7 +39,7 @@ declare module goog.async {
      * @param {Object=} opt_defaultScope The default object context to call
      *     callbacks and errbacks in.
      * @constructor
-     * @implements {goog.Thenable.<VALUE>}
+     * @implements {goog.Thenable<VALUE>}
      * @template VALUE
      */
     class Deferred<VALUE> {
@@ -114,7 +114,7 @@ declare module goog.async {
          * @param {!function(this:T,?):?} eb The function to be called on an
          *     unsuccessful result.
          * @param {T=} opt_scope An optional scope to call the errback in.
-         * @return {!goog.async.Deferred.<VALUE>} This Deferred.
+         * @return {!goog.async.Deferred<VALUE>} This Deferred.
          * @template T
          */
         addErrback<T>(eb: (arg0: any) => any, opt_scope?: T): goog.async.Deferred<VALUE>;
@@ -128,6 +128,16 @@ declare module goog.async {
          * @template T
          */
         addBoth<T>(f: (arg0: any) => any, opt_scope?: T): goog.async.Deferred<any>;
+        
+        /**
+         * Like addBoth, but propagates uncaught exceptions in the errback.
+         *
+         * @param {!function(this:T,?):?} f The function to be called on any result.
+         * @param {T=} opt_scope An optional scope to call the function in.
+         * @return {!goog.async.Deferred.<VALUE>} This Deferred.
+         * @template T
+         */
+        addFinally<T>(f: (arg0: any) => any, opt_scope?: T): goog.async.Deferred<VALUE>;
         
         /**
          * Registers a callback function and an errback function at the same position
@@ -183,7 +193,7 @@ declare module goog.async {
          * @param {boolean=} opt_propagateCancel If cancel() is called on every child
          *     branch created with opt_propagateCancel, the parent will be canceled as
          *     well.
-         * @return {!goog.async.Deferred.<VALUE>} A Deferred that will be started with
+         * @return {!goog.async.Deferred<VALUE>} A Deferred that will be started with
          *     the computed result from this stage in the execution sequence.
          */
         branch(opt_propagateCancel?: boolean): goog.async.Deferred<VALUE>;
@@ -215,8 +225,8 @@ declare module goog.async {
          * Creates a Deferred that fires when the given promise resolves.
          * Use only during migration to Promises.
          *
-         * @param {!goog.Promise.<T>} promise
-         * @return {!goog.async.Deferred.<T>} The new Deferred.
+         * @param {!goog.Promise<T>} promise
+         * @return {!goog.async.Deferred<T>} The new Deferred.
          * @template T
          */
         static fromPromise<T>(promise: goog.Promise<T, any>): goog.async.Deferred<T>;

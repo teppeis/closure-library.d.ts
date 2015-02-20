@@ -13,8 +13,8 @@ declare module goog.math.interpolator {
          * results, the correct call should be setData([0, 1], [1, 3]).
          * Calling setData multiple times does not merge the data samples. The last
          * call to setData is the one used when computing the interpolation.
-         * @param {!Array.<number>} x The abscissa of the data points.
-         * @param {!Array.<number>} y The ordinate of the data points.
+         * @param {!Array<number>} x The abscissa of the data points.
+         * @param {!Array<number>} y The ordinate of the data points.
          */
         setData(x: Array<number>, y: Array<number>): void;
         

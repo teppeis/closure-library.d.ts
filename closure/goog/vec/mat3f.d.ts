@@ -56,7 +56,7 @@ declare module goog.vec.mat3f {
      * Initializes mat3f mat from Array src.
      *
      * @param {goog.vec.mat3f.Type} mat The destination matrix.
-     * @param {Array.<number>} src The source matrix.
+     * @param {Array<number>} src The source matrix.
      * @return {!goog.vec.mat3f.Type} Return mat so that operations can be
      *     chained together.
      */

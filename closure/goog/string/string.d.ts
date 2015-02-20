@@ -72,14 +72,46 @@ declare module goog.string$ {
     /**
      * Checks if a string is empty or contains only whitespaces.
      * @param {string} str The string to check.
-     * @return {boolean} True if {@code str} is empty or whitespace only.
+     * @return {boolean} Whether {@code str} is empty or whitespace only.
+     */
+    function isEmptyOrWhitespace(str: string): boolean;
+
+    /**
+     * Checks if a string is empty.
+     * @param {string} str The string to check.
+     * @return {boolean} Whether {@code str} is empty.
+     */
+    function isEmptyString(str: string): boolean;
+
+    /**
+     * Checks if a string is empty or contains only whitespaces.
+     *
+     * TODO(user): Deprecate this when clients have been switched over to
+     * goog.string.isEmptyOrWhitespace.
+     *
+     * @param {string} str The string to check.
+     * @return {boolean} Whether {@code str} is empty or whitespace only.
      */
     function isEmpty(str: string): boolean;
 
     /**
      * Checks if a string is null, undefined, empty or contains only whitespaces.
      * @param {*} str The string to check.
-     * @return {boolean} True if{@code str} is null, undefined, empty, or
+     * @return {boolean} Whether {@code str} is null, undefined, empty, or
+     *     whitespace only.
+     * @deprecated Use goog.string.isEmptyOrWhitespace(goog.string.makeSafe(str))
+     *     instead.
+     */
+    function isEmptyOrWhitespaceSafe(str: any): boolean;
+
+    /**
+     * Checks if a string is null, undefined, empty or contains only whitespaces.
+     *
+     * TODO(user): Deprecate this when clients have been switched over to
+     * goog.string.isEmptyOrWhitespaceSafe.
+     *
+     * @param {*} str The string to check.
+     * @return {boolean} Whether {@code str} is null, undefined, empty, or
      *     whitespace only.
      */
     function isEmptySafe(str: any): boolean;
@@ -116,14 +148,14 @@ declare module goog.string$ {
     /**
      * Checks if a character is a space character.
      * @param {string} ch Character to check.
-     * @return {boolean} True if {code ch} is a space.
+     * @return {boolean} True if {@code ch} is a space.
      */
     function isSpace(ch: string): boolean;
 
     /**
      * Checks if a character is a valid unicode character.
      * @param {string} ch Character to check.
-     * @return {boolean} True if {code ch} is a valid unicode character.
+     * @return {boolean} True if {@code ch} is a valid unicode character.
      */
     function isUnicodeChar(ch: string): boolean;
 
@@ -391,15 +423,6 @@ declare module goog.string$ {
     function escapeChar(c: string): string;
 
     /**
-     * Takes a string and creates a map (Object) in which the keys are the
-     * characters in the string. The value for the key is set to true. You can
-     * then use goog.object.map or goog.array.map to change the values.
-     * @param {string} s The string to build the map from.
-     * @return {!Object} The map of characters used.
-     */
-    function toMap(s: string): Object;
-
-    /**
      * Determines whether a string contains a substring.
      * @param {string} str The string to search.
      * @param {string} subString The substring to search for.
@@ -640,6 +663,21 @@ declare module goog.string$ {
     function toTitleCase(str: string, opt_delimiters?: string): string;
 
     /**
+     * Capitalizes a string, i.e. converts the first letter to uppercase
+     * and all other letters to lowercase, e.g.:
+     *
+     * goog.string.capitalize('one')     => 'One'
+     * goog.string.capitalize('ONE')     => 'One'
+     * goog.string.capitalize('one two') => 'One two'
+     *
+     * Note that this function does not trim initial whitespace.
+     *
+     * @param {string} str String value to capitalize.
+     * @return {string} String value with first letter in uppercase.
+     */
+    function capitalize(str: string): string;
+
+    /**
      * Parse a string in decimal or hexidecimal ('0xFFFF') form.
      *
      * To parse a particular radix, please use parseInt(string, radix) directly. See
@@ -674,7 +712,15 @@ declare module goog.string$ {
      * @param {number} limit The limit to the number of splits. The resulting array
      *     will have a maximum length of limit+1.  Negative numbers are the same
      *     as zero.
-     * @return {!Array.<string>} The string, split.
+     * @return {!Array<string>} The string, split.
      */
     function splitLimit(str: string, separator: string, limit: number): Array<string>;
+
+    /**
+     * Computes the Levenshtein edit distance between two strings.
+     * @param {string} a
+     * @param {string} b
+     * @return {number} The edit distance between the two strings.
+     */
+    function editDistance(a: string, b: string): number;
 }

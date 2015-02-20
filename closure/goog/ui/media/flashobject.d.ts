@@ -6,7 +6,11 @@ declare module goog.ui.media {
      * {@link goog.ui.Component}, which makes it very easy to be embedded on the
      * page.
      *
-     * @param {string} flashUrl The flash SWF URL.
+     * @param {string|!goog.html.TrustedResourceUrl} flashUrl The Flash SWF URL.
+     *     If possible pass a TrustedResourceUrl. string is supported
+     *     for backwards-compatibility only, uses goog.html.legacyconversions,
+     *     and will be sanitized with goog.html.SafeUrl.sanitize() before being
+     *     used.
      * @param {goog.dom.DomHelper=} opt_domHelper An optional DomHelper.
      * @extends {goog.ui.Component}
      * @constructor
