@@ -98,7 +98,7 @@ declare module goog.ui {
          * See http://wiki/Main/ARIA for more info.
          * @return {goog.a11y.aria.Role|undefined} ARIA role.
          */
-        getAriaRole(): goog.a11y.aria.Role;
+        getAriaRole(): goog.a11y.aria.Role|void;
         
         /**
          * Returns the control's contents wrapped in a DIV, with the renderer's own
@@ -129,7 +129,7 @@ declare module goog.ui {
          * @param {string} className CSS class name to add or remove.
          * @param {boolean} enable Whether to add or remove the class name.
          */
-        enableClassName(control: goog.ui.Control, className: string, enable: boolean): void;
+        enableClassName(control: goog.ui.Control|Element, className: string, enable: boolean): void;
         
         /**
          * Updates the control's DOM by adding or removing the specified extra class
@@ -358,7 +358,7 @@ declare module goog.ui {
          *     if none).
          * @protected
          */
-        getClassForState(state: goog.ui.Component.State): string;
+        getClassForState(state: goog.ui.Component.State): string|void;
         
         /**
          * Takes a single CSS class name which may represent a component state, and

@@ -78,7 +78,7 @@ declare module goog.ui {
          * @param {goog.dom.DomHelper} dom DOM helper for document interaction.
          * @return {!Element} Cell element.
          */
-        createCell(node: Node, dom: goog.dom.DomHelper): Element;
+        createCell(node: Node|string, dom: goog.dom.DomHelper): Element;
         
         /**
          * Overrides {@link goog.ui.ControlRenderer#canDecorate} to always return false.

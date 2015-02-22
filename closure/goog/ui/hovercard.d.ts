@@ -38,7 +38,7 @@ declare module goog.ui {
      * @extends {goog.ui.AdvancedTooltip}
      */
     class HoverCard extends goog.ui.AdvancedTooltip {
-        constructor(isAnchor: Function, opt_checkDescendants?: boolean, opt_domHelper?: goog.dom.DomHelper, opt_triggeringDocument?: Document);
+        constructor(isAnchor: Function|Object, opt_checkDescendants?: boolean, opt_domHelper?: goog.dom.DomHelper, opt_triggeringDocument?: Document);
         
         /**
          * Triggers the hovercard to show after a delay.

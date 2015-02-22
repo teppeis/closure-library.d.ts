@@ -18,7 +18,7 @@ declare module goog.graphics.ext {
          * @return {goog.graphics.ext.Element|goog.graphics.ext.Graphics} The graphics
          *     surface the element is a part of.
          */
-        getGraphics(): goog.graphics.ext.Element;
+        getGraphics(): goog.graphics.ext.Element|goog.graphics.ext.Graphics;
         
         /**
          * Returns the graphics implementation.
@@ -31,7 +31,7 @@ declare module goog.graphics.ext {
         /**
          * @return {goog.graphics.ext.Group|undefined} The parent of this element.
          */
-        getParent(): goog.graphics.ext.Group;
+        getParent(): goog.graphics.ext.Group|void;
         
         /**
          * @return {number} The distance from the left edge of this element to the left
@@ -47,7 +47,7 @@ declare module goog.graphics.ext {
          *     of a chain of calls and therefore transformations should be set as
          *     pending but not yet performed.
          */
-        setLeft(left: string, opt_chain?: boolean): void;
+        setLeft(left: string|number, opt_chain?: boolean): void;
         
         /**
          * @return {number} The right coordinate of the element, in units of the
@@ -63,7 +63,7 @@ declare module goog.graphics.ext {
          *     of a chain of calls and therefore transformations should be set as
          *     pending but not yet performed.
          */
-        setRight(right: string, opt_chain?: boolean): void;
+        setRight(right: string|number, opt_chain?: boolean): void;
         
         /**
          * @return {number} The center coordinate of the element, in units of the
@@ -79,7 +79,7 @@ declare module goog.graphics.ext {
          *     of a chain of calls and therefore transformations should be set as
          *     pending but not yet performed.
          */
-        setCenter(center: string, opt_chain?: boolean): void;
+        setCenter(center: string|number, opt_chain?: boolean): void;
         
         /**
          * @return {number} The distance from the top edge of this element to the top
@@ -95,7 +95,7 @@ declare module goog.graphics.ext {
          *     of a chain of calls and therefore transformations should be set as
          *     pending but not yet performed.
          */
-        setTop(top: string, opt_chain?: boolean): void;
+        setTop(top: string|number, opt_chain?: boolean): void;
         
         /**
          * @return {number} The bottom coordinate of the element, in units of the
@@ -111,7 +111,7 @@ declare module goog.graphics.ext {
          *     of a chain of calls and therefore transformations should be set as
          *     pending but not yet performed.
          */
-        setBottom(bottom: string, opt_chain?: boolean): void;
+        setBottom(bottom: string|number, opt_chain?: boolean): void;
         
         /**
          * @return {number} The middle coordinate of the element, in units of the
@@ -127,7 +127,7 @@ declare module goog.graphics.ext {
          *     of a chain of calls and therefore transformations should be set as
          *     pending but not yet performed.
          */
-        setMiddle(middle: string, opt_chain?: boolean): void;
+        setMiddle(middle: string|number, opt_chain?: boolean): void;
         
         /**
          * @return {number} The width of the element, in units of the parent's
@@ -142,7 +142,7 @@ declare module goog.graphics.ext {
          *     of a chain of calls and therefore transformations should be set as
          *     pending but not yet performed.
          */
-        setWidth(width: string, opt_chain?: boolean): void;
+        setWidth(width: string|number, opt_chain?: boolean): void;
         
         /**
          * @return {number} The minimum width of the element, in units of the parent's
@@ -154,7 +154,7 @@ declare module goog.graphics.ext {
          * Sets the minimum width of the element.
          * @param {string|number} minWidth The minimum width of the element.
          */
-        setMinWidth(minWidth: string): void;
+        setMinWidth(minWidth: string|number): void;
         
         /**
          * @return {number} The height of the element, in units of the parent's
@@ -169,7 +169,7 @@ declare module goog.graphics.ext {
          *     of a chain of calls and therefore transformations should be set as
          *     pending but not yet performed.
          */
-        setHeight(height: string, opt_chain?: boolean): void;
+        setHeight(height: string|number, opt_chain?: boolean): void;
         
         /**
          * @return {number} The minimum height of the element, in units of the parent's
@@ -181,7 +181,7 @@ declare module goog.graphics.ext {
          * Sets the minimum height of the element.
          * @param {string|number} minHeight The minimum height of the element.
          */
-        setMinHeight(minHeight: string): void;
+        setMinHeight(minHeight: string|number): void;
         
         /**
          * Shortcut for setting the left and top position.
@@ -191,7 +191,7 @@ declare module goog.graphics.ext {
          *     of a chain of calls and therefore transformations should be set as
          *     pending but not yet performed.
          */
-        setPosition(left: string, top: string, opt_chain?: boolean): void;
+        setPosition(left: string|number, top: string|number, opt_chain?: boolean): void;
         
         /**
          * Shortcut for setting the width and height.
@@ -201,7 +201,7 @@ declare module goog.graphics.ext {
          *     of a chain of calls and therefore transformations should be set as
          *     pending but not yet performed.
          */
-        setSize(width: string, height: string, opt_chain?: boolean): void;
+        setSize(width: string|number, height: string|number, opt_chain?: boolean): void;
         
         /**
          * Shortcut for setting the left, top, width, and height.
@@ -213,7 +213,7 @@ declare module goog.graphics.ext {
          *     of a chain of calls and therefore transformations should be set as
          *     pending but not yet performed.
          */
-        setBounds(left: string, top: string, width: string, height: string, opt_chain?: boolean): void;
+        setBounds(left: string|number, top: string|number, width: string|number, height: string|number, opt_chain?: boolean): void;
         
         /**
          * @return {number} An estimate of the maximum x extent this element would have
@@ -329,7 +329,7 @@ declare module goog.graphics.ext.Element {
          * Sets the minimum width/height of the element.
          * @param {string|number} minSize The minimum width/height of the element.
          */
-        setMinSize(minSize: string): void;
+        setMinSize(minSize: string|number): void;
         
         /**
          * @return {number} The width/height of the element.
@@ -341,7 +341,7 @@ declare module goog.graphics.ext.Element {
          * @param {string|number} size The width/height of the element.
          * @return {boolean} Whether the value was changed.
          */
-        setSize(size: string): boolean;
+        setSize(size: string|number): boolean;
         
         /**
          * @return {number} The distance from the left/top edge of this element to the
@@ -369,7 +369,7 @@ declare module goog.graphics.ext.Element {
          * @param {goog.graphics.ext.Element.PositionType_} type The type of the
          *     coordinate.
          */
-        setPosition(value: number, type: goog.graphics.ext.Element.PositionType_): void;
+        setPosition(value: number|string, type: goog.graphics.ext.Element.PositionType_): void;
         
         /**
          * @return {number} An estimate of the maximum x/y extent this element would

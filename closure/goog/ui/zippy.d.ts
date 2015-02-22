@@ -21,7 +21,7 @@ declare module goog.ui {
      * @constructor
      */
     class Zippy extends goog.events.EventTarget {
-        constructor(header: Element, opt_content?: Element, opt_expanded?: boolean, opt_expandedHeader?: Element, opt_domHelper?: goog.dom.DomHelper);
+        constructor(header: Element|string|void, opt_content?: Element|string|(() => Element), opt_expanded?: boolean, opt_expandedHeader?: Element|string, opt_domHelper?: goog.dom.DomHelper);
         
         /**
          * Constants for event names

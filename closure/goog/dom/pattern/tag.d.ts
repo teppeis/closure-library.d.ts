@@ -18,7 +18,7 @@ declare module goog.dom.pattern {
      * @extends {goog.dom.pattern.AbstractPattern}
      */
     class Tag extends goog.dom.pattern.AbstractPattern {
-        constructor(tag: string, type: goog.dom.TagWalkType, opt_attrs?: Object, opt_styles?: Object, opt_test?: Function);
+        constructor(tag: string|RegExp, type: goog.dom.TagWalkType, opt_attrs?: Object, opt_styles?: Object, opt_test?: Function);
         
         /**
          * Test whether the given token is a tag token which matches the tag name,

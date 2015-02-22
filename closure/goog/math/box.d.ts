@@ -47,7 +47,7 @@ declare module goog.math {
          * @param {goog.math.Coordinate|goog.math.Box} other A Coordinate or a Box.
          * @return {boolean} Whether the box contains the coordinate or other box.
          */
-        contains(other: goog.math.Coordinate): boolean;
+        contains(other: goog.math.Coordinate|goog.math.Box): boolean;
         
         /**
          * Expands box with the given margins.
@@ -58,7 +58,7 @@ declare module goog.math {
          * @param {number=} opt_left Left margin.
          * @return {!goog.math.Box} A reference to this Box.
          */
-        expand(top: number, opt_right?: number, opt_bottom?: number, opt_left?: number): goog.math.Box;
+        expand(top: number|goog.math.Box, opt_right?: number, opt_bottom?: number, opt_left?: number): goog.math.Box;
         
         /**
          * Expand this box to include another box.
@@ -84,7 +84,7 @@ declare module goog.math {
          * @param {goog.math.Coordinate|goog.math.Box} other A Coordinate or a Box.
          * @return {boolean} Whether the box contains the coordinate or other box.
          */
-        static contains(box: goog.math.Box, other: goog.math.Coordinate): boolean;
+        static contains(box: goog.math.Box, other: goog.math.Coordinate|goog.math.Box): boolean;
         
         /**
          * Returns the relative x position of a coordinate compared to a box.  Returns
@@ -172,7 +172,7 @@ declare module goog.math {
          * @param {number=} opt_ty The value to translate y dimension values by.
          * @return {!goog.math.Box} This box after translating.
          */
-        translate(tx: number, opt_ty?: number): goog.math.Box;
+        translate(tx: number|goog.math.Coordinate, opt_ty?: number): goog.math.Box;
         
         /**
          * Scales this coordinate by the given scale factors. The x and y dimension

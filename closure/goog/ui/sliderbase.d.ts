@@ -9,7 +9,7 @@ declare module goog.ui {
      * @extends {goog.ui.Component}
      */
     class SliderBase extends goog.ui.Component {
-        constructor(opt_domHelper?: goog.dom.DomHelper, opt_labelFn?: (arg0: number) => string);
+        constructor(opt_domHelper?: goog.dom.DomHelper, opt_labelFn?: ((arg0: number) => string));
         
         /**
          * The underlying range model

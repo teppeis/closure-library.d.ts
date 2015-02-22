@@ -25,7 +25,7 @@ declare module goog.events {
          *     listener to.
          * @override
          */
-        listen(target: goog.events.ListenableType, listener: (arg0: any) => any, opt_capt?: boolean, opt_scope?: Object, opt_eventHandler?: goog.events.EventHandler<any>): void;
+        listen(target: goog.events.ListenableType, listener: ((arg0: any) => any)|{handleEvent: (arg0: any) => any}|void, opt_capt?: boolean, opt_scope?: Object, opt_eventHandler?: goog.events.EventHandler<any>): void;
         
         /**
          * Removes an event listener added using goog.events.EventWrapper.listen.
@@ -40,7 +40,7 @@ declare module goog.events {
          *     listener from.
          * @override
          */
-        unlisten(target: goog.events.ListenableType, listener: (arg0: any) => any, opt_capt?: boolean, opt_scope?: Object, opt_eventHandler?: goog.events.EventHandler<any>): void;
+        unlisten(target: goog.events.ListenableType, listener: ((arg0: any) => any)|{handleEvent: (arg0: any) => any}|void, opt_capt?: boolean, opt_scope?: Object, opt_eventHandler?: goog.events.EventHandler<any>): void;
     }
 
     /**

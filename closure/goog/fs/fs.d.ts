@@ -16,7 +16,7 @@ declare module goog.fs {
      *            revokeObjectURL: function(string): void}}
      */
     interface UrlObject_ {
-        createObjectURL: (arg0: Blob) => string;
+        createObjectURL: ((arg0: Blob) => string);
         revokeObjectURL: (arg0: string) => void;
     }
 
@@ -72,7 +72,7 @@ declare module goog.fs {
      *     the resulting blob.
      * @return {!Blob} The blob.
      */
-    function getBlob(...var_args: string[]): Blob;
+    function getBlob(...var_args: (string|Blob|ArrayBuffer)[]): Blob;
 
     /**
      * Creates a blob with the given properties.
@@ -85,7 +85,7 @@ declare module goog.fs {
      *     be written out.
      * @return {!Blob} The blob.
      */
-    function getBlobWithProperties(parts: Array<string>, opt_type?: string, opt_endings?: string): Blob;
+    function getBlobWithProperties(parts: Array<string|Blob>, opt_type?: string, opt_endings?: string): Blob;
 
     /**
      * Converts a Blob or a File into a string. This should only be used when the

@@ -52,7 +52,7 @@ declare module goog.net {
          *     request. Default to false. See {@link goog.net.XhrIo#setWithCredentials}.
          * @return {!goog.net.XhrIo} The sent XhrIo.
          */
-        static send(url: string, opt_callback?: (arg0: any) => any, opt_method?: string, opt_content?: ArrayBuffer, opt_headers?: Object, opt_timeoutInterval?: number, opt_withCredentials?: boolean): goog.net.XhrIo;
+        static send(url: string|goog.Uri, opt_callback?: (arg0: any) => any, opt_method?: string, opt_content?: ArrayBuffer|ArrayBufferView|Blob|Document|FormData|string, opt_headers?: Object|goog.structs.Map<any, any>, opt_timeoutInterval?: number, opt_withCredentials?: boolean): goog.net.XhrIo;
         
         /**
          * Disposes all non-disposed instances of goog.net.XhrIo created by
@@ -141,7 +141,7 @@ declare module goog.net {
          * @param {Object|goog.structs.Map=} opt_headers Map of headers to add to the
          *     request.
          */
-        send(url: string, opt_method?: string, opt_content?: ArrayBuffer, opt_headers?: Object): void;
+        send(url: string|goog.Uri, opt_method?: string, opt_content?: ArrayBuffer|ArrayBufferView|Blob|Document|FormData|string, opt_headers?: Object|goog.structs.Map<any, any>): void;
         
         /**
          * Creates a new XHR object.
@@ -240,7 +240,7 @@ declare module goog.net {
          *     your backend server prepends the same prefix string to the JSON response.
          * @return {Object|undefined} JavaScript object.
          */
-        getResponseJson(opt_xssiPrefix?: string): Object;
+        getResponseJson(opt_xssiPrefix?: string): Object|void;
         
         /**
          * Get the response as the type specificed by {@link #setResponseType}. At time
@@ -275,7 +275,7 @@ declare module goog.net {
          * @param {string} key The name of the response-header to retrieve.
          * @return {string|undefined} The value of the response-header named key.
          */
-        getResponseHeader(key: string): string;
+        getResponseHeader(key: string): string|void;
         
         /**
          * Gets the text of all the headers in the response.

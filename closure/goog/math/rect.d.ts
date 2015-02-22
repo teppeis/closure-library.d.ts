@@ -123,7 +123,7 @@ declare module goog.math {
          * @return {boolean} Whether this rectangle contains given rectangle or
          *     coordinate.
          */
-        contains(another: goog.math.Rect): boolean;
+        contains(another: goog.math.Rect|goog.math.Coordinate): boolean;
         
         /**
          * @param {!goog.math.Coordinate} point A coordinate.
@@ -191,7 +191,7 @@ declare module goog.math {
          * @param {number=} opt_ty The value to translate top by.
          * @return {!goog.math.Rect} This rectangle after translating.
          */
-        translate(tx: number, opt_ty?: number): goog.math.Rect;
+        translate(tx: number|goog.math.Coordinate, opt_ty?: number): goog.math.Rect;
         
         /**
          * Scales this rectangle by the given scale factors. The left and width values

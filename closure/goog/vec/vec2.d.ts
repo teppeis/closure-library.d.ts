@@ -265,7 +265,7 @@ declare module goog.vec.Vec2 {
      * @return {!goog.vec.Vec2.AnyType} Return resultVec so that operations can be
      *     chained together.
      */
-    function max(vec0: goog.vec.Vec2.AnyType, limit: goog.vec.Vec2.AnyType, resultVec: goog.vec.Vec2.AnyType): goog.vec.Vec2.AnyType;
+    function max(vec0: goog.vec.Vec2.AnyType, limit: goog.vec.Vec2.AnyType|number, resultVec: goog.vec.Vec2.AnyType): goog.vec.Vec2.AnyType;
 
     /**
      * Compares the components of vec0 with the components of another vector or
@@ -278,7 +278,7 @@ declare module goog.vec.Vec2 {
      * @return {!goog.vec.Vec2.AnyType} Return resultVec so that operations can be
      *     chained together.
      */
-    function min(vec0: goog.vec.Vec2.AnyType, limit: goog.vec.Vec2.AnyType, resultVec: goog.vec.Vec2.AnyType): goog.vec.Vec2.AnyType;
+    function min(vec0: goog.vec.Vec2.AnyType, limit: goog.vec.Vec2.AnyType|number, resultVec: goog.vec.Vec2.AnyType): goog.vec.Vec2.AnyType;
 
     /**
      * Returns true if the components of vec0 are equal to the components of vec1.

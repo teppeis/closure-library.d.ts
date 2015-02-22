@@ -65,7 +65,7 @@ declare module goog.db {
          * @return {!goog.db.Cursor} The cursor.
          * @throws {goog.db.Error} If there was a problem opening the cursor.
          */
-        static openCursor(source: IDBObjectStore, opt_range?: goog.db.KeyRange, opt_direction?: goog.db.Cursor.Direction): goog.db.Cursor;
+        static openCursor(source: IDBObjectStore|IDBIndex, opt_range?: goog.db.KeyRange, opt_direction?: goog.db.Cursor.Direction): goog.db.Cursor;
     }
 }
 

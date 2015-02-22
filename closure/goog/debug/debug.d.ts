@@ -23,7 +23,7 @@ declare module goog.debug {
      *     default is false.
      * @return {string} The string representation of {@code obj}.
      */
-    function expose(obj: Object, opt_showFn?: boolean): string;
+    function expose(obj: Object|void|void, opt_showFn?: boolean): string;
 
     /**
      * Creates a string representing a given primitive or object, and for an
@@ -81,7 +81,7 @@ declare module goog.debug {
      *     which is enhanced and returned.  Otherwise err itself is enhanced
      *     and returned.
      */
-    function enhanceError(err: Error, opt_message?: string): Error;
+    function enhanceError(err: Error|string, opt_message?: string): Error;
 
     /**
      * Gets the current stack trace. Simple and iterative - doesn't worry about

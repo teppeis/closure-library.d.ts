@@ -28,7 +28,7 @@ declare module goog.ds {
      * @final
      */
     class JsonDataSource extends goog.ds.JsDataSource {
-        constructor(uri: string, name: string, opt_callbackParamName?: string);
+        constructor(uri: string|goog.Uri, name: string, opt_callbackParamName?: string);
         
         /**
          * Gets the state of the backing data for this node

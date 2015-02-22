@@ -104,12 +104,12 @@ declare module goog.net.WebChannel {
      * }}
      */
     interface Options {
-        messageHeaders: Object;
-        messageUrlParams: Object;
-        clientProtocolHeaderRequired: boolean;
-        concurrentRequestLimit: number;
-        supportsCrossDomainXhr: boolean;
-        testUrl: string;
+        messageHeaders: Object|void;
+        messageUrlParams: Object|void;
+        clientProtocolHeaderRequired: boolean|void;
+        concurrentRequestLimit: number|void;
+        supportsCrossDomainXhr: boolean|void;
+        testUrl: string|void;
     }
 
     /**

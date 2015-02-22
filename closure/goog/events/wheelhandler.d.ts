@@ -10,7 +10,7 @@ declare module goog.events {
      * @extends {goog.events.EventTarget}
      */
     class WheelHandler extends goog.events.EventTarget {
-        constructor(element: Element, opt_capture?: boolean);
+        constructor(element: Element|Document, opt_capture?: boolean);
         
         /**
          * Returns the dom event type.

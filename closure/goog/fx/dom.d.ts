@@ -161,7 +161,7 @@ declare module goog.fx.dom {
      * @constructor
      */
     class Fade extends goog.fx.dom.PredefinedEffect {
-        constructor(element: Element, start: Array<number>, end: Array<number>, time: number, opt_acc?: Function);
+        constructor(element: Element, start: Array<number>|number, end: Array<number>|number, time: number, opt_acc?: Function);
         
         /**
          * Animation event handler that will show the element.

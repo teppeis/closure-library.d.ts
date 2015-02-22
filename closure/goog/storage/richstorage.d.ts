@@ -31,7 +31,7 @@ declare module goog.storage {
          * @param {string} key The key to get.
          * @return {(!Object|undefined)} The wrapper, or undefined if not found.
          */
-        getWrapper(key: string): Object;
+        getWrapper(key: string): Object|void;
     }
 }
 
@@ -56,7 +56,7 @@ declare module goog.storage.RichStorage {
          * @param {*} value The value to wrap.
          * @return {(!goog.storage.RichStorage.Wrapper|undefined)} The wrapper.
          */
-        static wrapIfNecessary(value: any): goog.storage.RichStorage.Wrapper;
+        static wrapIfNecessary(value: any): goog.storage.RichStorage.Wrapper|void;
         
         /**
          * Unwraps a value, any metadata is discarded (not returned). You might want to
@@ -75,6 +75,6 @@ declare module goog.storage.RichStorage {
          * @param {(!Object|undefined)} wrapper The wrapper.
          * @return {*} The wrapped value or undefined.
          */
-        static unwrapIfPossible(wrapper: Object): any;
+        static unwrapIfPossible(wrapper: Object|void): any;
     }
 }

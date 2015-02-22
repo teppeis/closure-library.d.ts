@@ -43,7 +43,7 @@ declare module goog.i18n {
          * @return {!goog.i18n.TimeZone} A goog.i18n.TimeZone object for the given
          *     time zone data.
          */
-        static createTimeZone(timeZoneData: number): goog.i18n.TimeZone;
+        static createTimeZone(timeZoneData: number|Object): goog.i18n.TimeZone;
         
         /**
          * Convert the contents of time zone object to a timeZoneData object, suitable

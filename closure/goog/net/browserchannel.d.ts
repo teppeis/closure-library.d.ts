@@ -110,7 +110,7 @@ declare module goog.net {
          * @param {number=} opt_retryId  The retry id for this request.
          * @return {!goog.net.ChannelRequest} The created channel request.
          */
-        static createChannelRequest(channel: goog.net.BrowserChannel, channelDebug: goog.net.ChannelDebug, opt_sessionId?: string, opt_requestId?: string, opt_retryId?: number): goog.net.ChannelRequest;
+        static createChannelRequest(channel: goog.net.BrowserChannel|goog.net.BrowserTestChannel, channelDebug: goog.net.ChannelDebug, opt_sessionId?: string, opt_requestId?: string|number, opt_retryId?: number): goog.net.ChannelRequest;
         
         /**
          * Starts the channel. This initiates connections to the server.
@@ -235,7 +235,7 @@ declare module goog.net {
          * @param {Object|goog.structs.Map} map  The map to send.
          * @param {?Object=} opt_context The context associated with the map.
          */
-        sendMap(map: Object, opt_context?: Object): void;
+        sendMap(map: Object|goog.structs.Map<any, any>, opt_context?: Object): void;
         
         /**
          * When set to true, this changes the behavior of the forward channel so it
@@ -592,7 +592,7 @@ declare module goog.net.BrowserChannel {
      * @final
      */
     class QueuedMap {
-        constructor(mapId: number, map: Object, opt_context?: Object);
+        constructor(mapId: number, map: Object|goog.structs.Map<any, any>, opt_context?: Object);
     }
 
     /**

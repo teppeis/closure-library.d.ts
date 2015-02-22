@@ -59,7 +59,7 @@ declare module goog.ui {
          * @return {goog.ui.Menu|undefined} Previous menu (undefined if none).
          * @override
          */
-        setMenu(menu: goog.ui.Menu): goog.ui.Menu;
+        setMenu(menu: goog.ui.Menu): goog.ui.Menu|void;
         
         /**
          * Returns the default caption to be shown when no option is selected.
@@ -88,14 +88,14 @@ declare module goog.ui {
          * @param {number} index Index at which to insert the menu item.
          * @override
          */
-        addItemAt(item: goog.ui.MenuItem, index: number): void;
+        addItemAt(item: goog.ui.MenuItem|goog.ui.MenuSeparator, index: number): void;
         
         /**
          * Removes an item from the menu and disposes it.
          * @param {goog.ui.MenuItem|goog.ui.MenuSeparator} item The menu item to remove.
          * @override
          */
-        removeItem(item: goog.ui.MenuItem): void;
+        removeItem(item: goog.ui.MenuItem|goog.ui.MenuSeparator): void;
         
         /**
          * Removes a menu item at a given index in the menu and disposes it.

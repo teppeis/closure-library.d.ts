@@ -15,7 +15,7 @@ declare module goog.graphics {
      * @extends {goog.ui.Component}
      */
     class AbstractGraphics extends goog.ui.Component {
-        constructor(width: number, height: number, opt_coordWidth?: number, opt_coordHeight?: number, opt_domHelper?: goog.dom.DomHelper);
+        constructor(width: number|string, height: number|string, opt_coordWidth?: number, opt_coordHeight?: number, opt_domHelper?: goog.dom.DomHelper);
         
         /**
          * The root level group element.

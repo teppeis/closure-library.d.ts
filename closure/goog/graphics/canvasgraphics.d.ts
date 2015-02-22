@@ -19,7 +19,7 @@ declare module goog.graphics {
      *     http://en.wikipedia.org/wiki/Canvas_element for details.
      */
     class CanvasGraphics extends goog.graphics.AbstractGraphics {
-        constructor(width: string, height: string, opt_coordWidth?: number, opt_coordHeight?: number, opt_domHelper?: goog.dom.DomHelper);
+        constructor(width: string|number, height: string|number, opt_coordWidth?: number, opt_coordHeight?: number, opt_domHelper?: goog.dom.DomHelper);
         
         /**
          * Sets the fill for the given element.
@@ -136,7 +136,7 @@ declare module goog.graphics {
          *     it in. If null or undefined, defaults to the root group.
          * @protected
          */
-        append(element: goog.graphics.Element, group: goog.graphics.GroupElement): void;
+        append(element: goog.graphics.Element, group: goog.graphics.GroupElement|void): void;
         
         /**
          * Draw an ellipse.
@@ -256,7 +256,6 @@ declare module goog.graphics {
          *
          * @param {string} text The text string to measure.
          * @param {goog.graphics.Font} font The font object describing the font style.
-         *
          * @return {number} The width in pixels of the text strings.
          * @override
          */

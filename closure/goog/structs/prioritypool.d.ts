@@ -23,7 +23,7 @@ declare module goog.structs {
          *     available and a callback is not given. Otherwise, undefined.
          * @override
          */
-        getObject(opt_callback?: Function, opt_priority?: number): VALUE;
+        getObject(opt_callback?: Function, opt_priority?: number): VALUE|void;
         
         /**
          * Adds an object to the collection of objects that are free. If the object can

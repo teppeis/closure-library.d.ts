@@ -13,7 +13,7 @@ declare module goog.db {
      * @final
      */
     class Error extends goog.debug.Error {
-        constructor(error: number, context: string, opt_message?: string);
+        constructor(error: number|DOMError, context: string, opt_message?: string);
         
         /**
          * @return {string} The name of the error.
@@ -45,7 +45,7 @@ declare module goog.db {
          * @param {!goog.db.Error.ErrorCode|number} code The error code to convert.
          * @return {!goog.db.Error.ErrorName} The corresponding name of the error.
          */
-        static getName(code: goog.db.Error.ErrorCode): goog.db.Error.ErrorName;
+        static getName(code: goog.db.Error.ErrorCode|number): goog.db.Error.ErrorName;
         
         /**
          * Constructs an goog.db.Error instance from an IDBRequest. This abstraction is

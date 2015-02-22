@@ -24,7 +24,7 @@ declare module goog.crypt {
      *     characters.
      * @return {string} Hex string.
      */
-    function byteArrayToHex(array: Uint8Array): string;
+    function byteArrayToHex(array: Uint8Array|Array<number>): string;
 
     /**
      * Converts a hex string into an integer array.
@@ -46,7 +46,7 @@ declare module goog.crypt {
      * @param {Uint8Array|Array<number>} bytes UTF-8 byte array.
      * @return {string} 16-bit Unicode string.
      */
-    function utf8ByteArrayToString(bytes: Uint8Array): string;
+    function utf8ByteArrayToString(bytes: Uint8Array|Array<number>): string;
 
     /**
      * XOR two byte arrays.
@@ -54,5 +54,5 @@ declare module goog.crypt {
      * @param {!ArrayBufferView|!Array<number>} bytes2 Byte array 2.
      * @return {!Array<number>} Resulting XOR of the two byte arrays.
      */
-    function xorByteArray(bytes1: ArrayBufferView, bytes2: ArrayBufferView): Array<number>;
+    function xorByteArray(bytes1: ArrayBufferView|Array<number>, bytes2: ArrayBufferView|Array<number>): Array<number>;
 }

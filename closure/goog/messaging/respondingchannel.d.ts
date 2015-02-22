@@ -22,7 +22,7 @@ declare module goog.messaging {
          * @param {function(?Object)} callback The callback invoked with
          *     the result of the service call.
          */
-        send(serviceName: string, payload: string, callback: (arg0: Object) => any): void;
+        send(serviceName: string, payload: string|Object, callback: (arg0: Object) => any): void;
         
         /**
          * Registers a service to be called when a message is received.

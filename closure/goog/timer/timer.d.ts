@@ -84,7 +84,7 @@ declare module goog {
          * @return {number} A handle to the timer ID.
          * @template SCOPE
          */
-        static callOnce<SCOPE>(listener: () => any, opt_delay?: number, opt_handler?: SCOPE): number;
+        static callOnce<SCOPE>(listener: (() => any)|{handleEvent: () => any}|void, opt_delay?: number, opt_handler?: SCOPE): number;
         
         /**
          * Clears a timeout initiated by callOnce
@@ -100,6 +100,6 @@ declare module goog {
          *     the specified delay, unless it is canceled first.
          * @template RESULT
          */
-        static promise<RESULT>(delay: number, opt_result?: RESULT): goog.Promise<RESULT, any>;
+        static promise<RESULT>(delay: number, opt_result?: RESULT|goog.Thenable<RESULT>|Thenable<any>): goog.Promise<RESULT, any>;
     }
 }

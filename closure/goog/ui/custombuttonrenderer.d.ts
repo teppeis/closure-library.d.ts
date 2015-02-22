@@ -39,7 +39,7 @@ declare module goog.ui {
          * @return {goog.a11y.aria.Role|undefined} ARIA role.
          * @override
          */
-        getAriaRole(): goog.a11y.aria.Role;
+        getAriaRole(): goog.a11y.aria.Role|void;
         
         /**
          * Takes the button's root element and returns the parent element of the

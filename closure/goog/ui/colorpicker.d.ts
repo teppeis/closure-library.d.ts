@@ -52,7 +52,7 @@ declare module goog.ui {
          * rendered.
          * @param {goog.math.Size|number} size The size of the grid.
          */
-        setSize(size: goog.math.Size): void;
+        setSize(size: goog.math.Size|number): void;
         
         /**
          * Gets the number of columns displayed.

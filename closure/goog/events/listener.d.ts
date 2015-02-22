@@ -13,7 +13,7 @@ declare module goog.events {
      * @constructor
      */
     class Listener {
-        constructor(listener: Function, proxy: Function, src: EventTarget, type: string, capture: boolean, opt_handler?: Object);
+        constructor(listener: Function, proxy: Function, src: EventTarget|goog.events.Listenable, type: string, capture: boolean, opt_handler?: Object);
         
         /**
          * If monitoring the goog.events.Listener instances is enabled, stores the

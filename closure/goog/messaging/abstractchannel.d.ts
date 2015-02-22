@@ -31,7 +31,7 @@ declare module goog.messaging {
          * @param {string|!Object} payload The contents of the message.
          * @protected
          */
-        deliver(serviceName: string, payload: string): void;
+        deliver(serviceName: string, payload: string|Object): void;
         
         /**
          * Find the service object for a given service name. If there's no service
@@ -44,7 +44,7 @@ declare module goog.messaging {
          *     service object for the given service, or null if none was found.
          * @protected
          */
-        getService(serviceName: string, payload: string): {callback: (arg0: string) => any; objectPayload: boolean};
+        getService(serviceName: string, payload: string|Object): {callback: (arg0: string|Object) => any; objectPayload: boolean};
         
         /**
          * Converts the message payload into the format expected by the registered
@@ -58,6 +58,6 @@ declare module goog.messaging {
          *     null if something went wrong.
          * @protected
          */
-        decodePayload(serviceName: string, payload: string, objectPayload: boolean): string;
+        decodePayload(serviceName: string, payload: string|Object, objectPayload: boolean): string|Object;
     }
 }

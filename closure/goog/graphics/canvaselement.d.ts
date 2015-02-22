@@ -23,7 +23,7 @@ declare module goog.graphics {
          * @param {number|string} height The height of the group element.
          * @override
          */
-        setSize(width: number, height: number): void;
+        setSize(width: number|string, height: number|string): void;
         
         /**
          * Append a child to the group.  Does not draw it

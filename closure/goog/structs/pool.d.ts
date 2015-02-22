@@ -37,7 +37,7 @@ declare module goog.structs {
          * @return {T|undefined} A new object from the pool if there is one available,
          *     otherwise undefined.
          */
-        getObject(): T;
+        getObject(): T|void;
         
         /**
          * Returns an object to the pool of available objects so that it can be reused.

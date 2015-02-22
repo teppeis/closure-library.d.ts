@@ -64,5 +64,5 @@ declare module goog.labs.userAgent.browser {
      * @return {boolean} Whether the browser version is higher or the same as the
      *     given version.
      */
-    function isVersionOrHigher(version: string): boolean;
+    function isVersionOrHigher(version: string|number): boolean;
 }

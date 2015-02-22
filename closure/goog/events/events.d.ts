@@ -44,7 +44,7 @@ declare module goog.events {
      * @return {goog.events.Key} Unique key for the listener.
      * @template T,EVENTOBJ
      */
-    function listen<T, EVENTOBJ>(src: EventTarget, type: string, listener: (arg0: EVENTOBJ) => any, opt_capt?: boolean, opt_handler?: T): goog.events.Key;
+    function listen<T, EVENTOBJ>(src: EventTarget|goog.events.Listenable, type: string|Array<string>|goog.events.EventId<EVENTOBJ>|Array<goog.events.EventId<EVENTOBJ>>, listener: ((arg0: EVENTOBJ) => any)|{handleEvent: (arg0: any) => any}|void, opt_capt?: boolean, opt_handler?: T): goog.events.Key;
 
     /**
      * Helper function for returning a proxy function.
@@ -77,7 +77,7 @@ declare module goog.events {
      * @return {goog.events.Key} Unique key for the listener.
      * @template T,EVENTOBJ
      */
-    function listenOnce<T, EVENTOBJ>(src: EventTarget, type: string, listener: (arg0: EVENTOBJ) => any, opt_capt?: boolean, opt_handler?: T): goog.events.Key;
+    function listenOnce<T, EVENTOBJ>(src: EventTarget|goog.events.Listenable, type: string|Array<string>|goog.events.EventId<EVENTOBJ>|Array<goog.events.EventId<EVENTOBJ>>, listener: ((arg0: EVENTOBJ) => any)|{handleEvent: (arg0: any) => any}|void, opt_capt?: boolean, opt_handler?: T): goog.events.Key;
 
     /**
      * Adds an event listener with a specific event wrapper on a DOM Node or an
@@ -94,7 +94,7 @@ declare module goog.events {
      * @param {T=} opt_handler Element in whose scope to call the listener.
      * @template T
      */
-    function listenWithWrapper<T>(src: EventTarget, wrapper: goog.events.EventWrapper, listener: (arg0: any) => any, opt_capt?: boolean, opt_handler?: T): void;
+    function listenWithWrapper<T>(src: EventTarget|goog.events.Listenable, wrapper: goog.events.EventWrapper, listener: ((arg0: any) => any)|{handleEvent: (arg0: any) => any}|void, opt_capt?: boolean, opt_handler?: T): void;
 
     /**
      * Removes an event listener which was added with listen().
@@ -113,7 +113,7 @@ declare module goog.events {
      * @return {?boolean} indicating whether the listener was there to remove.
      * @template EVENTOBJ
      */
-    function unlisten<EVENTOBJ>(src: EventTarget, type: string, listener: (arg0: any) => any, opt_capt?: boolean, opt_handler?: Object): boolean;
+    function unlisten<EVENTOBJ>(src: EventTarget|goog.events.Listenable, type: string|Array<string>|goog.events.EventId<EVENTOBJ>|Array<goog.events.EventId<EVENTOBJ>>, listener: ((arg0: any) => any)|{handleEvent: (arg0: any) => any}|void, opt_capt?: boolean, opt_handler?: Object): boolean;
 
     /**
      * Removes an event listener which was added with listen() by the key
@@ -138,7 +138,7 @@ declare module goog.events {
      *     event.
      * @param {Object=} opt_handler Element in whose scope to call the listener.
      */
-    function unlistenWithWrapper(src: EventTarget, wrapper: goog.events.EventWrapper, listener: (arg0: any) => any, opt_capt?: boolean, opt_handler?: Object): void;
+    function unlistenWithWrapper(src: EventTarget|goog.events.Listenable, wrapper: goog.events.EventWrapper, listener: ((arg0: any) => any)|{handleEvent: (arg0: any) => any}|void, opt_capt?: boolean, opt_handler?: Object): void;
 
     /**
      * Removes all listeners from an object. You can also optionally
@@ -150,7 +150,7 @@ declare module goog.events {
      *     Default is all types.
      * @return {number} Number of listeners removed.
      */
-    function removeAll(obj: Object, opt_type?: string): number;
+    function removeAll(obj: Object|void, opt_type?: string|goog.events.EventId<any>): number;
 
     /**
      * Gets the listeners for a given object, type and capture phase.
@@ -160,7 +160,7 @@ declare module goog.events {
      * @param {boolean} capture Capture phase?.
      * @return {Array<goog.events.Listener>} Array of listener objects.
      */
-    function getListeners(obj: Object, type: string, capture: boolean): Array<goog.events.Listener>;
+    function getListeners(obj: Object, type: string|goog.events.EventId<any>, capture: boolean): Array<goog.events.Listener>;
 
     /**
      * Gets the goog.events.Listener for the event or null if no such listener is
@@ -178,7 +178,7 @@ declare module goog.events {
      * @return {goog.events.ListenableKey} the found listener or null if not found.
      * @template EVENTOBJ
      */
-    function getListener<EVENTOBJ>(src: EventTarget, type: string, listener: (arg0: EVENTOBJ) => any, opt_capt?: boolean, opt_handler?: Object): goog.events.ListenableKey;
+    function getListener<EVENTOBJ>(src: EventTarget|goog.events.Listenable, type: string|goog.events.EventId<EVENTOBJ>, listener: ((arg0: EVENTOBJ) => any)|{handleEvent: (arg0: any) => any}|void, opt_capt?: boolean, opt_handler?: Object): goog.events.ListenableKey;
 
     /**
      * Returns whether an event target has any active listeners matching the
@@ -193,7 +193,7 @@ declare module goog.events {
      * @return {boolean} Whether an event target has one or more listeners matching
      *     the requested type and/or capture phase.
      */
-    function hasListener(obj: EventTarget, opt_type?: string, opt_capture?: boolean): boolean;
+    function hasListener(obj: EventTarget|goog.events.Listenable, opt_type?: string|goog.events.EventId<any>, opt_capture?: boolean): boolean;
 
     /**
      * Provides a nice string showing the normalized event objects public members
@@ -211,7 +211,7 @@ declare module goog.events {
      * @param {Object} eventObject Event object to be passed to listener.
      * @return {boolean} True if all listeners returned true else false.
      */
-    function fireListeners(obj: Object, type: string, capture: boolean, eventObject: Object): boolean;
+    function fireListeners(obj: Object, type: string|goog.events.EventId<any>, capture: boolean, eventObject: Object): boolean;
 
     /**
      * Fires a listener with a set of arguments
@@ -289,5 +289,5 @@ declare module goog.events {
      *     function more than once, the same function is guaranteed to be
      *     returned.
      */
-    function wrapListener(listener: Object): Function;
+    function wrapListener(listener: Object|Function): Function;
 }

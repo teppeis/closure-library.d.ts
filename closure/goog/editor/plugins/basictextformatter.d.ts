@@ -35,7 +35,7 @@ declare module goog.editor.plugins {
          * @return {Object|undefined} The result of the command.
          * @override
          */
-        execCommandInternal(command: string, ...var_args: any[]): Object;
+        execCommandInternal(command: string, ...var_args: any[]): Object|void;
         
         /**
          * Gets the command value.
@@ -46,7 +46,7 @@ declare module goog.editor.plugins {
          *     if necessary.
          * @override
          */
-        queryCommandValue(command: string): string;
+        queryCommandValue(command: string): string|boolean|void;
     }
 }
 

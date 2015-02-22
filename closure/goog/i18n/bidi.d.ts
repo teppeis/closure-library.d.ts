@@ -113,7 +113,7 @@ declare module goog.i18n.bidi {
      * @return {?goog.i18n.bidi.Dir} A goog.i18n.bidi.Dir constant matching the
      *     given directionality. If given null, returns null (i.e. unknown).
      */
-    function toDir(givenDir: goog.i18n.bidi.Dir, opt_noNeutral?: boolean): goog.i18n.bidi.Dir;
+    function toDir(givenDir: goog.i18n.bidi.Dir|number|boolean|void, opt_noNeutral?: boolean): goog.i18n.bidi.Dir;
 
     /**
      * Test whether the given string has any RTL characters in it.
@@ -396,5 +396,5 @@ declare module goog.i18n.bidi {
      *     3. A boolean (true = RTL, false = LTR).
      *     4. A null for unknown directionality.
      */
-    function setElementDirAndAlign(element: Element, dir: goog.i18n.bidi.Dir): void;
+    function setElementDirAndAlign(element: Element, dir: goog.i18n.bidi.Dir|number|boolean|void): void;
 }

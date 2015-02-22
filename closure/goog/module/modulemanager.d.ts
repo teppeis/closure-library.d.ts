@@ -248,7 +248,7 @@ declare module goog.module {
          *  The callback type.
          * @param {Function} fn The function to register as a callback.
          */
-        registerCallback(types: goog.module.ModuleManager.CallbackType, fn: Function): void;
+        registerCallback(types: goog.module.ModuleManager.CallbackType|Array<goog.module.ModuleManager.CallbackType>, fn: Function): void;
     }
 }
 

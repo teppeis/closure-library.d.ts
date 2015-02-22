@@ -47,7 +47,7 @@ declare module goog.messaging {
          *     a string automatically if necessary. It's the responsibility of
          *     implementors of this class to perform the deserialization.
          */
-        registerService(serviceName: string, callback: (arg0: string) => any, opt_objectPayload?: boolean): void;
+        registerService(serviceName: string, callback: (arg0: string|Object) => any, opt_objectPayload?: boolean): void;
         
         /**
          * Registers a service to be called when a message is received that doesn't
@@ -58,7 +58,7 @@ declare module goog.messaging {
          *     some channels can pass objects natively, the payload may be either an
          *     object or a string.
          */
-        registerDefaultService(callback: (arg0: string, arg1: string) => any): void;
+        registerDefaultService(callback: (arg0: string, arg1: string|Object) => any): void;
         
         /**
          * Sends a message over the channel.
@@ -70,6 +70,6 @@ declare module goog.messaging {
          *     the responsibility of implementors of this class to perform the
          *     serialization.
          */
-        send(serviceName: string, payload: string): void;
+        send(serviceName: string, payload: string|Object): void;
     }
 }

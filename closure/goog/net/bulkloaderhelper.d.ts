@@ -8,20 +8,20 @@ declare module goog.net {
      * @final
      */
     class BulkLoaderHelper extends goog.Disposable {
-        constructor(uris: Array<string>);
+        constructor(uris: Array<string|goog.Uri>);
         
         /**
          * Gets the URI by id.
          * @param {number} id The id.
          * @return {string|goog.Uri} The URI specified by the id.
          */
-        getUri(id: number): string;
+        getUri(id: number): string|goog.Uri;
         
         /**
          * Gets the URIs.
          * @return {Array<string|goog.Uri>} The URIs.
          */
-        getUris(): Array<string>;
+        getUris(): Array<string|goog.Uri>;
         
         /**
          * Gets the response texts.

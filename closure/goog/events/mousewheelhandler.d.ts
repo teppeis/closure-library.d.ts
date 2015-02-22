@@ -11,7 +11,7 @@ declare module goog.events {
      * @extends {goog.events.EventTarget}
      */
     class MouseWheelHandler extends goog.events.EventTarget {
-        constructor(element: Element, opt_capture?: boolean);
+        constructor(element: Element|Document, opt_capture?: boolean);
         
         /**
          * @param {number} maxDeltaX Maximum magnitude for x delta on each mousewheel

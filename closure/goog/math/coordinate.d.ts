@@ -108,7 +108,7 @@ declare module goog.math {
          * @param {number=} opt_ty The value to translate y by.
          * @return {!goog.math.Coordinate} This coordinate after translating.
          */
-        translate(tx: number, opt_ty?: number): goog.math.Coordinate;
+        translate(tx: number|goog.math.Coordinate, opt_ty?: number): goog.math.Coordinate;
         
         /**
          * Scales this coordinate by the given scale factors. The x and y values are

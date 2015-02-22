@@ -87,14 +87,14 @@ declare module goog.ui.ac {
          * @param {Element|goog.events.EventTarget} target An element to attach the
          *     input handler too.
          */
-        attachInput(target: Element): void;
+        attachInput(target: Element|goog.events.EventTarget): void;
         
         /**
          * Detaches the input handler from the provided element.
          * @param {Element|goog.events.EventTarget} target An element to detach the
          *     input handler from.
          */
-        detachInput(target: Element): void;
+        detachInput(target: Element|goog.events.EventTarget): void;
         
         /**
          * Attaches the input handler to multiple elements.

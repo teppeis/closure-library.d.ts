@@ -29,7 +29,7 @@ declare module goog.math {
      * @final
      */
     class Matrix {
-        constructor(m: goog.math.Matrix, opt_n?: number);
+        constructor(m: goog.math.Matrix|Array<Array<number>>|goog.math.Size|number, opt_n?: number);
         
         /**
          * Creates a square identity matrix. i.e. for n = 3:
@@ -181,7 +181,7 @@ declare module goog.math {
          * @param {goog.math.Matrix|number} m Matrix/number to multiply the matrix by.
          * @return {!goog.math.Matrix} Resultant product.
          */
-        multiply(m: goog.math.Matrix): goog.math.Matrix;
+        multiply(m: goog.math.Matrix|number): goog.math.Matrix;
         
         /**
          * Returns a new matrix that is the difference of this and the provided matrix.

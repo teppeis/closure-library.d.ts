@@ -20,7 +20,7 @@ declare module goog.structs {
      * @param {Object} col The collection-like object.
      * @return {!Array|undefined} The keys in the collection.
      */
-    function getKeys(col: Object): Array<any>;
+    function getKeys(col: Object): Array<any>|void;
 
     /**
      * Whether the collection contains the given value. This is O(n) and uses
@@ -80,7 +80,7 @@ declare module goog.structs {
      *     has keys and values a plain old JS object is returned.
      * @template T,S
      */
-    function filter<T, S>(col: S, f: (arg0: any, arg1: any, arg2: S) => boolean, opt_obj?: T): Object;
+    function filter<T, S>(col: S, f: (arg0: any, arg1: any, arg2: S) => boolean, opt_obj?: T): Object|Array<any>;
 
     /**
      * Calls a function for every value in the collection and adds the result into a
@@ -98,7 +98,7 @@ declare module goog.structs {
      *     values a plain old JS object is returned.
      * @template T,S,V
      */
-    function map<T, S, V>(col: S, f: (arg0: any, arg1: any, arg2: S) => V, opt_obj?: T): Object;
+    function map<T, S, V>(col: S, f: (arg0: any, arg1: any, arg2: S) => V, opt_obj?: T): Object|Array<V>;
 
     /**
      * Calls f for each value in a collection. If any call returns true this returns

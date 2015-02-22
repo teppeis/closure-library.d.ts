@@ -39,6 +39,6 @@ declare module goog.fx.css3 {
      * @constructor
      */
     class Transition extends goog.fx.TransitionBase {
-        constructor(element: Element, duration: number, initialStyle: Object, finalStyle: Object, transitions: goog.style.transition.Css3Property);
+        constructor(element: Element, duration: number, initialStyle: Object, finalStyle: Object, transitions: goog.style.transition.Css3Property|Array<goog.style.transition.Css3Property>);
     }
 }

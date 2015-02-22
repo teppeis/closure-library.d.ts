@@ -22,7 +22,7 @@ declare module goog.labs.i18n {
          * @param {!Array<string|number>} items Items to format.
          * @return {string} The items formatted into a string, as a list.
          */
-        format(items: Array<string>): string;
+        format(items: Array<string|number>): string;
     }
 
     /**

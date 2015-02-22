@@ -18,7 +18,7 @@ declare module goog.dom {
          *     node.
          * @return {!goog.dom.TextRange} A range wrapper object.
          */
-        static createFromBrowserRange(range: Range, opt_isReversed?: boolean): goog.dom.TextRange;
+        static createFromBrowserRange(range: Range|TextRange, opt_isReversed?: boolean): goog.dom.TextRange;
         
         /**
          * Create a new range wrapper that selects the given node's text.  Do not use

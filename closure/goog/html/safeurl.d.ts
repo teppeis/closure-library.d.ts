@@ -124,7 +124,7 @@ declare module goog.html {
          * @param {string|!goog.string.TypedString} url The URL to validate.
          * @return {!goog.html.SafeUrl} The validated URL, wrapped as a SafeUrl.
          */
-        static sanitize(url: string): goog.html.SafeUrl;
+        static sanitize(url: string|goog.string$.TypedString): goog.html.SafeUrl;
         
         /**
          * Package-internal utility method to create SafeUrl instances.

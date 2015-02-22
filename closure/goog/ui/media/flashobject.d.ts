@@ -16,7 +16,7 @@ declare module goog.ui.media {
      * @constructor
      */
     class FlashObject extends goog.ui.Component {
-        constructor(flashUrl: string, opt_domHelper?: goog.dom.DomHelper);
+        constructor(flashUrl: string|goog.html.TrustedResourceUrl, opt_domHelper?: goog.dom.DomHelper);
         
         /**
          * The component CSS namespace.
@@ -51,7 +51,7 @@ declare module goog.ui.media {
          * @param {goog.structs.Map|Object} map A key-value map of variables.
          * @return {!goog.ui.media.FlashObject} The flash object instance for chaining.
          */
-        addFlashVars(map: goog.structs.Map<any, any>): goog.ui.media.FlashObject;
+        addFlashVars(map: goog.structs.Map<any, any>|Object): goog.ui.media.FlashObject;
         
         /**
          * Sets a flash variable.
@@ -75,7 +75,7 @@ declare module goog.ui.media {
          * @param {string=} opt_value The optional value for the flashVar key.
          * @return {!goog.ui.media.FlashObject} The flash object instance for chaining.
          */
-        setFlashVars(flashVar: goog.structs.Map<any, any>, opt_value?: string): goog.ui.media.FlashObject;
+        setFlashVars(flashVar: goog.structs.Map<any, any>|Object|string, opt_value?: string): goog.ui.media.FlashObject;
         
         /**
          * @return {goog.structs.Map} The current flash variables.
@@ -115,7 +115,7 @@ declare module goog.ui.media {
          * @param {number|string} height The height of the movie.
          * @return {!goog.ui.media.FlashObject} The flash object instance for chaining.
          */
-        setSize(width: number, height: number): goog.ui.media.FlashObject;
+        setSize(width: number|string, height: number|string): goog.ui.media.FlashObject;
         
         /**
          * @return {?string} The flash required version.

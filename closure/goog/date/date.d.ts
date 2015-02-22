@@ -52,7 +52,7 @@ declare module goog.date {
      * @final
      */
     class Interval {
-        constructor(opt_years?: number, opt_months?: number, opt_days?: number, opt_hours?: number, opt_minutes?: number, opt_seconds?: number);
+        constructor(opt_years?: number|string, opt_months?: number, opt_days?: number, opt_hours?: number, opt_minutes?: number, opt_seconds?: number);
         
         /**
          * Years constant for the date parts.
@@ -180,7 +180,7 @@ declare module goog.date {
      * @see goog.date.DateTime
      */
     class Date {
-        constructor(opt_year?: number, opt_month?: number, opt_date?: number);
+        constructor(opt_year?: number|goog.date.DateLike, opt_month?: number, opt_date?: number);
         
         /**
          * @return {!goog.date.Date} A clone of the date object.
@@ -484,7 +484,7 @@ declare module goog.date {
      * @extends {goog.date.Date}
      */
     class DateTime extends goog.date.Date {
-        constructor(opt_year?: number, opt_month?: number, opt_date?: number, opt_hours?: number, opt_minutes?: number, opt_seconds?: number, opt_milliseconds?: number);
+        constructor(opt_year?: number|Object, opt_month?: number, opt_date?: number, opt_hours?: number, opt_minutes?: number, opt_seconds?: number, opt_milliseconds?: number);
         
         /**
          * @param {number} timestamp Number of milliseconds since Epoch.
@@ -802,7 +802,7 @@ declare module goog.date {
      * @return {T|S} The earlier of them in time.
      * @template T,S
      */
-    function min<T, S>(date1: T, date2: S): T;
+    function min<T, S>(date1: T, date2: S): T|S;
 
     /**
      * @param {T} date1 A datelike object.
@@ -810,7 +810,7 @@ declare module goog.date {
      * @return {T|S} The later of them in time.
      * @template T,S
      */
-    function max<T, S>(date1: T, date2: S): T;
+    function max<T, S>(date1: T, date2: S): T|S;
 
     /**
      * Creates a DateTime from a datetime string expressed in ISO 8601 format.

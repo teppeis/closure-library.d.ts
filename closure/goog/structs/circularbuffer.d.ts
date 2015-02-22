@@ -16,7 +16,7 @@ declare module goog.structs {
          * @return {T|undefined} The removed old item, if the buffer is at max size.
          *     Return undefined, otherwise.
          */
-        add(item: T): T;
+        add(item: T): T|void;
         
         /**
          * Returns the item at the specified index.
@@ -83,6 +83,6 @@ declare module goog.structs {
          * @return {T|null} The last item inserted into the buffer,
          *     or null if the buffer is empty.
          */
-        getLast(): T;
+        getLast(): T|void;
     }
 }

@@ -41,6 +41,6 @@ declare module goog.crypt {
          * @param {Array<number>|Uint8Array} data The data to be xor-ed in place.
          * @param {number=} opt_length The number of bytes to crypt.
          */
-        crypt(data: Array<number>, opt_length?: number): void;
+        crypt(data: Array<number>|Uint8Array, opt_length?: number): void;
     }
 }

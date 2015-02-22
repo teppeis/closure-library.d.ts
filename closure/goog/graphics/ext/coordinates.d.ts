@@ -5,7 +5,7 @@ declare module goog.graphics.ext.coordinates {
      * @param {string|number|null} coord The coordinate to test.
      * @return {boolean} Whether the coordinate is special.
      */
-    function isSpecial(coord: string): boolean;
+    function isSpecial(coord: string|number|void): boolean;
 
     /**
      * Returns the value of the given expression in the given context.
@@ -18,7 +18,7 @@ declare module goog.graphics.ext.coordinates {
      * @return {number} The number of coordinate space units that corresponds to
      *     this coordinate.
      */
-    function computeValue(coord: string, size: number, scale: number): number;
+    function computeValue(coord: string|number, size: number, scale: number): number;
 
     /**
      * Converts the given coordinate to a number value in units.
@@ -38,5 +38,5 @@ declare module goog.graphics.ext.coordinates {
      *     the cache when the scale or containerSize changes.
      * @return {number} The correct number of coordinate space units.
      */
-    function getValue(coord: string, forMaximum: boolean, containerSize: number, scale: number, opt_cache?: Object): number;
+    function getValue(coord: string|number, forMaximum: boolean|void, containerSize: number, scale: number, opt_cache?: Object): number;
 }

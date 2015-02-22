@@ -65,7 +65,7 @@ declare module goog.dom.classes {
      *     null no classes are added.
      * @deprecated Use goog.dom.classlist.addRemove instead.
      */
-    function addRemove(element: Node, classesToRemove: string, classesToAdd: string): void;
+    function addRemove(element: Node, classesToRemove: string|Array<string>, classesToAdd: string|Array<string>): void;
 
     /**
      * Returns true if an element has a class.

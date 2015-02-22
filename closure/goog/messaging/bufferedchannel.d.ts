@@ -35,6 +35,6 @@ declare module goog.messaging {
          * @see goog.net.xpc.BufferedChannel.send
          * @override
          */
-        send(serviceName: string, payload: string): void;
+        send(serviceName: string, payload: string|Object): void;
     }
 }

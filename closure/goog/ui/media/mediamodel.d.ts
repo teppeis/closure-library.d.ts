@@ -34,7 +34,7 @@ declare module goog.ui.media {
          * Gets the URL of this media.
          * @return {string|undefined} The URL of the media.
          */
-        getUrl(): string;
+        getUrl(): string|void;
         
         /**
          * Sets the URL of this media.
@@ -47,7 +47,7 @@ declare module goog.ui.media {
          * Gets the caption of this media.
          * @return {string|undefined} The caption of the media.
          */
-        getCaption(): string;
+        getCaption(): string|void;
         
         /**
          * Sets the caption of this media.
@@ -60,7 +60,7 @@ declare module goog.ui.media {
          * Gets the media mime type.
          * @return {goog.ui.media.MediaModel.MimeType|undefined} The media mime type.
          */
-        getType(): goog.ui.media.MediaModel.MimeType;
+        getType(): goog.ui.media.MediaModel.MimeType|void;
         
         /**
          * Sets the media mime type.
@@ -73,7 +73,7 @@ declare module goog.ui.media {
          * Gets the media medium.
          * @return {goog.ui.media.MediaModel.Medium|undefined} The media medium.
          */
-        getMedium(): goog.ui.media.MediaModel.Medium;
+        getMedium(): goog.ui.media.MediaModel.Medium|void;
         
         /**
          * Sets the media medium.
@@ -86,7 +86,7 @@ declare module goog.ui.media {
          * Gets the description of this media.
          * @return {string|undefined} The description of the media.
          */
-        getDescription(): string;
+        getDescription(): string|void;
         
         /**
          * Sets the description of this media.
@@ -113,7 +113,7 @@ declare module goog.ui.media {
          * Gets the duration of the media.
          * @return {number|undefined} The duration in seconds.
          */
-        getDuration(): number;
+        getDuration(): number|void;
         
         /**
          * Sets duration of the media.
@@ -126,7 +126,7 @@ declare module goog.ui.media {
          * Gets the width of the media in pixels.
          * @return {number|undefined} The width in pixels.
          */
-        getWidth(): number;
+        getWidth(): number|void;
         
         /**
          * Sets the width of the media.
@@ -139,7 +139,7 @@ declare module goog.ui.media {
          * Gets the height of the media in pixels.
          * @return {number|undefined} The height in pixels.
          */
-        getHeight(): number;
+        getHeight(): number|void;
         
         /**
          * Sets the height of the media.
@@ -152,7 +152,7 @@ declare module goog.ui.media {
          * Gets the player data.
          * @return {goog.ui.media.MediaModel.Player|undefined} The media player data.
          */
-        getPlayer(): goog.ui.media.MediaModel.Player;
+        getPlayer(): goog.ui.media.MediaModel.Player|void;
         
         /**
          * Sets the player data.
@@ -301,7 +301,7 @@ declare module goog.ui.media.MediaModel {
      * @final
      */
     class Player {
-        constructor(url: string, opt_vars?: Object, opt_size?: goog.math.Size);
+        constructor(url: string|goog.html.TrustedResourceUrl, opt_vars?: Object, opt_size?: goog.math.Size);
         
         /**
          * Gets the player URL.
@@ -321,7 +321,7 @@ declare module goog.ui.media.MediaModel {
          * @return {!goog.ui.media.MediaModel.Player} The object itself, used for
          *     chaining.
          */
-        setUrl(url: string): goog.ui.media.MediaModel.Player;
+        setUrl(url: string|goog.html.TrustedResourceUrl): goog.ui.media.MediaModel.Player;
         
         /**
          * Gets the player arguments.
@@ -440,7 +440,7 @@ declare module goog.ui.media.MediaModel {
          * @return {goog.ui.media.MediaModel.Credit.Role|undefined} The role of the
          *     entity.
          */
-        getRole(): goog.ui.media.MediaModel.Credit.Role;
+        getRole(): goog.ui.media.MediaModel.Credit.Role|void;
         
         /**
          * Sets the role of the credit object.
@@ -454,7 +454,7 @@ declare module goog.ui.media.MediaModel {
          * @return {goog.ui.media.MediaModel.Credit.Scheme|undefined} The URI that
          *     identifies the role scheme.
          */
-        getScheme(): goog.ui.media.MediaModel.Credit.Scheme;
+        getScheme(): goog.ui.media.MediaModel.Credit.Scheme|void;
         
         /**
          * Sets the scheme of the credit object.

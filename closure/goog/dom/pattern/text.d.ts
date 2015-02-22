@@ -9,7 +9,7 @@ declare module goog.dom.pattern {
      * @final
      */
     class Text extends goog.dom.pattern.AbstractPattern {
-        constructor(match: string);
+        constructor(match: string|RegExp);
         
         /**
          * Test whether the given token is a text token which matches the string or

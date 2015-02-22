@@ -70,7 +70,7 @@ declare module goog.events {
          *     {@code goog.events.listen} if you are passing Object
          *     (instead of Function) as handler.
          */
-        addEventListener(type: string, handler: (arg0: any) => any, opt_capture?: boolean, opt_handlerScope?: Object): void;
+        addEventListener(type: string, handler: ((arg0: any) => any)|{handleEvent: (arg0: any) => any}|void, opt_capture?: boolean, opt_handlerScope?: Object): void;
         
         /**
          * Removes an event listener from the event target. The handler must be the
@@ -90,7 +90,7 @@ declare module goog.events {
          *     {@code goog.events.unlisten} if you are passing Object
          *     (instead of Function) as handler.
          */
-        removeEventListener(type: string, handler: (arg0: any) => any, opt_capture?: boolean, opt_handlerScope?: Object): void;
+        removeEventListener(type: string, handler: ((arg0: any) => any)|{handleEvent: (arg0: any) => any}|void, opt_capture?: boolean, opt_handlerScope?: Object): void;
         
         /**
          * Sets the target to be used for {@code event.target} when firing

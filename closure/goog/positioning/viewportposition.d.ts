@@ -12,7 +12,7 @@ declare module goog.positioning {
      * @extends {goog.positioning.AbstractPosition}
      */
     class ViewportPosition extends goog.positioning.AbstractPosition {
-        constructor(arg1: number, opt_arg2?: number);
+        constructor(arg1: number|goog.math.Coordinate, opt_arg2?: number);
         
         /**
          * Repositions the popup according to the current state

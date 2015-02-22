@@ -107,7 +107,7 @@ declare module goog.ui {
          *     to remove the menu).
          * @return {goog.ui.Menu|undefined} Previous menu (undefined if none).
          */
-        setMenu(menu: goog.ui.Menu): goog.ui.Menu;
+        setMenu(menu: goog.ui.Menu): goog.ui.Menu|void;
         
         /**
          * Specify which positioning algorithm to use.
@@ -151,7 +151,7 @@ declare module goog.ui {
          * @param {goog.ui.MenuItem|goog.ui.MenuSeparator|goog.ui.Control} item Menu
          *     item to add to the menu.
          */
-        addItem(item: goog.ui.MenuItem): void;
+        addItem(item: goog.ui.MenuItem|goog.ui.MenuSeparator|goog.ui.Control): void;
         
         /**
          * Adds a new menu item at the specific index in the menu.
@@ -159,13 +159,13 @@ declare module goog.ui {
          *     menu.
          * @param {number} index Index at which to insert the menu item.
          */
-        addItemAt(item: goog.ui.MenuItem, index: number): void;
+        addItemAt(item: goog.ui.MenuItem|goog.ui.MenuSeparator, index: number): void;
         
         /**
          * Removes the item from the menu and disposes of it.
          * @param {goog.ui.MenuItem|goog.ui.MenuSeparator} item The menu item to remove.
          */
-        removeItem(item: goog.ui.MenuItem): void;
+        removeItem(item: goog.ui.MenuItem|goog.ui.MenuSeparator): void;
         
         /**
          * Removes the menu item at a given index in the menu and disposes of it.

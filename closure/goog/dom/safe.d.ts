@@ -40,7 +40,7 @@ declare module goog.dom.safe {
      * @param {string|!goog.html.SafeUrl} url The URL to assign.
      * @see goog.html.SafeUrl#sanitize
      */
-    function setAnchorHref(anchor: HTMLAnchorElement, url: string): void;
+    function setAnchorHref(anchor: HTMLAnchorElement, url: string|goog.html.SafeUrl): void;
 
     /**
      * Safely assigns a URL to a Location object's href property.
@@ -61,5 +61,5 @@ declare module goog.dom.safe {
      * @param {string|!goog.html.SafeUrl} url The URL to assign.
      * @see goog.html.SafeUrl#sanitize
      */
-    function setLocationHref(loc: Location, url: string): void;
+    function setLocationHref(loc: Location, url: string|goog.html.SafeUrl): void;
 }

@@ -41,7 +41,7 @@ declare module goog.dom {
          * @param {string|Element} element Element ID or a DOM node.
          * @return {Element} The element with the given ID, or the node passed in.
          */
-        getElement(element: string): Element;
+        getElement(element: string|Element): Element;
         
         /**
          * Gets an element by id, asserting that the element is found.
@@ -60,7 +60,7 @@ declare module goog.dom {
          * @return {Element} The element with the given ID, or the node passed in.
          * @deprecated Use {@link goog.dom.DomHelper.prototype.getElement} instead.
          */
-        $(element: string): Element;
+        $(element: string|Element): Element;
         
         /**
          * Looks up elements by both tag and class name, using browser native functions
@@ -76,7 +76,7 @@ declare module goog.dom {
          * @return { {length: number} } Array-like list of elements (only a length
          *     property and numerical indices are guaranteed to exist).
          */
-        getElementsByTagNameAndClass(opt_tag?: string, opt_class?: string, opt_el?: Document): {length: number};
+        getElementsByTagNameAndClass(opt_tag?: string, opt_class?: string, opt_el?: Document|Element): {length: number};
         
         /**
          * Returns an array of all the elements with the provided className.
@@ -85,7 +85,7 @@ declare module goog.dom {
          * @param {Element|Document=} opt_el Optional element to look in.
          * @return { {length: number} } The items found with the class name provided.
          */
-        getElementsByClass(className: string, opt_el?: Element): {length: number};
+        getElementsByClass(className: string, opt_el?: Element|Document): {length: number};
         
         /**
          * Returns the first element we find matching the provided class name.
@@ -94,7 +94,7 @@ declare module goog.dom {
          * @param {(Element|Document)=} opt_el Optional element to look in.
          * @return {Element} The first item found with the class name provided.
          */
-        getElementByClass(className: string, opt_el?: Element): Element;
+        getElementByClass(className: string, opt_el?: Element|Document): Element;
         
         /**
          * Ensures an element with the given className exists, and then returns the
@@ -106,7 +106,7 @@ declare module goog.dom {
          * @return {!Element} The first item found with the class name provided.
          * @throws {goog.asserts.AssertionError} Thrown if no element is found.
          */
-        getRequiredElementByClass(className: string, opt_root?: Element): Element;
+        getRequiredElementByClass(className: string, opt_root?: Element|Document): Element;
         
         /**
          * Alias for {@code getElementsByTagNameAndClass}.
@@ -167,7 +167,7 @@ declare module goog.dom {
          *     NodeList, its elements will be added as childNodes instead.
          * @return {!Element} Reference to a DOM node.
          */
-        createDom(tagName: string, opt_attributes?: Object, ...var_args: goog.dom.Appendable[]): Element;
+        createDom(tagName: string, opt_attributes?: Object|string, ...var_args: goog.dom.Appendable[]): Element;
         
         /**
          * Alias for {@code createDom}.
@@ -181,7 +181,7 @@ declare module goog.dom {
          * @return {!Element} Reference to a DOM node.
          * @deprecated Use {@link goog.dom.DomHelper.prototype.createDom} instead.
          */
-        $dom(tagName: string, opt_attributes?: Object, ...var_args: goog.dom.Appendable[]): Element;
+        $dom(tagName: string, opt_attributes?: Object|string, ...var_args: goog.dom.Appendable[]): Element;
         
         /**
          * Creates a new element.
@@ -195,7 +195,7 @@ declare module goog.dom {
          * @param {number|string} content Content.
          * @return {!Text} The new text node.
          */
-        createTextNode(content: number): Text;
+        createTextNode(content: number|string): Text;
         
         /**
          * Create a table.
@@ -340,7 +340,7 @@ declare module goog.dom {
          *     tree, sans children, or undefined if the element was already not in the
          *     document.
          */
-        flattenElement(element: Element): Element;
+        flattenElement(element: Element): Element|void;
         
         /**
          * Returns an array containing just the element children of the given element.
@@ -348,7 +348,7 @@ declare module goog.dom {
          * @return {!(Array|NodeList)} An array or array-like list of just the element
          *     children of the given element.
          */
-        getChildren(element: Element): Array<any>;
+        getChildren(element: Element): Array<any>|NodeList;
         
         /**
          * Returns the first child node that is an element.
@@ -481,7 +481,7 @@ declare module goog.dom {
          * @param {Node} node The node to change the text content of.
          * @param {string|number} text The value that should replace the node's content.
          */
-        setTextContent(node: Node, text: string): void;
+        setTextContent(node: Node, text: string|number): void;
         
         /**
          * Gets the outerHTML of a node, which islike innerHTML, except that it
@@ -498,7 +498,7 @@ declare module goog.dom {
          * @param {function(Node) : boolean} p The filter function.
          * @return {Node|undefined} The found node or undefined if none is found.
          */
-        findNode(root: Node, p: (arg0: Node) => boolean): Node;
+        findNode(root: Node, p: (arg0: Node) => boolean): Node|void;
         
         /**
          * Finds all the descendant nodes that matches the filter function. This does a
@@ -610,7 +610,7 @@ declare module goog.dom {
          * @return {Element} The first ancestor that matches the passed criteria, or
          *     null if no match is found.
          */
-        getAncestorByTagNameAndClass(element: Node, opt_tag?: goog.dom.TagName, opt_class?: string, opt_maxSearchSteps?: number): Element;
+        getAncestorByTagNameAndClass(element: Node, opt_tag?: goog.dom.TagName|string, opt_class?: string, opt_maxSearchSteps?: number): Element;
         
         /**
          * Walks up the DOM hierarchy returning the first ancestor that has the passed
@@ -648,7 +648,7 @@ declare module goog.dom {
      *     element.
      * @return {!goog.dom.DomHelper} The DomHelper.
      */
-    function getDomHelper(opt_element?: Node): goog.dom.DomHelper;
+    function getDomHelper(opt_element?: Node|Window): goog.dom.DomHelper;
 
     /**
      * Gets the document object being used by the dom library.
@@ -664,7 +664,7 @@ declare module goog.dom {
      * @param {string|Element} element Element ID or a DOM node.
      * @return {Element} The element with the given ID, or the node passed in.
      */
-    function getElement(element: string): Element;
+    function getElement(element: string|Element): Element;
 
     /**
      * Gets an element by id, asserting that the element is found.
@@ -683,7 +683,7 @@ declare module goog.dom {
      * @return {Element} The element with the given ID, or the node passed in.
      * @deprecated Use {@link goog.dom.getElement} instead.
      */
-    function $(element: string): Element;
+    function $(element: string|Element): Element;
 
     /**
      * Looks up elements by both tag and class name, using browser native functions
@@ -710,7 +710,7 @@ declare module goog.dom {
      * @return { {length: number} } Array-like list of elements (only a length
      *     property and numerical indices are guaranteed to exist).
      */
-    function getElementsByTagNameAndClass(opt_tag?: string, opt_class?: string, opt_el?: Document): {length: number};
+    function getElementsByTagNameAndClass(opt_tag?: string, opt_class?: string, opt_el?: Document|Element): {length: number};
 
     /**
      * Returns a static, array-like list of the elements with the provided
@@ -720,7 +720,7 @@ declare module goog.dom {
      * @param {(Document|Element)=} opt_el Optional element to look in.
      * @return { {length: number} } The items found with the class name provided.
      */
-    function getElementsByClass(className: string, opt_el?: Document): {length: number};
+    function getElementsByClass(className: string, opt_el?: Document|Element): {length: number};
 
     /**
      * Returns the first element with the provided className.
@@ -729,7 +729,7 @@ declare module goog.dom {
      * @param {Element|Document=} opt_el Optional element to look in.
      * @return {Element} The first item with the class name provided.
      */
-    function getElementByClass(className: string, opt_el?: Element): Element;
+    function getElementByClass(className: string, opt_el?: Element|Document): Element;
 
     /**
      * Ensures an element with the given className exists, and then returns the
@@ -741,7 +741,7 @@ declare module goog.dom {
      * @return {!Element} The first item with the class name provided.
      * @throws {goog.asserts.AssertionError} Thrown if no element is found.
      */
-    function getRequiredElementByClass(className: string, opt_root?: Element): Element;
+    function getRequiredElementByClass(className: string, opt_root?: Element|Document): Element;
 
     /**
      * Alias for {@code getElementsByTagNameAndClass}.
@@ -884,7 +884,7 @@ declare module goog.dom {
      *     its elements will be added as childNodes instead.
      * @return {!Element} Reference to a DOM node.
      */
-    function createDom(tagName: string, opt_attributes?: Object, ...var_args: Object[]): Element;
+    function createDom(tagName: string, opt_attributes?: Object|Array<string>|string, ...var_args: (Object|string|Array<any>|NodeList)[]): Element;
 
     /**
      * Alias for {@code createDom}.
@@ -898,7 +898,7 @@ declare module goog.dom {
      * @return {!Element} Reference to a DOM node.
      * @deprecated Use {@link goog.dom.createDom} instead.
      */
-    function $dom(tagName: string, opt_attributes?: string, ...var_args: Object[]): Element;
+    function $dom(tagName: string, opt_attributes?: string|Object, ...var_args: (Object|string|Array<any>|NodeList)[]): Element;
 
     /**
      * Creates a new element.
@@ -912,7 +912,7 @@ declare module goog.dom {
      * @param {number|string} content Content.
      * @return {!Text} The new text node.
      */
-    function createTextNode(content: number): Text;
+    function createTextNode(content: number|string): Text;
 
     /**
      * Create a table.
@@ -1052,7 +1052,7 @@ declare module goog.dom {
      *     tree, sans children; or undefined, if the element was not in the document
      *     to begin with.
      */
-    function flattenElement(element: Element): Element;
+    function flattenElement(element: Element): Element|void;
 
     /**
      * Returns an array containing just the element children of the given element.
@@ -1060,7 +1060,7 @@ declare module goog.dom {
      * @return {!(Array|NodeList)} An array or array-like list of just the element
      *     children of the given element.
      */
-    function getChildren(element: Element): Array<any>;
+    function getChildren(element: Element): Array<any>|NodeList;
 
     /**
      * Returns the first child node that is an element.
@@ -1172,7 +1172,7 @@ declare module goog.dom {
      * @param {Node|Window} node The node to get the document for.
      * @return {!Document} The document owning the node.
      */
-    function getOwnerDocument(node: Node): Document;
+    function getOwnerDocument(node: Node|Window): Document;
 
     /**
      * Cross-browser function for getting the document element of a frame or iframe.
@@ -1193,7 +1193,7 @@ declare module goog.dom {
      * @param {Node} node The node to change the text content of.
      * @param {string|number} text The value that should replace the node's content.
      */
-    function setTextContent(node: Node, text: string): void;
+    function setTextContent(node: Node, text: string|number): void;
 
     /**
      * Gets the outerHTML of a node, which islike innerHTML, except that it
@@ -1216,7 +1216,7 @@ declare module goog.dom {
      * @param {function(Node) : boolean} p The filter function.
      * @return {Node|undefined} The found node or undefined if none is found.
      */
-    function findNode(root: Node, p: (arg0: Node) => boolean): Node;
+    function findNode(root: Node, p: (arg0: Node) => boolean): Node|void;
 
     /**
      * Finds all the descendant nodes that match the filter function, using a
@@ -1345,7 +1345,7 @@ declare module goog.dom {
      * @return {Element} The first ancestor that matches the passed criteria, or
      *     null if no match is found.
      */
-    function getAncestorByTagNameAndClass(element: Node, opt_tag?: goog.dom.TagName, opt_class?: string, opt_maxSearchSteps?: number): Element;
+    function getAncestorByTagNameAndClass(element: Node, opt_tag?: goog.dom.TagName|string, opt_class?: string, opt_maxSearchSteps?: number): Element;
 
     /**
      * Walks up the DOM hierarchy returning the first ancestor that has the passed

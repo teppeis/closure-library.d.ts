@@ -49,7 +49,7 @@ declare module goog.window {
      *                  null if a popup blocker prevented the window from being
      *                  opened.
      */
-    function open(linkRef: string, opt_options?: Object, opt_parentWin?: Window): Window;
+    function open(linkRef: string|Object, opt_options?: Object, opt_parentWin?: Window): Window;
 
     /**
      * Opens a new window without any real content in it.
@@ -97,5 +97,5 @@ declare module goog.window {
      *
      * @return {boolean} true if the window was not popped up, false if it was.
      */
-    function popup(linkRef: string, opt_options?: Object): boolean;
+    function popup(linkRef: string|Object, opt_options?: Object): boolean;
 }

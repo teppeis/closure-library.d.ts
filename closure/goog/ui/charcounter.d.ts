@@ -18,7 +18,7 @@ declare module goog.ui {
      * @final
      */
     class CharCounter extends goog.events.EventTarget {
-        constructor(elInput: HTMLInputElement, elCount: Element, maxLength: number, opt_displayMode?: goog.ui.CharCounter.Display);
+        constructor(elInput: HTMLInputElement|HTMLTextAreaElement, elCount: Element, maxLength: number, opt_displayMode?: goog.ui.CharCounter.Display);
         
         /**
          * Sets the maximum length.

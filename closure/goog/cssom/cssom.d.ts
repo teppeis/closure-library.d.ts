@@ -19,7 +19,7 @@ declare module goog.cssom {
      * @param {(CSSStyleSheet|StyleSheetList)=} opt_styleSheet The CSSStyleSheet.
      * @return {string} css text.
      */
-    function getAllCssText(opt_styleSheet?: CSSStyleSheet): string;
+    function getAllCssText(opt_styleSheet?: CSSStyleSheet|StyleSheetList): string;
 
     /**
      * Recursively gets all CSSStyleRules, optionally starting from a given
@@ -28,7 +28,7 @@ declare module goog.cssom {
      * @param {(CSSStyleSheet|StyleSheetList)=} opt_styleSheet The CSSStyleSheet.
      * @return {Array<CSSStyleRule>} A list of CSSStyleRules.
      */
-    function getAllCssStyleRules(opt_styleSheet?: CSSStyleSheet): Array<CSSStyleRule>;
+    function getAllCssStyleRules(opt_styleSheet?: CSSStyleSheet|StyleSheetList): Array<CSSStyleRule>;
 
     /**
      * Returns the CSSRules from a styleSheet.
@@ -54,7 +54,7 @@ declare module goog.cssom {
      *    defaults to false.
      * @return {!Array<CSSStyleSheet>} A list of CSSStyleSheet objects.
      */
-    function getAllCssStyleSheets(opt_styleSheet?: CSSStyleSheet, opt_includeDisabled?: boolean): Array<CSSStyleSheet>;
+    function getAllCssStyleSheets(opt_styleSheet?: CSSStyleSheet|StyleSheetList, opt_includeDisabled?: boolean): Array<CSSStyleSheet>;
 
     /**
      * Gets the cssText from a CSSRule object cross-browserly.

@@ -17,6 +17,6 @@ declare module goog.dom.pattern {
      * @extends {goog.dom.pattern.Tag}
      */
     class StartTag extends goog.dom.pattern.Tag {
-        constructor(tag: string, opt_attrs?: Object, opt_styles?: Object, opt_test?: Function);
+        constructor(tag: string|RegExp, opt_attrs?: Object, opt_styles?: Object, opt_test?: Function);
     }
 }

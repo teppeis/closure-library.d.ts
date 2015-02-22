@@ -25,7 +25,7 @@ declare module goog.ui {
          * within this package or by subclasses.
          * @type {goog.math.Coordinate|undefined}
          */
-        openingCoords: goog.math.Coordinate;
+        openingCoords: goog.math.Coordinate|void;
         
         /**
          * Returns the CSS class applied to menu elements, also used as the prefix for
@@ -53,7 +53,7 @@ declare module goog.ui {
          *     item to add to the menu.
          * @deprecated Use {@link #addChild} instead, with true for the second argument.
          */
-        addItem(item: goog.ui.MenuHeader): void;
+        addItem(item: goog.ui.MenuHeader|goog.ui.MenuItem|goog.ui.MenuSeparator): void;
         
         /**
          * Adds a new menu item at a specific index in the menu.
@@ -63,7 +63,7 @@ declare module goog.ui {
          * @deprecated Use {@link #addChildAt} instead, with true for the third
          *     argument.
          */
-        addItemAt(item: goog.ui.MenuHeader, n: number): void;
+        addItemAt(item: goog.ui.MenuHeader|goog.ui.MenuItem|goog.ui.MenuSeparator, n: number): void;
         
         /**
          * Removes an item from the menu and disposes of it.
@@ -71,7 +71,7 @@ declare module goog.ui {
          *     menu item to remove.
          * @deprecated Use {@link #removeChild} instead.
          */
-        removeItem(item: goog.ui.MenuHeader): void;
+        removeItem(item: goog.ui.MenuHeader|goog.ui.MenuItem|goog.ui.MenuSeparator): void;
         
         /**
          * Removes a menu item at a given index in the menu and disposes of it.
@@ -87,7 +87,7 @@ declare module goog.ui {
          *     Reference to the menu item.
          * @deprecated Use {@link #getChildAt} instead.
          */
-        getItemAt(n: number): goog.ui.MenuHeader;
+        getItemAt(n: number): goog.ui.MenuHeader|goog.ui.MenuItem|goog.ui.MenuSeparator|void;
         
         /**
          * Returns the number of items in the menu (including separators).
@@ -108,7 +108,7 @@ declare module goog.ui {
          * @param {number|goog.math.Coordinate} x Left position or coordinate obj.
          * @param {number=} opt_y Top position.
          */
-        setPosition(x: number, opt_y?: number): void;
+        setPosition(x: number|goog.math.Coordinate, opt_y?: number): void;
         
         /**
          * Gets the page offset of the menu, or null if the menu isn't visible

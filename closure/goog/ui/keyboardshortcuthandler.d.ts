@@ -16,7 +16,7 @@ declare module goog.ui {
      * @extends {goog.events.EventTarget}
      */
     class KeyboardShortcutHandler extends goog.events.EventTarget {
-        constructor(keyTarget: goog.events.EventTarget);
+        constructor(keyTarget: goog.events.EventTarget|EventTarget);
         
         /**
          * Maximum allowed delay, in milliseconds, allowed between the first and second
@@ -148,7 +148,7 @@ declare module goog.ui {
          *   Ctrl+g Shift+a  registerShortcut(str, 'ctrl+g shift+a')
          *   g a             registerShortcut(str, 'g a').
          */
-        registerShortcut(identifier: string, ...var_args: number[]): void;
+        registerShortcut(identifier: string, ...var_args: (number|string|Array<number>)[]): void;
         
         /**
          * Unregisters a keyboard shortcut by keyCode and modifiers or string
@@ -169,7 +169,7 @@ declare module goog.ui {
          * @param {...(number|string|Array<number>)} var_args String representation, or
          *     array or list of alternating key codes and modifiers.
          */
-        unregisterShortcut(...var_args: number[]): void;
+        unregisterShortcut(...var_args: (number|string|Array<number>)[]): void;
         
         /**
          * Verifies if a particular keyboard shortcut is registered already. It has
@@ -191,7 +191,7 @@ declare module goog.ui {
          *     array or list of alternating key codes and modifiers.
          * @return {boolean} Whether the specified keyboard shortcut is registered.
          */
-        isShortcutRegistered(...var_args: number[]): boolean;
+        isShortcutRegistered(...var_args: (number|string|Array<number>)[]): boolean;
         
         /**
          * Unregisters all keyboard shortcuts.
@@ -233,7 +233,7 @@ declare module goog.ui {
          *     event listener should be attached to.
          * @protected
          */
-        initializeKeyListener(keyTarget: goog.events.EventTarget): void;
+        initializeKeyListener(keyTarget: goog.events.EventTarget|EventTarget): void;
         
         /**
          * Removes the listener that was added by link {@link #initializeKeyListener}.
@@ -253,7 +253,7 @@ declare module goog.ui {
      * @final
      */
     class KeyboardShortcutEvent extends goog.events.Event {
-        constructor(type: string, identifier: string, target: Node);
+        constructor(type: string, identifier: string, target: Node|goog.events.EventTarget);
     }
 }
 

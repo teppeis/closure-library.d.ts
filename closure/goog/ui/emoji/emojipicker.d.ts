@@ -55,7 +55,7 @@ declare module goog.ui.emoji {
          * @param {Array<Array<string>>} emojiGroup A new group of emoji to be added
          *    Each internal array contains [emojiUrl, emojiId].
          */
-        addEmojiGroup(title: string, emojiGroup: Array<Array<string>>): void;
+        addEmojiGroup(title: string|Element, emojiGroup: Array<Array<string>>): void;
         
         /**
          * Gets the number of rows per grid in the emoji picker.

@@ -58,14 +58,14 @@ declare module goog.debug {
          * @param {Object|goog.structs.Map=} opt_headers Map of headers to add to the
          *     request.
          */
-        static defaultXhrSender(uri: string, method: string, content: string, opt_headers?: Object): void;
+        static defaultXhrSender(uri: string, method: string, content: string, opt_headers?: Object|goog.structs.Map<any, any>): void;
         
         /**
          * Add headers to the logging url.
          * @param {Object|goog.structs.Map} loggingHeaders Extra headers to send
          *     to the logging URL.
          */
-        setLoggingHeaders(loggingHeaders: Object): void;
+        setLoggingHeaders(loggingHeaders: Object|goog.structs.Map<any, any>): void;
         
         /**
          * Set the function used to send error reports to the server.
@@ -75,7 +75,7 @@ declare module goog.debug {
          *     HTTP method request content, and (optionally) request headers to be
          *     added.
          */
-        setXhrSender(xhrSender: (arg0: string, arg1: string, arg2: string, arg3?: Object) => any): void;
+        setXhrSender(xhrSender: (arg0: string, arg1: string, arg2: string, arg3?: Object|goog.structs.Map<any, any>) => any): void;
         
         /**
          * Handler for caught exceptions. Sends report to the LoggingServlet and

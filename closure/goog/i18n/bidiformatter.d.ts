@@ -55,7 +55,7 @@ declare module goog.i18n {
      * @final
      */
     class BidiFormatter {
-        constructor(contextDir: goog.i18n.bidi.Dir, opt_alwaysSpan?: boolean);
+        constructor(contextDir: goog.i18n.bidi.Dir|number|boolean|void, opt_alwaysSpan?: boolean);
         
         /**
          * @return {?goog.i18n.bidi.Dir} The context directionality.
@@ -76,7 +76,7 @@ declare module goog.i18n {
          *     3. A boolean (true = RTL, false = LTR).
          *     4. A null for unknown directionality.
          */
-        setContextDir(contextDir: goog.i18n.bidi.Dir): void;
+        setContextDir(contextDir: goog.i18n.bidi.Dir|number|boolean|void): void;
         
         /**
          * @param {boolean} alwaysSpan Whether {@link #spanWrap} should always use a

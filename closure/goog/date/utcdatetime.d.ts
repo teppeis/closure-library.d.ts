@@ -18,7 +18,7 @@ declare module goog.date {
      * @extends {goog.date.DateTime}
      */
     class UtcDateTime extends goog.date.DateTime {
-        constructor(opt_year?: number, opt_month?: number, opt_date?: number, opt_hours?: number, opt_minutes?: number, opt_seconds?: number, opt_milliseconds?: number);
+        constructor(opt_year?: number|goog.date.DateLike, opt_month?: number, opt_date?: number, opt_hours?: number, opt_minutes?: number, opt_seconds?: number, opt_milliseconds?: number);
         
         /**
          * @param {number} timestamp Number of milliseconds since Epoch.

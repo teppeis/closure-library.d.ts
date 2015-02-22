@@ -11,7 +11,7 @@ declare module goog.dom.animationFrame {
     interface Task_ {
         id: number;
         fn: Function;
-        context: Object;
+        context: Object|void;
     }
 
     /**
@@ -27,8 +27,8 @@ declare module goog.dom.animationFrame {
     interface TaskSet_ {
         measureTask: goog.dom.animationFrame.Task_;
         mutateTask: goog.dom.animationFrame.Task_;
-        state: Object;
-        args: Array<any>;
+        state: Object|void;
+        args: Array<any>|void;
         isScheduled: boolean;
     }
 
@@ -39,8 +39,8 @@ declare module goog.dom.animationFrame {
      * }}
      */
     interface Spec {
-        measure: Function;
-        mutate: Function;
+        measure: Function|void;
+        mutate: Function|void;
     }
 
     /**
@@ -69,7 +69,7 @@ declare module goog.dom.animationFrame {
      * @return {function(...?)}
      * @template THIS
      */
-    function createTask<THIS>(spec: {measure: (arg0: goog.dom.animationFrame.State) => any; mutate: (arg0: goog.dom.animationFrame.State) => any}, opt_context?: THIS): (...arg0: any[]) => any;
+    function createTask<THIS>(spec: {measure: ((arg0: goog.dom.animationFrame.State) => any)|void; mutate: ((arg0: goog.dom.animationFrame.State) => any)|void}, opt_context?: THIS): (...arg0: any[]) => any;
 
     /**
      * @return {boolean} Whether the animationframe is currently running. For use

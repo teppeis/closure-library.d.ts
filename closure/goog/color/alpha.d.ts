@@ -86,7 +86,7 @@ declare module goog.color.alpha {
      *     with r, g, b in [0, 255] and a in [0, 1].
      * @return {string} An 'rgba(r,g,b,a)' string ready for use in a CSS rule.
      */
-    function rgbaArrayToRgbaStyle(rgba: Array<number>): string;
+    function rgbaArrayToRgbaStyle(rgba: Array<number>|Float32Array): string;
 
     /**
      * Converts a color from HSLA to hex representation.

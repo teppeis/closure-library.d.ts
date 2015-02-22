@@ -11,7 +11,7 @@ declare module goog.a11y.aria {
      * @param {!Element} element DOM node to set role of.
      * @param {!goog.a11y.aria.Role|string} roleName role name(s).
      */
-    function setRole(element: Element, roleName: goog.a11y.aria.Role): void;
+    function setRole(element: Element, roleName: goog.a11y.aria.Role|string): void;
 
     /**
      * Gets role of an element.
@@ -35,7 +35,7 @@ declare module goog.a11y.aria {
      * @param {string|boolean|number|!Array<string>} value Value
      * for the state attribute.
      */
-    function setState(element: Element, stateName: goog.a11y.aria.State, value: string): void;
+    function setState(element: Element, stateName: goog.a11y.aria.State|string, value: string|boolean|number|Array<string>): void;
 
     /**
      * Toggles the ARIA attribute of an element.
@@ -48,7 +48,7 @@ declare module goog.a11y.aria {
      *     Automatically adds prefix 'aria-' to the attribute name if the attribute
      *     is not an extra attribute.
      */
-    function toggleState(el: Element, attr: goog.a11y.aria.State): void;
+    function toggleState(el: Element, attr: goog.a11y.aria.State|string): void;
 
     /**
      * Remove the state or property for the element.
@@ -63,7 +63,7 @@ declare module goog.a11y.aria {
      * @param {!goog.a11y.aria.State|string} stateName State name.
      * @return {string} Value of the state attribute.
      */
-    function getState(element: Element, stateName: goog.a11y.aria.State): string;
+    function getState(element: Element, stateName: goog.a11y.aria.State|string): string;
 
     /**
      * Returns the activedescendant element for the input element by
@@ -113,7 +113,7 @@ declare module goog.a11y.aria {
      * @return {?boolean} Boolean value for the ARIA state value or null if
      *     the state value is not 'true', not 'false', or not set.
      */
-    function getStateBoolean(element: Element, stateName: goog.a11y.aria.State): boolean;
+    function getStateBoolean(element: Element, stateName: goog.a11y.aria.State|string): boolean;
 
     /**
      * Gets the number value of an ARIA state/property.
@@ -122,7 +122,7 @@ declare module goog.a11y.aria {
      * @return {?number} Number value for the ARIA state value or null if
      *     the state value is not a number or not set.
      */
-    function getStateNumber(element: Element, stateName: goog.a11y.aria.State): number;
+    function getStateNumber(element: Element, stateName: goog.a11y.aria.State|string): number;
 
     /**
      * Gets the string value of an ARIA state/property.
@@ -131,7 +131,7 @@ declare module goog.a11y.aria {
      * @return {?string} String value for the ARIA state value or null if
      *     the state value is empty string or not set.
      */
-    function getStateString(element: Element, stateName: goog.a11y.aria.State): string;
+    function getStateString(element: Element, stateName: goog.a11y.aria.State|string): string;
 
     /**
      * Gets array of strings value of the specified state or

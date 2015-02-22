@@ -184,7 +184,7 @@ declare module goog {
          *     Applies only if queryData is a string.
          * @return {!goog.Uri} Reference to this URI object.
          */
-        setQueryData(queryData: goog.Uri.QueryData, opt_decode?: boolean): goog.Uri;
+        setQueryData(queryData: goog.Uri.QueryData|string|void, opt_decode?: boolean): goog.Uri;
         
         /**
          * Sets the URI query.
@@ -260,7 +260,7 @@ declare module goog {
          *     undefined if the given parameter name does not appear in the query
          *     string.
          */
-        getParameterValue(paramName: string): string;
+        getParameterValue(paramName: string): string|void;
         
         /**
          * @return {string} The URI fragment, not including the #.
@@ -362,7 +362,7 @@ declare module goog {
          *
          * @return {!goog.Uri} The new URI object.
          */
-        static create(opt_scheme?: string, opt_userInfo?: string, opt_domain?: string, opt_port?: number, opt_path?: string, opt_query?: string, opt_fragment?: string, opt_ignoreCase?: boolean): goog.Uri;
+        static create(opt_scheme?: string, opt_userInfo?: string, opt_domain?: string, opt_port?: number, opt_path?: string, opt_query?: string|goog.Uri.QueryData, opt_fragment?: string, opt_ignoreCase?: boolean): goog.Uri;
         
         /**
          * Resolves a relative Uri against a base Uri, accepting both strings and
@@ -428,7 +428,7 @@ declare module goog.Uri {
          *     name in #get.
          * @return {!goog.Uri.QueryData} The populated query data instance.
          */
-        static createFromMap(map: goog.structs.Map<string, any>, opt_uri?: goog.Uri, opt_ignoreCase?: boolean): goog.Uri.QueryData;
+        static createFromMap(map: goog.structs.Map<string, any>|Object, opt_uri?: goog.Uri, opt_ignoreCase?: boolean): goog.Uri.QueryData;
         
         /**
          * Creates a new query data instance from parallel arrays of parameter names
@@ -572,6 +572,6 @@ declare module goog.Uri {
          * @param {...(goog.Uri.QueryData|goog.structs.Map<?, ?>|Object)} var_args
          *     The object from which key value pairs will be copied.
          */
-        extend(...var_args: goog.Uri.QueryData[]): void;
+        extend(...var_args: (goog.Uri.QueryData|goog.structs.Map<any, any>|Object)[]): void;
     }
 }

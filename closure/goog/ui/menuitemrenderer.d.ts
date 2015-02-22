@@ -120,7 +120,7 @@ declare module goog.ui {
          *     (undefined if none).
          * @override
          */
-        getClassForState(state: goog.ui.Component.State): string;
+        getClassForState(state: goog.ui.Component.State): string|void;
         
         /**
          * Takes a single CSS class name which may represent a component state, and

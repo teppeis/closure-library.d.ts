@@ -9,7 +9,7 @@ declare module goog.events {
      * @final
      */
     class FocusHandler extends goog.events.EventTarget {
-        constructor(element: Element);
+        constructor(element: Element|Document);
         
         /**
          * This handles the underlying events and dispatches a new event.

@@ -10,7 +10,7 @@ declare module goog.vec {
      * @final
      */
     class Float64Array {
-        constructor(p0: goog.vec.Float64Array);
+        constructor(p0: goog.vec.Float64Array|Array<any>|ArrayBuffer|number);
         
         /**
          * The number of bytes in an element (as defined by the Typed Array
@@ -33,7 +33,7 @@ declare module goog.vec {
          * @param {Array<number>|Float64Array} values The array of values.
          * @param {number=} opt_offset The offset in this array to start.
          */
-        set(values: Array<number>, opt_offset?: number): void;
+        set(values: Array<number>|Float64Array, opt_offset?: number): void;
         
         /**
          * Creates a string representation of this array.

@@ -62,7 +62,7 @@ declare module goog.ui {
          * @param {number=} opt_arg3 Bottom value.
          * @param {number=} opt_arg4 Left value.
          */
-        setMargin(arg1: goog.math.Box, opt_arg2?: number, opt_arg3?: number, opt_arg4?: number): void;
+        setMargin(arg1: goog.math.Box|number|void, opt_arg2?: number, opt_arg3?: number, opt_arg4?: number): void;
     }
 }
 
@@ -145,7 +145,7 @@ declare module goog.ui.Popup {
      * @final
      */
     class AbsolutePosition extends goog.positioning.AbstractPosition {
-        constructor(arg1: number, opt_arg2?: number);
+        constructor(arg1: number|goog.math.Coordinate, opt_arg2?: number);
     }
 
     /**
@@ -163,7 +163,7 @@ declare module goog.ui.Popup {
      *     will be removed at the end of Q1 2009.
      */
     class ViewPortPosition extends goog.ui.Popup.AbsolutePosition {
-        constructor(arg1: number, opt_arg2?: number);
+        constructor(arg1: number|goog.math.Coordinate, opt_arg2?: number);
     }
 
     /**
@@ -184,7 +184,7 @@ declare module goog.ui.Popup {
      * @final
      */
     class ClientPosition extends goog.ui.Popup.AbsolutePosition {
-        constructor(arg1: number, opt_arg2?: number);
+        constructor(arg1: number|goog.math.Coordinate, opt_arg2?: number);
     }
 
     /**
@@ -201,6 +201,6 @@ declare module goog.ui.Popup {
      *     alias will be removed at the end of Q1 2009.
      */
     class ViewPortClientPosition extends goog.ui.Popup.ClientPosition {
-        constructor(arg1: number, opt_arg2?: number);
+        constructor(arg1: number|goog.math.Coordinate, opt_arg2?: number);
     }
 }

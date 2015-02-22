@@ -94,7 +94,7 @@ declare module goog.net {
          * @return {string|undefined}  The value of the cookie. If no cookie is set this
          *     returns opt_default or undefined if opt_default is not provided.
          */
-        get(name: string, opt_default?: string): string;
+        get(name: string, opt_default?: string): string|void;
         
         /**
          * Removes and expires a cookie.

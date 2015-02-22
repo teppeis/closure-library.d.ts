@@ -20,7 +20,7 @@ declare module goog.events {
          * @param {goog.events.EventHandler=} opt_eventHandler Event handler to add
          *     listener to.
          */
-        listen(src: goog.events.ListenableType, listener: (arg0: any) => any, opt_capt?: boolean, opt_scope?: Object, opt_eventHandler?: goog.events.EventHandler<any>): void;
+        listen(src: goog.events.ListenableType, listener: ((arg0: any) => any)|{handleEvent: (arg0: any) => any}|void, opt_capt?: boolean, opt_scope?: Object, opt_eventHandler?: goog.events.EventHandler<any>): void;
         
         /**
          * Removes an event listener added using goog.events.EventWrapper.listen.
@@ -34,6 +34,6 @@ declare module goog.events {
          * @param {goog.events.EventHandler=} opt_eventHandler Event handler to remove
          *     listener from.
          */
-        unlisten(src: goog.events.ListenableType, listener: (arg0: any) => any, opt_capt?: boolean, opt_scope?: Object, opt_eventHandler?: goog.events.EventHandler<any>): void;
+        unlisten(src: goog.events.ListenableType, listener: ((arg0: any) => any)|{handleEvent: (arg0: any) => any}|void, opt_capt?: boolean, opt_scope?: Object, opt_eventHandler?: goog.events.EventHandler<any>): void;
     }
 }

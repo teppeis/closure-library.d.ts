@@ -18,7 +18,7 @@ declare module goog.ui.ac {
      * @extends {goog.events.EventTarget}
      */
     class Renderer extends goog.events.EventTarget {
-        constructor(opt_parentNode?: Element, opt_customRenderer?: {renderRow: any}, opt_rightAlign?: boolean, opt_useStandardHighlighting?: boolean);
+        constructor(opt_parentNode?: Element, opt_customRenderer?: {renderRow: any}|{render: any}, opt_rightAlign?: boolean, opt_useStandardHighlighting?: boolean);
         
         /**
          * The delay before mouseover events are registered, in milliseconds

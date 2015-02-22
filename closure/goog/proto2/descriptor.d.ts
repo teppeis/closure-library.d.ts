@@ -6,9 +6,9 @@ declare module goog.proto2 {
      *            containingType: (goog.proto2.Message|undefined)}}
      */
     interface Metadata {
-        name: string;
-        fullName: string;
-        containingType: goog.proto2.Message;
+        name: string|void;
+        fullName: string|void;
+        containingType: goog.proto2.Message|void;
     }
 
     /**
@@ -85,7 +85,7 @@ declare module goog.proto2 {
          *
          * @return {goog.proto2.FieldDescriptor} The field found, if any.
          */
-        findFieldByTag(tag: number): goog.proto2.FieldDescriptor;
+        findFieldByTag(tag: number|string): goog.proto2.FieldDescriptor;
         
         /**
          * Creates an instance of the message type that this descriptor

@@ -10,7 +10,7 @@ declare module goog.events {
      * @final
      */
     class KeyHandler extends goog.events.EventTarget {
-        constructor(opt_element?: Element, opt_capture?: boolean);
+        constructor(opt_element?: Element|Document, opt_capture?: boolean);
         
         /**
          * Resets the stored previous values. Needed to be called for webkit which will
@@ -31,7 +31,7 @@ declare module goog.events {
          * @return {Element|Document|null} The element listened on for the real
          *     keyboard events.
          */
-        getElement(): Element;
+        getElement(): Element|Document|void;
         
         /**
          * Adds the proper key event listeners to the element.
@@ -39,7 +39,7 @@ declare module goog.events {
          * @param {boolean=} opt_capture Whether to listen for browser events in
          *     capture phase (defaults to false).
          */
-        attach(element: Element, opt_capture?: boolean): void;
+        attach(element: Element|Document, opt_capture?: boolean): void;
         
         /**
          * Removes the listeners that may exist.

@@ -16,7 +16,7 @@ declare module goog.tweak {
          * @return {!Element|undefined} The root UI element or undefined if tweaks are
          *     not enabled.
          */
-        static create(opt_domHelper?: goog.dom.DomHelper): Element;
+        static create(opt_domHelper?: goog.dom.DomHelper): Element|void;
         
         /**
          * Creates a TweakUi inside of a show/hide link.
@@ -24,7 +24,7 @@ declare module goog.tweak {
          * @return {!Element|undefined} The root UI element or undefined if tweaks are
          *     not enabled.
          */
-        static createCollapsible(opt_domHelper?: goog.dom.DomHelper): Element;
+        static createCollapsible(opt_domHelper?: goog.dom.DomHelper): Element|void;
         
         /**
          * @return {!Element} The root element. Must not be called before render().
@@ -69,7 +69,7 @@ declare module goog.tweak {
          *     tweak entries.
          * @return {!Element} The root element for the panel.
          */
-        render(opt_endElement?: Element): Element;
+        render(opt_endElement?: Element|DocumentFragment): Element;
         
         /**
          * Inserts the given entry into the panel.

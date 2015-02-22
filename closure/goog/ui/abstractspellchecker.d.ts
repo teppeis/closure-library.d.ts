@@ -43,7 +43,7 @@ declare module goog.ui {
          * @type {Array<string>|string|RegExp|undefined}
          * @protected
          */
-        excludeMarker: Array<string>;
+        excludeMarker: Array<string>|string|RegExp|void;
         
         /**
          * @return {goog.spell.SpellCheck} The handler used for caching and lookups.
@@ -69,13 +69,13 @@ declare module goog.ui {
          * @return {goog.ui.PopupMenu|undefined} The suggestions menu.
          * @protected
          */
-        getMenu(): goog.ui.PopupMenu;
+        getMenu(): goog.ui.PopupMenu|void;
         
         /**
          * @return {goog.ui.MenuItem|undefined} The menu item for edit word option.
          * @protected
          */
-        getMenuEdit(): goog.ui.MenuItem;
+        getMenuEdit(): goog.ui.MenuItem|void;
         
         /**
          * @return {number} The index of the latest misspelled word to be added.
@@ -99,7 +99,7 @@ declare module goog.ui {
          *        or class names for the rich text spell checker for the elements to
          *        exclude from checking.
          */
-        setExcludeMarker(marker: Array<string>): void;
+        setExcludeMarker(marker: Array<string>|string|RegExp|void): void;
         
         /**
          * Checks spelling for all text.
@@ -148,7 +148,7 @@ declare module goog.ui {
          *     display menu at relative to the viewport (in client coordinates), or a
          *     mouse event.
          */
-        showSuggestionsMenu(el: Element, opt_pos?: goog.events.BrowserEvent): void;
+        showSuggestionsMenu(el: Element, opt_pos?: goog.events.BrowserEvent|goog.math.Coordinate): void;
         
         /**
          * Initializes suggestions menu. Populates menu with separator and ignore option

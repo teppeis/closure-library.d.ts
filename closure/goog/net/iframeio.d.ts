@@ -42,7 +42,7 @@ declare module goog.net {
          * @param {Object|goog.structs.Map=} opt_data Map of key-value pairs that
          *     will be posted to the server via the iframe's form.
          */
-        static send(uri: goog.Uri, opt_callback?: Function, opt_method?: string, opt_noCache?: boolean, opt_data?: Object): void;
+        static send(uri: goog.Uri|string, opt_callback?: Function, opt_method?: string, opt_noCache?: boolean, opt_data?: Object|goog.structs.Map<any, any>): void;
         
         /**
          * Find an iframe by name (assumes the context is goog.global since that is
@@ -86,7 +86,7 @@ declare module goog.net {
          *     caching.
          * @param {Object|goog.structs.Map=} opt_data Map of key-value pairs.
          */
-        send(uri: goog.Uri, opt_method?: string, opt_noCache?: boolean, opt_data?: Object): void;
+        send(uri: goog.Uri|string, opt_method?: string, opt_noCache?: boolean, opt_data?: Object|goog.structs.Map<any, any>): void;
         
         /**
          * Sends the data stored in an existing form to the server. The HTTP method

@@ -8,7 +8,7 @@ declare module goog.net {
      * @final
      */
     class BulkLoader extends goog.events.EventTarget {
-        constructor(uris: Array<string>);
+        constructor(uris: Array<string|goog.Uri>);
         
         /**
          * Gets the response texts, in order.

@@ -167,7 +167,7 @@ declare module goog.structs {
          *     within {@code f}.
          * @template THIS
          */
-        traverse<THIS>(f: (arg0: goog.structs.TreeNode<KEY, VALUE>) => boolean, opt_this?: THIS): void;
+        traverse<THIS>(f: (arg0: goog.structs.TreeNode<KEY, VALUE>) => boolean|void, opt_this?: THIS): void;
         
         /**
          * Sets the parent node of this node. The callers must ensure that the parent

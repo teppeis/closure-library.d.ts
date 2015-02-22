@@ -17,7 +17,7 @@ declare module goog.ui {
      * @extends {goog.events.EventTarget}
      */
     class ActivityMonitor extends goog.events.EventTarget {
-        constructor(opt_domHelper?: goog.dom.DomHelper, opt_useBubble?: boolean);
+        constructor(opt_domHelper?: goog.dom.DomHelper|Array<goog.dom.DomHelper>, opt_useBubble?: boolean);
         
         /**
          * Minimum amount of time in ms between throttled ACTIVITY events

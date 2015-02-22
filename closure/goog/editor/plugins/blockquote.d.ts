@@ -84,6 +84,6 @@ declare module goog.editor.plugins {
          *     split, false or undefined otherwise.
          * @override
          */
-        execCommandInternal(command: string, ...var_args: any[]): boolean;
+        execCommandInternal(command: string, ...var_args: any[]): boolean|void;
     }
 }

@@ -15,7 +15,7 @@ declare module goog.ui {
      * @extends {goog.ui.Component}
      */
     class DatePicker extends goog.ui.Component {
-        constructor(opt_date?: goog.date.Date, opt_dateTimeSymbols?: Object, opt_domHelper?: goog.dom.DomHelper, opt_renderer?: goog.ui.DatePickerRenderer);
+        constructor(opt_date?: goog.date.Date|Date, opt_dateTimeSymbols?: Object, opt_domHelper?: goog.dom.DomHelper, opt_renderer?: goog.ui.DatePickerRenderer);
         
         /**
          * Constants for event names
@@ -268,7 +268,7 @@ declare module goog.ui {
          *
          * @param {goog.date.Date|Date} date Date to select or null to select nothing.
          */
-        setDate(date: goog.date.Date): void;
+        setDate(date: goog.date.Date|Date): void;
     }
 
     /**

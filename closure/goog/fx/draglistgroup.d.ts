@@ -227,6 +227,6 @@ declare module goog.fx {
      * @extends {goog.events.Event}
      */
     class DragListGroupEvent extends goog.events.Event {
-        constructor(type: string, dragListGroup: goog.fx.DragListGroup, event: goog.events.BrowserEvent, currDragItem: Element, draggerEl: Element, dragger: goog.fx.Dragger, opt_draggerElCenter?: goog.math.Coordinate, opt_hoverList?: Element, opt_hoverNextItem?: Element);
+        constructor(type: string, dragListGroup: goog.fx.DragListGroup, event: goog.events.BrowserEvent|goog.fx.DragEvent, currDragItem: Element, draggerEl: Element, dragger: goog.fx.Dragger, opt_draggerElCenter?: goog.math.Coordinate, opt_hoverList?: Element, opt_hoverNextItem?: Element);
     }
 }

@@ -11,7 +11,7 @@ declare module goog.positioning {
      * @extends {goog.positioning.ClientPosition}
      */
     class ViewportClientPosition extends goog.positioning.ClientPosition {
-        constructor(arg1: number, opt_arg2?: number);
+        constructor(arg1: number|goog.math.Coordinate, opt_arg2?: number);
         
         /**
          * Set the last-resort overflow strategy, if the popup fails to fit.

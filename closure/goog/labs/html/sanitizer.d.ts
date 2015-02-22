@@ -91,6 +91,6 @@ declare module goog.labs.html {
          *
          * @return {!goog.labs.html.Sanitizer} {@code this}.
          */
-        allowAttributes(elementNames: Array<string>, attrNames: Array<string>, opt_rewriteValue?: goog.labs.html.AttributeRewriter): goog.labs.html.Sanitizer;
+        allowAttributes(elementNames: Array<string>|string, attrNames: Array<string>|string, opt_rewriteValue?: goog.labs.html.AttributeRewriter): goog.labs.html.Sanitizer;
     }
 }

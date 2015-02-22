@@ -12,7 +12,7 @@ declare module goog.ui.tree {
      * @extends {goog.ui.Component}
      */
     class BaseNode extends goog.ui.Component {
-        constructor(html: string, opt_config?: Object, opt_domHelper?: goog.dom.DomHelper);
+        constructor(html: string|goog.html.SafeHtml, opt_config?: Object, opt_domHelper?: goog.dom.DomHelper);
         
         /**
          * Map of nodes in existence. Needed to route events to the appropriate nodes.
@@ -57,7 +57,7 @@ declare module goog.ui.tree {
          * @return {!goog.ui.tree.BaseNode} The child that was removed.
          * @override
          */
-        removeChild(childNode: goog.ui.Component, opt_unrender?: boolean): goog.ui.tree.BaseNode;
+        removeChild(childNode: goog.ui.Component|string, opt_unrender?: boolean): goog.ui.tree.BaseNode;
         
         /**
          * Returns the tree.

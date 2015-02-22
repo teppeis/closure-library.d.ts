@@ -21,6 +21,6 @@ declare module goog.editor.plugins {
          * @return {!Object|undefined} The result of the command.
          * @override
          */
-        execCommandInternal(command: string, opt_arg?: any): Object;
+        execCommandInternal(command: string, opt_arg?: any): Object|void;
     }
 }

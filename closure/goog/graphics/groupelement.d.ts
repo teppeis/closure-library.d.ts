@@ -26,6 +26,6 @@ declare module goog.graphics {
          * @param {number|string} width The width of the group element.
          * @param {number|string} height The height of the group element.
          */
-        setSize(width: number, height: number): void;
+        setSize(width: number|string, height: number|string): void;
     }
 }

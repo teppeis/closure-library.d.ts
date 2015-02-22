@@ -114,7 +114,7 @@ declare module goog.userAgent {
      * @type {number|undefined}
      * @const
      */
-    var DOCUMENT_MODE: number;
+    var DOCUMENT_MODE: number|void;
 
     /**
      * Returns the userAgent string for the current browser.
@@ -156,7 +156,7 @@ declare module goog.userAgent {
      * @return {boolean} Whether the user agent version is higher or the same as
      *     the given version.
      */
-    function isVersionOrHigher(version: string): boolean;
+    function isVersionOrHigher(version: string|number): boolean;
 
     /**
      * Deprecated alias to {@code goog.userAgent.isVersionOrHigher}.
@@ -165,7 +165,7 @@ declare module goog.userAgent {
      *     the given version.
      * @deprecated Use goog.userAgent.isVersionOrHigher().
      */
-    function isVersion(version: string): boolean;
+    function isVersion(version: string|number): boolean;
 
     /**
      * Whether the IE effective document mode is higher or the same as the given

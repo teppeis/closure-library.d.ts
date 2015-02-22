@@ -13,7 +13,7 @@ declare module goog.ui {
      * @extends {goog.ui.Popup}
      */
     class Tooltip extends goog.ui.Popup {
-        constructor(opt_el?: Element, opt_str?: string, opt_domHelper?: goog.dom.DomHelper);
+        constructor(opt_el?: Element|string, opt_str?: string, opt_domHelper?: goog.dom.DomHelper);
         
         /**
          * CSS class name for tooltip.
@@ -28,7 +28,7 @@ declare module goog.ui {
          * @type {number|undefined}
          * @protected
          */
-        showTimer: number;
+        showTimer: number|void;
         
         /**
          * Timer for when to hide.
@@ -36,7 +36,7 @@ declare module goog.ui {
          * @type {number|undefined}
          * @protected
          */
-        hideTimer: number;
+        hideTimer: number|void;
         
         /**
          * Element that triggered the tooltip.  Note that if a second element triggers
@@ -46,7 +46,7 @@ declare module goog.ui {
          * @type {Element|undefined}
          * @protected
          */
-        anchor: Element;
+        anchor: Element|void;
         
         /**
          * Returns the dom helper that is being used on this component.
@@ -67,7 +67,7 @@ declare module goog.ui {
          * @param {Element|string} el Element to display tooltip for, either element
          *                            reference or string id.
          */
-        attach(el: Element): void;
+        attach(el: Element|string): void;
         
         /**
          * Detach from element(s).
@@ -76,7 +76,7 @@ declare module goog.ui {
          *                                reference or string id. If no element is
          *                                specified all are detached.
          */
-        detach(opt_el?: Element): void;
+        detach(opt_el?: Element|string): void;
         
         /**
          * Sets delay in milliseconds before tooltip is displayed for an element.
@@ -364,7 +364,7 @@ declare module goog.ui.Tooltip {
      * @final
      */
     class CursorTooltipPosition extends goog.positioning.ViewportPosition {
-        constructor(arg1: number, opt_arg2?: number);
+        constructor(arg1: number|goog.math.Coordinate, opt_arg2?: number);
         
         /**
          * Repositions the popup based on cursor position.

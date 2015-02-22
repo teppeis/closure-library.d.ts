@@ -24,7 +24,7 @@ declare module goog.ui {
      * @extends {goog.ui.Dialog}
      */
     class Prompt extends goog.ui.Dialog {
-        constructor(promptTitle: string, promptHtml: string, callback: Function, opt_defaultValue?: string, opt_class?: string, opt_useIframeForIE?: boolean, opt_domHelper?: goog.dom.DomHelper);
+        constructor(promptTitle: string, promptHtml: string|goog.html.SafeHtml, callback: Function, opt_defaultValue?: string, opt_class?: string, opt_useIframeForIE?: boolean, opt_domHelper?: goog.dom.DomHelper);
         
         /**
          * Sets the validation function that takes a string and returns true if the

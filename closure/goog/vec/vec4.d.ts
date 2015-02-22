@@ -287,7 +287,7 @@ declare module goog.vec.Vec4 {
      * @return {!goog.vec.Vec4.AnyType} Return resultVec so that operations can be
      *     chained together.
      */
-    function max(vec0: goog.vec.Vec4.AnyType, limit: goog.vec.Vec4.AnyType, resultVec: goog.vec.Vec4.AnyType): goog.vec.Vec4.AnyType;
+    function max(vec0: goog.vec.Vec4.AnyType, limit: goog.vec.Vec4.AnyType|number, resultVec: goog.vec.Vec4.AnyType): goog.vec.Vec4.AnyType;
 
     /**
      * Compares the components of vec0 with the components of another vector or
@@ -300,7 +300,7 @@ declare module goog.vec.Vec4 {
      * @return {!goog.vec.Vec4.AnyType} Return resultVec so that operations can be
      *     chained together.
      */
-    function min(vec0: goog.vec.Vec4.AnyType, limit: goog.vec.Vec4.AnyType, resultVec: goog.vec.Vec4.AnyType): goog.vec.Vec4.AnyType;
+    function min(vec0: goog.vec.Vec4.AnyType, limit: goog.vec.Vec4.AnyType|number, resultVec: goog.vec.Vec4.AnyType): goog.vec.Vec4.AnyType;
 
     /**
      * Returns true if the components of v0 are equal to the components of v1.

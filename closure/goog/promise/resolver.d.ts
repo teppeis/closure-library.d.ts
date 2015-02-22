@@ -20,7 +20,7 @@ declare module goog.promise {
          * Resolves this resolver with the specified value.
          * @type {function((TYPE|goog.Promise<TYPE>|Thenable)=)}
          */
-        resolve: (arg0?: TYPE) => any;
+        resolve: (arg0?: TYPE|goog.Promise<TYPE, any>|Thenable<any>) => any;
         
         /**
          * Rejects this resolver with the specified reason.

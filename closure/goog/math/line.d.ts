@@ -57,7 +57,7 @@ declare module goog.math {
          * @return {!goog.math.Coordinate} The point on the line closest to the given
          *     point.
          */
-        getClosestPoint(x: number, opt_y?: number): goog.math.Coordinate;
+        getClosestPoint(x: number|goog.math.Coordinate, opt_y?: number): goog.math.Coordinate;
         
         /**
          * Computes the point on the line segment closest to a given point.
@@ -68,6 +68,6 @@ declare module goog.math {
          * @return {!goog.math.Coordinate} The point on the line segment closest to the
          *     given point.
          */
-        getClosestSegmentPoint(x: number, opt_y?: number): goog.math.Coordinate;
+        getClosestSegmentPoint(x: number|goog.math.Coordinate, opt_y?: number): goog.math.Coordinate;
     }
 }

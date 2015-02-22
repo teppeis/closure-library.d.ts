@@ -20,7 +20,7 @@ declare module goog.graphics {
      * @final
      */
     class VmlGraphics extends goog.graphics.AbstractGraphics {
-        constructor(width: string, height: string, opt_coordWidth?: number, opt_coordHeight?: number, opt_domHelper?: goog.dom.DomHelper);
+        constructor(width: string|number, height: string|number, opt_coordWidth?: number, opt_coordHeight?: number, opt_domHelper?: goog.dom.DomHelper);
         
         /**
          * The coordinate multiplier to allow sub-pixel rendering
@@ -35,7 +35,7 @@ declare module goog.graphics {
          * @param {number|string} size The size to use.
          * @return {string} The position adjusted for COORD_MULTIPLIER.
          */
-        static toCssSize(size: number): string;
+        static toCssSize(size: number|string): string;
         
         /**
          * Multiplies positioning coordinates by COORD_MULTIPLIER to allow sub-pixel
@@ -47,7 +47,7 @@ declare module goog.graphics {
          * @param {number|string} number A position in pixels.
          * @return {number} The position adjusted for COORD_MULTIPLIER.
          */
-        static toPosCoord(number: number): number;
+        static toPosCoord(number: number|string): number;
         
         /**
          * Add a "px" suffix to a number of pixels, and multiplies all coordinates by
@@ -59,7 +59,7 @@ declare module goog.graphics {
          * @param {number|string} number A position in pixels.
          * @return {string} The position with suffix 'px'.
          */
-        static toPosPx(number: number): string;
+        static toPosPx(number: number|string): string;
         
         /**
          * Multiplies the width or height coordinate by COORD_MULTIPLIER to allow
@@ -71,7 +71,7 @@ declare module goog.graphics {
          * @param {string|number} number A size in units.
          * @return {number} The size multiplied by the correct factor.
          */
-        static toSizeCoord(number: string): number;
+        static toSizeCoord(number: string|number): number;
         
         /**
          * Add a "px" suffix to a number of pixels, and multiplies all coordinates by
@@ -83,7 +83,7 @@ declare module goog.graphics {
          * @param {number|string} number A size in pixels.
          * @return {string} The size with suffix 'px'.
          */
-        static toSizePx(number: number): string;
+        static toSizePx(number: number|string): string;
         
         /**
          * Sets an attribute on the given VML element, in the way best suited to the

@@ -426,13 +426,13 @@ declare module goog.ui {
          * component's DOM.
          *
          * @see goog.ui.Component#removeChildAt
-         * @param {goog.ui.Component|string|null} child The ID of the child to remove,
+         * @param {string|goog.ui.Component|null} child The ID of the child to remove,
          *    or the child component itself.
          * @param {boolean=} opt_unrender If true, calls {@code exitDocument} on the
          *    removed child component, and detaches its DOM from the document.
          * @return {goog.ui.Component} The removed component, if any.
          */
-        removeChild(child: goog.ui.Component, opt_unrender?: boolean): goog.ui.Component;
+        removeChild(child: string|goog.ui.Component|void, opt_unrender?: boolean): goog.ui.Component;
         
         /**
          * Removes the child at the given index from this component, and returns it.

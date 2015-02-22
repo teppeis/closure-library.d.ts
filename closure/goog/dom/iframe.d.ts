@@ -57,7 +57,7 @@ declare module goog.dom.iframe {
      *     backwards-compatibility only.
      * @return {!HTMLIFrameElement} A completely blank iframe.
      */
-    function createBlank(domHelper: goog.dom.DomHelper, opt_styles?: goog.html.SafeStyle): HTMLIFrameElement;
+    function createBlank(domHelper: goog.dom.DomHelper, opt_styles?: goog.html.SafeStyle|string): HTMLIFrameElement;
 
     /**
      * Writes the contents of a blank iframe that has already been inserted
@@ -106,5 +106,5 @@ declare module goog.dom.iframe {
      * @param {boolean=} opt_quirks Whether to use quirks mode (false by default).
      * @return {!HTMLIFrameElement} An iframe that has the specified contents.
      */
-    function createWithContent(parentElement: Element, opt_headContents?: goog.html.SafeHtml, opt_bodyContents?: goog.html.SafeHtml, opt_styles?: goog.html.SafeStyle, opt_quirks?: boolean): HTMLIFrameElement;
+    function createWithContent(parentElement: Element, opt_headContents?: goog.html.SafeHtml|string, opt_bodyContents?: goog.html.SafeHtml|string, opt_styles?: goog.html.SafeStyle|string, opt_quirks?: boolean): HTMLIFrameElement;
 }

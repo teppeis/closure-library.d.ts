@@ -58,7 +58,7 @@ declare module goog.html {
          *     var_args Values to concatenate.
          * @return {!goog.html.SafeStyleSheet}
          */
-        static concat(...var_args: goog.html.SafeStyleSheet[]): goog.html.SafeStyleSheet;
+        static concat(...var_args: (goog.html.SafeStyleSheet|Array<goog.html.SafeStyleSheet>)[]): goog.html.SafeStyleSheet;
         
         /**
          * Creates a SafeStyleSheet object from a compile-time constant string.

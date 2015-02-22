@@ -16,7 +16,7 @@ declare module goog.net {
      * @final
      */
     class Jsonp {
-        constructor(uri: goog.Uri, opt_callbackParamName?: string);
+        constructor(uri: goog.Uri|string, opt_callbackParamName?: string);
         
         /**
          * The name of the property of goog.global under which the callback is

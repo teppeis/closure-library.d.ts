@@ -18,6 +18,6 @@ declare module goog.dom.pattern {
      * @final
      */
     class EndTag extends goog.dom.pattern.Tag {
-        constructor(tag: string, opt_attrs?: Object, opt_styles?: Object, opt_test?: Function);
+        constructor(tag: string|RegExp, opt_attrs?: Object, opt_styles?: Object, opt_test?: Function);
     }
 }

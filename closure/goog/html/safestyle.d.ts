@@ -166,7 +166,7 @@ declare module goog.html {
          *     SafeStyles to concatenate.
          * @return {!goog.html.SafeStyle}
          */
-        static concat(...var_args: goog.html.SafeStyle[]): goog.html.SafeStyle;
+        static concat(...var_args: (goog.html.SafeStyle|Array<goog.html.SafeStyle>)[]): goog.html.SafeStyle;
     }
 }
 

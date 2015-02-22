@@ -33,7 +33,7 @@ declare module goog.labs.mock {
          *
          * @return {!Object|!Function} The mock object.
          */
-        getMockedItem(): Object;
+        getMockedItem(): Object|Function;
         
         /**
          * Adds a binding for the method name and arguments to be stubbed.

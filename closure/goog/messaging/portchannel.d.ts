@@ -2,14 +2,14 @@ declare module goog.messaging {
 
     /**
      * A wrapper for several types of HTML5 message-passing entities
-     * ({@link MessagePort}s and {@link WebWorker}s). This class implements the
+     * ({@link MessagePort}s and {@link Worker}s). This class implements the
      * {@link goog.messaging.MessageChannel} interface.
      *
      * This class can be used in conjunction with other communication on the port.
      * It sets {@link goog.messaging.PortChannel.FLAG} to true on all messages it
      * sends.
      *
-     * @param {!MessagePort|!WebWorker} underlyingPort The message-passing
+     * @param {!MessagePort|!Worker} underlyingPort The message-passing
      *     entity to wrap. If this is a {@link MessagePort}, it should be started.
      *     The remote end should also be wrapped in a PortChannel. This will be
      *     disposed along with the PortChannel; this means terminating it if it's a
@@ -19,7 +19,7 @@ declare module goog.messaging {
      * @final
      */
     class PortChannel extends goog.messaging.AbstractChannel {
-        constructor(underlyingPort: MessagePort);
+        constructor(underlyingPort: MessagePort|Worker);
         
         /**
          * The flag added to messages that are sent by a PortChannel, and are meant to
@@ -93,6 +93,6 @@ declare module goog.messaging {
          * @param {string|!Object|!MessagePort} payload The value of the message. May
          *     contain MessagePorts or be a MessagePort.
          */
-        send(serviceName: string, payload: string): void;
+        send(serviceName: string, payload: string|Object|MessagePort): void;
     }
 }

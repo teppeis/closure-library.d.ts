@@ -314,7 +314,7 @@ declare module goog.ui.Dialog {
      * @extends {goog.events.Event}
      */
     class Event extends goog.events.Event {
-        constructor(key: string, caption: string);
+        constructor(key: string, caption: string|Element);
     }
 
     /**

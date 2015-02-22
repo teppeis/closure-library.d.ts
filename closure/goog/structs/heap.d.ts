@@ -9,7 +9,7 @@ declare module goog.structs {
      * @template K, V
      */
     class Heap<K, V> {
-        constructor(opt_heap?: goog.structs.Heap<any, any>);
+        constructor(opt_heap?: goog.structs.Heap<any, any>|Object);
         
         /**
          * Insert the given value into the heap with the given key.
@@ -22,7 +22,7 @@ declare module goog.structs {
          * Adds multiple key-value pairs from another goog.structs.Heap or Object
          * @param {goog.structs.Heap|Object} heap Object containing the data to add.
          */
-        insertAll(heap: goog.structs.Heap<any, any>): void;
+        insertAll(heap: goog.structs.Heap<any, any>|Object): void;
         
         /**
          * Retrieves and removes the root value of this heap.

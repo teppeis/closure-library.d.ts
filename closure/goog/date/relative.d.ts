@@ -74,7 +74,7 @@ declare module goog.date.relative {
      *     provided if available, so that it's not recalculated in this function.
      * @return {string} The date string in the above form.
      */
-    function getDateString(date: Date, opt_shortTimeMsg?: string, opt_fullDateMsg?: string): string;
+    function getDateString(date: Date|goog.date.DateTime, opt_shortTimeMsg?: string, opt_fullDateMsg?: string): string;
 
     /**
      * Formats a date, adding the relative date in parenthesis.   Functions the same
@@ -92,5 +92,5 @@ declare module goog.date.relative {
      *     provided if available, so that it's not recalculated in this function.
      * @return {string} The date string in the above form.
      */
-    function getPastDateString(date: Date, opt_shortTimeMsg?: string, opt_fullDateMsg?: string): string;
+    function getPastDateString(date: Date|goog.date.DateTime, opt_shortTimeMsg?: string, opt_fullDateMsg?: string): string;
 }

@@ -46,7 +46,7 @@ declare module goog.events {
          * @return {goog.events.ListenableKey} Unique key for the listener.
          * @template SCOPE,EVENTOBJ
          */
-        listen<SCOPE, EVENTOBJ>(type: string, listener: (arg0: EVENTOBJ) => boolean, opt_useCapture?: boolean, opt_listenerScope?: SCOPE): goog.events.ListenableKey;
+        listen<SCOPE, EVENTOBJ>(type: string|goog.events.EventId<EVENTOBJ>, listener: (arg0: EVENTOBJ) => boolean|void, opt_useCapture?: boolean, opt_listenerScope?: SCOPE): goog.events.ListenableKey;
         
         /**
          * Adds an event listener that is removed automatically after the
@@ -69,7 +69,7 @@ declare module goog.events {
          * @return {goog.events.ListenableKey} Unique key for the listener.
          * @template SCOPE,EVENTOBJ
          */
-        listenOnce<SCOPE, EVENTOBJ>(type: string, listener: (arg0: EVENTOBJ) => boolean, opt_useCapture?: boolean, opt_listenerScope?: SCOPE): goog.events.ListenableKey;
+        listenOnce<SCOPE, EVENTOBJ>(type: string|goog.events.EventId<EVENTOBJ>, listener: (arg0: EVENTOBJ) => boolean|void, opt_useCapture?: boolean, opt_listenerScope?: SCOPE): goog.events.ListenableKey;
         
         /**
          * Removes an event listener which was added with listen() or listenOnce().
@@ -84,7 +84,7 @@ declare module goog.events {
          * @return {boolean} Whether any listener was removed.
          * @template SCOPE,EVENTOBJ
          */
-        unlisten<SCOPE, EVENTOBJ>(type: string, listener: (arg0: EVENTOBJ) => boolean, opt_useCapture?: boolean, opt_listenerScope?: SCOPE): boolean;
+        unlisten<SCOPE, EVENTOBJ>(type: string|goog.events.EventId<EVENTOBJ>, listener: (arg0: EVENTOBJ) => boolean|void, opt_useCapture?: boolean, opt_listenerScope?: SCOPE): boolean;
         
         /**
          * Removes an event listener which was added with listen() by the key
@@ -151,7 +151,7 @@ declare module goog.events {
          *     false.
          * @template EVENTOBJ
          */
-        fireListeners<EVENTOBJ>(type: string, capture: boolean, eventObject: EVENTOBJ): boolean;
+        fireListeners<EVENTOBJ>(type: string|goog.events.EventId<EVENTOBJ>, capture: boolean, eventObject: EVENTOBJ): boolean;
         
         /**
          * Gets all listeners in this listenable for the given type and
@@ -163,7 +163,7 @@ declare module goog.events {
          *     listeners.
          * @template EVENTOBJ
          */
-        getListeners<EVENTOBJ>(type: string, capture: boolean): Array<goog.events.ListenableKey>;
+        getListeners<EVENTOBJ>(type: string|goog.events.EventId<any>, capture: boolean): Array<goog.events.ListenableKey>;
         
         /**
          * Gets the goog.events.ListenableKey for the event or null if no such
@@ -179,7 +179,7 @@ declare module goog.events {
          * @return {goog.events.ListenableKey} the found listener or null if not found.
          * @template SCOPE,EVENTOBJ
          */
-        getListener<SCOPE, EVENTOBJ>(type: string, listener: (arg0: EVENTOBJ) => boolean, capture: boolean, opt_listenerScope?: SCOPE): goog.events.ListenableKey;
+        getListener<SCOPE, EVENTOBJ>(type: string|goog.events.EventId<EVENTOBJ>, listener: (arg0: EVENTOBJ) => boolean|void, capture: boolean, opt_listenerScope?: SCOPE): goog.events.ListenableKey;
         
         /**
          * Whether there is any active listeners matching the specified
@@ -193,7 +193,7 @@ declare module goog.events {
          *     the requested type and/or capture phase.
          * @template EVENTOBJ
          */
-        hasListener<EVENTOBJ>(opt_type?: string, opt_capture?: boolean): boolean;
+        hasListener<EVENTOBJ>(opt_type?: string|goog.events.EventId<EVENTOBJ>, opt_capture?: boolean): boolean;
     }
 
     /**
@@ -206,7 +206,7 @@ declare module goog.events {
          * The source event target.
          * @type {!(Object|goog.events.Listenable|goog.events.EventTarget)}
          */
-        src: Object;
+        src: Object|goog.events.Listenable|goog.events.EventTarget;
         
         /**
          * The event type the listener is listening to.
@@ -218,7 +218,7 @@ declare module goog.events {
          * The listener function.
          * @type {function(?):?|{handleEvent:function(?):?}|null}
          */
-        listener: (arg0: any) => any;
+        listener: ((arg0: any) => any)|{handleEvent: (arg0: any) => any}|void;
         
         /**
          * Whether the listener works on capture phase.

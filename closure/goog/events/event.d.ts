@@ -22,7 +22,7 @@ declare module goog.events {
      * @constructor
      */
     class Event {
-        constructor(type: string, opt_target?: Object);
+        constructor(type: string|goog.events.EventId<any>, opt_target?: Object);
         
         /**
          * Stops event propagation.

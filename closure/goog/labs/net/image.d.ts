@@ -13,5 +13,5 @@ declare module goog.labs.net.image {
      * @return {!goog.Promise<!Image>} A Promise that will be resolved with the
      *     given image if the image successfully loads.
      */
-    function load(uri: string, opt_image?: Image): goog.Promise<Image, any>;
+    function load(uri: string, opt_image?: Image|(() => Image)): goog.Promise<Image, any>;
 }

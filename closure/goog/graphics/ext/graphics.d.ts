@@ -21,7 +21,7 @@ declare module goog.graphics.ext {
      * @final
      */
     class Graphics extends goog.graphics.ext.Group {
-        constructor(width: string, height: string, opt_coordWidth?: number, opt_coordHeight?: number, opt_domHelper?: goog.dom.DomHelper, opt_isSimple?: boolean);
+        constructor(width: string|number, height: string|number, opt_coordWidth?: number, opt_coordHeight?: number, opt_domHelper?: goog.dom.DomHelper, opt_isSimple?: boolean);
         
         /**
          * @return {goog.graphics.AbstractGraphics} The graphics implementation layer.

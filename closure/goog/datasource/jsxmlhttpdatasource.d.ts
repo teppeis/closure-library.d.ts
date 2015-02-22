@@ -16,7 +16,7 @@ declare module goog.ds {
      * @final
      */
     class JsXmlHttpDataSource extends goog.ds.FastDataNode {
-        constructor(uri: string, name: string, opt_startText?: string, opt_endText?: string, opt_usePost?: boolean);
+        constructor(uri: string|goog.Uri, name: string, opt_startText?: string, opt_endText?: string, opt_usePost?: boolean);
         
         /**
          * Gets the state of the backing data for this node

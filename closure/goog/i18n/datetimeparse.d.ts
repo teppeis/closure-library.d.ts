@@ -7,7 +7,7 @@ declare module goog.i18n {
      * @final
      */
     class DateTimeParse {
-        constructor(pattern: string);
+        constructor(pattern: string|number);
         
         /**
          * Number of years prior to now that the century used to

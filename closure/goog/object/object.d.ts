@@ -95,7 +95,7 @@ declare module goog.object {
      * @param {Object} obj The object to pick a key from.
      * @return {string|undefined} The key or undefined if the object is empty.
      */
-    function getAnyKey(obj: Object): string;
+    function getAnyKey(obj: Object): string|void;
 
     /**
      * Returns one value from the object map, if any exists.
@@ -106,7 +106,7 @@ declare module goog.object {
      * @return {V|undefined} The value or undefined if the object is empty.
      * @template K,V
      */
-    function getAnyValue<K, V>(obj: Object): V;
+    function getAnyValue<K, V>(obj: Object): V|void;
 
     /**
      * Whether the object/hash/map contains the given object as a value.
@@ -148,7 +148,7 @@ declare module goog.object {
      * @return {*} The resulting value.  If, at any point, the value for a key
      *     is undefined, returns undefined.
      */
-    function getValueByKeys(obj: Object, ...var_args: string[]): any;
+    function getValueByKeys(obj: Object, ...var_args: (string|number|Array<number|string>)[]): any;
 
     /**
      * Whether the object/map/hash contains the given key.
@@ -181,7 +181,7 @@ declare module goog.object {
      *     returns true or undefined if no such element is found.
      * @template T,K,V
      */
-    function findKey<T, K, V>(obj: Object, f: (arg0: V, arg1: string, arg2: Object) => boolean, opt_this?: T): string;
+    function findKey<T, K, V>(obj: Object, f: (arg0: V, arg1: string, arg2: Object) => boolean, opt_this?: T): string|void;
 
     /**
      * Searches an object for an element that satisfies the given condition and
@@ -242,7 +242,7 @@ declare module goog.object {
      * @return {V|R|undefined} The value for the given key.
      * @template K,V,R
      */
-    function get<K, V, R>(obj: Object, key: string, opt_val?: R): V;
+    function get<K, V, R>(obj: Object, key: string, opt_val?: R): V|R|void;
 
     /**
      * Adds a key-value pair to the object/map/hash.

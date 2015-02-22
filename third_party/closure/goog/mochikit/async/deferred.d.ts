@@ -155,7 +155,7 @@ declare module goog.async {
          * @return {!goog.async.Deferred} This Deferred.
          * @template T
          */
-        addCallbacks<T>(cb: (arg0: VALUE) => any, eb: (arg0: any) => any, opt_scope?: T): goog.async.Deferred<any>;
+        addCallbacks<T>(cb: ((arg0: VALUE) => any)|void, eb: ((arg0: any) => any)|void, opt_scope?: T): goog.async.Deferred<any>;
         
         /**
          * Links another Deferred to the end of this Deferred's execution sequence. The
@@ -179,7 +179,7 @@ declare module goog.async {
          *     to wait for.
          * @return {!goog.async.Deferred} This Deferred.
          */
-        awaitDeferred(otherDeferred: goog.async.Deferred<any>): goog.async.Deferred<any>;
+        awaitDeferred(otherDeferred: goog.async.Deferred<any>|goog.Thenable<any>): goog.async.Deferred<any>;
         
         /**
          * Creates a branch off this Deferred's execution sequence, and returns it as a

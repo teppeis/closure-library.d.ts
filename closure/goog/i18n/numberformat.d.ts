@@ -12,7 +12,7 @@ declare module goog.i18n {
      * @constructor
      */
     class NumberFormat {
-        constructor(pattern: number, opt_currency?: string, opt_currencyStyle?: number);
+        constructor(pattern: number|string, opt_currency?: string, opt_currencyStyle?: number);
         
         /**
          * Set if the usage of Ascii digits in formatting should be enforced.

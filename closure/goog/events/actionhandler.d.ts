@@ -8,7 +8,7 @@ declare module goog.events {
      * @final
      */
     class ActionHandler extends goog.events.EventTarget {
-        constructor(element: Element);
+        constructor(element: Element|Document);
     }
 
     /**

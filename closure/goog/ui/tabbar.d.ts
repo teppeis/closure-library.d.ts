@@ -32,13 +32,13 @@ declare module goog.ui {
          * Removes the tab from the tab bar.  Overrides the superclass implementation
          * by deselecting the tab being removed.  Since {@link #removeChildAt} uses
          * {@link #removeChild} internally, we only need to override this method.
-         * @param {goog.ui.Component|string} tab Tab to remove.
+         * @param {string|goog.ui.Component} tab Tab to remove.
          * @param {boolean=} opt_unrender Whether to call {@code exitDocument} on the
          *     removed tab, and detach its DOM from the document (defaults to false).
          * @return {goog.ui.Control} The removed tab, if any.
          * @override
          */
-        removeChild(tab: goog.ui.Component, opt_unrender?: boolean): goog.ui.Control;
+        removeChild(tab: string|goog.ui.Component, opt_unrender?: boolean): goog.ui.Control;
         
         /**
          * @return {goog.ui.TabBar.Location} Tab bar location relative to tab contents.

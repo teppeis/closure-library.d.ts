@@ -38,7 +38,7 @@ declare module goog.dom.pattern {
      * @return {boolean} Whether the strings are equal, or if the string matches
      *     the regular expression.
      */
-    function matchStringOrRegex(obj: string, str: string): boolean;
+    function matchStringOrRegex(obj: string|RegExp, str: string): boolean;
 
     /**
      * Utility function to match a DOM attribute against either a string or a
@@ -52,5 +52,5 @@ declare module goog.dom.pattern {
      *     the regular expression.
      * @this {Element} Called using goog.object every on an Element.
      */
-    function matchStringOrRegexMap(elem: string, index: string, orig: Object): boolean;
+    function matchStringOrRegexMap(elem: string|RegExp, index: string, orig: Object): boolean;
 }

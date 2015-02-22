@@ -28,9 +28,9 @@ declare module goog.net.jsloader {
      * }}
      */
     interface Options {
-        timeout: number;
-        document: HTMLDocument;
-        cleanupWhenDone: boolean;
+        timeout: number|void;
+        document: HTMLDocument|void;
+        cleanupWhenDone: boolean|void;
     }
 
     /**

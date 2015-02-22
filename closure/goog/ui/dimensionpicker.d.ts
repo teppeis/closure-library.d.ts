@@ -88,6 +88,6 @@ declare module goog.ui {
          * @param {number=} opt_rows The number of rows to highlight.  Can be
          *     omitted when columns is a good.math.Size object.
          */
-        setValue(columns: number, opt_rows?: number): void;
+        setValue(columns: number|goog.math.Size, opt_rows?: number): void;
     }
 }

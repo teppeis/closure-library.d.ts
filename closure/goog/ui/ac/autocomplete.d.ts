@@ -261,7 +261,7 @@ declare module goog.ui.ac {
          *     keeps the currently hilited (by index) element hilited. If false not.
          *     Otherwise a RenderOptions object.
          */
-        renderRows(rows: Array<any>, opt_options?: boolean): void;
+        renderRows(rows: Array<any>, opt_options?: boolean|goog.ui.ac.RenderOptions): void;
         
         /**
          * Gets the index corresponding to a particular id.
@@ -329,7 +329,7 @@ declare module goog.ui.ac.AutoComplete {
      * }}
      */
     interface Matcher {
-        requestMatchingRows: Function;
-        isRowDisabled: Function;
+        requestMatchingRows: Function|void;
+        isRowDisabled: Function|void;
     }
 }

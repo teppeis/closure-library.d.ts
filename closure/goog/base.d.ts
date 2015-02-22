@@ -43,7 +43,7 @@ declare module goog {
      * @param {string} name The distinguished name to provide.
      * @param {string|number|boolean} defaultValue
      */
-    function define(name: string, defaultValue: string): void;
+    function define(name: string, defaultValue: string|number|boolean): void;
 
     /**
      * Defines a namespace in Closure.

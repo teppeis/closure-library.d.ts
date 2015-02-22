@@ -70,6 +70,6 @@ declare module goog.ui {
          * @param {Element} element The tab's root element.
          * @param {string|null|undefined} tooltip New tooltip text (if any).
          */
-        setTooltip(element: Element, tooltip: string): void;
+        setTooltip(element: Element, tooltip: string|void|void): void;
     }
 }

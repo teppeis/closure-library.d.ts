@@ -62,7 +62,7 @@ declare module goog.editor.range {
          *     was provided.
          * @override
          */
-        removeCarets(opt_range?: goog.dom.AbstractRange): goog.dom.AbstractRange;
+        removeCarets(opt_range?: goog.dom.AbstractRange): goog.dom.AbstractRange|void;
     }
 
     /**

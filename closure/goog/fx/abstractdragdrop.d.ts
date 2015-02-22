@@ -70,7 +70,7 @@ declare module goog.fx {
          *     id, to be used as drag source/drop target.
          * @throws Error Thrown if called on instance of abstract class
          */
-        addItem(element: Element): void;
+        addItem(element: Element|string): void;
         
         /**
          * Associate drop target with drag element.
@@ -321,13 +321,13 @@ declare module goog.fx {
      * @constructor
      */
     class DragDropItem extends goog.events.EventTarget {
-        constructor(element: Element, opt_data?: Object);
+        constructor(element: Element|string, opt_data?: Object);
         
         /**
          * Get the data associated with the source/target.
          * @return {Object|null|undefined} Data associated with the source/target.
          */
-        getData(): Object;
+        getData(): Object|void|void;
         
         /**
          * Gets the element that is actually draggable given that the given target was

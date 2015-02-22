@@ -88,7 +88,7 @@ declare module goog.uri.utils {
      * @param {?string=} opt_fragment The URI-encoded fragment identifier.
      * @return {string} The fully combined URI.
      */
-    function buildFromEncodedParts(opt_scheme?: string, opt_userInfo?: string, opt_domain?: string, opt_port?: string, opt_path?: string, opt_queryData?: string, opt_fragment?: string): string;
+    function buildFromEncodedParts(opt_scheme?: string, opt_userInfo?: string, opt_domain?: string, opt_port?: string|number|void, opt_path?: string, opt_queryData?: string, opt_fragment?: string): string;
 
     /**
      * Splits a URI into its component parts.
@@ -105,7 +105,7 @@ declare module goog.uri.utils {
      *     on the browser's regular expression implementation.  Never null, since
      *     arbitrary strings may still look like path names.
      */
-    function split(uri: string): Array<string>;
+    function split(uri: string): Array<string|void>;
 
     /**
      * @param {string} uri The URI to examine.
@@ -296,7 +296,7 @@ declare module goog.uri.utils {
      *     An array or argument list conforming to goog.uri.utils.QueryArray.
      * @return {string} The URI with all query parameters added.
      */
-    function appendParams(uri: string, ...var_args: goog.uri.utils.QueryArray[]): string;
+    function appendParams(uri: string, ...var_args: (goog.uri.utils.QueryArray|string|goog.uri.utils.QueryValue)[]): string;
 
     /**
      * Appends query parameters from a map.

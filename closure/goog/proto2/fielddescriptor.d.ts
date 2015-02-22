@@ -13,7 +13,7 @@ declare module goog.proto2 {
      * @final
      */
     class FieldDescriptor {
-        constructor(messageType: () => any, tag: number, metadata: Object);
+        constructor(messageType: () => any, tag: number|string, metadata: Object);
         
         /**
          * Returns the tag of the field that this descriptor represents.

@@ -192,7 +192,7 @@ declare module goog.ui.editor.DefaultToolbar {
      * @return {!goog.ui.Toolbar} Editor toolbar, rendered into the given parent
      *     element.
      */
-    function makeToolbar(items: Array<string>, elem: Element, opt_isRightToLeft?: boolean): goog.ui.Toolbar;
+    function makeToolbar(items: Array<string|goog.ui.Control>, elem: Element, opt_isRightToLeft?: boolean): goog.ui.Toolbar;
 
     /**
      * Creates an instance of a subclass of {@link goog.ui.Button} for the given

@@ -160,20 +160,20 @@ declare module goog.net.FileDownloader {
          * The status of the XHR. Only set if the error was caused by an XHR failure.
          * @type {number|undefined}
          */
-        xhrStatus: number;
+        xhrStatus: number|void;
         
         /**
          * The error code of the XHR. Only set if the error was caused by an XHR
          * failure.
          * @type {goog.net.ErrorCode|undefined}
          */
-        xhrErrorCode: goog.net.ErrorCode;
+        xhrErrorCode: goog.net.ErrorCode|void;
         
         /**
          * The file API error. Only set if the error was caused by the file API.
          * @type {goog.fs.Error|undefined}
          */
-        fileError: goog.fs.Error;
+        fileError: goog.fs.Error|void;
     }
 
     /**

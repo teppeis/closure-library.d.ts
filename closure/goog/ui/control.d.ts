@@ -110,7 +110,7 @@ declare module goog.ui {
          * @return {goog.ui.ControlRenderer|undefined} Renderer used by the component
          *     (undefined if none).
          */
-        getRenderer(): goog.ui.ControlRenderer;
+        getRenderer(): goog.ui.ControlRenderer|void;
         
         /**
          * Registers the given renderer with the component.  Changing renderers after

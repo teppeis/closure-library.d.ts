@@ -88,7 +88,7 @@ declare module goog.structs {
          * @return {V|DEFAULT} The value for the given key.
          * @template DEFAULT
          */
-        get<DEFAULT>(key: any, opt_val?: DEFAULT): V;
+        get<DEFAULT>(key: any, opt_val?: DEFAULT): V|DEFAULT;
         
         /**
          * Adds a key-value pair to the map.

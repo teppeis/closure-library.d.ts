@@ -94,6 +94,6 @@ declare module goog.tweak {
          * @param {string|number|boolean} value The replacement value to be used as the
          *     default value for the setting.
          */
-        overrideDefaultValue(id: string, value: string): void;
+        overrideDefaultValue(id: string, value: string|number|boolean): void;
     }
 }

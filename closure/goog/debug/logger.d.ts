@@ -139,7 +139,7 @@ declare module goog.debug {
          * @param {Error|Object=} opt_exception An exception associated with the
          *     message.
          */
-        log(level: goog.debug.Logger.Level, msg: goog.debug.Loggable, opt_exception?: Error): void;
+        log(level: goog.debug.Logger.Level, msg: goog.debug.Loggable, opt_exception?: Error|Object): void;
         
         /**
          * Creates a new log record and adds the exception (if present) to it.
@@ -150,7 +150,7 @@ declare module goog.debug {
          * @return {!goog.debug.LogRecord} A log record.
          * @suppress {es5Strict}
          */
-        getLogRecord(level: goog.debug.Logger.Level, msg: string, opt_exception?: Error): goog.debug.LogRecord;
+        getLogRecord(level: goog.debug.Logger.Level, msg: string, opt_exception?: Error|Object): goog.debug.LogRecord;
         
         /**
          * Logs a message at the Logger.Level.SHOUT level.

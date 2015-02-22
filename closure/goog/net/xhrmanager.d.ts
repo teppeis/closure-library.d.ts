@@ -61,7 +61,7 @@ declare module goog.net {
          *     this request; defaults to goog.net.XhrIo.ResponseType.DEFAULT.
          * @return {!goog.net.XhrManager.Request} The queued request object.
          */
-        send(id: string, url: string, opt_method?: string, opt_content?: ArrayBuffer, opt_headers?: Object, opt_priority?: number, opt_callback?: Function, opt_maxRetries?: number, opt_responseType?: goog.net.XhrIo.ResponseType): goog.net.XhrManager.Request;
+        send(id: string, url: string, opt_method?: string, opt_content?: ArrayBuffer|ArrayBufferView|Blob|Document|FormData|string, opt_headers?: Object|goog.structs.Map<any, any>, opt_priority?: number, opt_callback?: Function, opt_maxRetries?: number, opt_responseType?: goog.net.XhrIo.ResponseType): goog.net.XhrManager.Request;
         
         /**
          * Aborts the request associated with id.
@@ -114,7 +114,7 @@ declare module goog.net.XhrManager {
      * @final
      */
     class Request {
-        constructor(url: string, xhrEventCallback: Function, opt_method?: string, opt_content?: ArrayBuffer, opt_headers?: Object, opt_callback?: Function, opt_maxRetries?: number, opt_responseType?: goog.net.XhrIo.ResponseType);
+        constructor(url: string, xhrEventCallback: Function, opt_method?: string, opt_content?: ArrayBuffer|ArrayBufferView|Blob|Document|FormData|string, opt_headers?: Object|goog.structs.Map<any, any>, opt_callback?: Function, opt_maxRetries?: number, opt_responseType?: goog.net.XhrIo.ResponseType);
         
         /**
          * Gets the uri.
@@ -133,13 +133,13 @@ declare module goog.net.XhrManager {
          * @return {ArrayBuffer|ArrayBufferView|Blob|Document|FormData|string|undefined}
          *     The post data.
          */
-        getContent(): ArrayBuffer;
+        getContent(): ArrayBuffer|ArrayBufferView|Blob|Document|FormData|string|void;
         
         /**
          * Gets the map of headers.
          * @return {Object|goog.structs.Map} The map of headers.
          */
-        getHeaders(): Object;
+        getHeaders(): Object|goog.structs.Map<any, any>;
         
         /**
          * Gets the maximum number of times the request should be retried.
@@ -200,7 +200,7 @@ declare module goog.net.XhrManager {
          * Gets the callback for when the request is complete.
          * @return {Function|undefined} The callback for when the request is complete.
          */
-        getCompleteCallback(): Function;
+        getCompleteCallback(): Function|void;
         
         /**
          * Gets the response type that will be set on this request's XhrIo when it's

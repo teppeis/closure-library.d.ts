@@ -40,19 +40,19 @@ declare module goog.ui {
          * @param {Object|undefined} item Item to look for.
          * @return {number} Index of the given item (-1 if none).
          */
-        indexOfItem(item: Object): number;
+        indexOfItem(item: Object|void): number;
         
         /**
          * @return {Object|undefined} The first item, or undefined if there are no items
          *     in the model.
          */
-        getFirst(): Object;
+        getFirst(): Object|void;
         
         /**
          * @return {Object|undefined} The last item, or undefined if there are no items
          *     in the model.
          */
-        getLast(): Object;
+        getLast(): Object|void;
         
         /**
          * Returns the item at the given 0-based index.
@@ -66,7 +66,7 @@ declare module goog.ui {
          * {@link #addItem} for each new item.
          * @param {Array<Object>|undefined} items New items to add.
          */
-        addItems(items: Array<Object>): void;
+        addItems(items: Array<Object>|void): void;
         
         /**
          * Adds an item at the end of the list.

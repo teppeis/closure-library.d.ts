@@ -9,7 +9,7 @@ declare module goog.i18n {
      * @final
      */
     class DateTimeFormat {
-        constructor(pattern: string, opt_dateTimeSymbols?: Object);
+        constructor(pattern: string|number, opt_dateTimeSymbols?: Object);
         
         /**
          * Format the given date object according to preset pattern and current lcoale.
@@ -32,7 +32,7 @@ declare module goog.i18n {
          *     the global symbols.
          * @return {string} localized string, potentially using native digits.
          */
-        static localizeNumbers(input: number, opt_dateTimeSymbols?: Object): string;
+        static localizeNumbers(input: number|string, opt_dateTimeSymbols?: Object): string;
     }
 }
 

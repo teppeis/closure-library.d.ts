@@ -17,7 +17,7 @@ declare module goog.structs {
      * @template T
      */
     class Set<T> {
-        constructor(opt_values?: Array<T>);
+        constructor(opt_values?: Array<T>|Object);
         
         /**
          * @return {number} The number of elements in the set.
@@ -37,14 +37,14 @@ declare module goog.structs {
          * @param {Array<T>|goog.structs.Collection<T>|Object<?,T>} col A collection
          *     containing the elements to add.
          */
-        addAll(col: Array<T>): void;
+        addAll(col: Array<T>|goog.structs.Collection<T>|Object): void;
         
         /**
          * Removes all values in the given collection from this set.
          * @param {Array<T>|goog.structs.Collection<T>|Object<?,T>} col A collection
          *     containing the elements to remove.
          */
-        removeAll(col: Array<T>): void;
+        removeAll(col: Array<T>|goog.structs.Collection<T>|Object): void;
         
         /**
          * Removes the given element from this set.
@@ -80,7 +80,7 @@ declare module goog.structs {
          * @param {goog.structs.Collection<T>|Object} col A collection-like object.
          * @return {boolean} True if the set contains all elements.
          */
-        containsAll(col: goog.structs.Collection<T>): boolean;
+        containsAll(col: goog.structs.Collection<T>|Object): boolean;
         
         /**
          * Finds all values that are present in both this set and the given collection.
@@ -90,7 +90,7 @@ declare module goog.structs {
          *     collection.
          * @template S
          */
-        intersection<S>(col: Array<S>): goog.structs.Set<T>;
+        intersection<S>(col: Array<S>|Object): goog.structs.Set<T|S>;
         
         /**
          * Finds all values that are present in this set and not in the given
@@ -100,7 +100,7 @@ declare module goog.structs {
          *     (primitives or objects) present in this set but not in the given
          *     collection.
          */
-        difference(col: Array<T>): goog.structs.Set<any>;
+        difference(col: Array<T>|goog.structs.Collection<T>|Object): goog.structs.Set<any>;
         
         /**
          * Returns an array containing all the elements in this set.
@@ -124,7 +124,7 @@ declare module goog.structs {
          * @return {boolean} True if the given collection consists of the same elements
          *     as this set, regardless of order, without repetition.
          */
-        equals(col: goog.structs.Collection<T>): boolean;
+        equals(col: goog.structs.Collection<T>|Object): boolean;
         
         /**
          * Tests whether the given collection contains all the elements in this set.
@@ -134,7 +134,7 @@ declare module goog.structs {
          * @param {goog.structs.Collection<T>|Object} col A collection.
          * @return {boolean} True if this set is a subset of the given collection.
          */
-        isSubsetOf(col: goog.structs.Collection<T>): boolean;
+        isSubsetOf(col: goog.structs.Collection<T>|Object): boolean;
         
         /**
          * Returns an iterator that iterates over the elements in this set.

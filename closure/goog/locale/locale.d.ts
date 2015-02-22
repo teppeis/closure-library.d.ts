@@ -126,7 +126,7 @@ declare module goog.locale {
      *     the type of resource.
      * @param {string} localeName Locale ID.
      */
-    function registerResource(dataObj: Object, resourceName: goog.locale.Resource, localeName: string): void;
+    function registerResource(dataObj: Object, resourceName: goog.locale.Resource|string, localeName: string): void;
 
     /**
      * Returns true if the required resource has already been registered.
@@ -135,7 +135,7 @@ declare module goog.locale {
      * @param {string} localeName Locale ID.
      * @return {boolean} Whether the required resource has already been registered.
      */
-    function isResourceRegistered(resourceName: goog.locale.Resource, localeName: string): boolean;
+    function isResourceRegistered(resourceName: goog.locale.Resource|string, localeName: string): boolean;
 
     /**
      * Registers the timezone constants object for a given locale name.
@@ -190,7 +190,7 @@ declare module goog.locale {
      * @return {Object|undefined} The resource object that hold all the resource
      *     data, or undefined if not available.
      */
-    function getResource(resourceName: string, opt_locale?: string): Object;
+    function getResource(resourceName: string, opt_locale?: string): Object|void;
 
     /**
      * Retrieve specified resource for certain locale with fallback. For example,
@@ -203,5 +203,5 @@ declare module goog.locale {
      *     will be assumed.
      * @return {Object|undefined} The resource object for desired locale.
      */
-    function getResourceWithFallback(resourceName: string, opt_locale?: string): Object;
+    function getResourceWithFallback(resourceName: string, opt_locale?: string): Object|void;
 }

@@ -16,7 +16,7 @@ declare module goog.style {
      * @param {string|number|boolean=} opt_value If style was a string, then this
      *     should be the value.
      */
-    function setStyle(element: Element, style: string, opt_value?: string): void;
+    function setStyle(element: Element, style: string|Object, opt_value?: string|number|boolean): void;
 
     /**
      * Retrieves an explicitly-set style value of a node. This returns '' if there
@@ -107,7 +107,7 @@ declare module goog.style {
      * @param {Element} element The element to get the z-index of.
      * @return {string|number} The computed value of the z-index attribute.
      */
-    function getComputedZIndex(element: Element): string;
+    function getComputedZIndex(element: Element): string|number;
 
     /**
      * Retrieves the computed value of the text-align CSS attribute.
@@ -139,7 +139,7 @@ declare module goog.style {
      * @param {string|number|goog.math.Coordinate} arg1 Left position or coordinate.
      * @param {string|number=} opt_arg2 Top position.
      */
-    function setPosition(el: Element, arg1: string, opt_arg2?: string): void;
+    function setPosition(el: Element, arg1: string|number|goog.math.Coordinate, opt_arg2?: string|number): void;
 
     /**
      * Gets the offsetLeft and offsetTop properties of an element and returns them
@@ -282,7 +282,7 @@ declare module goog.style {
      *     is relative to.
      * @return {!goog.math.Coordinate} The relative position.
      */
-    function getRelativePosition(a: Element, b: Element): goog.math.Coordinate;
+    function getRelativePosition(a: Element|Event|goog.events.Event, b: Element|Event|goog.events.Event): goog.math.Coordinate;
 
     /**
      * Returns the position of the event or the element's border box relative to
@@ -290,7 +290,7 @@ declare module goog.style {
      * @param {Element|Event|goog.events.Event} el Element or a mouse / touch event.
      * @return {!goog.math.Coordinate} The position.
      */
-    function getClientPosition(el: Element): goog.math.Coordinate;
+    function getClientPosition(el: Element|Event|goog.events.Event): goog.math.Coordinate;
 
     /**
      * Moves an element to the given coordinates relative to the client viewport.
@@ -300,7 +300,7 @@ declare module goog.style {
      *     box or a coordinate object.
      * @param {number=} opt_y Top position of the element's margin box.
      */
-    function setPageOffset(el: Element, x: number, opt_y?: number): void;
+    function setPageOffset(el: Element, x: number|goog.math.Coordinate, opt_y?: number): void;
 
     /**
      * Sets the width/height values of an element.  If an argument is numeric,
@@ -315,7 +315,7 @@ declare module goog.style {
      * @param {string|number=} opt_h Height of the element. Required if w is not a
      *     size object.
      */
-    function setSize(element: Element, w: string, opt_h?: string): void;
+    function setSize(element: Element, w: string|number|goog.math.Size, opt_h?: string|number): void;
 
     /**
      * Set the height of an element.  Sets the element's style property.
@@ -323,7 +323,7 @@ declare module goog.style {
      * @param {string|number} height The height value to set.  If a number, 'px'
      *     will be appended, otherwise the value will be applied directly.
      */
-    function setHeight(element: Element, height: string): void;
+    function setHeight(element: Element, height: string|number): void;
 
     /**
      * Set the width of an element.  Sets the element's style property.
@@ -331,7 +331,7 @@ declare module goog.style {
      * @param {string|number} width The width value to set.  If a number, 'px'
      *     will be appended, otherwise the value will be applied directly.
      */
-    function setWidth(element: Element, width: string): void;
+    function setWidth(element: Element, width: string|number): void;
 
     /**
      * Gets the height and width of an element, even if its display is none.
@@ -394,7 +394,7 @@ declare module goog.style {
      * @return {number|string} Opacity between 0 and 1 or an empty string {@code ''}
      *     if the opacity is not set.
      */
-    function getOpacity(el: Element): number;
+    function getOpacity(el: Element): number|string;
 
     /**
      * Sets the opacity of a node (x-browser).
@@ -402,7 +402,7 @@ declare module goog.style {
      * @param {number|string} alpha Opacity between 0 and 1 or an empty string
      *     {@code ''} to clear the opacity.
      */
-    function setOpacity(el: Element, alpha: number): void;
+    function setOpacity(el: Element, alpha: number|string): void;
 
     /**
      * Sets the background of an element to a transparent image in a browser-
@@ -491,14 +491,14 @@ declare module goog.style {
      *     styles installed.
      * @return {Element|StyleSheet} The style element created.
      */
-    function installStyles(stylesString: string, opt_node?: Node): Element;
+    function installStyles(stylesString: string, opt_node?: Node): Element|StyleSheet;
 
     /**
      * Removes the styles added by {@link #installStyles}.
      * @param {Element|StyleSheet} styleSheet The value returned by
      *     {@link #installStyles}.
      */
-    function uninstallStyles(styleSheet: Element): void;
+    function uninstallStyles(styleSheet: Element|StyleSheet): void;
 
     /**
      * Sets the content of a style element.  The style element can be any valid
@@ -508,7 +508,7 @@ declare module goog.style {
      *     installStyles.
      * @param {string} stylesString The new content of the stylesheet.
      */
-    function setStyles(element: Element, stylesString: string): void;
+    function setStyles(element: Element|StyleSheet, stylesString: string): void;
 
     /**
      * Sets 'white-space: pre-wrap' for a node (x-browser).

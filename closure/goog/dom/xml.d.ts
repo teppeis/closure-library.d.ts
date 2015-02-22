@@ -32,7 +32,7 @@ declare module goog.dom.xml {
      * @param {Document|Element} xml The document or the root node of the subtree.
      * @return {string} The serialized XML.
      */
-    function serialize(xml: Document): string;
+    function serialize(xml: Document|Element): string;
 
     /**
      * Selects a single node using an Xpath expression and a root node
@@ -49,7 +49,7 @@ declare module goog.dom.xml {
      * @return {(NodeList|Array<Node>)} The selected nodes, or empty array if no
      *     matching nodes.
      */
-    function selectNodes(node: Node, path: string): NodeList;
+    function selectNodes(node: Node, path: string): NodeList|Array<Node>;
 
     /**
      * Sets multiple attributes on an element. Differs from goog.dom.setProperties

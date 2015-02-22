@@ -14,12 +14,12 @@ declare module goog.graphics {
      *     http://en.wikipedia.org/wiki/Canvas_element for details.
      */
     class Stroke {
-        constructor(width: number, color: string, opt_opacity?: number);
+        constructor(width: number|string, color: string, opt_opacity?: number);
         
         /**
          * @return {number|string} The width of this stroke.
          */
-        getWidth(): number;
+        getWidth(): number|string;
         
         /**
          * @return {string} The color of this stroke.

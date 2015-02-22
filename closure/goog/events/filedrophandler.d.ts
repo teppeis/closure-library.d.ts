@@ -13,7 +13,7 @@ declare module goog.events {
      * @final
      */
     class FileDropHandler extends goog.events.EventTarget {
-        constructor(element: Element, opt_preventDropOutside?: boolean);
+        constructor(element: Element|Document, opt_preventDropOutside?: boolean);
     }
 }
 

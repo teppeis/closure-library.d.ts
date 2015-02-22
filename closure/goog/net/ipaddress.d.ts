@@ -77,7 +77,7 @@ declare module goog.net {
      * @final
      */
     class Ipv4Address extends goog.net.IpAddress {
-        constructor(address: string);
+        constructor(address: string|goog.math.Integer);
         
         /**
          * The Maximum length for a netmask (aka, the number of bits for IPv4).
@@ -98,7 +98,7 @@ declare module goog.net {
      * @final
      */
     class Ipv6Address extends goog.net.IpAddress {
-        constructor(address: string);
+        constructor(address: string|goog.math.Integer);
         
         /**
          * The Maximum length for a netmask (aka, the number of bits for IPv6).

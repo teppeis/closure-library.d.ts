@@ -14,7 +14,7 @@ declare module goog.net {
      * @constructor
      */
     class ChannelRequest {
-        constructor(channel: goog.net.BrowserChannel, channelDebug: goog.net.ChannelDebug, opt_sessionId?: string, opt_requestId?: string, opt_retryId?: number);
+        constructor(channel: goog.net.BrowserChannel|goog.net.BrowserTestChannel, channelDebug: goog.net.ChannelDebug, opt_sessionId?: string, opt_requestId?: string|number, opt_retryId?: number);
         
         /**
          * Default timeout in MS for a request. The server must return data within this
@@ -144,7 +144,7 @@ declare module goog.net {
          *
          * @return {string|undefined} The session ID.
          */
-        getSessionId(): string;
+        getSessionId(): string|void;
         
         /**
          * Returns the request id for this request. Each request has a unique request
@@ -152,7 +152,7 @@ declare module goog.net {
          *
          * @return {string|number|undefined} The request ID.
          */
-        getRequestId(): string;
+        getRequestId(): string|number|void;
         
         /**
          * Returns the data for a post, if this request is a post.

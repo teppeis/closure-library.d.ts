@@ -15,6 +15,6 @@ declare module goog.labs.net.webChannel {
      * @final
      */
     class ChannelRequest {
-        constructor(channel: goog.labs.net.webChannel.Channel, channelDebug: goog.labs.net.webChannel.WebChannelDebug, opt_sessionId?: string, opt_requestId?: string, opt_retryId?: number);
+        constructor(channel: goog.labs.net.webChannel.Channel, channelDebug: goog.labs.net.webChannel.WebChannelDebug, opt_sessionId?: string, opt_requestId?: string|number, opt_retryId?: number);
     }
 }

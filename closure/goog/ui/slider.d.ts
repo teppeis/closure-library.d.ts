@@ -9,7 +9,7 @@ declare module goog.ui {
      * @extends {goog.ui.SliderBase}
      */
     class Slider extends goog.ui.SliderBase {
-        constructor(opt_domHelper?: goog.dom.DomHelper, opt_labelFn?: (arg0: number) => string);
+        constructor(opt_domHelper?: goog.dom.DomHelper, opt_labelFn?: ((arg0: number) => string));
         
         /**
          * The prefix we use for the CSS class names for the slider and its elements.

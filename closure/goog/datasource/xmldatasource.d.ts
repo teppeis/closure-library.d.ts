@@ -89,7 +89,7 @@ declare module goog.ds {
      * @final
      */
     class XmlHttpDataSource extends goog.ds.XmlDataSource {
-        constructor(uri: string, name: string);
+        constructor(uri: string|goog.Uri, name: string);
         
         /**
          * Gets the state of the backing data for this node

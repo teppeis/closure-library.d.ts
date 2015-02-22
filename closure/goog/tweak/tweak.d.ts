@@ -85,7 +85,7 @@ declare module goog.tweak {
      * @param {string} id The unique string that identifies the entry.
      * @param {string|number|boolean} value The new default value for the tweak.
      */
-    function overrideDefaultValue(id: string, value: string): void;
+    function overrideDefaultValue(id: string, value: string|number|boolean): void;
 
     /**
      * Returns the value of the boolean setting with the given ID.

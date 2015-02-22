@@ -112,7 +112,7 @@ declare module goog.ui {
          *     columns.
          * @param {number=} opt_rows The number of rows (optional).
          */
-        setSize(size: goog.math.Size, opt_rows?: number): void;
+        setSize(size: goog.math.Size|number, opt_rows?: number): void;
         
         /**
          * Returns the 0-based index of the currently highlighted palette item, or -1
@@ -141,7 +141,7 @@ declare module goog.ui {
          * or invalid.  Any previously-highlighted item will be un-highlighted.
          * @param {Node|undefined} item Item to highlight.
          */
-        setHighlightedItem(item: Node): void;
+        setHighlightedItem(item: Node|void): void;
         
         /**
          * Returns the 0-based index of the currently selected palette item, or -1

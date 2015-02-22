@@ -11,7 +11,7 @@ declare module goog.debug {
      * @final
      */
     class DevCss {
-        constructor(opt_userAgent?: goog.debug.DevCss.UserAgent, opt_userAgentVersion?: number);
+        constructor(opt_userAgent?: goog.debug.DevCss.UserAgent, opt_userAgentVersion?: number|string);
         
         /**
          * Rewrites the CSSOM as needed to activate any useragent-specific selectors.

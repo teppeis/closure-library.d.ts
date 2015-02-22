@@ -31,7 +31,7 @@ declare module goog.ui {
          * @return {goog.a11y.aria.Role|undefined} ARIA role.
          * @override
          */
-        getAriaRole(): goog.a11y.aria.Role;
+        getAriaRole(): goog.a11y.aria.Role|void;
         
         /**
          * Updates the button's ARIA (accessibility) state if the button is being
@@ -52,7 +52,7 @@ declare module goog.ui {
          * @param {Element} element The button's root element.
          * @return {string|undefined} The button's value (undefined if none).
          */
-        getValue(element: Element): string;
+        getValue(element: Element): string|void;
         
         /**
          * Takes a button's root element and a value, and updates the element to reflect
@@ -67,7 +67,7 @@ declare module goog.ui {
          * @param {Element} element The button's root element.
          * @return {string|undefined} The tooltip text.
          */
-        getTooltip(element: Element): string;
+        getTooltip(element: Element): string|void;
         
         /**
          * Takes a button's root element and a tooltip string, and updates the element

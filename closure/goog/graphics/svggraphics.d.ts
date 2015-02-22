@@ -20,7 +20,7 @@ declare module goog.graphics {
      * @final
      */
     class SvgGraphics extends goog.graphics.AbstractGraphics {
-        constructor(width: string, height: string, opt_coordWidth?: number, opt_coordHeight?: number, opt_domHelper?: goog.dom.DomHelper);
+        constructor(width: string|number, height: string|number, opt_coordWidth?: number, opt_coordHeight?: number, opt_domHelper?: goog.dom.DomHelper);
         
         /**
          * Sets properties to an SVG element. Used internally and by different

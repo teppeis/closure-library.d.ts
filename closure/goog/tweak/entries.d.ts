@@ -248,13 +248,13 @@ declare module goog.tweak {
          * Sets the valid values for the setting.
          * @param {Array<string>|undefined} values Valid values.
          */
-        setValidValues(values: Array<string>): void;
+        setValidValues(values: Array<string>|void): void;
         
         /**
          * Returns the valid values for the setting.
          * @return {Array<string>|undefined} Valid values.
          */
-        getValidValues(): Array<string>;
+        getValidValues(): Array<string>|void;
     }
 
     /**
@@ -310,13 +310,13 @@ declare module goog.tweak {
          * Sets the valid values for the setting.
          * @param {Array<number>|undefined} values Valid values.
          */
-        setValidValues(values: Array<number>): void;
+        setValidValues(values: Array<number>|void): void;
         
         /**
          * Returns the valid values for the setting.
          * @return {Array<number>|undefined} Valid values.
          */
-        getValidValues(): Array<number>;
+        getValidValues(): Array<number>|void;
     }
 
     /**

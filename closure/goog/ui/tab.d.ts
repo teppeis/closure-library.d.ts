@@ -19,7 +19,7 @@ declare module goog.ui {
         /**
          * @return {string|undefined} Tab tooltip text (if any).
          */
-        getTooltip(): string;
+        getTooltip(): string|void;
         
         /**
          * Sets the tab tooltip text.  If the tab has already been rendered, updates

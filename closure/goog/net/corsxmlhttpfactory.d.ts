@@ -47,7 +47,7 @@ declare module goog.net {
          *     supported by this implementation.
          * @override
          */
-        send(opt_content?: ArrayBuffer): void;
+        send(opt_content?: ArrayBuffer|ArrayBufferView|Blob|Document|FormData|void|string): void;
         
         /**
          * Sets a request header to send to the remote server. Because this

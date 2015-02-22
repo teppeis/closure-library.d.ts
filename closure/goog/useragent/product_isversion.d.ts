@@ -15,5 +15,5 @@ declare module goog.userAgent.product {
      * @return {boolean} Whether the user agent product version is higher or the
      *     same as the given version.
      */
-    function isVersion(version: string): boolean;
+    function isVersion(version: string|number): boolean;
 }

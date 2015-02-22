@@ -21,7 +21,7 @@ declare module goog.fx {
          *     invalid
          * @override
          */
-        addItem(element: Element, opt_data?: Object): void;
+        addItem(element: Element|string, opt_data?: Object): void;
         
         /**
          * Add DragDropItem to drag object.
@@ -39,7 +39,7 @@ declare module goog.fx {
          * @param {Element|string} element Dom Node, or string representation of node
          *     id, that was previously added with addItem().
          */
-        removeItem(element: Element): void;
+        removeItem(element: Element|string): void;
         
         /**
          * Marks the supplied list of items as selected. A drag operation for any of the

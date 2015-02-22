@@ -22,6 +22,6 @@ declare module goog.crypt {
          * @param {Array<number>|Uint8Array|string} message  Data to Hmac.
          * @return {!Array<number>} the digest of the given message.
          */
-        getHmac(message: Array<number>): Array<number>;
+        getHmac(message: Array<number>|Uint8Array|string): Array<number>;
     }
 }

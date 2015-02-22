@@ -18,7 +18,7 @@ declare module goog.dom.pattern {
      * @final
      */
     class FullTag extends goog.dom.pattern.StartTag {
-        constructor(tag: string, opt_attrs?: Object, opt_styles?: Object, opt_test?: Function);
+        constructor(tag: string|RegExp, opt_attrs?: Object, opt_styles?: Object, opt_test?: Function);
         
         /**
          * Test whether the given token is a start tag token which matches the tag name,

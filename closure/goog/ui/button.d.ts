@@ -40,7 +40,7 @@ declare module goog.ui {
          * Returns the tooltip for the button.
          * @return {string|undefined} Tooltip text (undefined if none).
          */
-        getTooltip(): string;
+        getTooltip(): string|void;
         
         /**
          * Sets the tooltip for the button, and updates its DOM.

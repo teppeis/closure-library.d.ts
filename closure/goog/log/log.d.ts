@@ -71,7 +71,7 @@ declare module goog.log {
      * @param {Error|Object=} opt_exception An exception associated with the
      *     message.
      */
-    function log(logger: goog.log.Logger, level: goog.log.Level, msg: goog.debug.Loggable, opt_exception?: Error): void;
+    function log(logger: goog.log.Logger, level: goog.log.Level, msg: goog.debug.Loggable, opt_exception?: Error|Object): void;
 
     /**
      * Logs a message at the Level.SEVERE level.

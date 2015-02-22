@@ -64,7 +64,7 @@ declare module goog.ds {
          * @param {goog.ds.DataNode=} opt_parent Parent of data node.
          * @return {!goog.ds.AbstractFastDataNode} Data node representing object.
          */
-        static fromJs(object: Object, dataName: string, opt_parent?: goog.ds.DataNode): goog.ds.AbstractFastDataNode;
+        static fromJs(object: Object|number|boolean|string, dataName: string, opt_parent?: goog.ds.DataNode): goog.ds.AbstractFastDataNode;
         
         /**
          * Not supported for normal FastDataNodes.
@@ -167,14 +167,14 @@ declare module goog.ds {
      * @final
      */
     class PrimitiveFastDataNode extends goog.ds.AbstractFastDataNode {
-        constructor(value: number, dataName: string, opt_parent?: goog.ds.DataNode);
+        constructor(value: number|boolean|string, dataName: string, opt_parent?: goog.ds.DataNode);
         
         /**
          * Returns the value of this data node.
          * @return {(boolean|number|string)} Value of this data node.
          * @override
          */
-        get(): boolean;
+        get(): boolean|number|string;
         
         /**
          * Sets this data node to a new value.
@@ -306,7 +306,7 @@ declare module goog.ds {
          *     opt_key), or a named child node otherwise.
          * @override
          */
-        get(opt_key?: string): Array<any>;
+        get(opt_key?: string): Array<any>|goog.ds.DataNode;
         
         /**
          * Gets a child node by (numeric) index.

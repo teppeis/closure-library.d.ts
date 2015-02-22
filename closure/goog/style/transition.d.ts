@@ -25,7 +25,7 @@ declare module goog.style.transition {
      *     Array<goog.style.transition.Css3Property>} properties A single CSS3
      *     transition property or array of properties.
      */
-    function set(element: Element, properties: goog.style.transition.Css3Property): void;
+    function set(element: Element, properties: goog.style.transition.Css3Property|Array<goog.style.transition.Css3Property>): void;
 
     /**
      * Removes any programmatically-added CSS3 transition in the given element.

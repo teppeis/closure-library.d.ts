@@ -29,7 +29,7 @@ declare module goog.crypt {
          * @param {Array<number>|Uint8Array|string} bytes Data used for the update.
          * @param {number=} opt_length Number of bytes to use.
          */
-        update(bytes: Array<number>, opt_length?: number): void;
+        update(bytes: Array<number>|Uint8Array|string, opt_length?: number): void;
         
         /**
          * @return {!Array<number>} The finalized hash computed

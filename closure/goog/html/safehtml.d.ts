@@ -148,7 +148,7 @@ declare module goog.html {
          *     provided.
          * @throws {goog.asserts.AssertionError} If content for void tag is provided.
          */
-        static create(tagName: string, opt_attributes?: Object, opt_content?: goog.html.SafeHtml.TextOrHtml_): goog.html.SafeHtml;
+        static create(tagName: string, opt_attributes?: Object, opt_content?: goog.html.SafeHtml.TextOrHtml_|Array<goog.html.SafeHtml.TextOrHtml_>): goog.html.SafeHtml;
         
         /**
          * Creates a SafeHtml representing an iframe tag.
@@ -174,7 +174,7 @@ declare module goog.html {
          * @throws {Error} If invalid tag name, attribute name, or attribute value is
          *     provided. If opt_attributes contains the src or srcdoc attributes.
          */
-        static createIframe(opt_src?: goog.html.TrustedResourceUrl, opt_srcdoc?: goog.html.SafeHtml, opt_attributes?: Object, opt_content?: goog.html.SafeHtml.TextOrHtml_): goog.html.SafeHtml;
+        static createIframe(opt_src?: goog.html.TrustedResourceUrl, opt_srcdoc?: goog.html.SafeHtml, opt_attributes?: Object, opt_content?: goog.html.SafeHtml.TextOrHtml_|Array<goog.html.SafeHtml.TextOrHtml_>): goog.html.SafeHtml;
         
         /**
          * Creates a SafeHtml representing a style tag. The type attribute is set
@@ -190,7 +190,7 @@ declare module goog.html {
          * @throws {Error} If invalid attribute name or attribute value is provided. If
          *     opt_attributes contains the type attribute.
          */
-        static createStyle(styleSheet: goog.html.SafeStyleSheet, opt_attributes?: Object): goog.html.SafeHtml;
+        static createStyle(styleSheet: goog.html.SafeStyleSheet|Array<goog.html.SafeStyleSheet>, opt_attributes?: Object): goog.html.SafeHtml;
         
         /**
          * Creates a SafeHtml content with known directionality consisting of a tag with
@@ -202,7 +202,7 @@ declare module goog.html {
          *     !Array<!goog.html.SafeHtml.TextOrHtml_>=} opt_content
          * @return {!goog.html.SafeHtml} The SafeHtml content with the tag.
          */
-        static createWithDir(dir: goog.i18n.bidi.Dir, tagName: string, opt_attributes?: Object, opt_content?: goog.html.SafeHtml.TextOrHtml_): goog.html.SafeHtml;
+        static createWithDir(dir: goog.i18n.bidi.Dir, tagName: string, opt_attributes?: Object, opt_content?: goog.html.SafeHtml.TextOrHtml_|Array<goog.html.SafeHtml.TextOrHtml_>): goog.html.SafeHtml;
         
         /**
          * Creates a new SafeHtml object by concatenating values.
@@ -210,7 +210,7 @@ declare module goog.html {
          *     !Array<!goog.html.SafeHtml.TextOrHtml_>)} var_args Values to concatenate.
          * @return {!goog.html.SafeHtml}
          */
-        static concat(...var_args: goog.html.SafeHtml.TextOrHtml_[]): goog.html.SafeHtml;
+        static concat(...var_args: (goog.html.SafeHtml.TextOrHtml_|Array<goog.html.SafeHtml.TextOrHtml_>)[]): goog.html.SafeHtml;
         
         /**
          * Creates a new SafeHtml object with known directionality by concatenating the
@@ -221,7 +221,7 @@ declare module goog.html {
          *     arguments would be processed recursively.
          * @return {!goog.html.SafeHtml}
          */
-        static concatWithDir(dir: goog.i18n.bidi.Dir, ...var_args: goog.html.SafeHtml.TextOrHtml_[]): goog.html.SafeHtml;
+        static concatWithDir(dir: goog.i18n.bidi.Dir, ...var_args: (goog.html.SafeHtml.TextOrHtml_|Array<goog.html.SafeHtml.TextOrHtml_>)[]): goog.html.SafeHtml;
         
         /**
          * Package-internal utility method to create SafeHtml instances.
@@ -246,7 +246,7 @@ declare module goog.html {
          * @throws {goog.asserts.AssertionError} If content for void tag is provided.
          * @package
          */
-        static createSafeHtmlTagSecurityPrivateDoNotAccessOrElse(tagName: string, opt_attributes?: Object, opt_content?: goog.html.SafeHtml.TextOrHtml_): goog.html.SafeHtml;
+        static createSafeHtmlTagSecurityPrivateDoNotAccessOrElse(tagName: string, opt_attributes?: Object, opt_content?: goog.html.SafeHtml.TextOrHtml_|Array<goog.html.SafeHtml.TextOrHtml_>): goog.html.SafeHtml;
         
         /**
          * @param {!Object<string, string>} fixedAttributes

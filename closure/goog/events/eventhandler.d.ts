@@ -27,7 +27,7 @@ declare module goog.events {
          *     chaining of calls.
          * @template EVENTOBJ
          */
-        listen<EVENTOBJ>(src: goog.events.ListenableType, type: string, opt_fn?: (arg0: EVENTOBJ) => any, opt_capture?: boolean): goog.events.EventHandler<SCOPE>;
+        listen<EVENTOBJ>(src: goog.events.ListenableType, type: string|Array<string>|goog.events.EventId<EVENTOBJ>|Array<goog.events.EventId<EVENTOBJ>>, opt_fn?: ((arg0: EVENTOBJ) => any)|{handleEvent: (arg0: any) => any}|void, opt_capture?: boolean): goog.events.EventHandler<SCOPE>;
         
         /**
          * Listen to an event on a Listenable.  If the function is omitted then the
@@ -45,7 +45,7 @@ declare module goog.events {
          *     chaining of calls.
          * @template T,EVENTOBJ
          */
-        listenWithScope<T, EVENTOBJ>(src: goog.events.ListenableType, type: string, fn: (arg0: EVENTOBJ) => any, capture: boolean, scope: T): goog.events.EventHandler<SCOPE>;
+        listenWithScope<T, EVENTOBJ>(src: goog.events.ListenableType, type: string|Array<string>|goog.events.EventId<EVENTOBJ>|Array<goog.events.EventId<EVENTOBJ>>, fn: ((arg0: EVENTOBJ) => any)|{handleEvent: (arg0: any) => any}|void|void, capture: boolean|void, scope: T): goog.events.EventHandler<SCOPE>;
         
         /**
          * Listen to an event on a Listenable.  If the function is omitted, then the
@@ -64,7 +64,7 @@ declare module goog.events {
          *     chaining of calls.
          * @template EVENTOBJ
          */
-        listenOnce<EVENTOBJ>(src: goog.events.ListenableType, type: string, opt_fn?: (arg0: EVENTOBJ) => any, opt_capture?: boolean): goog.events.EventHandler<SCOPE>;
+        listenOnce<EVENTOBJ>(src: goog.events.ListenableType, type: string|Array<string>|goog.events.EventId<EVENTOBJ>|Array<goog.events.EventId<EVENTOBJ>>, opt_fn?: ((arg0: EVENTOBJ) => any)|{handleEvent: (arg0: any) => any}|void, opt_capture?: boolean): goog.events.EventHandler<SCOPE>;
         
         /**
          * Listen to an event on a Listenable.  If the function is omitted, then the
@@ -84,7 +84,7 @@ declare module goog.events {
          *     chaining of calls.
          * @template T,EVENTOBJ
          */
-        listenOnceWithScope<T, EVENTOBJ>(src: goog.events.ListenableType, type: string, fn: (arg0: EVENTOBJ) => any, capture: boolean, scope: T): goog.events.EventHandler<SCOPE>;
+        listenOnceWithScope<T, EVENTOBJ>(src: goog.events.ListenableType, type: string|Array<string>|goog.events.EventId<EVENTOBJ>|Array<goog.events.EventId<EVENTOBJ>>, fn: ((arg0: EVENTOBJ) => any)|{handleEvent: (arg0: any) => any}|void|void, capture: boolean|void, scope: T): goog.events.EventHandler<SCOPE>;
         
         /**
          * Adds an event listener with a specific event wrapper on a DOM Node or an
@@ -101,7 +101,7 @@ declare module goog.events {
          * @return {!goog.events.EventHandler<SCOPE>} This object, allowing for
          *     chaining of calls.
          */
-        listenWithWrapper(src: EventTarget, wrapper: goog.events.EventWrapper, listener: (arg0: any) => any, opt_capt?: boolean): goog.events.EventHandler<SCOPE>;
+        listenWithWrapper(src: EventTarget|goog.events.EventTarget, wrapper: goog.events.EventWrapper, listener: ((arg0: any) => any)|{handleEvent: (arg0: any) => any}|void, opt_capt?: boolean): goog.events.EventHandler<SCOPE>;
         
         /**
          * Adds an event listener with a specific event wrapper on a DOM Node or an
@@ -120,7 +120,7 @@ declare module goog.events {
          *     chaining of calls.
          * @template T
          */
-        listenWithWrapperAndScope<T>(src: EventTarget, wrapper: goog.events.EventWrapper, listener: (arg0: any) => any, capture: boolean, scope: T): goog.events.EventHandler<SCOPE>;
+        listenWithWrapperAndScope<T>(src: EventTarget|goog.events.EventTarget, wrapper: goog.events.EventWrapper, listener: ((arg0: any) => any)|{handleEvent: (arg0: any) => any}|void, capture: boolean|void, scope: T): goog.events.EventHandler<SCOPE>;
         
         /**
          * @return {number} Number of listeners registered by this handler.
@@ -142,7 +142,7 @@ declare module goog.events {
          *     calls.
          * @template EVENTOBJ
          */
-        unlisten<EVENTOBJ>(src: goog.events.ListenableType, type: string, opt_fn?: (arg0: EVENTOBJ) => any, opt_capture?: boolean, opt_scope?: Object): goog.events.EventHandler<any>;
+        unlisten<EVENTOBJ>(src: goog.events.ListenableType, type: string|Array<string>|goog.events.EventId<EVENTOBJ>|Array<goog.events.EventId<EVENTOBJ>>, opt_fn?: ((arg0: EVENTOBJ) => any)|{handleEvent: (arg0: any) => any}|void, opt_capture?: boolean, opt_scope?: Object): goog.events.EventHandler<any>;
         
         /**
          * Removes an event listener which was added with listenWithWrapper().
@@ -159,7 +159,7 @@ declare module goog.events {
          * @return {!goog.events.EventHandler} This object, allowing for chaining of
          *     calls.
          */
-        unlistenWithWrapper(src: EventTarget, wrapper: goog.events.EventWrapper, listener: (arg0: any) => any, opt_capt?: boolean, opt_scope?: Object): goog.events.EventHandler<any>;
+        unlistenWithWrapper(src: EventTarget|goog.events.EventTarget, wrapper: goog.events.EventWrapper, listener: ((arg0: any) => any)|{handleEvent: (arg0: any) => any}|void, opt_capt?: boolean, opt_scope?: Object): goog.events.EventHandler<any>;
         
         /**
          * Unlistens to all events.

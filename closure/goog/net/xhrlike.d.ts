@@ -14,7 +14,7 @@ declare module goog.net {
          * @type {function()|null|undefined}
          * @see http://www.w3.org/TR/XMLHttpRequest/#handler-xhr-onreadystatechange
          */
-        onreadystatechange: () => any;
+        onreadystatechange: (() => any)|void|void;
         
         /**
          * @type {string}
@@ -60,7 +60,7 @@ declare module goog.net {
          * @param {ArrayBuffer|ArrayBufferView|Blob|Document|FormData|string=} opt_data
          * @see http://www.w3.org/TR/XMLHttpRequest/#the-send()-method
          */
-        send(opt_data?: ArrayBuffer): void;
+        send(opt_data?: ArrayBuffer|ArrayBufferView|Blob|Document|FormData|string): void;
         
         /**
          * @see http://www.w3.org/TR/XMLHttpRequest/#the-abort()-method

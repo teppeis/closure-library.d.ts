@@ -31,7 +31,7 @@ declare module goog.module {
          * @param {Function} callback This function will be called with the
          *     resolved symbol as the argument once the module is loaded.
          */
-        static require(module: string, symbol: number, callback: Function): void;
+        static require(module: string, symbol: number|string, callback: Function): void;
         
         /**
          * Wrapper of goog.module.Loader.provide() for use in modules
@@ -45,7 +45,7 @@ declare module goog.module {
          * @param {Object=} opt_object The object bound to the symbol, or nothing when
          *     all symbols of the module are defined.
          */
-        static provide(module: string, opt_symbol?: number, opt_object?: Object): void;
+        static provide(module: string, opt_symbol?: number|string, opt_object?: Object): void;
         
         /**
          * Wrapper of init() so that we only need to export this single
@@ -71,7 +71,7 @@ declare module goog.module {
          * @return {!Function} A function that forwards all its arguments to
          *     the dynamically loaded function specified by module and symbol.
          */
-        static loaderCall(module: string, symbol: number): Function;
+        static loaderCall(module: string, symbol: number|string): Function;
         
         /**
          * Initializes the Loader to be fully functional. Also executes load
@@ -100,7 +100,7 @@ declare module goog.module {
          * @param {Function} callback This function will be called with the
          *     resolved symbol as the argument once the module is loaded.
          */
-        require(module: string, symbol: number, callback: Function): void;
+        require(module: string, symbol: number|string, callback: Function): void;
         
         /**
          * Registers a symbol in a loaded module. When called without symbol,
@@ -115,6 +115,6 @@ declare module goog.module {
          * @param {Object=} opt_object The object bound to the symbol, or nothing when
          *     all symbols of the module are defined.
          */
-        provide(module: string, opt_symbol?: number, opt_object?: Object): void;
+        provide(module: string, opt_symbol?: number|string, opt_object?: Object): void;
     }
 }

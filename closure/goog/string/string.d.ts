@@ -554,7 +554,7 @@ declare module goog.string$ {
      *                   0 if arguments are equal.
      *                  -1 if {@code version2} is higher.
      */
-    function compareVersions(version1: string, version2: string): number;
+    function compareVersions(version1: string|number, version2: string|number): number;
 
     /**
      * String hash function similar to java.lang.String.hashCode().
@@ -694,7 +694,7 @@ declare module goog.string$ {
      * @return {number} The number, parsed. If the string failed to parse, this
      *     will be NaN.
      */
-    function parseInt(value: string): number;
+    function parseInt(value: string|number|void|void): number;
 
     /**
      * Splits a string on a separator a limited number of times.

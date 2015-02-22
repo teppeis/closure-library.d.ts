@@ -42,7 +42,7 @@ declare module goog.ui {
          * @param {goog.ui.TabPane.TabPage|number} page Reference to tab page or zero
          *     based index.
          */
-        removePage(page: goog.ui.TabPane.TabPage): void;
+        removePage(page: goog.ui.TabPane.TabPage|number): void;
         
         /**
          * Gets the tab page by zero based index.
@@ -129,7 +129,7 @@ declare module goog.ui.TabPane {
      * @constructor
      */
     class TabPage {
-        constructor(opt_el?: Element, opt_title?: Element, opt_domHelper?: goog.dom.DomHelper);
+        constructor(opt_el?: Element, opt_title?: Element|string, opt_domHelper?: goog.dom.DomHelper);
         
         /**
          * @return {string} The title for tab page.
