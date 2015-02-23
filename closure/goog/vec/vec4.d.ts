@@ -1,28 +1,22 @@
 declare module goog.vec.Vec4 {
 
     /** @typedef {goog.vec.Float32} */
-    interface Float32 {
-    }
+    type Float32 = goog.vec.Float32;
 
     /** @typedef {goog.vec.Float64} */
-    interface Float64 {
-    }
+    type Float64 = goog.vec.Float64;
 
     /** @typedef {goog.vec.Number} */
-    interface Number {
-    }
+    type Number = goog.vec.Number;
 
     /** @typedef {goog.vec.AnyType} */
-    interface AnyType {
-    }
+    type AnyType = goog.vec.AnyType;
 
     /** @typedef {Float32Array} */
-    interface Type {
-    }
+    type Type = Float32Array;
 
     /** @typedef {goog.vec.ArrayType} */
-    interface Vec4Like {
-    }
+    type Vec4Like = goog.vec.ArrayType;
 
     /**
      * Creates a 4 element vector of Float32. The array is initialized to zero.

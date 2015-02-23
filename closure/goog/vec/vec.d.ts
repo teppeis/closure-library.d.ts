@@ -1,27 +1,22 @@
 declare module goog.vec {
 
     /** @typedef {!Float32Array} */
-    interface Float32 {
-    }
+    type Float32 = Float32Array;
 
     /** @typedef {!Float64Array} */
-    interface Float64 {
-    }
+    type Float64 = Float64Array;
 
     /** @typedef {!Array<number>} */
-    interface Number {
-    }
+    type Number = Array<number>;
 
     /** @typedef {!goog.vec.Float32|!goog.vec.Float64|!goog.vec.Number} */
-    interface AnyType {
-    }
+    type AnyType = goog.vec.Float32|goog.vec.Float64|goog.vec.Number;
 
     /**
      * @deprecated Use AnyType.
      * @typedef {!Float32Array|!Array<number>}
      */
-    interface ArrayType {
-    }
+    type ArrayType = Float32Array|Array<number>;
 
     /**
      * For graphics work, 6 decimal places of accuracy are typically all that is

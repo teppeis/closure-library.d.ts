@@ -13,8 +13,7 @@ declare module goog.date.relative {
     /**
      * @typedef {function(number, boolean, goog.date.relative.Unit): string}
      */
-    interface TimeDeltaFormatter {
-    }
+    type TimeDeltaFormatter = (arg0: number, arg1: boolean, arg2: goog.date.relative.Unit) => string;
 
     /**
      * Sets a different formatting function for time deltas ("3 days ago").

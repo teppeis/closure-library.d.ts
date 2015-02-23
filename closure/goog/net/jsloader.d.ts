@@ -27,11 +27,7 @@ declare module goog.net.jsloader {
      *   cleanupWhenDone: (boolean|undefined)
      * }}
      */
-    interface Options {
-        timeout: number|void;
-        document: HTMLDocument|void;
-        cleanupWhenDone: boolean|void;
-    }
+    type Options = {timeout: number|void; document: HTMLDocument|void; cleanupWhenDone: boolean|void};
 
     /**
      * A jsloader error.

@@ -286,8 +286,7 @@ declare module goog.ui.KeyboardShortcutHandler {
      * @typedef {Object<number, goog.ui.KeyboardShortcutHandler.SequenceNode_>}
      * @private
      */
-    interface SequenceTree_ {
-    }
+    type SequenceTree_ = Object;
 
     /**
      * A node in a keyboard shortcut sequence tree. A node is either:

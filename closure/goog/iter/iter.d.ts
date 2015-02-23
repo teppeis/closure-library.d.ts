@@ -3,8 +3,7 @@ declare module goog.iter {
     /**
      * @typedef {goog.iter.Iterator|{length:number}|{__iterator__}}
      */
-    interface Iterable {
-    }
+    type Iterable = goog.iter.Iterator<any>|{length: number}|{__iterator__: any};
 
     /**
      * Class/interface for iterators.  An iterator needs to implement a {@code next}

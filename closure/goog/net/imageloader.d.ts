@@ -86,8 +86,5 @@ declare module goog.net.ImageLoader {
      * }}
      * @private
      */
-    interface ImageRequest_ {
-        src: string;
-        corsRequestType: goog.net.ImageLoader.CorsRequestType;
-    }
+    type ImageRequest_ = {src: string; corsRequestType: goog.net.ImageLoader.CorsRequestType};
 }

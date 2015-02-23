@@ -3,8 +3,7 @@ declare module goog.array {
     /**
      * @typedef {Array|NodeList|Arguments|{length: number}}
      */
-    interface ArrayLike {
-    }
+    type ArrayLike = Array<any>|NodeList|Arguments|{length: number};
 
     /**
      * Returns the last element in an array without removing it.

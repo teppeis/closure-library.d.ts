@@ -1,20 +1,16 @@
 declare module goog.vec.Vec2 {
 
     /** @typedef {goog.vec.Float32} */
-    interface Float32 {
-    }
+    type Float32 = goog.vec.Float32;
 
     /** @typedef {goog.vec.Float64} */
-    interface Float64 {
-    }
+    type Float64 = goog.vec.Float64;
 
     /** @typedef {goog.vec.Number} */
-    interface Number {
-    }
+    type Number = goog.vec.Number;
 
     /** @typedef {goog.vec.AnyType} */
-    interface AnyType {
-    }
+    type AnyType = goog.vec.AnyType;
 
     /**
      * Creates a 2 element vector of Float32. The array is initialized to zero.

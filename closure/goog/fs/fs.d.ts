@@ -15,10 +15,7 @@ declare module goog.fs {
      * @typedef {{createObjectURL: (function(!Blob): string),
      *            revokeObjectURL: function(string): void}}
      */
-    interface UrlObject_ {
-        createObjectURL: ((arg0: Blob) => string);
-        revokeObjectURL: (arg0: string) => void;
-    }
+    type UrlObject_ = {createObjectURL: ((arg0: Blob) => string); revokeObjectURL: (arg0: string) => void};
 
     /**
      * Returns a temporary FileSystem object. A temporary filesystem may be deleted

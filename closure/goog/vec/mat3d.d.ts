@@ -1,8 +1,7 @@
 declare module goog.vec.mat3d {
 
     /** @typedef {goog.vec.Float64} */
-    interface Type {
-    }
+    type Type = goog.vec.Float64;
 
     /**
      * Creates a mat3d with all elements initialized to zero.

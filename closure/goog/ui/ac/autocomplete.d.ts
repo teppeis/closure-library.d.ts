@@ -328,8 +328,5 @@ declare module goog.ui.ac.AutoComplete {
      *   isRowDisabled:(!Function|undefined)
      * }}
      */
-    interface Matcher {
-        requestMatchingRows: Function|void;
-        isRowDisabled: Function|void;
-    }
+    type Matcher = {requestMatchingRows: Function|void; isRowDisabled: Function|void};
 }

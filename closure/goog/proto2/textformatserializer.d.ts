@@ -151,8 +151,5 @@ declare module goog.proto2.TextFormatSerializer.Tokenizer_ {
      * @typedef {{type: goog.proto2.TextFormatSerializer.Tokenizer_.TokenTypes,
      *            value: ?string}}
      */
-    interface Token {
-        type: goog.proto2.TextFormatSerializer.Tokenizer_.TokenTypes;
-        value: string;
-    }
+    type Token = {type: goog.proto2.TextFormatSerializer.Tokenizer_.TokenTypes; value: string};
 }

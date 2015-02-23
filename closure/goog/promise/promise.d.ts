@@ -226,11 +226,7 @@ declare module goog.Promise {
      * }}
      * @private
      */
-    interface CallbackEntry_ {
-        child: goog.Promise<any, any>;
-        onFulfilled: (arg0: any) => any;
-        onRejected: (arg0: any) => any;
-    }
+    type CallbackEntry_ = {child: goog.Promise<any, any>; onFulfilled: (arg0: any) => any; onRejected: (arg0: any) => any};
 
     /**
      * Error used as a rejection reason for canceled Promises.

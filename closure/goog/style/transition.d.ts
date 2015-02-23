@@ -15,8 +15,7 @@ declare module goog.style.transition {
      *   delay: number
      * } | string }
      */
-    interface Css3Property {
-    }
+    type Css3Property = {property: string; duration: number; timing: string; delay: number}|string;
 
     /**
      * Sets the element CSS3 transition to properties.

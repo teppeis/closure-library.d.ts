@@ -46,6 +46,5 @@ declare module goog.storage.mechanism.ErrorHandlingMechanism {
      *   string,
      *   *=)}
      */
-    interface ErrorHandler {
-    }
+    type ErrorHandler = (arg0: Error|string, arg1: goog.storage.mechanism.ErrorHandlingMechanism.Operation, arg2: string, arg3?: any) => any;
 }

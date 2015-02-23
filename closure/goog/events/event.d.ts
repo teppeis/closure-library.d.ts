@@ -8,8 +8,7 @@ declare module goog.events {
      * of the Event.
      * @typedef {string|Object|goog.events.Event|goog.events.EventId}
      */
-    interface EventLike {
-    }
+    type EventLike = string|Object|goog.events.Event|goog.events.EventId<any>;
 
     /**
      * A base class for event objects, so that they can support preventDefault and

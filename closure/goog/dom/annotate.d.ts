@@ -7,8 +7,7 @@ declare module goog.dom.annotate {
      * and returns the annotated term as an HTML.
      * @typedef {function(number, !goog.html.SafeHtml): !goog.html.SafeHtml}
      */
-    interface AnnotateFn {
-    }
+    type AnnotateFn = (arg0: number, arg1: goog.html.SafeHtml) => goog.html.SafeHtml;
 
     /**
      * Calls {@code annotateFn} for each occurrence of a search term in text nodes

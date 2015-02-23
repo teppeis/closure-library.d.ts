@@ -217,12 +217,5 @@ declare module goog.ui.editor {
      *       goog.ui.ButtonRenderer, goog.dom.DomHelper):goog.ui.Button,
      *   queryable:?boolean}}
      */
-    interface ButtonDescriptor {
-        command: string;
-        tooltip: string;
-        caption: goog.ui.ControlContent;
-        classes: string;
-        factory: (arg0: string, arg1: string, arg2: goog.ui.ControlContent, arg3: string, arg4: goog.ui.ButtonRenderer, arg5: goog.dom.DomHelper) => goog.ui.Button;
-        queryable: boolean;
-    }
+    type ButtonDescriptor = {command: string; tooltip: string; caption: goog.ui.ControlContent; classes: string; factory: (arg0: string, arg1: string, arg2: goog.ui.ControlContent, arg3: string, arg4: goog.ui.ButtonRenderer, arg5: goog.dom.DomHelper) => goog.ui.Button; queryable: boolean};
 }

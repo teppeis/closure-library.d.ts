@@ -13,8 +13,7 @@ declare module goog.tweak {
      *     token:(string|undefined)
      *     }|!Object}
      */
-    interface ConfigParams {
-    }
+    type ConfigParams = {label: string|void; validValues: Array<string>|Array<number>|void; paramName: string|void; restartRequired: boolean|void; callback: Function|void; token: string|void}|Object;
 
     /**
      * Returns/creates the registry singleton.

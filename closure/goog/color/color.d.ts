@@ -6,8 +6,7 @@ declare module goog.color {
      * of the color respectively.
      * @typedef {Array<number>}
      */
-    interface Rgb {
-    }
+    type Rgb = Array<number>;
 
     /**
      * HSV color representation. An array containing three elements [h, s, v]:
@@ -16,8 +15,7 @@ declare module goog.color {
      * v (value/brightness) must be an integer in [0, 255].
      * @typedef {Array<number>}
      */
-    interface Hsv {
-    }
+    type Hsv = Array<number>;
 
     /**
      * HSL color representation. An array containing three elements [h, s, l]:
@@ -26,8 +24,7 @@ declare module goog.color {
      * l (lightness) must be a number in [0, 1].
      * @typedef {Array<number>}
      */
-    interface Hsl {
-    }
+    type Hsl = Array<number>;
 
     /**
      * Parses a color out of a string.

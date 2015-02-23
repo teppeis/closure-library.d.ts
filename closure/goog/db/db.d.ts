@@ -16,8 +16,7 @@ declare module goog.db {
      *
      * @typedef {function(!goog.db.IndexedDb.VersionChangeEvent)}
      */
-    interface BlockedCallback {
-    }
+    type BlockedCallback = (arg0: goog.db.IndexedDb.VersionChangeEvent) => any;
 
     /**
      * A callback that's called when opening a database whose internal version is
@@ -38,8 +37,7 @@ declare module goog.db {
      *                    !goog.db.IndexedDb,
      *                    !goog.db.Transaction)}
      */
-    interface UpgradeNeededCallback {
-    }
+    type UpgradeNeededCallback = (arg0: goog.db.IndexedDb.VersionChangeEvent, arg1: goog.db.IndexedDb, arg2: goog.db.Transaction) => any;
 
     /**
      * Opens a database connection and wraps it.

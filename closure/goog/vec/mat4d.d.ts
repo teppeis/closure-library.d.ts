@@ -1,8 +1,7 @@
 declare module goog.vec.mat4d {
 
     /** @typedef {goog.vec.Float64} */
-    interface Type {
-    }
+    type Type = goog.vec.Float64;
 
     /**
      * Creates a mat4d with all elements initialized to zero.

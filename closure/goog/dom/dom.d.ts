@@ -4,8 +4,7 @@ declare module goog.dom {
      * Typedef for use with goog.dom.createDom and goog.dom.append.
      * @typedef {Object|string|Array|NodeList}
      */
-    interface Appendable {
-    }
+    type Appendable = Object|string|Array<any>|NodeList;
 
     /**
      * Create an instance of a DOM helper with a new document object.

@@ -9,8 +9,7 @@ declare module goog.debug {
      *
      * @typedef {string|function(): string}
      */
-    interface Loggable {
-    }
+    type Loggable = string|(() => string);
 
     /**
      * The Logger is an object used for logging debug messages. Loggers are

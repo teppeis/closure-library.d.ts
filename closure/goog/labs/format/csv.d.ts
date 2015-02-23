@@ -16,8 +16,7 @@ declare module goog.labs.format.csv {
      * A token -- a single-character string or a sentinel.
      * @typedef {string|!goog.labs.format.csv.Sentinels_}
      */
-    interface Token {
-    }
+    type Token = string|goog.labs.format.csv.Sentinels_;
 
     /**
      * Error thrown when parsing fails.

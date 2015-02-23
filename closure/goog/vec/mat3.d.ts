@@ -1,28 +1,22 @@
 declare module goog.vec.Mat3 {
 
     /** @typedef {goog.vec.Float32} */
-    interface Float32 {
-    }
+    type Float32 = goog.vec.Float32;
 
     /** @typedef {goog.vec.Float64} */
-    interface Float64 {
-    }
+    type Float64 = goog.vec.Float64;
 
     /** @typedef {goog.vec.Number} */
-    interface Number {
-    }
+    type Number = goog.vec.Number;
 
     /** @typedef {goog.vec.AnyType} */
-    interface AnyType {
-    }
+    type AnyType = goog.vec.AnyType;
 
     /** @typedef {Float32Array} */
-    interface Type {
-    }
+    type Type = Float32Array;
 
     /** @typedef {goog.vec.ArrayType} */
-    interface Mat3Like {
-    }
+    type Mat3Like = goog.vec.ArrayType;
 
     /**
      * Creates the array representation of a 3x3 matrix of Float32.

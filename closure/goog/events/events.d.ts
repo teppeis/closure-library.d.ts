@@ -12,14 +12,12 @@ declare module goog.events {
     /**
      * @typedef {number|goog.events.ListenableKey}
      */
-    interface Key {
-    }
+    type Key = number|goog.events.ListenableKey;
 
     /**
      * @typedef {EventTarget|goog.events.Listenable}
      */
-    interface ListenableType {
-    }
+    type ListenableType = EventTarget|goog.events.Listenable;
 
     /**
      * Adds an event listener for a specific event on a native event

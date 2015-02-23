@@ -103,22 +103,14 @@ declare module goog.net.WebChannel {
      *   testUrl: (string|undefined)
      * }}
      */
-    interface Options {
-        messageHeaders: Object|void;
-        messageUrlParams: Object|void;
-        clientProtocolHeaderRequired: boolean|void;
-        concurrentRequestLimit: number|void;
-        supportsCrossDomainXhr: boolean|void;
-        testUrl: string|void;
-    }
+    type Options = {messageHeaders: Object|void; messageUrlParams: Object|void; clientProtocolHeaderRequired: boolean|void; concurrentRequestLimit: number|void; supportsCrossDomainXhr: boolean|void; testUrl: string|void};
 
     /**
      * Types that are allowed as message data.
      *
      * @typedef {(ArrayBuffer|Blob|Object<string, string>|Array)}
      */
-    interface MessageData {
-    }
+    type MessageData = ArrayBuffer|Blob|Object|Array<any>;
 
     /**
      * The event interface for the MESSAGE event.

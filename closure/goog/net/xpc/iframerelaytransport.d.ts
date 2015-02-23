@@ -47,9 +47,5 @@ declare module goog.net.xpc.IframeRelayTransport {
     /**
      * @typedef {{fragments: !Array<string>, received: number, expected: number}}
      */
-    interface FragmentInfo {
-        fragments: Array<string>;
-        received: number;
-        expected: number;
-    }
+    type FragmentInfo = {fragments: Array<string>; received: number; expected: number};
 }

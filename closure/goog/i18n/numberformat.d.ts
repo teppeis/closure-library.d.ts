@@ -167,9 +167,5 @@ declare module goog.i18n.NumberFormat {
      *     divisorBase: number
      * }}
      */
-    interface CompactNumberUnit {
-        prefix: string;
-        suffix: string;
-        divisorBase: number;
-    }
+    type CompactNumberUnit = {prefix: string; suffix: string; divisorBase: number};
 }

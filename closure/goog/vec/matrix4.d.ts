@@ -3,8 +3,7 @@ declare module goog.vec.Matrix4 {
     /**
      * @typedef {goog.vec.ArrayType}
      */
-    interface Type {
-    }
+    type Type = goog.vec.ArrayType;
 
     /**
      * Creates the array representation of a 4x4 matrix. The use of the array

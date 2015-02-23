@@ -95,6 +95,5 @@ declare module goog.net.XhrLike {
      * Typedef that refers to either native or custom-implemented XHR objects.
      * @typedef {!goog.net.XhrLike|!XMLHttpRequest}
      */
-    interface OrNative {
-    }
+    type OrNative = goog.net.XhrLike|XMLHttpRequest;
 }

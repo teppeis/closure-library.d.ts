@@ -8,11 +8,7 @@ declare module goog.dom.animationFrame {
      * }}
      * @private
      */
-    interface Task_ {
-        id: number;
-        fn: Function;
-        context: Object|void;
-    }
+    type Task_ = {id: number; fn: Function; context: Object|void};
 
     /**
      * @typedef {{
@@ -24,13 +20,7 @@ declare module goog.dom.animationFrame {
      * }}
      * @private
      */
-    interface TaskSet_ {
-        measureTask: goog.dom.animationFrame.Task_;
-        mutateTask: goog.dom.animationFrame.Task_;
-        state: Object|void;
-        args: Array<any>|void;
-        isScheduled: boolean;
-    }
+    type TaskSet_ = {measureTask: goog.dom.animationFrame.Task_; mutateTask: goog.dom.animationFrame.Task_; state: Object|void; args: Array<any>|void; isScheduled: boolean};
 
     /**
      * @typedef {{
@@ -38,10 +28,7 @@ declare module goog.dom.animationFrame {
      *   mutate: (!Function|undefined)
      * }}
      */
-    interface Spec {
-        measure: Function|void;
-        mutate: Function|void;
-    }
+    type Spec = {measure: Function|void; mutate: Function|void};
 
     /**
      * A type to represent state. Users may add properties as desired.

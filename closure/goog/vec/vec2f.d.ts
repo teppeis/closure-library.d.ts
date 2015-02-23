@@ -1,8 +1,7 @@
 declare module goog.vec.vec2f {
 
     /** @typedef {goog.vec.Float32} */
-    interface Type {
-    }
+    type Type = goog.vec.Float32;
 
     /**
      * Creates a vec2f with all elements initialized to zero.

@@ -8,8 +8,7 @@ declare module goog.json {
      *
      * @typedef {function(this:Object, string, *): *}
      */
-    interface Replacer {
-    }
+    type Replacer = (arg0: string, arg1: any) => any;
 
     /**
      * JSON reviver, as defined in Section 15.12.2 of the ES5 spec.
@@ -17,8 +16,7 @@ declare module goog.json {
      *
      * @typedef {function(this:Object, string, *): *}
      */
-    interface Reviver {
-    }
+    type Reviver = (arg0: string, arg1: any) => any;
 
     /**
      * Class that is used to serialize JSON objects to a string.

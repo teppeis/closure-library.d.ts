@@ -44,8 +44,7 @@ declare module goog.uri.utils {
      *
      * @typedef {*}
      */
-    interface QueryValue {
-    }
+    type QueryValue = any;
 
     /**
      * An array representing a set of query parameters with alternating keys
@@ -68,8 +67,7 @@ declare module goog.uri.utils {
      *
      * @typedef {!Array<string|goog.uri.utils.QueryValue>}
      */
-    interface QueryArray {
-    }
+    type QueryArray = Array<string|goog.uri.utils.QueryValue>;
 
     /**
      * Builds a URI string from already-encoded parts.

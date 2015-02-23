@@ -697,6 +697,5 @@ declare module goog.defineClass {
      *     {constructor:!Function, statics:(Object|function(Function):void)}}
      * @suppress {missingProvide}
      */
-    interface ClassDescriptor {
-    }
+    type ClassDescriptor = Object|{constructor: Function}|{constructor: Function; statics: Object|((arg0: Function) => void)};
 }

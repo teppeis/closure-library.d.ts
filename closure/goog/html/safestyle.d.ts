@@ -176,6 +176,5 @@ declare module goog.html.SafeStyle {
      * Mapping of property names to their values.
      * @typedef {!Object<string, goog.string.Const|string>}
      */
-    interface PropertyMap {
-    }
+    type PropertyMap = Object;
 }

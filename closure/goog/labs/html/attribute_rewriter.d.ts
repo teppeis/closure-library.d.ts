@@ -9,8 +9,7 @@ declare module goog.labs.html {
      * @typedef {(string |
      *            goog.html.SafeHtml | goog.html.SafeStyle | goog.html.SafeUrl)}
      */
-    interface AttributeValue {
-    }
+    type AttributeValue = string|goog.html.SafeHtml|goog.html.SafeStyle|goog.html.SafeUrl;
 
     /**
      * A function that takes an attribute value, and returns a safe value.
@@ -43,8 +42,7 @@ declare module goog.labs.html {
      * @typedef {function(goog.labs.html.AttributeValue) :
      *           goog.labs.html.AttributeValue}
      */
-    interface AttributeRewriter {
-    }
+    type AttributeRewriter = (arg0: goog.labs.html.AttributeValue) => goog.labs.html.AttributeValue;
 
     /**
      * g4 presubmit complains about requires of this file because its clients

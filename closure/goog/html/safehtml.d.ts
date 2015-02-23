@@ -271,14 +271,12 @@ declare module goog.html.SafeHtml {
      * @typedef {string|number|boolean|!goog.string.TypedString|
      *           !goog.i18n.bidi.DirectionalString}
      */
-    interface TextOrHtml_ {
-    }
+    type TextOrHtml_ = string|number|boolean|goog.string$.TypedString|goog.i18n.bidi.DirectionalString;
 
     /**
      * @typedef {string|number|goog.string.TypedString|
      *     goog.html.SafeStyle.PropertyMap}
      * @private
      */
-    interface AttributeValue_ {
-    }
+    type AttributeValue_ = string|number|goog.string$.TypedString|goog.html.SafeStyle.PropertyMap;
 }

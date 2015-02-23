@@ -5,6 +5,5 @@ declare module goog.ui {
      * of {@link goog.ui.Control}s.
      * @typedef {string|Node|Array<Node>|NodeList}
      */
-    interface ControlContent {
-    }
+    type ControlContent = string|Node|Array<Node>|NodeList;
 }

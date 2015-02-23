@@ -149,6 +149,5 @@ declare module goog.soy.Renderer {
     /**
      * @typedef {Array<{template: string, data: Object, ijData: Object}>}
      */
-    interface SavedTemplateRender {
-    }
+    type SavedTemplateRender = Array<{template: string; data: Object; ijData: Object}>;
 }
