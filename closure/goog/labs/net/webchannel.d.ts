@@ -11,7 +11,7 @@ declare module goog.net {
      * @interface
      * @extends {EventTarget}
      */
-    interface WebChannel extends EventTarget {
+    interface WebChannel extends goog.globalEventTarget {
         
         /**
          * Open the WebChannel against the URI specified in the constructor.

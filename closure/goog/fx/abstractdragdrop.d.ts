@@ -84,7 +84,7 @@ declare module goog.fx {
          *
          * @param {EventTarget} scrollTarget The element that dispatches SCROLL events.
          */
-        setScrollTarget(scrollTarget: EventTarget): void;
+        setScrollTarget(scrollTarget: goog.globalEventTarget): void;
         
         /**
          * Initialize drag and drop functionality for sources/targets already added.

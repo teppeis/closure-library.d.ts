@@ -7,7 +7,7 @@ declare module goog.events {
      * @final
      */
     class ListenerMap {
-        constructor(src: EventTarget|goog.events.Listenable);
+        constructor(src: goog.globalEventTarget|goog.events.Listenable);
         
         /**
          * @return {number} The count of event types in this map that actually

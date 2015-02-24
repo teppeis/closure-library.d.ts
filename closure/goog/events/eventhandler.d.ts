@@ -101,7 +101,7 @@ declare module goog.events {
          * @return {!goog.events.EventHandler<SCOPE>} This object, allowing for
          *     chaining of calls.
          */
-        listenWithWrapper(src: EventTarget|goog.events.EventTarget, wrapper: goog.events.EventWrapper, listener: ((arg0: any) => any)|{handleEvent: (arg0: any) => any}|void, opt_capt?: boolean): goog.events.EventHandler<SCOPE>;
+        listenWithWrapper(src: goog.globalEventTarget|goog.events.EventTarget, wrapper: goog.events.EventWrapper, listener: ((arg0: any) => any)|{handleEvent: (arg0: any) => any}|void, opt_capt?: boolean): goog.events.EventHandler<SCOPE>;
         
         /**
          * Adds an event listener with a specific event wrapper on a DOM Node or an
@@ -120,7 +120,7 @@ declare module goog.events {
          *     chaining of calls.
          * @template T
          */
-        listenWithWrapperAndScope<T>(src: EventTarget|goog.events.EventTarget, wrapper: goog.events.EventWrapper, listener: ((arg0: any) => any)|{handleEvent: (arg0: any) => any}|void, capture: boolean|void, scope: T): goog.events.EventHandler<SCOPE>;
+        listenWithWrapperAndScope<T>(src: goog.globalEventTarget|goog.events.EventTarget, wrapper: goog.events.EventWrapper, listener: ((arg0: any) => any)|{handleEvent: (arg0: any) => any}|void, capture: boolean|void, scope: T): goog.events.EventHandler<SCOPE>;
         
         /**
          * @return {number} Number of listeners registered by this handler.
@@ -159,7 +159,7 @@ declare module goog.events {
          * @return {!goog.events.EventHandler} This object, allowing for chaining of
          *     calls.
          */
-        unlistenWithWrapper(src: EventTarget|goog.events.EventTarget, wrapper: goog.events.EventWrapper, listener: ((arg0: any) => any)|{handleEvent: (arg0: any) => any}|void, opt_capt?: boolean, opt_scope?: Object): goog.events.EventHandler<any>;
+        unlistenWithWrapper(src: goog.globalEventTarget|goog.events.EventTarget, wrapper: goog.events.EventWrapper, listener: ((arg0: any) => any)|{handleEvent: (arg0: any) => any}|void, opt_capt?: boolean, opt_scope?: Object): goog.events.EventHandler<any>;
         
         /**
          * Unlistens to all events.

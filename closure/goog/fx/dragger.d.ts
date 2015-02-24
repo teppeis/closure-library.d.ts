@@ -150,7 +150,7 @@ declare module goog.fx {
          * @param {EventTarget} scrollTarget The event target that dispatches SCROLL
          *     events.
          */
-        setScrollTarget(scrollTarget: EventTarget): void;
+        setScrollTarget(scrollTarget: goog.globalEventTarget): void;
         
         /**
          * Enables cancelling of built-in IE drag events.

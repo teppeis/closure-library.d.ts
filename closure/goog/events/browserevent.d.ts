@@ -11,7 +11,7 @@ declare module goog.events {
      * @extends {goog.events.Event}
      */
     class BrowserEvent extends goog.events.Event {
-        constructor(opt_e?: Event, opt_currentTarget?: EventTarget);
+        constructor(opt_e?: Event, opt_currentTarget?: goog.globalEventTarget);
         
         /**
          * Static data for mapping mouse buttons.
@@ -25,7 +25,7 @@ declare module goog.events {
          * @param {Event} e Browser event object.
          * @param {EventTarget=} opt_currentTarget Current target for event.
          */
-        init(e: Event, opt_currentTarget?: EventTarget): void;
+        init(e: Event, opt_currentTarget?: goog.globalEventTarget): void;
         
         /**
          * Tests to see which button was pressed during the event. This is really only

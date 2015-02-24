@@ -16,7 +16,7 @@ declare module goog.ui {
      * @extends {goog.events.EventTarget}
      */
     class KeyboardShortcutHandler extends goog.events.EventTarget {
-        constructor(keyTarget: goog.events.EventTarget|EventTarget);
+        constructor(keyTarget: goog.events.EventTarget|goog.globalEventTarget);
         
         /**
          * Maximum allowed delay, in milliseconds, allowed between the first and second
@@ -233,7 +233,7 @@ declare module goog.ui {
          *     event listener should be attached to.
          * @protected
          */
-        initializeKeyListener(keyTarget: goog.events.EventTarget|EventTarget): void;
+        initializeKeyListener(keyTarget: goog.events.EventTarget|goog.globalEventTarget): void;
         
         /**
          * Removes the listener that was added by link {@link #initializeKeyListener}.
