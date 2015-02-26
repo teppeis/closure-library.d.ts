@@ -17,7 +17,7 @@ declare module goog.structs {
      * @template T
      */
     class Set<T> {
-        constructor(opt_values?: Array<T>|Object);
+        constructor(opt_values?: Array<T>|{[index: string]: T});
         
         /**
          * @return {number} The number of elements in the set.
@@ -37,14 +37,14 @@ declare module goog.structs {
          * @param {Array<T>|goog.structs.Collection<T>|Object<?,T>} col A collection
          *     containing the elements to add.
          */
-        addAll(col: Array<T>|goog.structs.Collection<T>|Object): void;
+        addAll(col: Array<T>|goog.structs.Collection<T>|{[index: string]: T}): void;
         
         /**
          * Removes all values in the given collection from this set.
          * @param {Array<T>|goog.structs.Collection<T>|Object<?,T>} col A collection
          *     containing the elements to remove.
          */
-        removeAll(col: Array<T>|goog.structs.Collection<T>|Object): void;
+        removeAll(col: Array<T>|goog.structs.Collection<T>|{[index: string]: T}): void;
         
         /**
          * Removes the given element from this set.
@@ -90,7 +90,7 @@ declare module goog.structs {
          *     collection.
          * @template S
          */
-        intersection<S>(col: Array<S>|Object): goog.structs.Set<T|S>;
+        intersection<S>(col: Array<S>|{[index: string]: S}): goog.structs.Set<T|S>;
         
         /**
          * Finds all values that are present in this set and not in the given
@@ -100,7 +100,7 @@ declare module goog.structs {
          *     (primitives or objects) present in this set but not in the given
          *     collection.
          */
-        difference(col: Array<T>|goog.structs.Collection<T>|Object): goog.structs.Set<any>;
+        difference(col: Array<T>|goog.structs.Collection<T>|{[index: string]: T}): goog.structs.Set<any>;
         
         /**
          * Returns an array containing all the elements in this set.

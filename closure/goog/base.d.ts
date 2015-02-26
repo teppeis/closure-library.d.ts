@@ -505,7 +505,7 @@ declare module goog {
      * @param {Object<string, string>=} opt_values Maps place holder name to value.
      * @return {string} message with placeholders filled.
      */
-    function getMsg(str: string, opt_values?: Object): string;
+    function getMsg(str: string, opt_values?: {[index: string]: string}): string;
 
     /**
      * Gets a localized message. If the message does not have a translation, gives a

@@ -59,5 +59,5 @@ declare module goog.dom.xml {
      * @param {!Element} element XML or DOM element to set attributes on.
      * @param {!Object<string, string>} attributes Map of property:value pairs.
      */
-    function setAttributes(element: Element, attributes: Object): void;
+    function setAttributes(element: Element, attributes: {[index: string]: string}): void;
 }

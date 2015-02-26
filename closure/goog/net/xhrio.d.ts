@@ -297,7 +297,7 @@ declare module goog.net {
          * @return {!Object<string, string>} An object with the header keys as keys
          *     and header values as values.
          */
-        getResponseHeaders(): Object;
+        getResponseHeaders(): {[index: string]: string};
         
         /**
          * Get the last error message

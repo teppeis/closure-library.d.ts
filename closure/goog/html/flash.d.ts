@@ -9,7 +9,7 @@ declare module goog.html.flash {
      *     as an attribute in fixedAttributes.
      * @package
      */
-    function combineParams(defaultParams: Object, opt_params?: Object): Array<goog.html.SafeHtml>;
+    function combineParams(defaultParams: {[index: string]: string|goog.string$.TypedString}, opt_params?: {[index: string]: string}): Array<goog.html.SafeHtml>;
 
     /**
      * Checks that keys are not present as keys in maps.
@@ -22,5 +22,5 @@ declare module goog.html.flash {
      *     opt_attributes or opt_params.
      * @package
      */
-    function verifyKeysNotInMaps(keys: Array<string>, opt_attributes?: Object, opt_params?: Object): void;
+    function verifyKeysNotInMaps(keys: Array<string>, opt_attributes?: {[index: string]: goog.html.SafeHtml.AttributeValue_}, opt_params?: {[index: string]: string}): void;
 }

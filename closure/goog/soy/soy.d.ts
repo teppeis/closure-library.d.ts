@@ -13,7 +13,7 @@ declare module goog.soy {
      * @param {Object=} opt_injectedData The injected data for the template.
      * @template ARG_TYPES
      */
-    function renderElement<ARG_TYPES>(element: Element, template: void|((arg0: ARG_TYPES, arg1?: void, arg2?: Object) => any), opt_templateData?: ARG_TYPES, opt_injectedData?: Object): void;
+    function renderElement<ARG_TYPES>(element: Element, template: void|((arg0: ARG_TYPES, arg1?: void, arg2?: {[index: string]: any}) => any), opt_templateData?: ARG_TYPES, opt_injectedData?: Object): void;
 
     /**
      * Renders a Soy template into a single node or a document
@@ -31,7 +31,7 @@ declare module goog.soy {
      * @return {!Node} The resulting node or document fragment.
      * @template ARG_TYPES
      */
-    function renderAsFragment<ARG_TYPES>(template: void|((arg0: ARG_TYPES, arg1?: void, arg2?: Object) => any), opt_templateData?: ARG_TYPES, opt_injectedData?: Object, opt_domHelper?: goog.dom.DomHelper): Node;
+    function renderAsFragment<ARG_TYPES>(template: void|((arg0: ARG_TYPES, arg1?: void, arg2?: {[index: string]: any}) => any), opt_templateData?: ARG_TYPES, opt_injectedData?: Object, opt_domHelper?: goog.dom.DomHelper): Node;
 
     /**
      * Renders a Soy template into a single node. If the rendered
@@ -48,5 +48,5 @@ declare module goog.soy {
      *     element if necessary.
      * @template ARG_TYPES
      */
-    function renderAsElement<ARG_TYPES>(template: void|((arg0: ARG_TYPES, arg1?: void, arg2?: Object) => any), opt_templateData?: ARG_TYPES, opt_injectedData?: Object, opt_domHelper?: goog.dom.DomHelper): Element;
+    function renderAsElement<ARG_TYPES>(template: void|((arg0: ARG_TYPES, arg1?: void, arg2?: {[index: string]: any}) => any), opt_templateData?: ARG_TYPES, opt_injectedData?: Object, opt_domHelper?: goog.dom.DomHelper): Element;
 }

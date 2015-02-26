@@ -377,7 +377,7 @@ declare module goog.debug.LogManager {
      * @return {!Object<string, !goog.debug.Logger>} Map of logger names to logger
      *     objects.
      */
-    function getLoggers(): Object;
+    function getLoggers(): {[index: string]: goog.debug.Logger};
 
     /**
      * Returns the root of the logger tree namespace, the logger with the empty

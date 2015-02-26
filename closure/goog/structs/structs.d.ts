@@ -98,7 +98,7 @@ declare module goog.structs {
      *     values a plain old JS object is returned.
      * @template T,S,V
      */
-    function map<T, S, V>(col: S, f: (arg0: any, arg1: any, arg2: S) => V, opt_obj?: T): Object|Array<V>;
+    function map<T, S, V>(col: S, f: (arg0: any, arg1: any, arg2: S) => V, opt_obj?: T): {[index: string]: V}|Array<V>;
 
     /**
      * Calls f for each value in a collection. If any call returns true this returns

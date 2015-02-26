@@ -23,5 +23,5 @@ declare module goog.html.silverlight {
      *     the attributes set to fixed values, documented above, or contains source.
      *
      */
-    function createObject(source: goog.html.TrustedResourceUrl, opt_params?: Object, opt_attributes?: Object): goog.html.SafeHtml;
+    function createObject(source: goog.html.TrustedResourceUrl, opt_params?: {[index: string]: string}, opt_attributes?: {[index: string]: goog.html.SafeHtml.AttributeValue_}): goog.html.SafeHtml;
 }

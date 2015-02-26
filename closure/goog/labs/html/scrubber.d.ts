@@ -83,7 +83,7 @@ declare module goog.labs.html.scrubber {
      * @param {string} html a string of HTML
      * @return {string} the input but with potentially dangerous tokens removed.
      */
-    function scrub(tagWhitelist: Object, attrWhitelist: Object, html: string): string;
+    function scrub(tagWhitelist: {[index: string]: boolean}, attrWhitelist: {[index: string]: {[index: string]: goog.labs.html.AttributeRewriter}}, html: string): string;
 
     /**
      * Balances tags in trusted HTML.

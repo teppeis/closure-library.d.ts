@@ -10,7 +10,7 @@ declare module goog.structs {
      * @template VALUE
      */
     class Trie<VALUE> {
-        constructor(opt_trie?: goog.structs.Trie<VALUE>|Object);
+        constructor(opt_trie?: goog.structs.Trie<VALUE>|{[index: string]: VALUE});
         
         /**
          * Sets the given key/value pair in the trie.  O(L), where L is the length
@@ -34,7 +34,7 @@ declare module goog.structs {
          * @param {!Object<string, VALUE>|!goog.structs.Trie<VALUE>} trie Object
          *     containing the data to add.
          */
-        setAll(trie: Object|goog.structs.Trie<VALUE>): void;
+        setAll(trie: {[index: string]: VALUE}|goog.structs.Trie<VALUE>): void;
         
         /**
          * Retrieves a value from the trie given a key.  O(L), where L is the length of
@@ -56,7 +56,7 @@ declare module goog.structs {
          * @return {!Object<string, VALUE>} Map of end index of matching prefixes and
          *     corresponding values. Empty if no match found.
          */
-        getKeyAndPrefixes(key: string, opt_keyStartIndex?: number): Object;
+        getKeyAndPrefixes(key: string, opt_keyStartIndex?: number): {[index: string]: VALUE};
         
         /**
          * Gets the values of the trie.  Not returned in any reliable order.  O(N) where

@@ -61,7 +61,7 @@ declare module goog.proto2 {
          *
          * @return {!Object<number, !goog.proto2.FieldDescriptor>} The field map.
          */
-        getFieldsMap(): Object;
+        getFieldsMap(): {[index: number]: goog.proto2.FieldDescriptor};
         
         /**
          * Returns the field matching the given name, if any. Note that

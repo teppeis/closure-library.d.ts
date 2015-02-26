@@ -42,7 +42,7 @@ declare module goog.module {
          * @param {Object<Array<string>>} infoMap An object that contains a mapping
          *    from module id (String) to list of required module ids (Array).
          */
-        setAllModuleInfo(infoMap: Object): void;
+        setAllModuleInfo(infoMap: {[index: string]: Array<string>}): void;
         
         /**
          * Sets the module info for all modules. Should only be called once. Also
@@ -188,7 +188,7 @@ declare module goog.module {
          *     to deferred objects that will callback or errback when the load for that
          *     id is finished.
          */
-        loadMultiple(moduleIds: Array<string>, opt_userInitiated?: boolean): Object;
+        loadMultiple(moduleIds: Array<string>, opt_userInitiated?: boolean): {[index: string]: goog.async.Deferred<any>};
         
         /**
          * Method called just before a module code is loaded.

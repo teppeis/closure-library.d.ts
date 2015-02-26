@@ -24,7 +24,7 @@ declare module goog.soy {
          * @return {!Node} The resulting node or document fragment.
          * @template ARG_TYPES
          */
-        renderAsFragment<ARG_TYPES>(template: void|((arg0: ARG_TYPES, arg1?: void, arg2?: Object) => any), opt_templateData?: ARG_TYPES): Node;
+        renderAsFragment<ARG_TYPES>(template: void|((arg0: ARG_TYPES, arg1?: void, arg2?: {[index: string]: any}) => any), opt_templateData?: ARG_TYPES): Node;
         
         /**
          * Renders a Soy template into a single node. If the rendered HTML
@@ -39,7 +39,7 @@ declare module goog.soy {
          *     element if necessary.
          * @template ARG_TYPES
          */
-        renderAsElement<ARG_TYPES>(template: void|((arg0: ARG_TYPES, arg1?: void, arg2?: Object) => any), opt_templateData?: ARG_TYPES): Element;
+        renderAsElement<ARG_TYPES>(template: void|((arg0: ARG_TYPES, arg1?: void, arg2?: {[index: string]: any}) => any), opt_templateData?: ARG_TYPES): Element;
         
         /**
          * Renders a Soy template and then set the output string as the
@@ -51,7 +51,7 @@ declare module goog.soy {
          * @param {ARG_TYPES=} opt_templateData The data for the template.
          * @template ARG_TYPES
          */
-        renderElement<ARG_TYPES>(element: Element, template: void|((arg0: ARG_TYPES, arg1?: void, arg2?: Object) => any), opt_templateData?: ARG_TYPES): void;
+        renderElement<ARG_TYPES>(element: Element, template: void|((arg0: ARG_TYPES, arg1?: void, arg2?: {[index: string]: any}) => any), opt_templateData?: ARG_TYPES): void;
         
         /**
          * Renders a Soy template and returns the output string.
@@ -65,7 +65,7 @@ declare module goog.soy {
          * @return {string} The return value of rendering the template directly.
          * @template ARG_TYPES
          */
-        render<ARG_TYPES>(template: void|((arg0: ARG_TYPES, arg1?: void, arg2?: Object) => any), opt_templateData?: ARG_TYPES): string;
+        render<ARG_TYPES>(template: void|((arg0: ARG_TYPES, arg1?: void, arg2?: {[index: string]: any}) => any), opt_templateData?: ARG_TYPES): string;
         
         /**
          * Renders a strict Soy template of kind="text" and returns the output string.
@@ -78,7 +78,7 @@ declare module goog.soy {
          * @return {string} The return value of rendering the template directly.
          * @template ARG_TYPES
          */
-        renderText<ARG_TYPES>(template: void|((arg0: ARG_TYPES, arg1?: void, arg2?: Object) => goog.soy.data.SanitizedContent), opt_templateData?: ARG_TYPES): string;
+        renderText<ARG_TYPES>(template: void|((arg0: ARG_TYPES, arg1?: void, arg2?: {[index: string]: any}) => goog.soy.data.SanitizedContent), opt_templateData?: ARG_TYPES): string;
         
         /**
          * Renders a strict Soy template and returns the output SanitizedContent object.
@@ -94,7 +94,7 @@ declare module goog.soy {
          *     soy.SanitizedHtml.
          * @template ARG_TYPES, RETURN_TYPE
          */
-        renderStrict<ARG_TYPES, RETURN_TYPE>(template: void|((arg0: ARG_TYPES, arg1?: void, arg2?: Object) => RETURN_TYPE), opt_templateData?: ARG_TYPES, opt_kind?: goog.soy.data.SanitizedContentKind): RETURN_TYPE;
+        renderStrict<ARG_TYPES, RETURN_TYPE>(template: void|((arg0: ARG_TYPES, arg1?: void, arg2?: {[index: string]: any}) => RETURN_TYPE), opt_templateData?: ARG_TYPES, opt_kind?: goog.soy.data.SanitizedContentKind): RETURN_TYPE;
         
         /**
          * Renders a strict Soy template of kind="html" and returns the result as
@@ -109,7 +109,7 @@ declare module goog.soy {
          * @return {!goog.html.SafeHtml}
          * @template ARG_TYPES
          */
-        renderSafeHtml<ARG_TYPES>(template: void|((arg0: ARG_TYPES, arg1?: void, arg2?: Object) => goog.soy.data.SanitizedContent), opt_templateData?: ARG_TYPES): goog.html.SafeHtml;
+        renderSafeHtml<ARG_TYPES>(template: void|((arg0: ARG_TYPES, arg1?: void, arg2?: {[index: string]: any}) => goog.soy.data.SanitizedContent), opt_templateData?: ARG_TYPES): goog.html.SafeHtml;
         
         /**
          * @return {!goog.soy.Renderer.SavedTemplateRender} Saved template data for

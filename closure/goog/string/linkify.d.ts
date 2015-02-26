@@ -12,7 +12,7 @@ declare module goog.string$.linkify {
      * @return {string} HTML Linkified HTML text. Any text that is not part of a
      *      link will be HTML-escaped.
      */
-    function linkifyPlainText(text: string, opt_attributes?: Object): string;
+    function linkifyPlainText(text: string, opt_attributes?: {[index: string]: string}): string;
 
     /**
      * Gets the first URI in text.

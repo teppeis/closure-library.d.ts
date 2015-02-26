@@ -434,7 +434,7 @@ declare module goog.tweak {
          * Returns the map of token->boolean settings.
          * @return {!Object<!goog.tweak.BooleanSetting>} The child settings.
          */
-        getChildEntries(): Object;
+        getChildEntries(): {[index: string]: goog.tweak.BooleanSetting};
         
         /**
          * Adds the given BooleanSetting to the group.

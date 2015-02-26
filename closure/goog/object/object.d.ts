@@ -10,7 +10,7 @@ declare module goog.object {
      * @param {T=} opt_obj This is used as the 'this' object within f.
      * @template T,K,V
      */
-    function forEach<T, K, V>(obj: Object, f: (arg0: V, arg1: any, arg2: Object) => any, opt_obj?: T): void;
+    function forEach<T, K, V>(obj: {[index: string]: V}, f: (arg0: V, arg1: any, arg2: {[index: string]: V}) => any, opt_obj?: T): void;
 
     /**
      * Calls a function for each element in an object/map/hash. If that call returns
@@ -28,7 +28,7 @@ declare module goog.object {
      *     test are present.
      * @template T,K,V
      */
-    function filter<T, K, V>(obj: Object, f: (arg0: V, arg1: any, arg2: Object) => boolean, opt_obj?: T): Object;
+    function filter<T, K, V>(obj: {[index: string]: V}, f: (arg0: V, arg1: any, arg2: {[index: string]: V}) => boolean, opt_obj?: T): {[index: string]: V};
 
     /**
      * For every element in an object/map/hash calls a function and inserts the
@@ -44,7 +44,7 @@ declare module goog.object {
      * @return {!Object<K,R>} a new object with the results from f.
      * @template T,K,V,R
      */
-    function map<T, K, V, R>(obj: Object, f: (arg0: V, arg1: any, arg2: Object) => R, opt_obj?: T): Object;
+    function map<T, K, V, R>(obj: {[index: string]: V}, f: (arg0: V, arg1: any, arg2: {[index: string]: V}) => R, opt_obj?: T): {[index: string]: R};
 
     /**
      * Calls a function for each element in an object/map/hash. If any
@@ -60,7 +60,7 @@ declare module goog.object {
      * @return {boolean} true if any element passes the test.
      * @template T,K,V
      */
-    function some<T, K, V>(obj: Object, f: (arg0: V, arg1: any, arg2: Object) => boolean, opt_obj?: T): boolean;
+    function some<T, K, V>(obj: {[index: string]: V}, f: (arg0: V, arg1: any, arg2: {[index: string]: V}) => boolean, opt_obj?: T): boolean;
 
     /**
      * Calls a function for each element in an object/map/hash. If
@@ -76,7 +76,7 @@ declare module goog.object {
      * @return {boolean} false if any element fails the test.
      * @template T,K,V
      */
-    function every<T, K, V>(obj: Object, f: (arg0: V, arg1: any, arg2: Object) => boolean, opt_obj?: T): boolean;
+    function every<T, K, V>(obj: {[index: string]: V}, f: (arg0: V, arg1: any, arg2: {[index: string]: V}) => boolean, opt_obj?: T): boolean;
 
     /**
      * Returns the number of key-value pairs in the object map.
@@ -106,7 +106,7 @@ declare module goog.object {
      * @return {V|undefined} The value or undefined if the object is empty.
      * @template K,V
      */
-    function getAnyValue<K, V>(obj: Object): V|void;
+    function getAnyValue<K, V>(obj: {[index: string]: V}): V|void;
 
     /**
      * Whether the object/hash/map contains the given object as a value.
@@ -117,7 +117,7 @@ declare module goog.object {
      * @return {boolean} true if val is present.
      * @template K,V
      */
-    function contains<K, V>(obj: Object, val: V): boolean;
+    function contains<K, V>(obj: {[index: string]: V}, val: V): boolean;
 
     /**
      * Returns the values of the object/map/hash.
@@ -126,7 +126,7 @@ declare module goog.object {
      * @return {!Array<V>} The values in the object/map/hash.
      * @template K,V
      */
-    function getValues<K, V>(obj: Object): Array<V>;
+    function getValues<K, V>(obj: {[index: string]: V}): Array<V>;
 
     /**
      * Returns the keys of the object/map/hash.
@@ -167,7 +167,7 @@ declare module goog.object {
      * @return {boolean} true If the map contains the value.
      * @template K,V
      */
-    function containsValue<K, V>(obj: Object, val: V): boolean;
+    function containsValue<K, V>(obj: {[index: string]: V}, val: V): boolean;
 
     /**
      * Searches an object for an element that satisfies the given condition and
@@ -181,7 +181,7 @@ declare module goog.object {
      *     returns true or undefined if no such element is found.
      * @template T,K,V
      */
-    function findKey<T, K, V>(obj: Object, f: (arg0: V, arg1: string, arg2: Object) => boolean, opt_this?: T): string|void;
+    function findKey<T, K, V>(obj: {[index: string]: V}, f: (arg0: V, arg1: string, arg2: {[index: string]: V}) => boolean, opt_this?: T): string|void;
 
     /**
      * Searches an object for an element that satisfies the given condition and
@@ -195,7 +195,7 @@ declare module goog.object {
      *     undefined if no such element is found.
      * @template T,K,V
      */
-    function findValue<T, K, V>(obj: Object, f: (arg0: V, arg1: string, arg2: Object) => boolean, opt_this?: T): V;
+    function findValue<T, K, V>(obj: {[index: string]: V}, f: (arg0: V, arg1: string, arg2: {[index: string]: V}) => boolean, opt_this?: T): V;
 
     /**
      * Whether the object/map/hash is empty.
@@ -230,7 +230,7 @@ declare module goog.object {
      * @param {V} val The value to add.
      * @template K,V
      */
-    function add<K, V>(obj: Object, key: string, val: V): void;
+    function add<K, V>(obj: {[index: string]: V}, key: string, val: V): void;
 
     /**
      * Returns the value for the given key.
@@ -242,7 +242,7 @@ declare module goog.object {
      * @return {V|R|undefined} The value for the given key.
      * @template K,V,R
      */
-    function get<K, V, R>(obj: Object, key: string, opt_val?: R): V|R|void;
+    function get<K, V, R>(obj: {[index: string]: V}, key: string, opt_val?: R): V|R|void;
 
     /**
      * Adds a key-value pair to the object/map/hash.
@@ -252,7 +252,7 @@ declare module goog.object {
      * @param {V} value The value to add.
      * @template K,V
      */
-    function set<K, V>(obj: Object, key: string, value: V): void;
+    function set<K, V>(obj: {[index: string]: V}, key: string, value: V): void;
 
     /**
      * Adds a key-value pair to the object/map/hash if it doesn't exist yet.
@@ -263,7 +263,7 @@ declare module goog.object {
      * @return {V} The value of the entry at the end of the function.
      * @template K,V
      */
-    function setIfUndefined<K, V>(obj: Object, key: string, value: V): V;
+    function setIfUndefined<K, V>(obj: {[index: string]: V}, key: string, value: V): V;
 
     /**
      * Sets a key and value to an object if the key is not set. The value will be
@@ -279,7 +279,7 @@ declare module goog.object {
      * @return {V} The value of the entry at the end of the function.
      * @template K,V
      */
-    function setWithReturnValueIfNotSet<K, V>(obj: Object, key: string, f: () => V): V;
+    function setWithReturnValueIfNotSet<K, V>(obj: {[index: string]: V}, key: string, f: () => V): V;
 
     /**
      * Compares two objects for equality using === on the values.
@@ -289,7 +289,7 @@ declare module goog.object {
      * @return {boolean}
      * @template K,V
      */
-    function equals<K, V>(a: Object, b: Object): boolean;
+    function equals<K, V>(a: {[index: string]: V}, b: {[index: string]: V}): boolean;
 
     /**
      * Does a flat clone of the object.
@@ -298,7 +298,7 @@ declare module goog.object {
      * @return {!Object<K,V>} Clone of the input object.
      * @template K,V
      */
-    function clone<K, V>(obj: Object): Object;
+    function clone<K, V>(obj: {[index: string]: V}): {[index: string]: V};
 
     /**
      * Clones a value. The input may be an Object, Array, or basic type. Objects and
@@ -377,7 +377,7 @@ declare module goog.object {
      *     original object if this browser does not support immutables.
      * @template K,V
      */
-    function createImmutableView<K, V>(obj: Object): Object;
+    function createImmutableView<K, V>(obj: {[index: string]: V}): {[index: string]: V};
 
     /**
      * @param {!Object} obj An object.

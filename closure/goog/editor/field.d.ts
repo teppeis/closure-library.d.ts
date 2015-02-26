@@ -80,7 +80,7 @@ declare module goog.editor {
          * Keycodes that result in a selectionchange event (e.g. the cursor moving).
          * @type {!Object<number, number>}
          */
-        static SELECTION_CHANGE_KEYCODES: Object;
+        static SELECTION_CHANGE_KEYCODES: {[index: number]: number};
         
         /**
          * Sets the active field id.

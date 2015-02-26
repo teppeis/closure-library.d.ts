@@ -10,14 +10,14 @@ declare module goog.tweak {
      * @final
      */
     class Registry {
-        constructor(queryParams: string, compilerOverrides: Object);
+        constructor(queryParams: string, compilerOverrides: {[index: string]: string|number|boolean});
         
         /**
          * Simple parser for query params. Makes all keys lower-case.
          * @param {string} queryParams The part of the url between the ? and the #.
          * @return {!Object<string>} map of key->value.
          */
-        static parseQueryParams(queryParams: string): Object;
+        static parseQueryParams(queryParams: string): {[index: string]: string};
         
         /**
          * Registers the given tweak setting/action.

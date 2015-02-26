@@ -17,7 +17,7 @@ declare module goog.debug {
      * @extends {goog.events.EventTarget}
      */
     class ErrorReporter extends goog.events.EventTarget {
-        constructor(handlerUrl: string, opt_contextProvider?: (arg0: Error, arg1: Object) => any, opt_noAutoProtect?: boolean);
+        constructor(handlerUrl: string, opt_contextProvider?: (arg0: Error, arg1: {[index: string]: string}) => any, opt_noAutoProtect?: boolean);
         
         /**
          * Installs exception protection for an entry point function in addition
@@ -47,7 +47,7 @@ declare module goog.debug {
          *     the ErrorReporter just for transmission of reports.
          * @return {!goog.debug.ErrorReporter} The error reporter.
          */
-        static install(loggingUrl: string, opt_contextProvider?: (arg0: Error, arg1: Object) => any, opt_noAutoProtect?: boolean): goog.debug.ErrorReporter;
+        static install(loggingUrl: string, opt_contextProvider?: (arg0: Error, arg1: {[index: string]: string}) => any, opt_noAutoProtect?: boolean): goog.debug.ErrorReporter;
         
         /**
          * Default implementation of XHR sender interface.
@@ -85,7 +85,7 @@ declare module goog.debug {
          * @param {!Object<string, string>=} opt_context Context values to optionally
          *     include in the error report.
          */
-        handleException(e: Object, opt_context?: Object): void;
+        handleException(e: Object, opt_context?: {[index: string]: string}): void;
         
         /**
          * Sends an error report to the logging URL.  This will not consult the context
@@ -98,7 +98,7 @@ declare module goog.debug {
          * @param {!Object<string, string>=} opt_context Context information to include
          *     in the request.
          */
-        sendErrorReport(message: string, fileName: string, line: number, opt_trace?: string, opt_context?: Object): void;
+        sendErrorReport(message: string, fileName: string, line: number, opt_trace?: string, opt_context?: {[index: string]: string}): void;
         
         /**
          * @param {string} prefix The prefix to appear prepended to all context
@@ -116,7 +116,7 @@ declare module goog.debug {
          * @param {!Object<string,string>} urlArgs Set of key-value pairs to append
          *     to handlerUrl_ before sending XHR.
          */
-        setAdditionalArguments(urlArgs: Object): void;
+        setAdditionalArguments(urlArgs: {[index: string]: string}): void;
     }
 }
 
@@ -132,7 +132,7 @@ declare module goog.debug.ErrorReporter {
      * @final
      */
     class ExceptionEvent extends goog.events.Event {
-        constructor(error: Error, context: Object);
+        constructor(error: Error, context: {[index: string]: string});
         
         /**
          * Event type for notifying of a logged exception.

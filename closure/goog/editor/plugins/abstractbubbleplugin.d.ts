@@ -62,7 +62,7 @@ declare module goog.editor.plugins {
          * @return {!Object<goog.ui.editor.Bubble>}
          * @protected
          */
-        getBubbleMap(): Object;
+        getBubbleMap(): {[index: string]: goog.ui.editor.Bubble};
         
         /**
          * @return {goog.dom.DomHelper} The dom helper for the bubble window.

@@ -268,7 +268,7 @@ declare module goog.uri.utils {
      *     or arrays. Keys with a null value are dropped.
      * @return {string} The encoded query string, in the form 'a=1&b=2'.
      */
-    function buildQueryDataFromMap(map: Object): string;
+    function buildQueryDataFromMap(map: {[index: string]: goog.uri.utils.QueryValue}): string;
 
     /**
      * Appends URI parameters to an existing URI.
@@ -308,7 +308,7 @@ declare module goog.uri.utils {
      *     Keys with a null value are dropped.
      * @return {string} The new parameters.
      */
-    function appendParamsFromMap(uri: string, map: Object): string;
+    function appendParamsFromMap(uri: string, map: {[index: string]: goog.uri.utils.QueryValue}): string;
 
     /**
      * Appends a single URI parameter.
