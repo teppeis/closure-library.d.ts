@@ -69,6 +69,23 @@ declare module goog.positioning {
         FAILED_TOP: OverflowStatus;
         FAILED_BOTTOM: OverflowStatus;
         FAILED_OUTSIDE_VIEWPORT: OverflowStatus;
+        /**
+         * Shorthand to check if a status code contains any fail code.
+         * @type {number}
+         */
+        FAILED: number;
+
+        /**
+         * Shorthand to check if horizontal positioning failed.
+         * @type {number}
+         */
+        FAILED_HORIZONTAL: number;
+
+        /**
+         * Shorthand to check if vertical positioning failed.
+         * @type {number}
+         */
+        FAILED_VERTICAL: number;
     };
 
     /**
@@ -201,25 +218,4 @@ declare module goog.positioning {
      *     vertically.
      */
     function flipCorner(corner: goog.positioning.Corner): goog.positioning.Corner;
-}
-
-declare module goog.positioning.OverflowStatus {
-
-    /**
-     * Shorthand to check if a status code contains any fail code.
-     * @type {number}
-     */
-    var FAILED: number;
-
-    /**
-     * Shorthand to check if horizontal positioning failed.
-     * @type {number}
-     */
-    var FAILED_HORIZONTAL: number;
-
-    /**
-     * Shorthand to check if vertical positioning failed.
-     * @type {number}
-     */
-    var FAILED_VERTICAL: number;
 }
