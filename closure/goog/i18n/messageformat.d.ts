@@ -44,22 +44,24 @@ declare module goog.i18n.MessageFormat {
      * @enum {number}
      * @private
      */
-    interface Element_ {
-        STRING: number;
-        BLOCK: number;
-    }
+    type Element_ = number;
+    var Element_: {
+        STRING: Element_;
+        BLOCK: Element_;
+    };
 
     /**
      * Block type.
      * @enum {number}
      * @private
      */
-    interface BlockType_ {
-        PLURAL: number;
-        ORDINAL: number;
-        SELECT: number;
-        SIMPLE: number;
-        STRING: number;
-        UNKNOWN: number;
-    }
+    type BlockType_ = number;
+    var BlockType_: {
+        PLURAL: BlockType_;
+        ORDINAL: BlockType_;
+        SELECT: BlockType_;
+        SIMPLE: BlockType_;
+        STRING: BlockType_;
+        UNKNOWN: BlockType_;
+    };
 }

@@ -130,34 +130,37 @@ declare module goog.i18n.NumberFormat {
      * Standard number formatting patterns.
      * @enum {number}
      */
-    interface Format {
-        DECIMAL: number;
-        SCIENTIFIC: number;
-        PERCENT: number;
-        CURRENCY: number;
-        COMPACT_SHORT: number;
-        COMPACT_LONG: number;
-    }
+    type Format = number;
+    var Format: {
+        DECIMAL: Format;
+        SCIENTIFIC: Format;
+        PERCENT: Format;
+        CURRENCY: Format;
+        COMPACT_SHORT: Format;
+        COMPACT_LONG: Format;
+    };
 
     /**
      * Currency styles.
      * @enum {number}
      */
-    interface CurrencyStyle {
-        LOCAL: number;
-        PORTABLE: number;
-        GLOBAL: number;
-    }
+    type CurrencyStyle = number;
+    var CurrencyStyle: {
+        LOCAL: CurrencyStyle;
+        PORTABLE: CurrencyStyle;
+        GLOBAL: CurrencyStyle;
+    };
 
     /**
      * Compacting styles.
      * @enum {number}
      */
-    interface CompactStyle {
-        NONE: number;
-        SHORT: number;
-        LONG: number;
-    }
+    type CompactStyle = number;
+    var CompactStyle: {
+        NONE: CompactStyle;
+        SHORT: CompactStyle;
+        LONG: CompactStyle;
+    };
 
     /**
      * Alias for the compact format 'unit' object.

@@ -83,22 +83,23 @@ declare module goog.db.Error {
      * @enum {number}
      * @private
      */
-    interface DatabaseErrorCode_ {
-        UNKNOWN_ERR: number;
-        NON_TRANSIENT_ERR: number;
-        NOT_FOUND_ERR: number;
-        CONSTRAINT_ERR: number;
-        DATA_ERR: number;
-        NOT_ALLOWED_ERR: number;
-        TRANSACTION_INACTIVE_ERR: number;
-        ABORT_ERR: number;
-        READ_ONLY_ERR: number;
-        TRANSIENT_ERR: number;
-        TIMEOUT_ERR: number;
-        QUOTA_ERR: number;
-        INVALID_ACCESS_ERR: number;
-        INVALID_STATE_ERR: number;
-    }
+    type DatabaseErrorCode_ = number;
+    var DatabaseErrorCode_: {
+        UNKNOWN_ERR: DatabaseErrorCode_;
+        NON_TRANSIENT_ERR: DatabaseErrorCode_;
+        NOT_FOUND_ERR: DatabaseErrorCode_;
+        CONSTRAINT_ERR: DatabaseErrorCode_;
+        DATA_ERR: DatabaseErrorCode_;
+        NOT_ALLOWED_ERR: DatabaseErrorCode_;
+        TRANSACTION_INACTIVE_ERR: DatabaseErrorCode_;
+        ABORT_ERR: DatabaseErrorCode_;
+        READ_ONLY_ERR: DatabaseErrorCode_;
+        TRANSIENT_ERR: DatabaseErrorCode_;
+        TIMEOUT_ERR: DatabaseErrorCode_;
+        QUOTA_ERR: DatabaseErrorCode_;
+        INVALID_ACCESS_ERR: DatabaseErrorCode_;
+        INVALID_STATE_ERR: DatabaseErrorCode_;
+    };
 
     /**
      * Error codes for database errors.
@@ -106,43 +107,45 @@ declare module goog.db.Error {
      *
      * @enum {number}
      */
-    interface ErrorCode {
-        UNKNOWN_ERR: number;
-        NON_TRANSIENT_ERR: number;
-        NOT_FOUND_ERR: number;
-        CONSTRAINT_ERR: number;
-        DATA_ERR: number;
-        NOT_ALLOWED_ERR: number;
-        TRANSACTION_INACTIVE_ERR: number;
-        ABORT_ERR: number;
-        READ_ONLY_ERR: number;
-        TIMEOUT_ERR: number;
-        QUOTA_ERR: number;
-        INVALID_ACCESS_ERR: number;
-        INVALID_STATE_ERR: number;
-    }
+    type ErrorCode = number;
+    var ErrorCode: {
+        UNKNOWN_ERR: ErrorCode;
+        NON_TRANSIENT_ERR: ErrorCode;
+        NOT_FOUND_ERR: ErrorCode;
+        CONSTRAINT_ERR: ErrorCode;
+        DATA_ERR: ErrorCode;
+        NOT_ALLOWED_ERR: ErrorCode;
+        TRANSACTION_INACTIVE_ERR: ErrorCode;
+        ABORT_ERR: ErrorCode;
+        READ_ONLY_ERR: ErrorCode;
+        TIMEOUT_ERR: ErrorCode;
+        QUOTA_ERR: ErrorCode;
+        INVALID_ACCESS_ERR: ErrorCode;
+        INVALID_STATE_ERR: ErrorCode;
+    };
 
     /**
      * Names of all possible errors as returned from the browser.
      * @see http://www.w3.org/TR/IndexedDB/#exceptions
      * @enum {string}
      */
-    interface ErrorName {
-        ABORT_ERR: string;
-        CONSTRAINT_ERR: string;
-        DATA_CLONE_ERR: string;
-        DATA_ERR: string;
-        INVALID_ACCESS_ERR: string;
-        INVALID_STATE_ERR: string;
-        NOT_FOUND_ERR: string;
-        QUOTA_EXCEEDED_ERR: string;
-        READ_ONLY_ERR: string;
-        SYNTAX_ERROR: string;
-        TIMEOUT_ERR: string;
-        TRANSACTION_INACTIVE_ERR: string;
-        UNKNOWN_ERR: string;
-        VERSION_ERR: string;
-    }
+    type ErrorName = string;
+    var ErrorName: {
+        ABORT_ERR: ErrorName;
+        CONSTRAINT_ERR: ErrorName;
+        DATA_CLONE_ERR: ErrorName;
+        DATA_ERR: ErrorName;
+        INVALID_ACCESS_ERR: ErrorName;
+        INVALID_STATE_ERR: ErrorName;
+        NOT_FOUND_ERR: ErrorName;
+        QUOTA_EXCEEDED_ERR: ErrorName;
+        READ_ONLY_ERR: ErrorName;
+        SYNTAX_ERROR: ErrorName;
+        TIMEOUT_ERR: ErrorName;
+        TRANSACTION_INACTIVE_ERR: ErrorName;
+        UNKNOWN_ERR: ErrorName;
+        VERSION_ERR: ErrorName;
+    };
 
     /**
      * A specific kind of database error. If a Version Change is unable to proceed

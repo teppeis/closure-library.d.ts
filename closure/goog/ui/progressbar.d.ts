@@ -84,8 +84,9 @@ declare module goog.ui.ProgressBar {
      *
      * @enum {string}
      */
-    interface Orientation {
-        VERTICAL: string;
-        HORIZONTAL: string;
-    }
+    type Orientation = string;
+    var Orientation: {
+        VERTICAL: Orientation;
+        HORIZONTAL: Orientation;
+    };
 }

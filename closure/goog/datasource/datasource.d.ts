@@ -4,12 +4,13 @@ declare module goog.ds {
      * Enum for load state of a DataNode.
      * @enum {string}
      */
-    interface LoadState {
-        LOADED: string;
-        LOADING: string;
-        FAILED: string;
-        NOT_LOADED: string;
-    }
+    type LoadState = string;
+    var LoadState: {
+        LOADED: LoadState;
+        LOADING: LoadState;
+        FAILED: LoadState;
+        NOT_LOADED: LoadState;
+    };
 
     /**
      * Interface for node in rich data tree.

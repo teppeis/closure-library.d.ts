@@ -16,12 +16,13 @@ declare module goog.dom.pattern {
      *  </ol>
      * @enum {number}
      */
-    interface MatchType {
-        NO_MATCH: number;
-        MATCHING: number;
-        MATCH: number;
-        BACKTRACK_MATCH: number;
-    }
+    type MatchType = number;
+    var MatchType: {
+        NO_MATCH: MatchType;
+        MATCHING: MatchType;
+        MATCH: MatchType;
+        BACKTRACK_MATCH: MatchType;
+    };
 
     /**
      * Regular expression for breaking text nodes.

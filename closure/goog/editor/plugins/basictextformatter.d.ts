@@ -56,27 +56,28 @@ declare module goog.editor.plugins.BasicTextFormatter {
      * Commands implemented by this plugin.
      * @enum {string}
      */
-    interface COMMAND {
-        LINK: string;
-        FORMAT_BLOCK: string;
-        INDENT: string;
-        OUTDENT: string;
-        STRIKE_THROUGH: string;
-        HORIZONTAL_RULE: string;
-        SUBSCRIPT: string;
-        SUPERSCRIPT: string;
-        UNDERLINE: string;
-        BOLD: string;
-        ITALIC: string;
-        FONT_SIZE: string;
-        FONT_FACE: string;
-        FONT_COLOR: string;
-        BACKGROUND_COLOR: string;
-        ORDERED_LIST: string;
-        UNORDERED_LIST: string;
-        JUSTIFY_CENTER: string;
-        JUSTIFY_FULL: string;
-        JUSTIFY_RIGHT: string;
-        JUSTIFY_LEFT: string;
-    }
+    type COMMAND = string;
+    var COMMAND: {
+        LINK: COMMAND;
+        FORMAT_BLOCK: COMMAND;
+        INDENT: COMMAND;
+        OUTDENT: COMMAND;
+        STRIKE_THROUGH: COMMAND;
+        HORIZONTAL_RULE: COMMAND;
+        SUBSCRIPT: COMMAND;
+        SUPERSCRIPT: COMMAND;
+        UNDERLINE: COMMAND;
+        BOLD: COMMAND;
+        ITALIC: COMMAND;
+        FONT_SIZE: COMMAND;
+        FONT_FACE: COMMAND;
+        FONT_COLOR: COMMAND;
+        BACKGROUND_COLOR: COMMAND;
+        ORDERED_LIST: COMMAND;
+        UNORDERED_LIST: COMMAND;
+        JUSTIFY_CENTER: COMMAND;
+        JUSTIFY_FULL: COMMAND;
+        JUSTIFY_RIGHT: COMMAND;
+        JUSTIFY_LEFT: COMMAND;
+    };
 }

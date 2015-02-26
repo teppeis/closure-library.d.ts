@@ -4,9 +4,10 @@ declare module goog.dom.browserrange {
      * Common error constants.
      * @enum {string}
      */
-    interface Error {
-        NOT_IMPLEMENTED: string;
-    }
+    type Error = string;
+    var Error: {
+        NOT_IMPLEMENTED: Error;
+    };
 
     /**
      * Static method that returns the proper type of browser range.

@@ -88,9 +88,10 @@ declare module goog.ui.SelectionMenuButton {
      * Constants for menu action types.
      * @enum {number}
      */
-    interface SelectionState {
-        ALL: number;
-        SOME: number;
-        NONE: number;
-    }
+    type SelectionState = number;
+    var SelectionState: {
+        ALL: SelectionState;
+        SOME: SelectionState;
+        NONE: SelectionState;
+    };
 }

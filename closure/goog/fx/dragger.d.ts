@@ -271,11 +271,12 @@ declare module goog.fx.Dragger {
      * Constants for event names.
      * @enum {string}
      */
-    interface EventType {
-        EARLY_CANCEL: string;
-        START: string;
-        BEFOREDRAG: string;
-        DRAG: string;
-        END: string;
-    }
+    type EventType = string;
+    var EventType: {
+        EARLY_CANCEL: EventType;
+        START: EventType;
+        BEFOREDRAG: EventType;
+        DRAG: EventType;
+        END: EventType;
+    };
 }

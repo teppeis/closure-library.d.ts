@@ -98,23 +98,25 @@ declare module goog.fs.FileReader {
      *
      * @enum {number}
      */
-    interface ReadyState {
-        INIT: number;
-        LOADING: number;
-        DONE: number;
-    }
+    type ReadyState = number;
+    var ReadyState: {
+        INIT: ReadyState;
+        LOADING: ReadyState;
+        DONE: ReadyState;
+    };
 
     /**
      * Events emitted by a FileReader.
      *
      * @enum {string}
      */
-    interface EventType {
-        LOAD_START: string;
-        PROGRESS: string;
-        LOAD: string;
-        ABORT: string;
-        ERROR: string;
-        LOAD_END: string;
-    }
+    type EventType = string;
+    var EventType: {
+        LOAD_START: EventType;
+        PROGRESS: EventType;
+        LOAD: EventType;
+        ABORT: EventType;
+        ERROR: EventType;
+        LOAD_END: EventType;
+    };
 }

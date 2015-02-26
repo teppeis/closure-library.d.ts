@@ -4,14 +4,15 @@ declare module goog.cssom {
      * Enumeration of {@code CSSRule} types.
      * @enum {number}
      */
-    interface CssRuleType {
-        STYLE: number;
-        IMPORT: number;
-        MEDIA: number;
-        FONT_FACE: number;
-        PAGE: number;
-        NAMESPACE: number;
-    }
+    type CssRuleType = number;
+    var CssRuleType: {
+        STYLE: CssRuleType;
+        IMPORT: CssRuleType;
+        MEDIA: CssRuleType;
+        FONT_FACE: CssRuleType;
+        PAGE: CssRuleType;
+        NAMESPACE: CssRuleType;
+    };
 
     /**
      * Recursively gets all CSS as text, optionally starting from a given

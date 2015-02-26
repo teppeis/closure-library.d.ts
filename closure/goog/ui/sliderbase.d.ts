@@ -338,24 +338,26 @@ declare module goog.ui.SliderBase {
      * value and extent together; in this case, they can simply be ignored.
      * @enum {string}
      */
-    interface EventType {
-        DRAG_VALUE_START: string;
-        DRAG_VALUE_END: string;
-        DRAG_EXTENT_START: string;
-        DRAG_EXTENT_END: string;
-        DRAG_START: string;
-        DRAG_END: string;
-    }
+    type EventType = string;
+    var EventType: {
+        DRAG_VALUE_START: EventType;
+        DRAG_VALUE_END: EventType;
+        DRAG_EXTENT_START: EventType;
+        DRAG_EXTENT_END: EventType;
+        DRAG_START: EventType;
+        DRAG_END: EventType;
+    };
 
     /**
      * Enum for representing the orientation of the slider.
      *
      * @enum {string}
      */
-    interface Orientation {
-        VERTICAL: string;
-        HORIZONTAL: string;
-    }
+    type Orientation = string;
+    var Orientation: {
+        VERTICAL: Orientation;
+        HORIZONTAL: Orientation;
+    };
 
     /**
      * The factory for creating additional animations to be played when animating to

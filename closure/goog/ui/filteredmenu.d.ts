@@ -118,16 +118,18 @@ declare module goog.ui.FilteredMenu {
      * Events fired by component.
      * @enum {string}
      */
-    interface EventType {
-        FILTER_CHANGED: string;
-    }
+    type EventType = string;
+    var EventType: {
+        FILTER_CHANGED: EventType;
+    };
 
     /**
      * Filter menu element ids.
      * @enum {string}
      * @private
      */
-    interface Id_ {
-        CONTENT_ELEMENT: string;
-    }
+    type Id_ = string;
+    var Id_: {
+        CONTENT_ELEMENT: Id_;
+    };
 }

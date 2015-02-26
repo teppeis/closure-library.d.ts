@@ -39,23 +39,25 @@ declare module goog.fs.FileSaver {
      *
      * @enum {number}
      */
-    interface ReadyState {
-        INIT: number;
-        WRITING: number;
-        DONE: number;
-    }
+    type ReadyState = number;
+    var ReadyState: {
+        INIT: ReadyState;
+        WRITING: ReadyState;
+        DONE: ReadyState;
+    };
 
     /**
      * Events emitted by a FileSaver.
      *
      * @enum {string}
      */
-    interface EventType {
-        WRITE_START: string;
-        PROGRESS: string;
-        WRITE: string;
-        ABORT: string;
-        ERROR: string;
-        WRITE_END: string;
-    }
+    type EventType = string;
+    var EventType: {
+        WRITE_START: EventType;
+        PROGRESS: EventType;
+        WRITE: EventType;
+        ABORT: EventType;
+        ERROR: EventType;
+        WRITE_END: EventType;
+    };
 }

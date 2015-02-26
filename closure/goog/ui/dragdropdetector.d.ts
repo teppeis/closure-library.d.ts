@@ -38,10 +38,11 @@ declare module goog.ui.DragDropDetector {
      * Drag and drop event types.
      * @enum {string}
      */
-    interface EventType {
-        IMAGE_DROPPED: string;
-        LINK_DROPPED: string;
-    }
+    type EventType = string;
+    var EventType: {
+        IMAGE_DROPPED: EventType;
+        LINK_DROPPED: EventType;
+    };
 
     /**
      * Creates a new image drop event object.

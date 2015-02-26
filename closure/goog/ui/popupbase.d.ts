@@ -273,20 +273,22 @@ declare module goog.ui.PopupBase {
      * Constants for type of Popup
      * @enum {string}
      */
-    interface Type {
-        TOGGLE_DISPLAY: string;
-        MOVE_OFFSCREEN: string;
-    }
+    type Type = string;
+    var Type: {
+        TOGGLE_DISPLAY: Type;
+        MOVE_OFFSCREEN: Type;
+    };
 
     /**
      * Constants for event type fired by Popup
      *
      * @enum {string}
      */
-    interface EventType {
-        BEFORE_SHOW: string;
-        SHOW: string;
-        BEFORE_HIDE: string;
-        HIDE: string;
-    }
+    type EventType = string;
+    var EventType: {
+        BEFORE_SHOW: EventType;
+        SHOW: EventType;
+        BEFORE_HIDE: EventType;
+        HIDE: EventType;
+    };
 }

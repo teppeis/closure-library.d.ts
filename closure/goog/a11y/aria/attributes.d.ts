@@ -4,169 +4,182 @@ declare module goog.a11y.aria {
      * ARIA states and properties.
      * @enum {string}
      */
-    interface State {
-        ACTIVEDESCENDANT: string;
-        ATOMIC: string;
-        AUTOCOMPLETE: string;
-        BUSY: string;
-        CHECKED: string;
-        CONTROLS: string;
-        DESCRIBEDBY: string;
-        DISABLED: string;
-        DROPEFFECT: string;
-        EXPANDED: string;
-        FLOWTO: string;
-        GRABBED: string;
-        HASPOPUP: string;
-        HIDDEN: string;
-        INVALID: string;
-        LABEL: string;
-        LABELLEDBY: string;
-        LEVEL: string;
-        LIVE: string;
-        MULTILINE: string;
-        MULTISELECTABLE: string;
-        ORIENTATION: string;
-        OWNS: string;
-        POSINSET: string;
-        PRESSED: string;
-        READONLY: string;
-        RELEVANT: string;
-        REQUIRED: string;
-        SELECTED: string;
-        SETSIZE: string;
-        SORT: string;
-        VALUEMAX: string;
-        VALUEMIN: string;
-        VALUENOW: string;
-        VALUETEXT: string;
-    }
+    type State = string;
+    var State: {
+        ACTIVEDESCENDANT: State;
+        ATOMIC: State;
+        AUTOCOMPLETE: State;
+        BUSY: State;
+        CHECKED: State;
+        CONTROLS: State;
+        DESCRIBEDBY: State;
+        DISABLED: State;
+        DROPEFFECT: State;
+        EXPANDED: State;
+        FLOWTO: State;
+        GRABBED: State;
+        HASPOPUP: State;
+        HIDDEN: State;
+        INVALID: State;
+        LABEL: State;
+        LABELLEDBY: State;
+        LEVEL: State;
+        LIVE: State;
+        MULTILINE: State;
+        MULTISELECTABLE: State;
+        ORIENTATION: State;
+        OWNS: State;
+        POSINSET: State;
+        PRESSED: State;
+        READONLY: State;
+        RELEVANT: State;
+        REQUIRED: State;
+        SELECTED: State;
+        SETSIZE: State;
+        SORT: State;
+        VALUEMAX: State;
+        VALUEMIN: State;
+        VALUENOW: State;
+        VALUETEXT: State;
+    };
 
     /**
      * ARIA state values for AutoCompleteValues.
      * @enum {string}
      */
-    interface AutoCompleteValues {
-        INLINE: string;
-        LIST: string;
-        BOTH: string;
-        NONE: string;
-    }
+    type AutoCompleteValues = string;
+    var AutoCompleteValues: {
+        INLINE: AutoCompleteValues;
+        LIST: AutoCompleteValues;
+        BOTH: AutoCompleteValues;
+        NONE: AutoCompleteValues;
+    };
 
     /**
      * ARIA state values for DropEffectValues.
      * @enum {string}
      */
-    interface DropEffectValues {
-        COPY: string;
-        MOVE: string;
-        LINK: string;
-        EXECUTE: string;
-        POPUP: string;
-        NONE: string;
-    }
+    type DropEffectValues = string;
+    var DropEffectValues: {
+        COPY: DropEffectValues;
+        MOVE: DropEffectValues;
+        LINK: DropEffectValues;
+        EXECUTE: DropEffectValues;
+        POPUP: DropEffectValues;
+        NONE: DropEffectValues;
+    };
 
     /**
      * ARIA state values for LivePriority.
      * @enum {string}
      */
-    interface LivePriority {
-        OFF: string;
-        POLITE: string;
-        ASSERTIVE: string;
-    }
+    type LivePriority = string;
+    var LivePriority: {
+        OFF: LivePriority;
+        POLITE: LivePriority;
+        ASSERTIVE: LivePriority;
+    };
 
     /**
      * ARIA state values for OrientationValues.
      * @enum {string}
      */
-    interface OrientationValues {
-        VERTICAL: string;
-        HORIZONTAL: string;
-    }
+    type OrientationValues = string;
+    var OrientationValues: {
+        VERTICAL: OrientationValues;
+        HORIZONTAL: OrientationValues;
+    };
 
     /**
      * ARIA state values for RelevantValues.
      * @enum {string}
      */
-    interface RelevantValues {
-        ADDITIONS: string;
-        REMOVALS: string;
-        TEXT: string;
-        ALL: string;
-    }
+    type RelevantValues = string;
+    var RelevantValues: {
+        ADDITIONS: RelevantValues;
+        REMOVALS: RelevantValues;
+        TEXT: RelevantValues;
+        ALL: RelevantValues;
+    };
 
     /**
      * ARIA state values for SortValues.
      * @enum {string}
      */
-    interface SortValues {
-        ASCENDING: string;
-        DESCENDING: string;
-        NONE: string;
-        OTHER: string;
-    }
+    type SortValues = string;
+    var SortValues: {
+        ASCENDING: SortValues;
+        DESCENDING: SortValues;
+        NONE: SortValues;
+        OTHER: SortValues;
+    };
 
     /**
      * ARIA state values for CheckedValues.
      * @enum {string}
      */
-    interface CheckedValues {
-        TRUE: string;
-        FALSE: string;
-        MIXED: string;
-        UNDEFINED: string;
-    }
+    type CheckedValues = string;
+    var CheckedValues: {
+        TRUE: CheckedValues;
+        FALSE: CheckedValues;
+        MIXED: CheckedValues;
+        UNDEFINED: CheckedValues;
+    };
 
     /**
      * ARIA state values for ExpandedValues.
      * @enum {string}
      */
-    interface ExpandedValues {
-        TRUE: string;
-        FALSE: string;
-        UNDEFINED: string;
-    }
+    type ExpandedValues = string;
+    var ExpandedValues: {
+        TRUE: ExpandedValues;
+        FALSE: ExpandedValues;
+        UNDEFINED: ExpandedValues;
+    };
 
     /**
      * ARIA state values for GrabbedValues.
      * @enum {string}
      */
-    interface GrabbedValues {
-        TRUE: string;
-        FALSE: string;
-        UNDEFINED: string;
-    }
+    type GrabbedValues = string;
+    var GrabbedValues: {
+        TRUE: GrabbedValues;
+        FALSE: GrabbedValues;
+        UNDEFINED: GrabbedValues;
+    };
 
     /**
      * ARIA state values for InvalidValues.
      * @enum {string}
      */
-    interface InvalidValues {
-        FALSE: string;
-        TRUE: string;
-        GRAMMAR: string;
-        SPELLING: string;
-    }
+    type InvalidValues = string;
+    var InvalidValues: {
+        FALSE: InvalidValues;
+        TRUE: InvalidValues;
+        GRAMMAR: InvalidValues;
+        SPELLING: InvalidValues;
+    };
 
     /**
      * ARIA state values for PressedValues.
      * @enum {string}
      */
-    interface PressedValues {
-        TRUE: string;
-        FALSE: string;
-        MIXED: string;
-        UNDEFINED: string;
-    }
+    type PressedValues = string;
+    var PressedValues: {
+        TRUE: PressedValues;
+        FALSE: PressedValues;
+        MIXED: PressedValues;
+        UNDEFINED: PressedValues;
+    };
 
     /**
      * ARIA state values for SelectedValues.
      * @enum {string}
      */
-    interface SelectedValues {
-        TRUE: string;
-        FALSE: string;
-        UNDEFINED: string;
-    }
+    type SelectedValues = string;
+    var SelectedValues: {
+        TRUE: SelectedValues;
+        FALSE: SelectedValues;
+        UNDEFINED: SelectedValues;
+    };
 }

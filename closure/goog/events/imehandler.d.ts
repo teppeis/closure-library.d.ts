@@ -30,11 +30,12 @@ declare module goog.events.ImeHandler {
      * about whether they were fired before or after the event in question.
      * @enum {string}
      */
-    interface EventType {
-        START: string;
-        UPDATE: string;
-        END: string;
-    }
+    type EventType = string;
+    var EventType: {
+        START: EventType;
+        UPDATE: EventType;
+        END: EventType;
+    };
 
     /**
      * An event fired by ImeHandler.

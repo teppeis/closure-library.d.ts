@@ -24,17 +24,19 @@ declare module goog.events.WheelEvent {
      * Enum type for the events fired by the wheel handler.
      * @enum {string}
      */
-    interface EventType {
-        WHEEL: string;
-    }
+    type EventType = string;
+    var EventType: {
+        WHEEL: EventType;
+    };
 
     /**
      * Units for the deltas in a WheelEvent.
      * @enum {number}
      */
-    interface DeltaMode {
-        PIXEL: number;
-        LINE: number;
-        PAGE: number;
-    }
+    type DeltaMode = number;
+    var DeltaMode: {
+        PIXEL: DeltaMode;
+        LINE: DeltaMode;
+        PAGE: DeltaMode;
+    };
 }

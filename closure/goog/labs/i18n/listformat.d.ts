@@ -62,11 +62,12 @@ declare module goog.labs.i18n.GenderInfo {
      * @enum {number}
      * @private
      */
-    interface ListGenderStyle_ {
-        NEUTRAL: number;
-        MIXED_NEUTRAL: number;
-        MALE_TAINTS: number;
-    }
+    type ListGenderStyle_ = number;
+    var ListGenderStyle_: {
+        NEUTRAL: ListGenderStyle_;
+        MIXED_NEUTRAL: ListGenderStyle_;
+        MALE_TAINTS: ListGenderStyle_;
+    };
 
     /**
      * Enumeration for the possible gender values.
@@ -74,9 +75,10 @@ declare module goog.labs.i18n.GenderInfo {
      * or the person has declined to state MALE or FEMALE.
      * @enum {number}
      */
-    interface Gender {
-        MALE: number;
-        FEMALE: number;
-        OTHER: number;
-    }
+    type Gender = number;
+    var Gender: {
+        MALE: Gender;
+        FEMALE: Gender;
+        OTHER: Gender;
+    };
 }

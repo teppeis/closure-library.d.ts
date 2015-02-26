@@ -118,10 +118,11 @@ declare module goog.ui.Ratings {
      * Enums for Ratings event type.
      * @enum {string}
      */
-    interface EventType {
-        CHANGE: string;
-        HIGHLIGHT_CHANGE: string;
-        HIGHLIGHT: string;
-        UNHIGHLIGHT: string;
-    }
+    type EventType = string;
+    var EventType: {
+        CHANGE: EventType;
+        HIGHLIGHT_CHANGE: EventType;
+        HIGHLIGHT: EventType;
+        UNHIGHLIGHT: EventType;
+    };
 }

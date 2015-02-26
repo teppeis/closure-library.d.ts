@@ -495,93 +495,99 @@ declare module goog.net.BrowserChannel {
      * Enum type for the browser channel state machine.
      * @enum {number}
      */
-    interface State {
-        CLOSED: number;
-        INIT: number;
-        OPENING: number;
-        OPENED: number;
-    }
+    type State = number;
+    var State: {
+        CLOSED: State;
+        INIT: State;
+        OPENING: State;
+        OPENED: State;
+    };
 
     /**
      * Enum type for identifying a BrowserChannel error.
      * @enum {number}
      */
-    interface Error {
-        OK: number;
-        REQUEST_FAILED: number;
-        LOGGED_OUT: number;
-        NO_DATA: number;
-        UNKNOWN_SESSION_ID: number;
-        STOP: number;
-        NETWORK: number;
-        BLOCKED: number;
-        BAD_DATA: number;
-        BAD_RESPONSE: number;
-        ACTIVE_X_BLOCKED: number;
-    }
+    type Error = number;
+    var Error: {
+        OK: Error;
+        REQUEST_FAILED: Error;
+        LOGGED_OUT: Error;
+        NO_DATA: Error;
+        UNKNOWN_SESSION_ID: Error;
+        STOP: Error;
+        NETWORK: Error;
+        BLOCKED: Error;
+        BAD_DATA: Error;
+        BAD_RESPONSE: Error;
+        ACTIVE_X_BLOCKED: Error;
+    };
 
     /**
      * Internal enum type for the two browser channel channel types.
      * @enum {number}
      * @private
      */
-    interface ChannelType_ {
-        FORWARD_CHANNEL: number;
-        BACK_CHANNEL: number;
-    }
+    type ChannelType_ = number;
+    var ChannelType_: {
+        FORWARD_CHANNEL: ChannelType_;
+        BACK_CHANNEL: ChannelType_;
+    };
 
     /**
      * Events fired by BrowserChannel and associated objects
      * @enum {string}
      */
-    interface Event {
-        STAT_EVENT: string;
-        TIMING_EVENT: string;
-        SERVER_REACHABILITY_EVENT: string;
-    }
+    type Event = string;
+    var Event: {
+        STAT_EVENT: Event;
+        TIMING_EVENT: Event;
+        SERVER_REACHABILITY_EVENT: Event;
+    };
 
     /**
      * Types of events which reveal information about the reachability of the
      * server.
      * @enum {number}
      */
-    interface ServerReachability {
-        REQUEST_MADE: number;
-        REQUEST_SUCCEEDED: number;
-        REQUEST_FAILED: number;
-        BACK_CHANNEL_ACTIVITY: number;
-    }
+    type ServerReachability = number;
+    var ServerReachability: {
+        REQUEST_MADE: ServerReachability;
+        REQUEST_SUCCEEDED: ServerReachability;
+        REQUEST_FAILED: ServerReachability;
+        BACK_CHANNEL_ACTIVITY: ServerReachability;
+    };
 
     /**
      * Enum that identifies events for statistics that are interesting to track.
      * TODO(user) - Change name not to use Event or use EventTarget
      * @enum {number}
      */
-    interface Stat {
-        CONNECT_ATTEMPT: number;
-        ERROR_NETWORK: number;
-        ERROR_OTHER: number;
-        TEST_STAGE_ONE_START: number;
-        CHANNEL_BLOCKED: number;
-        TEST_STAGE_TWO_START: number;
-        TEST_STAGE_TWO_DATA_ONE: number;
-        TEST_STAGE_TWO_DATA_TWO: number;
-        TEST_STAGE_TWO_DATA_BOTH: number;
-        TEST_STAGE_ONE_FAILED: number;
-        TEST_STAGE_TWO_FAILED: number;
-        PROXY: number;
-        NOPROXY: number;
-        REQUEST_UNKNOWN_SESSION_ID: number;
-        REQUEST_BAD_STATUS: number;
-        REQUEST_INCOMPLETE_DATA: number;
-        REQUEST_BAD_DATA: number;
-        REQUEST_NO_DATA: number;
-        REQUEST_TIMEOUT: number;
-        BACKCHANNEL_MISSING: number;
-        BACKCHANNEL_DEAD: number;
-        BROWSER_OFFLINE: number;
-        ACTIVE_X_BLOCKED: number;
-    }
+    type Stat = number;
+    var Stat: {
+        CONNECT_ATTEMPT: Stat;
+        ERROR_NETWORK: Stat;
+        ERROR_OTHER: Stat;
+        TEST_STAGE_ONE_START: Stat;
+        CHANNEL_BLOCKED: Stat;
+        TEST_STAGE_TWO_START: Stat;
+        TEST_STAGE_TWO_DATA_ONE: Stat;
+        TEST_STAGE_TWO_DATA_TWO: Stat;
+        TEST_STAGE_TWO_DATA_BOTH: Stat;
+        TEST_STAGE_ONE_FAILED: Stat;
+        TEST_STAGE_TWO_FAILED: Stat;
+        PROXY: Stat;
+        NOPROXY: Stat;
+        REQUEST_UNKNOWN_SESSION_ID: Stat;
+        REQUEST_BAD_STATUS: Stat;
+        REQUEST_INCOMPLETE_DATA: Stat;
+        REQUEST_BAD_DATA: Stat;
+        REQUEST_NO_DATA: Stat;
+        REQUEST_TIMEOUT: Stat;
+        BACKCHANNEL_MISSING: Stat;
+        BACKCHANNEL_DEAD: Stat;
+        BROWSER_OFFLINE: Stat;
+        ACTIVE_X_BLOCKED: Stat;
+    };
 
     /**
      * Simple container class for a (mapId, map) pair.

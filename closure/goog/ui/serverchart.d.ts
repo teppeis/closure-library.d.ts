@@ -685,87 +685,93 @@ declare module goog.ui.ServerChart {
      *
      * @enum {string}
      */
-    interface EncodingType {
-        AUTOMATIC: string;
-        EXTENDED: string;
-        SIMPLE: string;
-        TEXT: string;
-    }
+    type EncodingType = string;
+    var EncodingType: {
+        AUTOMATIC: EncodingType;
+        EXTENDED: EncodingType;
+        SIMPLE: EncodingType;
+        TEXT: EncodingType;
+    };
 
     /**
      * Enum of chart types with their short names used by the chartserver.
      *
      * @enum {string}
      */
-    interface ChartType {
-        BAR: string;
-        CLOCK: string;
-        CONCENTRIC_PIE: string;
-        FILLEDLINE: string;
-        FINANCE: string;
-        GOOGLEOMETER: string;
-        HORIZONTAL_GROUPED_BAR: string;
-        HORIZONTAL_STACKED_BAR: string;
-        LINE: string;
-        MAP: string;
-        MAPUSA: string;
-        MAPWORLD: string;
-        PIE: string;
-        PIE3D: string;
-        RADAR: string;
-        SCATTER: string;
-        SPARKLINE: string;
-        VENN: string;
-        VERTICAL_GROUPED_BAR: string;
-        VERTICAL_STACKED_BAR: string;
-        XYLINE: string;
-    }
+    type ChartType = string;
+    var ChartType: {
+        BAR: ChartType;
+        CLOCK: ChartType;
+        CONCENTRIC_PIE: ChartType;
+        FILLEDLINE: ChartType;
+        FINANCE: ChartType;
+        GOOGLEOMETER: ChartType;
+        HORIZONTAL_GROUPED_BAR: ChartType;
+        HORIZONTAL_STACKED_BAR: ChartType;
+        LINE: ChartType;
+        MAP: ChartType;
+        MAPUSA: ChartType;
+        MAPWORLD: ChartType;
+        PIE: ChartType;
+        PIE3D: ChartType;
+        RADAR: ChartType;
+        SCATTER: ChartType;
+        SPARKLINE: ChartType;
+        VENN: ChartType;
+        VERTICAL_GROUPED_BAR: ChartType;
+        VERTICAL_STACKED_BAR: ChartType;
+        XYLINE: ChartType;
+    };
 
     /**
      * Enum of multi-axis types.
      *
      * @enum {string}
      */
-    interface MultiAxisType {
-        X_AXIS: string;
-        LEFT_Y_AXIS: string;
-        RIGHT_Y_AXIS: string;
-        TOP_AXIS: string;
-    }
+    type MultiAxisType = string;
+    var MultiAxisType: {
+        X_AXIS: MultiAxisType;
+        LEFT_Y_AXIS: MultiAxisType;
+        RIGHT_Y_AXIS: MultiAxisType;
+        TOP_AXIS: MultiAxisType;
+    };
 
     /**
      * Enum of multi-axis alignments.
      *
      * @enum {number}
      */
-    interface MultiAxisAlignment {
-        ALIGN_LEFT: number;
-        ALIGN_CENTER: number;
-        ALIGN_RIGHT: number;
-    }
+    type MultiAxisAlignment = number;
+    var MultiAxisAlignment: {
+        ALIGN_LEFT: MultiAxisAlignment;
+        ALIGN_CENTER: MultiAxisAlignment;
+        ALIGN_RIGHT: MultiAxisAlignment;
+    };
 
     /**
      * Enum of legend positions.
      *
      * @enum {string}
      */
-    interface LegendPosition {
-        TOP: string;
-        BOTTOM: string;
-        LEFT: string;
-        RIGHT: string;
-    }
+    type LegendPosition = string;
+    var LegendPosition: {
+        TOP: LegendPosition;
+        BOTTOM: LegendPosition;
+        LEFT: LegendPosition;
+        RIGHT: LegendPosition;
+    };
 
     /**
      * Enum of line and tick options for an axis.
      *
      * @enum {string}
      */
-    interface AxisDisplayType {
-        LINE_AND_TICKS: string;
-        LINE: string;
-        TICKS: string;
-    }
+    type AxisDisplayType = string;
+    var AxisDisplayType: {
+        LINE_AND_TICKS: AxisDisplayType;
+        LINE: AxisDisplayType;
+        TICKS: AxisDisplayType;
+    };
 
     /**
      * Enum of chart maximum values in pixels, as listed at:
@@ -773,60 +779,63 @@ declare module goog.ui.ServerChart {
      *
      * @enum {number}
      */
-    interface MaximumValue {
-        WIDTH: number;
-        HEIGHT: number;
-        MAP_WIDTH: number;
-        MAP_HEIGHT: number;
-        TOTAL_AREA: number;
-    }
+    type MaximumValue = number;
+    var MaximumValue: {
+        WIDTH: MaximumValue;
+        HEIGHT: MaximumValue;
+        MAP_WIDTH: MaximumValue;
+        MAP_HEIGHT: MaximumValue;
+        TOTAL_AREA: MaximumValue;
+    };
 
     /**
      * Enum of ChartServer URI parameters.
      *
      * @enum {string}
      */
-    interface UriParam {
-        BACKGROUND_FILL: string;
-        BAR_HEIGHT: string;
-        DATA: string;
-        DATA_COLORS: string;
-        DATA_LABELS: string;
-        DATA_SCALING: string;
-        DIGITAL_SIGNATURE: string;
-        GEOGRAPHICAL_REGION: string;
-        GRID: string;
-        LABEL_COLORS: string;
-        LEFT_Y_LABELS: string;
-        LEGEND: string;
-        LEGEND_POSITION: string;
-        LEGEND_TEXTS: string;
-        LINE_STYLES: string;
-        MARGINS: string;
-        MARKERS: string;
-        MISC_PARAMS: string;
-        MULTI_AXIS_LABEL_POSITION: string;
-        MULTI_AXIS_LABEL_TEXT: string;
-        MULTI_AXIS_RANGE: string;
-        MULTI_AXIS_STYLE: string;
-        MULTI_AXIS_TYPES: string;
-        RIGHT_LABELS: string;
-        RIGHT_LABEL_POSITIONS: string;
-        SIZE: string;
-        TITLE: string;
-        TITLE_FORMAT: string;
-        TYPE: string;
-        X_AXIS_STYLE: string;
-        X_LABELS: string;
-    }
+    type UriParam = string;
+    var UriParam: {
+        BACKGROUND_FILL: UriParam;
+        BAR_HEIGHT: UriParam;
+        DATA: UriParam;
+        DATA_COLORS: UriParam;
+        DATA_LABELS: UriParam;
+        DATA_SCALING: UriParam;
+        DIGITAL_SIGNATURE: UriParam;
+        GEOGRAPHICAL_REGION: UriParam;
+        GRID: UriParam;
+        LABEL_COLORS: UriParam;
+        LEFT_Y_LABELS: UriParam;
+        LEGEND: UriParam;
+        LEGEND_POSITION: UriParam;
+        LEGEND_TEXTS: UriParam;
+        LINE_STYLES: UriParam;
+        MARGINS: UriParam;
+        MARKERS: UriParam;
+        MISC_PARAMS: UriParam;
+        MULTI_AXIS_LABEL_POSITION: UriParam;
+        MULTI_AXIS_LABEL_TEXT: UriParam;
+        MULTI_AXIS_RANGE: UriParam;
+        MULTI_AXIS_STYLE: UriParam;
+        MULTI_AXIS_TYPES: UriParam;
+        RIGHT_LABELS: UriParam;
+        RIGHT_LABEL_POSITIONS: UriParam;
+        SIZE: UriParam;
+        TITLE: UriParam;
+        TITLE_FORMAT: UriParam;
+        TYPE: UriParam;
+        X_AXIS_STYLE: UriParam;
+        X_LABELS: UriParam;
+    };
 
     /**
      * Event types dispatched by the ServerChart object
      * @enum {string}
      */
-    interface Event {
-        URI_TOO_LONG: string;
-    }
+    type Event = string;
+    var Event: {
+        URI_TOO_LONG: Event;
+    };
 
     /**
      * Class for the event dispatched on the ServerChart when the resulting URI

@@ -53,8 +53,9 @@ declare module goog.ui.tree.TypeAhead {
      *
      * @enum {number}
      */
-    interface Offset {
-        DOWN: number;
-        UP: number;
-    }
+    type Offset = number;
+    var Offset: {
+        DOWN: Offset;
+        UP: Offset;
+    };
 }

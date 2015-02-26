@@ -126,19 +126,20 @@ declare module goog.ds.Expr {
      * @enum {string}
      * @private
      */
-    interface String_ {
-        SEPARATOR: string;
-        CURRENT_NODE_EXPR: string;
-        EMPTY_EXPR: string;
-        ATTRIBUTE_START: string;
-        ALL_CHILD_NODES_EXPR: string;
-        ALL_ATTRIBUTES_EXPR: string;
-        ALL_ELEMENTS_EXPR: string;
-        NAME_EXPR: string;
-        COUNT_EXPR: string;
-        POSITION_EXPR: string;
-        INDEX_START: string;
-        INDEX_END: string;
-        CAN_BE_EMPTY: string;
-    }
+    type String_ = string;
+    var String_: {
+        SEPARATOR: String_;
+        CURRENT_NODE_EXPR: String_;
+        EMPTY_EXPR: String_;
+        ATTRIBUTE_START: String_;
+        ALL_CHILD_NODES_EXPR: String_;
+        ALL_ATTRIBUTES_EXPR: String_;
+        ALL_ELEMENTS_EXPR: String_;
+        NAME_EXPR: String_;
+        COUNT_EXPR: String_;
+        POSITION_EXPR: String_;
+        INDEX_START: String_;
+        INDEX_END: String_;
+        CAN_BE_EMPTY: String_;
+    };
 }

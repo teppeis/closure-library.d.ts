@@ -85,7 +85,8 @@ declare module goog.ui.MenuBase {
      * Events fired by the Menu
      * @enum {string}
      */
-    interface Events {
-        ITEM_ACTION: string;
-    }
+    type Events = string;
+    var Events: {
+        ITEM_ACTION: Events;
+    };
 }

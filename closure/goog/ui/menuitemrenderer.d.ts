@@ -144,9 +144,10 @@ declare module goog.ui.MenuItemRenderer {
      * @enum {number}
      * @private
      */
-    interface CompositeCssClassIndex_ {
-        HOVER: number;
-        CHECKBOX: number;
-        CONTENT: number;
-    }
+    type CompositeCssClassIndex_ = number;
+    var CompositeCssClassIndex_: {
+        HOVER: CompositeCssClassIndex_;
+        CHECKBOX: CompositeCssClassIndex_;
+        CONTENT: CompositeCssClassIndex_;
+    };
 }

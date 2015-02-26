@@ -4,44 +4,45 @@ declare module goog.editor {
      * Commands that the editor can excute via execCommand or queryCommandValue.
      * @enum {string}
      */
-    interface Command {
-        UNDO: string;
-        REDO: string;
-        LINK: string;
-        FORMAT_BLOCK: string;
-        INDENT: string;
-        OUTDENT: string;
-        REMOVE_FORMAT: string;
-        STRIKE_THROUGH: string;
-        HORIZONTAL_RULE: string;
-        SUBSCRIPT: string;
-        SUPERSCRIPT: string;
-        UNDERLINE: string;
-        BOLD: string;
-        ITALIC: string;
-        FONT_SIZE: string;
-        FONT_FACE: string;
-        FONT_COLOR: string;
-        EMOTICON: string;
-        EQUATION: string;
-        BACKGROUND_COLOR: string;
-        ORDERED_LIST: string;
-        UNORDERED_LIST: string;
-        TABLE: string;
-        JUSTIFY_CENTER: string;
-        JUSTIFY_FULL: string;
-        JUSTIFY_RIGHT: string;
-        JUSTIFY_LEFT: string;
-        BLOCKQUOTE: string;
-        DIR_LTR: string;
-        DIR_RTL: string;
-        IMAGE: string;
-        EDIT_HTML: string;
-        UPDATE_LINK_BUBBLE: string;
-        DEFAULT_TAG: string;
-        CLEAR_LOREM: string;
-        UPDATE_LOREM: string;
-        USING_LOREM: string;
-        MODAL_LINK_EDITOR: string;
-    }
+    type Command = string;
+    var Command: {
+        UNDO: Command;
+        REDO: Command;
+        LINK: Command;
+        FORMAT_BLOCK: Command;
+        INDENT: Command;
+        OUTDENT: Command;
+        REMOVE_FORMAT: Command;
+        STRIKE_THROUGH: Command;
+        HORIZONTAL_RULE: Command;
+        SUBSCRIPT: Command;
+        SUPERSCRIPT: Command;
+        UNDERLINE: Command;
+        BOLD: Command;
+        ITALIC: Command;
+        FONT_SIZE: Command;
+        FONT_FACE: Command;
+        FONT_COLOR: Command;
+        EMOTICON: Command;
+        EQUATION: Command;
+        BACKGROUND_COLOR: Command;
+        ORDERED_LIST: Command;
+        UNORDERED_LIST: Command;
+        TABLE: Command;
+        JUSTIFY_CENTER: Command;
+        JUSTIFY_FULL: Command;
+        JUSTIFY_RIGHT: Command;
+        JUSTIFY_LEFT: Command;
+        BLOCKQUOTE: Command;
+        DIR_LTR: Command;
+        DIR_RTL: Command;
+        IMAGE: Command;
+        EDIT_HTML: Command;
+        UPDATE_LINK_BUBBLE: Command;
+        DEFAULT_TAG: Command;
+        CLEAR_LOREM: Command;
+        UPDATE_LOREM: Command;
+        USING_LOREM: Command;
+        MODAL_LINK_EDITOR: Command;
+    };
 }

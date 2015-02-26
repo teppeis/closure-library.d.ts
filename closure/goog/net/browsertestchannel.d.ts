@@ -108,9 +108,10 @@ declare module goog.net.BrowserTestChannel {
      * @enum {number}
      * @private
      */
-    interface State_ {
-        INIT: number;
-        CHECKING_BLOCKED: number;
-        CONNECTION_TESTING: number;
-    }
+    type State_ = number;
+    var State_: {
+        INIT: State_;
+        CHECKING_BLOCKED: State_;
+        CONNECTION_TESTING: State_;
+    };
 }

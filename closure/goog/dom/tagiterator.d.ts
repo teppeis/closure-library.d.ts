@@ -12,11 +12,12 @@ declare module goog.dom {
      *
      * @enum {number}
      */
-    interface TagWalkType {
-        START_TAG: number;
-        OTHER: number;
-        END_TAG: number;
-    }
+    type TagWalkType = number;
+    var TagWalkType: {
+        START_TAG: TagWalkType;
+        OTHER: TagWalkType;
+        END_TAG: TagWalkType;
+    };
 
     /**
      * A DOM tree traversal iterator.

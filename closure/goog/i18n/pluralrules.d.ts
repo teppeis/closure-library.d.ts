@@ -4,14 +4,15 @@ declare module goog.i18n.pluralRules {
      * Plural pattern keyword
      * @enum {string}
      */
-    interface Keyword {
-        ZERO: string;
-        ONE: string;
-        TWO: string;
-        FEW: string;
-        MANY: string;
-        OTHER: string;
-    }
+    type Keyword = string;
+    var Keyword: {
+        ZERO: Keyword;
+        ONE: Keyword;
+        TWO: Keyword;
+        FEW: Keyword;
+        MANY: Keyword;
+        OTHER: Keyword;
+    };
 
     /**
      * Selected Plural rules by locale.

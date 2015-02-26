@@ -5,12 +5,13 @@ declare module goog.labs.format.csv {
      * @enum {!Object}
      * @private
      */
-    interface Sentinels_ {
-        EMPTY: Object;
-        EOF: Object;
-        EOR: Object;
-        NEWLINE: Object;
-    }
+    type Sentinels_ = Object;
+    var Sentinels_: {
+        EMPTY: Sentinels_;
+        EOF: Sentinels_;
+        EOR: Sentinels_;
+        NEWLINE: Sentinels_;
+    };
 
     /**
      * A token -- a single-character string or a sentinel.

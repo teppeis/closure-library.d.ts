@@ -162,13 +162,14 @@ declare module goog.ui.media.FlashObject {
      * @enum {number}
      * @private
      */
-    interface SwfReadyStates_ {
-        LOADING: number;
-        UNINITIALIZED: number;
-        LOADED: number;
-        INTERACTIVE: number;
-        COMPLETE: number;
-    }
+    type SwfReadyStates_ = number;
+    var SwfReadyStates_: {
+        LOADING: SwfReadyStates_;
+        UNINITIALIZED: SwfReadyStates_;
+        LOADED: SwfReadyStates_;
+        INTERACTIVE: SwfReadyStates_;
+        COMPLETE: SwfReadyStates_;
+    };
 
     /**
      * The different modes for displaying a SWF. Note that different wmodes
@@ -177,11 +178,12 @@ declare module goog.ui.media.FlashObject {
      *
      * @enum {string}
      */
-    interface Wmodes {
-        OPAQUE: string;
-        TRANSPARENT: string;
-        WINDOW: string;
-    }
+    type Wmodes = string;
+    var Wmodes: {
+        OPAQUE: Wmodes;
+        TRANSPARENT: Wmodes;
+        WINDOW: Wmodes;
+    };
 
     /**
      * The different levels of allowScriptAccess.
@@ -191,9 +193,10 @@ declare module goog.ui.media.FlashObject {
      *
      * @enum {string}
      */
-    interface ScriptAccessLevel {
-        ALWAYS: string;
-        SAME_DOMAIN: string;
-        NEVER: string;
-    }
+    type ScriptAccessLevel = string;
+    var ScriptAccessLevel: {
+        ALWAYS: ScriptAccessLevel;
+        SAME_DOMAIN: ScriptAccessLevel;
+        NEVER: ScriptAccessLevel;
+    };
 }

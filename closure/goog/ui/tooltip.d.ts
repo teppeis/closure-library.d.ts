@@ -332,22 +332,24 @@ declare module goog.ui.Tooltip {
      * Possible states for the tooltip to be in.
      * @enum {number}
      */
-    interface State {
-        INACTIVE: number;
-        WAITING_TO_SHOW: number;
-        SHOWING: number;
-        WAITING_TO_HIDE: number;
-        UPDATING: number;
-    }
+    type State = number;
+    var State: {
+        INACTIVE: State;
+        WAITING_TO_SHOW: State;
+        SHOWING: State;
+        WAITING_TO_HIDE: State;
+        UPDATING: State;
+    };
 
     /**
      * Popup activation types. Used to select a positioning strategy.
      * @enum {number}
      */
-    interface Activation {
-        CURSOR: number;
-        FOCUS: number;
-    }
+    type Activation = number;
+    var Activation: {
+        CURSOR: Activation;
+        FOCUS: Activation;
+    };
 
     /**
      * Popup position implementation that positions the popup (the tooltip in this

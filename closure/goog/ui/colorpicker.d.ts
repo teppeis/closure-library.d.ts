@@ -140,7 +140,8 @@ declare module goog.ui.ColorPicker {
      * Constants for event names.
      * @enum {string}
      */
-    interface EventType {
-        CHANGE: string;
-    }
+    type EventType = string;
+    var EventType: {
+        CHANGE: EventType;
+    };
 }

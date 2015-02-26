@@ -33,18 +33,19 @@ declare module goog.editor.plugins.TableEditor {
      * Commands supported by goog.editor.plugins.TableEditor.
      * @enum {string}
      */
-    interface COMMAND {
-        TABLE: string;
-        INSERT_ROW_AFTER: string;
-        INSERT_ROW_BEFORE: string;
-        INSERT_COLUMN_AFTER: string;
-        INSERT_COLUMN_BEFORE: string;
-        REMOVE_ROWS: string;
-        REMOVE_COLUMNS: string;
-        SPLIT_CELL: string;
-        MERGE_CELLS: string;
-        REMOVE_TABLE: string;
-    }
+    type COMMAND = string;
+    var COMMAND: {
+        TABLE: COMMAND;
+        INSERT_ROW_AFTER: COMMAND;
+        INSERT_ROW_BEFORE: COMMAND;
+        INSERT_COLUMN_AFTER: COMMAND;
+        INSERT_COLUMN_BEFORE: COMMAND;
+        REMOVE_ROWS: COMMAND;
+        REMOVE_COLUMNS: COMMAND;
+        SPLIT_CELL: COMMAND;
+        MERGE_CELLS: COMMAND;
+        REMOVE_TABLE: COMMAND;
+    };
 
     /**
      * Class representing the selected cell objects within a single  table.

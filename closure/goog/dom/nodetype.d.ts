@@ -13,18 +13,19 @@ declare module goog.dom {
      * See http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1950641247
      * @enum {number}
      */
-    interface NodeType {
-        ELEMENT: number;
-        ATTRIBUTE: number;
-        TEXT: number;
-        CDATA_SECTION: number;
-        ENTITY_REFERENCE: number;
-        ENTITY: number;
-        PROCESSING_INSTRUCTION: number;
-        COMMENT: number;
-        DOCUMENT: number;
-        DOCUMENT_TYPE: number;
-        DOCUMENT_FRAGMENT: number;
-        NOTATION: number;
-    }
+    type NodeType = number;
+    var NodeType: {
+        ELEMENT: NodeType;
+        ATTRIBUTE: NodeType;
+        TEXT: NodeType;
+        CDATA_SECTION: NodeType;
+        ENTITY_REFERENCE: NodeType;
+        ENTITY: NodeType;
+        PROCESSING_INSTRUCTION: NodeType;
+        COMMENT: NodeType;
+        DOCUMENT: NodeType;
+        DOCUMENT_TYPE: NodeType;
+        DOCUMENT_FRAGMENT: NodeType;
+        NOTATION: NodeType;
+    };
 }

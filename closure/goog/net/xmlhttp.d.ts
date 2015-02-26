@@ -26,10 +26,11 @@ declare module goog.net.XmlHttp {
      * Type of options that an XmlHttp object can have.
      * @enum {number}
      */
-    interface OptionType {
-        USE_NULL_FUNCTION: number;
-        LOCAL_REQUEST_ERROR: number;
-    }
+    type OptionType = number;
+    var OptionType: {
+        USE_NULL_FUNCTION: OptionType;
+        LOCAL_REQUEST_ERROR: OptionType;
+    };
 
     /**
      * Status constants for XMLHTTP, matches:
@@ -37,13 +38,14 @@ declare module goog.net.XmlHttp {
      *   en-us/xmlsdk/html/0e6a34e4-f90c-489d-acff-cb44242fafc6.asp
      * @enum {number}
      */
-    interface ReadyState {
-        UNINITIALIZED: number;
-        LOADING: number;
-        LOADED: number;
-        INTERACTIVE: number;
-        COMPLETE: number;
-    }
+    type ReadyState = number;
+    var ReadyState: {
+        UNINITIALIZED: ReadyState;
+        LOADING: ReadyState;
+        LOADED: ReadyState;
+        INTERACTIVE: ReadyState;
+        COMPLETE: ReadyState;
+    };
 
     /**
      * Gets the options to use with the XMLHttpRequest objects obtained using

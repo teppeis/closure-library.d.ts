@@ -110,12 +110,13 @@ declare module goog.ui.TabPane {
      *
      * @enum {number}
      */
-    interface TabLocation {
-        TOP: number;
-        BOTTOM: number;
-        LEFT: number;
-        RIGHT: number;
-    }
+    type TabLocation = number;
+    var TabLocation: {
+        TOP: TabLocation;
+        BOTTOM: TabLocation;
+        LEFT: TabLocation;
+        RIGHT: TabLocation;
+    };
 
     /**
      * Object representing an individual tab pane.

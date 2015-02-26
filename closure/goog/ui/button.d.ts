@@ -89,5 +89,5 @@ declare module goog.ui.Button {
      * @enum {number}
      * @deprecated use {@link goog.ui.ButtonSide} instead.
      */
-    interface Side extends goog.ui.ButtonSide {}
+    export import Side = goog.ui.ButtonSide;
 }

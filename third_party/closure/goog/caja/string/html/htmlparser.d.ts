@@ -95,25 +95,27 @@ declare module goog.string$.html.HtmlParser {
      * TODO(user): use {@code goog.string.htmlEncode} instead.
      * @enum {string}
      */
-    interface Entities {
-        lt: string;
-        gt: string;
-        amp: string;
-        nbsp: string;
-        quot: string;
-        apos: string;
-    }
+    type Entities = string;
+    var Entities: {
+        lt: Entities;
+        gt: Entities;
+        amp: Entities;
+        nbsp: Entities;
+        quot: Entities;
+        apos: Entities;
+    };
 
     /**
      * The html eflags, used internally on the parser.
      * @enum {number}
      */
-    interface EFlags {
-        OPTIONAL_ENDTAG: number;
-        EMPTY: number;
-        CDATA: number;
-        RCDATA: number;
-        UNSAFE: number;
-        FOLDABLE: number;
-    }
+    type EFlags = number;
+    var EFlags: {
+        OPTIONAL_ENDTAG: EFlags;
+        EMPTY: EFlags;
+        CDATA: EFlags;
+        RCDATA: EFlags;
+        UNSAFE: EFlags;
+        FOLDABLE: EFlags;
+    };
 }

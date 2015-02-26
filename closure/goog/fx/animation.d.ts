@@ -127,22 +127,23 @@ declare module goog.fx.Animation {
      * Events fired by the animation.
      * @enum {string}
      */
-    interface EventType {
-        PLAY: string;
-        BEGIN: string;
-        RESUME: string;
-        END: string;
-        STOP: string;
-        FINISH: string;
-        PAUSE: string;
-        ANIMATE: string;
-        DESTROY: string;
-    }
+    type EventType = string;
+    var EventType: {
+        PLAY: EventType;
+        BEGIN: EventType;
+        RESUME: EventType;
+        END: EventType;
+        STOP: EventType;
+        FINISH: EventType;
+        PAUSE: EventType;
+        ANIMATE: EventType;
+        DESTROY: EventType;
+    };
 
     /**
      * Enum for the possible states of an animation.
      * @deprecated Use goog.fx.Transition.State instead.
      * @enum {number}
      */
-    interface State extends goog.fx.TransitionBase.State {}
+    export import State = goog.fx.TransitionBase.State;
 }

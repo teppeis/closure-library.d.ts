@@ -5,10 +5,11 @@ declare module goog.ui {
      * for details.
      * @enum {number}
      */
-    interface ButtonSide {
-        NONE: number;
-        START: number;
-        END: number;
-        BOTH: number;
-    }
+    type ButtonSide = number;
+    var ButtonSide: {
+        NONE: ButtonSide;
+        START: ButtonSide;
+        END: ButtonSide;
+        BOTH: ButtonSide;
+    };
 }

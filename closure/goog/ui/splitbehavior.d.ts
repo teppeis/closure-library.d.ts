@@ -95,9 +95,10 @@ declare module goog.ui.SplitBehavior {
      * An emum of split behavior handlers.
      * @enum {function(goog.ui.Control,Event)}
      */
-    interface DefaultHandlers {
-        NONE: (arg0: goog.ui.Control, arg1: Event) => any;
-        CAPTION: (arg0: goog.ui.Control, arg1: Event) => any;
-        VALUE: (arg0: goog.ui.Control, arg1: Event) => any;
-    }
+    type DefaultHandlers = (arg0: goog.ui.Control, arg1: Event) => any;
+    var DefaultHandlers: {
+        NONE: DefaultHandlers;
+        CAPTION: DefaultHandlers;
+        VALUE: DefaultHandlers;
+    };
 }

@@ -77,7 +77,7 @@ declare module goog.ui.Popup {
      * @deprecated Use {@link goog.positioning.Overflow} instead, this alias will be
      *     removed at the end of Q1 2009.
      */
-    interface Overflow extends goog.positioning.Overflow {}
+    export import Overflow = goog.positioning.Overflow;
 
     /**
      * Encapsulates a popup position where the popup is anchored at a corner of

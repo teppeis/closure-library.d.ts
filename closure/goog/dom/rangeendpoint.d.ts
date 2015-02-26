@@ -4,8 +4,9 @@ declare module goog.dom {
      * Constants for selection endpoints.
      * @enum {number}
      */
-    interface RangeEndpoint {
-        START: number;
-        END: number;
-    }
+    type RangeEndpoint = number;
+    var RangeEndpoint: {
+        START: RangeEndpoint;
+        END: RangeEndpoint;
+    };
 }

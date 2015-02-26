@@ -78,19 +78,21 @@ declare module goog.ui.ScrollFloater {
      * Events dispatched by this component.
      * @enum {string}
      */
-    interface EventType {
-        FLOAT: string;
-        DOCK: string;
-        PIN: string;
-    }
+    type EventType = string;
+    var EventType: {
+        FLOAT: EventType;
+        DOCK: EventType;
+        PIN: EventType;
+    };
 
     /**
      * The element can float at different positions on the page.
      * @enum {number}
      * @private
      */
-    interface FloatMode_ {
-        TOP: number;
-        BOTTOM: number;
-    }
+    type FloatMode_ = number;
+    var FloatMode_: {
+        TOP: FloatMode_;
+        BOTTOM: FloatMode_;
+    };
 }

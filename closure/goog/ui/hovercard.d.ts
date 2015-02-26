@@ -122,14 +122,15 @@ declare module goog.ui.HoverCard {
      * Enum for event type fired by HoverCard.
      * @enum {string}
      */
-    interface EventType {
-        TRIGGER: string;
-        CANCEL_TRIGGER: string;
-        BEFORE_SHOW: string;
-        SHOW: string;
-        BEFORE_HIDE: string;
-        HIDE: string;
-    }
+    type EventType = string;
+    var EventType: {
+        TRIGGER: EventType;
+        CANCEL_TRIGGER: EventType;
+        BEFORE_SHOW: EventType;
+        SHOW: EventType;
+        BEFORE_HIDE: EventType;
+        HIDE: EventType;
+    };
 
     /**
      * Create a trigger event for specified anchor and optional data.

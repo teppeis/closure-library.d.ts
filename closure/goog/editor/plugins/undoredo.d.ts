@@ -107,10 +107,11 @@ declare module goog.editor.plugins.UndoRedo {
      * Commands implemented by this plugin.
      * @enum {string}
      */
-    interface COMMAND {
-        UNDO: string;
-        REDO: string;
-    }
+    type COMMAND = string;
+    var COMMAND: {
+        UNDO: COMMAND;
+        REDO: COMMAND;
+    };
 
     /**
      * This object encapsulates the state of an editable field.

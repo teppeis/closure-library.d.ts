@@ -42,5 +42,5 @@ declare module goog.ui.Slider {
      *
      * @enum {string}
      */
-    interface Orientation extends goog.ui.SliderBase.Orientation {}
+    export import Orientation = goog.ui.SliderBase.Orientation;
 }

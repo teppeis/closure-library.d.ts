@@ -20,8 +20,9 @@ declare module goog.net.NetworkStatusMonitor {
      * Enum for the events dispatched by the OnlineHandler.
      * @enum {string}
      */
-    interface EventType {
-        ONLINE: string;
-        OFFLINE: string;
-    }
+    type EventType = string;
+    var EventType: {
+        ONLINE: EventType;
+        OFFLINE: EventType;
+    };
 }

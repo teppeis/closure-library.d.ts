@@ -9,27 +9,29 @@ declare module goog.positioning {
      *
      * @enum {number}
      */
-    interface Corner {
-        TOP_LEFT: number;
-        TOP_RIGHT: number;
-        BOTTOM_LEFT: number;
-        BOTTOM_RIGHT: number;
-        TOP_START: number;
-        TOP_END: number;
-        BOTTOM_START: number;
-        BOTTOM_END: number;
-    }
+    type Corner = number;
+    var Corner: {
+        TOP_LEFT: Corner;
+        TOP_RIGHT: Corner;
+        BOTTOM_LEFT: Corner;
+        BOTTOM_RIGHT: Corner;
+        TOP_START: Corner;
+        TOP_END: Corner;
+        BOTTOM_START: Corner;
+        BOTTOM_END: Corner;
+    };
 
     /**
      * Enum for bits in the {@see goog.positioning.Corner) bitmap.
      *
      * @enum {number}
      */
-    interface CornerBit {
-        BOTTOM: number;
-        RIGHT: number;
-        FLIP_RTL: number;
-    }
+    type CornerBit = number;
+    var CornerBit: {
+        BOTTOM: CornerBit;
+        RIGHT: CornerBit;
+        FLIP_RTL: CornerBit;
+    };
 
     /**
      * Enum for representing position handling in cases where the element would be
@@ -37,35 +39,37 @@ declare module goog.positioning {
      *
      * @enum {number}
      */
-    interface Overflow {
-        IGNORE: number;
-        ADJUST_X: number;
-        FAIL_X: number;
-        ADJUST_Y: number;
-        FAIL_Y: number;
-        RESIZE_WIDTH: number;
-        RESIZE_HEIGHT: number;
-        ADJUST_X_EXCEPT_OFFSCREEN: number;
-        ADJUST_Y_EXCEPT_OFFSCREEN: number;
-    }
+    type Overflow = number;
+    var Overflow: {
+        IGNORE: Overflow;
+        ADJUST_X: Overflow;
+        FAIL_X: Overflow;
+        ADJUST_Y: Overflow;
+        FAIL_Y: Overflow;
+        RESIZE_WIDTH: Overflow;
+        RESIZE_HEIGHT: Overflow;
+        ADJUST_X_EXCEPT_OFFSCREEN: Overflow;
+        ADJUST_Y_EXCEPT_OFFSCREEN: Overflow;
+    };
 
     /**
      * Enum for representing the outcome of a positioning call.
      *
      * @enum {number}
      */
-    interface OverflowStatus {
-        NONE: number;
-        ADJUSTED_X: number;
-        ADJUSTED_Y: number;
-        WIDTH_ADJUSTED: number;
-        HEIGHT_ADJUSTED: number;
-        FAILED_LEFT: number;
-        FAILED_RIGHT: number;
-        FAILED_TOP: number;
-        FAILED_BOTTOM: number;
-        FAILED_OUTSIDE_VIEWPORT: number;
-    }
+    type OverflowStatus = number;
+    var OverflowStatus: {
+        NONE: OverflowStatus;
+        ADJUSTED_X: OverflowStatus;
+        ADJUSTED_Y: OverflowStatus;
+        WIDTH_ADJUSTED: OverflowStatus;
+        HEIGHT_ADJUSTED: OverflowStatus;
+        FAILED_LEFT: OverflowStatus;
+        FAILED_RIGHT: OverflowStatus;
+        FAILED_TOP: OverflowStatus;
+        FAILED_BOTTOM: OverflowStatus;
+        FAILED_OUTSIDE_VIEWPORT: OverflowStatus;
+    };
 
     /**
      * Positions a movable element relative to an anchor element. The caller

@@ -11,23 +11,24 @@ declare module goog.i18n.GraphemeBreak {
      * @enum {number}
      * @protected
      */
-    interface property {
-        ANY: number;
-        CONTROL: number;
-        EXTEND: number;
-        PREPEND: number;
-        SPACING_MARK: number;
-        INDIC_CONSONANT: number;
-        VIRAMA: number;
-        L: number;
-        V: number;
-        T: number;
-        LV: number;
-        LVT: number;
-        CR: number;
-        LF: number;
-        REGIONAL_INDICATOR: number;
-    }
+    type property = number;
+    var property: {
+        ANY: property;
+        CONTROL: property;
+        EXTEND: property;
+        PREPEND: property;
+        SPACING_MARK: property;
+        INDIC_CONSONANT: property;
+        VIRAMA: property;
+        L: property;
+        V: property;
+        T: property;
+        LV: property;
+        LVT: property;
+        CR: property;
+        LF: property;
+        REGIONAL_INDICATOR: property;
+    };
 
     /**
      * There are two kinds of grapheme clusters: 1) Legacy 2)Extended. This method

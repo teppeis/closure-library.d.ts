@@ -42,8 +42,9 @@ declare module goog.events.ActionHandler {
      * Enum type for the events fired by the action handler
      * @enum {string}
      */
-    interface EventType {
-        ACTION: string;
-        BEFOREACTION: string;
-    }
+    type EventType = string;
+    var EventType: {
+        ACTION: EventType;
+        BEFOREACTION: EventType;
+    };
 }

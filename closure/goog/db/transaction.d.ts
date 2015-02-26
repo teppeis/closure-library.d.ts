@@ -61,11 +61,12 @@ declare module goog.db.Transaction {
      *
      * @enum {string}
      */
-    interface EventTypes {
-        COMPLETE: string;
-        ABORT: string;
-        ERROR: string;
-    }
+    type EventTypes = string;
+    var EventTypes: {
+        COMPLETE: EventTypes;
+        ABORT: EventTypes;
+        ERROR: EventTypes;
+    };
 
     /**
      * The three possible transaction modes.
@@ -73,9 +74,10 @@ declare module goog.db.Transaction {
      *
      * @enum {string}
      */
-    interface TransactionMode {
-        READ_ONLY: string;
-        READ_WRITE: string;
-        VERSION_CHANGE: string;
-    }
+    type TransactionMode = string;
+    var TransactionMode: {
+        READ_ONLY: TransactionMode;
+        READ_WRITE: TransactionMode;
+        VERSION_CHANGE: TransactionMode;
+    };
 }

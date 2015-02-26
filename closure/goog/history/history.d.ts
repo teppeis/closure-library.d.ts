@@ -131,17 +131,18 @@ declare module goog.History {
      * Types of polling. The values are in ms of the polling interval.
      * @enum {number}
      */
-    interface PollingType {
-        NORMAL: number;
-        LONG: number;
-    }
+    type PollingType = number;
+    var PollingType: {
+        NORMAL: PollingType;
+        LONG: PollingType;
+    };
 
     /**
      * Constant for the history change event type.
      * @enum {string}
      * @deprecated Use goog.history.EventType.
      */
-    interface EventType extends goog.history.EventType {}
+    export import EventType = goog.history.EventType;
 
     /**
      * Constant for the history change event type.

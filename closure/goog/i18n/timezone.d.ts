@@ -123,10 +123,11 @@ declare module goog.i18n.TimeZone {
      * Indices into the array of time zone names.
      * @enum {number}
      */
-    interface NameType {
-        STD_SHORT_NAME: number;
-        STD_LONG_NAME: number;
-        DLT_SHORT_NAME: number;
-        DLT_LONG_NAME: number;
-    }
+    type NameType = number;
+    var NameType: {
+        STD_SHORT_NAME: NameType;
+        STD_LONG_NAME: NameType;
+        DLT_SHORT_NAME: NameType;
+        DLT_LONG_NAME: NameType;
+    };
 }

@@ -40,9 +40,10 @@ declare module goog.ui.TriStateMenuItem {
      * Checked states for component.
      * @enum {number}
      */
-    interface State {
-        NOT_CHECKED: number;
-        PARTIALLY_CHECKED: number;
-        FULLY_CHECKED: number;
-    }
+    type State = number;
+    var State: {
+        NOT_CHECKED: State;
+        PARTIALLY_CHECKED: State;
+        FULLY_CHECKED: State;
+    };
 }

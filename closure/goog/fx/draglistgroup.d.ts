@@ -4,13 +4,14 @@ declare module goog.fx {
      * Enum to indicate the direction that a drag list grows.
      * @enum {number}
      */
-    interface DragListDirection {
-        DOWN: number;
-        RIGHT: number;
-        LEFT: number;
-        RIGHT_2D: number;
-        LEFT_2D: number;
-    }
+    type DragListDirection = number;
+    var DragListDirection: {
+        DOWN: DragListDirection;
+        RIGHT: DragListDirection;
+        LEFT: DragListDirection;
+        RIGHT_2D: DragListDirection;
+        LEFT_2D: DragListDirection;
+    };
 
     /**
      * A class representing a group of one or more "drag lists" with items that can

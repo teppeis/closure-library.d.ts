@@ -44,18 +44,20 @@ declare module goog.events.PasteHandler {
      * The types of events fired by this class.
      * @enum {string}
      */
-    interface EventType {
-        PASTE: string;
-        AFTER_PASTE: string;
-    }
+    type EventType = string;
+    var EventType: {
+        PASTE: EventType;
+        AFTER_PASTE: EventType;
+    };
 
     /**
      * The states that this class can be found, on the paste detection algorithm.
      * @enum {string}
      */
-    interface State {
-        INIT: string;
-        FOCUSED: string;
-        TYPING: string;
-    }
+    type State = string;
+    var State: {
+        INIT: State;
+        FOCUSED: State;
+        TYPING: State;
+    };
 }

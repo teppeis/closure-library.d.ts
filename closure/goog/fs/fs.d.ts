@@ -6,10 +6,11 @@ declare module goog.fs {
      * @enum {number}
      * @private
      */
-    interface FileSystemType_ {
-        TEMPORARY: number;
-        PERSISTENT: number;
-    }
+    type FileSystemType_ = number;
+    var FileSystemType_: {
+        TEMPORARY: FileSystemType_;
+        PERSISTENT: FileSystemType_;
+    };
 
     /**
      * @typedef {{createObjectURL: (function(!Blob): string),

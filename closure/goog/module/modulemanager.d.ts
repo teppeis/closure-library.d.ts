@@ -258,23 +258,25 @@ declare module goog.module.ModuleManager {
     * The type of callbacks that can be registered with the module manager,.
     * @enum {string}
     */
-    interface CallbackType {
-        ERROR: string;
-        IDLE: string;
-        ACTIVE: string;
-        USER_IDLE: string;
-        USER_ACTIVE: string;
-    }
+    type CallbackType = string;
+    var CallbackType: {
+        ERROR: CallbackType;
+        IDLE: CallbackType;
+        ACTIVE: CallbackType;
+        USER_IDLE: CallbackType;
+        USER_ACTIVE: CallbackType;
+    };
 
     /**
      * The possible reasons for a module load failure callback being fired.
      * @enum {number}
      */
-    interface FailureType {
-        UNAUTHORIZED: number;
-        CONSECUTIVE_FAILURES: number;
-        TIMEOUT: number;
-        OLD_CODE_GONE: number;
-        INIT_ERROR: number;
-    }
+    type FailureType = number;
+    var FailureType: {
+        UNAUTHORIZED: FailureType;
+        CONSECUTIVE_FAILURES: FailureType;
+        TIMEOUT: FailureType;
+        OLD_CODE_GONE: FailureType;
+        INIT_ERROR: FailureType;
+    };
 }

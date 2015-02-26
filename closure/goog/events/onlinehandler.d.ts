@@ -18,5 +18,5 @@ declare module goog.events.OnlineHandler {
      * @enum {string}
      * @deprecated Use goog.net.NetworkStatusMonitor.EventType instead.
      */
-    interface EventType extends goog.net.NetworkStatusMonitor.EventType {}
+    export import EventType = goog.net.NetworkStatusMonitor.EventType;
 }

@@ -4,24 +4,26 @@ declare module goog.net.xpc {
      * Enum used to identify transport types.
      * @enum {number}
      */
-    interface TransportTypes {
-        NATIVE_MESSAGING: number;
-        FRAME_ELEMENT_METHOD: number;
-        IFRAME_RELAY: number;
-        IFRAME_POLLING: number;
-        FLASH: number;
-        NIX: number;
-        DIRECT: number;
-    }
+    type TransportTypes = number;
+    var TransportTypes: {
+        NATIVE_MESSAGING: TransportTypes;
+        FRAME_ELEMENT_METHOD: TransportTypes;
+        IFRAME_RELAY: TransportTypes;
+        IFRAME_POLLING: TransportTypes;
+        FLASH: TransportTypes;
+        NIX: TransportTypes;
+        DIRECT: TransportTypes;
+    };
 
     /**
      * @enum {number}
      */
-    interface ChannelStates {
-        NOT_CONNECTED: number;
-        CONNECTED: number;
-        CLOSED: number;
-    }
+    type ChannelStates = number;
+    var ChannelStates: {
+        NOT_CONNECTED: ChannelStates;
+        CONNECTED: ChannelStates;
+        CLOSED: ChannelStates;
+    };
 
     /**
      * Enum containing transport names. These need to correspond to the

@@ -5,13 +5,14 @@ declare module goog.format {
      * @private
      * @enum {number}
      */
-    interface WbrToken_ {
-        LT: number;
-        GT: number;
-        AMP: number;
-        SEMI_COLON: number;
-        SPACE: number;
-    }
+    type WbrToken_ = number;
+    var WbrToken_: {
+        LT: WbrToken_;
+        GT: WbrToken_;
+        AMP: WbrToken_;
+        SEMI_COLON: WbrToken_;
+        SPACE: WbrToken_;
+    };
 
     /**
      * Constant for the WBR replacement used by insertWordBreaks.  Safari requires

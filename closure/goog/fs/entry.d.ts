@@ -209,9 +209,10 @@ declare module goog.fs.DirectoryEntry {
      * Behaviors for getting files and directories.
      * @enum {number}
      */
-    interface Behavior {
-        DEFAULT: number;
-        CREATE: number;
-        CREATE_EXCLUSIVE: number;
-    }
+    type Behavior = number;
+    var Behavior: {
+        DEFAULT: Behavior;
+        CREATE: Behavior;
+        CREATE_EXCLUSIVE: Behavior;
+    };
 }

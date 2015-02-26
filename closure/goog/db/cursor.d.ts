@@ -77,12 +77,13 @@ declare module goog.db.Cursor {
      *
      * @enum {string}
      */
-    interface Direction {
-        NEXT: string;
-        NEXT_NO_DUPLICATE: string;
-        PREV: string;
-        PREV_NO_DUPLICATE: string;
-    }
+    type Direction = string;
+    var Direction: {
+        NEXT: Direction;
+        NEXT_NO_DUPLICATE: Direction;
+        PREV: Direction;
+        PREV_NO_DUPLICATE: Direction;
+    };
 
     /**
      * Event types that the cursor can dispatch. COMPLETE events are dispatched when
@@ -91,9 +92,10 @@ declare module goog.db.Cursor {
      *
      * @enum {string}
      */
-    interface EventType {
-        COMPLETE: string;
-        ERROR: string;
-        NEW_DATA: string;
-    }
+    type EventType = string;
+    var EventType: {
+        COMPLETE: EventType;
+        ERROR: EventType;
+        NEW_DATA: EventType;
+    };
 }

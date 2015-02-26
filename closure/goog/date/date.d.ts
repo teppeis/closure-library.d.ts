@@ -4,34 +4,36 @@ declare module goog.date {
      * Constants for weekdays.
      * @enum {number}
      */
-    interface weekDay {
-        MON: number;
-        TUE: number;
-        WED: number;
-        THU: number;
-        FRI: number;
-        SAT: number;
-        SUN: number;
-    }
+    type weekDay = number;
+    var weekDay: {
+        MON: weekDay;
+        TUE: weekDay;
+        WED: weekDay;
+        THU: weekDay;
+        FRI: weekDay;
+        SAT: weekDay;
+        SUN: weekDay;
+    };
 
     /**
      * Constants for months.
      * @enum {number}
      */
-    interface month {
-        JAN: number;
-        FEB: number;
-        MAR: number;
-        APR: number;
-        MAY: number;
-        JUN: number;
-        JUL: number;
-        AUG: number;
-        SEP: number;
-        OCT: number;
-        NOV: number;
-        DEC: number;
-    }
+    type month = number;
+    var month: {
+        JAN: month;
+        FEB: month;
+        MAR: month;
+        APR: month;
+        MAY: month;
+        JUN: month;
+        JUL: month;
+        AUG: month;
+        SEP: month;
+        OCT: month;
+        NOV: month;
+        DEC: month;
+    };
 
     /**
      * Class representing a date/time interval. Used for date calculations.

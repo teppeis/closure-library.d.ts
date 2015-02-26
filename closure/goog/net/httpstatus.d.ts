@@ -6,53 +6,54 @@ declare module goog.net {
      * @see http://tools.ietf.org/html/rfc6585
      * @enum {number}
      */
-    interface HttpStatus {
-        CONTINUE: number;
-        SWITCHING_PROTOCOLS: number;
-        OK: number;
-        CREATED: number;
-        ACCEPTED: number;
-        NON_AUTHORITATIVE_INFORMATION: number;
-        NO_CONTENT: number;
-        RESET_CONTENT: number;
-        PARTIAL_CONTENT: number;
-        MULTIPLE_CHOICES: number;
-        MOVED_PERMANENTLY: number;
-        FOUND: number;
-        SEE_OTHER: number;
-        NOT_MODIFIED: number;
-        USE_PROXY: number;
-        TEMPORARY_REDIRECT: number;
-        BAD_REQUEST: number;
-        UNAUTHORIZED: number;
-        PAYMENT_REQUIRED: number;
-        FORBIDDEN: number;
-        NOT_FOUND: number;
-        METHOD_NOT_ALLOWED: number;
-        NOT_ACCEPTABLE: number;
-        PROXY_AUTHENTICATION_REQUIRED: number;
-        REQUEST_TIMEOUT: number;
-        CONFLICT: number;
-        GONE: number;
-        LENGTH_REQUIRED: number;
-        PRECONDITION_FAILED: number;
-        REQUEST_ENTITY_TOO_LARGE: number;
-        REQUEST_URI_TOO_LONG: number;
-        UNSUPPORTED_MEDIA_TYPE: number;
-        REQUEST_RANGE_NOT_SATISFIABLE: number;
-        EXPECTATION_FAILED: number;
-        PRECONDITION_REQUIRED: number;
-        TOO_MANY_REQUESTS: number;
-        REQUEST_HEADER_FIELDS_TOO_LARGE: number;
-        INTERNAL_SERVER_ERROR: number;
-        NOT_IMPLEMENTED: number;
-        BAD_GATEWAY: number;
-        SERVICE_UNAVAILABLE: number;
-        GATEWAY_TIMEOUT: number;
-        HTTP_VERSION_NOT_SUPPORTED: number;
-        NETWORK_AUTHENTICATION_REQUIRED: number;
-        QUIRK_IE_NO_CONTENT: number;
-    }
+    type HttpStatus = number;
+    var HttpStatus: {
+        CONTINUE: HttpStatus;
+        SWITCHING_PROTOCOLS: HttpStatus;
+        OK: HttpStatus;
+        CREATED: HttpStatus;
+        ACCEPTED: HttpStatus;
+        NON_AUTHORITATIVE_INFORMATION: HttpStatus;
+        NO_CONTENT: HttpStatus;
+        RESET_CONTENT: HttpStatus;
+        PARTIAL_CONTENT: HttpStatus;
+        MULTIPLE_CHOICES: HttpStatus;
+        MOVED_PERMANENTLY: HttpStatus;
+        FOUND: HttpStatus;
+        SEE_OTHER: HttpStatus;
+        NOT_MODIFIED: HttpStatus;
+        USE_PROXY: HttpStatus;
+        TEMPORARY_REDIRECT: HttpStatus;
+        BAD_REQUEST: HttpStatus;
+        UNAUTHORIZED: HttpStatus;
+        PAYMENT_REQUIRED: HttpStatus;
+        FORBIDDEN: HttpStatus;
+        NOT_FOUND: HttpStatus;
+        METHOD_NOT_ALLOWED: HttpStatus;
+        NOT_ACCEPTABLE: HttpStatus;
+        PROXY_AUTHENTICATION_REQUIRED: HttpStatus;
+        REQUEST_TIMEOUT: HttpStatus;
+        CONFLICT: HttpStatus;
+        GONE: HttpStatus;
+        LENGTH_REQUIRED: HttpStatus;
+        PRECONDITION_FAILED: HttpStatus;
+        REQUEST_ENTITY_TOO_LARGE: HttpStatus;
+        REQUEST_URI_TOO_LONG: HttpStatus;
+        UNSUPPORTED_MEDIA_TYPE: HttpStatus;
+        REQUEST_RANGE_NOT_SATISFIABLE: HttpStatus;
+        EXPECTATION_FAILED: HttpStatus;
+        PRECONDITION_REQUIRED: HttpStatus;
+        TOO_MANY_REQUESTS: HttpStatus;
+        REQUEST_HEADER_FIELDS_TOO_LARGE: HttpStatus;
+        INTERNAL_SERVER_ERROR: HttpStatus;
+        NOT_IMPLEMENTED: HttpStatus;
+        BAD_GATEWAY: HttpStatus;
+        SERVICE_UNAVAILABLE: HttpStatus;
+        GATEWAY_TIMEOUT: HttpStatus;
+        HTTP_VERSION_NOT_SUPPORTED: HttpStatus;
+        NETWORK_AUTHENTICATION_REQUIRED: HttpStatus;
+        QUIRK_IE_NO_CONTENT: HttpStatus;
+    };
 }
 
 declare module goog.net.HttpStatus {

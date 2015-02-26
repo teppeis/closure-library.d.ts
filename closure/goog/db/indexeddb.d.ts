@@ -110,12 +110,13 @@ declare module goog.db.IndexedDb {
      *
      * @enum {string} The event types for the web socket.
      */
-    interface EventType {
-        ABORT: string;
-        CLOSE: string;
-        ERROR: string;
-        VERSION_CHANGE: string;
-    }
+    type EventType = string;
+    var EventType: {
+        ABORT: EventType;
+        CLOSE: EventType;
+        ERROR: EventType;
+        VERSION_CHANGE: EventType;
+    };
 
     /**
      * Event representing a (possibly attempted) change in the database structure.

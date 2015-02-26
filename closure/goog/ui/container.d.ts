@@ -438,17 +438,19 @@ declare module goog.ui.Container {
      * Container-specific events.
      * @enum {string}
      */
-    interface EventType {
-        AFTER_SHOW: string;
-        AFTER_HIDE: string;
-    }
+    type EventType = string;
+    var EventType: {
+        AFTER_SHOW: EventType;
+        AFTER_HIDE: EventType;
+    };
 
     /**
      * Container orientation constants.
      * @enum {string}
      */
-    interface Orientation {
-        HORIZONTAL: string;
-        VERTICAL: string;
-    }
+    type Orientation = string;
+    var Orientation: {
+        HORIZONTAL: Orientation;
+        VERTICAL: Orientation;
+    };
 }

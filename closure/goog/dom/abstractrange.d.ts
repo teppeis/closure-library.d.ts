@@ -4,11 +4,12 @@ declare module goog.dom {
      * Types of ranges.
      * @enum {string}
      */
-    interface RangeType {
-        TEXT: string;
-        CONTROL: string;
-        MULTI: string;
-    }
+    type RangeType = string;
+    var RangeType: {
+        TEXT: RangeType;
+        CONTROL: RangeType;
+        MULTI: RangeType;
+    };
 
     /**
      * Creates a new selection with no properties.  Do not use this constructor -

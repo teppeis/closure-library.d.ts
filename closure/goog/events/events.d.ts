@@ -3,11 +3,12 @@ declare module goog.events {
     /**
      * @enum {number} Different capture simulation mode for IE8-.
      */
-    interface CaptureSimulationMode {
-        OFF_AND_FAIL: number;
-        OFF_AND_SILENT: number;
-        ON: number;
-    }
+    type CaptureSimulationMode = number;
+    var CaptureSimulationMode: {
+        OFF_AND_FAIL: CaptureSimulationMode;
+        OFF_AND_SILENT: CaptureSimulationMode;
+        ON: CaptureSimulationMode;
+    };
 
     /**
      * @typedef {number|goog.events.ListenableKey}

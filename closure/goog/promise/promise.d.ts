@@ -207,12 +207,13 @@ declare module goog.Promise {
      * @enum {number}
      * @private
      */
-    interface State_ {
-        PENDING: number;
-        BLOCKED: number;
-        FULFILLED: number;
-        REJECTED: number;
-    }
+    type State_ = number;
+    var State_: {
+        PENDING: State_;
+        BLOCKED: State_;
+        FULFILLED: State_;
+        REJECTED: State_;
+    };
 
     /**
      * Typedef for entries in the callback chain. Each call to {@code then},

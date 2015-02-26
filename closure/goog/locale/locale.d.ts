@@ -4,16 +4,17 @@ declare module goog.locale {
      * Enum of resources that can be registered.
      * @enum {string}
      */
-    interface Resource {
-        DATE_TIME_CONSTANTS: string;
-        NUMBER_FORMAT_CONSTANTS: string;
-        TIME_ZONE_CONSTANTS: string;
-        LOCAL_NAME_CONSTANTS: string;
-        TIME_ZONE_SELECTED_IDS: string;
-        TIME_ZONE_SELECTED_SHORT_NAMES: string;
-        TIME_ZONE_SELECTED_LONG_NAMES: string;
-        TIME_ZONE_ALL_LONG_NAMES: string;
-    }
+    type Resource = string;
+    var Resource: {
+        DATE_TIME_CONSTANTS: Resource;
+        NUMBER_FORMAT_CONSTANTS: Resource;
+        TIME_ZONE_CONSTANTS: Resource;
+        LOCAL_NAME_CONSTANTS: Resource;
+        TIME_ZONE_SELECTED_IDS: Resource;
+        TIME_ZONE_SELECTED_SHORT_NAMES: Resource;
+        TIME_ZONE_SELECTED_LONG_NAMES: Resource;
+        TIME_ZONE_ALL_LONG_NAMES: Resource;
+    };
 
     /**
      * Set currnet locale to the specified one.

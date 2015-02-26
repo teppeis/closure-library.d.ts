@@ -42,29 +42,31 @@ declare module goog.i18n.DateTimeFormat {
      * Enum to identify predefined Date/Time format pattern.
      * @enum {number}
      */
-    interface Format {
-        FULL_DATE: number;
-        LONG_DATE: number;
-        MEDIUM_DATE: number;
-        SHORT_DATE: number;
-        FULL_TIME: number;
-        LONG_TIME: number;
-        MEDIUM_TIME: number;
-        SHORT_TIME: number;
-        FULL_DATETIME: number;
-        LONG_DATETIME: number;
-        MEDIUM_DATETIME: number;
-        SHORT_DATETIME: number;
-    }
+    type Format = number;
+    var Format: {
+        FULL_DATE: Format;
+        LONG_DATE: Format;
+        MEDIUM_DATE: Format;
+        SHORT_DATE: Format;
+        FULL_TIME: Format;
+        LONG_TIME: Format;
+        MEDIUM_TIME: Format;
+        SHORT_TIME: Format;
+        FULL_DATETIME: Format;
+        LONG_DATETIME: Format;
+        MEDIUM_DATETIME: Format;
+        SHORT_DATETIME: Format;
+    };
 
     /**
      * These are token types, corresponding to above token definitions.
      * @enum {number}
      * @private
      */
-    interface PartTypes_ {
-        QUOTED_STRING: number;
-        FIELD: number;
-        LITERAL: number;
-    }
+    type PartTypes_ = number;
+    var PartTypes_: {
+        QUOTED_STRING: PartTypes_;
+        FIELD: PartTypes_;
+        LITERAL: PartTypes_;
+    };
 }

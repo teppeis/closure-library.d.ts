@@ -105,8 +105,9 @@ declare module goog.editor.plugins.AbstractDialogPlugin {
      * Event type constants for events the dialog plugins fire.
      * @enum {string}
      */
-    interface EventType {
-        OPENED: string;
-        CLOSED: string;
-    }
+    type EventType = string;
+    var EventType: {
+        OPENED: EventType;
+        CLOSED: EventType;
+    };
 }

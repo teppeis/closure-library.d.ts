@@ -30,29 +30,31 @@ declare module goog.debug.DevCss {
      * A list of possible user agent strings.
      * @enum {string}
      */
-    interface UserAgent {
-        OPERA: string;
-        IE: string;
-        GECKO: string;
-        FIREFOX: string;
-        WEBKIT: string;
-        SAFARI: string;
-        MOBILE: string;
-    }
+    type UserAgent = string;
+    var UserAgent: {
+        OPERA: UserAgent;
+        IE: UserAgent;
+        GECKO: UserAgent;
+        FIREFOX: UserAgent;
+        WEBKIT: UserAgent;
+        SAFARI: UserAgent;
+        MOBILE: UserAgent;
+    };
 
     /**
      * A list of strings that may be used for matching in CSS files/development.
      * @enum {string}
      * @private
      */
-    interface CssToken_ {
-        USERAGENT: string;
-        SEPARATOR: string;
-        LESS_THAN: string;
-        GREATER_THAN: string;
-        LESS_THAN_OR_EQUAL: string;
-        GREATER_THAN_OR_EQUAL: string;
-        IE6_SELECTOR_TEXT: string;
-        IE6_COMBINED_GLUE: string;
-    }
+    type CssToken_ = string;
+    var CssToken_: {
+        USERAGENT: CssToken_;
+        SEPARATOR: CssToken_;
+        LESS_THAN: CssToken_;
+        GREATER_THAN: CssToken_;
+        LESS_THAN_OR_EQUAL: CssToken_;
+        GREATER_THAN_OR_EQUAL: CssToken_;
+        IE6_SELECTOR_TEXT: CssToken_;
+        IE6_COMBINED_GLUE: CssToken_;
+    };
 }

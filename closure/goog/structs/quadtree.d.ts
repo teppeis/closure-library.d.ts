@@ -108,11 +108,12 @@ declare module goog.structs.QuadTree {
      * Enumeration of node types.
      * @enum {number}
      */
-    interface NodeType {
-        EMPTY: number;
-        LEAF: number;
-        POINTER: number;
-    }
+    type NodeType = number;
+    var NodeType: {
+        EMPTY: NodeType;
+        LEAF: NodeType;
+        POINTER: NodeType;
+    };
 
     /**
      * Constructs a new quad tree node.

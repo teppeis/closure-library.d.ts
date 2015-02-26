@@ -112,8 +112,9 @@ declare module goog.ui.TableSorter {
      * Table sorter events.
      * @enum {string}
      */
-    interface EventType {
-        BEFORESORT: string;
-        SORT: string;
-    }
+    type EventType = string;
+    var EventType: {
+        BEFORESORT: EventType;
+        SORT: EventType;
+    };
 }

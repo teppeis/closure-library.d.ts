@@ -276,16 +276,17 @@ declare module goog.editor.Plugin {
      * An enum of operations that plugins may support.
      * @enum {number}
      */
-    interface Op {
-        KEYDOWN: number;
-        KEYPRESS: number;
-        KEYUP: number;
-        SELECTION: number;
-        SHORTCUT: number;
-        EXEC_COMMAND: number;
-        QUERY_COMMAND: number;
-        PREPARE_CONTENTS_HTML: number;
-        CLEAN_CONTENTS_HTML: number;
-        CLEAN_CONTENTS_DOM: number;
-    }
+    type Op = number;
+    var Op: {
+        KEYDOWN: Op;
+        KEYPRESS: Op;
+        KEYUP: Op;
+        SELECTION: Op;
+        SHORTCUT: Op;
+        EXEC_COMMAND: Op;
+        QUERY_COMMAND: Op;
+        PREPARE_CONTENTS_HTML: Op;
+        CLEAN_CONTENTS_HTML: Op;
+        CLEAN_CONTENTS_DOM: Op;
+    };
 }

@@ -25,8 +25,9 @@ declare module goog.events.FocusHandler {
      * Enum type for the events fired by the focus handler
      * @enum {string}
      */
-    interface EventType {
-        FOCUSIN: string;
-        FOCUSOUT: string;
-    }
+    type EventType = string;
+    var EventType: {
+        FOCUSIN: EventType;
+        FOCUSOUT: EventType;
+    };
 }

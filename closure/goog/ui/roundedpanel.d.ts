@@ -4,29 +4,31 @@ declare module goog.ui.RoundedPanel {
      * Enum for specifying which corners to render.
      * @enum {number}
      */
-    interface Corner {
-        NONE: number;
-        BOTTOM_LEFT: number;
-        TOP_LEFT: number;
-        LEFT: number;
-        TOP_RIGHT: number;
-        TOP: number;
-        BOTTOM_RIGHT: number;
-        BOTTOM: number;
-        RIGHT: number;
-        ALL: number;
-    }
+    type Corner = number;
+    var Corner: {
+        NONE: Corner;
+        BOTTOM_LEFT: Corner;
+        TOP_LEFT: Corner;
+        LEFT: Corner;
+        TOP_RIGHT: Corner;
+        TOP: Corner;
+        BOTTOM_RIGHT: Corner;
+        BOTTOM: Corner;
+        RIGHT: Corner;
+        ALL: Corner;
+    };
 
     /**
      * CSS class name suffixes for the elements comprising the RoundedPanel.
      * @enum {string}
      * @private
      */
-    interface Classes_ {
-        BACKGROUND: string;
-        PANEL: string;
-        CONTENT: string;
-    }
+    type Classes_ = string;
+    var Classes_: {
+        BACKGROUND: Classes_;
+        PANEL: Classes_;
+        CONTENT: Classes_;
+    };
 
     /**
      * Factory method that returns an instance of a BaseRoundedPanel.

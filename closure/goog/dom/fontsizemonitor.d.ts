@@ -36,7 +36,8 @@ declare module goog.dom.FontSizeMonitor {
      * The event types that the FontSizeMonitor fires.
      * @enum {string}
      */
-    interface EventType {
-        CHANGE: string;
-    }
+    type EventType = string;
+    var EventType: {
+        CHANGE: EventType;
+    };
 }

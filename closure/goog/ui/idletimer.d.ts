@@ -45,8 +45,9 @@ declare module goog.ui.IdleTimer {
      * Event constants for the idle timer event target
      * @enum {string}
      */
-    interface Event {
-        BECOME_ACTIVE: string;
-        BECOME_IDLE: string;
-    }
+    type Event = string;
+    var Event: {
+        BECOME_ACTIVE: Event;
+        BECOME_IDLE: Event;
+    };
 }

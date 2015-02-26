@@ -129,23 +129,24 @@ declare module goog.proto2.TextFormatSerializer.Tokenizer_ {
      * An enumeration of all the token types.
      * @enum {!RegExp}
      */
-    interface TokenTypes {
-        END: RegExp;
-        IDENTIFIER: RegExp;
-        NUMBER: RegExp;
-        COMMENT: RegExp;
-        OPEN_BRACE: RegExp;
-        CLOSE_BRACE: RegExp;
-        OPEN_TAG: RegExp;
-        CLOSE_TAG: RegExp;
-        OPEN_LIST: RegExp;
-        CLOSE_LIST: RegExp;
-        STRING: RegExp;
-        COLON: RegExp;
-        COMMA: RegExp;
-        SEMI: RegExp;
-        WHITESPACE: RegExp;
-    }
+    type TokenTypes = RegExp;
+    var TokenTypes: {
+        END: TokenTypes;
+        IDENTIFIER: TokenTypes;
+        NUMBER: TokenTypes;
+        COMMENT: TokenTypes;
+        OPEN_BRACE: TokenTypes;
+        CLOSE_BRACE: TokenTypes;
+        OPEN_TAG: TokenTypes;
+        CLOSE_TAG: TokenTypes;
+        OPEN_LIST: TokenTypes;
+        CLOSE_LIST: TokenTypes;
+        STRING: TokenTypes;
+        COLON: TokenTypes;
+        COMMA: TokenTypes;
+        SEMI: TokenTypes;
+        WHITESPACE: TokenTypes;
+    };
 
     /**
      * @typedef {{type: goog.proto2.TextFormatSerializer.Tokenizer_.TokenTypes,

@@ -363,17 +363,19 @@ declare module goog.ui.AbstractSpellChecker {
      *
      * @enum {number}
      */
-    interface Direction {
-        PREVIOUS: number;
-        NEXT: number;
-    }
+    type Direction = number;
+    var Direction: {
+        PREVIOUS: Direction;
+        NEXT: Direction;
+    };
 
     /**
      * Constants for the result of asynchronous processing.
      * @enum {number}
      */
-    interface AsyncResult {
-        PENDING: number;
-        DONE: number;
-    }
+    type AsyncResult = number;
+    var AsyncResult: {
+        PENDING: AsyncResult;
+        DONE: AsyncResult;
+    };
 }

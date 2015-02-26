@@ -229,27 +229,29 @@ declare module goog.ui.media.MediaModel {
      * {@link http://en.wikipedia.org/wiki/Internet_media_type}
      * @enum {string}
      */
-    interface MimeType {
-        HTML: string;
-        PLAIN: string;
-        FLASH: string;
-        JPEG: string;
-        GIF: string;
-        PNG: string;
-    }
+    type MimeType = string;
+    var MimeType: {
+        HTML: MimeType;
+        PLAIN: MimeType;
+        FLASH: MimeType;
+        JPEG: MimeType;
+        GIF: MimeType;
+        PNG: MimeType;
+    };
 
     /**
      * Supported mediums, found here:
      * {@link http://video.search.yahoo.com/mrss}
      * @enum {string}
      */
-    interface Medium {
-        IMAGE: string;
-        AUDIO: string;
-        VIDEO: string;
-        DOCUMENT: string;
-        EXECUTABLE: string;
-    }
+    type Medium = string;
+    var Medium: {
+        IMAGE: Medium;
+        AUDIO: Medium;
+        VIDEO: Medium;
+        DOCUMENT: Medium;
+        EXECUTABLE: Medium;
+    };
 
     /**
      * Constructs a thumbnail containing details of the thumbnail's image URL and
@@ -525,18 +527,20 @@ declare module goog.ui.media.MediaModel.Credit {
      * The types of known roles.
      * @enum {string}
      */
-    interface Role {
-        UPLOADER: string;
-        OWNER: string;
-    }
+    type Role = string;
+    var Role: {
+        UPLOADER: Role;
+        OWNER: Role;
+    };
 
     /**
      * The types of known schemes.
      * @enum {string}
      */
-    interface Scheme {
-        EUROPEAN_BROADCASTING: string;
-        YAHOO: string;
-        YOUTUBE: string;
-    }
+    type Scheme = string;
+    var Scheme: {
+        EUROPEAN_BROADCASTING: Scheme;
+        YAHOO: Scheme;
+        YOUTUBE: Scheme;
+    };
 }

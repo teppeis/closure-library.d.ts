@@ -4,8 +4,9 @@ declare module goog.storage {
      * Errors thrown by the storage.
      * @enum {string}
      */
-    interface ErrorCode {
-        INVALID_VALUE: string;
-        DECRYPTION_ERROR: string;
-    }
+    type ErrorCode = string;
+    var ErrorCode: {
+        INVALID_VALUE: ErrorCode;
+        DECRYPTION_ERROR: ErrorCode;
+    };
 }

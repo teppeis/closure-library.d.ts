@@ -274,37 +274,40 @@ declare module goog.ui.Dialog {
      * Events dispatched by dialogs.
      * @enum {string}
      */
-    interface EventType {
-        SELECT: string;
-        AFTER_HIDE: string;
-        AFTER_SHOW: string;
-    }
+    type EventType = string;
+    var EventType: {
+        SELECT: EventType;
+        AFTER_HIDE: EventType;
+        AFTER_SHOW: EventType;
+    };
 
     /**
      * The keys used to identify standard buttons in events.
      * @enum {string}
      */
-    interface DefaultButtonKeys {
-        OK: string;
-        CANCEL: string;
-        YES: string;
-        NO: string;
-        SAVE: string;
-        CONTINUE: string;
-    }
+    type DefaultButtonKeys = string;
+    var DefaultButtonKeys: {
+        OK: DefaultButtonKeys;
+        CANCEL: DefaultButtonKeys;
+        YES: DefaultButtonKeys;
+        NO: DefaultButtonKeys;
+        SAVE: DefaultButtonKeys;
+        CONTINUE: DefaultButtonKeys;
+    };
 
     /**
      * The default captions for the default buttons.
      * @enum {string}
      */
-    interface DefaultButtonCaptions {
-        OK: string;
-        CANCEL: string;
-        YES: string;
-        NO: string;
-        SAVE: string;
-        CONTINUE: string;
-    }
+    type DefaultButtonCaptions = string;
+    var DefaultButtonCaptions: {
+        OK: DefaultButtonCaptions;
+        CANCEL: DefaultButtonCaptions;
+        YES: DefaultButtonCaptions;
+        NO: DefaultButtonCaptions;
+        SAVE: DefaultButtonCaptions;
+        CONTINUE: DefaultButtonCaptions;
+    };
 
     /**
      * Dialog event class.
@@ -486,12 +489,13 @@ declare module goog.ui.Dialog.ButtonSet {
      * The standard buttons (keys associated with captions).
      * @enum {{key: string, caption: string}}
      */
-    interface DefaultButtons {
-        OK: {key: string; caption: string};
-        CANCEL: {key: string; caption: string};
-        YES: {key: string; caption: string};
-        NO: {key: string; caption: string};
-        SAVE: {key: string; caption: string};
-        CONTINUE: {key: string; caption: string};
-    }
+    type DefaultButtons = {key: string; caption: string};
+    var DefaultButtons: {
+        OK: DefaultButtons;
+        CANCEL: DefaultButtons;
+        YES: DefaultButtons;
+        NO: DefaultButtons;
+        SAVE: DefaultButtons;
+        CONTINUE: DefaultButtons;
+    };
 }

@@ -4,12 +4,13 @@ declare module goog.userAgentTestUtil {
      * Browser definitions.
      * @enum {string}
      */
-    interface UserAgents {
-        GECKO: string;
-        IE: string;
-        OPERA: string;
-        WEBKIT: string;
-    }
+    type UserAgents = string;
+    var UserAgents: {
+        GECKO: UserAgents;
+        IE: UserAgents;
+        OPERA: UserAgents;
+        WEBKIT: UserAgents;
+    };
 
     /**
      * Rerun the initialization code to set all of the goog.userAgent constants.

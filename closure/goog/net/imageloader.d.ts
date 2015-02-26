@@ -72,10 +72,11 @@ declare module goog.net.ImageLoader {
      * @see https://developer.mozilla.org/en-US/docs/HTML/CORS_Enabled_Image
      * @enum {string}
      */
-    interface CorsRequestType {
-        ANONYMOUS: string;
-        USE_CREDENTIALS: string;
-    }
+    type CorsRequestType = string;
+    var CorsRequestType: {
+        ANONYMOUS: CorsRequestType;
+        USE_CREDENTIALS: CorsRequestType;
+    };
 
     /**
      * Describes a request for an image. This includes its URL and its CORS-request

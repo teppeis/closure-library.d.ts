@@ -312,15 +312,16 @@ declare module goog.ui.ac.AutoComplete {
      * Events associated with the autocomplete
      * @enum {string}
      */
-    interface EventType {
-        ROW_HILITE: string;
-        HILITE: string;
-        SELECT: string;
-        DISMISS: string;
-        CANCEL_DISMISS: string;
-        UPDATE: string;
-        SUGGESTIONS_UPDATE: string;
-    }
+    type EventType = string;
+    var EventType: {
+        ROW_HILITE: EventType;
+        HILITE: EventType;
+        SELECT: EventType;
+        DISMISS: EventType;
+        CANCEL_DISMISS: EventType;
+        UPDATE: EventType;
+        SUGGESTIONS_UPDATE: EventType;
+    };
 
     /**
      * @typedef {{

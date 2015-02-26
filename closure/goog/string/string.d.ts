@@ -4,9 +4,10 @@ declare module goog.string$ {
      * Common Unicode string characters.
      * @enum {string}
      */
-    interface Unicode {
-        NBSP: string;
-    }
+    type Unicode = string;
+    var Unicode: {
+        NBSP: Unicode;
+    };
 
     /**
      * Fast prefix-checker.

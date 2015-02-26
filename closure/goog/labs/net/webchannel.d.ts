@@ -45,22 +45,24 @@ declare module goog.net.WebChannel {
      * Common events fired by WebChannels.
      * @enum {string}
      */
-    interface EventType {
-        OPEN: string;
-        CLOSE: string;
-        ERROR: string;
-        MESSAGE: string;
-    }
+    type EventType = string;
+    var EventType: {
+        OPEN: EventType;
+        CLOSE: EventType;
+        ERROR: EventType;
+        MESSAGE: EventType;
+    };
 
     /**
      * WebChannel level error conditions.
      * @enum {number}
      */
-    interface ErrorStatus {
-        OK: number;
-        NETWORK_ERROR: number;
-        SERVER_ERROR: number;
-    }
+    type ErrorStatus = number;
+    var ErrorStatus: {
+        OK: ErrorStatus;
+        NETWORK_ERROR: ErrorStatus;
+        SERVER_ERROR: ErrorStatus;
+    };
 
     /**
      * Configuration spec for newly created WebChannel instances.

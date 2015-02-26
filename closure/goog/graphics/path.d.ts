@@ -206,11 +206,12 @@ declare module goog.graphics.Path {
      * Path segment types.
      * @enum {number}
      */
-    interface Segment {
-        MOVETO: number;
-        LINETO: number;
-        CURVETO: number;
-        ARCTO: number;
-        CLOSE: number;
-    }
+    type Segment = number;
+    var Segment: {
+        MOVETO: Segment;
+        LINETO: Segment;
+        CURVETO: Segment;
+        ARCTO: Segment;
+        CLOSE: Segment;
+    };
 }

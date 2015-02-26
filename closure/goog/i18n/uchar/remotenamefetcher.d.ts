@@ -23,8 +23,9 @@ declare module goog.i18n.uChar.RemoteNameFetcher {
      * @enum {string}
      * @private
      */
-    interface RequestType_ {
-        BASE_88: string;
-        CODEPOINT: string;
-    }
+    type RequestType_ = string;
+    var RequestType_: {
+        BASE_88: RequestType_;
+        CODEPOINT: RequestType_;
+    };
 }

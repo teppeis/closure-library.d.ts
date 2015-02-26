@@ -70,11 +70,12 @@ declare module goog.module.ModuleLoader {
     /**
      * @enum {string}
      */
-    interface EventType {
-        EVALUATE_CODE: string;
-        REQUEST_SUCCESS: string;
-        REQUEST_ERROR: string;
-    }
+    type EventType = string;
+    var EventType: {
+        EVALUATE_CODE: EventType;
+        REQUEST_SUCCESS: EventType;
+        REQUEST_ERROR: EventType;
+    };
 
     /**
      * @param {goog.module.ModuleLoader.EventType} type The type.

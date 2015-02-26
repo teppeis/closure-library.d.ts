@@ -4,9 +4,10 @@ declare module goog.dom.fullscreen {
      * Event types for full screen.
      * @enum {string}
      */
-    interface EventType {
-        CHANGE: string;
-    }
+    type EventType = string;
+    var EventType: {
+        CHANGE: EventType;
+    };
 
     /**
      * Determines if full screen is supported.

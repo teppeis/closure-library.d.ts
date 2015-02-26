@@ -7,14 +7,15 @@ declare module goog.soy.data {
      *
      * @enum {!Object}
      */
-    interface SanitizedContentKind {
-        HTML: Object;
-        JS: Object;
-        URI: Object;
-        ATTRIBUTES: Object;
-        CSS: Object;
-        TEXT: Object;
-    }
+    type SanitizedContentKind = Object;
+    var SanitizedContentKind: {
+        HTML: SanitizedContentKind;
+        JS: SanitizedContentKind;
+        URI: SanitizedContentKind;
+        ATTRIBUTES: SanitizedContentKind;
+        CSS: SanitizedContentKind;
+        TEXT: SanitizedContentKind;
+    };
 
     /**
      * A string-like object that carries a content-type and a content direction.

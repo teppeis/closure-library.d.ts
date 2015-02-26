@@ -465,9 +465,10 @@ declare module goog.tweak.BaseSetting {
      * @enum {number}
      * @private
      */
-    interface InitializeState_ {
-        NOT_INITIALIZED: number;
-        INITIALIZING: number;
-        INITIALIZED: number;
-    }
+    type InitializeState_ = number;
+    var InitializeState_: {
+        NOT_INITIALIZED: InitializeState_;
+        INITIALIZING: InitializeState_;
+        INITIALIZED: InitializeState_;
+    };
 }

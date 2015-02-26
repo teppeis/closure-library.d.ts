@@ -93,25 +93,27 @@ declare module goog.ui.editor.LinkDialog {
      * Events specific to the link dialog.
      * @enum {string}
      */
-    interface EventType {
-        BEFORE_TEST_LINK: string;
-    }
+    type EventType = string;
+    var EventType: {
+        BEFORE_TEST_LINK: EventType;
+    };
 
     /**
      * IDs for relevant DOM elements.
      * @enum {string}
      * @private
      */
-    interface Id_ {
-        TEXT_TO_DISPLAY: string;
-        TEXT_TO_DISPLAY_LABEL: string;
-        ON_WEB_TAB: string;
-        ON_WEB_INPUT: string;
-        EMAIL_ADDRESS_TAB: string;
-        EMAIL_ADDRESS_INPUT: string;
-        EMAIL_WARNING: string;
-        TAB_INPUT_SUFFIX: string;
-    }
+    type Id_ = string;
+    var Id_: {
+        TEXT_TO_DISPLAY: Id_;
+        TEXT_TO_DISPLAY_LABEL: Id_;
+        ON_WEB_TAB: Id_;
+        ON_WEB_INPUT: Id_;
+        EMAIL_ADDRESS_TAB: Id_;
+        EMAIL_ADDRESS_INPUT: Id_;
+        EMAIL_WARNING: Id_;
+        TAB_INPUT_SUFFIX: Id_;
+    };
 
     /**
      * OK event object for the link dialog.

@@ -304,11 +304,12 @@ declare module goog.graphics.ext.Element {
      * @enum {number}
      * @private
      */
-    interface PositionType_ {
-        START: number;
-        MIDDLE: number;
-        END: number;
-    }
+    type PositionType_ = number;
+    var PositionType_: {
+        START: PositionType_;
+        MIDDLE: PositionType_;
+        END: PositionType_;
+    };
 
     /**
      * Manages a position and size, either horizontal or vertical.

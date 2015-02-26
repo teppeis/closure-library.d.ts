@@ -263,22 +263,24 @@ declare module goog.ui.KeyboardShortcutHandler {
      * Bit values for modifier keys.
      * @enum {number}
      */
-    interface Modifiers {
-        NONE: number;
-        SHIFT: number;
-        CTRL: number;
-        ALT: number;
-        META: number;
-    }
+    type Modifiers = number;
+    var Modifiers: {
+        NONE: Modifiers;
+        SHIFT: Modifiers;
+        CTRL: Modifiers;
+        ALT: Modifiers;
+        META: Modifiers;
+    };
 
     /**
      * Events.
      * @enum {string}
      */
-    interface EventType {
-        SHORTCUT_TRIGGERED: string;
-        SHORTCUT_PREFIX: string;
-    }
+    type EventType = string;
+    var EventType: {
+        SHORTCUT_TRIGGERED: EventType;
+        SHORTCUT_PREFIX: EventType;
+    };
 
     /**
      * A map of strokes (represented as numbers) to the nodes reached by those

@@ -70,24 +70,26 @@ declare module goog.net.WebSocket {
      * The events fired by the web socket.
      * @enum {string} The event types for the web socket.
      */
-    interface EventType {
-        CLOSED: string;
-        ERROR: string;
-        MESSAGE: string;
-        OPENED: string;
-    }
+    type EventType = string;
+    var EventType: {
+        CLOSED: EventType;
+        ERROR: EventType;
+        MESSAGE: EventType;
+        OPENED: EventType;
+    };
 
     /**
      * The various states of the web socket.
      * @enum {number} The states of the web socket.
      * @private
      */
-    interface ReadyState_ {
-        CONNECTING: number;
-        OPEN: number;
-        CLOSING: number;
-        CLOSED: number;
-    }
+    type ReadyState_ = number;
+    var ReadyState_: {
+        CONNECTING: ReadyState_;
+        OPEN: ReadyState_;
+        CLOSING: ReadyState_;
+        CLOSED: ReadyState_;
+    };
 
     /**
      * Object representing a new incoming message event.

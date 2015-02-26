@@ -68,9 +68,10 @@ declare module goog.events.BrowserEvent {
      * Normalized button constants for the mouse.
      * @enum {number}
      */
-    interface MouseButton {
-        LEFT: number;
-        MIDDLE: number;
-        RIGHT: number;
-    }
+    type MouseButton = number;
+    var MouseButton: {
+        LEFT: MouseButton;
+        MIDDLE: MouseButton;
+        RIGHT: MouseButton;
+    };
 }

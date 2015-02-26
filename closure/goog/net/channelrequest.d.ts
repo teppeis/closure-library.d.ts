@@ -177,24 +177,26 @@ declare module goog.net.ChannelRequest {
      * @enum {number}
      * @private
      */
-    interface Type_ {
-        XML_HTTP: number;
-        IMG: number;
-        TRIDENT: number;
-    }
+    type Type_ = number;
+    var Type_: {
+        XML_HTTP: Type_;
+        IMG: Type_;
+        TRIDENT: Type_;
+    };
 
     /**
      * Enum type for identifying a ChannelRequest error.
      * @enum {number}
      */
-    interface Error {
-        STATUS: number;
-        NO_DATA: number;
-        TIMEOUT: number;
-        UNKNOWN_SESSION_ID: number;
-        BAD_DATA: number;
-        HANDLER_EXCEPTION: number;
-        BROWSER_OFFLINE: number;
-        ACTIVE_X_BLOCKED: number;
-    }
+    type Error = number;
+    var Error: {
+        STATUS: Error;
+        NO_DATA: Error;
+        TIMEOUT: Error;
+        UNKNOWN_SESSION_ID: Error;
+        BAD_DATA: Error;
+        HANDLER_EXCEPTION: Error;
+        BROWSER_OFFLINE: Error;
+        ACTIVE_X_BLOCKED: Error;
+    };
 }

@@ -122,11 +122,12 @@ declare module goog.debug.Trace_ {
      * Event type supported by tracer
      * @enum {number}
      */
-    interface EventType {
-        START: number;
-        STOP: number;
-        COMMENT: number;
-    }
+    type EventType = number;
+    var EventType: {
+        START: EventType;
+        STOP: EventType;
+        COMMENT: EventType;
+    };
 
     /**
      * Class to keep track of a stat of a single tracer type. Stores the count

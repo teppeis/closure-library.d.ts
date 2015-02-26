@@ -54,12 +54,13 @@ declare module goog.crypt.BlobHasher {
      * Event names for hash computation events
      * @enum {string}
      */
-    interface EventType {
-        STARTED: string;
-        PROGRESS: string;
-        THROTTLED: string;
-        COMPLETE: string;
-        ABORT: string;
-        ERROR: string;
-    }
+    type EventType = string;
+    var EventType: {
+        STARTED: EventType;
+        PROGRESS: EventType;
+        THROTTLED: EventType;
+        COMPLETE: EventType;
+        ABORT: EventType;
+        ERROR: EventType;
+    };
 }

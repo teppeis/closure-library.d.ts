@@ -42,8 +42,9 @@ declare module goog.proto2.ObjectSerializer {
      *
      * @enum {number}
      */
-    interface KeyOption {
-        TAG: number;
-        NAME: number;
-    }
+    type KeyOption = number;
+    var KeyOption: {
+        TAG: KeyOption;
+        NAME: KeyOption;
+    };
 }

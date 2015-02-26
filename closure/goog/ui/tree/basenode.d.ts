@@ -497,10 +497,11 @@ declare module goog.ui.tree.BaseNode {
      * The event types dispatched by this class.
      * @enum {string}
      */
-    interface EventType {
-        BEFORE_EXPAND: string;
-        EXPAND: string;
-        BEFORE_COLLAPSE: string;
-        COLLAPSE: string;
-    }
+    type EventType = string;
+    var EventType: {
+        BEFORE_EXPAND: EventType;
+        EXPAND: EventType;
+        BEFORE_COLLAPSE: EventType;
+        COLLAPSE: EventType;
+    };
 }

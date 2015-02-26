@@ -136,9 +136,10 @@ declare module goog.fx.TransitionBase {
      * Enum for the possible states of an animation.
      * @enum {number}
      */
-    interface State {
-        STOPPED: number;
-        PAUSED: number;
-        PLAYING: number;
-    }
+    type State = number;
+    var State: {
+        STOPPED: State;
+        PAUSED: State;
+        PLAYING: State;
+    };
 }

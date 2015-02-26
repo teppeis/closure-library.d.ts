@@ -22,11 +22,12 @@ declare module goog.storage.mechanism.ErrorHandlingMechanism {
      * Valid storage mechanism operations.
      * @enum {string}
      */
-    interface Operation {
-        SET: string;
-        GET: string;
-        REMOVE: string;
-    }
+    type Operation = string;
+    var Operation: {
+        SET: Operation;
+        GET: Operation;
+        REMOVE: Operation;
+    };
 
     /**
      * A function that handles errors raised in goog.storage.  Since some places in

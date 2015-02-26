@@ -179,9 +179,10 @@ declare module goog.ui.Palette {
      * Events fired by the palette object
      * @enum {string}
      */
-    interface EventType {
-        AFTER_HIGHLIGHT: string;
-    }
+    type EventType = string;
+    var EventType: {
+        AFTER_HIGHLIGHT: EventType;
+    };
 
     /**
      * A component to represent the currently highlighted cell.

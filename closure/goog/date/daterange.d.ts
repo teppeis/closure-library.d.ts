@@ -158,17 +158,18 @@ declare module goog.date.DateRange {
      *
      * @enum {string}
      */
-    interface StandardDateRangeKeys {
-        YESTERDAY: string;
-        TODAY: string;
-        LAST_7_DAYS: string;
-        THIS_MONTH: string;
-        LAST_MONTH: string;
-        THIS_WEEK: string;
-        LAST_WEEK: string;
-        LAST_BUSINESS_WEEK: string;
-        ALL_TIME: string;
-    }
+    type StandardDateRangeKeys = string;
+    var StandardDateRangeKeys: {
+        YESTERDAY: StandardDateRangeKeys;
+        TODAY: StandardDateRangeKeys;
+        LAST_7_DAYS: StandardDateRangeKeys;
+        THIS_MONTH: StandardDateRangeKeys;
+        LAST_MONTH: StandardDateRangeKeys;
+        THIS_WEEK: StandardDateRangeKeys;
+        LAST_WEEK: StandardDateRangeKeys;
+        LAST_BUSINESS_WEEK: StandardDateRangeKeys;
+        ALL_TIME: StandardDateRangeKeys;
+    };
 
     /**
      * Creates an iterator over the dates in a {@link goog.date.DateRange}.

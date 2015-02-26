@@ -5,34 +5,37 @@ declare module goog.uri.utils {
      * @enum {number}
      * @private
      */
-    interface CharCode_ {
-        AMPERSAND: number;
-        EQUAL: number;
-        HASH: number;
-        QUESTION: number;
-    }
+    type CharCode_ = number;
+    var CharCode_: {
+        AMPERSAND: CharCode_;
+        EQUAL: CharCode_;
+        HASH: CharCode_;
+        QUESTION: CharCode_;
+    };
 
     /**
      * The index of each URI component in the return value of goog.uri.utils.split.
      * @enum {number}
      */
-    interface ComponentIndex {
-        SCHEME: number;
-        USER_INFO: number;
-        DOMAIN: number;
-        PORT: number;
-        PATH: number;
-        QUERY_DATA: number;
-        FRAGMENT: number;
-    }
+    type ComponentIndex = number;
+    var ComponentIndex: {
+        SCHEME: ComponentIndex;
+        USER_INFO: ComponentIndex;
+        DOMAIN: ComponentIndex;
+        PORT: ComponentIndex;
+        PATH: ComponentIndex;
+        QUERY_DATA: ComponentIndex;
+        FRAGMENT: ComponentIndex;
+    };
 
     /**
      * Standard supported query parameters.
      * @enum {string}
      */
-    interface StandardQueryParam {
-        RANDOM: string;
-    }
+    type StandardQueryParam = string;
+    var StandardQueryParam: {
+        RANDOM: StandardQueryParam;
+    };
 
     /**
      * Supported query parameter values by the parameter serializing utilities.

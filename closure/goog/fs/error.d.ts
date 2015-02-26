@@ -27,20 +27,21 @@ declare module goog.fs.Error {
      * @see http://dev.w3.org/2009/dap/file-system/file-writer.html#definitions
      * @enum {string}
      */
-    interface ErrorName {
-        ABORT: string;
-        ENCODING: string;
-        INVALID_MODIFICATION: string;
-        INVALID_STATE: string;
-        NOT_FOUND: string;
-        NOT_READABLE: string;
-        NO_MODIFICATION_ALLOWED: string;
-        PATH_EXISTS: string;
-        QUOTA_EXCEEDED: string;
-        SECURITY: string;
-        SYNTAX: string;
-        TYPE_MISMATCH: string;
-    }
+    type ErrorName = string;
+    var ErrorName: {
+        ABORT: ErrorName;
+        ENCODING: ErrorName;
+        INVALID_MODIFICATION: ErrorName;
+        INVALID_STATE: ErrorName;
+        NOT_FOUND: ErrorName;
+        NOT_READABLE: ErrorName;
+        NO_MODIFICATION_ALLOWED: ErrorName;
+        PATH_EXISTS: ErrorName;
+        QUOTA_EXCEEDED: ErrorName;
+        SECURITY: ErrorName;
+        SYNTAX: ErrorName;
+        TYPE_MISMATCH: ErrorName;
+    };
 
     /**
      * Error codes for file errors.
@@ -49,18 +50,19 @@ declare module goog.fs.Error {
      * @enum {number}
      * @deprecated Use the 'name' or 'message' attribute instead.
      */
-    interface ErrorCode {
-        NOT_FOUND: number;
-        SECURITY: number;
-        ABORT: number;
-        NOT_READABLE: number;
-        ENCODING: number;
-        NO_MODIFICATION_ALLOWED: number;
-        INVALID_STATE: number;
-        SYNTAX: number;
-        INVALID_MODIFICATION: number;
-        QUOTA_EXCEEDED: number;
-        TYPE_MISMATCH: number;
-        PATH_EXISTS: number;
-    }
+    type ErrorCode = number;
+    var ErrorCode: {
+        NOT_FOUND: ErrorCode;
+        SECURITY: ErrorCode;
+        ABORT: ErrorCode;
+        NOT_READABLE: ErrorCode;
+        ENCODING: ErrorCode;
+        NO_MODIFICATION_ALLOWED: ErrorCode;
+        INVALID_STATE: ErrorCode;
+        SYNTAX: ErrorCode;
+        INVALID_MODIFICATION: ErrorCode;
+        QUOTA_EXCEEDED: ErrorCode;
+        TYPE_MISMATCH: ErrorCode;
+        PATH_EXISTS: ErrorCode;
+    };
 }

@@ -57,7 +57,8 @@ declare module goog.events.MouseWheelHandler {
      * Enum type for the events fired by the mouse wheel handler.
      * @enum {string}
      */
-    interface EventType {
-        MOUSEWHEEL: string;
-    }
+    type EventType = string;
+    var EventType: {
+        MOUSEWHEEL: EventType;
+    };
 }

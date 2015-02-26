@@ -4,11 +4,12 @@ declare module goog.date.relative {
      * Enumeration used to identify time units internally.
      * @enum {number}
      */
-    interface Unit {
-        MINUTES: number;
-        HOURS: number;
-        DAYS: number;
-    }
+    type Unit = number;
+    var Unit: {
+        MINUTES: Unit;
+        HOURS: Unit;
+        DAYS: Unit;
+    };
 
     /**
      * @typedef {function(number, boolean, goog.date.relative.Unit): string}

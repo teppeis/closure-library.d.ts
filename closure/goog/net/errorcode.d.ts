@@ -4,18 +4,19 @@ declare module goog.net {
      * Error codes
      * @enum {number}
      */
-    interface ErrorCode {
-        NO_ERROR: number;
-        ACCESS_DENIED: number;
-        FILE_NOT_FOUND: number;
-        FF_SILENT_ERROR: number;
-        CUSTOM_ERROR: number;
-        EXCEPTION: number;
-        HTTP_ERROR: number;
-        ABORT: number;
-        TIMEOUT: number;
-        OFFLINE: number;
-    }
+    type ErrorCode = number;
+    var ErrorCode: {
+        NO_ERROR: ErrorCode;
+        ACCESS_DENIED: ErrorCode;
+        FILE_NOT_FOUND: ErrorCode;
+        FF_SILENT_ERROR: ErrorCode;
+        CUSTOM_ERROR: ErrorCode;
+        EXCEPTION: ErrorCode;
+        HTTP_ERROR: ErrorCode;
+        ABORT: ErrorCode;
+        TIMEOUT: ErrorCode;
+        OFFLINE: ErrorCode;
+    };
 }
 
 declare module goog.net.ErrorCode {

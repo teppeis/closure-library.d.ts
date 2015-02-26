@@ -25,7 +25,8 @@ declare module goog.events.InputHandler {
      * Enum type for the events fired by the input handler
      * @enum {string}
      */
-    interface EventType {
-        INPUT: string;
-    }
+    type EventType = string;
+    var EventType: {
+        INPUT: EventType;
+    };
 }

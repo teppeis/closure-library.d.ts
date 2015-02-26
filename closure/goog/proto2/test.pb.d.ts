@@ -2134,11 +2134,12 @@ declare module proto2.TestAllTypes {
      * Enumeration NestedEnum.
      * @enum {number}
      */
-    interface NestedEnum {
-        FOO: number;
-        BAR: number;
-        BAZ: number;
-    }
+    type NestedEnum = number;
+    var NestedEnum: {
+        FOO: NestedEnum;
+        BAR: NestedEnum;
+        BAZ: NestedEnum;
+    };
 
     /**
      * Message NestedMessage.

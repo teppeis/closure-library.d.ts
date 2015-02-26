@@ -665,29 +665,31 @@ declare module goog.editor.Field {
      * Event types that can be stopped/started.
      * @enum {string}
      */
-    interface EventType {
-        COMMAND_VALUE_CHANGE: string;
-        LOAD: string;
-        UNLOAD: string;
-        BEFORECHANGE: string;
-        CHANGE: string;
-        DELAYEDCHANGE: string;
-        BEFOREFOCUS: string;
-        FOCUS: string;
-        BLUR: string;
-        BEFORETAB: string;
-        IFRAME_RESIZED: string;
-        SELECTIONCHANGE: string;
-    }
+    type EventType = string;
+    var EventType: {
+        COMMAND_VALUE_CHANGE: EventType;
+        LOAD: EventType;
+        UNLOAD: EventType;
+        BEFORECHANGE: EventType;
+        CHANGE: EventType;
+        DELAYEDCHANGE: EventType;
+        BEFOREFOCUS: EventType;
+        FOCUS: EventType;
+        BLUR: EventType;
+        BEFORETAB: EventType;
+        IFRAME_RESIZED: EventType;
+        SELECTIONCHANGE: EventType;
+    };
 
     /**
      * The load state of the field.
      * @enum {number}
      * @private
      */
-    interface LoadState_ {
-        UNEDITABLE: number;
-        LOADING: number;
-        EDITABLE: number;
-    }
+    type LoadState_ = number;
+    var LoadState_: {
+        UNEDITABLE: LoadState_;
+        LOADING: LoadState_;
+        EDITABLE: LoadState_;
+    };
 }

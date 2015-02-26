@@ -130,9 +130,10 @@ declare module goog.Disposable {
     /**
      * @enum {number} Different monitoring modes for Disposable.
      */
-    interface MonitoringMode {
-        OFF: number;
-        PERMANENT: number;
-        INTERACTIVE: number;
-    }
+    type MonitoringMode = number;
+    var MonitoringMode: {
+        OFF: MonitoringMode;
+        PERMANENT: MonitoringMode;
+        INTERACTIVE: MonitoringMode;
+    };
 }

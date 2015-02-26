@@ -75,10 +75,11 @@ declare module goog.editor.plugins.UndoRedoManager {
      * Event types for the events dispatched by undo-redo manager.
      * @enum {string}
      */
-    interface EventType {
-        STATE_CHANGE: string;
-        STATE_ADDED: string;
-        BEFORE_UNDO: string;
-        BEFORE_REDO: string;
-    }
+    type EventType = string;
+    var EventType: {
+        STATE_CHANGE: EventType;
+        STATE_ADDED: EventType;
+        BEFORE_UNDO: EventType;
+        BEFORE_REDO: EventType;
+    };
 }

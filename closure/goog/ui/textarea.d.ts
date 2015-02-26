@@ -74,7 +74,8 @@ declare module goog.ui.Textarea {
      * Constants for event names.
      * @enum {string}
      */
-    interface EventType {
-        RESIZE: string;
-    }
+    type EventType = string;
+    var EventType: {
+        RESIZE: EventType;
+    };
 }

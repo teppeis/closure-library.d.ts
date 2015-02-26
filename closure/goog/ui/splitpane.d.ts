@@ -110,29 +110,32 @@ declare module goog.ui.SplitPane {
      * Events.
      * @enum {string}
      */
-    interface EventType {
-        HANDLE_DRAG: string;
-        HANDLE_DRAG_END: string;
-        HANDLE_SNAP: string;
-    }
+    type EventType = string;
+    var EventType: {
+        HANDLE_DRAG: EventType;
+        HANDLE_DRAG_END: EventType;
+        HANDLE_SNAP: EventType;
+    };
 
     /**
      * Z indices for iframe overlay and splitter handle.
      * @enum {number}
      * @private
      */
-    interface IframeOverlayIndex_ {
-        HIDDEN: number;
-        OVERLAY: number;
-        SPLITTER_HANDLE: number;
-    }
+    type IframeOverlayIndex_ = number;
+    var IframeOverlayIndex_: {
+        HIDDEN: IframeOverlayIndex_;
+        OVERLAY: IframeOverlayIndex_;
+        SPLITTER_HANDLE: IframeOverlayIndex_;
+    };
 
     /**
     * Orientation values for the splitpane.
     * @enum {string}
     */
-    interface Orientation {
-        HORIZONTAL: string;
-        VERTICAL: string;
-    }
+    type Orientation = string;
+    var Orientation: {
+        HORIZONTAL: Orientation;
+        VERTICAL: Orientation;
+    };
 }

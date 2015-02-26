@@ -42,16 +42,18 @@ declare module goog.labs.style.PixelDensityMonitor {
      * physical and device pixels are mapped.
      * @enum {number}
      */
-    interface Density {
-        NORMAL: number;
-        HIGH: number;
-    }
+    type Density = number;
+    var Density: {
+        NORMAL: Density;
+        HIGH: Density;
+    };
 
     /**
      * The events fired by the PixelDensityMonitor.
      * @enum {string}
      */
-    interface EventType {
-        CHANGE: string;
-    }
+    type EventType = string;
+    var EventType: {
+        CHANGE: EventType;
+    };
 }

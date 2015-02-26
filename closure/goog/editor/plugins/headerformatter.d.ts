@@ -17,10 +17,11 @@ declare module goog.editor.plugins.HeaderFormatter {
      * Commands that can be passed as the optional argument to execCommand.
      * @enum {string}
      */
-    interface HEADER_COMMAND {
-        H1: string;
-        H2: string;
-        H3: string;
-        H4: string;
-    }
+    type HEADER_COMMAND = string;
+    var HEADER_COMMAND: {
+        H1: HEADER_COMMAND;
+        H2: HEADER_COMMAND;
+        H3: HEADER_COMMAND;
+        H4: HEADER_COMMAND;
+    };
 }

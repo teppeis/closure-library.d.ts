@@ -23,7 +23,8 @@ declare module goog.events.FileDropHandler {
      * The types of events fired by this class.
      * @enum {string}
      */
-    interface EventType {
-        DROP: string;
-    }
+    type EventType = string;
+    var EventType: {
+        DROP: EventType;
+    };
 }

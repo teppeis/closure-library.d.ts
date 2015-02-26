@@ -469,44 +469,46 @@ declare module goog.ui.Component {
      * the corresponding state change.
      * @enum {string}
      */
-    interface EventType {
-        BEFORE_SHOW: string;
-        SHOW: string;
-        HIDE: string;
-        DISABLE: string;
-        ENABLE: string;
-        HIGHLIGHT: string;
-        UNHIGHLIGHT: string;
-        ACTIVATE: string;
-        DEACTIVATE: string;
-        SELECT: string;
-        UNSELECT: string;
-        CHECK: string;
-        UNCHECK: string;
-        FOCUS: string;
-        BLUR: string;
-        OPEN: string;
-        CLOSE: string;
-        ENTER: string;
-        LEAVE: string;
-        ACTION: string;
-        CHANGE: string;
-    }
+    type EventType = string;
+    var EventType: {
+        BEFORE_SHOW: EventType;
+        SHOW: EventType;
+        HIDE: EventType;
+        DISABLE: EventType;
+        ENABLE: EventType;
+        HIGHLIGHT: EventType;
+        UNHIGHLIGHT: EventType;
+        ACTIVATE: EventType;
+        DEACTIVATE: EventType;
+        SELECT: EventType;
+        UNSELECT: EventType;
+        CHECK: EventType;
+        UNCHECK: EventType;
+        FOCUS: EventType;
+        BLUR: EventType;
+        OPEN: EventType;
+        CLOSE: EventType;
+        ENTER: EventType;
+        LEAVE: EventType;
+        ACTION: EventType;
+        CHANGE: EventType;
+    };
 
     /**
      * Errors thrown by the component.
      * @enum {string}
      */
-    interface Error {
-        NOT_SUPPORTED: string;
-        DECORATE_INVALID: string;
-        ALREADY_RENDERED: string;
-        PARENT_UNABLE_TO_BE_SET: string;
-        CHILD_INDEX_OUT_OF_BOUNDS: string;
-        NOT_OUR_CHILD: string;
-        NOT_IN_DOCUMENT: string;
-        STATE_INVALID: string;
-    }
+    type Error = string;
+    var Error: {
+        NOT_SUPPORTED: Error;
+        DECORATE_INVALID: Error;
+        ALREADY_RENDERED: Error;
+        PARENT_UNABLE_TO_BE_SET: Error;
+        CHILD_INDEX_OUT_OF_BOUNDS: Error;
+        NOT_OUR_CHILD: Error;
+        NOT_IN_DOCUMENT: Error;
+        STATE_INVALID: Error;
+    };
 
     /**
      * Common component states.  Components may have distinct appearance depending
@@ -514,14 +516,15 @@ declare module goog.ui.Component {
      * all states.
      * @enum {number}
      */
-    interface State {
-        ALL: number;
-        DISABLED: number;
-        HOVER: number;
-        ACTIVE: number;
-        SELECTED: number;
-        CHECKED: number;
-        FOCUSED: number;
-        OPENED: number;
-    }
+    type State = number;
+    var State: {
+        ALL: State;
+        DISABLED: State;
+        HOVER: State;
+        ACTIVE: State;
+        SELECTED: State;
+        CHECKED: State;
+        FOCUSED: State;
+        OPENED: State;
+    };
 }

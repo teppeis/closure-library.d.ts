@@ -4,23 +4,25 @@ declare module goog.i18n.bidi {
      * Unicode formatting characters and directionality string constants.
      * @enum {string}
      */
-    interface Format {
-        LRE: string;
-        RLE: string;
-        PDF: string;
-        LRM: string;
-        RLM: string;
-    }
+    type Format = string;
+    var Format: {
+        LRE: Format;
+        RLE: Format;
+        PDF: Format;
+        LRM: Format;
+        RLM: Format;
+    };
 
     /**
      * Directionality enum.
      * @enum {number}
      */
-    interface Dir {
-        LTR: number;
-        RTL: number;
-        NEUTRAL: number;
-    }
+    type Dir = number;
+    var Dir: {
+        LTR: Dir;
+        RTL: Dir;
+        NEUTRAL: Dir;
+    };
 
     /**
      * Strings that have an (optional) known direction.

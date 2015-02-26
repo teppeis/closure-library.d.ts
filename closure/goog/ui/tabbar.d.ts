@@ -174,10 +174,11 @@ declare module goog.ui.TabBar {
      * Tab bar location relative to tab contents.
      * @enum {string}
      */
-    interface Location {
-        TOP: string;
-        BOTTOM: string;
-        START: string;
-        END: string;
-    }
+    type Location = string;
+    var Location: {
+        TOP: Location;
+        BOTTOM: Location;
+        START: Location;
+        END: Location;
+    };
 }

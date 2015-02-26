@@ -62,8 +62,9 @@ declare module goog.ui.CharCounter {
      * Display mode for the char counter.
      * @enum {number}
      */
-    interface Display {
-        REMAINING: number;
-        INCREMENTAL: number;
-    }
+    type Display = number;
+    var Display: {
+        REMAINING: Display;
+        INCREMENTAL: Display;
+    };
 }

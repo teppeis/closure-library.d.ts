@@ -116,11 +116,12 @@ declare module goog.ui.editor.AbstractDialog {
      * Event type constants for events the dialog fires.
      * @enum {string}
      */
-    interface EventType {
-        AFTER_HIDE: string;
-        CANCEL: string;
-        OK: string;
-    }
+    type EventType = string;
+    var EventType: {
+        AFTER_HIDE: EventType;
+        CANCEL: EventType;
+        OK: EventType;
+    };
 
     /**
      * A builder class for the dialog control. All methods except build return this.

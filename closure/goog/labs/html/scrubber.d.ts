@@ -5,29 +5,30 @@ declare module goog.labs.html.scrubber {
      * @enum {number}
      * @private
      */
-    interface Group_ {
-        BLOCK_: number;
-        INLINE_: number;
-        INLINE_MINUS_A_: number;
-        MIXED_: number;
-        TABLE_CONTENT_: number;
-        HEAD_CONTENT_: number;
-        TOP_CONTENT_: number;
-        AREA_ELEMENT_: number;
-        FORM_ELEMENT_: number;
-        LEGEND_ELEMENT_: number;
-        LI_ELEMENT_: number;
-        DL_PART_: number;
-        P_ELEMENT_: number;
-        OPTIONS_ELEMENT_: number;
-        OPTION_ELEMENT_: number;
-        PARAM_ELEMENT_: number;
-        TABLE_ELEMENT_: number;
-        TR_ELEMENT_: number;
-        TD_ELEMENT_: number;
-        COL_ELEMENT_: number;
-        CHARACTER_DATA_: number;
-    }
+    type Group_ = number;
+    var Group_: {
+        BLOCK_: Group_;
+        INLINE_: Group_;
+        INLINE_MINUS_A_: Group_;
+        MIXED_: Group_;
+        TABLE_CONTENT_: Group_;
+        HEAD_CONTENT_: Group_;
+        TOP_CONTENT_: Group_;
+        AREA_ELEMENT_: Group_;
+        FORM_ELEMENT_: Group_;
+        LEGEND_ELEMENT_: Group_;
+        LI_ELEMENT_: Group_;
+        DL_PART_: Group_;
+        P_ELEMENT_: Group_;
+        OPTIONS_ELEMENT_: Group_;
+        OPTION_ELEMENT_: Group_;
+        PARAM_ELEMENT_: Group_;
+        TABLE_ELEMENT_: Group_;
+        TR_ELEMENT_: Group_;
+        TD_ELEMENT_: Group_;
+        COL_ELEMENT_: Group_;
+        CHARACTER_DATA_: Group_;
+    };
 
     /**
      * Element scopes limit where close tags can have effects.
@@ -38,12 +39,13 @@ declare module goog.labs.html.scrubber {
      * @enum {number}
      * @private
      */
-    interface Scope_ {
-        COMMON_: number;
-        BUTTON_: number;
-        LIST_ITEM_: number;
-        TABLE_: number;
-    }
+    type Scope_ = number;
+    var Scope_: {
+        COMMON_: Scope_;
+        BUTTON_: Scope_;
+        LIST_ITEM_: Scope_;
+        TABLE_: Scope_;
+    };
 
     /** Character code constant for {@code '<'}.  @private */
     var CC_LT_: any;

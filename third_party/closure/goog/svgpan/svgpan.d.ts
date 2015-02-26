@@ -60,9 +60,10 @@ declare module svgpan.SvgPan {
     /**
      * @enum {string}
      */
-    interface State {
-        NONE: string;
-        PAN: string;
-        DRAG: string;
-    }
+    type State = string;
+    var State: {
+        NONE: State;
+        PAN: State;
+        DRAG: State;
+    };
 }

@@ -27,8 +27,9 @@ declare module goog.dom.BufferedViewportSizeMonitor {
      * Additional events to dispatch.
      * @enum {string}
      */
-    interface EventType {
-        RESIZE_HEIGHT: string;
-        RESIZE_WIDTH: string;
-    }
+    type EventType = string;
+    var EventType: {
+        RESIZE_HEIGHT: EventType;
+        RESIZE_WIDTH: EventType;
+    };
 }

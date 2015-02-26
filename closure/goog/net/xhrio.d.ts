@@ -320,11 +320,12 @@ declare module goog.net.XhrIo {
      * @enum {string}
      * @see http://www.w3.org/TR/XMLHttpRequest/#the-responsetype-attribute
      */
-    interface ResponseType {
-        DEFAULT: string;
-        TEXT: string;
-        DOCUMENT: string;
-        BLOB: string;
-        ARRAY_BUFFER: string;
-    }
+    type ResponseType = string;
+    var ResponseType: {
+        DEFAULT: ResponseType;
+        TEXT: ResponseType;
+        DOCUMENT: ResponseType;
+        BLOB: ResponseType;
+        ARRAY_BUFFER: ResponseType;
+    };
 }

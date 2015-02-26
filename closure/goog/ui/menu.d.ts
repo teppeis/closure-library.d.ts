@@ -181,10 +181,11 @@ declare module goog.ui.Menu {
      * @enum {string}
      * @deprecated Use goog.ui.Component.EventType.
      */
-    interface EventType {
-        BEFORE_SHOW: string;
-        SHOW: string;
-        BEFORE_HIDE: string;
-        HIDE: string;
-    }
+    type EventType = string;
+    var EventType: {
+        BEFORE_SHOW: EventType;
+        SHOW: EventType;
+        BEFORE_HIDE: EventType;
+        HIDE: EventType;
+    };
 }

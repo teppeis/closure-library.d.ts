@@ -102,8 +102,9 @@ declare module goog.labs.structs.Map {
      * Browser feature enum necessary for map.
      * @enum {boolean}
      */
-    interface BrowserFeature {
-        OBJECT_CREATE_SUPPORTED: boolean;
-        OBJECT_KEYS_SUPPORTED: boolean;
-    }
+    type BrowserFeature = boolean;
+    var BrowserFeature: {
+        OBJECT_CREATE_SUPPORTED: BrowserFeature;
+        OBJECT_KEYS_SUPPORTED: BrowserFeature;
+    };
 }

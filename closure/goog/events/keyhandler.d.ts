@@ -69,7 +69,8 @@ declare module goog.events.KeyHandler {
      * Enum type for the events fired by the key handler
      * @enum {string}
      */
-    interface EventType {
-        KEY: string;
-    }
+    type EventType = string;
+    var EventType: {
+        KEY: EventType;
+    };
 }

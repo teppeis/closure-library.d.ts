@@ -4,12 +4,13 @@ declare module goog.net.jsloader {
      * Possible error codes for jsloader.
      * @enum {number}
      */
-    interface ErrorCode {
-        LOAD_ERROR: number;
-        TIMEOUT: number;
-        VERIFY_ERROR: number;
-        VERIFY_OBJECT_ALREADY_EXISTS: number;
-    }
+    type ErrorCode = number;
+    var ErrorCode: {
+        LOAD_ERROR: ErrorCode;
+        TIMEOUT: ErrorCode;
+        VERIFY_ERROR: ErrorCode;
+        VERIFY_OBJECT_ALREADY_EXISTS: ErrorCode;
+    };
 
     /**
      * Optional parameters for goog.net.jsloader.send.

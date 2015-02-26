@@ -25,13 +25,14 @@ declare module goog.fx.Transition {
      * Transition event types.
      * @enum {string}
      */
-    interface EventType {
-        PLAY: string;
-        BEGIN: string;
-        RESUME: string;
-        END: string;
-        STOP: string;
-        FINISH: string;
-        PAUSE: string;
-    }
+    type EventType = string;
+    var EventType: {
+        PLAY: EventType;
+        BEGIN: EventType;
+        RESUME: EventType;
+        END: EventType;
+        STOP: EventType;
+        FINISH: EventType;
+        PAUSE: EventType;
+    };
 }

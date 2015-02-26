@@ -120,34 +120,37 @@ declare module goog.spell.SpellCheck {
      *
      * @enum {string}
      */
-    interface EventType {
-        READY: string;
-        ERROR: string;
-        WORD_CHANGED: string;
-    }
+    type EventType = string;
+    var EventType: {
+        READY: EventType;
+        ERROR: EventType;
+        WORD_CHANGED: EventType;
+    };
 
     /**
      * Codes representing the status of an individual word.
      *
      * @enum {number}
      */
-    interface WordStatus {
-        UNKNOWN: number;
-        VALID: number;
-        INVALID: number;
-        IGNORED: number;
-        CORRECTED: number;
-    }
+    type WordStatus = number;
+    var WordStatus: {
+        UNKNOWN: WordStatus;
+        VALID: WordStatus;
+        INVALID: WordStatus;
+        IGNORED: WordStatus;
+        CORRECTED: WordStatus;
+    };
 
     /**
      * Fields for word array in cache.
      *
      * @enum {number}
      */
-    interface CacheIndex {
-        STATUS: number;
-        SUGGESTIONS: number;
-    }
+    type CacheIndex = number;
+    var CacheIndex: {
+        STATUS: CacheIndex;
+        SUGGESTIONS: CacheIndex;
+    };
 
     /**
      * Object representing a word changed event. Fired when the status of a word

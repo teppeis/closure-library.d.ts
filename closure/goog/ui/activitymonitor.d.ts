@@ -83,7 +83,8 @@ declare module goog.ui.ActivityMonitor {
      * Event constants for the activity monitor.
      * @enum {string}
      */
-    interface Event {
-        ACTIVITY: string;
-    }
+    type Event = string;
+    var Event: {
+        ACTIVITY: Event;
+    };
 }

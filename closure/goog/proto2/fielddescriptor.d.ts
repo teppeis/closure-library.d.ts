@@ -110,24 +110,25 @@ declare module goog.proto2.FieldDescriptor {
      *
      * @enum {number}
      */
-    interface FieldType {
-        DOUBLE: number;
-        FLOAT: number;
-        INT64: number;
-        UINT64: number;
-        INT32: number;
-        FIXED64: number;
-        FIXED32: number;
-        BOOL: number;
-        STRING: number;
-        GROUP: number;
-        MESSAGE: number;
-        BYTES: number;
-        UINT32: number;
-        ENUM: number;
-        SFIXED32: number;
-        SFIXED64: number;
-        SINT32: number;
-        SINT64: number;
-    }
+    type FieldType = number;
+    var FieldType: {
+        DOUBLE: FieldType;
+        FLOAT: FieldType;
+        INT64: FieldType;
+        UINT64: FieldType;
+        INT32: FieldType;
+        FIXED64: FieldType;
+        FIXED32: FieldType;
+        BOOL: FieldType;
+        STRING: FieldType;
+        GROUP: FieldType;
+        MESSAGE: FieldType;
+        BYTES: FieldType;
+        UINT32: FieldType;
+        ENUM: FieldType;
+        SFIXED32: FieldType;
+        SFIXED64: FieldType;
+        SINT32: FieldType;
+        SINT64: FieldType;
+    };
 }
