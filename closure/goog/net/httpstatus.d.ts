@@ -53,20 +53,17 @@ declare module goog.net {
         HTTP_VERSION_NOT_SUPPORTED: HttpStatus;
         NETWORK_AUTHENTICATION_REQUIRED: HttpStatus;
         QUIRK_IE_NO_CONTENT: HttpStatus;
+
+        /**
+         * Returns whether the given status should be considered successful.
+         *
+         * Successful codes are OK (200), CREATED (201), ACCEPTED (202),
+         * NO CONTENT (204), PARTIAL CONTENT (206), NOT MODIFIED (304),
+         * and IE's no content code (1223).
+         *
+         * @param {number} status The status code to test.
+         * @return {boolean} Whether the status code should be considered successful.
+         */
+        isSuccess: (status: number) => boolean;
     };
-}
-
-declare module goog.net.HttpStatus {
-
-    /**
-     * Returns whether the given status should be considered successful.
-     *
-     * Successful codes are OK (200), CREATED (201), ACCEPTED (202),
-     * NO CONTENT (204), PARTIAL CONTENT (206), NOT MODIFIED (304),
-     * and IE's no content code (1223).
-     *
-     * @param {number} status The status code to test.
-     * @return {boolean} Whether the status code should be considered successful.
-     */
-    function isSuccess(status: number): boolean;
 }

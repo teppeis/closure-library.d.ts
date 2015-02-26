@@ -127,74 +127,71 @@ declare module goog.events {
         WIN_IME: KeyCodes;
         VK_NONAME: KeyCodes;
         PHANTOM: KeyCodes;
+
+        /**
+         * Returns true if the event contains a text modifying key.
+         * @param {goog.events.BrowserEvent} e A key event.
+         * @return {boolean} Whether it's a text modifying key.
+         */
+        isTextModifyingKeyEvent: (e: goog.events.BrowserEvent) => boolean;
+
+        /**
+         * Returns true if the key fires a keypress event in the current browser.
+         *
+         * Accoridng to MSDN [1] IE only fires keypress events for the following keys:
+         * - Letters: A - Z (uppercase and lowercase)
+         * - Numerals: 0 - 9
+         * - Symbols: ! @ # $ % ^ & * ( ) _ - + = < [ ] { } , . / ? \ | ' ` " ~
+         * - System: ESC, SPACEBAR, ENTER
+         *
+         * That's not entirely correct though, for instance there's no distinction
+         * between upper and lower case letters.
+         *
+         * [1] http://msdn2.microsoft.com/en-us/library/ms536939(VS.85).aspx)
+         *
+         * Safari is similar to IE, but does not fire keypress for ESC.
+         *
+         * Additionally, IE6 does not fire keydown or keypress events for letters when
+         * the control or alt keys are held down and the shift key is not. IE7 does
+         * fire keydown in these cases, though, but not keypress.
+         *
+         * @param {number} keyCode A key code.
+         * @param {number=} opt_heldKeyCode Key code of a currently-held key.
+         * @param {boolean=} opt_shiftKey Whether the shift key is held down.
+         * @param {boolean=} opt_ctrlKey Whether the control key is held down.
+         * @param {boolean=} opt_altKey Whether the alt key is held down.
+         * @return {boolean} Whether it's a key that fires a keypress event.
+         */
+        firesKeyPressEvent: (keyCode: number, opt_heldKeyCode?: number, opt_shiftKey?: boolean, opt_ctrlKey?: boolean, opt_altKey?: boolean) => boolean;
+
+        /**
+         * Returns true if the key produces a character.
+         * This does not cover characters on non-US keyboards (Russian, Hebrew, etc.).
+         *
+         * @param {number} keyCode A key code.
+         * @return {boolean} Whether it's a character key.
+         */
+        isCharacterKey: (keyCode: number) => boolean;
+
+        /**
+         * Normalizes key codes from OS/Browser-specific value to the general one.
+         * @param {number} keyCode The native key code.
+         * @return {number} The normalized key code.
+         */
+        normalizeKeyCode: (keyCode: number) => number;
+
+        /**
+         * Normalizes key codes from their Gecko-specific value to the general one.
+         * @param {number} keyCode The native key code.
+         * @return {number} The normalized key code.
+         */
+        normalizeGeckoKeyCode: (keyCode: number) => number;
+
+        /**
+         * Normalizes key codes from their Mac WebKit-specific value to the general one.
+         * @param {number} keyCode The native key code.
+         * @return {number} The normalized key code.
+         */
+        normalizeMacWebKitKeyCode: (keyCode: number) => number;
     };
-}
-
-declare module goog.events.KeyCodes {
-
-    /**
-     * Returns true if the event contains a text modifying key.
-     * @param {goog.events.BrowserEvent} e A key event.
-     * @return {boolean} Whether it's a text modifying key.
-     */
-    function isTextModifyingKeyEvent(e: goog.events.BrowserEvent): boolean;
-
-    /**
-     * Returns true if the key fires a keypress event in the current browser.
-     *
-     * Accoridng to MSDN [1] IE only fires keypress events for the following keys:
-     * - Letters: A - Z (uppercase and lowercase)
-     * - Numerals: 0 - 9
-     * - Symbols: ! @ # $ % ^ & * ( ) _ - + = < [ ] { } , . / ? \ | ' ` " ~
-     * - System: ESC, SPACEBAR, ENTER
-     *
-     * That's not entirely correct though, for instance there's no distinction
-     * between upper and lower case letters.
-     *
-     * [1] http://msdn2.microsoft.com/en-us/library/ms536939(VS.85).aspx)
-     *
-     * Safari is similar to IE, but does not fire keypress for ESC.
-     *
-     * Additionally, IE6 does not fire keydown or keypress events for letters when
-     * the control or alt keys are held down and the shift key is not. IE7 does
-     * fire keydown in these cases, though, but not keypress.
-     *
-     * @param {number} keyCode A key code.
-     * @param {number=} opt_heldKeyCode Key code of a currently-held key.
-     * @param {boolean=} opt_shiftKey Whether the shift key is held down.
-     * @param {boolean=} opt_ctrlKey Whether the control key is held down.
-     * @param {boolean=} opt_altKey Whether the alt key is held down.
-     * @return {boolean} Whether it's a key that fires a keypress event.
-     */
-    function firesKeyPressEvent(keyCode: number, opt_heldKeyCode?: number, opt_shiftKey?: boolean, opt_ctrlKey?: boolean, opt_altKey?: boolean): boolean;
-
-    /**
-     * Returns true if the key produces a character.
-     * This does not cover characters on non-US keyboards (Russian, Hebrew, etc.).
-     *
-     * @param {number} keyCode A key code.
-     * @return {boolean} Whether it's a character key.
-     */
-    function isCharacterKey(keyCode: number): boolean;
-
-    /**
-     * Normalizes key codes from OS/Browser-specific value to the general one.
-     * @param {number} keyCode The native key code.
-     * @return {number} The normalized key code.
-     */
-    function normalizeKeyCode(keyCode: number): number;
-
-    /**
-     * Normalizes key codes from their Gecko-specific value to the general one.
-     * @param {number} keyCode The native key code.
-     * @return {number} The normalized key code.
-     */
-    function normalizeGeckoKeyCode(keyCode: number): number;
-
-    /**
-     * Normalizes key codes from their Mac WebKit-specific value to the general one.
-     * @param {number} keyCode The native key code.
-     * @return {number} The normalized key code.
-     */
-    function normalizeMacWebKitKeyCode(keyCode: number): number;
 }
