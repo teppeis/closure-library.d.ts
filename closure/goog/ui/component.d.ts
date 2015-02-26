@@ -471,27 +471,28 @@ declare module goog.ui.Component {
      */
     type EventType = string;
     var EventType: {
-        BEFORE_SHOW: EventType;
-        SHOW: EventType;
-        HIDE: EventType;
-        DISABLE: EventType;
-        ENABLE: EventType;
-        HIGHLIGHT: EventType;
-        UNHIGHLIGHT: EventType;
-        ACTIVATE: EventType;
-        DEACTIVATE: EventType;
-        SELECT: EventType;
-        UNSELECT: EventType;
-        CHECK: EventType;
-        UNCHECK: EventType;
-        FOCUS: EventType;
-        BLUR: EventType;
-        OPEN: EventType;
-        CLOSE: EventType;
-        ENTER: EventType;
-        LEAVE: EventType;
-        ACTION: EventType;
-        CHANGE: EventType;
+        [index: string]: EventType;
+        // BEFORE_SHOW: EventType;
+        // SHOW: EventType;
+        // HIDE: EventType;
+        // DISABLE: EventType;
+        // ENABLE: EventType;
+        // HIGHLIGHT: EventType;
+        // UNHIGHLIGHT: EventType;
+        // ACTIVATE: EventType;
+        // DEACTIVATE: EventType;
+        // SELECT: EventType;
+        // UNSELECT: EventType;
+        // CHECK: EventType;
+        // UNCHECK: EventType;
+        // FOCUS: EventType;
+        // BLUR: EventType;
+        // OPEN: EventType;
+        // CLOSE: EventType;
+        // ENTER: EventType;
+        // LEAVE: EventType;
+        // ACTION: EventType;
+        // CHANGE: EventType;
     };
 
     /**
@@ -518,13 +519,14 @@ declare module goog.ui.Component {
      */
     type State = number;
     var State: {
-        ALL: State;
-        DISABLED: State;
-        HOVER: State;
-        ACTIVE: State;
-        SELECTED: State;
-        CHECKED: State;
-        FOCUSED: State;
-        OPENED: State;
+        [index: string]: State;
+        // ALL: State;
+        // DISABLED: State;
+        // HOVER: State;
+        // ACTIVE: State;
+        // SELECTED: State;
+        // CHECKED: State;
+        // FOCUSED: State;
+        // OPENED: State;
     };
 }

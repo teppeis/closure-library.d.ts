@@ -340,12 +340,13 @@ declare module goog.ui.SliderBase {
      */
     type EventType = string;
     var EventType: {
-        DRAG_VALUE_START: EventType;
-        DRAG_VALUE_END: EventType;
-        DRAG_EXTENT_START: EventType;
-        DRAG_EXTENT_END: EventType;
-        DRAG_START: EventType;
-        DRAG_END: EventType;
+        [index: string]: EventType;
+        // DRAG_VALUE_START: EventType;
+        // DRAG_VALUE_END: EventType;
+        // DRAG_EXTENT_START: EventType;
+        // DRAG_EXTENT_END: EventType;
+        // DRAG_START: EventType;
+        // DRAG_END: EventType;
     };
 
     /**

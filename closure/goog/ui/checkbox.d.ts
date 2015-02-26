@@ -83,11 +83,13 @@ declare module goog.ui.Checkbox {
     /**
      * Possible checkbox states.
      * @enum {?boolean}
+     * TODO: FIXME!
      */
-    type State = boolean;
+    type State = number;
     var State: {
-        CHECKED: State;
-        UNCHECKED: State;
-        UNDETERMINED: State;
+        [index: string]: State;
+        // CHECKED: State;
+        // UNCHECKED: State;
+        // UNDETERMINED: State;
     };
 }

@@ -120,7 +120,8 @@ declare module goog.ui.FilteredMenu {
      */
     type EventType = string;
     var EventType: {
-        FILTER_CHANGED: EventType;
+        [index: string]: EventType;
+        // FILTER_CHANGED: EventType;
     };
 
     /**

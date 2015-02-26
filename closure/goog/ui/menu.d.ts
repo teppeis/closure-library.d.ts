@@ -183,9 +183,10 @@ declare module goog.ui.Menu {
      */
     type EventType = string;
     var EventType: {
-        BEFORE_SHOW: EventType;
-        SHOW: EventType;
-        BEFORE_HIDE: EventType;
-        HIDE: EventType;
+        [index: string]: EventType;
+        // BEFORE_SHOW: EventType;
+        // SHOW: EventType;
+        // BEFORE_HIDE: EventType;
+        // HIDE: EventType;
     };
 }

@@ -114,7 +114,8 @@ declare module goog.ui.TableSorter {
      */
     type EventType = string;
     var EventType: {
-        BEFORESORT: EventType;
-        SORT: EventType;
+        [index: string]: EventType;
+        // BEFORESORT: EventType;
+        // SORT: EventType;
     };
 }

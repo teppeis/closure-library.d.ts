@@ -142,6 +142,7 @@ declare module goog.ui.ColorPicker {
      */
     type EventType = string;
     var EventType: {
-        CHANGE: EventType;
+        [index: string]: EventType;
+        // CHANGE: EventType;
     };
 }

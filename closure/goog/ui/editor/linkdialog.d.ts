@@ -95,7 +95,8 @@ declare module goog.ui.editor.LinkDialog {
      */
     type EventType = string;
     var EventType: {
-        BEFORE_TEST_LINK: EventType;
+        [index: string]: EventType;
+        // BEFORE_TEST_LINK: EventType;
     };
 
     /**

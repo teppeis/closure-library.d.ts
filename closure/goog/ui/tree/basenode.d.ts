@@ -499,9 +499,10 @@ declare module goog.ui.tree.BaseNode {
      */
     type EventType = string;
     var EventType: {
-        BEFORE_EXPAND: EventType;
-        EXPAND: EventType;
-        BEFORE_COLLAPSE: EventType;
-        COLLAPSE: EventType;
+        [index: string]: EventType;
+        // BEFORE_EXPAND: EventType;
+        // EXPAND: EventType;
+        // BEFORE_COLLAPSE: EventType;
+        // COLLAPSE: EventType;
     };
 }

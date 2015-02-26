@@ -80,9 +80,10 @@ declare module goog.ui.ScrollFloater {
      */
     type EventType = string;
     var EventType: {
-        FLOAT: EventType;
-        DOCK: EventType;
-        PIN: EventType;
+        [index: string]: EventType;
+        // FLOAT: EventType;
+        // DOCK: EventType;
+        // PIN: EventType;
     };
 
     /**

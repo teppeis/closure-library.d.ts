@@ -76,6 +76,7 @@ declare module goog.ui.Textarea {
      */
     type EventType = string;
     var EventType: {
-        RESIZE: EventType;
+        [index: string]: EventType;
+        // RESIZE: EventType;
     };
 }

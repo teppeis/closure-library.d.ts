@@ -120,9 +120,10 @@ declare module goog.ui.Ratings {
      */
     type EventType = string;
     var EventType: {
-        CHANGE: EventType;
-        HIGHLIGHT_CHANGE: EventType;
-        HIGHLIGHT: EventType;
-        UNHIGHLIGHT: EventType;
+        [index: string]: EventType;
+        // CHANGE: EventType;
+        // HIGHLIGHT_CHANGE: EventType;
+        // HIGHLIGHT: EventType;
+        // UNHIGHLIGHT: EventType;
     };
 }

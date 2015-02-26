@@ -440,8 +440,9 @@ declare module goog.ui.Container {
      */
     type EventType = string;
     var EventType: {
-        AFTER_SHOW: EventType;
-        AFTER_HIDE: EventType;
+        [index: string]: EventType;
+        // AFTER_SHOW: EventType;
+        // AFTER_HIDE: EventType;
     };
 
     /**

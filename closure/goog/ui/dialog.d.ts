@@ -276,9 +276,10 @@ declare module goog.ui.Dialog {
      */
     type EventType = string;
     var EventType: {
-        SELECT: EventType;
-        AFTER_HIDE: EventType;
-        AFTER_SHOW: EventType;
+        [index: string]: EventType;
+        // SELECT: EventType;
+        // AFTER_HIDE: EventType;
+        // AFTER_SHOW: EventType;
     };
 
     /**
