@@ -14,18 +14,6 @@ declare module goog.async {
 declare module goog.async.run {
 
     /**
-     * @constructor
-     * @final
-     * @struct
-     * @private
-     *
-     * @param {function()} fn
-     * @param {Object|null|undefined} scope
-     */
-    interface WorkItem_ {
-    }
-
-    /**
      * Forces goog.async.run to use nextTick instead of Promise.
      *
      * This should only be done in unit tests. It's useful because MockClock

@@ -98,6 +98,18 @@ declare module goog.html {
         static fromConstant(url: goog.string$.Const): goog.html.SafeUrl;
         
         /**
+         * Creates a SafeUrl wrapping a blob URL for the given {@code blob}. The
+         * blob URL is created with {@code URL.createObjectURL}. If the MIME type
+         * for {@code blob} is not of a known safe image MIME type, then the
+         * SafeUrl will wrap {@link #INNOCUOUS_STRING}.
+         * @see http://www.w3.org/TR/FileAPI/#url
+         * @param {!Blob} blob
+         * @return {!goog.html.SafeUrl} The blob URL, or an innocuous string wrapped
+         *   as a SafeUrl.
+         */
+        static fromBlob(blob: Blob): goog.html.SafeUrl;
+        
+        /**
          * Creates a SafeUrl object from {@code url}. If {@code url} is a
          * goog.html.SafeUrl then it is simply returned. Otherwise the input string is
          * validated to match a pattern of commonly used safe URLs. The string is

@@ -13,12 +13,6 @@ declare module goog.fs {
     };
 
     /**
-     * @typedef {{createObjectURL: (function(!Blob): string),
-     *            revokeObjectURL: function(string): void}}
-     */
-    type UrlObject_ = {createObjectURL: ((arg0: Blob) => string); revokeObjectURL: (arg0: string) => void};
-
-    /**
      * Returns a temporary FileSystem object. A temporary filesystem may be deleted
      * by the user agent at its discretion.
      *
@@ -42,6 +36,9 @@ declare module goog.fs {
      * Creates a blob URL for a blob object.
      * Throws an error if the browser does not support Object Urls.
      *
+     * TODO(user): Update references to this method to use
+     * goog.fs.url.createObjectUrl instead.
+     *
      * @param {!Blob} blob The object for which to create the URL.
      * @return {string} The URL for the object.
      */
@@ -51,6 +48,9 @@ declare module goog.fs {
      * Revokes a URL created by {@link goog.fs.createObjectUrl}.
      * Throws an error if the browser does not support Object Urls.
      *
+     * TODO(user): Update references to this method to use
+     * goog.fs.url.revokeObjectUrl instead.
+     *
      * @param {string} url The URL to revoke.
      */
     function revokeObjectUrl(url: string): void;
@@ -58,6 +58,9 @@ declare module goog.fs {
     /**
      * Checks whether this browser supports Object Urls. If not, calls to
      * createObjectUrl and revokeObjectUrl will result in an error.
+     *
+     * TODO(user): Update references to this method to use
+     * goog.fs.url.browserSupportsObjectUrls instead.
      *
      * @return {boolean} True if this browser supports Object Urls.
      */
