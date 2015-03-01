@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.net.NetworkStatusMonitor'): typeof goog.net.NetworkStatusMonitor;
+}
+
 declare module goog.net {
 
     /**

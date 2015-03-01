@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.module.ModuleLoadCallback'): typeof goog.module.ModuleLoadCallback;
+}
+
 declare module goog.module {
 
     /**

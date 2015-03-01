@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.tweak'): typeof goog.tweak;
+    function require(name: 'goog.tweak.ConfigParams'): typeof goog.tweak.ConfigParams;
+}
+
 declare module goog.tweak {
 
     /**

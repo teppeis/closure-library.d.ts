@@ -1,3 +1,10 @@
+declare module goog {
+    function require(name: 'goog.fx.DragListDirection'): typeof goog.fx.DragListDirection;
+    function require(name: 'goog.fx.DragListGroup'): typeof goog.fx.DragListGroup;
+    function require(name: 'goog.fx.DragListGroup.EventType'): typeof goog.fx.DragListGroup.EventType;
+    function require(name: 'goog.fx.DragListGroupEvent'): typeof goog.fx.DragListGroupEvent;
+}
+
 declare module goog.fx {
 
     /**

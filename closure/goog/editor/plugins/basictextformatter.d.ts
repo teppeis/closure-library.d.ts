@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.editor.plugins.BasicTextFormatter'): typeof goog.editor.plugins.BasicTextFormatter;
+    function require(name: 'goog.editor.plugins.BasicTextFormatter.COMMAND'): typeof goog.editor.plugins.BasicTextFormatter.COMMAND;
+}
+
 declare module goog.editor.plugins {
 
     /**

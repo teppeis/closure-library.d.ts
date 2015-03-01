@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.Select'): typeof goog.ui.Select;
+}
+
 declare module goog.ui {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.messaging.LoggerServer'): typeof goog.messaging.LoggerServer;
+}
+
 declare module goog.messaging {
 
     /**

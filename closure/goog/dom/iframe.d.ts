@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.iframe'): typeof goog.dom.iframe;
+}
+
 declare module goog.dom.iframe {
 
     /**

@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.dom.MultiRange'): typeof goog.dom.MultiRange;
+    function require(name: 'goog.dom.MultiRangeIterator'): typeof goog.dom.MultiRangeIterator;
+}
+
 declare module goog.dom {
 
     /**

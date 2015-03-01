@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.net.CorsXmlHttpFactory'): typeof goog.net.CorsXmlHttpFactory;
+    function require(name: 'goog.net.IeCorsXhrAdapter'): typeof goog.net.IeCorsXhrAdapter;
+}
+
 declare module goog.net {
 
     /**

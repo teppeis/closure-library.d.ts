@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.async.DeferredList'): typeof goog.async.DeferredList;
+}
+
 declare module goog.async {
 
     /**

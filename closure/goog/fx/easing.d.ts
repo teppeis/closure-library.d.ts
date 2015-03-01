@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.fx.easing'): typeof goog.fx.easing;
+}
+
 declare module goog.fx.easing {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.structs.PriorityPool'): typeof goog.structs.PriorityPool;
+}
+
 declare module goog.structs {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.Css3ButtonRenderer'): typeof goog.ui.Css3ButtonRenderer;
+}
+
 declare module goog.ui {
 
     /**

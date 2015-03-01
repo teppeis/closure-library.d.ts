@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.net.EventType'): typeof goog.net.EventType;
+}
+
 declare module goog.net {
 
     /**

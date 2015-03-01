@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.net.createWebChannelTransport'): typeof goog.net.createWebChannelTransport;
+}
+
 declare module goog.net {
 
     /**

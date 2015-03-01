@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.editor.range'): typeof goog.editor.range;
+    function require(name: 'goog.editor.range.Point'): typeof goog.editor.range.Point;
+}
+
 declare module goog.editor.range {
 
     /**

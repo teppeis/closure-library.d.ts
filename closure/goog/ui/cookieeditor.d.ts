@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.CookieEditor'): typeof goog.ui.CookieEditor;
+}
+
 declare module goog.ui {
 
     /**

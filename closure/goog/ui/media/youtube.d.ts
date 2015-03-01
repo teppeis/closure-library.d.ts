@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.media.Youtube'): typeof goog.ui.media.Youtube;
+    function require(name: 'goog.ui.media.YoutubeModel'): typeof goog.ui.media.YoutubeModel;
+}
+
 declare module goog.ui.media {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.structs.Queue'): typeof goog.structs.Queue;
+}
+
 declare module goog.structs {
 
     /**

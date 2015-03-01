@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.structs.weak'): typeof goog.structs.weak;
+}
+
 declare module goog.structs.weak {
 
     /**

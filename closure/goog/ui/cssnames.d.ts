@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.INLINE_BLOCK_CLASSNAME'): typeof goog.ui.INLINE_BLOCK_CLASSNAME;
+}
+
 declare module goog.ui {
 
     /**

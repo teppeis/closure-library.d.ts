@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.net.CrossDomainRpc'): typeof goog.net.CrossDomainRpc;
+}
+
 declare module goog.net {
 
     /**

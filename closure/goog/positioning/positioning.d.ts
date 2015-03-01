@@ -1,3 +1,11 @@
+declare module goog {
+    function require(name: 'goog.positioning'): typeof goog.positioning;
+    function require(name: 'goog.positioning.Corner'): typeof goog.positioning.Corner;
+    function require(name: 'goog.positioning.CornerBit'): typeof goog.positioning.CornerBit;
+    function require(name: 'goog.positioning.Overflow'): typeof goog.positioning.Overflow;
+    function require(name: 'goog.positioning.OverflowStatus'): typeof goog.positioning.OverflowStatus;
+}
+
 declare module goog.positioning {
 
     /**

@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.TableSorter'): typeof goog.ui.TableSorter;
+    function require(name: 'goog.ui.TableSorter.EventType'): typeof goog.ui.TableSorter.EventType;
+}
+
 declare module goog.ui {
 
     /**

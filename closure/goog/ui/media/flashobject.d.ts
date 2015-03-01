@@ -1,3 +1,9 @@
+declare module goog {
+    function require(name: 'goog.ui.media.FlashObject'): typeof goog.ui.media.FlashObject;
+    function require(name: 'goog.ui.media.FlashObject.ScriptAccessLevel'): typeof goog.ui.media.FlashObject.ScriptAccessLevel;
+    function require(name: 'goog.ui.media.FlashObject.Wmodes'): typeof goog.ui.media.FlashObject.Wmodes;
+}
+
 declare module goog.ui.media {
 
     /**

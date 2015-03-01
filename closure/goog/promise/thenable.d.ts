@@ -1,4 +1,8 @@
 declare module goog {
+    function require(name: 'goog.Thenable'): typeof goog.Thenable;
+}
+
+declare module goog {
 
     /**
      * Provides a more strict interface for Thenables in terms of

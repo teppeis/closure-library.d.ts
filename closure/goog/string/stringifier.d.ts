@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.string.Stringifier'): typeof goog.string.Stringifier;
+}
+
 declare module goog.string$ {
 
     /**

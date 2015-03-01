@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.debug.ErrorReporter'): typeof goog.debug.ErrorReporter;
+    function require(name: 'goog.debug.ErrorReporter.ExceptionEvent'): typeof goog.debug.ErrorReporter.ExceptionEvent;
+}
+
 declare module goog.debug {
 
     /**

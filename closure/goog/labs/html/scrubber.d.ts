@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.labs.html.scrubber'): typeof goog.labs.html.scrubber;
+}
+
 declare module goog.labs.html.scrubber {
 
     /**

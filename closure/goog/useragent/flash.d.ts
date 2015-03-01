@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.userAgent.flash'): typeof goog.userAgent.flash;
+}
+
 declare module goog.userAgent.flash {
 
     /**

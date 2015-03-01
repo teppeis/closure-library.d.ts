@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.crypt.BlobHasher'): typeof goog.crypt.BlobHasher;
+    function require(name: 'goog.crypt.BlobHasher.EventType'): typeof goog.crypt.BlobHasher.EventType;
+}
+
 declare module goog.crypt {
 
     /**

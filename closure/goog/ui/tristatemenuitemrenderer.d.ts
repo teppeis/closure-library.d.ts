@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.TriStateMenuItemRenderer'): typeof goog.ui.TriStateMenuItemRenderer;
+}
+
 declare module goog.ui {
 
     /**

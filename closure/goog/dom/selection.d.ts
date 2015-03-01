@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.selection'): typeof goog.dom.selection;
+}
+
 declare module goog.dom.selection {
 
     /**

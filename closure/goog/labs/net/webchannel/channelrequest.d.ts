@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.labs.net.webChannel.ChannelRequest'): typeof goog.labs.net.webChannel.ChannelRequest;
+}
+
 declare module goog.labs.net.webChannel {
 
     /**

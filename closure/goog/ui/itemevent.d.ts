@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.ItemEvent'): typeof goog.ui.ItemEvent;
+}
+
 declare module goog.ui {
 
     /**

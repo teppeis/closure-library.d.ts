@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.labs.userAgent.platform'): typeof goog.labs.userAgent.platform;
+}
+
 declare module goog.labs.userAgent.platform {
 
     /**

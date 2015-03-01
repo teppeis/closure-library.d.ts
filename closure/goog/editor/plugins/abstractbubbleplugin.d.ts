@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.editor.plugins.AbstractBubblePlugin'): typeof goog.editor.plugins.AbstractBubblePlugin;
+}
+
 declare module goog.editor.plugins {
 
     /**

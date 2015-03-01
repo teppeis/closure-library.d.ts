@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.pattern.callback'): typeof goog.dom.pattern.callback;
+}
+
 declare module goog.dom.pattern.callback {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.events.EventTarget'): typeof goog.events.EventTarget;
+}
+
 declare module goog.events {
 
     /**

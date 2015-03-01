@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.db.Index'): typeof goog.db.Index;
+}
+
 declare module goog.db {
 
     /**

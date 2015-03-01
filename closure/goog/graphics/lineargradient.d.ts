@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.graphics.LinearGradient'): typeof goog.graphics.LinearGradient;
+}
+
 declare module goog.graphics {
 
     /**

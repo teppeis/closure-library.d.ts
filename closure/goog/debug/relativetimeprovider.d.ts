@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.debug.RelativeTimeProvider'): typeof goog.debug.RelativeTimeProvider;
+}
+
 declare module goog.debug {
 
     /**

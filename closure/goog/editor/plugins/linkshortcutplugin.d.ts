@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.editor.plugins.LinkShortcutPlugin'): typeof goog.editor.plugins.LinkShortcutPlugin;
+}
+
 declare module goog.editor.plugins {
 
     /**

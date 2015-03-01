@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.editor.plugins.LoremIpsum'): typeof goog.editor.plugins.LoremIpsum;
+}
+
 declare module goog.editor.plugins {
 
     /**

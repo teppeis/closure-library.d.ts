@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.ac.Renderer'): typeof goog.ui.ac.Renderer;
+    function require(name: 'goog.ui.ac.Renderer.CustomRenderer'): typeof goog.ui.ac.Renderer.CustomRenderer;
+}
+
 declare module goog.ui.ac {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.userAgent.iphoto'): typeof goog.userAgent.iphoto;
+}
+
 declare module goog.userAgent.iphoto {
 
     /**

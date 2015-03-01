@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.structs.LinkedMap'): typeof goog.structs.LinkedMap;
+}
+
 declare module goog.structs {
 
     /**

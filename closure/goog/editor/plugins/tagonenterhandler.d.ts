@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.editor.plugins.TagOnEnterHandler'): typeof goog.editor.plugins.TagOnEnterHandler;
+}
+
 declare module goog.editor.plugins {
 
     /**

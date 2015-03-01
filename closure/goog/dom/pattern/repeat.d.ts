@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.pattern.Repeat'): typeof goog.dom.pattern.Repeat;
+}
+
 declare module goog.dom.pattern {
 
     /**

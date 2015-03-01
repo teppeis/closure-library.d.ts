@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.crypt.Sha2'): typeof goog.crypt.Sha2;
+}
+
 declare module goog.crypt {
 
     /**

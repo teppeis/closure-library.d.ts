@@ -1,3 +1,9 @@
+declare module goog {
+    function require(name: 'goog.events.PasteHandler'): typeof goog.events.PasteHandler;
+    function require(name: 'goog.events.PasteHandler.EventType'): typeof goog.events.PasteHandler.EventType;
+    function require(name: 'goog.events.PasteHandler.State'): typeof goog.events.PasteHandler.State;
+}
+
 declare module goog.events {
 
     /**

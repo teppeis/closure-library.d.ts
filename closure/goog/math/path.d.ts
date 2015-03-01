@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.math.Path'): typeof goog.math.Path;
+    function require(name: 'goog.math.Path.Segment'): typeof goog.math.Path.Segment;
+}
+
 declare module goog.math {
 
     /**

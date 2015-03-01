@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.ToolbarSeparator'): typeof goog.ui.ToolbarSeparator;
+}
+
 declare module goog.ui {
 
     /**

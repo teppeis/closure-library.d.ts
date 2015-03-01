@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ds.Expr'): typeof goog.ds.Expr;
+}
+
 declare module goog.ds {
 
     /**

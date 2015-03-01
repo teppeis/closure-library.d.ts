@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.editor.plugins.EnterHandler'): typeof goog.editor.plugins.EnterHandler;
+}
+
 declare module goog.editor.plugins {
 
     /**

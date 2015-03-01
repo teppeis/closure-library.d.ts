@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.format.HtmlPrettyPrinter'): typeof goog.format.HtmlPrettyPrinter;
+    function require(name: 'goog.format.HtmlPrettyPrinter.Buffer'): typeof goog.format.HtmlPrettyPrinter.Buffer;
+}
+
 declare module goog.format {
 
     /**

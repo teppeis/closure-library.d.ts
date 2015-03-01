@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.net.IframeLoadMonitor'): typeof goog.net.IframeLoadMonitor;
+}
+
 declare module goog.net {
 
     /**

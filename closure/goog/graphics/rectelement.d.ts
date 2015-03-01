@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.graphics.RectElement'): typeof goog.graphics.RectElement;
+}
+
 declare module goog.graphics {
 
     /**

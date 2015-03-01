@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.emoji.SpriteInfo'): typeof goog.ui.emoji.SpriteInfo;
+}
+
 declare module goog.ui.emoji {
 
     /**

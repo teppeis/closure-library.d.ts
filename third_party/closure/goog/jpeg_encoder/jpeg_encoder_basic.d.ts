@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.crypt.JpegEncoder'): typeof goog.crypt.JpegEncoder;
+}
+
 declare module goog.crypt {
 
     /**

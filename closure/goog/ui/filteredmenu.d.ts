@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.FilteredMenu'): typeof goog.ui.FilteredMenu;
+}
+
 declare module goog.ui {
 
     /**

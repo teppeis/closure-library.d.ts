@@ -1,3 +1,12 @@
+declare module goog {
+    function require(name: 'goog.graphics.SvgEllipseElement'): typeof goog.graphics.SvgEllipseElement;
+    function require(name: 'goog.graphics.SvgGroupElement'): typeof goog.graphics.SvgGroupElement;
+    function require(name: 'goog.graphics.SvgImageElement'): typeof goog.graphics.SvgImageElement;
+    function require(name: 'goog.graphics.SvgPathElement'): typeof goog.graphics.SvgPathElement;
+    function require(name: 'goog.graphics.SvgRectElement'): typeof goog.graphics.SvgRectElement;
+    function require(name: 'goog.graphics.SvgTextElement'): typeof goog.graphics.SvgTextElement;
+}
+
 declare module goog.graphics {
 
     /**

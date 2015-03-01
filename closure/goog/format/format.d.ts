@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.format'): typeof goog.format;
+}
+
 declare module goog.format {
 
     /**

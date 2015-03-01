@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.structs'): typeof goog.structs;
+}
+
 declare module goog.structs {
 
     /**

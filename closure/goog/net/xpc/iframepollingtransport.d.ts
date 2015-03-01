@@ -1,3 +1,9 @@
+declare module goog {
+    function require(name: 'goog.net.xpc.IframePollingTransport'): typeof goog.net.xpc.IframePollingTransport;
+    function require(name: 'goog.net.xpc.IframePollingTransport.Receiver'): typeof goog.net.xpc.IframePollingTransport.Receiver;
+    function require(name: 'goog.net.xpc.IframePollingTransport.Sender'): typeof goog.net.xpc.IframePollingTransport.Sender;
+}
+
 declare module goog.net.xpc {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.PaletteRenderer'): typeof goog.ui.PaletteRenderer;
+}
+
 declare module goog.ui {
 
     /**

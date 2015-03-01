@@ -1,4 +1,8 @@
 declare module goog {
+    function require(name: 'goog.Promise'): typeof goog.Promise;
+}
+
+declare module goog {
 
     /**
      * Promises provide a result that may be resolved asynchronously. A Promise may

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.format.InternationalizedEmailAddress'): typeof goog.format.InternationalizedEmailAddress;
+}
+
 declare module goog.format {
 
     /**

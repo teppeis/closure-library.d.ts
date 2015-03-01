@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.net.FileDownloader'): typeof goog.net.FileDownloader;
+    function require(name: 'goog.net.FileDownloader.Error'): typeof goog.net.FileDownloader.Error;
+}
+
 declare module goog.net {
 
     /**

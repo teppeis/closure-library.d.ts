@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.net.XhrIo'): typeof goog.net.XhrIo;
+    function require(name: 'goog.net.XhrIo.ResponseType'): typeof goog.net.XhrIo.ResponseType;
+}
+
 declare module goog.net {
 
     /**

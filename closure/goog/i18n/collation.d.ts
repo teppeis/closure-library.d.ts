@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.i18n.collation'): typeof goog.i18n.collation;
+}
+
 declare module goog.i18n.collation {
 
     /**

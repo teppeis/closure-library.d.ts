@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.i18n.DateTimeParse'): typeof goog.i18n.DateTimeParse;
+}
+
 declare module goog.i18n {
 
     /**

@@ -1,3 +1,10 @@
+declare module goog {
+    function require(name: 'goog.string.html.HtmlSanitizer'): typeof goog.string.html.HtmlSanitizer;
+    function require(name: 'goog.string.html.HtmlSanitizer.AttributeType'): typeof goog.string.html.HtmlSanitizer.AttributeType;
+    function require(name: 'goog.string.html.HtmlSanitizer.Attributes'): typeof goog.string.html.HtmlSanitizer.Attributes;
+    function require(name: 'goog.string.html.htmlSanitize'): typeof goog.string.html.htmlSanitize;
+}
+
 declare module goog.string$.html {
 
     /**

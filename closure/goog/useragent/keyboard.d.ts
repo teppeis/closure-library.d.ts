@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.userAgent.keyboard'): typeof goog.userAgent.keyboard;
+}
+
 declare module goog.userAgent.keyboard {
 
     /**

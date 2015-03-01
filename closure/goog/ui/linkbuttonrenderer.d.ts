@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.LinkButtonRenderer'): typeof goog.ui.LinkButtonRenderer;
+}
+
 declare module goog.ui {
 
     /**

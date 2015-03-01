@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.fs.FileWriter'): typeof goog.fs.FileWriter;
+}
+
 declare module goog.fs {
 
     /**

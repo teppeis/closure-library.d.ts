@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.graphics.Stroke'): typeof goog.graphics.Stroke;
+}
+
 declare module goog.graphics {
 
     /**

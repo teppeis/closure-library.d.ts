@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.ac.RichInputHandler'): typeof goog.ui.ac.RichInputHandler;
+}
+
 declare module goog.ui.ac {
 
     /**

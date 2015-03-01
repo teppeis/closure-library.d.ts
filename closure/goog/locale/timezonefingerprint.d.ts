@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.locale.TimeZoneFingerprint'): typeof goog.locale.TimeZoneFingerprint;
+}
+
 declare module goog.locale {
 
     /**

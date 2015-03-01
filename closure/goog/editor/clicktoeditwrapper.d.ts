@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.editor.ClickToEditWrapper'): typeof goog.editor.ClickToEditWrapper;
+}
+
 declare module goog.editor {
 
     /**

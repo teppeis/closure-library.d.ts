@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.vendor'): typeof goog.dom.vendor;
+}
+
 declare module goog.dom.vendor {
 
     /**

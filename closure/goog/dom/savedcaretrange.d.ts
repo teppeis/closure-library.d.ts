@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.SavedCaretRange'): typeof goog.dom.SavedCaretRange;
+}
+
 declare module goog.dom {
 
     /**

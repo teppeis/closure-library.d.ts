@@ -1,3 +1,12 @@
+declare module goog {
+    function require(name: 'goog.net.xpc'): typeof goog.net.xpc;
+    function require(name: 'goog.net.xpc.CfgFields'): typeof goog.net.xpc.CfgFields;
+    function require(name: 'goog.net.xpc.ChannelStates'): typeof goog.net.xpc.ChannelStates;
+    function require(name: 'goog.net.xpc.TransportNames'): typeof goog.net.xpc.TransportNames;
+    function require(name: 'goog.net.xpc.TransportTypes'): typeof goog.net.xpc.TransportTypes;
+    function require(name: 'goog.net.xpc.UriCfgFields'): typeof goog.net.xpc.UriCfgFields;
+}
+
 declare module goog.net.xpc {
 
     /**

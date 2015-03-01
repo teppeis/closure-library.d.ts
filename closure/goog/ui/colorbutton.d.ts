@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.ColorButton'): typeof goog.ui.ColorButton;
+}
+
 declare module goog.ui {
 
     /**

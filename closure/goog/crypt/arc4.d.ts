@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.crypt.Arc4'): typeof goog.crypt.Arc4;
+}
+
 declare module goog.crypt {
 
     /**

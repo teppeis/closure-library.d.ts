@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.DrilldownRow'): typeof goog.ui.DrilldownRow;
+}
+
 declare module goog.ui {
 
     /**

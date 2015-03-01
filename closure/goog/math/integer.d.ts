@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.math.Integer'): typeof goog.math.Integer;
+}
+
 declare module goog.math {
 
     /**

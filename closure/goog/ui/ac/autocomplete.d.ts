@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.ac.AutoComplete'): typeof goog.ui.ac.AutoComplete;
+    function require(name: 'goog.ui.ac.AutoComplete.EventType'): typeof goog.ui.ac.AutoComplete.EventType;
+}
+
 declare module goog.ui.ac {
 
     /**

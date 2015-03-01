@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.InputDatePicker'): typeof goog.ui.InputDatePicker;
+}
+
 declare module goog.ui {
 
     /**

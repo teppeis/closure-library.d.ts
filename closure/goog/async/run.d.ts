@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.async.run'): typeof goog.async.run;
+}
+
 declare module goog.async {
 
     /**

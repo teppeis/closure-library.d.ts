@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.SubMenuRenderer'): typeof goog.ui.SubMenuRenderer;
+}
+
 declare module goog.ui {
 
     /**

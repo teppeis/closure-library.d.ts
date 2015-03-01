@@ -1,3 +1,9 @@
+declare module goog {
+    function require(name: 'goog.ui.Container'): typeof goog.ui.Container;
+    function require(name: 'goog.ui.Container.EventType'): typeof goog.ui.Container.EventType;
+    function require(name: 'goog.ui.Container.Orientation'): typeof goog.ui.Container.Orientation;
+}
+
 declare module goog.ui {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.style.cursor'): typeof goog.style.cursor;
+}
+
 declare module goog.style.cursor {
 
     /**

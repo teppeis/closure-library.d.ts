@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.messaging.AbstractChannel'): typeof goog.messaging.AbstractChannel;
+}
+
 declare module goog.messaging {
 
     /**

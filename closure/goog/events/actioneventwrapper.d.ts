@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.events.actionEventWrapper'): typeof goog.events.actionEventWrapper;
+}
+
 declare module goog.events {
 
     /**

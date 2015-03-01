@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.query'): typeof goog.dom.query;
+}
+
 declare module goog.dom {
 
     /**

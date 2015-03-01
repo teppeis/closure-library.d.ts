@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.ComboBox'): typeof goog.ui.ComboBox;
+    function require(name: 'goog.ui.ComboBoxItem'): typeof goog.ui.ComboBoxItem;
+}
+
 declare module goog.ui {
 
     /**

@@ -1,3 +1,10 @@
+declare module goog {
+    function require(name: 'goog.ui.DragDropDetector'): typeof goog.ui.DragDropDetector;
+    function require(name: 'goog.ui.DragDropDetector.EventType'): typeof goog.ui.DragDropDetector.EventType;
+    function require(name: 'goog.ui.DragDropDetector.ImageDropEvent'): typeof goog.ui.DragDropDetector.ImageDropEvent;
+    function require(name: 'goog.ui.DragDropDetector.LinkDropEvent'): typeof goog.ui.DragDropDetector.LinkDropEvent;
+}
+
 declare module goog.ui {
 
     /**

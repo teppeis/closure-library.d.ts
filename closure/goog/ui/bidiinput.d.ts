@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.BidiInput'): typeof goog.ui.BidiInput;
+}
+
 declare module goog.ui {
 
     /**

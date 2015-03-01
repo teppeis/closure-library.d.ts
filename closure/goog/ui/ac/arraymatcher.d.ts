@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.ac.ArrayMatcher'): typeof goog.ui.ac.ArrayMatcher;
+}
+
 declare module goog.ui.ac {
 
     /**

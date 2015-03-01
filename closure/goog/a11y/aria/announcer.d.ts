@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.a11y.aria.Announcer'): typeof goog.a11y.aria.Announcer;
+}
+
 declare module goog.a11y.aria {
 
     /**

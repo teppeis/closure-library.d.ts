@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.editor.Field'): typeof goog.editor.Field;
+    function require(name: 'goog.editor.Field.EventType'): typeof goog.editor.Field.EventType;
+}
+
 declare module goog.editor {
 
     /**

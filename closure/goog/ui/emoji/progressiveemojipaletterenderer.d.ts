@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.emoji.ProgressiveEmojiPaletteRenderer'): typeof goog.ui.emoji.ProgressiveEmojiPaletteRenderer;
+}
+
 declare module goog.ui.emoji {
 
     /**

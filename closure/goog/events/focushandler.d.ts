@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.events.FocusHandler'): typeof goog.events.FocusHandler;
+    function require(name: 'goog.events.FocusHandler.EventType'): typeof goog.events.FocusHandler.EventType;
+}
+
 declare module goog.events {
 
     /**

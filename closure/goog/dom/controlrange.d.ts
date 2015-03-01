@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.dom.ControlRange'): typeof goog.dom.ControlRange;
+    function require(name: 'goog.dom.ControlRangeIterator'): typeof goog.dom.ControlRangeIterator;
+}
+
 declare module goog.dom {
 
     /**

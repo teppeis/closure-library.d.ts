@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.safe'): typeof goog.dom.safe;
+}
+
 declare module goog.dom.safe {
 
     /**

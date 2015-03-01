@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.MenuSeparatorRenderer'): typeof goog.ui.MenuSeparatorRenderer;
+}
+
 declare module goog.ui {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.ModalPopup'): typeof goog.ui.ModalPopup;
+}
+
 declare module goog.ui {
 
     /**

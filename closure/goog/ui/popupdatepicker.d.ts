@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.PopupDatePicker'): typeof goog.ui.PopupDatePicker;
+}
+
 declare module goog.ui {
 
     /**

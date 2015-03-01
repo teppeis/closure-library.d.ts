@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.labs.events.touch'): typeof goog.labs.events.touch;
+    function require(name: 'goog.labs.events.touch.TouchData'): typeof goog.labs.events.touch.TouchData;
+}
+
 declare module goog.labs.events.touch {
 
     /**

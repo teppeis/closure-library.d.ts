@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.a11y.aria.Role'): typeof goog.a11y.aria.Role;
+}
+
 declare module goog.a11y.aria {
 
     /**

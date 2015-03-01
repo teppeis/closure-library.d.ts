@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.PlainTextSpellChecker'): typeof goog.ui.PlainTextSpellChecker;
+}
+
 declare module goog.ui {
 
     /**

@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.media.Vimeo'): typeof goog.ui.media.Vimeo;
+    function require(name: 'goog.ui.media.VimeoModel'): typeof goog.ui.media.VimeoModel;
+}
+
 declare module goog.ui.media {
 
     /**

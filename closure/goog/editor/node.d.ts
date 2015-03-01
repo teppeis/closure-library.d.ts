@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.editor.node'): typeof goog.editor.node;
+}
+
 declare module goog.editor.node {
 
     /**

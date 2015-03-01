@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.IdleTimer'): typeof goog.ui.IdleTimer;
+}
+
 declare module goog.ui {
 
     /**

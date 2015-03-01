@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.Range'): typeof goog.dom.Range;
+}
+
 declare module goog.dom.Range {
 
     /**

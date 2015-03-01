@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.editor.plugins.RemoveFormatting'): typeof goog.editor.plugins.RemoveFormatting;
+}
+
 declare module goog.editor.plugins {
 
     /**

@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.SelectionMenuButton'): typeof goog.ui.SelectionMenuButton;
+    function require(name: 'goog.ui.SelectionMenuButton.SelectionState'): typeof goog.ui.SelectionMenuButton.SelectionState;
+}
+
 declare module goog.ui {
 
     /**

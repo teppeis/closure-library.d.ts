@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.labs.userAgent.util'): typeof goog.labs.userAgent.util;
+}
+
 declare module goog.labs.userAgent.util {
 
     /**

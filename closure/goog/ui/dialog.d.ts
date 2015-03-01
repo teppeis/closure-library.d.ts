@@ -1,3 +1,13 @@
+declare module goog {
+    function require(name: 'goog.ui.Dialog'): typeof goog.ui.Dialog;
+    function require(name: 'goog.ui.Dialog.ButtonSet'): typeof goog.ui.Dialog.ButtonSet;
+    function require(name: 'goog.ui.Dialog.ButtonSet.DefaultButtons'): typeof goog.ui.Dialog.ButtonSet.DefaultButtons;
+    function require(name: 'goog.ui.Dialog.DefaultButtonCaptions'): typeof goog.ui.Dialog.DefaultButtonCaptions;
+    function require(name: 'goog.ui.Dialog.DefaultButtonKeys'): typeof goog.ui.Dialog.DefaultButtonKeys;
+    function require(name: 'goog.ui.Dialog.Event'): typeof goog.ui.Dialog.Event;
+    function require(name: 'goog.ui.Dialog.EventType'): typeof goog.ui.Dialog.EventType;
+}
+
 declare module goog.ui {
 
     /**

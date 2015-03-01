@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.pattern.Text'): typeof goog.dom.pattern.Text;
+}
+
 declare module goog.dom.pattern {
 
     /**

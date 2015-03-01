@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.media.FlickrSet'): typeof goog.ui.media.FlickrSet;
+    function require(name: 'goog.ui.media.FlickrSetModel'): typeof goog.ui.media.FlickrSetModel;
+}
+
 declare module goog.ui.media {
 
     /**

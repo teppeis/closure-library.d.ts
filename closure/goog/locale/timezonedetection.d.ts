@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.locale.timeZoneDetection'): typeof goog.locale.timeZoneDetection;
+}
+
 declare module goog.locale.timeZoneDetection {
 
     /**

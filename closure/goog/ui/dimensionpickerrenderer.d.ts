@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.DimensionPickerRenderer'): typeof goog.ui.DimensionPickerRenderer;
+}
+
 declare module goog.ui {
 
     /**

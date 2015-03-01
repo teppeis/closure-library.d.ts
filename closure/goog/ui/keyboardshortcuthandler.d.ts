@@ -1,3 +1,9 @@
+declare module goog {
+    function require(name: 'goog.ui.KeyboardShortcutEvent'): typeof goog.ui.KeyboardShortcutEvent;
+    function require(name: 'goog.ui.KeyboardShortcutHandler'): typeof goog.ui.KeyboardShortcutHandler;
+    function require(name: 'goog.ui.KeyboardShortcutHandler.EventType'): typeof goog.ui.KeyboardShortcutHandler.EventType;
+}
+
 declare module goog.ui {
 
     /**

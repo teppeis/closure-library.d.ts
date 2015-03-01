@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.style.transform'): typeof goog.style.transform;
+}
+
 declare module goog.style.transform {
 
     /**

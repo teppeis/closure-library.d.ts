@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.TagName'): typeof goog.dom.TagName;
+}
+
 declare module goog.dom {
 
     /**

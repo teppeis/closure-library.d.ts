@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ds.DataManager'): typeof goog.ds.DataManager;
+}
+
 declare module goog.ds {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.CheckBoxMenuItem'): typeof goog.ui.CheckBoxMenuItem;
+}
+
 declare module goog.ui {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.i18n.BidiFormatter'): typeof goog.i18n.BidiFormatter;
+}
+
 declare module goog.i18n {
 
     /**

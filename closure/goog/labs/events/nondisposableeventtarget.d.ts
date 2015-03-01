@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.labs.events.NonDisposableEventTarget'): typeof goog.labs.events.NonDisposableEventTarget;
+}
+
 declare module goog.labs.events {
 
     /**

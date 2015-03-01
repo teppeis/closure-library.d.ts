@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.html.legacyconversions'): typeof goog.html.legacyconversions;
+}
+
 declare module goog.html.legacyconversions {
 
     /**

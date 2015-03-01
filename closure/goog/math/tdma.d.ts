@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.math.tdma'): typeof goog.math.tdma;
+}
+
 declare module goog.math.tdma {
 
     /**

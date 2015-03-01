@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.module.BaseModule'): typeof goog.module.BaseModule;
+}
+
 declare module goog.module {
 
     /**

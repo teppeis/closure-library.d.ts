@@ -1,3 +1,11 @@
+declare module goog {
+    function require(name: 'goog.string.html.HtmlParser'): typeof goog.string.html.HtmlParser;
+    function require(name: 'goog.string.html.HtmlParser.EFlags'): typeof goog.string.html.HtmlParser.EFlags;
+    function require(name: 'goog.string.html.HtmlParser.Elements'): typeof goog.string.html.HtmlParser.Elements;
+    function require(name: 'goog.string.html.HtmlParser.Entities'): typeof goog.string.html.HtmlParser.Entities;
+    function require(name: 'goog.string.html.HtmlSaxHandler'): typeof goog.string.html.HtmlSaxHandler;
+}
+
 declare module goog.string$.html {
 
     /**

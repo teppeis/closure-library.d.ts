@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.i18n.TimeZone'): typeof goog.i18n.TimeZone;
+}
+
 declare module goog.i18n {
 
     /**

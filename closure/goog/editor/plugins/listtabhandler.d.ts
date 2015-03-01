@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.editor.plugins.ListTabHandler'): typeof goog.editor.plugins.ListTabHandler;
+}
+
 declare module goog.editor.plugins {
 
     /**

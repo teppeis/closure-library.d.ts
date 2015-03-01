@@ -1,3 +1,9 @@
+declare module goog {
+    function require(name: 'goog.events.MouseWheelEvent'): typeof goog.events.MouseWheelEvent;
+    function require(name: 'goog.events.MouseWheelHandler'): typeof goog.events.MouseWheelHandler;
+    function require(name: 'goog.events.MouseWheelHandler.EventType'): typeof goog.events.MouseWheelHandler.EventType;
+}
+
 declare module goog.events {
 
     /**

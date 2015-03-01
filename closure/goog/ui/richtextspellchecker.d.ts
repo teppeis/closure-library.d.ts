@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.RichTextSpellChecker'): typeof goog.ui.RichTextSpellChecker;
+}
+
 declare module goog.ui {
 
     /**

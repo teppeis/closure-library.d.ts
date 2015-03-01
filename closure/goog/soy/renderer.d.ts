@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.soy.InjectedDataSupplier'): typeof goog.soy.InjectedDataSupplier;
+    function require(name: 'goog.soy.Renderer'): typeof goog.soy.Renderer;
+}
+
 declare module goog.soy {
 
     /**

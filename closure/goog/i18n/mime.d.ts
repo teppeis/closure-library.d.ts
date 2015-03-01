@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.i18n.mime'): typeof goog.i18n.mime;
+    function require(name: 'goog.i18n.mime.encode'): typeof goog.i18n.mime.encode;
+}
+
 declare module goog.i18n.mime {
 
     /**

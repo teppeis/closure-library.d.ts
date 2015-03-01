@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.storage.ErrorCode'): typeof goog.storage.ErrorCode;
+}
+
 declare module goog.storage {
 
     /**

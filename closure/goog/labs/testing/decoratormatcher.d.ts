@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.labs.testing.AnythingMatcher'): typeof goog.labs.testing.AnythingMatcher;
+}
+
 declare module goog.labs.testing {
 
     /**

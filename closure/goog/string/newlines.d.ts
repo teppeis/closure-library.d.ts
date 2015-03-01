@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.string.newlines'): typeof goog.string.newlines;
+    function require(name: 'goog.string.newlines.Line'): typeof goog.string.newlines.Line;
+}
+
 declare module goog.string$.newlines {
 
     /**

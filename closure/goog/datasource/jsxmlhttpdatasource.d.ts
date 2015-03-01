@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ds.JsXmlHttpDataSource'): typeof goog.ds.JsXmlHttpDataSource;
+}
+
 declare module goog.ds {
 
     /**

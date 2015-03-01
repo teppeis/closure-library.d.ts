@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.proto2.TextFormatSerializer'): typeof goog.proto2.TextFormatSerializer;
+}
+
 declare module goog.proto2 {
 
     /**

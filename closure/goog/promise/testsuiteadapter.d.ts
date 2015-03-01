@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.promise.testSuiteAdapter'): typeof goog.promise.testSuiteAdapter;
+}
+
 declare module goog.promise {
 
     /**

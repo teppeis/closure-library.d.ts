@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.dataset'): typeof goog.dom.dataset;
+}
+
 declare module goog.dom.dataset {
 
     /**

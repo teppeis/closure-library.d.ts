@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.debug.Console'): typeof goog.debug.Console;
+}
+
 declare module goog.debug {
 
     /**

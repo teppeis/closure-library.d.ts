@@ -1,3 +1,13 @@
+declare module goog {
+    function require(name: 'goog.labs.testing.ContainsStringMatcher'): typeof goog.labs.testing.ContainsStringMatcher;
+    function require(name: 'goog.labs.testing.EndsWithMatcher'): typeof goog.labs.testing.EndsWithMatcher;
+    function require(name: 'goog.labs.testing.EqualToIgnoringWhitespaceMatcher'): typeof goog.labs.testing.EqualToIgnoringWhitespaceMatcher;
+    function require(name: 'goog.labs.testing.EqualsMatcher'): typeof goog.labs.testing.EqualsMatcher;
+    function require(name: 'goog.labs.testing.RegexMatcher'): typeof goog.labs.testing.RegexMatcher;
+    function require(name: 'goog.labs.testing.StartsWithMatcher'): typeof goog.labs.testing.StartsWithMatcher;
+    function require(name: 'goog.labs.testing.StringContainsInOrderMatcher'): typeof goog.labs.testing.StringContainsInOrderMatcher;
+}
+
 declare module goog.labs.testing {
 
     /**

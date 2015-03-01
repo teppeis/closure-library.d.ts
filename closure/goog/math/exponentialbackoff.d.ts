@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.math.ExponentialBackoff'): typeof goog.math.ExponentialBackoff;
+}
+
 declare module goog.math {
 
     /**

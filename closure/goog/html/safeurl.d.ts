@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.html.SafeUrl'): typeof goog.html.SafeUrl;
+}
+
 declare module goog.html {
 
     /**

@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.media.Media'): typeof goog.ui.media.Media;
+    function require(name: 'goog.ui.media.MediaRenderer'): typeof goog.ui.media.MediaRenderer;
+}
+
 declare module goog.ui.media {
 
     /**

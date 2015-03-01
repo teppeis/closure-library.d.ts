@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.events.Listenable'): typeof goog.events.Listenable;
+    function require(name: 'goog.events.ListenableKey'): typeof goog.events.ListenableKey;
+}
+
 declare module goog.events {
 
     /**

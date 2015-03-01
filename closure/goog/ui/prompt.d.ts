@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.Prompt'): typeof goog.ui.Prompt;
+}
+
 declare module goog.ui {
 
     /**

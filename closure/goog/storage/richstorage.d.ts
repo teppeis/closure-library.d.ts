@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.storage.RichStorage'): typeof goog.storage.RichStorage;
+    function require(name: 'goog.storage.RichStorage.Wrapper'): typeof goog.storage.RichStorage.Wrapper;
+}
+
 declare module goog.storage {
 
     /**

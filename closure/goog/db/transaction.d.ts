@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.db.Transaction'): typeof goog.db.Transaction;
+    function require(name: 'goog.db.Transaction.TransactionMode'): typeof goog.db.Transaction.TransactionMode;
+}
+
 declare module goog.db {
 
     /**

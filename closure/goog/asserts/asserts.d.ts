@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.asserts'): typeof goog.asserts;
+    function require(name: 'goog.asserts.AssertionError'): typeof goog.asserts.AssertionError;
+}
+
 declare module goog.asserts {
 
     /**

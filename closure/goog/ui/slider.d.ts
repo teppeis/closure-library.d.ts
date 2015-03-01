@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.Slider'): typeof goog.ui.Slider;
+    function require(name: 'goog.ui.Slider.Orientation'): typeof goog.ui.Slider.Orientation;
+}
+
 declare module goog.ui {
 
     /**

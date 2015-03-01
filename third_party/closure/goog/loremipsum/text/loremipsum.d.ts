@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.text.LoremIpsum'): typeof goog.text.LoremIpsum;
+}
+
 declare module goog.text {
 
     /**

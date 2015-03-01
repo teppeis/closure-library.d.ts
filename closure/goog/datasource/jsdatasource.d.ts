@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ds.JsDataSource'): typeof goog.ds.JsDataSource;
+    function require(name: 'goog.ds.JsPropertyDataSource'): typeof goog.ds.JsPropertyDataSource;
+}
+
 declare module goog.ds {
 
     /**

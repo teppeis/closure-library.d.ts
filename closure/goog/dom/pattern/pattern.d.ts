@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.dom.pattern'): typeof goog.dom.pattern;
+    function require(name: 'goog.dom.pattern.MatchType'): typeof goog.dom.pattern.MatchType;
+}
+
 declare module goog.dom.pattern {
 
     /**

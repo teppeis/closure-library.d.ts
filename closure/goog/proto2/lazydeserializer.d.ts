@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.proto2.LazyDeserializer'): typeof goog.proto2.LazyDeserializer;
+}
+
 declare module goog.proto2 {
 
     /**

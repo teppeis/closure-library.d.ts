@@ -1,3 +1,9 @@
+declare module goog {
+    function require(name: 'goog.structs.QuadTree'): typeof goog.structs.QuadTree;
+    function require(name: 'goog.structs.QuadTree.Node'): typeof goog.structs.QuadTree.Node;
+    function require(name: 'goog.structs.QuadTree.Point'): typeof goog.structs.QuadTree.Point;
+}
+
 declare module goog.structs {
 
     /**

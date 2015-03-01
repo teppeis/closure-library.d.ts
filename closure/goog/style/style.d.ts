@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.style'): typeof goog.style;
+}
+
 declare module goog.style {
 
     /**

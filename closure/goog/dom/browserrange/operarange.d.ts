@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.browserrange.OperaRange'): typeof goog.dom.browserrange.OperaRange;
+}
+
 declare module goog.dom.browserrange {
 
     /**

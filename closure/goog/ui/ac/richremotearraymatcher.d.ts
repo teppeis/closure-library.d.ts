@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.ac.RichRemoteArrayMatcher'): typeof goog.ui.ac.RichRemoteArrayMatcher;
+}
+
 declare module goog.ui.ac {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.crypt.Hmac'): typeof goog.crypt.Hmac;
+}
+
 declare module goog.crypt {
 
     /**

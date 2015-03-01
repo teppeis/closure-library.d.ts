@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.storage.ExpiringStorage'): typeof goog.storage.ExpiringStorage;
+}
+
 declare module goog.storage {
 
     /**

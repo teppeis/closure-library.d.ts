@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.fx.DragScrollSupport'): typeof goog.fx.DragScrollSupport;
+}
+
 declare module goog.fx {
 
     /**

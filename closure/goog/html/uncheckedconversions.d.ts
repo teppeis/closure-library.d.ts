@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.html.uncheckedconversions'): typeof goog.html.uncheckedconversions;
+}
+
 declare module goog.html.uncheckedconversions {
 
     /**

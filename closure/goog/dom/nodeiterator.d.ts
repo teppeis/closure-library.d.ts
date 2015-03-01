@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.NodeIterator'): typeof goog.dom.NodeIterator;
+}
+
 declare module goog.dom {
 
     /**

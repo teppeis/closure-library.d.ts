@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.storage.EncryptedStorage'): typeof goog.storage.EncryptedStorage;
+}
+
 declare module goog.storage {
 
     /**

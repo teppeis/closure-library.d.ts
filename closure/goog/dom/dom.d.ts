@@ -1,3 +1,9 @@
+declare module goog {
+    function require(name: 'goog.dom'): typeof goog.dom;
+    function require(name: 'goog.dom.Appendable'): typeof goog.dom.Appendable;
+    function require(name: 'goog.dom.DomHelper'): typeof goog.dom.DomHelper;
+}
+
 declare module goog.dom {
 
     /**

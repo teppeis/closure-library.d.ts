@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.positioning.ViewportClientPosition'): typeof goog.positioning.ViewportClientPosition;
+}
+
 declare module goog.positioning {
 
     /**

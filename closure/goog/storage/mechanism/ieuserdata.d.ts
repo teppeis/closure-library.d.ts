@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.storage.mechanism.IEUserData'): typeof goog.storage.mechanism.IEUserData;
+}
+
 declare module goog.storage.mechanism {
 
     /**

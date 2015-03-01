@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.editor.Bubble'): typeof goog.ui.editor.Bubble;
+}
+
 declare module goog.ui.editor {
 
     /**

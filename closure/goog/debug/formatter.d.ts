@@ -1,3 +1,9 @@
+declare module goog {
+    function require(name: 'goog.debug.Formatter'): typeof goog.debug.Formatter;
+    function require(name: 'goog.debug.HtmlFormatter'): typeof goog.debug.HtmlFormatter;
+    function require(name: 'goog.debug.TextFormatter'): typeof goog.debug.TextFormatter;
+}
+
 declare module goog.debug {
 
     /**

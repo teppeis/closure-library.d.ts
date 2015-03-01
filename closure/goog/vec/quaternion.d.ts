@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.vec.Quaternion'): typeof goog.vec.Quaternion;
+}
+
 declare module goog.vec.Quaternion {
 
     /** @typedef {goog.vec.Float32} */

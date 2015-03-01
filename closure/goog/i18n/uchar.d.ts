@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.i18n.uChar'): typeof goog.i18n.uChar;
+}
+
 declare module goog.i18n.uChar {
 
     /**

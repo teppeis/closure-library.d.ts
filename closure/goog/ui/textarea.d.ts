@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.Textarea'): typeof goog.ui.Textarea;
+    function require(name: 'goog.ui.Textarea.EventType'): typeof goog.ui.Textarea.EventType;
+}
+
 declare module goog.ui {
 
     /**

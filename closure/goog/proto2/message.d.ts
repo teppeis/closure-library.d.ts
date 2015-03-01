@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.proto2.Message'): typeof goog.proto2.Message;
+}
+
 declare module goog.proto2 {
 
     /**

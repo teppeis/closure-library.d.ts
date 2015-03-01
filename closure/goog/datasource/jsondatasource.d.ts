@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ds.JsonDataSource'): typeof goog.ds.JsonDataSource;
+}
+
 declare module goog.ds {
 
     /**

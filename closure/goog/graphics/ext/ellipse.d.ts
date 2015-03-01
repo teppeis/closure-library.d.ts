@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.graphics.ext.Ellipse'): typeof goog.graphics.ext.Ellipse;
+}
+
 declare module goog.graphics.ext {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.graphics.ext.Path'): typeof goog.graphics.ext.Path;
+}
+
 declare module goog.graphics.ext {
 
     /**

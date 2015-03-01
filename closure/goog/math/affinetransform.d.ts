@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.math.AffineTransform'): typeof goog.math.AffineTransform;
+}
+
 declare module goog.math {
 
     /**

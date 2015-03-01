@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.math'): typeof goog.math;
+}
+
 declare module goog.math {
 
     /**

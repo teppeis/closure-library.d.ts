@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.net.HttpStatus'): typeof goog.net.HttpStatus;
+}
+
 declare module goog.net {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.color.alpha'): typeof goog.color.alpha;
+}
+
 declare module goog.color.alpha {
 
     /**

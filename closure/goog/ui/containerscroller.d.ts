@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.ContainerScroller'): typeof goog.ui.ContainerScroller;
+}
+
 declare module goog.ui {
 
     /**

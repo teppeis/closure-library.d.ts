@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.math.Bezier'): typeof goog.math.Bezier;
+}
+
 declare module goog.math {
 
     /**

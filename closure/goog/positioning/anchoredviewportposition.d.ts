@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.positioning.AnchoredViewportPosition'): typeof goog.positioning.AnchoredViewportPosition;
+}
+
 declare module goog.positioning {
 
     /**

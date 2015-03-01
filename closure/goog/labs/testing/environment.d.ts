@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.labs.testing.Environment'): typeof goog.labs.testing.Environment;
+}
+
 declare module goog.labs.testing {
 
     /**

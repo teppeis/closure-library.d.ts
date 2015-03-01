@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.editor.plugins.AbstractTabHandler'): typeof goog.editor.plugins.AbstractTabHandler;
+}
+
 declare module goog.editor.plugins {
 
     /**

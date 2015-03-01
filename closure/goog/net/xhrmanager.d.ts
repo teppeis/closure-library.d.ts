@@ -1,3 +1,9 @@
+declare module goog {
+    function require(name: 'goog.net.XhrManager'): typeof goog.net.XhrManager;
+    function require(name: 'goog.net.XhrManager.Event'): typeof goog.net.XhrManager.Event;
+    function require(name: 'goog.net.XhrManager.Request'): typeof goog.net.XhrManager.Request;
+}
+
 declare module goog.net {
 
     /**

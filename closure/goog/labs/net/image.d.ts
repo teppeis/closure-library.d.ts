@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.labs.net.image'): typeof goog.labs.net.image;
+}
+
 declare module goog.labs.net.image {
 
     /**

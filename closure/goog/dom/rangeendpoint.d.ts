@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.RangeEndpoint'): typeof goog.dom.RangeEndpoint;
+}
+
 declare module goog.dom {
 
     /**

@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.Ratings'): typeof goog.ui.Ratings;
+    function require(name: 'goog.ui.Ratings.EventType'): typeof goog.ui.Ratings.EventType;
+}
+
 declare module goog.ui {
 
     /**

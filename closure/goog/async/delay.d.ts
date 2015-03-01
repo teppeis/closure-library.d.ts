@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.Delay'): typeof goog.Delay;
+    function require(name: 'goog.async.Delay'): typeof goog.async.Delay;
+}
+
 declare module goog.async {
 
     /**

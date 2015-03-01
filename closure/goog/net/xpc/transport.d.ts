@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.net.xpc.Transport'): typeof goog.net.xpc.Transport;
+}
+
 declare module goog.net.xpc {
 
     /**

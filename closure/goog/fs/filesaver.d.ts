@@ -1,3 +1,9 @@
+declare module goog {
+    function require(name: 'goog.fs.FileSaver'): typeof goog.fs.FileSaver;
+    function require(name: 'goog.fs.FileSaver.EventType'): typeof goog.fs.FileSaver.EventType;
+    function require(name: 'goog.fs.FileSaver.ReadyState'): typeof goog.fs.FileSaver.ReadyState;
+}
+
 declare module goog.fs {
 
     /**

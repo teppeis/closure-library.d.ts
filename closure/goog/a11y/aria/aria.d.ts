@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.a11y.aria'): typeof goog.a11y.aria;
+}
+
 declare module goog.a11y.aria {
 
     /**

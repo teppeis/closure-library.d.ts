@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.stats.BasicStat'): typeof goog.stats.BasicStat;
+}
+
 declare module goog.stats {
 
     /**

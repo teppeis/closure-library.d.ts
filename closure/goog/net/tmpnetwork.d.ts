@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.net.tmpnetwork'): typeof goog.net.tmpnetwork;
+}
+
 declare module goog.net.tmpnetwork {
 
     /**

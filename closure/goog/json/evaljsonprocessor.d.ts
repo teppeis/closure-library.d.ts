@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.json.EvalJsonProcessor'): typeof goog.json.EvalJsonProcessor;
+}
+
 declare module goog.json {
 
     /**

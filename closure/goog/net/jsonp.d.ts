@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.net.Jsonp'): typeof goog.net.Jsonp;
+}
+
 declare module goog.net {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.emoji.PopupEmojiPicker'): typeof goog.ui.emoji.PopupEmojiPicker;
+}
+
 declare module goog.ui.emoji {
 
     /**

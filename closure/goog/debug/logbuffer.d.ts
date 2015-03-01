@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.debug.LogBuffer'): typeof goog.debug.LogBuffer;
+}
+
 declare module goog.debug {
 
     /**

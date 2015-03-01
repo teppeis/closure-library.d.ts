@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.net.WrapperXmlHttpFactory'): typeof goog.net.WrapperXmlHttpFactory;
+}
+
 declare module goog.net {
 
     /**

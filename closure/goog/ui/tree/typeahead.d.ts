@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.tree.TypeAhead'): typeof goog.ui.tree.TypeAhead;
+    function require(name: 'goog.ui.tree.TypeAhead.Offset'): typeof goog.ui.tree.TypeAhead.Offset;
+}
+
 declare module goog.ui.tree {
 
     /**

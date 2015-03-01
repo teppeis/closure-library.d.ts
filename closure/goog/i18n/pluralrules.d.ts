@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.i18n.pluralRules'): typeof goog.i18n.pluralRules;
+}
+
 declare module goog.i18n.pluralRules {
 
     /**

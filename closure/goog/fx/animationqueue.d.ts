@@ -1,3 +1,9 @@
+declare module goog {
+    function require(name: 'goog.fx.AnimationParallelQueue'): typeof goog.fx.AnimationParallelQueue;
+    function require(name: 'goog.fx.AnimationQueue'): typeof goog.fx.AnimationQueue;
+    function require(name: 'goog.fx.AnimationSerialQueue'): typeof goog.fx.AnimationSerialQueue;
+}
+
 declare module goog.fx {
 
     /**

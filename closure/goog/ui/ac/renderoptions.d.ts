@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.ac.RenderOptions'): typeof goog.ui.ac.RenderOptions;
+}
+
 declare module goog.ui.ac {
 
     /**

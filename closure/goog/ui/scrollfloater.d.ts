@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.ScrollFloater'): typeof goog.ui.ScrollFloater;
+    function require(name: 'goog.ui.ScrollFloater.EventType'): typeof goog.ui.ScrollFloater.EventType;
+}
+
 declare module goog.ui {
 
     /**

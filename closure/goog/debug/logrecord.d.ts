@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.debug.LogRecord'): typeof goog.debug.LogRecord;
+}
+
 declare module goog.debug {
 
     /**

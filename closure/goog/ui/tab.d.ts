@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.Tab'): typeof goog.ui.Tab;
+}
+
 declare module goog.ui {
 
     /**

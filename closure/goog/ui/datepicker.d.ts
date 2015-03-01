@@ -1,3 +1,9 @@
+declare module goog {
+    function require(name: 'goog.ui.DatePicker'): typeof goog.ui.DatePicker;
+    function require(name: 'goog.ui.DatePicker.Events'): typeof goog.ui.DatePicker.Events;
+    function require(name: 'goog.ui.DatePickerEvent'): typeof goog.ui.DatePickerEvent;
+}
+
 declare module goog.ui {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.object'): typeof goog.object;
+}
+
 declare module goog.object {
 
     /**

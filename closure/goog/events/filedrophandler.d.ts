@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.events.FileDropHandler'): typeof goog.events.FileDropHandler;
+    function require(name: 'goog.events.FileDropHandler.EventType'): typeof goog.events.FileDropHandler.EventType;
+}
+
 declare module goog.events {
 
     /**

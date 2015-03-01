@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.debug.Error'): typeof goog.debug.Error;
+}
+
 declare module goog.debug {
 
     /**

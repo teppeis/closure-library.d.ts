@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.BufferedViewportSizeMonitor'): typeof goog.dom.BufferedViewportSizeMonitor;
+}
+
 declare module goog.dom {
 
     /**

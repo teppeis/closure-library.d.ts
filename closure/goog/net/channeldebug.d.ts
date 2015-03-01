@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.net.ChannelDebug'): typeof goog.net.ChannelDebug;
+}
+
 declare module goog.net {
 
     /**

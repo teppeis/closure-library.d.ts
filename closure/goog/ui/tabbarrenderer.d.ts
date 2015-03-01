@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.TabBarRenderer'): typeof goog.ui.TabBarRenderer;
+}
+
 declare module goog.ui {
 
     /**

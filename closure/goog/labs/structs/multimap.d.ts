@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.labs.structs.Multimap'): typeof goog.labs.structs.Multimap;
+}
+
 declare module goog.labs.structs {
 
     /**

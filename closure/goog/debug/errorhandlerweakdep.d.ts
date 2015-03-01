@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.debug.errorHandlerWeakDep'): typeof goog.debug.errorHandlerWeakDep;
+}
+
 declare module goog.debug {
 
     /**

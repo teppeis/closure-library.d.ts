@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.style.bidi'): typeof goog.style.bidi;
+}
+
 declare module goog.style.bidi {
 
     /**

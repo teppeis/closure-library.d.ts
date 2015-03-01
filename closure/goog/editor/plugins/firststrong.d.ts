@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.editor.plugins.FirstStrong'): typeof goog.editor.plugins.FirstStrong;
+}
+
 declare module goog.editor.plugins {
 
     /**

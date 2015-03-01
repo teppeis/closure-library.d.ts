@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.events.InputHandler'): typeof goog.events.InputHandler;
+    function require(name: 'goog.events.InputHandler.EventType'): typeof goog.events.InputHandler.EventType;
+}
+
 declare module goog.events {
 
     /**

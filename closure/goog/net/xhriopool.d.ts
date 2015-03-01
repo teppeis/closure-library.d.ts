@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.net.XhrIoPool'): typeof goog.net.XhrIoPool;
+}
+
 declare module goog.net {
 
     /**

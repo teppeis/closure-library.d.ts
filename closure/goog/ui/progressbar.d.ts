@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.ProgressBar'): typeof goog.ui.ProgressBar;
+    function require(name: 'goog.ui.ProgressBar.Orientation'): typeof goog.ui.ProgressBar.Orientation;
+}
+
 declare module goog.ui {
 
     /**

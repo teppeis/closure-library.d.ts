@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.events.BrowserFeature'): typeof goog.events.BrowserFeature;
+}
+
 declare module goog.events {
 
     /**

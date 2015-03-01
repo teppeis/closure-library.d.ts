@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.Menu'): typeof goog.ui.Menu;
+    function require(name: 'goog.ui.Menu.EventType'): typeof goog.ui.Menu.EventType;
+}
+
 declare module goog.ui {
 
     /**

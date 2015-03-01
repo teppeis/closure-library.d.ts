@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.promise.Resolver'): typeof goog.promise.Resolver;
+}
+
 declare module goog.promise {
 
     /**

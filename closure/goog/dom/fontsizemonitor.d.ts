@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.dom.FontSizeMonitor'): typeof goog.dom.FontSizeMonitor;
+    function require(name: 'goog.dom.FontSizeMonitor.EventType'): typeof goog.dom.FontSizeMonitor.EventType;
+}
+
 declare module goog.dom {
 
     /**

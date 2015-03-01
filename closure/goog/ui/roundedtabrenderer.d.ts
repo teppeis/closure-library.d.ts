@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.RoundedTabRenderer'): typeof goog.ui.RoundedTabRenderer;
+}
+
 declare module goog.ui {
 
     /**

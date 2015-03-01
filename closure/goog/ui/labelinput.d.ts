@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.LabelInput'): typeof goog.ui.LabelInput;
+}
+
 declare module goog.ui {
 
     /**

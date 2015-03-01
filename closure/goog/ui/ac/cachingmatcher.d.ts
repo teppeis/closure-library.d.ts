@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.ac.CachingMatcher'): typeof goog.ui.ac.CachingMatcher;
+}
+
 declare module goog.ui.ac {
 
     /**

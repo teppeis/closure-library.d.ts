@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.date.duration'): typeof goog.date.duration;
+}
+
 declare module goog.date.duration {
 
     /**

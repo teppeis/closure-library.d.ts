@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.html.SafeScript'): typeof goog.html.SafeScript;
+}
+
 declare module goog.html {
 
     /**

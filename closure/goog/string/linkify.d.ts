@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.string.linkify'): typeof goog.string.linkify;
+}
+
 declare module goog.string$.linkify {
 
     /**

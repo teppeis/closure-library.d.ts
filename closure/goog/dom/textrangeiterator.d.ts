@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.TextRangeIterator'): typeof goog.dom.TextRangeIterator;
+}
+
 declare module goog.dom {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.math.Coordinate'): typeof goog.math.Coordinate;
+}
+
 declare module goog.math {
 
     /**

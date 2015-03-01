@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.date.UtcDateTime'): typeof goog.date.UtcDateTime;
+}
+
 declare module goog.date {
 
     /**

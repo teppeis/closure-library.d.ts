@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.structs.Trie'): typeof goog.structs.Trie;
+}
+
 declare module goog.structs {
 
     /**

@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.Gauge'): typeof goog.ui.Gauge;
+    function require(name: 'goog.ui.GaugeColoredRange'): typeof goog.ui.GaugeColoredRange;
+}
+
 declare module goog.ui {
 
     /**

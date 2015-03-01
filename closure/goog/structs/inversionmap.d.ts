@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.structs.InversionMap'): typeof goog.structs.InversionMap;
+}
+
 declare module goog.structs {
 
     /**

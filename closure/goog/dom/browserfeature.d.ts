@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.BrowserFeature'): typeof goog.dom.BrowserFeature;
+}
+
 declare module goog.dom {
 
     /**

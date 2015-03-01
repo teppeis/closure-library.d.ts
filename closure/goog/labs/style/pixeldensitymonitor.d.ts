@@ -1,3 +1,9 @@
+declare module goog {
+    function require(name: 'goog.labs.style.PixelDensityMonitor'): typeof goog.labs.style.PixelDensityMonitor;
+    function require(name: 'goog.labs.style.PixelDensityMonitor.Density'): typeof goog.labs.style.PixelDensityMonitor.Density;
+    function require(name: 'goog.labs.style.PixelDensityMonitor.EventType'): typeof goog.labs.style.PixelDensityMonitor.EventType;
+}
+
 declare module goog.labs.style {
 
     /**

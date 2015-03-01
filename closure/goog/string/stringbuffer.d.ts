@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.string.StringBuffer'): typeof goog.string.StringBuffer;
+}
+
 declare module goog.string$ {
 
     /**

@@ -1,3 +1,10 @@
+declare module goog {
+    function require(name: 'goog.json'): typeof goog.json;
+    function require(name: 'goog.json.Replacer'): typeof goog.json.Replacer;
+    function require(name: 'goog.json.Reviver'): typeof goog.json.Reviver;
+    function require(name: 'goog.json.Serializer'): typeof goog.json.Serializer;
+}
+
 declare module goog.json {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.FlatButtonRenderer'): typeof goog.ui.FlatButtonRenderer;
+}
+
 declare module goog.ui {
 
     /**

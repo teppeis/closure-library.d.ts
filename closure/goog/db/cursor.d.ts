@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.db.Cursor'): typeof goog.db.Cursor;
+}
+
 declare module goog.db {
 
     /**

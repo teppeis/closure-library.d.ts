@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.vec.Ray'): typeof goog.vec.Ray;
+}
+
 declare module goog.vec {
 
     /**

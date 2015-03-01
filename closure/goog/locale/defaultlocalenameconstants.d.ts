@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.locale.defaultLocaleNameConstants'): typeof goog.locale.defaultLocaleNameConstants;
+}
+
 declare module goog.locale {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.graphics.Font'): typeof goog.graphics.Font;
+}
+
 declare module goog.graphics {
 
     /**

@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.labs.mock'): typeof goog.labs.mock;
+    function require(name: 'goog.labs.mock.VerificationError'): typeof goog.labs.mock.VerificationError;
+}
+
 declare module goog.labs.mock {
 
     /**

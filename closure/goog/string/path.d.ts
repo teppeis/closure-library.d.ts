@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.string.path'): typeof goog.string.path;
+}
+
 declare module goog.string$.path {
 
     /**

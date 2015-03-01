@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.pubsub.TopicId'): typeof goog.pubsub.TopicId;
+}
+
 declare module goog.pubsub {
 
     /**

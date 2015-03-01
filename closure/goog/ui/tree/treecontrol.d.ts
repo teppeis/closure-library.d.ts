@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.tree.TreeControl'): typeof goog.ui.tree.TreeControl;
+}
+
 declare module goog.ui.tree {
 
     /**

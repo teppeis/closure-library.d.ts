@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.graphics.ext.Graphics'): typeof goog.graphics.ext.Graphics;
+}
+
 declare module goog.graphics.ext {
 
     /**

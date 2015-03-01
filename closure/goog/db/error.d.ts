@@ -1,3 +1,10 @@
+declare module goog {
+    function require(name: 'goog.db.Error'): typeof goog.db.Error;
+    function require(name: 'goog.db.Error.ErrorCode'): typeof goog.db.Error.ErrorCode;
+    function require(name: 'goog.db.Error.ErrorName'): typeof goog.db.Error.ErrorName;
+    function require(name: 'goog.db.Error.VersionChangeBlockedError'): typeof goog.db.Error.VersionChangeBlockedError;
+}
+
 declare module goog.db {
 
     /**

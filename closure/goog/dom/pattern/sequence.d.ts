@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.pattern.Sequence'): typeof goog.dom.pattern.Sequence;
+}
+
 declare module goog.dom.pattern {
 
     /**

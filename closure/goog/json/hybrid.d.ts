@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.json.hybrid'): typeof goog.json.hybrid;
+}
+
 declare module goog.json.hybrid {
 
     /**

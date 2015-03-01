@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.i18n.CharListDecompressor'): typeof goog.i18n.CharListDecompressor;
+}
+
 declare module goog.i18n {
 
     /**

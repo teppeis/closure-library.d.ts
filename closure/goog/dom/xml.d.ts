@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.xml'): typeof goog.dom.xml;
+}
+
 declare module goog.dom.xml {
 
     /**

@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.TabBar'): typeof goog.ui.TabBar;
+    function require(name: 'goog.ui.TabBar.Location'): typeof goog.ui.TabBar.Location;
+}
+
 declare module goog.ui {
 
     /**

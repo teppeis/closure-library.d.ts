@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.ContainerRenderer'): typeof goog.ui.ContainerRenderer;
+}
+
 declare module goog.ui {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.decorate'): typeof goog.ui.decorate;
+}
+
 declare module goog.ui {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.media.Photo'): typeof goog.ui.media.Photo;
+}
+
 declare module goog.ui.media {
 
     /**

@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.media.PicasaAlbum'): typeof goog.ui.media.PicasaAlbum;
+    function require(name: 'goog.ui.media.PicasaAlbumModel'): typeof goog.ui.media.PicasaAlbumModel;
+}
+
 declare module goog.ui.media {
 
     /**

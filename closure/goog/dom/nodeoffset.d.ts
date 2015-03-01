@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.NodeOffset'): typeof goog.dom.NodeOffset;
+}
+
 declare module goog.dom {
 
     /**

@@ -1,3 +1,9 @@
+declare module goog {
+    function require(name: 'goog.ui.Zippy'): typeof goog.ui.Zippy;
+    function require(name: 'goog.ui.Zippy.Events'): typeof goog.ui.Zippy.Events;
+    function require(name: 'goog.ui.ZippyEvent'): typeof goog.ui.ZippyEvent;
+}
+
 declare module goog.ui {
 
     /**

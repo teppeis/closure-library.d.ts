@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.ActivityMonitor'): typeof goog.ui.ActivityMonitor;
+}
+
 declare module goog.ui {
 
     /**

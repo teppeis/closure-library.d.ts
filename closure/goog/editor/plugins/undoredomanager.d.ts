@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.editor.plugins.UndoRedoManager'): typeof goog.editor.plugins.UndoRedoManager;
+    function require(name: 'goog.editor.plugins.UndoRedoManager.EventType'): typeof goog.editor.plugins.UndoRedoManager.EventType;
+}
+
 declare module goog.editor.plugins {
 
     /**

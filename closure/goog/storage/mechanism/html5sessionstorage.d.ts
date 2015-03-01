@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.storage.mechanism.HTML5SessionStorage'): typeof goog.storage.mechanism.HTML5SessionStorage;
+}
+
 declare module goog.storage.mechanism {
 
     /**

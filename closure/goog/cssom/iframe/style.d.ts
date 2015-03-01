@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.cssom.iframe.style'): typeof goog.cssom.iframe.style;
+}
+
 declare module goog.cssom.iframe.style {
 
     /**

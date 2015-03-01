@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.locale.genericFontNames'): typeof goog.locale.genericFontNames;
+}
+
 declare module goog.locale.genericFontNames {
 
     /**

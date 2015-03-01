@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.html.silverlight'): typeof goog.html.silverlight;
+}
+
 declare module goog.html.silverlight {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.messaging.DeferredChannel'): typeof goog.messaging.DeferredChannel;
+}
+
 declare module goog.messaging {
 
     /**

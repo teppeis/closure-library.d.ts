@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.fs.ProgressEvent'): typeof goog.fs.ProgressEvent;
+}
+
 declare module goog.fs {
 
     /**

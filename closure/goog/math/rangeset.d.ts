@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.math.RangeSet'): typeof goog.math.RangeSet;
+}
+
 declare module goog.math {
 
     /**

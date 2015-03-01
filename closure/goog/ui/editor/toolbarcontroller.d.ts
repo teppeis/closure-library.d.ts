@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.editor.ToolbarController'): typeof goog.ui.editor.ToolbarController;
+}
+
 declare module goog.ui.editor {
 
     /**

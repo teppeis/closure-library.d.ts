@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.CharCounter'): typeof goog.ui.CharCounter;
+    function require(name: 'goog.ui.CharCounter.Display'): typeof goog.ui.CharCounter.Display;
+}
+
 declare module goog.ui {
 
     /**

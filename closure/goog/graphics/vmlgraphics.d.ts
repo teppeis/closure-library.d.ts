@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.graphics.VmlGraphics'): typeof goog.graphics.VmlGraphics;
+}
+
 declare module goog.graphics {
 
     /**

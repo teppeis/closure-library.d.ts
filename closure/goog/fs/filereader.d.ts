@@ -1,3 +1,9 @@
+declare module goog {
+    function require(name: 'goog.fs.FileReader'): typeof goog.fs.FileReader;
+    function require(name: 'goog.fs.FileReader.EventType'): typeof goog.fs.FileReader.EventType;
+    function require(name: 'goog.fs.FileReader.ReadyState'): typeof goog.fs.FileReader.ReadyState;
+}
+
 declare module goog.fs {
 
     /**

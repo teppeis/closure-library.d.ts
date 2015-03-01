@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.math.interpolator.Interpolator1'): typeof goog.math.interpolator.Interpolator1;
+}
+
 declare module goog.math.interpolator {
 
     /**

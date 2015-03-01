@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.structs.AvlTree'): typeof goog.structs.AvlTree;
+    function require(name: 'goog.structs.AvlTree.Node'): typeof goog.structs.AvlTree.Node;
+}
+
 declare module goog.structs {
 
     /**

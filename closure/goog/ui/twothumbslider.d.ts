@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.TwoThumbSlider'): typeof goog.ui.TwoThumbSlider;
+}
+
 declare module goog.ui {
 
     /**

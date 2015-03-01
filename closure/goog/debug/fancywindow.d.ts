@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.debug.FancyWindow'): typeof goog.debug.FancyWindow;
+}
+
 declare module goog.debug {
 
     /**

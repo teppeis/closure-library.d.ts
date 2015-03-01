@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.pubsub.PubSub'): typeof goog.pubsub.PubSub;
+}
+
 declare module goog.pubsub {
 
     /**

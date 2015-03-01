@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.vec.Float32Array'): typeof goog.vec.Float32Array;
+}
+
 declare module goog.vec {
 
     /**

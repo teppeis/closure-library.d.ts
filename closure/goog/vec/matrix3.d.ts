@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.vec.Matrix3'): typeof goog.vec.Matrix3;
+}
+
 declare module goog.vec.Matrix3 {
 
     /**

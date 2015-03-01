@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.vec.Mat3'): typeof goog.vec.Mat3;
+}
+
 declare module goog.vec.Mat3 {
 
     /** @typedef {goog.vec.Float32} */

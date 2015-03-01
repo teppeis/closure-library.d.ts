@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.pattern.EndTag'): typeof goog.dom.pattern.EndTag;
+}
+
 declare module goog.dom.pattern {
 
     /**

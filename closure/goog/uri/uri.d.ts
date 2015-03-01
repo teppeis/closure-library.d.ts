@@ -1,4 +1,9 @@
 declare module goog {
+    function require(name: 'goog.Uri'): typeof goog.Uri;
+    function require(name: 'goog.Uri.QueryData'): typeof goog.Uri.QueryData;
+}
+
+declare module goog {
 
     /**
      * This class contains setters and getters for the parts of the URI.

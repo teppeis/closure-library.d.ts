@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.reflect'): typeof goog.reflect;
+}
+
 declare module goog.reflect {
 
     /**

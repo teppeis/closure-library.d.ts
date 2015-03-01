@@ -1,3 +1,10 @@
+declare module goog {
+    function require(name: 'goog.labs.testing.HasEntriesMatcher'): typeof goog.labs.testing.HasEntriesMatcher;
+    function require(name: 'goog.labs.testing.HasEntryMatcher'): typeof goog.labs.testing.HasEntryMatcher;
+    function require(name: 'goog.labs.testing.HasKeyMatcher'): typeof goog.labs.testing.HasKeyMatcher;
+    function require(name: 'goog.labs.testing.HasValueMatcher'): typeof goog.labs.testing.HasValueMatcher;
+}
+
 declare module goog.labs.testing {
 
     /**

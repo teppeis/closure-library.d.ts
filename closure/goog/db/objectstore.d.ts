@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.db.ObjectStore'): typeof goog.db.ObjectStore;
+}
+
 declare module goog.db {
 
     /**

@@ -1,3 +1,10 @@
+declare module goog {
+    function require(name: 'goog.iter'): typeof goog.iter;
+    function require(name: 'goog.iter.Iterable'): typeof goog.iter.Iterable;
+    function require(name: 'goog.iter.Iterator'): typeof goog.iter.Iterator;
+    function require(name: 'goog.iter.StopIteration'): typeof goog.iter.StopIteration;
+}
+
 declare module goog.iter {
 
     /**

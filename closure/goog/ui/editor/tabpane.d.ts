@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.editor.TabPane'): typeof goog.ui.editor.TabPane;
+}
+
 declare module goog.ui.editor {
 
     /**

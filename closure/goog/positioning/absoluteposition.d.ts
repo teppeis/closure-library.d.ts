@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.positioning.AbsolutePosition'): typeof goog.positioning.AbsolutePosition;
+}
+
 declare module goog.positioning {
 
     /**

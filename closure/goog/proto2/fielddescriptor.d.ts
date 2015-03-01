@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.proto2.FieldDescriptor'): typeof goog.proto2.FieldDescriptor;
+}
+
 declare module goog.proto2 {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.IdGenerator'): typeof goog.ui.IdGenerator;
+}
+
 declare module goog.ui {
 
     /**

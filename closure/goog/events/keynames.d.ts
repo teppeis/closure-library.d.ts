@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.events.KeyNames'): typeof goog.events.KeyNames;
+}
+
 declare module goog.events {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.fx.DragDrop'): typeof goog.fx.DragDrop;
+}
+
 declare module goog.fx {
 
     /**

@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.async.WorkItem'): typeof goog.async.WorkItem;
+    function require(name: 'goog.async.WorkQueue'): typeof goog.async.WorkQueue;
+}
+
 declare module goog.async {
 
     /**

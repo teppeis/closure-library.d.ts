@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.ac.InputHandler'): typeof goog.ui.ac.InputHandler;
+}
+
 declare module goog.ui.ac {
 
     /**

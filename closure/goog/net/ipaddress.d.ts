@@ -1,3 +1,9 @@
+declare module goog {
+    function require(name: 'goog.net.IpAddress'): typeof goog.net.IpAddress;
+    function require(name: 'goog.net.Ipv4Address'): typeof goog.net.Ipv4Address;
+    function require(name: 'goog.net.Ipv6Address'): typeof goog.net.Ipv6Address;
+}
+
 declare module goog.net {
 
     /**

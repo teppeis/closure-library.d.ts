@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.i18n.DateTimeFormat'): typeof goog.i18n.DateTimeFormat;
+    function require(name: 'goog.i18n.DateTimeFormat.Format'): typeof goog.i18n.DateTimeFormat.Format;
+}
+
 declare module goog.i18n {
 
     /**

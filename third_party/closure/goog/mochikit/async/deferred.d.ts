@@ -1,3 +1,9 @@
+declare module goog {
+    function require(name: 'goog.async.Deferred'): typeof goog.async.Deferred;
+    function require(name: 'goog.async.Deferred.AlreadyCalledError'): typeof goog.async.Deferred.AlreadyCalledError;
+    function require(name: 'goog.async.Deferred.CanceledError'): typeof goog.async.Deferred.CanceledError;
+}
+
 declare module goog.async {
 
     /**

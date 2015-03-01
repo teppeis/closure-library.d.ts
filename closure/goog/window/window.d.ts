@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.window'): typeof goog.window;
+}
+
 declare module goog.window {
 
     /**

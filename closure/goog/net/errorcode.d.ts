@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.net.ErrorCode'): typeof goog.net.ErrorCode;
+}
+
 declare module goog.net {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.ColorSplitBehavior'): typeof goog.ui.ColorSplitBehavior;
+}
+
 declare module goog.ui {
 
     /**

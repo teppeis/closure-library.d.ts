@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.media.Mp3'): typeof goog.ui.media.Mp3;
+}
+
 declare module goog.ui.media {
 
     /**

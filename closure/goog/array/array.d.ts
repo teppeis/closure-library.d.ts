@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.array'): typeof goog.array;
+    function require(name: 'goog.array.ArrayLike'): typeof goog.array.ArrayLike;
+}
+
 declare module goog.array {
 
     /**

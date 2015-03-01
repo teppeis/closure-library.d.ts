@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.fx.css3'): typeof goog.fx.css3;
+}
+
 declare module goog.fx.css3 {
 
     /**

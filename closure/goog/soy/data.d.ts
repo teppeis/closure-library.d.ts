@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.soy.data.SanitizedContent'): typeof goog.soy.data.SanitizedContent;
+    function require(name: 'goog.soy.data.SanitizedContentKind'): typeof goog.soy.data.SanitizedContentKind;
+}
+
 declare module goog.soy.data {
 
     /**

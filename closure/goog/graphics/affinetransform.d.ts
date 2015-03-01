@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.graphics.AffineTransform'): typeof goog.graphics.AffineTransform;
+}
+
 declare module goog.graphics {
 
     /**

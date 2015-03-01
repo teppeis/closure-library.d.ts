@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.MockActivityMonitor'): typeof goog.ui.MockActivityMonitor;
+}
+
 declare module goog.ui {
 
     /**

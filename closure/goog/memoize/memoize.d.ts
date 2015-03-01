@@ -1,4 +1,8 @@
 declare module goog {
+    function require(name: 'goog.memoize'): typeof goog.memoize;
+}
+
+declare module goog {
 
     /**
      * Decorator around functions that caches the inner function's return values.

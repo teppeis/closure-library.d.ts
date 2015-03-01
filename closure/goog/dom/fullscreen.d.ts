@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.dom.fullscreen'): typeof goog.dom.fullscreen;
+    function require(name: 'goog.dom.fullscreen.EventType'): typeof goog.dom.fullscreen.EventType;
+}
+
 declare module goog.dom.fullscreen {
 
     /**

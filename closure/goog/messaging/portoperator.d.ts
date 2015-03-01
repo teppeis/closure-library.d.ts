@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.messaging.PortOperator'): typeof goog.messaging.PortOperator;
+}
+
 declare module goog.messaging {
 
     /**

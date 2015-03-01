@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.debug.ErrorHandler'): typeof goog.debug.ErrorHandler;
+    function require(name: 'goog.debug.ErrorHandler.ProtectedFunctionError'): typeof goog.debug.ErrorHandler.ProtectedFunctionError;
+}
+
 declare module goog.debug {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.storage.mechanism.ErrorHandlingMechanism'): typeof goog.storage.mechanism.ErrorHandlingMechanism;
+}
+
 declare module goog.storage.mechanism {
 
     /**

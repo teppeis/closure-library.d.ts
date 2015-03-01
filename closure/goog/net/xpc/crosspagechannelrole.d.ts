@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.net.xpc.CrossPageChannelRole'): typeof goog.net.xpc.CrossPageChannelRole;
+}
+
 declare module goog.net.xpc {
 
     /**

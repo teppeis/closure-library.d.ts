@@ -1,3 +1,12 @@
+declare module goog {
+    function require(name: 'goog.labs.testing.HasPropertyMatcher'): typeof goog.labs.testing.HasPropertyMatcher;
+    function require(name: 'goog.labs.testing.InstanceOfMatcher'): typeof goog.labs.testing.InstanceOfMatcher;
+    function require(name: 'goog.labs.testing.IsNullMatcher'): typeof goog.labs.testing.IsNullMatcher;
+    function require(name: 'goog.labs.testing.IsNullOrUndefinedMatcher'): typeof goog.labs.testing.IsNullOrUndefinedMatcher;
+    function require(name: 'goog.labs.testing.IsUndefinedMatcher'): typeof goog.labs.testing.IsUndefinedMatcher;
+    function require(name: 'goog.labs.testing.ObjectEqualsMatcher'): typeof goog.labs.testing.ObjectEqualsMatcher;
+}
+
 declare module goog.labs.testing {
 
     /**

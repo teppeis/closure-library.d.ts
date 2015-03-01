@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.dom.browserrange'): typeof goog.dom.browserrange;
+    function require(name: 'goog.dom.browserrange.Error'): typeof goog.dom.browserrange.Error;
+}
+
 declare module goog.dom.browserrange {
 
     /**

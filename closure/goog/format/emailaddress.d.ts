@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.format.EmailAddress'): typeof goog.format.EmailAddress;
+}
+
 declare module goog.format {
 
     /**

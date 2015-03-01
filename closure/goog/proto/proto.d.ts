@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.proto'): typeof goog.proto;
+}
+
 declare module goog.proto {
 
     /**

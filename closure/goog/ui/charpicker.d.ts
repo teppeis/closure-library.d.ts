@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.CharPicker'): typeof goog.ui.CharPicker;
+}
+
 declare module goog.ui {
 
     /**

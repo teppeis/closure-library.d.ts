@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.browserrange.W3cRange'): typeof goog.dom.browserrange.W3cRange;
+}
+
 declare module goog.dom.browserrange {
 
     /**

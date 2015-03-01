@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.positioning.AbstractPosition'): typeof goog.positioning.AbstractPosition;
+}
+
 declare module goog.positioning {
 
     /**

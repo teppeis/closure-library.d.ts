@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.ColorPicker'): typeof goog.ui.ColorPicker;
+    function require(name: 'goog.ui.ColorPicker.EventType'): typeof goog.ui.ColorPicker.EventType;
+}
+
 declare module goog.ui {
 
     /**

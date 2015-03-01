@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.html.utils'): typeof goog.html.utils;
+}
+
 declare module goog.html.utils {
 
     /**

@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.fx.TransitionBase'): typeof goog.fx.TransitionBase;
+    function require(name: 'goog.fx.TransitionBase.State'): typeof goog.fx.TransitionBase.State;
+}
+
 declare module goog.fx {
 
     /**

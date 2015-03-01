@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.editor.ButtonDescriptor'): typeof goog.ui.editor.ButtonDescriptor;
+    function require(name: 'goog.ui.editor.DefaultToolbar'): typeof goog.ui.editor.DefaultToolbar;
+}
+
 declare module goog.ui.editor.DefaultToolbar {
 
     /** @desc Font menu item caption for the default sans-serif font. */

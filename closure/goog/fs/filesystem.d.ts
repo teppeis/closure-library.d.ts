@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.fs.FileSystem'): typeof goog.fs.FileSystem;
+}
+
 declare module goog.fs {
 
     /**

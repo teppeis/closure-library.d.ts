@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.storage.mechanism.IterableMechanism'): typeof goog.storage.mechanism.IterableMechanism;
+}
+
 declare module goog.storage.mechanism {
 
     /**

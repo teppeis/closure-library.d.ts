@@ -1,3 +1,18 @@
+declare module goog {
+    function require(name: 'goog.net.BrowserChannel'): typeof goog.net.BrowserChannel;
+    function require(name: 'goog.net.BrowserChannel.Error'): typeof goog.net.BrowserChannel.Error;
+    function require(name: 'goog.net.BrowserChannel.Event'): typeof goog.net.BrowserChannel.Event;
+    function require(name: 'goog.net.BrowserChannel.Handler'): typeof goog.net.BrowserChannel.Handler;
+    function require(name: 'goog.net.BrowserChannel.LogSaver'): typeof goog.net.BrowserChannel.LogSaver;
+    function require(name: 'goog.net.BrowserChannel.QueuedMap'): typeof goog.net.BrowserChannel.QueuedMap;
+    function require(name: 'goog.net.BrowserChannel.ServerReachability'): typeof goog.net.BrowserChannel.ServerReachability;
+    function require(name: 'goog.net.BrowserChannel.ServerReachabilityEvent'): typeof goog.net.BrowserChannel.ServerReachabilityEvent;
+    function require(name: 'goog.net.BrowserChannel.Stat'): typeof goog.net.BrowserChannel.Stat;
+    function require(name: 'goog.net.BrowserChannel.StatEvent'): typeof goog.net.BrowserChannel.StatEvent;
+    function require(name: 'goog.net.BrowserChannel.State'): typeof goog.net.BrowserChannel.State;
+    function require(name: 'goog.net.BrowserChannel.TimingEvent'): typeof goog.net.BrowserChannel.TimingEvent;
+}
+
 declare module goog.net {
 
     /**

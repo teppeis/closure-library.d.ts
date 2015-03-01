@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.fx.Transition'): typeof goog.fx.Transition;
+    function require(name: 'goog.fx.Transition.EventType'): typeof goog.fx.Transition.EventType;
+}
+
 declare module goog.fx {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.functions'): typeof goog.functions;
+}
+
 declare module goog.functions {
 
     /**

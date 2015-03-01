@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.net.BrowserTestChannel'): typeof goog.net.BrowserTestChannel;
+}
+
 declare module goog.net {
 
     /**

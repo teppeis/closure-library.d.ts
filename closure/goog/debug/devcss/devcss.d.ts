@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.debug.DevCss'): typeof goog.debug.DevCss;
+    function require(name: 'goog.debug.DevCss.UserAgent'): typeof goog.debug.DevCss.UserAgent;
+}
+
 declare module goog.debug {
 
     /**

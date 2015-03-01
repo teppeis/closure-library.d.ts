@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.FilterObservingMenuItemRenderer'): typeof goog.ui.FilterObservingMenuItemRenderer;
+}
+
 declare module goog.ui {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.tweak.Registry'): typeof goog.tweak.Registry;
+}
+
 declare module goog.tweak {
 
     /**

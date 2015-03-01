@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.tree.BaseNode'): typeof goog.ui.tree.BaseNode;
+    function require(name: 'goog.ui.tree.BaseNode.EventType'): typeof goog.ui.tree.BaseNode.EventType;
+}
+
 declare module goog.ui.tree {
 
     /**

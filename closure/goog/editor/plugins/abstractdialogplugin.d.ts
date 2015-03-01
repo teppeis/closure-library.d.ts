@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.editor.plugins.AbstractDialogPlugin'): typeof goog.editor.plugins.AbstractDialogPlugin;
+    function require(name: 'goog.editor.plugins.AbstractDialogPlugin.EventType'): typeof goog.editor.plugins.AbstractDialogPlugin.EventType;
+}
+
 declare module goog.editor.plugins {
 
     /**

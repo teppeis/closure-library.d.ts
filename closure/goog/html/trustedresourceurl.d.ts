@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.html.TrustedResourceUrl'): typeof goog.html.TrustedResourceUrl;
+}
+
 declare module goog.html {
 
     /**

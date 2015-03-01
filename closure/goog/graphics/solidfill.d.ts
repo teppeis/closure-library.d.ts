@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.graphics.SolidFill'): typeof goog.graphics.SolidFill;
+}
+
 declare module goog.graphics {
 
     /**

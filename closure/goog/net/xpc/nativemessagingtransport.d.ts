@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.net.xpc.NativeMessagingTransport'): typeof goog.net.xpc.NativeMessagingTransport;
+}
+
 declare module goog.net.xpc {
 
     /**

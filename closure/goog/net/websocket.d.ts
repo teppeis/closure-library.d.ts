@@ -1,3 +1,10 @@
+declare module goog {
+    function require(name: 'goog.net.WebSocket'): typeof goog.net.WebSocket;
+    function require(name: 'goog.net.WebSocket.ErrorEvent'): typeof goog.net.WebSocket.ErrorEvent;
+    function require(name: 'goog.net.WebSocket.EventType'): typeof goog.net.WebSocket.EventType;
+    function require(name: 'goog.net.WebSocket.MessageEvent'): typeof goog.net.WebSocket.MessageEvent;
+}
+
 declare module goog.net {
 
     /**

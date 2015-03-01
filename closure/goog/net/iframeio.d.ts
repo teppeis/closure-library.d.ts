@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.net.IframeIo'): typeof goog.net.IframeIo;
+    function require(name: 'goog.net.IframeIo.IncrementalDataEvent'): typeof goog.net.IframeIo.IncrementalDataEvent;
+}
+
 declare module goog.net {
 
     /**

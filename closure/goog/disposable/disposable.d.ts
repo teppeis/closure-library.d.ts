@@ -1,4 +1,10 @@
 declare module goog {
+    function require(name: 'goog.Disposable'): typeof goog.Disposable;
+    function require(name: 'goog.dispose'): typeof goog.dispose;
+    function require(name: 'goog.disposeAll'): typeof goog.disposeAll;
+}
+
+declare module goog {
 
     /**
      * Class that provides the basic implementation for disposable objects. If your

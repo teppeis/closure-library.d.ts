@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.net.ChannelRequest'): typeof goog.net.ChannelRequest;
+    function require(name: 'goog.net.ChannelRequest.Error'): typeof goog.net.ChannelRequest.Error;
+}
+
 declare module goog.net {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.fs'): typeof goog.fs;
+}
+
 declare module goog.fs {
 
     /**

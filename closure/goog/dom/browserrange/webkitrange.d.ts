@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.browserrange.WebKitRange'): typeof goog.dom.browserrange.WebKitRange;
+}
+
 declare module goog.dom.browserrange {
 
     /**

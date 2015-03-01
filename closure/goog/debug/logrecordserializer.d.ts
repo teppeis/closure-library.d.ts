@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.debug.logRecordSerializer'): typeof goog.debug.logRecordSerializer;
+}
+
 declare module goog.debug.logRecordSerializer {
 
     /**

@@ -1,3 +1,11 @@
+declare module goog {
+    function require(name: 'goog.net.DefaultXmlHttpFactory'): typeof goog.net.DefaultXmlHttpFactory;
+    function require(name: 'goog.net.XmlHttp'): typeof goog.net.XmlHttp;
+    function require(name: 'goog.net.XmlHttp.OptionType'): typeof goog.net.XmlHttp.OptionType;
+    function require(name: 'goog.net.XmlHttp.ReadyState'): typeof goog.net.XmlHttp.ReadyState;
+    function require(name: 'goog.net.XmlHttpDefines'): typeof goog.net.XmlHttpDefines;
+}
+
 declare module goog.net {
 
     /**

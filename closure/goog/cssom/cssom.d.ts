@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.cssom'): typeof goog.cssom;
+    function require(name: 'goog.cssom.CssRuleType'): typeof goog.cssom.CssRuleType;
+}
+
 declare module goog.cssom {
 
     /**

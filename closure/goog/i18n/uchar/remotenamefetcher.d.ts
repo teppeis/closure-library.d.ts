@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.i18n.uChar.RemoteNameFetcher'): typeof goog.i18n.uChar.RemoteNameFetcher;
+}
+
 declare module goog.i18n.uChar {
 
     /**

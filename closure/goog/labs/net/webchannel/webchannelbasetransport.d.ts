@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.labs.net.webChannel.WebChannelBaseTransport'): typeof goog.labs.net.webChannel.WebChannelBaseTransport;
+}
+
 declare module goog.labs.net.webChannel {
 
     /**

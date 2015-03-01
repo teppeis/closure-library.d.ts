@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.webgl'): typeof goog.webgl;
+}
+
 declare module goog.webgl {
 
     /**

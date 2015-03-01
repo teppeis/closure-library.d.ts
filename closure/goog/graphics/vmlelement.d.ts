@@ -1,3 +1,12 @@
+declare module goog {
+    function require(name: 'goog.graphics.VmlEllipseElement'): typeof goog.graphics.VmlEllipseElement;
+    function require(name: 'goog.graphics.VmlGroupElement'): typeof goog.graphics.VmlGroupElement;
+    function require(name: 'goog.graphics.VmlImageElement'): typeof goog.graphics.VmlImageElement;
+    function require(name: 'goog.graphics.VmlPathElement'): typeof goog.graphics.VmlPathElement;
+    function require(name: 'goog.graphics.VmlRectElement'): typeof goog.graphics.VmlRectElement;
+    function require(name: 'goog.graphics.VmlTextElement'): typeof goog.graphics.VmlTextElement;
+}
+
 declare module goog.graphics {
 
     /**

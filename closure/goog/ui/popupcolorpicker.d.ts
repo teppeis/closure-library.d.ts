@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.PopupColorPicker'): typeof goog.ui.PopupColorPicker;
+}
+
 declare module goog.ui {
 
     /**

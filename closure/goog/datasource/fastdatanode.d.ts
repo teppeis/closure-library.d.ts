@@ -1,3 +1,10 @@
+declare module goog {
+    function require(name: 'goog.ds.AbstractFastDataNode'): typeof goog.ds.AbstractFastDataNode;
+    function require(name: 'goog.ds.FastDataNode'): typeof goog.ds.FastDataNode;
+    function require(name: 'goog.ds.FastListNode'): typeof goog.ds.FastListNode;
+    function require(name: 'goog.ds.PrimitiveFastDataNode'): typeof goog.ds.PrimitiveFastDataNode;
+}
+
 declare module goog.ds {
 
     /**

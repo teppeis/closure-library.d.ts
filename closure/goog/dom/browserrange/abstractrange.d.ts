@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.browserrange.AbstractRange'): typeof goog.dom.browserrange.AbstractRange;
+}
+
 declare module goog.dom.browserrange {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.DefaultDatePickerRenderer'): typeof goog.ui.DefaultDatePickerRenderer;
+}
+
 declare module goog.ui {
 
     /**

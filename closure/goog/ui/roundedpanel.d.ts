@@ -1,3 +1,11 @@
+declare module goog {
+    function require(name: 'goog.ui.BaseRoundedPanel'): typeof goog.ui.BaseRoundedPanel;
+    function require(name: 'goog.ui.CssRoundedPanel'): typeof goog.ui.CssRoundedPanel;
+    function require(name: 'goog.ui.GraphicsRoundedPanel'): typeof goog.ui.GraphicsRoundedPanel;
+    function require(name: 'goog.ui.RoundedPanel'): typeof goog.ui.RoundedPanel;
+    function require(name: 'goog.ui.RoundedPanel.Corner'): typeof goog.ui.RoundedPanel.Corner;
+}
+
 declare module goog.ui.RoundedPanel {
 
     /**

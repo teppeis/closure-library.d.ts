@@ -1,3 +1,10 @@
+declare module goog {
+    function require(name: 'goog.fs.DirectoryEntry'): typeof goog.fs.DirectoryEntry;
+    function require(name: 'goog.fs.DirectoryEntry.Behavior'): typeof goog.fs.DirectoryEntry.Behavior;
+    function require(name: 'goog.fs.Entry'): typeof goog.fs.Entry;
+    function require(name: 'goog.fs.FileEntry'): typeof goog.fs.FileEntry;
+}
+
 declare module goog.fs {
 
     /**

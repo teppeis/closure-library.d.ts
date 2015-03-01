@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.events.WheelEvent'): typeof goog.events.WheelEvent;
+}
+
 declare module goog.events {
 
     /**

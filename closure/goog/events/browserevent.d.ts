@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.events.BrowserEvent'): typeof goog.events.BrowserEvent;
+    function require(name: 'goog.events.BrowserEvent.MouseButton'): typeof goog.events.BrowserEvent.MouseButton;
+}
+
 declare module goog.events {
 
     /**

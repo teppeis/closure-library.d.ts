@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.graphics.Path'): typeof goog.graphics.Path;
+    function require(name: 'goog.graphics.Path.Segment'): typeof goog.graphics.Path.Segment;
+}
+
 declare module goog.graphics {
 
     /**

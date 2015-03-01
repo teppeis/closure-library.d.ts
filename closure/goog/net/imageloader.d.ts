@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.net.ImageLoader'): typeof goog.net.ImageLoader;
+}
+
 declare module goog.net {
 
     /**

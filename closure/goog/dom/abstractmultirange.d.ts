@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.AbstractMultiRange'): typeof goog.dom.AbstractMultiRange;
+}
+
 declare module goog.dom {
 
     /**

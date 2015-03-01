@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.labs.html.Sanitizer'): typeof goog.labs.html.Sanitizer;
+}
+
 declare module goog.labs.html {
 
     /**

@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.Checkbox'): typeof goog.ui.Checkbox;
+    function require(name: 'goog.ui.Checkbox.State'): typeof goog.ui.Checkbox.State;
+}
+
 declare module goog.ui {
 
     /**

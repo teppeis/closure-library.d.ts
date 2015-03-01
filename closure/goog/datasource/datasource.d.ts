@@ -1,3 +1,15 @@
+declare module goog {
+    function require(name: 'goog.ds.BaseDataNode'): typeof goog.ds.BaseDataNode;
+    function require(name: 'goog.ds.BasicNodeList'): typeof goog.ds.BasicNodeList;
+    function require(name: 'goog.ds.DataNode'): typeof goog.ds.DataNode;
+    function require(name: 'goog.ds.DataNodeList'): typeof goog.ds.DataNodeList;
+    function require(name: 'goog.ds.EmptyNodeList'): typeof goog.ds.EmptyNodeList;
+    function require(name: 'goog.ds.LoadState'): typeof goog.ds.LoadState;
+    function require(name: 'goog.ds.SortedNodeList'): typeof goog.ds.SortedNodeList;
+    function require(name: 'goog.ds.Util'): typeof goog.ds.Util;
+    function require(name: 'goog.ds.logger'): typeof goog.ds.logger;
+}
+
 declare module goog.ds {
 
     /**

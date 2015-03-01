@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.history.EventType'): typeof goog.history.EventType;
+}
+
 declare module goog.history {
 
     /**

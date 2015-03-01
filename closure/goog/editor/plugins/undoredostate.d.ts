@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.editor.plugins.UndoRedoState'): typeof goog.editor.plugins.UndoRedoState;
+}
+
 declare module goog.editor.plugins {
 
     /**

@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.fs.Error'): typeof goog.fs.Error;
+    function require(name: 'goog.fs.Error.ErrorCode'): typeof goog.fs.Error.ErrorCode;
+}
+
 declare module goog.fs {
 
     /**

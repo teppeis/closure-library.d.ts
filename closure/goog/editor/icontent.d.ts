@@ -1,3 +1,9 @@
+declare module goog {
+    function require(name: 'goog.editor.icontent'): typeof goog.editor.icontent;
+    function require(name: 'goog.editor.icontent.FieldFormatInfo'): typeof goog.editor.icontent.FieldFormatInfo;
+    function require(name: 'goog.editor.icontent.FieldStyleInfo'): typeof goog.editor.icontent.FieldStyleInfo;
+}
+
 declare module goog.editor.icontent {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.editor.ToolbarFactory'): typeof goog.ui.editor.ToolbarFactory;
+}
+
 declare module goog.ui.editor.ToolbarFactory {
 
     /**

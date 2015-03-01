@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.HsvPalette'): typeof goog.ui.HsvPalette;
+}
+
 declare module goog.ui {
 
     /**

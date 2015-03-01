@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.SplitBehavior'): typeof goog.ui.SplitBehavior;
+    function require(name: 'goog.ui.SplitBehavior.DefaultHandlers'): typeof goog.ui.SplitBehavior.DefaultHandlers;
+}
+
 declare module goog.ui {
 
     /**

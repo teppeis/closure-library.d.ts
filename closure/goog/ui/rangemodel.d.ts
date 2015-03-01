@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.RangeModel'): typeof goog.ui.RangeModel;
+}
+
 declare module goog.ui {
 
     /**

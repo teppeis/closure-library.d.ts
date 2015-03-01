@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.spell.SpellCheck'): typeof goog.spell.SpellCheck;
+    function require(name: 'goog.spell.SpellCheck.WordChangedEvent'): typeof goog.spell.SpellCheck.WordChangedEvent;
+}
+
 declare module goog.spell {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.a11y.aria.datatables'): typeof goog.a11y.aria.datatables;
+}
+
 declare module goog.a11y.aria {
 
     /**

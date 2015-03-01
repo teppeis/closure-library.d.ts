@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.editor.plugins.Emoticons'): typeof goog.editor.plugins.Emoticons;
+}
+
 declare module goog.editor.plugins {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.Separator'): typeof goog.ui.Separator;
+}
+
 declare module goog.ui {
 
     /**

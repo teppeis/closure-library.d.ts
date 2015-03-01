@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.editor.Command'): typeof goog.editor.Command;
+}
+
 declare module goog.editor {
 
     /**

@@ -1,3 +1,9 @@
+declare module goog {
+    function require(name: 'goog.labs.i18n.GenderInfo'): typeof goog.labs.i18n.GenderInfo;
+    function require(name: 'goog.labs.i18n.GenderInfo.Gender'): typeof goog.labs.i18n.GenderInfo.Gender;
+    function require(name: 'goog.labs.i18n.ListFormat'): typeof goog.labs.i18n.ListFormat;
+}
+
 declare module goog.labs.i18n {
 
     /**

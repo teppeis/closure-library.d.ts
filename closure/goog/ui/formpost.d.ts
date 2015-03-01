@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.FormPost'): typeof goog.ui.FormPost;
+}
+
 declare module goog.ui {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.pattern.ChildMatches'): typeof goog.dom.pattern.ChildMatches;
+}
+
 declare module goog.dom.pattern {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.classes'): typeof goog.dom.classes;
+}
+
 declare module goog.dom.classes {
 
     /**

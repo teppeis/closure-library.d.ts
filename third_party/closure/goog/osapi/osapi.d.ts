@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.osapi'): typeof goog.osapi;
+}
+
 declare module osapi {
 
     /** @type {Function} */

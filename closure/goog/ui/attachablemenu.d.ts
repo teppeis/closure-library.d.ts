@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.AttachableMenu'): typeof goog.ui.AttachableMenu;
+}
+
 declare module goog.ui {
 
     /**

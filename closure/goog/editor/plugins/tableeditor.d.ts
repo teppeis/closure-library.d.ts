@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.editor.plugins.TableEditor'): typeof goog.editor.plugins.TableEditor;
+}
+
 declare module goog.editor.plugins {
 
     /**

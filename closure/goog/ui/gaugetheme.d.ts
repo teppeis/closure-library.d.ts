@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.GaugeTheme'): typeof goog.ui.GaugeTheme;
+}
+
 declare module goog.ui {
 
     /**

@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.editor.plugins.LinkBubble'): typeof goog.editor.plugins.LinkBubble;
+    function require(name: 'goog.editor.plugins.LinkBubble.Action'): typeof goog.editor.plugins.LinkBubble.Action;
+}
+
 declare module goog.editor.plugins {
 
     /**

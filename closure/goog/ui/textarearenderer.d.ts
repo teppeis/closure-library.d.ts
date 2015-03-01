@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.TextareaRenderer'): typeof goog.ui.TextareaRenderer;
+}
+
 declare module goog.ui {
 
     /**

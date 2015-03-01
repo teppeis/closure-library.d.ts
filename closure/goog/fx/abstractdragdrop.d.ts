@@ -1,3 +1,10 @@
+declare module goog {
+    function require(name: 'goog.fx.AbstractDragDrop'): typeof goog.fx.AbstractDragDrop;
+    function require(name: 'goog.fx.AbstractDragDrop.EventType'): typeof goog.fx.AbstractDragDrop.EventType;
+    function require(name: 'goog.fx.DragDropEvent'): typeof goog.fx.DragDropEvent;
+    function require(name: 'goog.fx.DragDropItem'): typeof goog.fx.DragDropItem;
+}
+
 declare module goog.fx {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.crypt.Aes'): typeof goog.crypt.Aes;
+}
+
 declare module goog.crypt {
 
     /**

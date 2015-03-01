@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.pattern.FullTag'): typeof goog.dom.pattern.FullTag;
+}
+
 declare module goog.dom.pattern {
 
     /**

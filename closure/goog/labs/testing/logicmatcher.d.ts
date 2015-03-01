@@ -1,3 +1,9 @@
+declare module goog {
+    function require(name: 'goog.labs.testing.AllOfMatcher'): typeof goog.labs.testing.AllOfMatcher;
+    function require(name: 'goog.labs.testing.AnyOfMatcher'): typeof goog.labs.testing.AnyOfMatcher;
+    function require(name: 'goog.labs.testing.IsNotMatcher'): typeof goog.labs.testing.IsNotMatcher;
+}
+
 declare module goog.labs.testing {
 
     /**

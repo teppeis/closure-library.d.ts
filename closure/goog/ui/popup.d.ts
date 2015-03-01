@@ -1,3 +1,14 @@
+declare module goog {
+    function require(name: 'goog.ui.Popup'): typeof goog.ui.Popup;
+    function require(name: 'goog.ui.Popup.AbsolutePosition'): typeof goog.ui.Popup.AbsolutePosition;
+    function require(name: 'goog.ui.Popup.AnchoredPosition'): typeof goog.ui.Popup.AnchoredPosition;
+    function require(name: 'goog.ui.Popup.AnchoredViewPortPosition'): typeof goog.ui.Popup.AnchoredViewPortPosition;
+    function require(name: 'goog.ui.Popup.ClientPosition'): typeof goog.ui.Popup.ClientPosition;
+    function require(name: 'goog.ui.Popup.Overflow'): typeof goog.ui.Popup.Overflow;
+    function require(name: 'goog.ui.Popup.ViewPortClientPosition'): typeof goog.ui.Popup.ViewPortClientPosition;
+    function require(name: 'goog.ui.Popup.ViewPortPosition'): typeof goog.ui.Popup.ViewPortPosition;
+}
+
 declare module goog.ui {
 
     /**

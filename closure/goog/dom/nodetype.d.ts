@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.NodeType'): typeof goog.dom.NodeType;
+}
+
 declare module goog.dom {
 
     /**

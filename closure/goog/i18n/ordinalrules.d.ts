@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.i18n.ordinalRules'): typeof goog.i18n.ordinalRules;
+}
+
 declare module goog.i18n.ordinalRules {
 
     /**

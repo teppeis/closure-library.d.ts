@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.editor.SeamlessField'): typeof goog.editor.SeamlessField;
+}
+
 declare module goog.editor {
 
     /**

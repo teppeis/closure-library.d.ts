@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.editor.plugins.SpacesTabHandler'): typeof goog.editor.plugins.SpacesTabHandler;
+}
+
 declare module goog.editor.plugins {
 
     /**

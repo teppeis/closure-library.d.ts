@@ -1,3 +1,9 @@
+declare module goog {
+    function require(name: 'goog.labs.format.csv'): typeof goog.labs.format.csv;
+    function require(name: 'goog.labs.format.csv.ParseError'): typeof goog.labs.format.csv.ParseError;
+    function require(name: 'goog.labs.format.csv.Token'): typeof goog.labs.format.csv.Token;
+}
+
 declare module goog.labs.format.csv {
 
     /**

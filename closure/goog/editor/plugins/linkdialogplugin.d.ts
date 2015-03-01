@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.editor.plugins.LinkDialogPlugin'): typeof goog.editor.plugins.LinkDialogPlugin;
+}
+
 declare module goog.editor.plugins {
 
     /**

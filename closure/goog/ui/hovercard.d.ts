@@ -1,3 +1,9 @@
+declare module goog {
+    function require(name: 'goog.ui.HoverCard'): typeof goog.ui.HoverCard;
+    function require(name: 'goog.ui.HoverCard.EventType'): typeof goog.ui.HoverCard.EventType;
+    function require(name: 'goog.ui.HoverCard.TriggerEvent'): typeof goog.ui.HoverCard.TriggerEvent;
+}
+
 declare module goog.ui {
 
     /**

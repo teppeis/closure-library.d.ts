@@ -1,3 +1,9 @@
+declare module goog {
+    function require(name: 'goog.module.ModuleManager'): typeof goog.module.ModuleManager;
+    function require(name: 'goog.module.ModuleManager.CallbackType'): typeof goog.module.ModuleManager.CallbackType;
+    function require(name: 'goog.module.ModuleManager.FailureType'): typeof goog.module.ModuleManager.FailureType;
+}
+
 declare module goog.module {
 
     /**

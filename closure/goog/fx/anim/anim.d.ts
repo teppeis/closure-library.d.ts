@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.fx.anim'): typeof goog.fx.anim;
+    function require(name: 'goog.fx.anim.Animated'): typeof goog.fx.anim.Animated;
+}
+
 declare module goog.fx.anim {
 
     /**

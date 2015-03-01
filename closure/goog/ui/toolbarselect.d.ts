@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.ToolbarSelect'): typeof goog.ui.ToolbarSelect;
+}
+
 declare module goog.ui {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.userAgent.jscript'): typeof goog.userAgent.jscript;
+}
+
 declare module goog.userAgent.jscript {
 
     /**

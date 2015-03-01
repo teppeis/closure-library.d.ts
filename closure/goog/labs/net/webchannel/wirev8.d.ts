@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.labs.net.webChannel.WireV8'): typeof goog.labs.net.webChannel.WireV8;
+}
+
 declare module goog.labs.net.webChannel {
 
     /**

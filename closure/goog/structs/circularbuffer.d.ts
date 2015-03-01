@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.structs.CircularBuffer'): typeof goog.structs.CircularBuffer;
+}
+
 declare module goog.structs {
 
     /**

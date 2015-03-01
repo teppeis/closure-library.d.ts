@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.IframeMask'): typeof goog.ui.IframeMask;
+}
+
 declare module goog.ui {
 
     /**

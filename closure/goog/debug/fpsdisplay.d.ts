@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.debug.FpsDisplay'): typeof goog.debug.FpsDisplay;
+}
+
 declare module goog.debug {
 
     /**

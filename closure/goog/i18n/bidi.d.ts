@@ -1,3 +1,10 @@
+declare module goog {
+    function require(name: 'goog.i18n.bidi'): typeof goog.i18n.bidi;
+    function require(name: 'goog.i18n.bidi.Dir'): typeof goog.i18n.bidi.Dir;
+    function require(name: 'goog.i18n.bidi.DirectionalString'): typeof goog.i18n.bidi.DirectionalString;
+    function require(name: 'goog.i18n.bidi.Format'): typeof goog.i18n.bidi.Format;
+}
+
 declare module goog.i18n.bidi {
 
     /**

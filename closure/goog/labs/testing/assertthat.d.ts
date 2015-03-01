@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.labs.testing.MatcherError'): typeof goog.labs.testing.MatcherError;
+    function require(name: 'goog.labs.testing.assertThat'): typeof goog.labs.testing.assertThat;
+}
+
 declare module goog.labs.testing {
 
     /**

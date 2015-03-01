@@ -1,3 +1,10 @@
+declare module goog {
+    function require(name: 'goog.debug.LogManager'): typeof goog.debug.LogManager;
+    function require(name: 'goog.debug.Loggable'): typeof goog.debug.Loggable;
+    function require(name: 'goog.debug.Logger'): typeof goog.debug.Logger;
+    function require(name: 'goog.debug.Logger.Level'): typeof goog.debug.Logger.Level;
+}
+
 declare module goog.debug {
 
     /**

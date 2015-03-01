@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.editor.ContentEditableField'): typeof goog.editor.ContentEditableField;
+}
+
 declare module goog.editor {
 
     /**

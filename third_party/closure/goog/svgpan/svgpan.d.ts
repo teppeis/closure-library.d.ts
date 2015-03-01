@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'svgpan.SvgPan'): typeof svgpan.SvgPan;
+}
+
 declare module svgpan {
 
     /**

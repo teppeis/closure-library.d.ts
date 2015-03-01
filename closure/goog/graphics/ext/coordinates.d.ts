@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.graphics.ext.coordinates'): typeof goog.graphics.ext.coordinates;
+}
+
 declare module goog.graphics.ext.coordinates {
 
     /**

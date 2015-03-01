@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.pattern.callback.Counter'): typeof goog.dom.pattern.callback.Counter;
+}
+
 declare module goog.dom.pattern.callback {
 
     /**

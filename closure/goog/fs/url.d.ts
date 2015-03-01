@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.fs.url'): typeof goog.fs.url;
+}
+
 declare module goog.fs.url {
 
     /**

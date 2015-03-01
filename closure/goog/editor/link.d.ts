@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.editor.Link'): typeof goog.editor.Link;
+}
+
 declare module goog.editor {
 
     /**

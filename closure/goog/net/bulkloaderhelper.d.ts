@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.net.BulkLoaderHelper'): typeof goog.net.BulkLoaderHelper;
+}
+
 declare module goog.net {
 
     /**

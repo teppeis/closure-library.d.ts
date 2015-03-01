@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.forms'): typeof goog.dom.forms;
+}
+
 declare module goog.dom.forms {
 
     /**

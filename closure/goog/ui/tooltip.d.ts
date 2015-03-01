@@ -1,3 +1,10 @@
+declare module goog {
+    function require(name: 'goog.ui.Tooltip'): typeof goog.ui.Tooltip;
+    function require(name: 'goog.ui.Tooltip.CursorTooltipPosition'): typeof goog.ui.Tooltip.CursorTooltipPosition;
+    function require(name: 'goog.ui.Tooltip.ElementTooltipPosition'): typeof goog.ui.Tooltip.ElementTooltipPosition;
+    function require(name: 'goog.ui.Tooltip.State'): typeof goog.ui.Tooltip.State;
+}
+
 declare module goog.ui {
 
     /**

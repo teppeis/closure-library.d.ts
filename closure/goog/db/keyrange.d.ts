@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.db.KeyRange'): typeof goog.db.KeyRange;
+}
+
 declare module goog.db {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.graphics.ext.Rectangle'): typeof goog.graphics.ext.Rectangle;
+}
+
 declare module goog.graphics.ext {
 
     /**

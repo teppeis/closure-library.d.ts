@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.editor.plugins.Blockquote'): typeof goog.editor.plugins.Blockquote;
+}
+
 declare module goog.editor.plugins {
 
     /**

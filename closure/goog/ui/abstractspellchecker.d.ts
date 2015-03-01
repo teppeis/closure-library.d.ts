@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.AbstractSpellChecker'): typeof goog.ui.AbstractSpellChecker;
+    function require(name: 'goog.ui.AbstractSpellChecker.AsyncResult'): typeof goog.ui.AbstractSpellChecker.AsyncResult;
+}
+
 declare module goog.ui {
 
     /**

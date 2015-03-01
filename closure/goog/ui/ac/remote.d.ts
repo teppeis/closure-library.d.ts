@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.ac.Remote'): typeof goog.ui.ac.Remote;
+}
+
 declare module goog.ui.ac {
 
     /**

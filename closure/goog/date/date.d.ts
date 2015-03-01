@@ -1,3 +1,12 @@
+declare module goog {
+    function require(name: 'goog.date'): typeof goog.date;
+    function require(name: 'goog.date.Date'): typeof goog.date.Date;
+    function require(name: 'goog.date.DateTime'): typeof goog.date.DateTime;
+    function require(name: 'goog.date.Interval'): typeof goog.date.Interval;
+    function require(name: 'goog.date.month'): typeof goog.date.month;
+    function require(name: 'goog.date.weekDay'): typeof goog.date.weekDay;
+}
+
 declare module goog.date {
 
     /**

@@ -1,3 +1,12 @@
+declare module goog {
+    function require(name: 'goog.labs.testing.CloseToMatcher'): typeof goog.labs.testing.CloseToMatcher;
+    function require(name: 'goog.labs.testing.EqualToMatcher'): typeof goog.labs.testing.EqualToMatcher;
+    function require(name: 'goog.labs.testing.GreaterThanEqualToMatcher'): typeof goog.labs.testing.GreaterThanEqualToMatcher;
+    function require(name: 'goog.labs.testing.GreaterThanMatcher'): typeof goog.labs.testing.GreaterThanMatcher;
+    function require(name: 'goog.labs.testing.LessThanEqualToMatcher'): typeof goog.labs.testing.LessThanEqualToMatcher;
+    function require(name: 'goog.labs.testing.LessThanMatcher'): typeof goog.labs.testing.LessThanMatcher;
+}
+
 declare module goog.labs.testing {
 
     /**

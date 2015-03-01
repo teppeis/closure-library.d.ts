@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.dom.TextRange'): typeof goog.dom.TextRange;
+}
+
 declare module goog.dom {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.net.xpc.FrameElementMethodTransport'): typeof goog.net.xpc.FrameElementMethodTransport;
+}
+
 declare module goog.net.xpc {
 
     /**

@@ -1,3 +1,8 @@
+declare module goog {
+    function require(name: 'goog.ui.SplitPane'): typeof goog.ui.SplitPane;
+    function require(name: 'goog.ui.SplitPane.Orientation'): typeof goog.ui.SplitPane.Orientation;
+}
+
 declare module goog.ui {
 
     /**

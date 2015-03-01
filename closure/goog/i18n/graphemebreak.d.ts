@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.i18n.GraphemeBreak'): typeof goog.i18n.GraphemeBreak;
+}
+
 declare module goog.i18n.GraphemeBreak {
 
     /**

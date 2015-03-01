@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.math.Vec3'): typeof goog.math.Vec3;
+}
+
 declare module goog.math {
 
     /**

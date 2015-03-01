@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.ui.MenuBarRenderer'): typeof goog.ui.MenuBarRenderer;
+}
+
 declare module goog.ui {
 
     /**

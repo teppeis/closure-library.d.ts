@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.proto.Serializer'): typeof goog.proto.Serializer;
+}
+
 declare module goog.proto {
 
     /**

@@ -1,3 +1,10 @@
+declare module goog {
+    function require(name: 'goog.net.jsloader'): typeof goog.net.jsloader;
+    function require(name: 'goog.net.jsloader.Error'): typeof goog.net.jsloader.Error;
+    function require(name: 'goog.net.jsloader.ErrorCode'): typeof goog.net.jsloader.ErrorCode;
+    function require(name: 'goog.net.jsloader.Options'): typeof goog.net.jsloader.Options;
+}
+
 declare module goog.net.jsloader {
 
     /**

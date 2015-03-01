@@ -1,3 +1,9 @@
+declare module goog {
+    function require(name: 'goog.fs.DirectoryEntryImpl'): typeof goog.fs.DirectoryEntryImpl;
+    function require(name: 'goog.fs.EntryImpl'): typeof goog.fs.EntryImpl;
+    function require(name: 'goog.fs.FileEntryImpl'): typeof goog.fs.FileEntryImpl;
+}
+
 declare module goog.fs {
 
     /**

@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.editor.plugins.HeaderFormatter'): typeof goog.editor.plugins.HeaderFormatter;
+}
+
 declare module goog.editor.plugins {
 
     /**

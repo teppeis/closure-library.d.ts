@@ -1,4 +1,8 @@
 declare module goog {
+    function require(name: 'goog.Timer'): typeof goog.Timer;
+}
+
+declare module goog {
 
     /**
      * Class for handling timing events.

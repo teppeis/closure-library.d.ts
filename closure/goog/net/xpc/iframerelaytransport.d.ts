@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.net.xpc.IframeRelayTransport'): typeof goog.net.xpc.IframeRelayTransport;
+}
+
 declare module goog.net.xpc {
 
     /**
