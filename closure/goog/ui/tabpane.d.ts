@@ -1,9 +1,8 @@
 declare module goog {
     function require(name: 'goog.ui.TabPane'): typeof goog.ui.TabPane;
-    function require(name: 'goog.ui.TabPane.Events'): typeof goog.ui.TabPane.Events;
+    function require(name: 'goog.ui.TabPaneEvent'): typeof goog.ui.TabPaneEvent;
     function require(name: 'goog.ui.TabPane.TabLocation'): typeof goog.ui.TabPane.TabLocation;
     function require(name: 'goog.ui.TabPane.TabPage'): typeof goog.ui.TabPane.TabPage;
-    function require(name: 'goog.ui.TabPaneEvent'): typeof goog.ui.TabPaneEvent;
 }
 
 declare module goog.ui {

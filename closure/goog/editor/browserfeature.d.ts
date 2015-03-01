@@ -1,7 +1,3 @@
-declare module goog {
-    function require(name: 'goog.editor.BrowserFeature'): typeof goog.editor.BrowserFeature;
-}
-
 declare module goog.editor {
 
     /**

@@ -1,6 +1,5 @@
 declare module goog {
     function require(name: 'goog.net.Cookies'): typeof goog.net.Cookies;
-    function require(name: 'goog.net.cookies'): typeof goog.net.cookies;
 }
 
 declare module goog.net {

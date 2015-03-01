@@ -1,7 +1,7 @@
 declare module goog {
     function require(name: 'goog.events.ImeHandler'): typeof goog.events.ImeHandler;
-    function require(name: 'goog.events.ImeHandler.Event'): typeof goog.events.ImeHandler.Event;
     function require(name: 'goog.events.ImeHandler.EventType'): typeof goog.events.ImeHandler.EventType;
+    function require(name: 'goog.events.ImeHandler.Event'): typeof goog.events.ImeHandler.Event;
 }
 
 declare module goog.events {

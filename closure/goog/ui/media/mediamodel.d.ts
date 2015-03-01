@@ -1,14 +1,14 @@
 declare module goog {
     function require(name: 'goog.ui.media.MediaModel'): typeof goog.ui.media.MediaModel;
+    function require(name: 'goog.ui.media.MediaModel.MimeType'): typeof goog.ui.media.MediaModel.MimeType;
+    function require(name: 'goog.ui.media.MediaModel.Medium'): typeof goog.ui.media.MediaModel.Medium;
+    function require(name: 'goog.ui.media.MediaModel.Thumbnail'): typeof goog.ui.media.MediaModel.Thumbnail;
+    function require(name: 'goog.ui.media.MediaModel.Player'): typeof goog.ui.media.MediaModel.Player;
     function require(name: 'goog.ui.media.MediaModel.Category'): typeof goog.ui.media.MediaModel.Category;
     function require(name: 'goog.ui.media.MediaModel.Credit'): typeof goog.ui.media.MediaModel.Credit;
+    function require(name: 'goog.ui.media.MediaModel.SubTitle'): typeof goog.ui.media.MediaModel.SubTitle;
     function require(name: 'goog.ui.media.MediaModel.Credit.Role'): typeof goog.ui.media.MediaModel.Credit.Role;
     function require(name: 'goog.ui.media.MediaModel.Credit.Scheme'): typeof goog.ui.media.MediaModel.Credit.Scheme;
-    function require(name: 'goog.ui.media.MediaModel.Medium'): typeof goog.ui.media.MediaModel.Medium;
-    function require(name: 'goog.ui.media.MediaModel.MimeType'): typeof goog.ui.media.MediaModel.MimeType;
-    function require(name: 'goog.ui.media.MediaModel.Player'): typeof goog.ui.media.MediaModel.Player;
-    function require(name: 'goog.ui.media.MediaModel.SubTitle'): typeof goog.ui.media.MediaModel.SubTitle;
-    function require(name: 'goog.ui.media.MediaModel.Thumbnail'): typeof goog.ui.media.MediaModel.Thumbnail;
 }
 
 declare module goog.ui.media {

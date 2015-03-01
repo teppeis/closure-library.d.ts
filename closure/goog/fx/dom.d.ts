@@ -1,20 +1,20 @@
 declare module goog {
     function require(name: 'goog.fx.dom'): typeof goog.fx.dom;
-    function require(name: 'goog.fx.dom.BgColorTransform'): typeof goog.fx.dom.BgColorTransform;
-    function require(name: 'goog.fx.dom.ColorTransform'): typeof goog.fx.dom.ColorTransform;
-    function require(name: 'goog.fx.dom.Fade'): typeof goog.fx.dom.Fade;
-    function require(name: 'goog.fx.dom.FadeIn'): typeof goog.fx.dom.FadeIn;
-    function require(name: 'goog.fx.dom.FadeInAndShow'): typeof goog.fx.dom.FadeInAndShow;
-    function require(name: 'goog.fx.dom.FadeOut'): typeof goog.fx.dom.FadeOut;
-    function require(name: 'goog.fx.dom.FadeOutAndHide'): typeof goog.fx.dom.FadeOutAndHide;
     function require(name: 'goog.fx.dom.PredefinedEffect'): typeof goog.fx.dom.PredefinedEffect;
-    function require(name: 'goog.fx.dom.Resize'): typeof goog.fx.dom.Resize;
-    function require(name: 'goog.fx.dom.ResizeHeight'): typeof goog.fx.dom.ResizeHeight;
-    function require(name: 'goog.fx.dom.ResizeWidth'): typeof goog.fx.dom.ResizeWidth;
-    function require(name: 'goog.fx.dom.Scroll'): typeof goog.fx.dom.Scroll;
     function require(name: 'goog.fx.dom.Slide'): typeof goog.fx.dom.Slide;
     function require(name: 'goog.fx.dom.SlideFrom'): typeof goog.fx.dom.SlideFrom;
     function require(name: 'goog.fx.dom.Swipe'): typeof goog.fx.dom.Swipe;
+    function require(name: 'goog.fx.dom.Scroll'): typeof goog.fx.dom.Scroll;
+    function require(name: 'goog.fx.dom.Resize'): typeof goog.fx.dom.Resize;
+    function require(name: 'goog.fx.dom.ResizeWidth'): typeof goog.fx.dom.ResizeWidth;
+    function require(name: 'goog.fx.dom.ResizeHeight'): typeof goog.fx.dom.ResizeHeight;
+    function require(name: 'goog.fx.dom.Fade'): typeof goog.fx.dom.Fade;
+    function require(name: 'goog.fx.dom.FadeOut'): typeof goog.fx.dom.FadeOut;
+    function require(name: 'goog.fx.dom.FadeIn'): typeof goog.fx.dom.FadeIn;
+    function require(name: 'goog.fx.dom.FadeOutAndHide'): typeof goog.fx.dom.FadeOutAndHide;
+    function require(name: 'goog.fx.dom.FadeInAndShow'): typeof goog.fx.dom.FadeInAndShow;
+    function require(name: 'goog.fx.dom.BgColorTransform'): typeof goog.fx.dom.BgColorTransform;
+    function require(name: 'goog.fx.dom.ColorTransform'): typeof goog.fx.dom.ColorTransform;
 }
 
 declare module goog.fx.dom {

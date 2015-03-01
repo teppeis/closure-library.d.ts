@@ -1,8 +1,8 @@
 declare module goog {
-    function require(name: 'goog.events.ActionEvent'): typeof goog.events.ActionEvent;
     function require(name: 'goog.events.ActionHandler'): typeof goog.events.ActionHandler;
-    function require(name: 'goog.events.ActionHandler.EventType'): typeof goog.events.ActionHandler.EventType;
+    function require(name: 'goog.events.ActionEvent'): typeof goog.events.ActionEvent;
     function require(name: 'goog.events.BeforeActionEvent'): typeof goog.events.BeforeActionEvent;
+    function require(name: 'goog.events.ActionHandler.EventType'): typeof goog.events.ActionHandler.EventType;
 }
 
 declare module goog.events {

@@ -1,10 +1,5 @@
 declare module goog {
     function require(name: 'goog.vec'): typeof goog.vec;
-    function require(name: 'goog.vec.AnyType'): typeof goog.vec.AnyType;
-    function require(name: 'goog.vec.ArrayType'): typeof goog.vec.ArrayType;
-    function require(name: 'goog.vec.Float32'): typeof goog.vec.Float32;
-    function require(name: 'goog.vec.Float64'): typeof goog.vec.Float64;
-    function require(name: 'goog.vec.Number'): typeof goog.vec.Number;
 }
 
 declare module goog.vec {

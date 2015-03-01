@@ -1,7 +1,7 @@
 declare module goog {
-    function require(name: 'goog.dom.iter.AncestorIterator'): typeof goog.dom.iter.AncestorIterator;
-    function require(name: 'goog.dom.iter.ChildIterator'): typeof goog.dom.iter.ChildIterator;
     function require(name: 'goog.dom.iter.SiblingIterator'): typeof goog.dom.iter.SiblingIterator;
+    function require(name: 'goog.dom.iter.ChildIterator'): typeof goog.dom.iter.ChildIterator;
+    function require(name: 'goog.dom.iter.AncestorIterator'): typeof goog.dom.iter.AncestorIterator;
 }
 
 declare module goog.dom.iter {

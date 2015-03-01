@@ -1,6 +1,6 @@
 declare module goog {
-    function require(name: 'goog.tweak.EntriesPanel'): typeof goog.tweak.EntriesPanel;
     function require(name: 'goog.tweak.TweakUi'): typeof goog.tweak.TweakUi;
+    function require(name: 'goog.tweak.EntriesPanel'): typeof goog.tweak.EntriesPanel;
 }
 
 declare module goog.tweak {

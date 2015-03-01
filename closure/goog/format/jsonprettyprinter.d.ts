@@ -1,7 +1,7 @@
 declare module goog {
     function require(name: 'goog.format.JsonPrettyPrinter'): typeof goog.format.JsonPrettyPrinter;
-    function require(name: 'goog.format.JsonPrettyPrinter.HtmlDelimiters'): typeof goog.format.JsonPrettyPrinter.HtmlDelimiters;
     function require(name: 'goog.format.JsonPrettyPrinter.TextDelimiters'): typeof goog.format.JsonPrettyPrinter.TextDelimiters;
+    function require(name: 'goog.format.JsonPrettyPrinter.HtmlDelimiters'): typeof goog.format.JsonPrettyPrinter.HtmlDelimiters;
 }
 
 declare module goog.format {

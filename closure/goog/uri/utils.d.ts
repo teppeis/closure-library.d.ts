@@ -1,8 +1,6 @@
 declare module goog {
     function require(name: 'goog.uri.utils'): typeof goog.uri.utils;
     function require(name: 'goog.uri.utils.ComponentIndex'): typeof goog.uri.utils.ComponentIndex;
-    function require(name: 'goog.uri.utils.QueryArray'): typeof goog.uri.utils.QueryArray;
-    function require(name: 'goog.uri.utils.QueryValue'): typeof goog.uri.utils.QueryValue;
     function require(name: 'goog.uri.utils.StandardQueryParam'): typeof goog.uri.utils.StandardQueryParam;
 }
 

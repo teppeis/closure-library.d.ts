@@ -1,7 +1,3 @@
-declare module goog {
-    function require(name: 'goog.net.XhrLike'): typeof goog.net.XhrLike;
-}
-
 declare module goog.net {
 
     /**

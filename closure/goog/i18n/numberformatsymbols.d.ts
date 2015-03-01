@@ -1,5 +1,4 @@
 declare module goog {
-    function require(name: 'goog.i18n.NumberFormatSymbols'): typeof goog.i18n.NumberFormatSymbols;
     function require(name: 'goog.i18n.NumberFormatSymbols_af'): typeof goog.i18n.NumberFormatSymbols_af;
     function require(name: 'goog.i18n.NumberFormatSymbols_af_ZA'): typeof goog.i18n.NumberFormatSymbols_af_ZA;
     function require(name: 'goog.i18n.NumberFormatSymbols_am'): typeof goog.i18n.NumberFormatSymbols_am;

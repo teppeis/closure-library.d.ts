@@ -1,7 +1,7 @@
 declare module goog {
     function require(name: 'goog.ui.Component'): typeof goog.ui.Component;
-    function require(name: 'goog.ui.Component.Error'): typeof goog.ui.Component.Error;
     function require(name: 'goog.ui.Component.EventType'): typeof goog.ui.Component.EventType;
+    function require(name: 'goog.ui.Component.Error'): typeof goog.ui.Component.Error;
     function require(name: 'goog.ui.Component.State'): typeof goog.ui.Component.State;
 }
 

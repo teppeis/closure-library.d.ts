@@ -1,7 +1,3 @@
-declare module goog {
-    function require(name: 'goog.string.Parser'): typeof goog.string.Parser;
-}
-
 declare module goog.string$ {
 
     /**

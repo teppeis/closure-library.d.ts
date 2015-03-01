@@ -1,6 +1,6 @@
 declare module goog {
-    function require(name: 'goog.fx.DragEvent'): typeof goog.fx.DragEvent;
     function require(name: 'goog.fx.Dragger'): typeof goog.fx.Dragger;
+    function require(name: 'goog.fx.DragEvent'): typeof goog.fx.DragEvent;
     function require(name: 'goog.fx.Dragger.EventType'): typeof goog.fx.Dragger.EventType;
 }
 

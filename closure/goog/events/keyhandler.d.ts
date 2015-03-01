@@ -1,6 +1,6 @@
 declare module goog {
-    function require(name: 'goog.events.KeyEvent'): typeof goog.events.KeyEvent;
     function require(name: 'goog.events.KeyHandler'): typeof goog.events.KeyHandler;
+    function require(name: 'goog.events.KeyEvent'): typeof goog.events.KeyEvent;
     function require(name: 'goog.events.KeyHandler.EventType'): typeof goog.events.KeyHandler.EventType;
 }
 

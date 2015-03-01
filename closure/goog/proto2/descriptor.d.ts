@@ -1,6 +1,5 @@
 declare module goog {
     function require(name: 'goog.proto2.Descriptor'): typeof goog.proto2.Descriptor;
-    function require(name: 'goog.proto2.Metadata'): typeof goog.proto2.Metadata;
 }
 
 declare module goog.proto2 {

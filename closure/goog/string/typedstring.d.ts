@@ -1,7 +1,3 @@
-declare module goog {
-    function require(name: 'goog.string.TypedString'): typeof goog.string.TypedString;
-}
-
 declare module goog.string$ {
 
     /**

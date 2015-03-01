@@ -1,7 +1,3 @@
-declare module goog {
-    function require(name: 'goog.disposable.IDisposable'): typeof goog.disposable.IDisposable;
-}
-
 declare module goog.disposable {
 
     /**

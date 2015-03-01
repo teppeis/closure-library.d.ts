@@ -1,7 +1,3 @@
-declare module goog {
-    function require(name: 'goog.locale.scriptToLanguages'): typeof goog.locale.scriptToLanguages;
-}
-
 declare module goog.locale {
 
     /**

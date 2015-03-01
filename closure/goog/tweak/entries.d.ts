@@ -1,13 +1,13 @@
 declare module goog {
     function require(name: 'goog.tweak.BaseEntry'): typeof goog.tweak.BaseEntry;
-    function require(name: 'goog.tweak.BasePrimitiveSetting'): typeof goog.tweak.BasePrimitiveSetting;
     function require(name: 'goog.tweak.BaseSetting'): typeof goog.tweak.BaseSetting;
-    function require(name: 'goog.tweak.BooleanGroup'): typeof goog.tweak.BooleanGroup;
-    function require(name: 'goog.tweak.BooleanInGroupSetting'): typeof goog.tweak.BooleanInGroupSetting;
-    function require(name: 'goog.tweak.BooleanSetting'): typeof goog.tweak.BooleanSetting;
-    function require(name: 'goog.tweak.ButtonAction'): typeof goog.tweak.ButtonAction;
-    function require(name: 'goog.tweak.NumericSetting'): typeof goog.tweak.NumericSetting;
+    function require(name: 'goog.tweak.BasePrimitiveSetting'): typeof goog.tweak.BasePrimitiveSetting;
     function require(name: 'goog.tweak.StringSetting'): typeof goog.tweak.StringSetting;
+    function require(name: 'goog.tweak.NumericSetting'): typeof goog.tweak.NumericSetting;
+    function require(name: 'goog.tweak.BooleanSetting'): typeof goog.tweak.BooleanSetting;
+    function require(name: 'goog.tweak.BooleanInGroupSetting'): typeof goog.tweak.BooleanInGroupSetting;
+    function require(name: 'goog.tweak.BooleanGroup'): typeof goog.tweak.BooleanGroup;
+    function require(name: 'goog.tweak.ButtonAction'): typeof goog.tweak.ButtonAction;
 }
 
 declare module goog.tweak {

@@ -1,6 +1,5 @@
 declare module goog {
     function require(name: 'goog.vec.vec4f'): typeof goog.vec.vec4f;
-    function require(name: 'goog.vec.vec4f.Type'): typeof goog.vec.vec4f.Type;
 }
 
 declare module goog.vec.vec4f {

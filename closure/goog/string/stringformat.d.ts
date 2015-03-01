@@ -1,7 +1,3 @@
-declare module goog {
-    function require(name: 'goog.string.format'): typeof goog.string.format;
-}
-
 declare module goog.string$ {
 
     /**

@@ -1,8 +1,3 @@
-declare module goog {
-    function require(name: 'goog.i18n.currencyCodeMap'): typeof goog.i18n.currencyCodeMap;
-    function require(name: 'goog.i18n.currencyCodeMapTier2'): typeof goog.i18n.currencyCodeMapTier2;
-}
-
 declare module goog.i18n {
 
     /**

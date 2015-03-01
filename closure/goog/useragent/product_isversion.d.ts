@@ -1,7 +1,3 @@
-declare module goog {
-    function require(name: 'goog.userAgent.product.isVersion'): typeof goog.userAgent.product.isVersion;
-}
-
 declare module goog.userAgent.product {
 
     /**

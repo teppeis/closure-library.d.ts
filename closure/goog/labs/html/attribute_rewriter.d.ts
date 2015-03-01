@@ -1,9 +1,3 @@
-declare module goog {
-    function require(name: 'goog.labs.html.AttributeRewriter'): typeof goog.labs.html.AttributeRewriter;
-    function require(name: 'goog.labs.html.AttributeValue'): typeof goog.labs.html.AttributeValue;
-    function require(name: 'goog.labs.html.attributeRewriterPresubmitWorkaround'): typeof goog.labs.html.attributeRewriterPresubmitWorkaround;
-}
-
 declare module goog.labs.html {
 
     /**

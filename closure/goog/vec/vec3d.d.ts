@@ -1,6 +1,5 @@
 declare module goog {
     function require(name: 'goog.vec.vec3d'): typeof goog.vec.vec3d;
-    function require(name: 'goog.vec.vec3d.Type'): typeof goog.vec.vec3d.Type;
 }
 
 declare module goog.vec.vec3d {

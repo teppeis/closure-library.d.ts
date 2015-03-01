@@ -1,11 +1,11 @@
 declare module goog {
     function require(name: 'proto2.TestAllTypes'): typeof proto2.TestAllTypes;
+    function require(name: 'proto2.TestDefaultParent'): typeof proto2.TestDefaultParent;
+    function require(name: 'proto2.TestDefaultChild'): typeof proto2.TestDefaultChild;
+    function require(name: 'proto2.TestAllTypes.NestedEnum'): typeof proto2.TestAllTypes.NestedEnum;
     function require(name: 'proto2.TestAllTypes.NestedMessage'): typeof proto2.TestAllTypes.NestedMessage;
     function require(name: 'proto2.TestAllTypes.OptionalGroup'): typeof proto2.TestAllTypes.OptionalGroup;
     function require(name: 'proto2.TestAllTypes.RepeatedGroup'): typeof proto2.TestAllTypes.RepeatedGroup;
-    function require(name: 'proto2.TestAllTypes.NestedEnum'): typeof proto2.TestAllTypes.NestedEnum;
-    function require(name: 'proto2.TestDefaultParent'): typeof proto2.TestDefaultParent;
-    function require(name: 'proto2.TestDefaultChild'): typeof proto2.TestDefaultChild;
 }
 
 declare module proto2 {

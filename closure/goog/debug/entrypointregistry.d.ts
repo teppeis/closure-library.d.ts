@@ -1,5 +1,4 @@
 declare module goog {
-    function require(name: 'goog.debug.EntryPointMonitor'): typeof goog.debug.EntryPointMonitor;
     function require(name: 'goog.debug.entryPointRegistry'): typeof goog.debug.entryPointRegistry;
 }
 

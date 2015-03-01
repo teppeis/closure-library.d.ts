@@ -1,7 +1,3 @@
-declare module goog {
-    function require(name: 'goog.ui.ControlContent'): typeof goog.ui.ControlContent;
-}
-
 declare module goog.ui {
 
     /**

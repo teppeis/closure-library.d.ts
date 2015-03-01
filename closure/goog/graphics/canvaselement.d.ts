@@ -1,10 +1,10 @@
 declare module goog {
-    function require(name: 'goog.graphics.CanvasEllipseElement'): typeof goog.graphics.CanvasEllipseElement;
     function require(name: 'goog.graphics.CanvasGroupElement'): typeof goog.graphics.CanvasGroupElement;
-    function require(name: 'goog.graphics.CanvasImageElement'): typeof goog.graphics.CanvasImageElement;
-    function require(name: 'goog.graphics.CanvasPathElement'): typeof goog.graphics.CanvasPathElement;
+    function require(name: 'goog.graphics.CanvasEllipseElement'): typeof goog.graphics.CanvasEllipseElement;
     function require(name: 'goog.graphics.CanvasRectElement'): typeof goog.graphics.CanvasRectElement;
+    function require(name: 'goog.graphics.CanvasPathElement'): typeof goog.graphics.CanvasPathElement;
     function require(name: 'goog.graphics.CanvasTextElement'): typeof goog.graphics.CanvasTextElement;
+    function require(name: 'goog.graphics.CanvasImageElement'): typeof goog.graphics.CanvasImageElement;
 }
 
 declare module goog.graphics {

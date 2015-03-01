@@ -1,6 +1,6 @@
 declare module goog {
-    function require(name: 'goog.dom.TagIterator'): typeof goog.dom.TagIterator;
     function require(name: 'goog.dom.TagWalkType'): typeof goog.dom.TagWalkType;
+    function require(name: 'goog.dom.TagIterator'): typeof goog.dom.TagIterator;
 }
 
 declare module goog.dom {

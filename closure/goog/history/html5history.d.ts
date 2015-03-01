@@ -1,6 +1,5 @@
 declare module goog {
     function require(name: 'goog.history.Html5History'): typeof goog.history.Html5History;
-    function require(name: 'goog.history.Html5History.TokenTransformer'): typeof goog.history.Html5History.TokenTransformer;
 }
 
 declare module goog.history {

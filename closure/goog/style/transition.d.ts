@@ -1,6 +1,5 @@
 declare module goog {
     function require(name: 'goog.style.transition'): typeof goog.style.transition;
-    function require(name: 'goog.style.transition.Css3Property'): typeof goog.style.transition.Css3Property;
 }
 
 declare module goog.style.transition {

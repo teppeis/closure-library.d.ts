@@ -1,7 +1,7 @@
 declare module goog {
     function require(name: 'goog.date.DateRange'): typeof goog.date.DateRange;
-    function require(name: 'goog.date.DateRange.Iterator'): typeof goog.date.DateRange.Iterator;
     function require(name: 'goog.date.DateRange.StandardDateRangeKeys'): typeof goog.date.DateRange.StandardDateRangeKeys;
+    function require(name: 'goog.date.DateRange.Iterator'): typeof goog.date.DateRange.Iterator;
 }
 
 declare module goog.date {

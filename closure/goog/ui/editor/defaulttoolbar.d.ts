@@ -1,5 +1,4 @@
 declare module goog {
-    function require(name: 'goog.ui.editor.ButtonDescriptor'): typeof goog.ui.editor.ButtonDescriptor;
     function require(name: 'goog.ui.editor.DefaultToolbar'): typeof goog.ui.editor.DefaultToolbar;
 }
 

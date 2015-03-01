@@ -1,7 +1,5 @@
 declare module goog {
     function require(name: 'goog.db'): typeof goog.db;
-    function require(name: 'goog.db.BlockedCallback'): typeof goog.db.BlockedCallback;
-    function require(name: 'goog.db.UpgradeNeededCallback'): typeof goog.db.UpgradeNeededCallback;
 }
 
 declare module goog.db {

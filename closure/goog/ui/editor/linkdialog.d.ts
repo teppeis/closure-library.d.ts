@@ -1,8 +1,8 @@
 declare module goog {
     function require(name: 'goog.ui.editor.LinkDialog'): typeof goog.ui.editor.LinkDialog;
-    function require(name: 'goog.ui.editor.LinkDialog.BeforeTestLinkEvent'): typeof goog.ui.editor.LinkDialog.BeforeTestLinkEvent;
     function require(name: 'goog.ui.editor.LinkDialog.EventType'): typeof goog.ui.editor.LinkDialog.EventType;
     function require(name: 'goog.ui.editor.LinkDialog.OkEvent'): typeof goog.ui.editor.LinkDialog.OkEvent;
+    function require(name: 'goog.ui.editor.LinkDialog.BeforeTestLinkEvent'): typeof goog.ui.editor.LinkDialog.BeforeTestLinkEvent;
 }
 
 declare module goog.ui.editor {

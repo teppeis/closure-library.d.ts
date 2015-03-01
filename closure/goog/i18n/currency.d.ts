@@ -1,7 +1,5 @@
 declare module goog {
     function require(name: 'goog.i18n.currency'): typeof goog.i18n.currency;
-    function require(name: 'goog.i18n.currency.CurrencyInfo'): typeof goog.i18n.currency.CurrencyInfo;
-    function require(name: 'goog.i18n.currency.CurrencyInfoTier2'): typeof goog.i18n.currency.CurrencyInfoTier2;
 }
 
 declare module goog.i18n.currency {

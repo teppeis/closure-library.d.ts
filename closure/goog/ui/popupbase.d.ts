@@ -1,7 +1,7 @@
 declare module goog {
     function require(name: 'goog.ui.PopupBase'): typeof goog.ui.PopupBase;
-    function require(name: 'goog.ui.PopupBase.EventType'): typeof goog.ui.PopupBase.EventType;
     function require(name: 'goog.ui.PopupBase.Type'): typeof goog.ui.PopupBase.Type;
+    function require(name: 'goog.ui.PopupBase.EventType'): typeof goog.ui.PopupBase.EventType;
 }
 
 declare module goog.ui {

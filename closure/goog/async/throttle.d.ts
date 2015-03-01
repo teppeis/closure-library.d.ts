@@ -1,6 +1,6 @@
 declare module goog {
-    function require(name: 'goog.Throttle'): typeof goog.Throttle;
     function require(name: 'goog.async.Throttle'): typeof goog.async.Throttle;
+    function require(name: 'goog.Throttle'): typeof goog.Throttle;
 }
 
 declare module goog.async {

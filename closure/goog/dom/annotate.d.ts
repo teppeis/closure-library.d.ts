@@ -1,6 +1,5 @@
 declare module goog {
     function require(name: 'goog.dom.annotate'): typeof goog.dom.annotate;
-    function require(name: 'goog.dom.annotate.AnnotateFn'): typeof goog.dom.annotate.AnnotateFn;
 }
 
 declare module goog.dom.annotate {

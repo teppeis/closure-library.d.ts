@@ -1,7 +1,7 @@
 declare module goog {
     function require(name: 'goog.i18n.NumberFormat'): typeof goog.i18n.NumberFormat;
-    function require(name: 'goog.i18n.NumberFormat.CurrencyStyle'): typeof goog.i18n.NumberFormat.CurrencyStyle;
     function require(name: 'goog.i18n.NumberFormat.Format'): typeof goog.i18n.NumberFormat.Format;
+    function require(name: 'goog.i18n.NumberFormat.CurrencyStyle'): typeof goog.i18n.NumberFormat.CurrencyStyle;
 }
 
 declare module goog.i18n {

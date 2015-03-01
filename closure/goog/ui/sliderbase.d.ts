@@ -1,6 +1,5 @@
 declare module goog {
     function require(name: 'goog.ui.SliderBase'): typeof goog.ui.SliderBase;
-    function require(name: 'goog.ui.SliderBase.AnimationFactory'): typeof goog.ui.SliderBase.AnimationFactory;
     function require(name: 'goog.ui.SliderBase.Orientation'): typeof goog.ui.SliderBase.Orientation;
 }
 

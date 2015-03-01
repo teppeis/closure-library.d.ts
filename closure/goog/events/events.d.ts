@@ -1,8 +1,6 @@
 declare module goog {
     function require(name: 'goog.events'): typeof goog.events;
     function require(name: 'goog.events.CaptureSimulationMode'): typeof goog.events.CaptureSimulationMode;
-    function require(name: 'goog.events.Key'): typeof goog.events.Key;
-    function require(name: 'goog.events.ListenableType'): typeof goog.events.ListenableType;
 }
 
 declare module goog.events {

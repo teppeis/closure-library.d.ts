@@ -1,14 +1,14 @@
 declare module goog {
     function require(name: 'goog.ui.ServerChart'): typeof goog.ui.ServerChart;
-    function require(name: 'goog.ui.ServerChart.AxisDisplayType'): typeof goog.ui.ServerChart.AxisDisplayType;
-    function require(name: 'goog.ui.ServerChart.ChartType'): typeof goog.ui.ServerChart.ChartType;
     function require(name: 'goog.ui.ServerChart.EncodingType'): typeof goog.ui.ServerChart.EncodingType;
-    function require(name: 'goog.ui.ServerChart.Event'): typeof goog.ui.ServerChart.Event;
-    function require(name: 'goog.ui.ServerChart.LegendPosition'): typeof goog.ui.ServerChart.LegendPosition;
-    function require(name: 'goog.ui.ServerChart.MaximumValue'): typeof goog.ui.ServerChart.MaximumValue;
-    function require(name: 'goog.ui.ServerChart.MultiAxisAlignment'): typeof goog.ui.ServerChart.MultiAxisAlignment;
+    function require(name: 'goog.ui.ServerChart.ChartType'): typeof goog.ui.ServerChart.ChartType;
     function require(name: 'goog.ui.ServerChart.MultiAxisType'): typeof goog.ui.ServerChart.MultiAxisType;
+    function require(name: 'goog.ui.ServerChart.MultiAxisAlignment'): typeof goog.ui.ServerChart.MultiAxisAlignment;
+    function require(name: 'goog.ui.ServerChart.LegendPosition'): typeof goog.ui.ServerChart.LegendPosition;
+    function require(name: 'goog.ui.ServerChart.AxisDisplayType'): typeof goog.ui.ServerChart.AxisDisplayType;
+    function require(name: 'goog.ui.ServerChart.MaximumValue'): typeof goog.ui.ServerChart.MaximumValue;
     function require(name: 'goog.ui.ServerChart.UriParam'): typeof goog.ui.ServerChart.UriParam;
+    function require(name: 'goog.ui.ServerChart.Event'): typeof goog.ui.ServerChart.Event;
     function require(name: 'goog.ui.ServerChart.UriTooLongEvent'): typeof goog.ui.ServerChart.UriTooLongEvent;
 }
 

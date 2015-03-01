@@ -1,7 +1,7 @@
 declare module goog {
+    function require(name: 'goog.dom.RangeType'): typeof goog.dom.RangeType;
     function require(name: 'goog.dom.AbstractRange'): typeof goog.dom.AbstractRange;
     function require(name: 'goog.dom.RangeIterator'): typeof goog.dom.RangeIterator;
-    function require(name: 'goog.dom.RangeType'): typeof goog.dom.RangeType;
 }
 
 declare module goog.dom {

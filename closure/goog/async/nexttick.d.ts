@@ -1,8 +1,3 @@
-declare module goog {
-    function require(name: 'goog.async.nextTick'): typeof goog.async.nextTick;
-    function require(name: 'goog.async.throwException'): typeof goog.async.throwException;
-}
-
 declare module goog.async {
 
     /**

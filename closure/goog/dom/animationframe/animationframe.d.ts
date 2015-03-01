@@ -1,6 +1,5 @@
 declare module goog {
     function require(name: 'goog.dom.animationFrame'): typeof goog.dom.animationFrame;
-    function require(name: 'goog.dom.animationFrame.Spec'): typeof goog.dom.animationFrame.Spec;
     function require(name: 'goog.dom.animationFrame.State'): typeof goog.dom.animationFrame.State;
 }
 

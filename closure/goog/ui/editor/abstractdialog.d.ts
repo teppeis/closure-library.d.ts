@@ -1,7 +1,7 @@
 declare module goog {
     function require(name: 'goog.ui.editor.AbstractDialog'): typeof goog.ui.editor.AbstractDialog;
-    function require(name: 'goog.ui.editor.AbstractDialog.Builder'): typeof goog.ui.editor.AbstractDialog.Builder;
     function require(name: 'goog.ui.editor.AbstractDialog.EventType'): typeof goog.ui.editor.AbstractDialog.EventType;
+    function require(name: 'goog.ui.editor.AbstractDialog.Builder'): typeof goog.ui.editor.AbstractDialog.Builder;
 }
 
 declare module goog.ui.editor {

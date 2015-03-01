@@ -1,7 +1,7 @@
 declare module goog {
     function require(name: 'goog.editor.Table'): typeof goog.editor.Table;
-    function require(name: 'goog.editor.TableCell'): typeof goog.editor.TableCell;
     function require(name: 'goog.editor.TableRow'): typeof goog.editor.TableRow;
+    function require(name: 'goog.editor.TableCell'): typeof goog.editor.TableCell;
 }
 
 declare module goog.editor {

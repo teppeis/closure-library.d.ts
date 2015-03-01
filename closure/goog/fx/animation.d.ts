@@ -1,8 +1,8 @@
 declare module goog {
     function require(name: 'goog.fx.Animation'): typeof goog.fx.Animation;
+    function require(name: 'goog.fx.AnimationEvent'): typeof goog.fx.AnimationEvent;
     function require(name: 'goog.fx.Animation.EventType'): typeof goog.fx.Animation.EventType;
     function require(name: 'goog.fx.Animation.State'): typeof goog.fx.Animation.State;
-    function require(name: 'goog.fx.AnimationEvent'): typeof goog.fx.AnimationEvent;
 }
 
 declare module goog.fx {

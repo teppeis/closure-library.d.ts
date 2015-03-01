@@ -1,7 +1,3 @@
-declare module goog {
-    function require(name: 'goog.debug.Trace'): typeof goog.debug.Trace;
-}
-
 declare module goog.debug {
 
     /**

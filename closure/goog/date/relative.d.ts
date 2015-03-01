@@ -1,6 +1,5 @@
 declare module goog {
     function require(name: 'goog.date.relative'): typeof goog.date.relative;
-    function require(name: 'goog.date.relative.TimeDeltaFormatter'): typeof goog.date.relative.TimeDeltaFormatter;
     function require(name: 'goog.date.relative.Unit'): typeof goog.date.relative.Unit;
 }
 

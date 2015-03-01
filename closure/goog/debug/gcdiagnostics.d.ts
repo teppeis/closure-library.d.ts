@@ -1,7 +1,3 @@
-declare module goog {
-    function require(name: 'goog.debug.GcDiagnostics'): typeof goog.debug.GcDiagnostics;
-}
-
 declare module goog.debug {
 
     /**

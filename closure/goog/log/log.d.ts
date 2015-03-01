@@ -1,8 +1,8 @@
 declare module goog {
     function require(name: 'goog.log'): typeof goog.log;
+    function require(name: 'goog.log.Logger'): typeof goog.log.Logger;
     function require(name: 'goog.log.Level'): typeof goog.log.Level;
     function require(name: 'goog.log.LogRecord'): typeof goog.log.LogRecord;
-    function require(name: 'goog.log.Logger'): typeof goog.log.Logger;
 }
 
 declare module goog.log {
