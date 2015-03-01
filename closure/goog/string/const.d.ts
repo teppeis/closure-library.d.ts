@@ -1,5 +1,5 @@
 declare module goog {
-    function require(name: 'goog.string.Const'): typeof goog.string.Const;
+    function require(name: 'goog.string.Const'): typeof goog.string$.Const;
 }
 
 declare module goog.string$ {

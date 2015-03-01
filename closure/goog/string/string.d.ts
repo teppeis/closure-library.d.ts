@@ -1,6 +1,6 @@
 declare module goog {
-    function require(name: 'goog.string'): typeof goog.string;
-    function require(name: 'goog.string.Unicode'): typeof goog.string.Unicode;
+    function require(name: 'goog.string'): typeof goog.string$;
+    function require(name: 'goog.string.Unicode'): typeof goog.string$.Unicode;
 }
 
 declare module goog.string$ {
