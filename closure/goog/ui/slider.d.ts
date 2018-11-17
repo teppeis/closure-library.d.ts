@@ -36,6 +36,13 @@ declare module goog.ui {
          * @override
          */
         getCssClass(orient: goog.ui.SliderBase.Orientation): string;
+        
+        /**
+         * Returns CSS class applied to the slider's thumb element.
+         * @return {string} The CSS class applied to the slider's thumb element.
+         * @protected
+         */
+        getThumbCssClass(): string;
     }
 }
 

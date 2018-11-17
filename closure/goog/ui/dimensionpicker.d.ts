@@ -49,7 +49,7 @@ declare module goog.ui {
         maxRows: number;
         
         /**
-         * Handles mousemove events.  Determines which palette size was moused over and
+         * Handles mousemove events. Determines which palette size was moused over and
          * highlights it.
          * @param {goog.events.BrowserEvent} e Mouse event to handle.
          * @protected

@@ -169,10 +169,10 @@ declare module goog.ui {
          * Returns the event handler for the popup. All event listeners belonging to
          * this handler are removed when the tooltip is hidden. Therefore,
          * the recommended usage of this handler is to listen on events in
-         * {@link #onShow_}.
+         * {@link #onShow}.
          * @return {goog.events.EventHandler<T>} Event handler for this popup.
          * @protected
-         * @this T
+         * @this {T}
          * @template T
          */
         getHandler<T>(): goog.events.EventHandler<T>;
@@ -246,30 +246,27 @@ declare module goog.ui {
          * Called after the popup is shown. Derived classes can override to hook this
          * event but should make sure to call the parent class method.
          * @protected
-         * @suppress {underscore|visibility}
          */
-        onShow_(): void;
+        onShow(): void;
         
         /**
          * Called before the popup is hidden. Derived classes can override to hook this
          * event but should make sure to call the parent class method.
          *
-         * @param {Object=} opt_target Target of the event causing the hide.
+         * @param {?Node=} opt_target Target of the event causing the hide.
          * @return {boolean} If anyone called preventDefault on the event object (or
          *     if any of the handlers returns false this will also return false.
          * @protected
-         * @suppress {underscore|visibility}
          */
-        onBeforeHide_(opt_target?: Object): boolean;
+        onBeforeHide(opt_target?: Node): boolean;
         
         /**
          * Called after the popup is hidden. Derived classes can override to hook this
          * event but should make sure to call the parent class method.
-         * @param {Object=} opt_target Target of the event causing the hide.
+         * @param {?Node=} opt_target Target of the event causing the hide.
          * @protected
-         * @suppress {underscore|visibility}
          */
-        onHide_(opt_target?: Object): void;
+        onHide(opt_target?: Node): void;
     }
 }
 

@@ -50,6 +50,12 @@ declare module goog.editor.plugins {
         showOpenLinkInNewWindow(startChecked: boolean): void;
         
         /**
+         * Tells the dialog to focus the text to display input instead of the url field
+         * if the text to display input is empty when the dialog is opened.
+         */
+        focusTextToDisplayOnOpenIfEmpty(): void;
+        
+        /**
          * Tells the dialog to show a checkbox where the user can choose to have
          * 'rel=nofollow' attribute added to the link.
          */
@@ -105,7 +111,7 @@ declare module goog.editor.plugins {
         /**
          * @return {goog.events.EventHandler<T>} The event handler.
          * @protected
-         * @this T
+         * @this {T}
          * @template T
          */
         getEventHandler<T>(): goog.events.EventHandler<T>;

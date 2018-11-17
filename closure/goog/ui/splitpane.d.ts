@@ -117,7 +117,9 @@ declare module goog.ui.SplitPane {
      */
     type EventType = string;
     var EventType: {
-        [index: string]: EventType;
+        HANDLE_DRAG: EventType;
+        HANDLE_DRAG_END: EventType;
+        HANDLE_SNAP: EventType;
     };
 
     /**

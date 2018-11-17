@@ -52,17 +52,16 @@ declare module goog.structs {
      * Calls a function for each value in a collection. The function takes
      * three arguments; the value, the key and the collection.
      *
-     * NOTE: This will be deprecated soon! Please use a more specific method if
-     * possible, e.g. goog.array.forEach, goog.object.forEach, etc.
-     *
      * @param {S} col The collection-like object.
      * @param {function(this:T,?,?,S):?} f The function to call for every value.
      *     This function takes
      *     3 arguments (the value, the key or undefined if the collection has no
      *     notion of keys, and the collection) and the return value is irrelevant.
      * @param {T=} opt_obj The object to be used as the value of 'this'
-     *     within {@code f}.
+     *     within `f`.
      * @template T,S
+     * @deprecated Use a more specific method, e.g. goog.array.forEach,
+     *     goog.object.forEach, or for-of.
      */
     function forEach<T, S>(col: S, f: (arg0: any, arg1: any, arg2: S) => any, opt_obj?: T): void;
 
@@ -78,7 +77,7 @@ declare module goog.structs {
      *     return value is true the value is added to the result collection. If it
      *     is false the value is not included.
      * @param {T=} opt_obj The object to be used as the value of 'this'
-     *     within {@code f}.
+     *     within `f`.
      * @return {!Object|!Array<?>} A new collection where the passed values are
      *     present. If col is a key-less collection an array is returned.  If col
      *     has keys and values a plain old JS object is returned.
@@ -96,7 +95,7 @@ declare module goog.structs {
      *     collection has no notion of keys, and the collection) and should return
      *     something. The result will be used as the value in the new collection.
      * @param {T=} opt_obj  The object to be used as the value of 'this'
-     *     within {@code f}.
+     *     within `f`.
      * @return {!Object<V>|!Array<V>} A new collection with the new values.  If
      *     col is a key-less collection an array is returned.  If col has keys and
      *     values a plain old JS object is returned.
@@ -114,7 +113,7 @@ declare module goog.structs {
      *     if the collection has no notion of keys, and the collection) and should
      *     return a boolean.
      * @param {T=} opt_obj  The object to be used as the value of 'this'
-     *     within {@code f}.
+     *     within `f`.
      * @return {boolean} True if any value passes the test.
      * @template T,S
      */
@@ -131,7 +130,7 @@ declare module goog.structs {
      *     undefined if the collection has no notion of keys, and the collection)
      *     and should return a boolean.
      * @param {T=} opt_obj  The object to be used as the value of 'this'
-     *     within {@code f}.
+     *     within `f`.
      * @return {boolean} True if all key-value pairs pass the test.
      * @template T,S
      */

@@ -124,10 +124,9 @@ declare module goog.ui.editor.AbstractDialog {
      */
     type EventType = string;
     var EventType: {
-        [index: string]: EventType;
-        // AFTER_HIDE: EventType;
-        // CANCEL: EventType;
-        // OK: EventType;
+        AFTER_HIDE: EventType;
+        CANCEL: EventType;
+        OK: EventType;
     };
 
     /**

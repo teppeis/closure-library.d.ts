@@ -11,8 +11,8 @@ declare module goog.ui.media {
      *
      * This class knows how to parse picasa URLs, and render the DOM structure
      * of picasa album players and previews. This class is meant to be used as a
-     * singleton static stateless class, that takes {@code goog.ui.media.Media}
-     * instances and renders it. It expects {@code goog.ui.media.Media.getModel} to
+     * singleton static stateless class, that takes `goog.ui.media.Media`
+     * instances and renders it. It expects `goog.ui.media.Media.getModel` to
      * return a well formed, previously constructed, object with a user and album
      * fields {@see goog.ui.media.PicasaAlbum.parseUrl}, which is the data model
      * this renderer will use to construct the DOM structure.
@@ -78,8 +78,8 @@ declare module goog.ui.media {
     }
 
     /**
-     * The {@code goog.ui.media.PicasaAlbum} media data model. It stores a required
-     * {@code userId} and {@code albumId} fields, sets the picasa album URL, and
+     * The `goog.ui.media.PicasaAlbum` media data model. It stores a required
+     * `userId` and `albumId` fields, sets the picasa album URL, and
      * allows a few optional parameters.
      *
      * @param {string} userId The picasa userId associated with this album.
@@ -97,7 +97,7 @@ declare module goog.ui.media {
         constructor(userId: string, albumId: string, opt_authKey?: string, opt_caption?: string, opt_description?: string, opt_autoplay?: boolean);
         
         /**
-         * Gets a {@code picasaUrl} and extracts the user and album id.
+         * Gets a `picasaUrl` and extracts the user and album id.
          *
          * @param {string} picasaUrl A picasa album URL.
          * @param {string=} opt_caption An optional caption of the picasa album.
@@ -110,8 +110,8 @@ declare module goog.ui.media {
         static newInstance(picasaUrl: string, opt_caption?: string, opt_description?: string, opt_autoplay?: boolean): goog.ui.media.PicasaAlbumModel;
         
         /**
-         * The opposite of {@code newInstance}: takes an {@code userId} and an
-         * {@code albumId} and builds a URL.
+         * The opposite of `newInstance`: takes an `userId` and an
+         * `albumId` and builds a URL.
          *
          * @param {string} userId The user that owns the album.
          * @param {string} albumId The album id.

@@ -14,19 +14,19 @@ declare module goog.events {
      * to one offered by native browser event targets, such as
      * capture/bubble mechanism, stopping propagation, and preventing
      * default actions. Capture/bubble mechanism depends on the ancestor
-     * tree constructed via {@code #getParentEventTarget}; this tree
+     * tree constructed via `#getParentEventTarget`; this tree
      * must be directed acyclic graph. The meaning of default action(s)
      * in preventDefault is specific to a particular use case.
      *
      * Implementations that do not support capture/bubble or can not have
      * a parent listenable can simply not implement any ability to set the
-     * parent listenable (and have {@code #getParentEventTarget} return
+     * parent listenable (and have `#getParentEventTarget` return
      * null).
      *
      * Implementation of this class can be used with or independently from
      * goog.events.
      *
-     * Implementation must call {@code #addImplementation(implClass)}.
+     * Implementation must call `#addImplementation(implClass)`.
      *
      * @interface
      * @see goog.events
@@ -48,7 +48,7 @@ declare module goog.events {
          *     (defaults to false).
          * @param {SCOPE=} opt_listenerScope Object in whose scope to call the
          *     listener.
-         * @return {goog.events.ListenableKey} Unique key for the listener.
+         * @return {!goog.events.ListenableKey} Unique key for the listener.
          * @template SCOPE,EVENTOBJ
          */
         listen<SCOPE, EVENTOBJ>(type: string|goog.events.EventId<EVENTOBJ>, listener: (arg0: EVENTOBJ) => boolean|void, opt_useCapture?: boolean, opt_listenerScope?: SCOPE): goog.events.ListenableKey;
@@ -71,7 +71,7 @@ declare module goog.events {
          *     (defaults to false).
          * @param {SCOPE=} opt_listenerScope Object in whose scope to call the
          *     listener.
-         * @return {goog.events.ListenableKey} Unique key for the listener.
+         * @return {!goog.events.ListenableKey} Unique key for the listener.
          * @template SCOPE,EVENTOBJ
          */
         listenOnce<SCOPE, EVENTOBJ>(type: string|goog.events.EventId<EVENTOBJ>, listener: (arg0: EVENTOBJ) => boolean|void, opt_useCapture?: boolean, opt_listenerScope?: SCOPE): goog.events.ListenableKey;
@@ -95,7 +95,7 @@ declare module goog.events {
          * Removes an event listener which was added with listen() by the key
          * returned by listen().
          *
-         * @param {goog.events.ListenableKey} key The key returned by
+         * @param {!goog.events.ListenableKey} key The key returned by
          *     listen() or listenOnce().
          * @return {boolean} Whether any listener was removed.
          */
@@ -132,7 +132,7 @@ declare module goog.events {
          * mechanism.
          *
          * NOTE(chrishenry): The name reflects the original implementation of
-         * custom event target ({@code goog.events.EventTarget}). We decided
+         * custom event target (`goog.events.EventTarget`). We decided
          * that changing the name is not worth it.
          *
          * @return {goog.events.Listenable} The parent EventTarget or null if
@@ -164,7 +164,7 @@ declare module goog.events {
          *
          * @param {string|!goog.events.EventId} type The type of the listeners to fire.
          * @param {boolean} capture The capture mode of the listeners to fire.
-         * @return {!Array<goog.events.ListenableKey>} An array of registered
+         * @return {!Array<!goog.events.ListenableKey>} An array of registered
          *     listeners.
          * @template EVENTOBJ
          */
@@ -209,7 +209,7 @@ declare module goog.events {
         
         /**
          * The source event target.
-         * @type {!(Object|goog.events.Listenable|goog.events.EventTarget)}
+         * @type {Object|goog.events.Listenable|goog.events.EventTarget}
          */
         src: Object|goog.events.Listenable|goog.events.EventTarget;
         
@@ -233,9 +233,9 @@ declare module goog.events {
         
         /**
          * The 'this' object for the listener function's scope.
-         * @type {Object}
+         * @type {Object|undefined}
          */
-        handler: Object;
+        handler: Object|void;
         
         /**
          * A globally unique number to identify the key.
@@ -260,12 +260,12 @@ declare module goog.events.Listenable {
 
     /**
      * Marks a given class (constructor) as an implementation of
-     * Listenable, do that we can query that fact at runtime. The class
+     * Listenable, so that we can query that fact at runtime. The class
      * must have already implemented the interface.
-     * @param {!Function} cls The class constructor. The corresponding
-     *     class must have already implemented the interface.
+     * @param {function(new:goog.events.Listenable,...)} cls The class constructor.
+     *     The corresponding class must have already implemented the interface.
      */
-    function addImplementation(cls: Function): void;
+    function addImplementation(cls: (...arg0: any[]) => any): void;
 
     /**
      * @param {Object} obj The object to check.

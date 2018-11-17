@@ -8,6 +8,7 @@ declare module goog.storage.mechanism {
      * Interface for all iterable storage mechanisms.
      *
      * @constructor
+     * @struct
      * @extends {goog.storage.mechanism.Mechanism}
      */
     class IterableMechanism extends goog.storage.mechanism.Mechanism {

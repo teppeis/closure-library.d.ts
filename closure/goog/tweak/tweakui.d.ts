@@ -63,13 +63,15 @@ declare module goog.tweak {
         /**
          * Creates and returns the expanded element.
          * The markup looks like:
-         * <div>
-         *   <a>Show Descriptions</a>
-         *   <div>
-         *      ...
-         *      {endElement}
-         *   </div>
-         * </div>
+         *
+         *    <div>
+         *      <a>Show Descriptions</a>
+         *      <div>
+         *         ...
+         *         {endElement}
+         *      </div>
+         *    </div>
+         *
          * @param {Element|DocumentFragment=} opt_endElement Element to insert after all
          *     tweak entries.
          * @return {!Element} The root element for the panel.

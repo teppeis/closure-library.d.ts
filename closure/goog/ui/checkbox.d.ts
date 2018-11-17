@@ -66,7 +66,7 @@ declare module goog.ui {
          * Checkbox#enterDocument sets aria-labeledby on the same element which
          * overrides the aria-label in all modern screen readers.
          *
-         * @param {Element} label The label control to set. If null, only the checkbox
+         * @param {?Element} label The label control to set. If null, only the checkbox
          *     reacts to clicks.
          */
         setLabel(label: Element): void;
@@ -88,13 +88,11 @@ declare module goog.ui.Checkbox {
     /**
      * Possible checkbox states.
      * @enum {?boolean}
-     * TODO: FIXME!
      */
-    type State = number;
+    type State = boolean;
     var State: {
-        [index: string]: State;
-        // CHECKED: State;
-        // UNCHECKED: State;
-        // UNDETERMINED: State;
+        CHECKED: State;
+        UNCHECKED: State;
+        UNDETERMINED: State;
     };
 }

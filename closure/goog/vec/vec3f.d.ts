@@ -15,9 +15,35 @@ declare module goog.vec.vec3f {
     function create(): goog.vec.vec3f.Type;
 
     /**
+     * Creates a new vec3f initialized with the value from the given array.
+     *
+     * @param {!Array<number>} vec The source 3 element array.
+     * @return {!goog.vec.vec3f.Type} The new vec3f.
+     */
+    function createFromArray(vec: Array<number>): goog.vec.vec3f.Type;
+
+    /**
+     * Creates a new vec3f initialized with the supplied values.
+     *
+     * @param {number} v0 The value for element at index 0.
+     * @param {number} v1 The value for element at index 1.
+     * @param {number} v2 The value for element at index 2.
+     * @return {!goog.vec.vec3f.Type} The new vector.
+     */
+    function createFromValues(v0: number, v1: number, v2: number): goog.vec.vec3f.Type;
+
+    /**
+     * Creates a clone of the given vec3f.
+     *
+     * @param {!goog.vec.vec3f.Type} vec The source vec3f.
+     * @return {!goog.vec.vec3f.Type} The new cloned vec3f.
+     */
+    function clone(vec: goog.vec.vec3f.Type): goog.vec.vec3f.Type;
+
+    /**
      * Initializes the vector with the given values.
      *
-     * @param {goog.vec.vec3f.Type} vec The vector to receive the values.
+     * @param {!goog.vec.vec3f.Type} vec The vector to receive the values.
      * @param {number} v0 The value for element at index 0.
      * @param {number} v1 The value for element at index 1.
      * @param {number} v2 The value for element at index 2.
@@ -29,8 +55,8 @@ declare module goog.vec.vec3f {
     /**
      * Initializes vec3f vec from vec3f src.
      *
-     * @param {goog.vec.vec3f.Type} vec The destination vector.
-     * @param {goog.vec.vec3f.Type} src The source vector.
+     * @param {!goog.vec.vec3f.Type} vec The destination vector.
+     * @param {!goog.vec.vec3f.Type} src The source vector.
      * @return {!goog.vec.vec3f.Type} Return vec so that operations can be
      *     chained together.
      */
@@ -40,7 +66,7 @@ declare module goog.vec.vec3f {
      * Initializes vec3f vec from vec3d src (typed as a Float64Array to
      * avoid circular goog.requires).
      *
-     * @param {goog.vec.vec3f.Type} vec The destination vector.
+     * @param {!goog.vec.vec3f.Type} vec The destination vector.
      * @param {Float64Array} src The source vector.
      * @return {!goog.vec.vec3f.Type} Return vec so that operations can be
      *     chained together.
@@ -50,7 +76,7 @@ declare module goog.vec.vec3f {
     /**
      * Initializes vec3f vec from Array src.
      *
-     * @param {goog.vec.vec3f.Type} vec The destination vector.
+     * @param {!goog.vec.vec3f.Type} vec The destination vector.
      * @param {Array<number>} src The source vector.
      * @return {!goog.vec.vec3f.Type} Return vec so that operations can be
      *     chained together.
@@ -61,9 +87,9 @@ declare module goog.vec.vec3f {
      * Performs a component-wise addition of vec0 and vec1 together storing the
      * result into resultVec.
      *
-     * @param {goog.vec.vec3f.Type} vec0 The first addend.
-     * @param {goog.vec.vec3f.Type} vec1 The second addend.
-     * @param {goog.vec.vec3f.Type} resultVec The vector to
+     * @param {!goog.vec.vec3f.Type} vec0 The first addend.
+     * @param {!goog.vec.vec3f.Type} vec1 The second addend.
+     * @param {!goog.vec.vec3f.Type} resultVec The vector to
      *     receive the result. May be vec0 or vec1.
      * @return {!goog.vec.vec3f.Type} Return resultVec so that operations can be
      *     chained together.
@@ -74,9 +100,9 @@ declare module goog.vec.vec3f {
      * Performs a component-wise subtraction of vec1 from vec0 storing the
      * result into resultVec.
      *
-     * @param {goog.vec.vec3f.Type} vec0 The minuend.
-     * @param {goog.vec.vec3f.Type} vec1 The subtrahend.
-     * @param {goog.vec.vec3f.Type} resultVec The vector to
+     * @param {!goog.vec.vec3f.Type} vec0 The minuend.
+     * @param {!goog.vec.vec3f.Type} vec1 The subtrahend.
+     * @param {!goog.vec.vec3f.Type} resultVec The vector to
      *     receive the result. May be vec0 or vec1.
      * @return {!goog.vec.vec3f.Type} Return resultVec so that operations can be
      *     chained together.
@@ -86,8 +112,8 @@ declare module goog.vec.vec3f {
     /**
      * Negates vec0, storing the result into resultVec.
      *
-     * @param {goog.vec.vec3f.Type} vec0 The vector to negate.
-     * @param {goog.vec.vec3f.Type} resultVec The vector to
+     * @param {!goog.vec.vec3f.Type} vec0 The vector to negate.
+     * @param {!goog.vec.vec3f.Type} resultVec The vector to
      *     receive the result. May be vec0.
      * @return {!goog.vec.vec3f.Type} Return resultVec so that operations can be
      *     chained together.
@@ -98,8 +124,8 @@ declare module goog.vec.vec3f {
      * Takes the absolute value of each component of vec0 storing the result in
      * resultVec.
      *
-     * @param {goog.vec.vec3f.Type} vec0 The source vector.
-     * @param {goog.vec.vec3f.Type} resultVec The vector to receive the result.
+     * @param {!goog.vec.vec3f.Type} vec0 The source vector.
+     * @param {!goog.vec.vec3f.Type} resultVec The vector to receive the result.
      *     May be vec0.
      * @return {!goog.vec.vec3f.Type} Return resultVec so that operations can be
      *     chained together.
@@ -110,9 +136,9 @@ declare module goog.vec.vec3f {
      * Multiplies each component of vec0 with scalar storing the product into
      * resultVec.
      *
-     * @param {goog.vec.vec3f.Type} vec0 The source vector.
+     * @param {!goog.vec.vec3f.Type} vec0 The source vector.
      * @param {number} scalar The value to multiply with each component of vec0.
-     * @param {goog.vec.vec3f.Type} resultVec The vector to
+     * @param {!goog.vec.vec3f.Type} resultVec The vector to
      *     receive the result. May be vec0.
      * @return {!goog.vec.vec3f.Type} Return resultVec so that operations can be
      *     chained together.
@@ -122,7 +148,7 @@ declare module goog.vec.vec3f {
     /**
      * Returns the magnitudeSquared of the given vector.
      *
-     * @param {goog.vec.vec3f.Type} vec0 The vector.
+     * @param {!goog.vec.vec3f.Type} vec0 The vector.
      * @return {number} The magnitude of the vector.
      */
     function magnitudeSquared(vec0: goog.vec.vec3f.Type): number;
@@ -130,7 +156,7 @@ declare module goog.vec.vec3f {
     /**
      * Returns the magnitude of the given vector.
      *
-     * @param {goog.vec.vec3f.Type} vec0 The vector.
+     * @param {!goog.vec.vec3f.Type} vec0 The vector.
      * @return {number} The magnitude of the vector.
      */
     function magnitude(vec0: goog.vec.vec3f.Type): number;
@@ -138,8 +164,8 @@ declare module goog.vec.vec3f {
     /**
      * Normalizes the given vector storing the result into resultVec.
      *
-     * @param {goog.vec.vec3f.Type} vec0 The vector to normalize.
-     * @param {goog.vec.vec3f.Type} resultVec The vector to
+     * @param {!goog.vec.vec3f.Type} vec0 The vector to normalize.
+     * @param {!goog.vec.vec3f.Type} resultVec The vector to
      *     receive the result. May be vec0.
      * @return {!goog.vec.vec3f.Type} Return resultVec so that operations can be
      *     chained together.
@@ -149,8 +175,8 @@ declare module goog.vec.vec3f {
     /**
      * Returns the scalar product of vectors v0 and v1.
      *
-     * @param {goog.vec.vec3f.Type} v0 The first vector.
-     * @param {goog.vec.vec3f.Type} v1 The second vector.
+     * @param {!goog.vec.vec3f.Type} v0 The first vector.
+     * @param {!goog.vec.vec3f.Type} v1 The second vector.
      * @return {number} The scalar product.
      */
     function dot(v0: goog.vec.vec3f.Type, v1: goog.vec.vec3f.Type): number;
@@ -159,9 +185,9 @@ declare module goog.vec.vec3f {
      * Computes the vector (cross) product of v0 and v1 storing the result into
      * resultVec.
      *
-     * @param {goog.vec.vec3f.Type} v0 The first vector.
-     * @param {goog.vec.vec3f.Type} v1 The second vector.
-     * @param {goog.vec.vec3f.Type} resultVec The vector to receive the
+     * @param {!goog.vec.vec3f.Type} v0 The first vector.
+     * @param {!goog.vec.vec3f.Type} v1 The second vector.
+     * @param {!goog.vec.vec3f.Type} resultVec The vector to receive the
      *     results. May be either v0 or v1.
      * @return {!goog.vec.vec3f.Type} Return resultVec so that operations can be
      *     chained together.
@@ -171,8 +197,8 @@ declare module goog.vec.vec3f {
     /**
      * Returns the squared distance between two points.
      *
-     * @param {goog.vec.vec3f.Type} vec0 First point.
-     * @param {goog.vec.vec3f.Type} vec1 Second point.
+     * @param {!goog.vec.vec3f.Type} vec0 First point.
+     * @param {!goog.vec.vec3f.Type} vec1 Second point.
      * @return {number} The squared distance between the points.
      */
     function distanceSquared(vec0: goog.vec.vec3f.Type, vec1: goog.vec.vec3f.Type): number;
@@ -180,8 +206,8 @@ declare module goog.vec.vec3f {
     /**
      * Returns the distance between two points.
      *
-     * @param {goog.vec.vec3f.Type} vec0 First point.
-     * @param {goog.vec.vec3f.Type} vec1 Second point.
+     * @param {!goog.vec.vec3f.Type} vec0 First point.
+     * @param {!goog.vec.vec3f.Type} vec1 Second point.
      * @return {number} The distance between the points.
      */
     function distance(vec0: goog.vec.vec3f.Type, vec1: goog.vec.vec3f.Type): number;
@@ -190,9 +216,9 @@ declare module goog.vec.vec3f {
      * Returns a unit vector pointing from one point to another.
      * If the input points are equal then the result will be all zeros.
      *
-     * @param {goog.vec.vec3f.Type} vec0 Origin point.
-     * @param {goog.vec.vec3f.Type} vec1 Target point.
-     * @param {goog.vec.vec3f.Type} resultVec The vector to receive the
+     * @param {!goog.vec.vec3f.Type} vec0 Origin point.
+     * @param {!goog.vec.vec3f.Type} vec1 Target point.
+     * @param {!goog.vec.vec3f.Type} resultVec The vector to receive the
      *     results (may be vec0 or vec1).
      * @return {!goog.vec.vec3f.Type} Return resultVec so that operations can be
      *     chained together.
@@ -203,10 +229,10 @@ declare module goog.vec.vec3f {
      * Linearly interpolate from vec0 to v1 according to f. The value of f should be
      * in the range [0..1] otherwise the results are undefined.
      *
-     * @param {goog.vec.vec3f.Type} v0 The first vector.
-     * @param {goog.vec.vec3f.Type} v1 The second vector.
+     * @param {!goog.vec.vec3f.Type} v0 The first vector.
+     * @param {!goog.vec.vec3f.Type} v1 The second vector.
      * @param {number} f The interpolation factor.
-     * @param {goog.vec.vec3f.Type} resultVec The vector to receive the
+     * @param {!goog.vec.vec3f.Type} resultVec The vector to receive the
      *     results (may be v0 or v1).
      * @return {!goog.vec.vec3f.Type} Return resultVec so that operations can be
      *     chained together.
@@ -214,12 +240,35 @@ declare module goog.vec.vec3f {
     function lerp(v0: goog.vec.vec3f.Type, v1: goog.vec.vec3f.Type, f: number, resultVec: goog.vec.vec3f.Type): goog.vec.vec3f.Type;
 
     /**
+     * Perform a spherical linear interpolation from v0 to v1 according to f. The
+     * value of f should be in the range [0..1] otherwise the results are undefined.
+     *
+     * Slerp is normally used to interpolate quaternions, but there is a geometric
+     * formula for interpolating vectors directly, see "Geometric Slerp" in:
+     * https://en.wikipedia.org/wiki/Slerp.
+     *
+     * This interpolates the vectors' directions via slerp, but linearly
+     * interpolates the vectors' magnitudes.
+     *
+     * Results are undefined if v0 or v1 are of zero magnitude.
+     *
+     * @param {!goog.vec.vec3f.Type} v0 The first vector.
+     * @param {!goog.vec.vec3f.Type} v1 The second vector.
+     * @param {number} f The interpolation factor.
+     * @param {!goog.vec.vec3f.Type} resultVec The vector to receive the
+     *     results (may be v0 or v1).
+     * @return {!goog.vec.vec3f.Type} Return resultVec so that operations can be
+     *     chained together.
+     */
+    function slerp(v0: goog.vec.vec3f.Type, v1: goog.vec.vec3f.Type, f: number, resultVec: goog.vec.vec3f.Type): goog.vec.vec3f.Type;
+
+    /**
      * Compares the components of vec0 with the components of another vector or
      * scalar, storing the larger values in resultVec.
      *
-     * @param {goog.vec.vec3f.Type} vec0 The source vector.
-     * @param {goog.vec.vec3f.Type|number} limit The limit vector or scalar.
-     * @param {goog.vec.vec3f.Type} resultVec The vector to receive the
+     * @param {!goog.vec.vec3f.Type} vec0 The source vector.
+     * @param {!goog.vec.vec3f.Type|number} limit The limit vector or scalar.
+     * @param {!goog.vec.vec3f.Type} resultVec The vector to receive the
      *     results (may be vec0 or limit).
      * @return {!goog.vec.vec3f.Type} Return resultVec so that operations can be
      *     chained together.
@@ -230,9 +279,9 @@ declare module goog.vec.vec3f {
      * Compares the components of vec0 with the components of another vector or
      * scalar, storing the smaller values in resultVec.
      *
-     * @param {goog.vec.vec3f.Type} vec0 The source vector.
-     * @param {goog.vec.vec3f.Type|number} limit The limit vector or scalar.
-     * @param {goog.vec.vec3f.Type} resultVec The vector to receive the
+     * @param {!goog.vec.vec3f.Type} vec0 The source vector.
+     * @param {!goog.vec.vec3f.Type|number} limit The limit vector or scalar.
+     * @param {!goog.vec.vec3f.Type} resultVec The vector to receive the
      *     results (may be vec0 or limit).
      * @return {!goog.vec.vec3f.Type} Return resultVec so that operations can be
      *     chained together.
@@ -242,8 +291,8 @@ declare module goog.vec.vec3f {
     /**
      * Returns true if the components of v0 are equal to the components of v1.
      *
-     * @param {goog.vec.vec3f.Type} v0 The first vector.
-     * @param {goog.vec.vec3f.Type} v1 The second vector.
+     * @param {!goog.vec.vec3f.Type} v0 The first vector.
+     * @param {!goog.vec.vec3f.Type} v1 The second vector.
      * @return {boolean} True if the vectors are equal, false otherwise.
      */
     function equals(v0: goog.vec.vec3f.Type, v1: goog.vec.vec3f.Type): boolean;

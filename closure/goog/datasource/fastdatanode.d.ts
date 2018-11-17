@@ -110,7 +110,7 @@ declare module goog.ds {
         /**
          * Returns a javascript object representation of this data node. You should
          * not modify the object returned by this function.
-         * @return {!Object} Javascript object representation of this data node.
+         * @return {!Object} JavaScript object representation of this data node.
          */
         getJsObject(): Object;
         
@@ -218,10 +218,9 @@ declare module goog.ds {
          * Not supported by primitive data nodes.
          * @param {string} name Name of child node.
          * @param {Object} value Value of child node.
-         * @return {Object} The child node, if the node was set.
          * @override
          */
-        setChildNode(name: string, value: Object): Object;
+        setChildNode(name: string, value: Object): void;
         
         /**
          * Returns whether this data node is a list. Always returns false for
@@ -234,7 +233,7 @@ declare module goog.ds {
         /**
          * Returns a javascript object representation of this data node. You should
          * not modify the object returned by this function.
-         * @return {*} Javascript object representation of this data node.
+         * @return {*} JavaScript object representation of this data node.
          */
         getJsObject(): any;
     }
@@ -294,7 +293,7 @@ declare module goog.ds {
         /**
          * Returns a javascript object representation of this data node. You should
          * not modify the object returned by this function.
-         * @return {!Object} Javascript object representation of this data node.
+         * @return {!Object} JavaScript object representation of this data node.
          */
         getJsObject(): Object;
         

@@ -20,7 +20,12 @@ declare module goog.editor.plugins {
         static REMOVE_FORMATTING_COMMAND: string;
         
         /**
-         * Handle per node special processing if neccessary. If this function returns
+         * @param {string} key
+         */
+        setKeyboardShortcutKey(key: string): void;
+        
+        /**
+         * Handle per node special processing if necessary. If this function returns
          * null then standard cleanup is applied. Otherwise this node and all children
          * are assumed to be cleaned.
          * NOTE(user): If an alternate RemoveFormatting processor is provided

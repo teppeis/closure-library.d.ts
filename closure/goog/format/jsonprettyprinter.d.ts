@@ -1,7 +1,7 @@
 declare module goog {
     function require(name: 'goog.format.JsonPrettyPrinter'): typeof goog.format.JsonPrettyPrinter;
     function require(name: 'goog.format.JsonPrettyPrinter.TextDelimiters'): typeof goog.format.JsonPrettyPrinter.TextDelimiters;
-    function require(name: 'goog.format.JsonPrettyPrinter.HtmlDelimiters'): typeof goog.format.JsonPrettyPrinter.HtmlDelimiters;
+    function require(name: 'goog.format.JsonPrettyPrinter.SafeHtmlDelimiters'): typeof goog.format.JsonPrettyPrinter.SafeHtmlDelimiters;
 }
 
 declare module goog.format {
@@ -26,13 +26,13 @@ declare module goog.format {
      *     ]
      *   }
      * }</code>
-     * @param {goog.format.JsonPrettyPrinter.TextDelimiters} delimiters Container
-     *     for the various strings to use to delimit objects, arrays, newlines, and
-     *     other pieces of the output.
+     * @param {?goog.format.JsonPrettyPrinter.TextDelimiters=} opt_delimiters
+     *     Container for the various strings to use to delimit objects, arrays,
+     *     newlines, and other pieces of the output.
      * @constructor
      */
     class JsonPrettyPrinter {
-        constructor(delimiters: goog.format.JsonPrettyPrinter.TextDelimiters);
+        constructor(opt_delimiters?: goog.format.JsonPrettyPrinter.TextDelimiters);
         
         /**
          * Formats a JSON object as a string, properly indented for display.
@@ -42,6 +42,14 @@ declare module goog.format {
          *     display.
          */
         format(json: any): string;
+        
+        /**
+         * Formats a JSON object as a SafeHtml, properly indented for display.
+         * @param {*} json The object to pretty print. It could be a JSON object, a
+         *     string representing a JSON object, or any other type.
+         * @return {!goog.html.SafeHtml} A HTML code of the JSON object.
+         */
+        formatSafeHtml(json: any): goog.html.SafeHtml;
     }
 }
 
@@ -66,9 +74,9 @@ declare module goog.format.JsonPrettyPrinter {
         
         /**
          * Represents a newline character in the output.  Used to begin a new line.
-         * @type {string}
+         * @type {string|!goog.html.SafeHtml}
          */
-        lineBreak: string;
+        lineBreak: string|goog.html.SafeHtml;
         
         /**
          * Represents the start of an object in the output.
@@ -103,9 +111,9 @@ declare module goog.format.JsonPrettyPrinter {
         /**
          * Represents the string used to separate property names from property values in
          * the output.
-         * @type {string}
+         * @type {string|!goog.html.SafeHtml}
          */
-        nameValueSeparator: string;
+        nameValueSeparator: string|goog.html.SafeHtml;
         
         /**
          * A string that's placed before a property name in the output.  Useful for
@@ -140,49 +148,40 @@ declare module goog.format.JsonPrettyPrinter {
          * @type {number}
          */
         indent: number;
+        
+        /**
+         * Formats a property name before adding it to the output.
+         * @param {string} name The property name.
+         * @return {string|!goog.html.SafeHtml}
+         */
+        formatName(name: string): string|goog.html.SafeHtml;
+        
+        /**
+         * Formats a value before adding it to the output.
+         * @param {string} value The value.
+         * @param {string} typeOf The type of the value obtained by goog.typeOf.
+         * @return {string|!goog.html.SafeHtml}
+         */
+        formatValue(value: string, typeOf: string): string|goog.html.SafeHtml;
     }
 
     /**
      * A container for the delimiting characters used to display the JSON string
      * to an HTML <code>&lt;pre&gt;</code> or <code>&lt;code&gt;</code> element.
+     * It escapes the names and values before they are added to the output.
+     * Use this class together with goog.format.JsonPrettyPrinter#formatSafeHtml.
      * @constructor
      * @extends {goog.format.JsonPrettyPrinter.TextDelimiters}
-     * @final
      */
-    class HtmlDelimiters extends goog.format.JsonPrettyPrinter.TextDelimiters {
+    class SafeHtmlDelimiters extends goog.format.JsonPrettyPrinter.TextDelimiters {
         constructor();
         
         /**
-         * A <code>span</code> tag thats placed before a property name.  Used to style
-         * property names with CSS.
-         * @type {string}
-         * @override
+         * Return a class name for the given type.
+         * @param {string} typeOf The type of the value.
+         * @return {string}
+         * @protected
          */
-        preName: string;
-        
-        /**
-         * A closing <code>span</code> tag that's placed after a property name.
-         * @type {string}
-         * @override
-         */
-        postName: string;
-        
-        /**
-         * A <code>span</code> tag thats placed before a property value.  Used to style
-         * property value with CSS.  The span tag's class is in the format
-         * goog-jsonprettyprinter-propertyvalue-{TYPE}, where {TYPE} is the JavaScript
-         * type of the object (the {TYPE} parameter is obtained from goog.typeOf).  This
-         * can be used to style different value types.
-         * @type {string}
-         * @override
-         */
-        preValue: string;
-        
-        /**
-         * A closing <code>span</code> tag that's placed after a property value.
-         * @type {string}
-         * @override
-         */
-        postValue: string;
+        getValueCssName(typeOf: string): string;
     }
 }

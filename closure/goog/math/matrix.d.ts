@@ -43,7 +43,7 @@ declare module goog.math {
          * [ 0 0 1 ]
          * </pre>
          * @param {number} n The size of the square identity matrix.
-         * @return {!goog.math.Matrix} Identity matrix of width and height {@code n}.
+         * @return {!goog.math.Matrix} Identity matrix of width and height `n`.
          */
         static createIdentityMatrix(n: number): goog.math.Matrix;
         
@@ -55,7 +55,7 @@ declare module goog.math {
          *     takes 4 arguments (value, i, j, and the matrix)
          *     and the return value is irrelevant.
          * @param {T=} opt_obj The object to be used as the value of 'this'
-         *     within {@code fn}.
+         *     within `fn`.
          * @template T
          */
         static forEach<T>(matrix: goog.math.Matrix, fn: (arg0: number, arg1: number, arg2: number, arg3: goog.math.Matrix) => any, opt_obj?: T): void;
@@ -77,8 +77,8 @@ declare module goog.math {
          *     takes 4 arguments (value, i, j and the matrix)
          *     and should return a number, which will be inserted into a new matrix.
          * @param {T=} opt_obj The object to be used as the value of 'this'
-         *     within {@code fn}.
-         * @return {!goog.math.Matrix} A new matrix with the results from {@code fn}.
+         *     within `fn`.
+         * @return {!goog.math.Matrix} A new matrix with the results from `fn`.
          * @template T
          */
         static map<T>(matrix: goog.math.Matrix, fn: (arg0: number, arg1: number, arg2: number, arg3: goog.math.Matrix) => number, opt_obj?: T): goog.math.Matrix;

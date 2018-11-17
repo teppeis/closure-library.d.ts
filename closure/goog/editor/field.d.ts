@@ -41,26 +41,11 @@ declare module goog.editor {
         field: Element;
         
         /**
-         * The original node that is being made editable, or null if it has
-         * not yet been found.
-         * @type {Element}
-         * @protected
-         */
-        originalElement: Element;
-        
-        /**
          * Logging object.
          * @type {goog.log.Logger}
          * @protected
          */
         logger: goog.log.Logger;
-        
-        /**
-         * The dom helper for the node to be made editable.
-         * @type {goog.dom.DomHelper}
-         * @protected
-         */
-        originalDomHelper: goog.dom.DomHelper;
         
         /**
          * Number of milliseconds after a change when the change event should be fired.
@@ -160,21 +145,21 @@ declare module goog.editor {
         /**
          * Returns the registered plugin with the given classId.
          * @param {string} classId classId of the plugin.
-         * @return {goog.editor.Plugin} Registered plugin with the given classId.
+         * @return {?goog.editor.PluginImpl} Registered plugin with the given classId.
          */
-        getPluginByClassId(classId: string): goog.editor.Plugin;
+        getPluginByClassId(classId: string): goog.editor.PluginImpl;
         
         /**
          * Registers the plugin with the editable field.
-         * @param {goog.editor.Plugin} plugin The plugin to register.
+         * @param {!goog.editor.PluginImpl} plugin The plugin to register.
          */
-        registerPlugin(plugin: goog.editor.Plugin): void;
+        registerPlugin(plugin: goog.editor.PluginImpl): void;
         
         /**
          * Unregisters the plugin with this field.
-         * @param {goog.editor.Plugin} plugin The plugin to unregister.
+         * @param {?goog.editor.PluginImpl} plugin The plugin to unregister.
          */
-        unregisterPlugin(plugin: goog.editor.Plugin): void;
+        unregisterPlugin(plugin: goog.editor.PluginImpl): void;
         
         /**
          * Sets the value that will replace the style attribute of this field's
@@ -429,11 +414,11 @@ declare module goog.editor {
          * delayed change events are handled appropriately. Extra delayed change events
          * will cause undesired states to be added to the undo-redo stack. This method
          * will always fire at most one delayed change event, depending on the value of
-         * {@code opt_preventDelayedChange}.
+         * `opt_preventDelayedChange`.
          *
          * @param {function()} func The function to call that will manipulate the dom.
          * @param {boolean=} opt_preventDelayedChange Whether delayed change should be
-         *      prevented after calling {@code func}. Defaults to always firing
+         *      prevented after calling `func`. Defaults to always firing
          *      delayed change.
          * @param {Object=} opt_handler Object in whose scope to call the listener.
          */
@@ -503,13 +488,13 @@ declare module goog.editor {
          * Sets the contents of the field.
          * @param {boolean} addParas Boolean to specify whether to add paragraphs
          *    to long fields.
-         * @param {?string} html html to insert.  If html=null, then this defaults
-         *    to a nsbp for mozilla and an empty string for IE.
+         * @param {?goog.html.SafeHtml} html html to insert.  If html=null, then this
+         *    defaults to a nsbp for mozilla and an empty string for IE.
          * @param {boolean=} opt_dontFireDelayedChange True to make this content change
          *    not fire a delayed change event.
          * @param {boolean=} opt_applyLorem Whether to apply lorem ipsum styles.
          */
-        setHtml(addParas: boolean, html: string, opt_dontFireDelayedChange?: boolean, opt_applyLorem?: boolean): void;
+        setSafeHtml(addParas: boolean, html: goog.html.SafeHtml, opt_dontFireDelayedChange?: boolean, opt_applyLorem?: boolean): void;
         
         /**
          * Attemps to turn on designMode for a document.  This function can fail under
@@ -574,17 +559,19 @@ declare module goog.editor {
         /**
          * Makes a field editable.
          *
-         * @param {string=} opt_iframeSrc URL to set the iframe src to if necessary.
+         * @param {!goog.html.TrustedResourceUrl=} opt_iframeSrc URL to set the iframe
+         *     src to if necessary.
          */
-        makeEditable(opt_iframeSrc?: string): void;
+        makeEditable(opt_iframeSrc?: goog.html.TrustedResourceUrl): void;
         
         /**
          * Handles actually making something editable - creating necessary nodes,
          * injecting content, etc.
-         * @param {string=} opt_iframeSrc URL to set the iframe src to if necessary.
+         * @param {!goog.html.TrustedResourceUrl=} opt_iframeSrc URL to set the iframe
+         *     src to if necessary.
          * @protected
          */
-        makeEditableInternal(opt_iframeSrc?: string): void;
+        makeEditableInternal(opt_iframeSrc?: goog.html.TrustedResourceUrl): void;
         
         /**
          * Handle the loading of the field (e.g. once the field is ready to setup).
@@ -683,6 +670,7 @@ declare module goog.editor.Field {
         BLUR: EventType;
         BEFORETAB: EventType;
         IFRAME_RESIZED: EventType;
+        BEFORESELECTIONCHANGE: EventType;
         SELECTIONCHANGE: EventType;
     };
 

@@ -11,15 +11,17 @@ declare module goog.net {
      * @param {number=} opt_maxRetries Max. number of retries (Default: 1).
      * @param {goog.structs.Map=} opt_headers Map of default headers to add to every
      *     request.
-     * @param {number=} opt_minCount Min. number of objects (Default: 1).
+     * @param {number=} opt_minCount Min. number of objects (Default: 0).
      * @param {number=} opt_maxCount Max. number of objects (Default: 10).
      * @param {number=} opt_timeoutInterval Timeout (in ms) before aborting an
      *     attempt (Default: 0ms).
+     * @param {boolean=} opt_withCredentials Add credentials to every request
+     *     (Default: false).
      * @constructor
      * @extends {goog.events.EventTarget}
      */
     class XhrManager extends goog.events.EventTarget {
-        constructor(opt_maxRetries?: number, opt_headers?: goog.structs.Map<any, any>, opt_minCount?: number, opt_maxCount?: number, opt_timeoutInterval?: number);
+        constructor(opt_maxRetries?: number, opt_headers?: goog.structs.Map<any, any>, opt_minCount?: number, opt_maxCount?: number, opt_timeoutInterval?: number, opt_withCredentials?: boolean);
         
         /**
          * Sets the number of milliseconds after which an incomplete request will be
@@ -47,11 +49,13 @@ declare module goog.net {
         /**
          * Registers the given request to be sent. Throws an error if a request
          * already exists with the given ID.
-         * NOTE: It is not sent immediately. It is queued and will be sent when an
+         * NOTE: It is not sent immediately. It is buffered and will be sent when an
          * XhrIo object becomes available, taking into account the request's
-         * priority.
+         * priority. Note also that requests of equal priority are sent in an
+         * implementation specific order - to get FIFO queue semantics use a
+         * monotonically increasing priority for successive requests.
          * @param {string} id The id of the request.
-         * @param {string} url Uri to make the request too.
+         * @param {string} url Uri to make the request to.
          * @param {string=} opt_method Send method, default: GET.
          * @param {ArrayBuffer|ArrayBufferView|Blob|Document|FormData|string=}
          *     opt_content Post data.
@@ -65,9 +69,11 @@ declare module goog.net {
          *     should be retried.
          * @param {goog.net.XhrIo.ResponseType=} opt_responseType The response type of
          *     this request; defaults to goog.net.XhrIo.ResponseType.DEFAULT.
+         * @param {boolean=} opt_withCredentials Add credentials to this request,
+         *     default: false.
          * @return {!goog.net.XhrManager.Request} The queued request object.
          */
-        send(id: string, url: string, opt_method?: string, opt_content?: ArrayBuffer|ArrayBufferView|Blob|Document|FormData|string, opt_headers?: Object|goog.structs.Map<any, any>, opt_priority?: number, opt_callback?: Function, opt_maxRetries?: number, opt_responseType?: goog.net.XhrIo.ResponseType): goog.net.XhrManager.Request;
+        send(id: string, url: string, opt_method?: string, opt_content?: ArrayBuffer|ArrayBufferView|Blob|Document|FormData|string, opt_headers?: Object|goog.structs.Map<any, any>, opt_priority?: number, opt_callback?: Function, opt_maxRetries?: number, opt_responseType?: goog.net.XhrIo.ResponseType, opt_withCredentials?: boolean): goog.net.XhrManager.Request;
         
         /**
          * Aborts the request associated with id.
@@ -115,12 +121,14 @@ declare module goog.net.XhrManager {
      *     should be retried (Default: 1).
      * @param {goog.net.XhrIo.ResponseType=} opt_responseType The response type of
      *     this request; defaults to goog.net.XhrIo.ResponseType.DEFAULT.
+     * @param {boolean=} opt_withCredentials Add credentials to this request,
+     *     default: false.
      *
      * @constructor
      * @final
      */
     class Request {
-        constructor(url: string, xhrEventCallback: Function, opt_method?: string, opt_content?: ArrayBuffer|ArrayBufferView|Blob|Document|FormData|string, opt_headers?: Object|goog.structs.Map<any, any>, opt_callback?: Function, opt_maxRetries?: number, opt_responseType?: goog.net.XhrIo.ResponseType);
+        constructor(url: string, xhrEventCallback: Function, opt_method?: string, opt_content?: ArrayBuffer|ArrayBufferView|Blob|Document|FormData|string, opt_headers?: Object|goog.structs.Map<any, any>, opt_callback?: Function, opt_maxRetries?: number, opt_responseType?: goog.net.XhrIo.ResponseType, opt_withCredentials?: boolean);
         
         /**
          * Gets the uri.
@@ -146,6 +154,12 @@ declare module goog.net.XhrManager {
          * @return {Object|goog.structs.Map} The map of headers.
          */
         getHeaders(): Object|goog.structs.Map<any, any>;
+        
+        /**
+         * Gets the withCredentials flag.
+         * @return {boolean} Add credentials, or not.
+         */
+        getWithCredentials(): boolean;
         
         /**
          * Gets the maximum number of times the request should be retried.

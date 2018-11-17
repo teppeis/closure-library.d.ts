@@ -23,10 +23,11 @@ declare module goog.ui {
      * @param {Element|string=} opt_expandedHeader Element to use as the header when
      *     the zippy is expanded.
      * @param {goog.dom.DomHelper=} opt_domHelper An optional DOM helper.
+     * @param {goog.a11y.aria.Role<string>=} opt_role ARIA role, default TAB.
      * @constructor
      */
     class Zippy extends goog.events.EventTarget {
-        constructor(header: Element|string|void, opt_content?: Element|string|(() => Element), opt_expanded?: boolean, opt_expandedHeader?: Element|string, opt_domHelper?: goog.dom.DomHelper);
+        constructor(header: Element|string|void, opt_content?: Element|string|(() => Element), opt_expanded?: boolean, opt_expandedHeader?: Element|string, opt_domHelper?: goog.dom.DomHelper, opt_role?: goog.a11y.aria.Role<string>);
         
         /**
          * Constants for event names
@@ -41,9 +42,9 @@ declare module goog.ui {
         getAriaRole(): goog.a11y.aria.Role;
         
         /**
-         * @return {Element} The content element.
+         * @return {HTMLElement} The content element.
          */
-        getContentElement(): Element;
+        getContentElement(): HTMLElement;
         
         /**
          * @return {Element} The visible header element.
@@ -123,11 +124,12 @@ declare module goog.ui {
      * @param {string} type Event type.
      * @param {goog.ui.Zippy} target Zippy widget initiating event.
      * @param {boolean} expanded Expanded state.
+     * @param {!goog.events.BrowserEvent=} opt_triggeringEvent
      * @extends {goog.events.Event}
      * @constructor
      * @final
      */
     class ZippyEvent extends goog.events.Event {
-        constructor(type: string, target: goog.ui.Zippy, expanded: boolean);
+        constructor(type: string, target: goog.ui.Zippy, expanded: boolean, opt_triggeringEvent?: goog.events.BrowserEvent);
     }
 }

@@ -183,9 +183,9 @@ declare module goog.color {
     /**
      * Converts a hex representation of a color to HSL.
      * @param {string} hex Color to convert.
-     * @return {!goog.color.Hsv} hsv representation of the color.
+     * @return {!goog.color.Hsl} hsl representation of the color.
      */
-    function hexToHsl(hex: string): goog.color.Hsv;
+    function hexToHsl(hex: string): goog.color.Hsl;
 
     /**
      * Converts from h,s,l values to a hex string

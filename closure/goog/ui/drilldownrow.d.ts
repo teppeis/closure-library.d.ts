@@ -8,23 +8,15 @@ declare module goog.ui {
      * Builds a DrilldownRow component, which can overlay a tree
      * structure onto sections of an HTML table.
      *
-     * @param {Object=} opt_properties This parameter can contain:
-     *   contents:  if present, user data identifying
-     *     the information loaded into the row and its children.
-     *   loaded: initializes the isLoaded property, defaults to true.
-     *   expanded: DrilldownRow expanded or not, default is true.
-     *   html: String of HTML, relevant and required for DrilldownRows to be
-     *     added as children.  Ignored when decorating an existing table row.
-     *   decorator: Function that accepts one DrilldownRow argument, and
-     *     should customize and style the row.  The default is to call
-     *     goog.ui.DrilldownRow.decorator.
+     * @param {!goog.ui.DrilldownRow.DrilldownRowProperties=} opt_properties
+     *   Optional properties.
      * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper.
      * @constructor
      * @extends {goog.ui.Component}
      * @final
      */
     class DrilldownRow extends goog.ui.Component {
-        constructor(opt_properties?: Object, opt_domHelper?: goog.dom.DomHelper);
+        constructor(opt_properties?: goog.ui.DrilldownRow.DrilldownRowProperties, opt_domHelper?: goog.dom.DomHelper);
         
         /**
          * Example object with properties of the form accepted by the class
@@ -103,9 +95,30 @@ declare module goog.ui {
          * }
          *
          * These background images show whether the DrilldownRow is expanded.
-         *
          * @param {goog.ui.DrilldownRow} selfObj DrilldownRow to be decorated.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         static decorate(selfObj: goog.ui.DrilldownRow): void;
     }
+}
+
+declare module goog.ui.DrilldownRow {
+
+    /**
+     * Used to define properties for a new DrilldownRow. Properties can contain:
+     *   loaded: initializes the isLoaded property, defaults to true.
+     *   expanded: DrilldownRow expanded or not, default is true.
+     *   html: Relevant and required for DrilldownRows to be added as
+     *     children.  Ignored when decorating an existing table row.
+     *   decorator: Function that accepts one DrilldownRow argument, and
+     *     should customize and style the row.  The default is to call
+     *     goog.ui.DrilldownRow.decorator.
+     * @typedef {{
+     *   loaded: (boolean|undefined),
+     *   expanded: (boolean|undefined),
+     *   html: (!goog.html.SafeHtml|undefined),
+     *   decorator: (Function|undefined)
+     * }}
+     */
+    type DrilldownRowProperties = {loaded: boolean|void; expanded: boolean|void; html: goog.html.SafeHtml|void; decorator: Function|void};
 }

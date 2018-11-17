@@ -20,20 +20,6 @@ declare module goog.dom.pattern {
         constructor(pattern: goog.dom.pattern.AbstractPattern, opt_minimum?: number, opt_maximum?: number);
         
         /**
-         * Number of times the pattern has matched.
-         *
-         * @type {number}
-         */
-        count: number;
-        
-        /**
-         * The matched nodes.
-         *
-         * @type {Array<Node>}
-         */
-        matches: Array<Node>;
-        
-        /**
          * Test whether the given token continues a repeated series of matches of the
          * pattern given in the constructor.
          *

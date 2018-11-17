@@ -27,6 +27,7 @@ declare module goog.a11y.aria {
         AUTOCOMPLETE: State;
         BUSY: State;
         CHECKED: State;
+        COLINDEX: State;
         CONTROLS: State;
         DESCRIBEDBY: State;
         DISABLED: State;
@@ -50,6 +51,7 @@ declare module goog.a11y.aria {
         READONLY: State;
         RELEVANT: State;
         REQUIRED: State;
+        ROWINDEX: State;
         SELECTED: State;
         SETSIZE: State;
         SORT: State;

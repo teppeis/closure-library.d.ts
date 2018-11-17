@@ -2,7 +2,7 @@ declare module goog.promise {
 
     /**
      * Adapter for specifying Promise-creating functions to the Promises test suite.
-     * @type {!Object}
+     * @const
      */
-    var testSuiteAdapter: Object;
+    var testSuiteAdapter: any;
 }

@@ -17,6 +17,16 @@ declare module goog.userAgent.jscript {
     var VERSION: string;
 
     /**
+     * Initializer for goog.userAgent.jscript.  Detects if the user agent is using
+     * Microsoft JScript and which version of it.
+     *
+     * This is a named function so that it can be stripped via the jscompiler
+     * option for stripping types.
+     * @package
+     */
+    function init(): void;
+
+    /**
      * Whether the installed version of JScript is as new or newer than a given
      * version.
      * @param {string} version The version to check.

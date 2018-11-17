@@ -19,6 +19,7 @@ declare module goog.date {
      * @param {number=} opt_seconds UTC seconds, 0 - 59.
      * @param {number=} opt_milliseconds UTC milliseconds, 0 - 999.
      * @constructor
+     * @struct
      * @extends {goog.date.DateTime}
      */
     class UtcDateTime extends goog.date.DateTime {

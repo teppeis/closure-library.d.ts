@@ -38,7 +38,7 @@ declare module goog.dom {
         
         /**
          * Move to the next position in the selection.
-         * Throws {@code goog.iter.StopIteration} when it passes the end of the range.
+         * Throws `goog.iter.StopIteration` when it passes the end of the range.
          * @return {Node} The node at the next position.
          * @override
          */

@@ -11,8 +11,8 @@ declare module goog.ui.media {
      *
      * This class knows how to parse Vimeo URLs, and render the DOM structure
      * of vimeo video players. This class is meant to be used as a singleton static
-     * stateless class, that takes {@code goog.ui.media.Media} instances and renders
-     * it. It expects {@code goog.ui.media.Media.getModel} to return a well formed,
+     * stateless class, that takes `goog.ui.media.Media` instances and renders
+     * it. It expects `goog.ui.media.Media.getModel` to return a well formed,
      * previously constructed, vimeoId {@see goog.ui.media.Vimeo.parseUrl}, which is
      * the data model this renderer will use to construct the DOM structure.
      * {@see goog.ui.media.Vimeo.newControl} for a example of constructing a control
@@ -72,8 +72,8 @@ declare module goog.ui.media {
     }
 
     /**
-     * The {@code goog.ui.media.Vimeo} media data model. It stores a required
-     * {@code videoId} field, sets the vimeo URL, and allows a few optional
+     * The `goog.ui.media.Vimeo` media data model. It stores a required
+     * `videoId` field, sets the vimeo URL, and allows a few optional
      * parameters.
      *
      * @param {string} videoId The vimeo video id.
@@ -88,7 +88,7 @@ declare module goog.ui.media {
         constructor(videoId: string, opt_caption?: string, opt_description?: string, opt_autoplay?: boolean);
         
         /**
-         * Takes a {@code vimeoUrl} and extracts the video id.
+         * Takes a `vimeoUrl` and extracts the video id.
          *
          * @param {string} vimeoUrl A vimeo video URL.
          * @param {string=} opt_caption An optional caption of the vimeo video.
@@ -101,7 +101,7 @@ declare module goog.ui.media {
         static newInstance(vimeoUrl: string, opt_caption?: string, opt_description?: string, opt_autoplay?: boolean): goog.ui.media.VimeoModel;
         
         /**
-         * The opposite of {@code goog.ui.media.Vimeo.parseUrl}: it takes a videoId
+         * The opposite of `goog.ui.media.Vimeo.parseUrl`: it takes a videoId
          * and returns a vimeo URL.
          *
          * @param {string} videoId The vimeo video ID.
@@ -110,14 +110,14 @@ declare module goog.ui.media {
         static buildUrl(videoId: string): string;
         
         /**
-         * Builds a flash url from the vimeo {@code videoId}.
+         * Builds a flash url from the vimeo `videoId`.
          *
          * @param {string} videoId The vimeo video ID.
          * @param {boolean=} opt_autoplay Whether the flash movie should start playing
          *     as soon as it is shown, or if it should show a 'play' button.
-         * @return {string} The vimeo flash URL.
+         * @return {!goog.html.TrustedResourceUrl} The vimeo flash URL.
          */
-        static buildFlashUrl(videoId: string, opt_autoplay?: boolean): string;
+        static buildFlashUrl(videoId: string, opt_autoplay?: boolean): goog.html.TrustedResourceUrl;
         
         /**
          * Gets the Vimeo video id.

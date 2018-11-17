@@ -121,14 +121,6 @@ declare module goog.ui {
         
         /**
          * Sets tooltip message as HTML markup.
-         * using goog.html.SafeHtml are in place.
-         *
-         * @param {string} str HTML message to display in tooltip.
-         */
-        setHtml(str: string): void;
-        
-        /**
-         * Sets tooltip message as HTML markup.
          * @param {!goog.html.SafeHtml} html HTML message to display in tooltip.
          */
         setSafeHtml(html: goog.html.SafeHtml): void;
@@ -219,9 +211,9 @@ declare module goog.ui {
         /**
          * Called by timer from mouse out handler. Hides tooltip if cursor is still
          * outside element and tooltip, or if a child of tooltip has the focus.
-         * @param {Element} el Tooltip's anchor when hide timer was started.
+         * @param {?Element|undefined} el Tooltip's anchor when hide timer was started.
          */
-        maybeHide(el: Element): void;
+        maybeHide(el: Element|void): void;
         
         /**
          * @return {boolean} Whether tooltip element contains an active child tooltip,

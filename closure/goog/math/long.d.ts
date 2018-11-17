@@ -11,9 +11,9 @@ declare module goog.math {
      *
      * The internal representation of a long is the two given signed, 32-bit values.
      * We use 32-bit pieces because these are the size of integers on which
-     * Javascript performs bit-operations.  For operations like addition and
+     * JavaScript performs bit-operations.  For operations like addition and
      * multiplication, we split each number into 16-bit pieces, which can easily be
-     * multiplied within Javascript's floating-point representation without overflow
+     * multiplied within JavaScript's floating-point representation without overflow
      * or change in sign.
      *
      * In the algorithms below, we frequently reduce the negative case to the
@@ -32,21 +32,6 @@ declare module goog.math {
     class Long {
         constructor(low: number, high: number);
         
-        /** @type {!goog.math.Long} */
-        static ZERO: goog.math.Long;
-        
-        /** @type {!goog.math.Long} */
-        static ONE: goog.math.Long;
-        
-        /** @type {!goog.math.Long} */
-        static NEG_ONE: goog.math.Long;
-        
-        /** @type {!goog.math.Long} */
-        static MAX_VALUE: goog.math.Long;
-        
-        /** @type {!goog.math.Long} */
-        static MIN_VALUE: goog.math.Long;
-        
         /**
          * Returns a Long representing the given (32-bit) integer value.
          * @param {number} value The 32-bit integer in question.
@@ -55,8 +40,9 @@ declare module goog.math {
         static fromInt(value: number): goog.math.Long;
         
         /**
-         * Returns a Long representing the given value, provided that it is a finite
-         * number.  Otherwise, zero is returned.
+         * Returns a Long representing the given value.
+         * NaN will be returned as zero. Infinity is converted to max value and
+         * -Infinity to min value.
          * @param {number} value The number in question.
          * @return {!goog.math.Long} The corresponding Long value.
          */
@@ -80,11 +66,63 @@ declare module goog.math {
          */
         static fromString(str: string, opt_radix?: number): goog.math.Long;
         
+        /**
+         * Returns the boolean value of whether the input string is within a Long's
+         * range. Assumes an input string containing only numeric characters with an
+         * optional preceding '-'.
+         * @param {string} str The textual representation of the Long.
+         * @param {number=} opt_radix The radix in which the text is written.
+         * @return {boolean} Whether the string is within the range of a Long.
+         */
+        static isStringInRange(str: string, opt_radix?: number): boolean;
+        
+        /**
+         * @return {!goog.math.Long}
+         * @public
+         */
+        static getZero(): goog.math.Long;
+        
+        /**
+         * @return {!goog.math.Long}
+         * @public
+         */
+        static getOne(): goog.math.Long;
+        
+        /**
+         * @return {!goog.math.Long}
+         * @public
+         */
+        static getNegOne(): goog.math.Long;
+        
+        /**
+         * @return {!goog.math.Long}
+         * @public
+         */
+        static getMaxValue(): goog.math.Long;
+        
+        /**
+         * @return {!goog.math.Long}
+         * @public
+         */
+        static getMinValue(): goog.math.Long;
+        
+        /**
+         * @return {!goog.math.Long}
+         * @public
+         */
+        static getTwoPwr24(): goog.math.Long;
+        
         /** @return {number} The value, assuming it is a 32-bit integer. */
         toInt(): number;
         
         /** @return {number} The closest floating-point representation to this value. */
         toNumber(): number;
+        
+        /**
+         * @return {boolean} if can be exactly represented using number (i.e. abs(value)
+         *     < 2^53).
+         */
+        isSafeInteger(): boolean;
         
         /**
          * @param {number=} opt_radix The radix in which the text should be written.
@@ -232,6 +270,7 @@ declare module goog.math {
         
         /**
          * Returns this Long with bits shifted to the right by the given amount.
+         * The new leading bits match the current sign bit.
          * @param {number} numBits The number of bits by which to shift.
          * @return {!goog.math.Long} This shifted to the right by the given amount.
          */

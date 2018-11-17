@@ -10,15 +10,18 @@ declare module goog.fs {
      * are less useful for identifying where errors come from, so this includes a
      * large amount of metadata in the message.
      *
-     * @param {!DOMError} error
+     * @param {!DOMError|!goog.fs.DOMErrorLike} error
      * @param {string} action The action being undertaken when the error was raised.
      * @constructor
      * @extends {goog.debug.Error}
      * @final
      */
     class Error extends goog.debug.Error {
-        constructor(error: DOMError, action: string);
+        constructor(error: DOMError|goog.fs.DOMErrorLike, action: string);
     }
+
+    /** @record */
+    function DOMErrorLike(): void;
 }
 
 declare module goog.fs.Error {

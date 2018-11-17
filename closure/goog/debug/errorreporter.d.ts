@@ -25,19 +25,6 @@ declare module goog.debug {
         constructor(handlerUrl: string, opt_contextProvider?: (arg0: Error, arg1: {[index: string]: string}) => any, opt_noAutoProtect?: boolean);
         
         /**
-         * Installs exception protection for an entry point function in addition
-         * to those that are protected by default.
-         * Has no effect in IE because window.onerror is used for reporting
-         * exceptions in that case.
-         *
-         * @this {goog.debug.ErrorReporter}
-         * @param {Function} fn An entry point function to be protected.
-         * @return {Function} A protected wrapper function that calls the entry point
-         *     function or null if the entry point could not be protected.
-         */
-        protectAdditionalEntryPoint: any;
-        
-        /**
          * Installs an error reporter to catch all JavaScript errors raised.
          *
          * @param {string} loggingUrl The URL to which the errors caught will be
@@ -66,6 +53,19 @@ declare module goog.debug {
         static defaultXhrSender(uri: string, method: string, content: string, opt_headers?: Object|goog.structs.Map<any, any>): void;
         
         /**
+         * Installs exception protection for an entry point function in addition
+         * to those that are protected by default.
+         * Has no effect in IE because window.onerror is used for reporting
+         * exceptions in that case.
+         *
+         * @this {goog.debug.ErrorReporter}
+         * @param {Function} fn An entry point function to be protected.
+         * @return {Function} A protected wrapper function that calls the entry point
+         *     function or null if the entry point could not be protected.
+         */
+        protectAdditionalEntryPoint(fn: Function): Function;
+        
+        /**
          * Add headers to the logging url.
          * @param {Object|goog.structs.Map} loggingHeaders Extra headers to send
          *     to the logging URL.
@@ -89,6 +89,7 @@ declare module goog.debug {
          * @param {Object} e The exception.
          * @param {!Object<string, string>=} opt_context Context values to optionally
          *     include in the error report.
+         * @suppress {strictMissingProperties} error is not defined on Object
          */
         handleException(e: Object, opt_context?: {[index: string]: string}): void;
         

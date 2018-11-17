@@ -27,7 +27,7 @@ declare module goog.ui {
          * function must take two arguments:  an item and a Boolean to indicate whether
          * the item is to be selected or deselected.  Selection handler functions are
          * only needed if the items in the selection model don't natively support the
-         * {@code setSelected(Boolean)} interface.
+         * `setSelected(Boolean)` interface.
          * @param {Function} handler Selection handler function.
          */
         setSelectionHandler(handler: Function): void;
@@ -86,7 +86,7 @@ declare module goog.ui {
         addItemAt(item: Object, index: number): void;
         
         /**
-         * Removes the given item (if it exists).  Dispatches a {@code SELECT} event if
+         * Removes the given item (if it exists).  Dispatches a `SELECT` event if
          * the removed item was the currently selected item.
          * @param {Object} item Item to remove.
          */
@@ -110,7 +110,7 @@ declare module goog.ui {
         
         /**
          * Selects the given item, deselecting any previously selected item, and
-         * dispatches a {@code SELECT} event.
+         * dispatches a `SELECT` event.
          * @param {Object} item Item to select (null to clear the selection).
          */
         setSelectedItem(item: Object): void;
@@ -123,7 +123,7 @@ declare module goog.ui {
         
         /**
          * Selects the item at the given index, deselecting any previously selected
-         * item, and dispatches a {@code SELECT} event.
+         * item, and dispatches a `SELECT` event.
          * @param {number} index Index to select (-1 to clear the selection).
          */
         setSelectedIndex(index: number): void;

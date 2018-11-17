@@ -26,7 +26,7 @@ declare module goog.vec.Quaternion {
     /**
      * Creates a Float64 quaternion, initialized to zero.
      *
-     * @return {goog.vec.Quaternion.Float64} The new quaternion.
+     * @return {!goog.vec.Quaternion.Float64} The new quaternion.
      */
     function createFloat64(): goog.vec.Quaternion.Float64;
 
@@ -41,7 +41,7 @@ declare module goog.vec.Quaternion {
      * Creates a new Float32 quaternion initialized with the values from the
      * supplied array.
      *
-     * @param {goog.vec.AnyType} vec The source 4 element array.
+     * @param {!goog.vec.AnyType} vec The source 4 element array.
      * @return {!goog.vec.Quaternion.Float32} The new quaternion.
      */
     function createFloat32FromArray(vec: goog.vec.AnyType): goog.vec.Quaternion.Float32;
@@ -50,7 +50,7 @@ declare module goog.vec.Quaternion {
      * Creates a new Float64 quaternion initialized with the values from the
      * supplied array.
      *
-     * @param {goog.vec.AnyType} vec The source 4 element array.
+     * @param {!goog.vec.AnyType} vec The source 4 element array.
      * @return {!goog.vec.Quaternion.Float64} The new quaternion.
      */
     function createFloat64FromArray(vec: goog.vec.AnyType): goog.vec.Quaternion.Float64;
@@ -80,23 +80,37 @@ declare module goog.vec.Quaternion {
     /**
      * Creates a clone of the given Float32 quaternion.
      *
-     * @param {goog.vec.Quaternion.Float32} q The source quaternion.
-     * @return {goog.vec.Quaternion.Float32} The new quaternion.
+     * @param {!goog.vec.Quaternion.Float32} q The source quaternion.
+     * @return {!goog.vec.Quaternion.Float32} The new quaternion.
      */
     function cloneFloat32(q: goog.vec.Quaternion.Float32): goog.vec.Quaternion.Float32;
 
     /**
      * Creates a clone of the given Float64 quaternion.
      *
-     * @param {goog.vec.Quaternion.Float64} q The source quaternion.
-     * @return {goog.vec.Quaternion.Float64} The new quaternion.
+     * @param {!goog.vec.Quaternion.Float64} q The source quaternion.
+     * @return {!goog.vec.Quaternion.Float64} The new quaternion.
      */
     function cloneFloat64(q: goog.vec.Quaternion.Float64): goog.vec.Quaternion.Float64;
 
     /**
+     * Creates a Float32 quaternion, initialized to the identity.
+     *
+     * @return {!goog.vec.Quaternion.Float32} The new quaternion.
+     */
+    function createIdentityFloat32(): goog.vec.Quaternion.Float32;
+
+    /**
+     * Creates a Float64 quaternion, initialized to the identity.
+     *
+     * @return {!goog.vec.Quaternion.Float64} The new quaternion.
+     */
+    function createIdentityFloat64(): goog.vec.Quaternion.Float64;
+
+    /**
      * Initializes the quaternion with the given values.
      *
-     * @param {goog.vec.Quaternion.AnyType} q The quaternion to receive
+     * @param {!goog.vec.Quaternion.AnyType} q The quaternion to receive
      *     the values.
      * @param {number} v0 The value for element at index 0.
      * @param {number} v1 The value for element at index 1.
@@ -110,9 +124,9 @@ declare module goog.vec.Quaternion {
     /**
      * Initializes the quaternion with the given array of values.
      *
-     * @param {goog.vec.Quaternion.AnyType} q The quaternion to receive
+     * @param {!goog.vec.Quaternion.AnyType} q The quaternion to receive
      *     the values.
-     * @param {goog.vec.AnyType} values The array of values.
+     * @param {!goog.vec.AnyType} values The array of values.
      * @return {!goog.vec.Quaternion.AnyType} return q so that operations can be
      *     chained together.
      */
@@ -121,9 +135,9 @@ declare module goog.vec.Quaternion {
     /**
      * Adds the two quaternions.
      *
-     * @param {goog.vec.Quaternion.AnyType} quat0 The first addend.
-     * @param {goog.vec.Quaternion.AnyType} quat1 The second addend.
-     * @param {goog.vec.Quaternion.AnyType} resultQuat The quaternion to
+     * @param {!goog.vec.Quaternion.AnyType} quat0 The first addend.
+     * @param {!goog.vec.Quaternion.AnyType} quat1 The second addend.
+     * @param {!goog.vec.Quaternion.AnyType} resultQuat The quaternion to
      *     receive the result. May be quat0 or quat1.
      */
     function add(quat0: goog.vec.Quaternion.AnyType, quat1: goog.vec.Quaternion.AnyType, resultQuat: goog.vec.Quaternion.AnyType): void;
@@ -131,8 +145,8 @@ declare module goog.vec.Quaternion {
     /**
      * Negates a quaternion, storing the result into resultQuat.
      *
-     * @param {goog.vec.Quaternion.AnyType} quat0 The quaternion to negate.
-     * @param {goog.vec.Quaternion.AnyType} resultQuat The quaternion to
+     * @param {!goog.vec.Quaternion.AnyType} quat0 The quaternion to negate.
+     * @param {!goog.vec.Quaternion.AnyType} resultQuat The quaternion to
      *     receive the result. May be quat0.
      */
     function negate(quat0: goog.vec.Quaternion.AnyType, resultQuat: goog.vec.Quaternion.AnyType): void;
@@ -141,9 +155,9 @@ declare module goog.vec.Quaternion {
      * Multiplies each component of quat0 with scalar storing the product into
      * resultVec.
      *
-     * @param {goog.vec.Quaternion.AnyType} quat0 The source quaternion.
+     * @param {!goog.vec.Quaternion.AnyType} quat0 The source quaternion.
      * @param {number} scalar The value to multiply with each component of quat0.
-     * @param {goog.vec.Quaternion.AnyType} resultQuat The quaternion to
+     * @param {!goog.vec.Quaternion.AnyType} resultQuat The quaternion to
      *     receive the result. May be quat0.
      */
     function scale(quat0: goog.vec.Quaternion.AnyType, scalar: number, resultQuat: goog.vec.Quaternion.AnyType): void;
@@ -151,7 +165,7 @@ declare module goog.vec.Quaternion {
     /**
      * Returns the square magnitude of the given quaternion.
      *
-     * @param {goog.vec.Quaternion.AnyType} quat0 The quaternion.
+     * @param {!goog.vec.Quaternion.AnyType} quat0 The quaternion.
      * @return {number} The magnitude of the quaternion.
      */
     function magnitudeSquared(quat0: goog.vec.Quaternion.AnyType): number;
@@ -159,7 +173,7 @@ declare module goog.vec.Quaternion {
     /**
      * Returns the magnitude of the given quaternion.
      *
-     * @param {goog.vec.Quaternion.AnyType} quat0 The quaternion.
+     * @param {!goog.vec.Quaternion.AnyType} quat0 The quaternion.
      * @return {number} The magnitude of the quaternion.
      */
     function magnitude(quat0: goog.vec.Quaternion.AnyType): number;
@@ -167,9 +181,9 @@ declare module goog.vec.Quaternion {
     /**
      * Normalizes the given quaternion storing the result into resultVec.
      *
-     * @param {goog.vec.Quaternion.AnyType} quat0 The quaternion to
+     * @param {!goog.vec.Quaternion.AnyType} quat0 The quaternion to
      *     normalize.
-     * @param {goog.vec.Quaternion.AnyType} resultQuat The quaternion to
+     * @param {!goog.vec.Quaternion.AnyType} resultQuat The quaternion to
      *     receive the result. May be quat0.
      */
     function normalize(quat0: goog.vec.Quaternion.AnyType, resultQuat: goog.vec.Quaternion.AnyType): void;
@@ -177,20 +191,38 @@ declare module goog.vec.Quaternion {
     /**
      * Computes the dot (scalar) product of two quaternions.
      *
-     * @param {goog.vec.Quaternion.AnyType} q0 The first quaternion.
-     * @param {goog.vec.Quaternion.AnyType} q1 The second quaternion.
+     * @param {!goog.vec.Quaternion.AnyType} q0 The first quaternion.
+     * @param {!goog.vec.Quaternion.AnyType} q1 The second quaternion.
      * @return {number} The scalar product.
      */
     function dot(q0: goog.vec.Quaternion.AnyType, q1: goog.vec.Quaternion.AnyType): number;
 
     /**
-     * Computes the conjugate of the quaternion in quat storing the result into
+     * Computes the inverse of the quaternion in quat, storing the result into
      * resultQuat.
      *
-     * @param {goog.vec.Quaternion.AnyType} quat The source quaternion.
-     * @param {goog.vec.Quaternion.AnyType} resultQuat The quaternion to
+     * If the quaternion is already normalized, goog.vec.Quaternion.conjugate
+     * is faster than this function and produces the same result.
+     *
+     * @param {!goog.vec.Quaternion.AnyType} quat The quaternion to invert.
+     * @param {!goog.vec.Quaternion.AnyType} resultQuat The quaternion to receive
+     *     the result.
+     * @return {!goog.vec.Quaternion.AnyType} Return resultQuat so that
+     *     operations can be chained together.
+     */
+    function invert(quat: goog.vec.Quaternion.AnyType, resultQuat: goog.vec.Quaternion.AnyType): goog.vec.Quaternion.AnyType;
+
+    /**
+     * Computes the conjugate of the quaternion in quat, storing the result into
+     * resultQuat.
+     *
+     * If the quaternion is normalized already, this function is faster than
+     * goog.Quaternion.inverse and produces the same result.
+     *
+     * @param {!goog.vec.Quaternion.AnyType} quat The source quaternion.
+     * @param {!goog.vec.Quaternion.AnyType} resultQuat The quaternion to
      *     receive the result.
-     * @return {!goog.vec.Quaternion.AnyType} Return q so that
+     * @return {!goog.vec.Quaternion.AnyType} Return resultQuat so that
      *     operations can be chained together.
      */
     function conjugate(quat: goog.vec.Quaternion.AnyType, resultQuat: goog.vec.Quaternion.AnyType): goog.vec.Quaternion.AnyType;
@@ -198,14 +230,23 @@ declare module goog.vec.Quaternion {
     /**
      * Concatenates the two quaternions storing the result into resultQuat.
      *
-     * @param {goog.vec.Quaternion.AnyType} quat0 The first quaternion.
-     * @param {goog.vec.Quaternion.AnyType} quat1 The second quaternion.
-     * @param {goog.vec.Quaternion.AnyType} resultQuat The quaternion to
+     * @param {!goog.vec.Quaternion.AnyType} quat0 The first quaternion.
+     * @param {!goog.vec.Quaternion.AnyType} quat1 The second quaternion.
+     * @param {!goog.vec.Quaternion.AnyType} resultQuat The quaternion to
      *     receive the result.
-     * @return {!goog.vec.Quaternion.AnyType} Return q so that
+     * @return {!goog.vec.Quaternion.AnyType} Return resultQuat so that
      *     operations can be chained together.
      */
     function concat(quat0: goog.vec.Quaternion.AnyType, quat1: goog.vec.Quaternion.AnyType, resultQuat: goog.vec.Quaternion.AnyType): goog.vec.Quaternion.AnyType;
+
+    /**
+     * Makes the given quaternion the identity quaternion (0, 0, 0, 1).
+     *
+     * @param {!goog.vec.Quaternion.AnyType} quat The quaternion.
+     * @return {!goog.vec.Quaternion.AnyType} Return quat so that
+     *     operations can be chained together.
+     */
+    function makeIdentity(quat: goog.vec.Quaternion.AnyType): goog.vec.Quaternion.AnyType;
 
     /**
      * Generates a unit quaternion from the given angle-axis rotation pair.
@@ -213,11 +254,11 @@ declare module goog.vec.Quaternion {
      * have non-zero length.  The angle should be specified in radians.
      *
      * @param {number} angle The angle (in radians) to rotate about the axis.
-     * @param {goog.vec.Quaternion.AnyType} axis Unit vector specifying the
+     * @param {!goog.vec.Quaternion.AnyType} axis Unit vector specifying the
      *     axis of rotation.
-     * @param {goog.vec.Quaternion.AnyType} quat Unit quaternion to store the
+     * @param {!goog.vec.Quaternion.AnyType} quat Unit quaternion to store the
      *     result.
-     * @return {goog.vec.Quaternion.AnyType} Return q so that
+     * @return {!goog.vec.Quaternion.AnyType} Return quat so that
      *     operations can be chained together.
      */
     function fromAngleAxis(angle: number, axis: goog.vec.Quaternion.AnyType, quat: goog.vec.Quaternion.AnyType): goog.vec.Quaternion.AnyType;
@@ -230,8 +271,8 @@ declare module goog.vec.Quaternion {
      * is a non-zero length unit vector, and the returned angle is in
      * radians in the range of [-PI, +PI].
      *
-     * @param {goog.vec.Quaternion.AnyType} quat Unit quaternion to convert.
-     * @param {goog.vec.Quaternion.AnyType} axis Vector to store the returned
+     * @param {!goog.vec.Quaternion.AnyType} quat Unit quaternion to convert.
+     * @param {!goog.vec.Quaternion.AnyType} axis Vector to store the returned
      *     rotation axis.
      * @return {number} angle Angle (in radians) to rotate about 'axis'.
      *     The range of the returned angle is [-PI, +PI].
@@ -239,36 +280,111 @@ declare module goog.vec.Quaternion {
     function toAngleAxis(quat: goog.vec.Quaternion.AnyType, axis: goog.vec.Quaternion.AnyType): number;
 
     /**
-     * Generates the quaternion from the given rotation matrix.
+     * Generates the quaternion from the given 3x3 rotation matrix.
      *
-     * @param {goog.vec.Quaternion.AnyType} matrix The source matrix.
-     * @param {goog.vec.Quaternion.AnyType} quat The resulting quaternion.
-     * @return {!goog.vec.Quaternion.AnyType} Return q so that
+     * Perf: http://jsperf.com/conversion-of-3x3-matrix-to-quaternion
+     *       http://jsperf.com/goog-vec-fromrotationmatrix3-a
+     *
+     * @param {!goog.vec.AnyType} matrix The source matrix.
+     * @param {!goog.vec.Quaternion.AnyType} quat The resulting quaternion.
+     * @return {!goog.vec.Quaternion.AnyType} Return quat so that
      *     operations can be chained together.
      */
-    function fromRotationMatrix4(matrix: goog.vec.Quaternion.AnyType, quat: goog.vec.Quaternion.AnyType): goog.vec.Quaternion.AnyType;
+    function fromRotationMatrix3(matrix: goog.vec.AnyType, quat: goog.vec.Quaternion.AnyType): goog.vec.Quaternion.AnyType;
 
     /**
-     * Generates the rotation matrix from the given quaternion.
+     * Generates the quaternion from the given 4x4 rotation matrix.
      *
-     * @param {goog.vec.Quaternion.AnyType} quat The source quaternion.
-     * @param {goog.vec.AnyType} matrix The resulting matrix.
+     * Perf: http://jsperf.com/goog-vec-fromrotationmatrix4
+     *
+     * Implementation is the same as fromRotationMatrix3 but using indices from
+     * the top left 3x3 in a 4x4 matrix.
+     *
+     * @param {!goog.vec.AnyType} matrix The source matrix.
+     * @param {!goog.vec.Quaternion.AnyType} quat The resulting quaternion.
+     * @return {!goog.vec.Quaternion.AnyType} Return quat so that
+     *     operations can be chained together.
+     */
+    function fromRotationMatrix4(matrix: goog.vec.AnyType, quat: goog.vec.Quaternion.AnyType): goog.vec.Quaternion.AnyType;
+
+    /**
+     * Generates the 3x3 rotation matrix from the given quaternion.
+     *
+     * @param {!goog.vec.Quaternion.AnyType} quat The source quaternion.
+     * @param {!goog.vec.AnyType} matrix The resulting matrix.
+     * @return {!goog.vec.AnyType} Return resulting matrix so that
+     *     operations can be chained together.
+     */
+    function toRotationMatrix3(quat: goog.vec.Quaternion.AnyType, matrix: goog.vec.AnyType): goog.vec.AnyType;
+
+    /**
+     * Generates the 4x4 rotation matrix from the given quaternion.
+     *
+     * @param {!goog.vec.Quaternion.AnyType} quat The source quaternion.
+     * @param {!goog.vec.AnyType} matrix The resulting matrix.
      * @return {!goog.vec.AnyType} Return resulting matrix so that
      *     operations can be chained together.
      */
     function toRotationMatrix4(quat: goog.vec.Quaternion.AnyType, matrix: goog.vec.AnyType): goog.vec.AnyType;
 
     /**
+     * Rotates a quaternion by the given angle about the X axis.
+     *
+     * @param {!goog.vec.Quaternion.AnyType} quat The quaternion.
+     * @param {number} angle The angle in radians.
+     * @param {!goog.vec.Quaternion.AnyType} resultQuat The quaternion to
+     *     receive the result.
+     * @return {!goog.vec.Quaternion.AnyType} Return resultQuat so that
+     *     operations can be chained together.
+     */
+    function rotateX(quat: goog.vec.Quaternion.AnyType, angle: number, resultQuat: goog.vec.Quaternion.AnyType): goog.vec.Quaternion.AnyType;
+
+    /**
+     * Rotates a quaternion by the given angle about the Y axis.
+     *
+     * @param {!goog.vec.Quaternion.AnyType} quat The quaternion.
+     * @param {number} angle The angle in radians.
+     * @param {!goog.vec.Quaternion.AnyType} resultQuat The quaternion to
+     *     receive the result.
+     * @return {!goog.vec.Quaternion.AnyType} Return resultQuat so that
+     *     operations can be chained together.
+     */
+    function rotateY(quat: goog.vec.Quaternion.AnyType, angle: number, resultQuat: goog.vec.Quaternion.AnyType): goog.vec.Quaternion.AnyType;
+
+    /**
+     * Rotates a quaternion by the given angle about the Z axis.
+     *
+     * @param {!goog.vec.Quaternion.AnyType} quat The quaternion.
+     * @param {number} angle The angle in radians.
+     * @param {!goog.vec.Quaternion.AnyType} resultQuat The quaternion to
+     *     receive the result.
+     * @return {!goog.vec.Quaternion.AnyType} Return resultQuat so that
+     *     operations can be chained together.
+     */
+    function rotateZ(quat: goog.vec.Quaternion.AnyType, angle: number, resultQuat: goog.vec.Quaternion.AnyType): goog.vec.Quaternion.AnyType;
+
+    /**
+     * Transforms a vec with a quaternion. Works on both vec3s and vec4s.
+     *
+     * @param {!goog.vec.AnyType} vec The vec to transform.
+     * @param {!goog.vec.Quaternion.AnyType} quat The quaternion.
+     * @param {!goog.vec.AnyType} resultVec The vec to receive the result.
+     * @return {!goog.vec.AnyType} Return resultVec so that operations can be
+     *     chained together. Note that the caller is responsible for type-casting.
+     */
+    function transformVec(vec: goog.vec.AnyType, quat: goog.vec.Quaternion.AnyType, resultVec: goog.vec.AnyType): goog.vec.AnyType;
+
+    /**
      * Computes the spherical linear interpolated value from the given quaternions
      * q0 and q1 according to the coefficient t. The resulting quaternion is stored
      * in resultQuat.
      *
-     * @param {goog.vec.Quaternion.AnyType} q0 The first quaternion.
-     * @param {goog.vec.Quaternion.AnyType} q1 The second quaternion.
+     * @param {!goog.vec.Quaternion.AnyType} q0 The first quaternion.
+     * @param {!goog.vec.Quaternion.AnyType} q1 The second quaternion.
      * @param {number} t The interpolating coefficient.
-     * @param {goog.vec.Quaternion.AnyType} resultQuat The quaternion to
+     * @param {!goog.vec.Quaternion.AnyType} resultQuat The quaternion to
      *     receive the result.
-     * @return {goog.vec.Quaternion.AnyType} Return q so that
+     * @return {!goog.vec.Quaternion.AnyType} Return resultQuat so that
      *     operations can be chained together.
      */
     function slerp(q0: goog.vec.Quaternion.AnyType, q1: goog.vec.Quaternion.AnyType, t: number, resultQuat: goog.vec.Quaternion.AnyType): goog.vec.Quaternion.AnyType;
@@ -278,10 +394,10 @@ declare module goog.vec.Quaternion {
      * according to the coefficient t. The resulting quaternion is stored in
      * resultVec.
      *
-     * @param {goog.vec.Quaternion.AnyType} q0 The first quaternion.
-     * @param {goog.vec.Quaternion.AnyType} q1 The second quaternion.
+     * @param {!goog.vec.Quaternion.AnyType} q0 The first quaternion.
+     * @param {!goog.vec.Quaternion.AnyType} q1 The second quaternion.
      * @param {number} t The interpolation factor.
-     * @param {goog.vec.Quaternion.AnyType} resultQuat The quaternion to
+     * @param {!goog.vec.Quaternion.AnyType} resultQuat The quaternion to
      *     receive the results (may be q0 or q1).
      */
     function nlerp(q0: goog.vec.Quaternion.AnyType, q1: goog.vec.Quaternion.AnyType, t: number, resultQuat: goog.vec.Quaternion.AnyType): void;

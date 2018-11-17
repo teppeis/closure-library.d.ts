@@ -78,7 +78,6 @@ declare module goog.ui {
          * Sets a timer to show the submenu and then dispatches an ENTER event to the
          * parent menu.
          * @param {goog.events.BrowserEvent} e Mouse event to handle.
-         * @protected
          */
         handleMouseOver(e: goog.events.BrowserEvent): void;
         

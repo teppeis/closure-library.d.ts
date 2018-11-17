@@ -14,6 +14,7 @@ declare module goog.fx {
      * @throws Error If no element argument is provided or if the type is invalid
      * @extends {goog.fx.AbstractDragDrop}
      * @constructor
+     * @struct
      */
     class DragDrop extends goog.fx.AbstractDragDrop {
         constructor(element: Element|string, opt_data?: Object);

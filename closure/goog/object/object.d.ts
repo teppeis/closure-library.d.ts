@@ -5,12 +5,26 @@ declare module goog {
 declare module goog.object {
 
     /**
+     * Whether two values are not observably distinguishable. This
+     * correctly detects that 0 is not the same as -0 and two NaNs are
+     * practically equivalent.
+     *
+     * The implementation is as suggested by harmony:egal proposal.
+     *
+     * @param {*} v The first value to compare.
+     * @param {*} v2 The second value to compare.
+     * @return {boolean} Whether two values are not observably distinguishable.
+     * @see http://wiki.ecmascript.org/doku.php?id=harmony:egal
+     */
+    function is(v: any, v2: any): boolean;
+
+    /**
      * Calls a function for each element in an object/map/hash.
      *
      * @param {Object<K,V>} obj The object over which to iterate.
      * @param {function(this:T,V,?,Object<K,V>):?} f The function to call
-     *     for every element. This function takes 3 arguments (the element, the
-     *     index and the object) and the return value is ignored.
+     *     for every element. This function takes 3 arguments (the value, the
+     *     key and the object) and the return value is ignored.
      * @param {T=} opt_obj This is used as the 'this' object within f.
      * @template T,K,V
      */
@@ -23,7 +37,7 @@ declare module goog.object {
      * @param {Object<K,V>} obj The object over which to iterate.
      * @param {function(this:T,V,?,Object<K,V>):boolean} f The function to call
      *     for every element. This
-     *     function takes 3 arguments (the element, the index and the object)
+     *     function takes 3 arguments (the value, the key and the object)
      *     and should return a boolean. If the return value is true the
      *     element is added to the result object. If it is false the
      *     element is not included.
@@ -41,7 +55,7 @@ declare module goog.object {
      * @param {Object<K,V>} obj The object over which to iterate.
      * @param {function(this:T,V,?,Object<K,V>):R} f The function to call
      *     for every element. This function
-     *     takes 3 arguments (the element, the index and the object)
+     *     takes 3 arguments (the value, the key and the object)
      *     and should return something. The result will be inserted
      *     into a new object.
      * @param {T=} opt_obj This is used as the 'this' object within f.
@@ -58,7 +72,7 @@ declare module goog.object {
      * @param {Object<K,V>} obj The object to check.
      * @param {function(this:T,V,?,Object<K,V>):boolean} f The function to
      *     call for every element. This function
-     *     takes 3 arguments (the element, the index and the object) and should
+     *     takes 3 arguments (the value, the key and the object) and should
      *     return a boolean.
      * @param {T=} opt_obj This is used as the 'this' object within f.
      * @return {boolean} true if any element passes the test.
@@ -74,7 +88,7 @@ declare module goog.object {
      * @param {Object<K,V>} obj The object to check.
      * @param {?function(this:T,V,?,Object<K,V>):boolean} f The function to
      *     call for every element. This function
-     *     takes 3 arguments (the element, the index and the object) and should
+     *     takes 3 arguments (the value, the key and the object) and should
      *     return a boolean.
      * @param {T=} opt_obj This is used as the 'this' object within f.
      * @return {boolean} false if any element fails the test.
@@ -146,19 +160,20 @@ declare module goog.object {
      * Example usage: getValueByKeys(jsonObj, 'foo', 'entries', 3)
      *
      * @param {!Object} obj An object to get the value from.  Can be array-like.
-     * @param {...(string|number|!Array<number|string>)} var_args A number of keys
+     * @param {...(string|number|!IArrayLike<number|string>)}
+     *     var_args A number of keys
      *     (as strings, or numbers, for array-like objects).  Can also be
      *     specified as a single array of keys.
      * @return {*} The resulting value.  If, at any point, the value for a key
-     *     is undefined, returns undefined.
+     *     in the current object is null or undefined, returns undefined.
      */
-    function getValueByKeys(obj: Object, ...var_args: (string|number|Array<number|string>)[]): any;
+    function getValueByKeys(obj: Object, ...var_args: (string|number|IArrayLike<number|string>)[]): any;
 
     /**
      * Whether the object/map/hash contains the given key.
      *
      * @param {Object} obj The object in which to look for key.
-     * @param {*} key The key for which to check.
+     * @param {?} key The key for which to check.
      * @return {boolean} true If the map contains the key.
      */
     function containsKey(obj: Object, key: any): boolean;
@@ -220,7 +235,7 @@ declare module goog.object {
      * Removes a key-value pair based on the key.
      *
      * @param {Object} obj The object from which to remove the key.
-     * @param {*} key The key to remove.
+     * @param {?} key The key to remove.
      * @return {boolean} Whether an element was removed.
      */
     function remove(obj: Object, key: any): boolean;
@@ -296,7 +311,7 @@ declare module goog.object {
     function equals<K, V>(a: {[index: string]: V}, b: {[index: string]: V}): boolean;
 
     /**
-     * Does a flat clone of the object.
+     * Returns a shallow clone of the object.
      *
      * @param {Object<K,V>} obj Object to clone.
      * @return {!Object<K,V>} Clone of the input object.
@@ -315,10 +330,11 @@ declare module goog.object {
      * <code>goog.object.unsafeClone</code> is unaware of unique identifiers, and
      * copies UIDs created by <code>getUid</code> into cloned results.
      *
-     * @param {*} obj The value to clone.
-     * @return {*} A clone of the input value.
+     * @param {T} obj The value to clone.
+     * @return {T} A clone of the input value.
+     * @template T
      */
-    function unsafeClone(obj: any): any;
+    function unsafeClone<T>(obj: T): T;
 
     /**
      * Returns a new object in which all the keys and values are interchanged
@@ -343,15 +359,16 @@ declare module goog.object {
      *
      * @param {Object} target The object to modify. Existing properties will be
      *     overwritten if they are also present in one of the objects in
-     *     {@code var_args}.
-     * @param {...Object} var_args The objects from which values will be copied.
+     *     `var_args`.
+     * @param {...(Object|null|undefined)} var_args The objects from which values
+     *     will be copied.
      */
-    function extend(target: Object, ...var_args: Object[]): void;
+    function extend(target: Object, ...var_args: (Object|void|void)[]): void;
 
     /**
      * Creates a new object built from the key-value pairs provided as arguments.
      * @param {...*} var_args If only one argument is provided and it is an array
-     *     then this is used as the arguments,  otherwise even arguments are used as
+     *     then this is used as the arguments, otherwise even arguments are used as
      *     the property names and odd arguments are used as the property values.
      * @return {!Object} The new object.
      * @throws {Error} If there are uneven number of arguments or there is only one
@@ -363,7 +380,7 @@ declare module goog.object {
      * Creates a new object where the property names come from the arguments but
      * the value is always set to true
      * @param {...*} var_args If only one argument is provided and it is an array
-     *     then this is used as the arguments,  otherwise the arguments are used
+     *     then this is used as the arguments, otherwise the arguments are used
      *     as the property names.
      * @return {!Object} The new object.
      */
@@ -388,4 +405,21 @@ declare module goog.object {
      * @return {boolean} Whether this is an immutable view of the object.
      */
     function isImmutableView(obj: Object): boolean;
+
+    /**
+     * Get all properties names on a given Object regardless of enumerability.
+     *
+     * <p> If the browser does not support `Object.getOwnPropertyNames` nor
+     * `Object.getPrototypeOf` then this is equivalent to using
+     * `goog.object.getKeys`
+     *
+     * @param {?Object} obj The object to get the properties of.
+     * @param {boolean=} opt_includeObjectPrototype Whether properties defined on
+     *     `Object.prototype` should be included in the result.
+     * @param {boolean=} opt_includeFunctionPrototype Whether properties defined on
+     *     `Function.prototype` should be included in the result.
+     * @return {!Array<string>}
+     * @public
+     */
+    function getAllPropertyNames(obj: Object, opt_includeObjectPrototype?: boolean, opt_includeFunctionPrototype?: boolean): Array<string>;
 }

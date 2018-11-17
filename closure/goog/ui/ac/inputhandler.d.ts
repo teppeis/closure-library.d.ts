@@ -89,7 +89,7 @@ declare module goog.ui.ac {
          * should be a textarea, input box, or other focusable element with the
          * same interface.
          * @param {Element|goog.events.EventTarget} target An element to attach the
-         *     input handler too.
+         *     input handler to.
          */
         attachInput(target: Element|goog.events.EventTarget): void;
         
@@ -114,12 +114,12 @@ declare module goog.ui.ac {
         
         /**
          * Selects the given row.  Implements the SelectionHandler interface.
-         * @param {Object} row The row to select.
+         * @param {?} row The row to select.
          * @param {boolean=} opt_multi Should this be treated as a single or multi-token
          *     auto-complete?  Overrides previous setting of opt_multi on constructor.
          * @return {boolean} Whether to suppress the update event.
          */
-        selectRow(row: Object, opt_multi?: boolean): boolean;
+        selectRow(row: any, opt_multi?: boolean): boolean;
         
         /**
          * Sets the text of the current token without updating the autocomplete
@@ -165,9 +165,19 @@ declare module goog.ui.ac {
          * Sets the regular expression used to trim the tokens before passing them to
          * the matcher:  every substring that matches the given regular expression will
          * be removed.  This can also be set to null to disable trimming.
-         * @param {RegExp} trimmer Regexp to use for trimming or null to disable it.
+         * @param {?RegExp} trimmer Regexp to use for trimming or null to disable it.
          */
         setTrimmingRegExp(trimmer: RegExp): void;
+        
+        /**
+         * Sets the regular expression used to check whether the replacement (used to
+         * update the text area after a row is selected) ends with a separator. This can
+         * be set to null if the input handler should never automatically append a
+         * separator to the replacement string.
+         * @param {?RegExp} separatorCheck Regexp to use for checking whether the
+         *     replacement ends with a separator.
+         */
+        setEndsWithSeparatorRegExp(separatorCheck: RegExp): void;
         
         /**
          * Sets whether we will prevent the default input behavior (moving focus to the

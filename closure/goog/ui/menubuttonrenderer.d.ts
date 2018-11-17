@@ -48,6 +48,7 @@ declare module goog.ui {
          * Takes a text caption or existing DOM structure, and returns the content and
          * a dropdown arrow element wrapped in a pseudo-rounded-corner box.  Creates
          * the following DOM structure:
+         *
          *    <div class="goog-inline-block goog-menu-button-outer-box">
          *      <div class="goog-inline-block goog-menu-button-inner-box">
          *        <div class="goog-inline-block goog-menu-button-caption">
@@ -58,6 +59,7 @@ declare module goog.ui {
          *        </div>
          *      </div>
          *    </div>
+         *
          * @param {goog.ui.ControlContent} content Text caption or DOM structure
          *     to wrap in a box.
          * @param {goog.dom.DomHelper} dom DOM helper, used for document interaction.
@@ -69,9 +71,11 @@ declare module goog.ui {
         /**
          * Takes a text caption or existing DOM structure, and returns it wrapped in
          * an appropriately-styled DIV.  Creates the following DOM structure:
+         *
          *    <div class="goog-inline-block goog-menu-button-caption">
          *      Contents...
          *    </div>
+         *
          * @param {goog.ui.ControlContent} content Text caption or DOM structure
          *     to wrap in a box.
          * @param {goog.dom.DomHelper} dom DOM helper, used for document interaction.
@@ -82,9 +86,11 @@ declare module goog.ui {
         /**
          * Takes a text caption or existing DOM structure, and returns it wrapped in
          * an appropriately-styled DIV.  Creates the following DOM structure:
+         *
          *    <div class="goog-inline-block goog-menu-button-caption">
          *      Contents...
          *    </div>
+         *
          * @param {goog.ui.ControlContent} content Text caption or DOM structure
          *     to wrap in a box.
          * @param {string} cssClass The CSS class for the renderer.
@@ -96,9 +102,11 @@ declare module goog.ui {
         /**
          * Returns an appropriately-styled DIV containing a dropdown arrow element.
          * Creates the following DOM structure:
+         *
          *    <div class="goog-inline-block goog-menu-button-dropdown">
          *      &nbsp;
          *    </div>
+         *
          * @param {goog.dom.DomHelper} dom DOM helper, used for document interaction.
          * @return {Element} Dropdown element.
          */

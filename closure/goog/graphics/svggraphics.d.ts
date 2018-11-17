@@ -208,22 +208,7 @@ declare module goog.graphics {
         createGroup(opt_group?: goog.graphics.GroupElement): goog.graphics.GroupElement;
         
         /**
-         * Measure and return the width (in pixels) of a given text string.
-         * Text measurement is needed to make sure a text can fit in the allocated area.
-         * The way text length is measured is by writing it into a div that is after
-         * the visible area, measure the div width, and immediatly erase the written
-         * value.
-         *
-         * @param {string} text The text string to measure.
-         * @param {goog.graphics.Font} font The font object describing the font style.
-         *
-         * @return {number} The width in pixels of the text strings.
-         * @override
-         */
-        getTextWidth(text: string, font: goog.graphics.Font): number;
-        
-        /**
-         * Adds a defintion of an element to the global definitions.
+         * Adds a definition of an element to the global definitions.
          * @param {string} defKey This is a key that should be unique in a way that
          *     if two definitions are equal the should have the same key.
          * @param {Element} defElement DOM element to add as a definition. It must

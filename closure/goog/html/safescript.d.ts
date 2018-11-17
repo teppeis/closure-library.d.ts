@@ -11,7 +11,7 @@ declare module goog.html {
      * in a browser.
      *
      * Instances of this type must be created via the factory method
-     * {@code goog.html.SafeScript.fromConstant} and not by invoking its
+     * `goog.html.SafeScript.fromConstant` and not by invoking its
      * constructor. The constructor intentionally takes no parameters and the type
      * is immutable; hence only a default instance corresponding to the empty string
      * can be obtained via constructor invocation.
@@ -33,7 +33,7 @@ declare module goog.html {
      * always be forbidden or JavaScript escaped in user controlled input. For
      * example, if {@code &lt;/script&gt;&lt;script&gt;evil&lt;/script&gt;"} were
      * interpolated inside a JavaScript string, it would break out of the context
-     * of the original script element and {@code evil} would execute. Also note
+     * of the original script element and `evil` would execute. Also note
      * that within an HTML script (raw text) element, HTML character references,
      * such as "&lt;" are not allowed. See
      * http://www.w3.org/TR/html5/scripting-1.html#restrictions-for-contents-of-script-elements.
@@ -59,9 +59,40 @@ declare module goog.html {
          * @param {!goog.string.Const} script A compile-time-constant string from which
          *     to create a SafeScript.
          * @return {!goog.html.SafeScript} A SafeScript object initialized to
-         *     {@code script}.
+         *     `script`.
          */
         static fromConstant(script: goog.string$.Const): goog.html.SafeScript;
+        
+        /**
+         * Creates a SafeScript from a compile-time constant string but with arguments
+         * that can vary at run-time. The code argument should be formatted as an
+         * inline function (see example below). The arguments will be JSON-encoded and
+         * provided as input to the function specified in code.
+         *
+         * Example Usage:
+         *
+         *     let safeScript = SafeScript.fromConstantAndArgs(
+         *         Const.from('function(arg1, arg2) { doSomething(arg1, arg2); }'),
+         *         arg1,
+         *         arg2);
+         *
+         * This produces a SafeScript equivalent to the following:
+         *
+         *     (function(arg1, arg2) { doSomething(arg1, arg2); })("value1", "value2");
+         *
+         * @param {!goog.string.Const} code
+         * @param {...*} var_args
+         * @return {!goog.html.SafeScript}
+         */
+        static fromConstantAndArgs(code: goog.string$.Const, ...var_args: any[]): goog.html.SafeScript;
+        
+        /**
+         * Creates a SafeScript JSON representation from anything that could be passed
+         * to JSON.stringify.
+         * @param {*} val
+         * @return {!goog.html.SafeScript}
+         */
+        static fromJson(val: any): goog.html.SafeScript;
         
         /**
          * Performs a runtime check that the provided object is indeed a
@@ -69,9 +100,9 @@ declare module goog.html {
          *
          * @param {!goog.html.SafeScript} safeScript The object to extract from.
          * @return {string} The safeScript object's contained string, unless
-         *     the run-time type check fails. In that case, {@code unwrap} returns an
+         *     the run-time type check fails. In that case, `unwrap` returns an
          *     innocuous string, or, if assertions are enabled, throws
-         *     {@code goog.asserts.AssertionError}.
+         *     `goog.asserts.AssertionError`.
          */
         static unwrap(safeScript: goog.html.SafeScript): string;
         

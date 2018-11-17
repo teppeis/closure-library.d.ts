@@ -40,7 +40,7 @@ declare module goog.dom {
         getDocument(): Document;
         
         /**
-         * Alias for {@code getElementById}. If a DOM node is passed in then we just
+         * Alias for `getElementById`. If a DOM node is passed in then we just
          * return that.
          * @param {string|Element} element Element ID or a DOM node.
          * @return {Element} The element with the given ID, or the node passed in.
@@ -59,7 +59,7 @@ declare module goog.dom {
         getRequiredElement(id: string): Element;
         
         /**
-         * Alias for {@code getElement}.
+         * Alias for `getElement`.
          * @param {string|Element} element Element ID or a DOM node.
          * @return {Element} The element with the given ID, or the node passed in.
          * @deprecated Use {@link goog.dom.DomHelper.prototype.getElement} instead.
@@ -67,29 +67,63 @@ declare module goog.dom {
         $(element: string|Element): Element;
         
         /**
+         * Gets elements by tag name.
+         * @param {!goog.dom.TagName<T>} tagName
+         * @param {(!Document|!Element)=} opt_parent Parent element or document where to
+         *     look for elements. Defaults to document of this DomHelper.
+         * @return {!NodeList<R>} List of elements. The members of the list are
+         *     {!Element} if tagName is not a member of goog.dom.TagName or more
+         *     specific types if it is (e.g. {!HTMLAnchorElement} for
+         *     goog.dom.TagName.A).
+         * @template T
+         * @template R := cond(isUnknown(T), 'Element', T) =:
+         */
+        getElementsByTagName<T>(tagName: goog.dom.TagName<T>, opt_parent?: Document|Element): NodeListOf<R>;
+        
+        /**
          * Looks up elements by both tag and class name, using browser native functions
-         * ({@code querySelectorAll}, {@code getElementsByTagName} or
-         * {@code getElementsByClassName}) where possible. The returned array is a live
+         * (`querySelectorAll`, `getElementsByTagName` or
+         * `getElementsByClassName`) where possible. The returned array is a live
          * NodeList or a static list depending on the code path taken.
          *
          * @see goog.dom.query
          *
-         * @param {?string=} opt_tag Element tag name or * for all tags.
+         * @param {(string|?goog.dom.TagName<T>)=} opt_tag Element tag name or * for all
+         *     tags.
          * @param {?string=} opt_class Optional class name.
          * @param {(Document|Element)=} opt_el Optional element to look in.
-         * @return { {length: number} } Array-like list of elements (only a length
-         *     property and numerical indices are guaranteed to exist).
+         * @return {!IArrayLike<R>} Array-like list of elements (only a length property
+         *     and numerical indices are guaranteed to exist). The members of the array
+         *     are {!Element} if opt_tag is not a member of goog.dom.TagName or more
+         *     specific types if it is (e.g. {!HTMLAnchorElement} for
+         *     goog.dom.TagName.A).
+         * @template T
+         * @template R := cond(isUnknown(T), 'Element', T) =:
          */
-        getElementsByTagNameAndClass(opt_tag?: string, opt_class?: string, opt_el?: Document|Element): {length: number};
+        getElementsByTagNameAndClass<T>(opt_tag?: string|goog.dom.TagName<T>, opt_class?: string, opt_el?: Document|Element): IArrayLike<R>;
+        
+        /**
+         * Gets the first element matching the tag and the class.
+         *
+         * @param {(string|?goog.dom.TagName<T>)=} opt_tag Element tag name.
+         * @param {?string=} opt_class Optional class name.
+         * @param {(Document|Element)=} opt_el Optional element to look in.
+         * @return {?R} Reference to a DOM node. The return type is {?Element} if
+         *     tagName is a string or a more specific type if it is a member of
+         *     goog.dom.TagName (e.g. {?HTMLAnchorElement} for goog.dom.TagName.A).
+         * @template T
+         * @template R := cond(isUnknown(T), 'Element', T) =:
+         */
+        getElementByTagNameAndClass<T>(opt_tag?: string|goog.dom.TagName<T>, opt_class?: string, opt_el?: Document|Element): R;
         
         /**
          * Returns an array of all the elements with the provided className.
          * @see {goog.dom.query}
          * @param {string} className the name of the class to look for.
          * @param {Element|Document=} opt_el Optional element to look in.
-         * @return { {length: number} } The items found with the class name provided.
+         * @return {!IArrayLike<!Element>} The items found with the class name provided.
          */
-        getElementsByClass(className: string, opt_el?: Element|Document): {length: number};
+        getElementsByClass(className: string, opt_el?: Element|Document): IArrayLike<Element>;
         
         /**
          * Returns the first element we find matching the provided class name.
@@ -113,17 +147,22 @@ declare module goog.dom {
         getRequiredElementByClass(className: string, opt_root?: Element|Document): Element;
         
         /**
-         * Alias for {@code getElementsByTagNameAndClass}.
+         * Alias for `getElementsByTagNameAndClass`.
          * @deprecated Use DomHelper getElementsByTagNameAndClass.
          * @see goog.dom.query
          *
-         * @param {?string=} opt_tag Element tag name.
+         * @param {(string|?goog.dom.TagName<T>)=} opt_tag Element tag name.
          * @param {?string=} opt_class Optional class name.
          * @param {Element=} opt_el Optional element to look in.
-         * @return { {length: number} } Array-like list of elements (only a length
-         *     property and numerical indices are guaranteed to exist).
+         * @return {!IArrayLike<R>} Array-like list of elements (only a length property
+         *     and numerical indices are guaranteed to exist). The members of the array
+         *     are {!Element} if opt_tag is a string or more specific types if it is
+         *     a member of goog.dom.TagName (e.g. {!HTMLAnchorElement} for
+         *     goog.dom.TagName.A).
+         * @template T
+         * @template R := cond(isUnknown(T), 'Element', T) =:
          */
-        $$(opt_tag?: string, opt_class?: string, opt_el?: Element): {length: number};
+        $$<T>(opt_tag?: string|goog.dom.TagName<T>, opt_class?: string, opt_el?: Element): IArrayLike<R>;
         
         /**
          * Sets a number of properties on a node.
@@ -153,46 +192,61 @@ declare module goog.dom {
          * first node as childNodes.
          *
          * So:
-         * <code>createDom('div', null, createDom('p'), createDom('p'));</code>
-         * would return a div with two child paragraphs
+         * <code>createDom(goog.dom.TagName.DIV, null, createDom(goog.dom.TagName.P),
+         * createDom(goog.dom.TagName.P));</code> would return a div with two child
+         * paragraphs
          *
          * An easy way to move all child nodes of an existing element to a new parent
          * element is:
-         * <code>createDom('div', null, oldElement.childNodes);</code>
+         * <code>createDom(goog.dom.TagName.DIV, null, oldElement.childNodes);</code>
          * which will remove all child nodes from the old element and add them as
          * child nodes of the new DIV.
          *
-         * @param {string} tagName Tag to create.
-         * @param {Object|string=} opt_attributes If object, then a map of name-value
-         *     pairs for attributes. If a string, then this is the className of the new
-         *     element.
-         * @param {...goog.dom.Appendable} var_args Further DOM nodes or
+         * @param {string|!goog.dom.TagName<T>} tagName Tag to create.
+         * @param {?Object|?Array<string>|string=} opt_attributes If object, then a map
+         *     of name-value pairs for attributes. If a string, then this is the
+         *     className of the new element. If an array, the elements will be joined
+         *     together as the className of the new element.
+         * @param {...(goog.dom.Appendable|undefined)} var_args Further DOM nodes or
          *     strings for text nodes. If one of the var_args is an array or
          *     NodeList, its elements will be added as childNodes instead.
-         * @return {!Element} Reference to a DOM node.
+         * @return {R} Reference to a DOM node. The return type is {!Element} if tagName
+         *     is a string or a more specific type if it is a member of
+         *     goog.dom.TagName (e.g. {!HTMLAnchorElement} for goog.dom.TagName.A).
+         * @template T
+         * @template R := cond(isUnknown(T), 'Element', T) =:
          */
-        createDom(tagName: string, opt_attributes?: Object|string, ...var_args: goog.dom.Appendable[]): Element;
+        createDom<T>(tagName: string|goog.dom.TagName<T>, opt_attributes?: Object|Array<string>|string, ...var_args: (goog.dom.Appendable|void)[]): R;
         
         /**
-         * Alias for {@code createDom}.
-         * @param {string} tagName Tag to create.
-         * @param {(Object|string)=} opt_attributes If object, then a map of name-value
-         *     pairs for attributes. If a string, then this is the className of the new
-         *     element.
-         * @param {...goog.dom.Appendable} var_args Further DOM nodes or strings for
-         *     text nodes.  If one of the var_args is an array, its children will be
-         *     added as childNodes instead.
-         * @return {!Element} Reference to a DOM node.
+         * Alias for `createDom`.
+         * @param {string|!goog.dom.TagName<T>} tagName Tag to create.
+         * @param {?Object|?Array<string>|string=} opt_attributes If object, then a map
+         *     of name-value pairs for attributes. If a string, then this is the
+         *     className of the new element. If an array, the elements will be joined
+         *     together as the className of the new element.
+         * @param {...(goog.dom.Appendable|undefined)} var_args Further DOM nodes or
+         *     strings for text nodes.  If one of the var_args is an array, its children
+         *     will be added as childNodes instead.
+         * @return {R} Reference to a DOM node. The return type is {!Element} if tagName
+         *     is a string or a more specific type if it is a member of
+         *     goog.dom.TagName (e.g. {!HTMLAnchorElement} for goog.dom.TagName.A).
+         * @template T
+         * @template R := cond(isUnknown(T), 'Element', T) =:
          * @deprecated Use {@link goog.dom.DomHelper.prototype.createDom} instead.
          */
-        $dom(tagName: string, opt_attributes?: Object|string, ...var_args: goog.dom.Appendable[]): Element;
+        $dom<T>(tagName: string|goog.dom.TagName<T>, opt_attributes?: Object|Array<string>|string, ...var_args: (goog.dom.Appendable|void)[]): R;
         
         /**
          * Creates a new element.
-         * @param {string} name Tag name.
-         * @return {!Element} The new element.
+         * @param {string|!goog.dom.TagName<T>} name Tag to create.
+         * @return {R} The new element. The return type is {!Element} if name is
+         *     a string or a more specific type if it is a member of goog.dom.TagName
+         *     (e.g. {!HTMLAnchorElement} for goog.dom.TagName.A).
+         * @template T
+         * @template R := cond(isUnknown(T), 'Element', T) =:
          */
-        createElement(name: string): Element;
+        createElement<T>(name: string|goog.dom.TagName<T>): R;
         
         /**
          * Creates a new text node.
@@ -206,30 +260,21 @@ declare module goog.dom {
          * @param {number} rows The number of rows in the table.  Must be >= 1.
          * @param {number} columns The number of columns in the table.  Must be >= 1.
          * @param {boolean=} opt_fillWithNbsp If true, fills table entries with
-         *     {@code goog.string.Unicode.NBSP} characters.
+         *     `goog.string.Unicode.NBSP` characters.
          * @return {!HTMLElement} The created table.
          */
         createTable(rows: number, columns: number, opt_fillWithNbsp?: boolean): HTMLElement;
         
         /**
          * Converts an HTML into a node or a document fragment. A single Node is used if
-         * {@code html} only generates a single node. If {@code html} generates multiple
-         * nodes then these are put inside a {@code DocumentFragment}.
+         * `html` only generates a single node. If `html` generates multiple
+         * nodes then these are put inside a `DocumentFragment`. This is a safe
+         * version of `goog.dom.DomHelper#htmlToDocumentFragment` which is now
+         * deleted.
          * @param {!goog.html.SafeHtml} html The HTML markup to convert.
          * @return {!Node} The resulting node.
          */
         safeHtmlToNode(html: goog.html.SafeHtml): Node;
-        
-        /**
-         * Converts an HTML string into a node or a document fragment.  A single Node
-         * is used if the {@code htmlString} only generates a single node.  If the
-         * {@code htmlString} generates multiple nodes then these are put inside a
-         * {@code DocumentFragment}.
-         *
-         * @param {string} htmlString The HTML string to convert.
-         * @return {!Node} The resulting node.
-         */
-        htmlToDocumentFragment(htmlString: string): Node;
         
         /**
          * Returns true if the browser is in "CSS1-compatible" (standards-compliant)
@@ -330,7 +375,7 @@ declare module goog.dom {
         removeNode(node: Node): Node;
         
         /**
-         * Replaces a node in the DOM tree. Will do nothing if {@code oldNode} has no
+         * Replaces a node in the DOM tree. Will do nothing if `oldNode` has no
          * parent.
          * @param {Node} newNode Node to insert.
          * @param {Node} oldNode Node to replace.
@@ -349,36 +394,36 @@ declare module goog.dom {
         /**
          * Returns an array containing just the element children of the given element.
          * @param {Element} element The element whose element children we want.
-         * @return {!(Array|NodeList)} An array or array-like list of just the element
-         *     children of the given element.
+         * @return {!(Array<!Element>|NodeList<!Element>)} An array or array-like list
+         *     of just the element children of the given element.
          */
-        getChildren(element: Element): Array<any>|NodeList;
+        getChildren(element: Element): Array<Element>|NodeListOf<Element>;
         
         /**
          * Returns the first child node that is an element.
          * @param {Node} node The node to get the first child element of.
-         * @return {Element} The first child node of {@code node} that is an element.
+         * @return {Element} The first child node of `node` that is an element.
          */
         getFirstElementChild(node: Node): Element;
         
         /**
          * Returns the last child node that is an element.
          * @param {Node} node The node to get the last child element of.
-         * @return {Element} The last child node of {@code node} that is an element.
+         * @return {Element} The last child node of `node` that is an element.
          */
         getLastElementChild(node: Node): Element;
         
         /**
          * Returns the first next sibling that is an element.
          * @param {Node} node The node to get the next sibling element of.
-         * @return {Element} The next sibling of {@code node} that is an element.
+         * @return {Element} The next sibling of `node` that is an element.
          */
         getNextElementSibling(node: Node): Element;
         
         /**
          * Returns the first previous sibling that is an element.
          * @param {Node} node The node to get the previous sibling element of.
-         * @return {Element} The first previous sibling of {@code node} that is
+         * @return {Element} The first previous sibling of `node` that is
          *     an element.
          */
         getPreviousElementSibling(node: Node): Element;
@@ -432,7 +477,7 @@ declare module goog.dom {
          * Whether a node contains another node.
          * @param {Node} parent The node that should contain the other node.
          * @param {Node} descendant The node to test presence of.
-         * @return {boolean} Whether the parent node contains the descendent node.
+         * @return {boolean} Whether the parent node contains the descendant node.
          */
         contains(parent: Node, descendant: Node): boolean;
         
@@ -563,14 +608,14 @@ declare module goog.dom {
          * lines are ignored.
          *
          * @param {Node} node The node whose text content length is being calculated.
-         * @return {number} The length of {@code node}'s text content.
+         * @return {number} The length of `node`'s text content.
          */
         getNodeTextLength(node: Node): number;
         
         /**
          * Returns the text offset of a node relative to one of its ancestors. The text
          * length is the same as the length calculated by
-         * {@code goog.dom.getNodeTextLength}.
+         * `goog.dom.getNodeTextLength`.
          *
          * @param {Node} node The node whose offset is being calculated.
          * @param {Node=} opt_offsetParent Defaults to the node's owner document's body.
@@ -592,7 +637,7 @@ declare module goog.dom {
         getNodeAtOffset(parent: Node, offset: number, opt_result?: Object): Node;
         
         /**
-         * Returns true if the object is a {@code NodeList}.  To qualify as a NodeList,
+         * Returns true if the object is a `NodeList`.  To qualify as a NodeList,
          * the object must have a numeric length property and an item function (which
          * has type 'string' on IE for some reason).
          * @param {Object} val Object to test.
@@ -605,16 +650,20 @@ declare module goog.dom {
          * tag name and/or class name. If the passed element matches the specified
          * criteria, the element itself is returned.
          * @param {Node} element The DOM node to start with.
-         * @param {?(goog.dom.TagName|string)=} opt_tag The tag name to match (or
+         * @param {?(goog.dom.TagName<T>|string)=} opt_tag The tag name to match (or
          *     null/undefined to match only based on class name).
          * @param {?string=} opt_class The class name to match (or null/undefined to
          *     match only based on tag name).
          * @param {number=} opt_maxSearchSteps Maximum number of levels to search up the
          *     dom.
-         * @return {Element} The first ancestor that matches the passed criteria, or
-         *     null if no match is found.
+         * @return {?R} The first ancestor that matches the passed criteria, or
+         *     null if no match is found. The return type is {?Element} if opt_tag is
+         *     not a member of goog.dom.TagName or a more specific type if it is (e.g.
+         *     {?HTMLAnchorElement} for goog.dom.TagName.A).
+         * @template T
+         * @template R := cond(isUnknown(T), 'Element', T) =:
          */
-        getAncestorByTagNameAndClass(element: Node, opt_tag?: goog.dom.TagName|string, opt_class?: string, opt_maxSearchSteps?: number): Element;
+        getAncestorByTagNameAndClass<T>(element: Node, opt_tag?: goog.dom.TagName<T>|string, opt_class?: string, opt_maxSearchSteps?: number): R;
         
         /**
          * Walks up the DOM hierarchy returning the first ancestor that has the passed
@@ -644,6 +693,14 @@ declare module goog.dom {
          *     no match.
          */
         getAncestor(element: Node, matcher: (arg0: Node) => boolean, opt_includeNode?: boolean, opt_maxSearchSteps?: number): Node;
+        
+        /**
+         * Gets '2d' context of a canvas. Shortcut for canvas.getContext('2d') with a
+         * type information.
+         * @param {!HTMLCanvasElement} canvas
+         * @return {!CanvasRenderingContext2D}
+         */
+        getCanvasContext2D(canvas: HTMLCanvasElement): CanvasRenderingContext2D;
     }
 
     /**
@@ -690,11 +747,25 @@ declare module goog.dom {
     function $(element: string|Element): Element;
 
     /**
+     * Gets elements by tag name.
+     * @param {!goog.dom.TagName<T>} tagName
+     * @param {(!Document|!Element)=} opt_parent Parent element or document where to
+     *     look for elements. Defaults to document.
+     * @return {!NodeList<R>} List of elements. The members of the list are
+     *     {!Element} if tagName is not a member of goog.dom.TagName or more
+     *     specific types if it is (e.g. {!HTMLAnchorElement} for
+     *     goog.dom.TagName.A).
+     * @template T
+     * @template R := cond(isUnknown(T), 'Element', T) =:
+     */
+    function getElementsByTagName<T>(tagName: goog.dom.TagName<T>, opt_parent?: Document|Element): NodeListOf<R>;
+
+    /**
      * Looks up elements by both tag and class name, using browser native functions
-     * ({@code querySelectorAll}, {@code getElementsByTagName} or
-     * {@code getElementsByClassName}) where possible. This function
+     * (`querySelectorAll`, `getElementsByTagName` or
+     * `getElementsByClassName`) where possible. This function
      * is a useful, if limited, way of collecting a list of DOM elements
-     * with certain characteristics.  {@code goog.dom.query} offers a
+     * with certain characteristics.  `goog.dom.query` offers a
      * more powerful and general solution which allows matching on CSS3
      * selector expressions, but at increased cost in code size. If all you
      * need is particular tags belonging to a single class, this function
@@ -708,13 +779,32 @@ declare module goog.dom {
      *
      * @see {goog.dom.query}
      *
-     * @param {?string=} opt_tag Element tag name.
+     * @param {(string|?goog.dom.TagName<T>)=} opt_tag Element tag name.
      * @param {?string=} opt_class Optional class name.
      * @param {(Document|Element)=} opt_el Optional element to look in.
-     * @return { {length: number} } Array-like list of elements (only a length
-     *     property and numerical indices are guaranteed to exist).
+     * @return {!IArrayLike<R>} Array-like list of elements (only a length property
+     *     and numerical indices are guaranteed to exist). The members of the array
+     *     are {!Element} if opt_tag is not a member of goog.dom.TagName or more
+     *     specific types if it is (e.g. {!HTMLAnchorElement} for
+     *     goog.dom.TagName.A).
+     * @template T
+     * @template R := cond(isUnknown(T), 'Element', T) =:
      */
-    function getElementsByTagNameAndClass(opt_tag?: string, opt_class?: string, opt_el?: Document|Element): {length: number};
+    function getElementsByTagNameAndClass<T>(opt_tag?: string|goog.dom.TagName<T>, opt_class?: string, opt_el?: Document|Element): IArrayLike<R>;
+
+    /**
+     * Gets the first element matching the tag and the class.
+     *
+     * @param {(string|?goog.dom.TagName<T>)=} opt_tag Element tag name.
+     * @param {?string=} opt_class Optional class name.
+     * @param {(Document|Element)=} opt_el Optional element to look in.
+     * @return {?R} Reference to a DOM node. The return type is {?Element} if
+     *     tagName is a string or a more specific type if it is a member of
+     *     goog.dom.TagName (e.g. {?HTMLAnchorElement} for goog.dom.TagName.A).
+     * @template T
+     * @template R := cond(isUnknown(T), 'Element', T) =:
+     */
+    function getElementByTagNameAndClass<T>(opt_tag?: string|goog.dom.TagName<T>, opt_class?: string, opt_el?: Document|Element): R;
 
     /**
      * Returns a static, array-like list of the elements with the provided
@@ -722,9 +812,9 @@ declare module goog.dom {
      * @see {goog.dom.query}
      * @param {string} className the name of the class to look for.
      * @param {(Document|Element)=} opt_el Optional element to look in.
-     * @return { {length: number} } The items found with the class name provided.
+     * @return {!IArrayLike<!Element>} The items found with the class name provided.
      */
-    function getElementsByClass(className: string, opt_el?: Document|Element): {length: number};
+    function getElementsByClass(className: string, opt_el?: Document|Element): IArrayLike<Element>;
 
     /**
      * Returns the first element with the provided className.
@@ -748,20 +838,45 @@ declare module goog.dom {
     function getRequiredElementByClass(className: string, opt_root?: Element|Document): Element;
 
     /**
-     * Alias for {@code getElementsByTagNameAndClass}.
-     * @param {?string=} opt_tag Element tag name.
+     * Alias for `getElementsByTagNameAndClass`.
+     * @param {(string|?goog.dom.TagName<T>)=} opt_tag Element tag name.
      * @param {?string=} opt_class Optional class name.
      * @param {Element=} opt_el Optional element to look in.
-     * @return { {length: number} } Array-like list of elements (only a length
-     *     property and numerical indices are guaranteed to exist).
+     * @return {!IArrayLike<R>} Array-like list of elements (only a length property
+     *     and numerical indices are guaranteed to exist). The members of the array
+     *     are {!Element} if opt_tag is not a member of goog.dom.TagName or more
+     *     specific types if it is (e.g. {!HTMLAnchorElement} for
+     *     goog.dom.TagName.A).
+     * @template T
+     * @template R := cond(isUnknown(T), 'Element', T) =:
      * @deprecated Use {@link goog.dom.getElementsByTagNameAndClass} instead.
      */
-    function $$(opt_tag?: string, opt_class?: string, opt_el?: Element): {length: number};
+    function $$<T>(opt_tag?: string|goog.dom.TagName<T>, opt_class?: string, opt_el?: Element): IArrayLike<R>;
 
     /**
-     * Sets multiple properties on a node.
+     * Sets multiple properties, and sometimes attributes, on an element. Note that
+     * properties are simply object properties on the element instance, while
+     * attributes are visible in the DOM. Many properties map to attributes with the
+     * same names, some with different names, and there are also unmappable cases.
+     *
+     * This method sets properties by default (which means that custom attributes
+     * are not supported). These are the exeptions (some of which is legacy):
+     * - "style": Even though this is an attribute name, it is translated to a
+     *   property, "style.cssText". Note that this property sanitizes and formats
+     *   its value, unlike the attribute.
+     * - "class": This is an attribute name, it is translated to the "className"
+     *   property.
+     * - "for": This is an attribute name, it is translated to the "htmlFor"
+     *   property.
+     * - Entries in {@see goog.dom.DIRECT_ATTRIBUTE_MAP_} are set as attributes,
+     *   this is probably due to browser quirks.
+     * - "aria-*", "data-*": Always set as attributes, they have no property
+     *   counterparts.
+     *
      * @param {Element} element DOM node to set properties on.
      * @param {Object} properties Hash of property:value pairs.
+     *     Property values can be strings or goog.string.TypedString values (such as
+     *     goog.html.SafeUrl).
      */
     function setProperties(element: Element, properties: Object): void;
 
@@ -840,6 +955,14 @@ declare module goog.dom {
     function getDocumentHeight(): number;
 
     /**
+     * Calculates the height of the document of the given window.
+     *
+     * @param {!Window} win The window whose document height to retrieve.
+     * @return {number} The height of the document of the given window.
+     */
+    function getDocumentHeightForWindow(win: Window): number;
+
+    /**
      * Gets the page scroll distance as a coordinate object.
      *
      * @param {Window=} opt_window Optional window element to test.
@@ -875,41 +998,58 @@ declare module goog.dom {
      * first node as childNodes.
      *
      * So:
-     * <code>createDom('div', null, createDom('p'), createDom('p'));</code>
-     * would return a div with two child paragraphs
+     * <code>createDom(goog.dom.TagName.DIV, null, createDom(goog.dom.TagName.P),
+     * createDom(goog.dom.TagName.P));</code> would return a div with two child
+     * paragraphs
      *
-     * @param {string} tagName Tag to create.
-     * @param {(Object|Array<string>|string)=} opt_attributes If object, then a map
+     * For passing properties, please see {@link goog.dom.setProperties} for more
+     * information.
+     *
+     * @param {string|!goog.dom.TagName<T>} tagName Tag to create.
+     * @param {?Object|?Array<string>|string=} opt_attributes If object, then a map
      *     of name-value pairs for attributes. If a string, then this is the
      *     className of the new element. If an array, the elements will be joined
      *     together as the className of the new element.
-     * @param {...(Object|string|Array|NodeList)} var_args Further DOM nodes or
-     *     strings for text nodes. If one of the var_args is an array or NodeList,i
-     *     its elements will be added as childNodes instead.
-     * @return {!Element} Reference to a DOM node.
+     * @param {...(Object|string|Array|NodeList|null|undefined)} var_args Further
+     *     DOM nodes or strings for text nodes. If one of the var_args is an array
+     *     or NodeList, its elements will be added as childNodes instead.
+     * @return {R} Reference to a DOM node. The return type is {!Element} if tagName
+     *     is a string or a more specific type if it is a member of
+     *     goog.dom.TagName (e.g. {!HTMLAnchorElement} for goog.dom.TagName.A).
+     * @template T
+     * @template R := cond(isUnknown(T), 'Element', T) =:
      */
-    function createDom(tagName: string, opt_attributes?: Object|Array<string>|string, ...var_args: (Object|string|Array<any>|NodeList)[]): Element;
+    function createDom<T>(tagName: string|goog.dom.TagName<T>, opt_attributes?: Object|Array<string>|string, ...var_args: (Object|string|Array<any>|NodeList|void|void)[]): R;
 
     /**
-     * Alias for {@code createDom}.
-     * @param {string} tagName Tag to create.
-     * @param {(string|Object)=} opt_attributes If object, then a map of name-value
-     *     pairs for attributes. If a string, then this is the className of the new
-     *     element.
-     * @param {...(Object|string|Array|NodeList)} var_args Further DOM nodes or
-     *     strings for text nodes. If one of the var_args is an array, its
-     *     children will be added as childNodes instead.
-     * @return {!Element} Reference to a DOM node.
+     * Alias for `createDom`.
+     * @param {string|!goog.dom.TagName<T>} tagName Tag to create.
+     * @param {?Object|?Array<string>|string=} opt_attributes If object, then a map
+     *     of name-value pairs for attributes. If a string, then this is the
+     *     className of the new element. If an array, the elements will be joined
+     *     together as the className of the new element.
+     * @param {...(Object|string|Array|NodeList|null|undefined)} var_args Further
+     *     DOM nodes or strings for text nodes. If one of the var_args is an array,
+     *     its children will be added as childNodes instead.
+     * @return {R} Reference to a DOM node. The return type is {!Element} if tagName
+     *     is a string or a more specific type if it is a member of
+     *     goog.dom.TagName (e.g. {!HTMLAnchorElement} for goog.dom.TagName.A).
+     * @template T
+     * @template R := cond(isUnknown(T), 'Element', T) =:
      * @deprecated Use {@link goog.dom.createDom} instead.
      */
-    function $dom(tagName: string, opt_attributes?: string|Object, ...var_args: (Object|string|Array<any>|NodeList)[]): Element;
+    function $dom<T>(tagName: string|goog.dom.TagName<T>, opt_attributes?: Object|Array<string>|string, ...var_args: (Object|string|Array<any>|NodeList|void|void)[]): R;
 
     /**
      * Creates a new element.
-     * @param {string} name Tag name.
-     * @return {!Element} The new element.
+     * @param {string|!goog.dom.TagName<T>} name Tag to create.
+     * @return {R} The new element. The return type is {!Element} if name is
+     *     a string or a more specific type if it is a member of goog.dom.TagName
+     *     (e.g. {!HTMLAnchorElement} for goog.dom.TagName.A).
+     * @template T
+     * @template R := cond(isUnknown(T), 'Element', T) =:
      */
-    function createElement(name: string): Element;
+    function createElement<T>(name: string|goog.dom.TagName<T>): R;
 
     /**
      * Creates a new text node.
@@ -923,29 +1063,26 @@ declare module goog.dom {
      * @param {number} rows The number of rows in the table.  Must be >= 1.
      * @param {number} columns The number of columns in the table.  Must be >= 1.
      * @param {boolean=} opt_fillWithNbsp If true, fills table entries with
-     *     {@code goog.string.Unicode.NBSP} characters.
+     *     `goog.string.Unicode.NBSP` characters.
      * @return {!Element} The created table.
      */
     function createTable(rows: number, columns: number, opt_fillWithNbsp?: boolean): Element;
 
     /**
-     * Converts HTML markup into a node.
+     * Creates a new Node from constant strings of HTML markup.
+     * @param {...!goog.string.Const} var_args The HTML strings to concatenate then
+     *     convert into a node.
+     * @return {!Node}
+     */
+    function constHtmlToNode(...var_args: goog.string$.Const[]): Node;
+
+    /**
+     * Converts HTML markup into a node. This is a safe version of
+     * `goog.dom.htmlToDocumentFragment` which is now deleted.
      * @param {!goog.html.SafeHtml} html The HTML markup to convert.
      * @return {!Node} The resulting node.
      */
     function safeHtmlToNode(html: goog.html.SafeHtml): Node;
-
-    /**
-     * Converts an HTML string into a document fragment. The string must be
-     * sanitized in order to avoid cross-site scripting. For example
-     * {@code goog.dom.htmlToDocumentFragment('&lt;img src=x onerror=alert(0)&gt;')}
-     * triggers an alert in all browsers, even if the returned document fragment
-     * is thrown away immediately.
-     *
-     * @param {string} htmlString The HTML string to convert.
-     * @return {!Node} The resulting document fragment.
-     */
-    function htmlToDocumentFragment(htmlString: string): Node;
 
     /**
      * Returns true if the browser is in "CSS1-compatible" (standards-compliant)
@@ -966,7 +1103,7 @@ declare module goog.dom {
      * the behavior is inconsistent:
      *
      * <pre>
-     *   var a = document.createElement('br');
+     *   var a = goog.dom.createElement(goog.dom.TagName.BR);
      *   a.appendChild(document.createTextNode('foo'));
      *   a.appendChild(document.createTextNode('bar'));
      *   console.log(a.childNodes.length);  // 2
@@ -1041,7 +1178,7 @@ declare module goog.dom {
     function removeNode(node: Node): Node;
 
     /**
-     * Replaces a node in the DOM tree. Will do nothing if {@code oldNode} has no
+     * Replaces a node in the DOM tree. Will do nothing if `oldNode` has no
      * parent.
      * @param {Node} newNode Node to insert.
      * @param {Node} oldNode Node to replace.
@@ -1061,36 +1198,36 @@ declare module goog.dom {
     /**
      * Returns an array containing just the element children of the given element.
      * @param {Element} element The element whose element children we want.
-     * @return {!(Array|NodeList)} An array or array-like list of just the element
-     *     children of the given element.
+     * @return {!(Array<!Element>|NodeList<!Element>)} An array or array-like list
+     *     of just the element children of the given element.
      */
-    function getChildren(element: Element): Array<any>|NodeList;
+    function getChildren(element: Element): Array<Element>|NodeListOf<Element>;
 
     /**
      * Returns the first child node that is an element.
      * @param {Node} node The node to get the first child element of.
-     * @return {Element} The first child node of {@code node} that is an element.
+     * @return {Element} The first child node of `node` that is an element.
      */
     function getFirstElementChild(node: Node): Element;
 
     /**
      * Returns the last child node that is an element.
      * @param {Node} node The node to get the last child element of.
-     * @return {Element} The last child node of {@code node} that is an element.
+     * @return {Element} The last child node of `node` that is an element.
      */
     function getLastElementChild(node: Node): Element;
 
     /**
      * Returns the first next sibling that is an element.
      * @param {Node} node The node to get the next sibling element of.
-     * @return {Element} The next sibling of {@code node} that is an element.
+     * @return {Element} The next sibling of `node` that is an element.
      */
     function getNextElementSibling(node: Node): Element;
 
     /**
      * Returns the first previous sibling that is an element.
      * @param {Node} node The node to get the previous sibling element of.
-     * @return {Element} The first previous sibling of {@code node} that is
+     * @return {Element} The first previous sibling of `node` that is
      *     an element.
      */
     function getPreviousElementSibling(node: Node): Element;
@@ -1142,11 +1279,11 @@ declare module goog.dom {
 
     /**
      * Whether a node contains another node.
-     * @param {Node} parent The node that should contain the other node.
-     * @param {Node} descendant The node to test presence of.
-     * @return {boolean} Whether the parent node contains the descendent node.
+     * @param {?Node|undefined} parent The node that should contain the other node.
+     * @param {?Node|undefined} descendant The node to test presence of.
+     * @return {boolean} Whether the parent node contains the descendant node.
      */
-    function contains(parent: Node, descendant: Node): boolean;
+    function contains(parent: Node|void, descendant: Node|void): boolean;
 
     /**
      * Compares the document order of two nodes, returning 0 if they are the same
@@ -1188,7 +1325,8 @@ declare module goog.dom {
     /**
      * Cross-browser function for getting the window of a frame or iframe.
      * @param {Element} frame Frame element.
-     * @return {Window} The window associated with the given frame.
+     * @return {Window} The window associated with the given frame, or null if none
+     *     exists.
      */
     function getFrameContentWindow(frame: Element): Window;
 
@@ -1211,7 +1349,7 @@ declare module goog.dom {
      * Finds the first descendant node that matches the filter function, using
      * a depth first search. This function offers the most general purpose way
      * of finding a matching element. You may also wish to consider
-     * {@code goog.dom.query} which can express many matching criteria using
+     * `goog.dom.query` which can express many matching criteria using
      * CSS selector expressions. These expressions often result in a more
      * compact representation of the desired result.
      * @see goog.dom.query
@@ -1226,7 +1364,7 @@ declare module goog.dom {
      * Finds all the descendant nodes that match the filter function, using a
      * a depth first search. This function offers the most general-purpose way
      * of finding a set of matching elements. You may also wish to consider
-     * {@code goog.dom.query} which can express many matching criteria using
+     * `goog.dom.query` which can express many matching criteria using
      * CSS selector expressions. These expressions often result in a more
      * compact representation of the desired result.
     
@@ -1243,7 +1381,6 @@ declare module goog.dom {
      * @param {!Element} element Element to check.
      * @return {boolean} Whether the element has a tab index that allows keyboard
      *     focus.
-     * @see http://fluidproject.org/blog/2008/01/09/getting-setting-and-removing-tabindex-values-with-javascript/
      */
     function isFocusableTabIndex(element: Element): boolean;
 
@@ -1283,7 +1420,7 @@ declare module goog.dom {
     /**
      * Returns the text content of the current node, without markup.
      *
-     * Unlike {@code getTextContent} this method does not collapse whitespaces
+     * Unlike `getTextContent` this method does not collapse whitespaces
      * or normalize lines breaks.
      *
      * @param {Node} node The node from which we are getting content.
@@ -1298,7 +1435,7 @@ declare module goog.dom {
      * lines are ignored.
      *
      * @param {Node} node The node whose text content length is being calculated.
-     * @return {number} The length of {@code node}'s text content.
+     * @return {number} The length of `node`'s text content.
      */
     function getNodeTextLength(node: Node): number;
 
@@ -1327,7 +1464,7 @@ declare module goog.dom {
     function getNodeAtOffset(parent: Node, offset: number, opt_result?: Object): Node;
 
     /**
-     * Returns true if the object is a {@code NodeList}.  To qualify as a NodeList,
+     * Returns true if the object is a `NodeList`.  To qualify as a NodeList,
      * the object must have a numeric length property and an item function (which
      * has type 'string' on IE for some reason).
      * @param {Object} val Object to test.
@@ -1340,16 +1477,20 @@ declare module goog.dom {
      * tag name and/or class name. If the passed element matches the specified
      * criteria, the element itself is returned.
      * @param {Node} element The DOM node to start with.
-     * @param {?(goog.dom.TagName|string)=} opt_tag The tag name to match (or
+     * @param {?(goog.dom.TagName<T>|string)=} opt_tag The tag name to match (or
      *     null/undefined to match only based on class name).
      * @param {?string=} opt_class The class name to match (or null/undefined to
      *     match only based on tag name).
      * @param {number=} opt_maxSearchSteps Maximum number of levels to search up the
      *     dom.
-     * @return {Element} The first ancestor that matches the passed criteria, or
-     *     null if no match is found.
+     * @return {?R} The first ancestor that matches the passed criteria, or
+     *     null if no match is found. The return type is {?Element} if opt_tag is
+     *     not a member of goog.dom.TagName or a more specific type if it is (e.g.
+     *     {?HTMLAnchorElement} for goog.dom.TagName.A).
+     * @template T
+     * @template R := cond(isUnknown(T), 'Element', T) =:
      */
-    function getAncestorByTagNameAndClass(element: Node, opt_tag?: goog.dom.TagName|string, opt_class?: string, opt_maxSearchSteps?: number): Element;
+    function getAncestorByTagNameAndClass<T>(element: Node, opt_tag?: goog.dom.TagName<T>|string, opt_class?: string, opt_maxSearchSteps?: number): R;
 
     /**
      * Walks up the DOM hierarchy returning the first ancestor that has the passed
@@ -1402,4 +1543,12 @@ declare module goog.dom {
      * @return {number} The number of actual pixels per virtual pixel.
      */
     function getPixelRatio(): number;
+
+    /**
+     * Gets '2d' context of a canvas. Shortcut for canvas.getContext('2d') with a
+     * type information.
+     * @param {!HTMLCanvasElement} canvas
+     * @return {!CanvasRenderingContext2D}
+     */
+    function getCanvasContext2D(canvas: HTMLCanvasElement): CanvasRenderingContext2D;
 }

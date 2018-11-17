@@ -229,7 +229,7 @@ declare module goog.graphics {
          *     point pairs.
          * @param {number} dstOff The offset of the location of the first transformed
          *     point in the destination array.
-         * @param {number} numPts The number of points to tranform.
+         * @param {number} numPts The number of points to transform.
          */
         transform(src: Array<number>, srcOff: number, dst: Array<number>, dstOff: number, numPts: number): void;
         

@@ -22,18 +22,18 @@ declare module goog.color.alpha {
     function hexToRgbaStyle(hexColor: string): string;
 
     /**
-     * Gets the hex color part of an alpha hex color. For example, from '#abcdef55'
-     * return '#abcdef'.
+     * Gets the hex color part of an alpha hex color. For example, both '#abcd' and
+     * '#AABBCC12' return '#aabbcc'.
      * @param {string} colorWithAlpha The alpha hex color to get the hex color from.
      * @return {string} The hex color where the alpha part has been stripped off.
      */
     function extractHexColor(colorWithAlpha: string): string;
 
     /**
-     * Gets the alpha color part of an alpha hex color. For example, from
-     * '#abcdef55' return '55'. The result is guaranteed to be two characters long.
+     * Gets the alpha color part of an alpha hex color. For example, both '#123A'
+     * and '#123456aa' return 'aa'. The result is always two characters long.
      * @param {string} colorWithAlpha The alpha hex color to get the hex color from.
-     * @return {string} The hex color where the alpha part has been stripped off.
+     * @return {string} The two-character alpha from the given color.
      */
     function extractAlpha(colorWithAlpha: string): string;
 

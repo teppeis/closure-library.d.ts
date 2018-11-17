@@ -92,6 +92,16 @@ declare module goog.ui {
         handleFilterEvent(e: goog.events.BrowserEvent): void;
         
         /**
+         * Updates the content of the given menu item, bolding the part of its caption
+         * from start and through the next len characters.
+         * @param {!goog.ui.Control} child The control to bold content on.
+         * @param {number} start The index at which to start bolding.
+         * @param {number} len How many characters to bold.
+         * @protected
+         */
+        boldContent(child: goog.ui.Control, start: number, len: number): void;
+        
+        /**
          * Handles the menu's behavior for a key event. The highlighted menu item will
          * be given the opportunity to handle the key behavior.
          * @param {goog.events.KeyEvent} e A browser event.
@@ -124,8 +134,7 @@ declare module goog.ui.FilteredMenu {
      */
     type EventType = string;
     var EventType: {
-        [index: string]: EventType;
-        // FILTER_CHANGED: EventType;
+        FILTER_CHANGED: EventType;
     };
 
     /**

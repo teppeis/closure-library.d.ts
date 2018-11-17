@@ -10,8 +10,8 @@ declare module goog.ui.media {
      *
      * This class knows how to parse mp3 URLs, and render the DOM structure
      * of mp3 flash players. This class is meant to be used as a singleton static
-     * stateless class, that takes {@code goog.ui.media.Media} instances and renders
-     * it. It expects {@code goog.ui.media.Media.getModel} to return a well formed,
+     * stateless class, that takes `goog.ui.media.Media` instances and renders
+     * it. It expects `goog.ui.media.Media.getModel` to return a well formed,
      * previously checked, mp3 URL {@see goog.ui.media.PicasaAlbum.parseUrl},
      * which is the data model this renderer will use to construct the DOM
      * structure. {@see goog.ui.media.PicasaAlbum.newControl} for an example of
@@ -60,7 +60,7 @@ declare module goog.ui.media {
          * control over the configuration.
          *
          * @param {goog.ui.media.MediaModel} dataModel A media model that must contain
-         *     an mp3 url on {@code dataModel.getUrl}.
+         *     an mp3 url on `dataModel.getUrl`.
          * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper, used for
          *     document interaction.
          * @return {!goog.ui.media.Media} A goog.ui.Control subclass with the mp3
@@ -78,11 +78,11 @@ declare module goog.ui.media {
         
         /**
          * A static method that builds a URL that will contain the flash player that
-         * will play the {@code mp3Url}.
+         * will play the `mp3Url`.
          *
          * @param {string} mp3Url The URL of the mp3 music.
          * @return {string} An URL of a flash player that will know how to play the
-         *     given {@code mp3Url}.
+         *     given `mp3Url`.
          */
         static buildFlashUrl(mp3Url: string): string;
         

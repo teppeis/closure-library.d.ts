@@ -11,16 +11,17 @@ declare module goog.fx {
      * and drop functionality.
      *
      * This class also allows clients to define their own subtargeting function
-     * so that drop areas can have finer granularity then a singe element. This is
+     * so that drop areas can have finer granularity than a single element. This is
      * accomplished by using a client provided function to map from element and
      * coordinates to a subregion id.
      *
      * This class can also be made aware of scrollable containers that contain
      * drop targets by calling addScrollableContainer. This will cause dnd to
-     * take changing scroll positions into account while a drag is occuring.
+     * take changing scroll positions into account while a drag is occurring.
      *
      * @extends {goog.events.EventTarget}
      * @constructor
+     * @struct
      */
     class AbstractDragDrop extends goog.events.EventTarget {
         constructor();
@@ -84,6 +85,13 @@ declare module goog.fx {
          * @param {goog.fx.AbstractDragDrop} target Target to add.
          */
         addTarget(target: goog.fx.AbstractDragDrop): void;
+        
+        /**
+         * Removes the specified target from the list of drop targets.
+         *
+         * @param {!goog.fx.AbstractDragDrop} target Target to remove.
+         */
+        removeTarget(target: goog.fx.AbstractDragDrop): void;
         
         /**
          * Sets the SCROLL event target to make drag element follow scrolling.
@@ -245,7 +253,7 @@ declare module goog.fx {
          * Generates an element to follow the cursor during dragging, given a drag
          * source element.  The default behavior is simply to clone the source element,
          * but this may be overridden in subclasses.  This method is called by
-         * {@code createDragElement()} before the drag class is added.
+         * `createDragElement()` before the drag class is added.
          *
          * @param {Element} sourceEl Drag source element.
          * @return {!Element} The new drag element.
@@ -272,7 +280,7 @@ declare module goog.fx {
          * @param {number} x Cursor position on the x-axis.
          * @param {number} y Cursor position on the y-axis.
          * @param {goog.math.Box} box Box to check position against.
-         * @return {boolean} Whether the given point is inside {@code box}.
+         * @return {boolean} Whether the given point is inside `box`.
          * @protected
          * @deprecated Use goog.math.Box.contains.
          */
@@ -309,11 +317,14 @@ declare module goog.fx {
      * @param {number=} opt_x X-Position relative to the viewport.
      * @param {number=} opt_y Y-Position relative to the viewport.
      * @param {Object=} opt_subtarget The currently active subtarget.
+     * @param {goog.events.BrowserEvent=} opt_browserEvent The browser event
+     *     that caused this dragdrop event.
      * @extends {goog.events.Event}
      * @constructor
+     * @struct
      */
     class DragDropEvent extends goog.events.Event {
-        constructor(type: string, source: goog.fx.AbstractDragDrop, sourceItem: goog.fx.DragDropItem, opt_target?: goog.fx.AbstractDragDrop, opt_targetItem?: goog.fx.DragDropItem, opt_targetElement?: Element, opt_clientX?: number, opt_clientY?: number, opt_x?: number, opt_y?: number, opt_subtarget?: Object);
+        constructor(type: string, source: goog.fx.AbstractDragDrop, sourceItem: goog.fx.DragDropItem, opt_target?: goog.fx.AbstractDragDrop, opt_targetItem?: goog.fx.DragDropItem, opt_targetElement?: Element, opt_clientX?: number, opt_clientY?: number, opt_x?: number, opt_y?: number, opt_subtarget?: Object, opt_browserEvent?: goog.events.BrowserEvent);
     }
 
     /**
@@ -325,6 +336,7 @@ declare module goog.fx {
      * @throws Error If no element argument is provided or if the type is invalid
      * @extends {goog.events.EventTarget}
      * @constructor
+     * @struct
      */
     class DragDropItem extends goog.events.EventTarget {
         constructor(element: Element|string, opt_data?: Object);
@@ -337,7 +349,7 @@ declare module goog.fx {
         
         /**
          * Gets the element that is actually draggable given that the given target was
-         * attempted to be dragged. This should be overriden when the element that was
+         * attempted to be dragged. This should be overridden when the element that was
          * given actually contains many items that can be dragged. From the target, you
          * can determine what element should actually be dragged.
          *
@@ -378,6 +390,7 @@ declare module goog.fx {
      * @param {goog.fx.DragDropItem=} opt_item Item associated with position.
      * @param {Element=} opt_element Element of item associated with position.
      * @constructor
+     * @struct
      * @private
      */
     interface ActiveDropTarget_ {

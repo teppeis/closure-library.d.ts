@@ -25,9 +25,7 @@ declare module goog.net {
         setExtraHeaders(extraHeaders: Object): void;
         
         /**
-         * Sets a new parser for the response payload. A custom parser may be set to
-         * avoid using eval(), for example.
-         * By default, the parser uses {@code goog.json.unsafeParse}.
+         * Sets a new parser for the response payload.
          * @param {!goog.string.Parser} parser Parser.
          */
         setParser(parser: goog.string$.Parser): void;
@@ -72,6 +70,8 @@ declare module goog.net {
          * Callback from ChannelRequest that indicates a request has completed.
          *
          * @param {goog.net.ChannelRequest} req  The request object.
+         * @suppress {missingRequire} Cannot depend on goog.net.BrowserChannel because
+         *     it creates a circular dependency.
          */
         onRequestComplete(req: goog.net.ChannelRequest): void;
         

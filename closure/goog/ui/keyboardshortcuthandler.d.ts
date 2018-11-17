@@ -1,6 +1,7 @@
 declare module goog {
     function require(name: 'goog.ui.KeyboardShortcutHandler'): typeof goog.ui.KeyboardShortcutHandler;
     function require(name: 'goog.ui.KeyboardShortcutEvent'): typeof goog.ui.KeyboardShortcutEvent;
+    function require(name: 'goog.ui.KeyboardShortcutHandler.Modifiers'): typeof goog.ui.KeyboardShortcutHandler.Modifiers;
     function require(name: 'goog.ui.KeyboardShortcutHandler.EventType'): typeof goog.ui.KeyboardShortcutHandler.EventType;
 }
 
@@ -127,12 +128,12 @@ declare module goog.ui {
          *
          * param {number} keyCode Numeric code for key
          * param {number=} opt_modifiers Bitmap indicating required modifier keys.
-         *                goog.ui.KeyboardShortcutHandler.Modifiers.SHIFT, CONTROL,
-         *                ALT, or META.
+         *                goog.ui.KeyboardShortcutHandler.Modifiers.SHIFT, CTRL, ALT,
+         *                or META.
          *
          * The last two parameters can be repeated any number of times to create a
-         * shortcut using a sequence of strokes. Instead of varagrs the second parameter
-         * could also be an array where each element would be ragarded as a parameter.
+         * shortcut using a sequence of strokes. Instead of varargs the second parameter
+         * could also be an array where each element would be regarded as a parameter.
          *
          * A string representation of the shortcut can be supplied instead of the last
          * two parameters. In that case the method only takes two arguments, the
@@ -162,8 +163,8 @@ declare module goog.ui {
          *
          * param {number} keyCode Numeric code for key
          * param {number=} opt_modifiers Bitmap indicating required modifier keys.
-         *                 goog.ui.KeyboardShortcutHandler.Modifiers.SHIFT, CONTROL,
-         *                 ALT, or META.
+         *                 goog.ui.KeyboardShortcutHandler.Modifiers.SHIFT, CTRL, ALT,
+         *                 or META.
          *
          * The two parameters can be repeated any number of times to create a shortcut
          * using a sequence of strokes.
@@ -183,8 +184,8 @@ declare module goog.ui {
          *
          * param {number} keyCode Numeric code for key
          * param {number=} opt_modifiers Bitmap indicating required modifier keys.
-         *                 goog.ui.KeyboardShortcutHandler.Modifiers.SHIFT, CONTROL,
-         *                 ALT, or META.
+         *                 goog.ui.KeyboardShortcutHandler.Modifiers.SHIFT, CTRL, ALT,
+         *                 or META.
          *
          * The two parameters can be repeated any number of times to create a shortcut
          * using a sequence of strokes.
@@ -220,17 +221,18 @@ declare module goog.ui {
         /**
          * Returns event type for a specific shortcut.
          * @param {string} identifier Identifier for the shortcut task.
-         * @return {string} Theh event type.
+         * @return {string} The event type.
          */
         getEventType(identifier: string): string;
         
         /**
          * Builds stroke array from string representation of shortcut.
          * @param {string} s String representation of shortcut.
-         * @return {!Array<!{keyCode: ?number, modifiers: number}>} The stroke array.  A
-         *     null keyCode means no non-modifier key was part of the stroke.
+         * @return {!Array<{key: ?string, keyCode: ?number, modifiers: number}>} The
+         *     stroke array.  A null keyCode means no non-modifier key was part of the
+         *     stroke.
          */
-        static parseStringShortcut(s: string): Array<{keyCode: number; modifiers: number}>;
+        static parseStringShortcut(s: string): Array<{key: string; keyCode: number; modifiers: number}>;
         
         /**
          * Adds a key event listener that triggers {@link #handleKeyDown_} when keys
@@ -289,19 +291,19 @@ declare module goog.ui.KeyboardShortcutHandler {
     };
 
     /**
-     * A map of strokes (represented as numbers) to the nodes reached by those
+     * A map of strokes (represented as strings) to the nodes reached by those
      * strokes.
-     * @typedef {Object<number, goog.ui.KeyboardShortcutHandler.SequenceNode_>}
+     * @typedef {Object<string, goog.ui.KeyboardShortcutHandler.SequenceNode_>}
      * @private
      */
-    type SequenceTree_ = {[index: number]: goog.ui.KeyboardShortcutHandler.SequenceNode_};
+    type SequenceTree_ = {[index: string]: goog.ui.KeyboardShortcutHandler.SequenceNode_};
 
     /**
      * A node in a keyboard shortcut sequence tree. A node is either:
      * 1. A terminal node with a non-nullable shortcut string which is the
      *    identifier for the shortcut triggered by traversing the tree to that node.
      * 2. An internal node with a null shortcut string and a
-     *    {@code goog.ui.KeyboardShortcutHandler.SequenceTree_} representing the
+     *    `goog.ui.KeyboardShortcutHandler.SequenceTree_` representing the
      *    continued stroke sequences from this node.
      * For clarity, the static factory methods for creating internal and terminal
      * nodes below should be used rather than using this constructor directly.

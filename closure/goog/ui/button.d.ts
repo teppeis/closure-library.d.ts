@@ -74,7 +74,7 @@ declare module goog.ui {
         /**
          * Attempts to handle a keyboard event; returns true if the event was handled,
          * false otherwise.  If the button is enabled and the Enter/Space key was
-         * pressed, handles the event by dispatching an {@code ACTION} event,
+         * pressed, handles the event by dispatching an `ACTION` event,
          * and returns true. Overrides {@link goog.ui.Control#handleKeyEventInternal}.
          * @param {goog.events.KeyEvent} e Key event to handle.
          * @return {boolean} Whether the key event was handled.

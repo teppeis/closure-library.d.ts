@@ -21,14 +21,9 @@ declare module goog.ui.media {
      *
      * The current common data shared by medias is to have URLs, mime types,
      * captions, descriptions, thumbnails and players. Some of these may not be
-     * available, or applications may not want to render them, so {@code null}
-     * values are allowed. {@code goog.ui.media.MediaRenderer} checks whether the
+     * available, or applications may not want to render them, so `null`
+     * values are allowed. `goog.ui.media.MediaRenderer` checks whether the
      * values are available before creating DOMs for them.
-     *
-     * TODO(user): support asynchronous data models by subclassing
-     * {@link goog.events.EventTarget} or {@link goog.ds.DataNode}. Understand why
-     * {@link http://goto/datanode} is not available in closure. Add setters to
-     * MediaModel once this is supported.
      *
      * @param {string=} opt_url An optional URL of the media.
      * @param {string=} opt_caption An optional caption of the media.
@@ -309,14 +304,14 @@ declare module goog.ui.media.MediaModel {
     /**
      * Constructs a player containing details of the player's URL and
      * optionally its size.
-     * @param {string|!goog.html.TrustedResourceUrl} url The URL of the player.
+     * @param {!goog.html.TrustedResourceUrl} url The URL of the player.
      * @param {Object=} opt_vars Optional map of arguments to the player.
      * @param {goog.math.Size=} opt_size The size of the player if known.
      * @constructor
      * @final
      */
     class Player {
-        constructor(url: string|goog.html.TrustedResourceUrl, opt_vars?: Object, opt_size?: goog.math.Size);
+        constructor(url: goog.html.TrustedResourceUrl, opt_vars?: Object, opt_size?: goog.math.Size);
         
         /**
          * Gets the player URL.
@@ -332,11 +327,11 @@ declare module goog.ui.media.MediaModel {
         
         /**
          * Sets the player URL.
-         * @param {string|!goog.html.TrustedResourceUrl} url The player's URL.
+         * @param {!goog.html.TrustedResourceUrl} url The player's URL.
          * @return {!goog.ui.media.MediaModel.Player} The object itself, used for
          *     chaining.
          */
-        setUrl(url: string|goog.html.TrustedResourceUrl): goog.ui.media.MediaModel.Player;
+        setUrl(url: goog.html.TrustedResourceUrl): goog.ui.media.MediaModel.Player;
         
         /**
          * Gets the player arguments.

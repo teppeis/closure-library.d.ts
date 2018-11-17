@@ -43,6 +43,7 @@ declare module goog.ui {
          * Enables the embedded checkbox.
          * @param {boolean} enable Whether to enable or disable the checkbox.
          * @protected
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         setCheckboxEnabled(enable: boolean): void;
         
@@ -76,6 +77,7 @@ declare module goog.ui {
         /**
          * Set selection state and update checkbox.
          * @param {goog.ui.SelectionMenuButton.SelectionState} state Selection state.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         setSelectionState(state: goog.ui.SelectionMenuButton.SelectionState): void;
         

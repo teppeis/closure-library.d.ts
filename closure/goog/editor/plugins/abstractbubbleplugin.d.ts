@@ -193,7 +193,7 @@ declare module goog.editor.plugins {
         /**
          * Helper method that creates a link with text set to linkText and optionally
          * wires up a listener for the CLICK event or the link. The link is navigable by
-         * tabs if {@code enableKeyboardNavigation(true)} was called.
+         * tabs if `enableKeyboardNavigation(true)` was called.
          * @param {string} linkId The id of the link.
          * @param {string} linkText Text of the link.
          * @param {Function=} opt_onClick Optional function to call when the link is
@@ -207,7 +207,7 @@ declare module goog.editor.plugins {
         
         /**
          * Helper method to create a link to insert into the bubble. The link is
-         * navigable by tabs if {@code enableKeyboardNavigation(true)} was called.
+         * navigable by tabs if `enableKeyboardNavigation(true)` was called.
          * @param {string} linkId The id of the link.
          * @param {string} linkText Text of the link.
          * @param {boolean} isAnchor Set to true to create an actual anchor tag
@@ -227,7 +227,7 @@ declare module goog.editor.plugins {
          * calling this method. Call it for other elements if needed.
          *
          * <p>If tabindex is not already set in the element, this function sets it to 0.
-         * You'll usually want to also call {@code enableKeyboardNavigation(true)}.
+         * You'll usually want to also call `enableKeyboardNavigation(true)`.
          *
          * @param {!Element} element
          * @protected

@@ -17,6 +17,12 @@ declare module goog.userAgent.product {
     var IE: boolean;
 
     /**
+     * Whether the code is running on an Edge web browser.
+     * @type {boolean}
+     */
+    var EDGE: boolean;
+
+    /**
      * Whether the code is running on the Firefox web browser.
      * @type {boolean}
      */

@@ -23,6 +23,7 @@ declare module goog.net {
         /**
          * Handles a pending iframe load monitor load event.
          * @param {goog.events.Event} e The goog.net.IframeLoadMonitor.LOAD_EVENT event.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         handleEvent(e: goog.events.Event): void;
         

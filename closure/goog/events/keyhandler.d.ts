@@ -21,7 +21,7 @@ declare module goog.events {
         /**
          * Resets the stored previous values. Needed to be called for webkit which will
          * not generate a key up for meta key operations. This should only be called
-         * when having finished with repeat key possiblities.
+         * when having finished with repeat key possibilities.
          */
         resetState(): void;
         

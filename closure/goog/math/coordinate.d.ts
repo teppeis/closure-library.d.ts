@@ -21,6 +21,13 @@ declare module goog.math {
         clone(): goog.math.Coordinate;
         
         /**
+         * Returns whether the specified value is equal to this coordinate.
+         * @param {*} other Some other value.
+         * @return {boolean} Whether the specified value is equal to this coordinate.
+         */
+        equals(other: any): boolean;
+        
+        /**
          * Compares coordinates for equality.
          * @param {goog.math.Coordinate} a A Coordinate.
          * @param {goog.math.Coordinate} b A Coordinate.
@@ -32,14 +39,14 @@ declare module goog.math {
          * Returns the distance between two coordinates.
          * @param {!goog.math.Coordinate} a A Coordinate.
          * @param {!goog.math.Coordinate} b A Coordinate.
-         * @return {number} The distance between {@code a} and {@code b}.
+         * @return {number} The distance between `a` and `b`.
          */
         static distance(a: goog.math.Coordinate, b: goog.math.Coordinate): number;
         
         /**
          * Returns the magnitude of a coordinate.
          * @param {!goog.math.Coordinate} a A Coordinate.
-         * @return {number} The distance between the origin and {@code a}.
+         * @return {number} The distance between the origin and `a`.
          */
         static magnitude(a: goog.math.Coordinate): number;
         
@@ -47,7 +54,7 @@ declare module goog.math {
          * Returns the angle from the origin to a coordinate.
          * @param {!goog.math.Coordinate} a A Coordinate.
          * @return {number} The angle, in degrees, clockwise from the positive X
-         *     axis to {@code a}.
+         *     axis to `a`.
          */
         static azimuth(a: goog.math.Coordinate): number;
         
@@ -61,7 +68,7 @@ declare module goog.math {
          *
          * @param {!goog.math.Coordinate} a A Coordinate.
          * @param {!goog.math.Coordinate} b A Coordinate.
-         * @return {number} The squared distance between {@code a} and {@code b}.
+         * @return {number} The squared distance between `a` and `b`.
          */
         static squaredDistance(a: goog.math.Coordinate, b: goog.math.Coordinate): number;
         
@@ -71,7 +78,7 @@ declare module goog.math {
          * @param {!goog.math.Coordinate} a A Coordinate.
          * @param {!goog.math.Coordinate} b A Coordinate.
          * @return {!goog.math.Coordinate} A Coordinate representing the difference
-         *     between {@code a} and {@code b}.
+         *     between `a` and `b`.
          */
         static difference(a: goog.math.Coordinate, b: goog.math.Coordinate): goog.math.Coordinate;
         
@@ -103,9 +110,9 @@ declare module goog.math {
         round(): goog.math.Coordinate;
         
         /**
-         * Translates this box by the given offsets. If a {@code goog.math.Coordinate}
+         * Translates this box by the given offsets. If a `goog.math.Coordinate`
          * is given, then the x and y values are translated by the coordinate's x and y.
-         * Otherwise, x and y are translated by {@code tx} and {@code opt_ty}
+         * Otherwise, x and y are translated by `tx` and `opt_ty`
          * respectively.
          * @param {number|goog.math.Coordinate} tx The value to translate x by or the
          *     the coordinate to translate this coordinate by.
@@ -116,8 +123,8 @@ declare module goog.math {
         
         /**
          * Scales this coordinate by the given scale factors. The x and y values are
-         * scaled by {@code sx} and {@code opt_sy} respectively.  If {@code opt_sy}
-         * is not given, then {@code sx} is used for both x and y.
+         * scaled by `sx` and `opt_sy` respectively.  If `opt_sy`
+         * is not given, then `sx` is used for both x and y.
          * @param {number} sx The scale factor to use for the x dimension.
          * @param {number=} opt_sy The scale factor to use for the y dimension.
          * @return {!goog.math.Coordinate} This coordinate after scaling.

@@ -4,7 +4,7 @@ declare module goog.locale {
      * Returns the displayable list of short timezone names paired with its id for
      * the current locale, selected based on the region or language provided.
      *
-     * This method depends on goog.locale.TimeZone*__<locale> available
+     * This method depends on `goog.locale.TimeZone*__<locale>` available
      * from http://go/js_locale_data. Users of this method must add a dependency on
      * this.
      *
@@ -23,7 +23,7 @@ declare module goog.locale {
      * Returns the displayable list of long timezone names paired with its id for
      * the current locale, selected based on the region or language provided.
      *
-     * This method depends on goog.locale.TimeZone*__<locale> available
+     * This method depends on `goog.locale.TimeZone*__<locale>` available
      * from http://go/js_locale_data. Users of this method must add a dependency on
      * this.
      *
@@ -42,7 +42,7 @@ declare module goog.locale {
      * Returns the displayable list of long timezone names paired with its id for
      * the current locale.
      *
-     * This method depends on goog.locale.TimeZoneAllLongNames__<locale> available
+     * This method depends on `goog.locale.TimeZoneAllLongNames__<locale>` available
      * from http://go/js_locale_data. Users of this method must add a dependency on
      * this.
      *

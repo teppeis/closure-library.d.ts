@@ -51,6 +51,8 @@ declare module goog.ui.RoundedPanel {
      *     document we want to render in.
      * @return {!goog.ui.BaseRoundedPanel} An instance of a
      *     goog.ui.BaseRoundedPanel subclass.
+     * TODO(sdh): deprecate this class, which has <5 usages and only really
+     *            matters for IE8, and then only stylistically.
      */
     function create(radius: number, borderWidth: number, borderColor: string, opt_backgroundColor?: string, opt_corners?: number, opt_domHelper?: goog.dom.DomHelper): goog.ui.BaseRoundedPanel;
 }

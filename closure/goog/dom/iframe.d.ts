@@ -7,16 +7,24 @@ declare module goog.dom.iframe {
     /**
      * Safe source for a blank iframe.
      *
-     * Intentionally not about:blank, which gives mixed content warnings in IE6
-     * over HTTPS.
+     * Intentionally not about:blank for IE, which gives mixed content warnings in
+     * IE6 over HTTPS. Using 'about:blank' for all other browsers to support Content
+     * Security Policy (CSP). According to http://www.w3.org/TR/CSP/ CSP does not
+     * allow inline javascript by default.
      *
-     * @type {string}
+     * @const {!goog.html.TrustedResourceUrl}
      */
-    var BLANK_SOURCE: string;
+    var BLANK_SOURCE_URL: any;
+
+    /**
+     * Legacy version of goog.dom.iframe.BLANK_SOURCE_URL.
+     * @const {string}
+     */
+    var BLANK_SOURCE: any;
 
     /**
      * Safe source for a new blank iframe that may not cause a new load of the
-     * iframe. This is different from {@code goog.dom.iframe.BLANK_SOURCE} in that
+     * iframe. This is different from `goog.dom.iframe.BLANK_SOURCE` in that
      * it will allow an iframe to be loaded synchronously in more browsers, notably
      * Gecko, following the javascript protocol spec.
      *
@@ -25,7 +33,7 @@ declare module goog.dom.iframe {
      *
      * Due to cross-browser differences, the load is not guaranteed  to be
      * synchronous. If code depends on the load of the iframe,
-     * then {@code goog.net.IframeLoadMonitor} or a similar technique should be
+     * then `goog.net.IframeLoadMonitor` or a similar technique should be
      * used.
      *
      * According to
@@ -40,9 +48,15 @@ declare module goog.dom.iframe {
      * throws an error with 'javascript:undefined'. Webkit browsers will reload the
      * iframe when setting this source on an existing iframe.
      *
-     * @type {string}
+     * @const {!goog.html.TrustedResourceUrl}
      */
-    var BLANK_SOURCE_NEW_FRAME: string;
+    var BLANK_SOURCE_NEW_FRAME_URL: any;
+
+    /**
+     * Legacy version of goog.dom.iframe.BLANK_SOURCE_NEW_FRAME_URL.
+     * @const {string}
+     */
+    var BLANK_SOURCE_NEW_FRAME: any;
 
     /**
      * Creates a completely blank iframe element.
@@ -56,24 +70,10 @@ declare module goog.dom.iframe {
      * in quirks mode.
      *
      * @param {goog.dom.DomHelper} domHelper The dom helper to use.
-     * @param {!goog.html.SafeStyle|string=} opt_styles CSS styles for the
-     *     iframe. If possible pass a SafeStyle; string is supported for
-     *     backwards-compatibility only.
+     * @param {!goog.html.SafeStyle=} opt_styles CSS styles for the iframe.
      * @return {!HTMLIFrameElement} A completely blank iframe.
      */
-    function createBlank(domHelper: goog.dom.DomHelper, opt_styles?: goog.html.SafeStyle|string): HTMLIFrameElement;
-
-    /**
-     * Writes the contents of a blank iframe that has already been inserted
-     * into the document. If possible use {@link #writeSafeContent},
-     * this function exists for backwards-compatibility only.
-     * @param {!HTMLIFrameElement} iframe An iframe with no contents, such as
-     *     one created by goog.dom.iframe.createBlank, but already appended to
-     *     a parent document.
-     * @param {string} content Content to write to the iframe, from doctype to
-     *     the HTML close tag.
-     */
-    function writeContent(iframe: HTMLIFrameElement, content: string): void;
+    function createBlank(domHelper: goog.dom.DomHelper, opt_styles?: goog.html.SafeStyle): HTMLIFrameElement;
 
     /**
      * Writes the contents of a blank iframe that has already been inserted
@@ -90,7 +90,7 @@ declare module goog.dom.iframe {
      * Creates a same-domain iframe containing preloaded content.
      *
      * This is primarily useful for DOM sandboxing.  One use case is to embed
-     * a trusted Javascript app with potentially conflicting CSS styles.  The
+     * a trusted JavaScript app with potentially conflicting CSS styles.  The
      * second case is to reduce the cost of layout passes by the browser -- for
      * example, you can perform sandbox sizing of characters in an iframe while
      * manipulating a heavy DOM in the main window.  The iframe and parent frame
@@ -98,17 +98,14 @@ declare module goog.dom.iframe {
      *
      * @param {!Element} parentElement The parent element in which to append the
      *     iframe.
-     * @param {!goog.html.SafeHtml|string=} opt_headContents Contents to go into
-     *     the iframe's head. If possible pass a SafeHtml; string is supported for
-     *     backwards-compatibility only.
-     * @param {!goog.html.SafeHtml|string=} opt_bodyContents Contents to go into
-     *     the iframe's body. If possible pass a SafeHtml; string is supported for
-     *     backwards-compatibility only.
-     * @param {!goog.html.SafeStyle|string=} opt_styles CSS styles for the iframe
-     *     itself, before adding to the parent element. If possible pass a
-     *     SafeStyle; string is supported for backwards-compatibility only.
+     * @param {!goog.html.SafeHtml=} opt_headContents Contents to go into the
+     *     iframe's head.
+     * @param {!goog.html.SafeHtml=} opt_bodyContents Contents to go into the
+     *     iframe's body.
+     * @param {!goog.html.SafeStyle=} opt_styles CSS styles for the iframe itself,
+     *     before adding to the parent element.
      * @param {boolean=} opt_quirks Whether to use quirks mode (false by default).
      * @return {!HTMLIFrameElement} An iframe that has the specified contents.
      */
-    function createWithContent(parentElement: Element, opt_headContents?: goog.html.SafeHtml|string, opt_bodyContents?: goog.html.SafeHtml|string, opt_styles?: goog.html.SafeStyle|string, opt_quirks?: boolean): HTMLIFrameElement;
+    function createWithContent(parentElement: Element, opt_headContents?: goog.html.SafeHtml, opt_bodyContents?: goog.html.SafeHtml, opt_styles?: goog.html.SafeStyle, opt_quirks?: boolean): HTMLIFrameElement;
 }

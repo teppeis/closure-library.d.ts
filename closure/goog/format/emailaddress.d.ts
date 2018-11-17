@@ -72,7 +72,7 @@ declare module goog.format {
         toStringInternal(specialChars: string): string;
         
         /**
-         * Determines is the current object is a valid email address.
+         * Determines if the current object is a valid email address.
          * @return {boolean} Whether the email address is valid.
          */
         isValid(): boolean;

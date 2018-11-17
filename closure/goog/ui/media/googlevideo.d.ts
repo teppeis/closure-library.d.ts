@@ -11,8 +11,8 @@ declare module goog.ui.media {
      *
      * This class knows how to parse GoogleVideo URLs, and render the DOM structure
      * of GoogleVideo video players. This class is meant to be used as a singleton
-     * static stateless class, that takes {@code goog.ui.media.Media} instances and
-     * renders it. It expects {@code goog.ui.media.Media.getModel} to return a well
+     * static stateless class, that takes `goog.ui.media.Media` instances and
+     * renders it. It expects `goog.ui.media.Media.getModel` to return a well
      * formed, previously constructed, GoogleVideo video id, which is the data model
      * this renderer will use to construct the DOM structure.
      * {@see goog.ui.media.GoogleVideo.newControl} for a example of constructing a
@@ -73,8 +73,8 @@ declare module goog.ui.media {
     }
 
     /**
-     * The {@code goog.ui.media.GoogleVideo} media data model. It stores a required
-     * {@code videoId} field, sets the GoogleVideo URL, and allows a few optional
+     * The `goog.ui.media.GoogleVideo` media data model. It stores a required
+     * `videoId` field, sets the GoogleVideo URL, and allows a few optional
      * parameters.
      *
      * @param {string} videoId The GoogleVideo video id.
@@ -106,7 +106,7 @@ declare module goog.ui.media {
         static newInstance(googleVideoUrl: string, opt_caption?: string, opt_description?: string, opt_autoplay?: boolean): goog.ui.media.GoogleVideoModel;
         
         /**
-         * The opposite of {@code goog.ui.media.GoogleVideo.newInstance}: it takes a
+         * The opposite of `goog.ui.media.GoogleVideo.newInstance`: it takes a
          * videoId and returns a GoogleVideo URL.
          *
          * @param {string} videoId The GoogleVideo video ID.
@@ -121,9 +121,10 @@ declare module goog.ui.media {
          * @param {string} videoId The GoogleVideo video ID.
          * @param {boolean=} opt_autoplay Whether the flash movie should start playing
          *     as soon as it is shown, or if it should show a 'play' button.
-         * @return {string} The flash URL to be embedded on the page.
+         * @return {!goog.html.TrustedResourceUrl} The flash URL to be embedded on the
+         *     page.
          */
-        static buildFlashUrl(videoId: string, opt_autoplay?: boolean): string;
+        static buildFlashUrl(videoId: string, opt_autoplay?: boolean): goog.html.TrustedResourceUrl;
         
         /**
          * Gets the GoogleVideo video id.

@@ -14,8 +14,8 @@ declare module goog.dom.annotate {
     type AnnotateFn = (arg0: number, arg1: goog.html.SafeHtml) => goog.html.SafeHtml;
 
     /**
-     * Calls {@code annotateFn} for each occurrence of a search term in text nodes
-     * under {@code node}. Returns the number of hits.
+     * Calls `annotateFn` for each occurrence of a search term in text nodes
+     * under `node`. Returns the number of hits.
      *
      * @param {Node} node  A DOM node.
      * @param {Array<!Array<string|boolean>>} terms
@@ -50,7 +50,7 @@ declare module goog.dom.annotate {
      * @param {goog.dom.annotate.AnnotateFn} annotateFn
      * @param {*=} opt_ignoreCase  Whether to ignore the case of the query
      *   terms when looking for matches.
-     * @return {goog.html.SafeHtml} The HTML equivalent of {@code text} with terms
+     * @return {goog.html.SafeHtml} The HTML equivalent of `text` with terms
      *   annotated, or null if the text did not contain any of the terms.
      */
     function annotateText(text: string, terms: Array<Array<any>>, annotateFn: goog.dom.annotate.AnnotateFn, opt_ignoreCase?: any): goog.html.SafeHtml;

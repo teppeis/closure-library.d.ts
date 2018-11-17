@@ -90,9 +90,10 @@ declare module goog.editor.plugins {
         /**
          * Tests the link by opening it in a new tab/window. Should be used as the
          * click event handler for the test pseudo-link.
+         * @param {!Event=} opt_event If passed in, the event will be stopped.
          * @protected
          */
-        testLink(): void;
+        testLink(opt_event?: Event): void;
         
         /**
          * Returns whether the URL should be considered invalid.  This always returns

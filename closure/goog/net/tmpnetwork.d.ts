@@ -20,8 +20,9 @@ declare module goog.net.tmpnetwork {
      *     for compatibility with existing code, but the search team does not want
      *     people using images served off of google.com for this purpose. The
      *     default will go away when all usages have been changed.
+     * @param {number=} opt_timeout Milliseconds before giving up.
      */
-    function testGoogleCom(callback: Function, opt_imageUri?: goog.Uri): void;
+    function testGoogleCom(callback: Function, opt_imageUri?: goog.Uri, opt_timeout?: number): void;
 
     /**
      * Test loading the given image, retrying if necessary.
@@ -39,6 +40,7 @@ declare module goog.net.tmpnetwork {
      * @param {string} url URL to the iamge.
      * @param {number} timeout Milliseconds before giving up.
      * @param {Function} callback Function to call with results.
+     * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
      */
     function testLoadImage(url: string, timeout: number, callback: Function): void;
 }

@@ -31,7 +31,7 @@ declare module goog.log {
         constructor();
     }
 
-    /** @const */
+    /** @const {string} */
     var ROOT_LOGGER_NAME: any;
 
     /**

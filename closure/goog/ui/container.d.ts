@@ -17,7 +17,7 @@ declare module goog.ui {
      *    <li>default mouse and keyboard event handling methods.
      *  </ul>
      * @param {?goog.ui.Container.Orientation=} opt_orientation Container
-     *     orientation; defaults to {@code VERTICAL}.
+     *     orientation; defaults to `VERTICAL`.
      * @param {goog.ui.ContainerRenderer=} opt_renderer Renderer used to render or
      *     decorate the container; defaults to {@link goog.ui.ContainerRenderer}.
      * @param {goog.dom.DomHelper=} opt_domHelper DOM helper, used for document
@@ -104,6 +104,7 @@ declare module goog.ui {
          * Handles HIGHLIGHT events dispatched by items in the container when
          * they are highlighted.
          * @param {goog.events.Event} e Highlight event to handle.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         handleHighlightItem(e: goog.events.Event): void;
         
@@ -125,6 +126,7 @@ declare module goog.ui {
          * Handles CLOSE events dispatched by items in the container when they are
          * closed.
          * @param {goog.events.Event} e Close event to handle.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         handleCloseItem(e: goog.events.Event): void;
         
@@ -148,6 +150,7 @@ declare module goog.ui {
          * in the container.  Locates the child control based on the DOM node that
          * dispatched the event, and forwards the event to the control for handling.
          * @param {goog.events.BrowserEvent} e Mouse event to handle.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         handleChildMouseEvents(e: goog.events.BrowserEvent): void;
         
@@ -158,6 +161,7 @@ declare module goog.ui {
          * @return {goog.ui.Control?} Control hosted in the container to which the node
          *     belongs (if found).
          * @protected
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         getOwnerControl(node: Node): goog.ui.Control;
         
@@ -187,7 +191,7 @@ declare module goog.ui {
         /**
          * Attempts to handle a keyboard event; returns true if the event was handled,
          * false otherwise.  If the container is enabled, and a child is highlighted,
-         * calls the child control's {@code handleKeyEvent} method to give the control
+         * calls the child control's `handleKeyEvent` method to give the control
          * a chance to handle the event first.
          * @param {goog.events.KeyEvent} e Key event to handle.
          * @return {boolean} Whether the event was handled by the container (or one of
@@ -242,7 +246,7 @@ declare module goog.ui {
          * uses {@link #removeChild} internally, we only need to override this method.
          * @param {string|goog.ui.Component} control The ID of the child to remove, or
          *     the control itself.
-         * @param {boolean=} opt_unrender Whether to call {@code exitDocument} on the
+         * @param {boolean=} opt_unrender Whether to call `exitDocument` on the
          *     removed control, and detach its DOM from the document (defaults to
          *     false).
          * @return {goog.ui.Control} The removed control, if any.
@@ -290,8 +294,8 @@ declare module goog.ui {
         isEnabled(): boolean;
         
         /**
-         * Enables/disables the container based on the {@code enable} argument.
-         * Dispatches an {@code ENABLED} or {@code DISABLED} event prior to changing
+         * Enables/disables the container based on the `enable` argument.
+         * Dispatches an `ENABLED` or `DISABLED` event prior to changing
          * the container's state, which may be caught and canceled to prevent the
          * container from changing state.  Also enables/disables child controls.
          * @param {boolean} enable Whether to enable or disable the container.
@@ -391,8 +395,9 @@ declare module goog.ui {
         /**
          * Helper function that manages the details of moving the highlight among
          * child controls in response to keyboard events.
-         * @param {function(number, number) : number} fn Function that accepts the
-         *     current and maximum indices, and returns the next index to check.
+         * @param {function(this: goog.ui.Container, number, number) : number} fn
+         *     Function that accepts the current and maximum indices, and returns the
+         *     next index to check.
          * @param {number} startIndex Start index.
          * @return {boolean} Whether the highlight has changed.
          * @protected
@@ -446,9 +451,8 @@ declare module goog.ui.Container {
      */
     type EventType = string;
     var EventType: {
-        [index: string]: EventType;
-        // AFTER_SHOW: EventType;
-        // AFTER_HIDE: EventType;
+        AFTER_SHOW: EventType;
+        AFTER_HIDE: EventType;
     };
 
     /**

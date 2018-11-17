@@ -41,6 +41,7 @@ declare module goog.ui {
          * @param {goog.ui.Checkbox.State} state Checkbox state.
          * @return {string} CSS class representing the given state.
          * @protected
+         * @suppress {missingRequire} goog.ui.Checkbox
          */
         getClassForCheckboxState(state: goog.ui.Checkbox.State): string;
     }

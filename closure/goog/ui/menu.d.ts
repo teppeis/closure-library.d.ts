@@ -151,15 +151,14 @@ declare module goog.ui {
         getAllowHighlightDisabled(): boolean;
         
         /**
-         * @param {boolean} visible Whether to show or hide the container.
-         * @param {boolean=} opt_force If true, doesn't check whether the container
+         * @override
+         * @param {boolean} show Whether to show or hide the menu.
+         * @param {boolean=} opt_force If true, doesn't check whether the menu
          *     already has the requested visibility, and doesn't dispatch any events.
          * @param {goog.events.Event=} opt_e Mousedown event that caused this menu to
          *     be made visible (ignored if show is false).
-         * @return {boolean} Whether the visibility was changed.
-         * @override
          */
-        setVisible(visible: boolean, opt_force?: boolean, opt_e?: goog.events.Event): boolean;
+        setVisible(show: boolean, opt_force?: boolean, opt_e?: goog.events.Event): void;
         
         /**
          * Highlights the next item that begins with the specified string.  If no
@@ -170,7 +169,7 @@ declare module goog.ui {
         highlightNextPrefix(charStr: string): boolean;
         
         /**
-         * Decorate menu items located in any descendent node which as been explicitly
+         * Decorate menu items located in any descendant node which as been explicitly
          * marked as a 'content' node.
          * @param {Element} element Element to decorate.
          * @protected
@@ -188,10 +187,9 @@ declare module goog.ui.Menu {
      */
     type EventType = string;
     var EventType: {
-        [index: string]: EventType;
-        // BEFORE_SHOW: EventType;
-        // SHOW: EventType;
-        // BEFORE_HIDE: EventType;
-        // HIDE: EventType;
+        BEFORE_SHOW: EventType;
+        SHOW: EventType;
+        BEFORE_HIDE: EventType;
+        HIDE: EventType;
     };
 }

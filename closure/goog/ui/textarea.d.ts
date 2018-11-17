@@ -63,6 +63,7 @@ declare module goog.ui {
         /**
          * Gets the textarea's value.
          * @return {string} value The value of the textarea.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         getValue(): string;
         
@@ -81,7 +82,6 @@ declare module goog.ui.Textarea {
      */
     type EventType = string;
     var EventType: {
-        [index: string]: EventType;
-        // RESIZE: EventType;
+        RESIZE: EventType;
     };
 }

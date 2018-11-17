@@ -10,7 +10,7 @@ declare module goog.ui.media {
      * photos.
      *
      * This class is meant to be used as a singleton static stateless class, that
-     * takes {@code goog.ui.media.Media} instances and renders it.
+     * takes `goog.ui.media.Media` instances and renders it.
      *
      * This design is patterned after
      * http://go/closure_control_subclassing
@@ -32,7 +32,7 @@ declare module goog.ui.media {
         
         /**
          * A static convenient method to construct a goog.ui.media.Media control out of
-         * a photo {@code goog.ui.media.MediaModel}. It sets it as the data model
+         * a photo `goog.ui.media.MediaModel`. It sets it as the data model
          * goog.ui.media.Photo renderer uses, sets the states supported by the renderer,
          * and returns a Control that binds everything together. This is what you
          * should be using for constructing Photos, except if you need finer control

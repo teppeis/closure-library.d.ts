@@ -30,6 +30,7 @@ declare module goog.fx.dom {
      * @param {Function=} opt_acc Acceleration function, returns 0-1 for inputs 0-1.
      * @extends {goog.fx.Animation}
      * @constructor
+     * @struct
      */
     class PredefinedEffect extends goog.fx.Animation {
         constructor(element: Element, start: Array<number>, end: Array<number>, time: number, opt_acc?: Function);
@@ -61,6 +62,7 @@ declare module goog.fx.dom {
      * @param {Function=} opt_acc Acceleration function, returns 0-1 for inputs 0-1.
      * @extends {goog.fx.dom.PredefinedEffect}
      * @constructor
+     * @struct
      */
     class Slide extends goog.fx.dom.PredefinedEffect {
         constructor(element: Element, start: Array<number>, end: Array<number>, time: number, opt_acc?: Function);
@@ -75,6 +77,7 @@ declare module goog.fx.dom {
      * @param {Function=} opt_acc Acceleration function, returns 0-1 for inputs 0-1.
      * @extends {goog.fx.dom.Slide}
      * @constructor
+     * @struct
      */
     class SlideFrom extends goog.fx.dom.Slide {
         constructor(element: Element, end: Array<number>, time: number, opt_acc?: Function);
@@ -91,6 +94,7 @@ declare module goog.fx.dom {
      * @param {Function=} opt_acc Acceleration function, returns 0-1 for inputs 0-1.
      * @extends {goog.fx.dom.PredefinedEffect}
      * @constructor
+     * @struct
      */
     class Swipe extends goog.fx.dom.PredefinedEffect {
         constructor(element: Element, start: Array<number>, end: Array<number>, time: number, opt_acc?: Function);
@@ -108,6 +112,7 @@ declare module goog.fx.dom {
      * @param {Function=} opt_acc Acceleration function, returns 0-1 for inputs 0-1.
      * @extends {goog.fx.dom.PredefinedEffect}
      * @constructor
+     * @struct
      */
     class Scroll extends goog.fx.dom.PredefinedEffect {
         constructor(element: Element, start: Array<number>, end: Array<number>, time: number, opt_acc?: Function);
@@ -126,6 +131,7 @@ declare module goog.fx.dom {
      * @param {Function=} opt_acc Acceleration function, returns 0-1 for inputs 0-1.
      * @extends {goog.fx.dom.PredefinedEffect}
      * @constructor
+     * @struct
      */
     class Resize extends goog.fx.dom.PredefinedEffect {
         constructor(element: Element, start: Array<number>, end: Array<number>, time: number, opt_acc?: Function);
@@ -143,6 +149,7 @@ declare module goog.fx.dom {
      * @param {Function=} opt_acc Acceleration function, returns 0-1 for inputs 0-1.
      * @extends {goog.fx.dom.PredefinedEffect}
      * @constructor
+     * @struct
      */
     class ResizeWidth extends goog.fx.dom.PredefinedEffect {
         constructor(element: Element, start: number, end: number, time: number, opt_acc?: Function);
@@ -160,6 +167,7 @@ declare module goog.fx.dom {
      * @param {Function=} opt_acc Acceleration function, returns 0-1 for inputs 0-1.
      * @extends {goog.fx.dom.PredefinedEffect}
      * @constructor
+     * @struct
      */
     class ResizeHeight extends goog.fx.dom.PredefinedEffect {
         constructor(element: Element, start: number, end: number, time: number, opt_acc?: Function);
@@ -178,6 +186,7 @@ declare module goog.fx.dom {
      * @param {Function=} opt_acc Acceleration function, returns 0-1 for inputs 0-1.
      * @extends {goog.fx.dom.PredefinedEffect}
      * @constructor
+     * @struct
      */
     class Fade extends goog.fx.dom.PredefinedEffect {
         constructor(element: Element, start: Array<number>|number, end: Array<number>|number, time: number, opt_acc?: Function);
@@ -201,6 +210,7 @@ declare module goog.fx.dom {
      * @param {Function=} opt_acc Acceleration function, returns 0-1 for inputs 0-1.
      * @extends {goog.fx.dom.Fade}
      * @constructor
+     * @struct
      */
     class FadeOut extends goog.fx.dom.Fade {
         constructor(element: Element, time: number, opt_acc?: Function);
@@ -214,6 +224,7 @@ declare module goog.fx.dom {
      * @param {Function=} opt_acc Acceleration function, returns 0-1 for inputs 0-1.
      * @extends {goog.fx.dom.Fade}
      * @constructor
+     * @struct
      */
     class FadeIn extends goog.fx.dom.Fade {
         constructor(element: Element, time: number, opt_acc?: Function);
@@ -228,6 +239,7 @@ declare module goog.fx.dom {
      * @param {Function=} opt_acc Acceleration function, returns 0-1 for inputs 0-1.
      * @extends {goog.fx.dom.Fade}
      * @constructor
+     * @struct
      */
     class FadeOutAndHide extends goog.fx.dom.Fade {
         constructor(element: Element, time: number, opt_acc?: Function);
@@ -242,6 +254,7 @@ declare module goog.fx.dom {
      * @param {Function=} opt_acc Acceleration function, returns 0-1 for inputs 0-1.
      * @extends {goog.fx.dom.Fade}
      * @constructor
+     * @struct
      */
     class FadeInAndShow extends goog.fx.dom.Fade {
         constructor(element: Element, time: number, opt_acc?: Function);
@@ -259,6 +272,7 @@ declare module goog.fx.dom {
      * @param {Function=} opt_acc Acceleration function, returns 0-1 for inputs 0-1.
      * @extends {goog.fx.dom.PredefinedEffect}
      * @constructor
+     * @struct
      */
     class BgColorTransform extends goog.fx.dom.PredefinedEffect {
         constructor(element: Element, start: Array<number>, end: Array<number>, time: number, opt_acc?: Function);
@@ -278,6 +292,7 @@ declare module goog.fx.dom {
      * @param {number} time Length of animation in milliseconds.
      * @param {Function=} opt_acc Acceleration function, returns 0-1 for inputs 0-1.
      * @constructor
+     * @struct
      * @extends {goog.fx.dom.PredefinedEffect}
      */
     class ColorTransform extends goog.fx.dom.PredefinedEffect {

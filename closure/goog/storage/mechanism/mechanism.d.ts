@@ -8,6 +8,7 @@ declare module goog.storage.mechanism {
      * Basic interface for all storage mechanisms.
      *
      * @constructor
+     * @struct
      */
     class Mechanism {
         constructor();

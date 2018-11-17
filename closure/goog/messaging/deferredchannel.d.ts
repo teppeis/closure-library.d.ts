@@ -8,15 +8,15 @@ declare module goog.messaging {
      * Creates a new DeferredChannel, which wraps a deferred MessageChannel and
      * enqueues messages to be sent once the wrapped channel is resolved.
      *
-     * @param {!goog.async.Deferred} deferredChannel The underlying deferred
-     *     MessageChannel.
+     * @param {!goog.async.Deferred<!goog.messaging.MessageChannel>} deferredChannel
+     *     The underlying deferred MessageChannel.
      * @constructor
      * @extends {goog.Disposable}
      * @implements {goog.messaging.MessageChannel}
      * @final
      */
     class DeferredChannel extends goog.Disposable {
-        constructor(deferredChannel: goog.async.Deferred<any>);
+        constructor(deferredChannel: goog.async.Deferred<goog.messaging.MessageChannel>);
         
         /**
          * Cancels the wrapped Deferred.

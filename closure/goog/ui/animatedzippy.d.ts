@@ -15,11 +15,19 @@ declare module goog.ui {
      * @param {boolean=} opt_expanded Initial expanded/visibility state. Defaults to
      *     false.
      * @param {goog.dom.DomHelper=} opt_domHelper An optional DOM helper.
+     * @param {goog.a11y.aria.Role<string>=} opt_role ARIA role, default TAB.
      * @constructor
      * @extends {goog.ui.Zippy}
      */
     class AnimatedZippy extends goog.ui.Zippy {
-        constructor(header: Element|string|void, content: Element|string, opt_expanded?: boolean, opt_domHelper?: goog.dom.DomHelper);
+        constructor(header: Element|string|void, content: Element|string, opt_expanded?: boolean, opt_domHelper?: goog.dom.DomHelper, opt_role?: goog.a11y.aria.Role<string>);
+        
+        /**
+         * Constants for event names.
+         *
+         * @const
+         */
+        static Events: any;
         
         /**
          * Duration of expand/collapse animation, in milliseconds.

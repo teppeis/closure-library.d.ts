@@ -16,17 +16,20 @@ declare module goog.async {
      * animations, see:
      * @see http://paulirish.com/2011/requestanimationframe-for-smart-animating/
      *
-     * @param {function(number)} listener Function to call when the delay completes.
-     *     Will be passed the timestamp when it's called, in unix ms.
+     * @param {function(this:THIS, number)} listener Function to call
+     *     when the delay completes. Will be passed the timestamp when it's called,
+     *     in unix ms.
      * @param {Window=} opt_window The window object to execute the delay in.
      *     Defaults to the global object.
-     * @param {Object=} opt_handler The object scope to invoke the function in.
+     * @param {THIS=} opt_handler The object scope to invoke the function in.
+     * @template THIS
      * @constructor
+     * @struct
      * @extends {goog.Disposable}
      * @final
      */
-    class AnimationDelay extends goog.Disposable {
-        constructor(listener: (arg0: number) => any, opt_window?: Window, opt_handler?: Object);
+    class AnimationDelay<THIS> extends goog.Disposable {
+        constructor(listener: (arg0: number) => any, opt_window?: Window, opt_handler?: THIS);
         
         /**
          * Default wait timeout for animations (in milliseconds).  Only used for timed
@@ -42,6 +45,11 @@ declare module goog.async {
          * before the next animation frame.
          */
         start(): void;
+        
+        /**
+         * Starts the delay timer if it's not already active.
+         */
+        startIfNotActive(): void;
         
         /**
          * Stops the delay timer if it is active. No action is taken if the timer is not

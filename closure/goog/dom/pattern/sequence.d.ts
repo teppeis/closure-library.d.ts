@@ -19,13 +19,6 @@ declare module goog.dom.pattern {
         constructor(patterns: Array<goog.dom.pattern.AbstractPattern>, opt_ignoreWhitespace?: boolean);
         
         /**
-         * Ordered array of patterns to match.
-         *
-         * @type {Array<goog.dom.pattern.AbstractPattern>}
-         */
-        patterns: Array<goog.dom.pattern.AbstractPattern>;
-        
-        /**
          * Test whether the given token starts, continues, or finishes the sequence
          * of patterns given in the constructor.
          *

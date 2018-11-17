@@ -507,7 +507,7 @@ declare module goog.ui {
         /**
          * Sets the data scaling.
          * NOTE: This also changes the encoding type because data scaling will
-         *     only work with {@code goog.ui.ServerChart.EncodingType.TEXT}
+         *     only work with `goog.ui.ServerChart.EncodingType.TEXT`
          *     encoding.
          * @param {number} minimum The lowest number to apply to the data.
          * @param {number} maximum The highest number to apply to the data.
@@ -665,14 +665,14 @@ declare module goog.ui {
          * Adds a data set.
          * NOTE: The color string should NOT have a '#' at the beginning of it.
          *
-         * @param {Array<number|null>} data An array of numbers (values can be
+         * @param {Array<?number>} data An array of numbers (values can be
          *     NaN or null).
          * @param {string} color The hex value for this data set's color.
          * @param {string=} opt_legendText The legend text, if any, for this data
          *     series. NOTE: If specified, all previously added data sets must also
          *     have a legend text.
          */
-        addDataSet(data: Array<number|void>, color: string, opt_legendText?: string): void;
+        addDataSet(data: Array<number>, color: string, opt_legendText?: string): void;
         
         /**
          * Clears the data sets from the graph. All data, including the colors and

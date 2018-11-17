@@ -22,11 +22,13 @@ declare module goog.ui {
         /**
          * Overrides the superclass implementation by wrapping the caption text or DOM
          * structure in a color indicator element.  Creates the following DOM structure:
-         *   <div class="goog-inline-block goog-menu-button-caption">
-         *     <div class="goog-color-menu-button-indicator">
-         *       Contents...
-         *     </div>
-         *   </div>
+         *
+         *    <div class="goog-inline-block goog-menu-button-caption">
+         *      <div class="goog-color-menu-button-indicator">
+         *        Contents...
+         *      </div>
+         *    </div>
+         *
          * The 'goog-color-menu-button-indicator' style should be defined to have a
          * bottom border of nonzero width and a default color that blends into its
          * background.
@@ -40,11 +42,10 @@ declare module goog.ui {
         /**
          * Wrap a caption in a div with the color-menu-button-indicator CSS class.
          * @param {goog.ui.ControlContent} content Text caption or DOM structure.
-         * @param {string} cssClass Dummy parameter for compatibility to goog.ui.MenuButtonRenderer.
          * @param {goog.dom.DomHelper} dom DOM helper, used for document interaction.
          * @return {!Element} Caption element.
          */
-        static wrapCaption(content: goog.ui.ControlContent, cssClass: string, dom: goog.dom.DomHelper): Element;
+        static wrapCaption(content: goog.ui.ControlContent, dom: goog.dom.DomHelper): Element;
         
         /**
          * Takes a color menu button control's root element and a value object

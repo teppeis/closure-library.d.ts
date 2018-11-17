@@ -65,12 +65,10 @@ declare module goog.ui {
         getTitle(): string;
         
         /**
-         * Allows arbitrary HTML to be set in the content element.
-         * TODO(user): Deprecate in favor of setSafeHtmlContent, once developer docs on
-         * using goog.html.SafeHtml are in place.
-         * @param {string} html Content HTML.
+         * Allows plain text to be set in the content element.
+         * @param {string} text Content plain text. Newlines are preserved.
          */
-        setContent(html: string): void;
+        setTextContent(text: string): void;
         
         /**
          * Allows arbitrary HTML to be set in the content element.
@@ -82,9 +80,9 @@ declare module goog.ui {
          * Gets the content HTML of the content element as a plain string.
          *
          * Note that this method returns the HTML markup that was previously set via
-         * setContent(). In particular, the HTML returned by this method does not
-         * reflect any changes to the content element's DOM that were made my means
-         * other than setContent().
+         * setSafeHtmlContent() or setTextContent(). In particular, the HTML returned by
+         * this method does not reflect any changes to the content element's DOM that
+         * were made by other means.
          *
          * @return {string} Content HTML.
          */
@@ -286,10 +284,9 @@ declare module goog.ui.Dialog {
      */
     type EventType = string;
     var EventType: {
-        [index: string]: EventType;
-        // SELECT: EventType;
-        // AFTER_HIDE: EventType;
-        // AFTER_SHOW: EventType;
+        SELECT: EventType;
+        AFTER_HIDE: EventType;
+        AFTER_SHOW: EventType;
     };
 
     /**
@@ -338,6 +335,8 @@ declare module goog.ui.Dialog {
      *    goog.ui.Component} for semantics.
      * @constructor
      * @extends {goog.structs.Map}
+     * @suppress {deprecated} Underlying extended goog.structs.Map is deprecated but
+     *    this class is not. Suppress warnings until refactored.
      */
     class ButtonSet extends goog.structs.Map<any, any> {
         constructor(opt_domHelper?: goog.dom.DomHelper);
@@ -385,7 +384,7 @@ declare module goog.ui.Dialog {
         render(): void;
         
         /**
-         * Decorates the given element by adding any {@code button} elements found
+         * Decorates the given element by adding any `button` elements found
          * among its descendants to the button set.  The first button found is assumed
          * to be the default and will receive focus when the button set is rendered.
          * If a button with a name of {@link goog.ui.Dialog.DefaultButtonKeys.CANCEL}
@@ -442,21 +441,23 @@ declare module goog.ui.Dialog {
         
         /**
          * Returns all the HTML Button elements in the button set container.
-         * @return {!NodeList} A live NodeList of the buttons.
+         * @return {!IArrayLike<!Element>} A live NodeList of the buttons.
          */
-        getAllButtons(): NodeList;
+        getAllButtons(): IArrayLike<Element>;
         
         /**
          * Enables or disables a button in this set by key. If the button is not found,
          * does nothing.
          * @param {string} key The button to enable or disable.
          * @param {boolean} enabled True to enable; false to disable.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         setButtonEnabled(key: string, enabled: boolean): void;
         
         /**
          * Enables or disables all of the buttons in this set.
          * @param {boolean} enabled True to enable; false to disable.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         setAllButtonsEnabled(enabled: boolean): void;
         

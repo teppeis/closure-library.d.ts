@@ -17,14 +17,19 @@ declare module goog.ui {
         constructor(opt_element?: Element);
         
         /**
+         * Events fired by the Menu
+         * @const
+         */
+        static Events: any;
+        
+        /**
          * Called after the menu is hidden. Derived classes can override to hook this
          * event but should make sure to call the parent class method.
-         * @param {Object=} opt_target Target of the event causing the hide.
+         * @param {?Node=} opt_target Target of the event causing the hide.
          * @protected
-         * @suppress {underscore|visibility}
          * @override
          */
-        onHide_(opt_target?: Object): void;
+        onHide(opt_target?: Node): void;
         
         /**
          * Returns the selected item
@@ -83,14 +88,10 @@ declare module goog.ui {
     }
 }
 
-declare module goog.ui.MenuBase {
+declare module goog.ui.MenuBase.Events {
 
     /**
-     * Events fired by the Menu
-     * @enum {string}
+     * Event fired by the Menu when an item is "clicked".
      */
-    type Events = string;
-    var Events: {
-        ITEM_ACTION: Events;
-    };
+    var ITEM_ACTION: any;
 }

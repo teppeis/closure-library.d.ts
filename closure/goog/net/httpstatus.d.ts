@@ -5,9 +5,10 @@ declare module goog {
 declare module goog.net {
 
     /**
-     * HTTP Status Codes defined in RFC 2616 and RFC 6585.
+     * HTTP Status Codes defined in RFC 2616, RFC 6585, and RFC 4918.
      * @see http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
      * @see http://tools.ietf.org/html/rfc6585
+     * @see https://tools.ietf.org/html/rfc4918
      * @enum {number}
      */
     type HttpStatus = number;
@@ -21,6 +22,7 @@ declare module goog.net {
         NO_CONTENT: HttpStatus;
         RESET_CONTENT: HttpStatus;
         PARTIAL_CONTENT: HttpStatus;
+        MULTI_STATUS: HttpStatus;
         MULTIPLE_CHOICES: HttpStatus;
         MOVED_PERMANENTLY: HttpStatus;
         FOUND: HttpStatus;
@@ -46,6 +48,9 @@ declare module goog.net {
         UNSUPPORTED_MEDIA_TYPE: HttpStatus;
         REQUEST_RANGE_NOT_SATISFIABLE: HttpStatus;
         EXPECTATION_FAILED: HttpStatus;
+        UNPROCESSABLE_ENTITY: HttpStatus;
+        LOCKED: HttpStatus;
+        FAILED_DEPENDENCY: HttpStatus;
         PRECONDITION_REQUIRED: HttpStatus;
         TOO_MANY_REQUESTS: HttpStatus;
         REQUEST_HEADER_FIELDS_TOO_LARGE: HttpStatus;
@@ -55,19 +60,23 @@ declare module goog.net {
         SERVICE_UNAVAILABLE: HttpStatus;
         GATEWAY_TIMEOUT: HttpStatus;
         HTTP_VERSION_NOT_SUPPORTED: HttpStatus;
+        INSUFFICIENT_STORAGE: HttpStatus;
         NETWORK_AUTHENTICATION_REQUIRED: HttpStatus;
         QUIRK_IE_NO_CONTENT: HttpStatus;
-
-        /**
-         * Returns whether the given status should be considered successful.
-         *
-         * Successful codes are OK (200), CREATED (201), ACCEPTED (202),
-         * NO CONTENT (204), PARTIAL CONTENT (206), NOT MODIFIED (304),
-         * and IE's no content code (1223).
-         *
-         * @param {number} status The status code to test.
-         * @return {boolean} Whether the status code should be considered successful.
-         */
-        isSuccess: (status: number) => boolean;
     };
+}
+
+declare module goog.net.HttpStatus {
+
+    /**
+     * Returns whether the given status should be considered successful.
+     *
+     * Successful codes are OK (200), CREATED (201), ACCEPTED (202),
+     * NO CONTENT (204), PARTIAL CONTENT (206), NOT MODIFIED (304),
+     * and IE's no content code (1223).
+     *
+     * @param {number} status The status code to test.
+     * @return {boolean} Whether the status code should be considered successful.
+     */
+    function isSuccess(status: number): boolean;
 }

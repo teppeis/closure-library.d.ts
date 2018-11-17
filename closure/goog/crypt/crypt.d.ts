@@ -6,7 +6,7 @@ declare module goog.crypt {
 
     /**
      * Turns a string into an array of bytes; a "byte" being a JS number in the
-     * range 0-255.
+     * range 0-255. Multi-byte characters are written as little-endian.
      * @param {string} str String value to arrify.
      * @return {!Array<number>} Array of numbers corresponding to the
      *     UCS character codes of each character in str.
@@ -16,19 +16,21 @@ declare module goog.crypt {
     /**
      * Turns an array of numbers into the string given by the concatenation of the
      * characters to which the numbers correspond.
-     * @param {Array<number>} bytes Array of numbers representing characters.
+     * @param {!Uint8Array|!Array<number>} bytes Array of numbers representing
+     *     characters.
      * @return {string} Stringification of the array.
      */
-    function byteArrayToString(bytes: Array<number>): string;
+    function byteArrayToString(bytes: Uint8Array|Array<number>): string;
 
     /**
      * Turns an array of numbers into the hex string given by the concatenation of
      * the hex values to which the numbers correspond.
      * @param {Uint8Array|Array<number>} array Array of numbers representing
      *     characters.
+     * @param {string=} opt_separator Optional separator between values
      * @return {string} Hex string.
      */
-    function byteArrayToHex(array: Uint8Array|Array<number>): string;
+    function byteArrayToHex(array: Uint8Array|Array<number>, opt_separator?: string): string;
 
     /**
      * Converts a hex string into an integer array.
@@ -54,9 +56,9 @@ declare module goog.crypt {
 
     /**
      * XOR two byte arrays.
-     * @param {!ArrayBufferView|!Array<number>} bytes1 Byte array 1.
-     * @param {!ArrayBufferView|!Array<number>} bytes2 Byte array 2.
+     * @param {!Uint8Array|!Int8Array|!Array<number>} bytes1 Byte array 1.
+     * @param {!Uint8Array|!Int8Array|!Array<number>} bytes2 Byte array 2.
      * @return {!Array<number>} Resulting XOR of the two byte arrays.
      */
-    function xorByteArray(bytes1: ArrayBufferView|Array<number>, bytes2: ArrayBufferView|Array<number>): Array<number>;
+    function xorByteArray(bytes1: Uint8Array|Int8Array|Array<number>, bytes2: Uint8Array|Int8Array|Array<number>): Array<number>;
 }

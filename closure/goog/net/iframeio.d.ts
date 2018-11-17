@@ -153,16 +153,15 @@ declare module goog.net {
         getResponseHtml(): string;
         
         /**
-         * Parses the content as JSON. This is a safe parse and may throw an error
-         * if the response is malformed.
-         * Use goog.json.unsafeparse(this.getResponseText()) if you are sure of the
-         * state of the returned content.
+         * Parses the content as JSON. This is a legacy method for browsers without
+         * JSON.parse or for responses that are not valid JSON (e.g. containing NaN).
+         * Use JSON.parse(this.getResponseText()) in the other cases.
          * @return {Object} The parsed content.
          */
         getResponseJson(): Object;
         
         /**
-         * Returns the document object from the last request.  Not truely XML, but
+         * Returns the document object from the last request.  Not truly XML, but
          * used to mirror the XhrIo interface.
          * @return {HTMLDocument} The document object from the last request.
          */

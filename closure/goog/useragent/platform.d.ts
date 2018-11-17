@@ -5,10 +5,9 @@ declare module goog {
 declare module goog.userAgent.platform {
 
     /**
-     * The version of the platform. We only determine the version for Windows and
-     * Mac, since it doesn't make much sense on Linux. For Windows, we only look at
-     * the NT version. Non-NT-based versions (e.g. 95, 98, etc.) are given version
-     * 0.0
+     * The version of the platform. We don't determine the version of Linux.
+     * For Windows, we only look at the NT version. Non-NT-based versions
+     * (e.g. 95, 98, etc.) are given version 0.0.
      * @type {string}
      */
     var VERSION: string;

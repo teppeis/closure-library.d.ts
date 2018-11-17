@@ -67,26 +67,25 @@ declare module goog.json {
     function isValid(s: string): boolean;
 
     /**
+     * Sets an error logger to use if there's a recoverable parsing error and
+     * `goog.json.TRY_NATIVE_JSON` is enabled.
+     * @param {function(string, !Error)} errorLogger The first parameter is the
+     *     error message, the second is the exception thrown by `JSON.parse`.
+     */
+    function setErrorLogger(errorLogger: (arg0: string, arg1: Error) => any): void;
+
+    /**
      * Parses a JSON string and returns the result. This throws an exception if
      * the string is an invalid JSON string.
      *
-     * Note that this is very slow on large strings. If you trust the source of
-     * the string then you should use unsafeParse instead.
+     * Note that this is very slow on large strings. Use JSON.parse if possible.
      *
      * @param {*} s The JSON string to parse.
      * @throws Error if s is invalid JSON.
      * @return {Object} The object generated from the JSON string, or null.
+     * @deprecated Use JSON.parse.
      */
     function parse(s: any): Object;
-
-    /**
-     * Parses a JSON string and returns the result. This uses eval so it is open
-     * to security issues and it should only be used if you trust the source.
-     *
-     * @param {string} s The JSON string to parse.
-     * @return {Object} The object generated from the JSON string.
-     */
-    function unsafeParse(s: string): Object;
 
     /**
      * Serializes an object or a value to a JSON string.

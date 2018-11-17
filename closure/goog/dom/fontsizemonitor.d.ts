@@ -7,7 +7,7 @@ declare module goog.dom {
 
     /**
      * This class can be used to monitor changes in font size.  Instances will
-     * dispatch a {@code goog.dom.FontSizeMonitor.EventType.CHANGE} event.
+     * dispatch a `goog.dom.FontSizeMonitor.EventType.CHANGE` event.
      * Example usage:
      * <pre>
      * var fms = new goog.dom.FontSizeMonitor();
@@ -29,7 +29,7 @@ declare module goog.dom {
         /**
          * Constant for the change event.
          * @type {string}
-         * @deprecated Use {@code goog.dom.FontSizeMonitor.EventType.CHANGE} instead.
+         * @deprecated Use `goog.dom.FontSizeMonitor.EventType.CHANGE` instead.
          */
         static CHANGE_EVENT: string;
     }

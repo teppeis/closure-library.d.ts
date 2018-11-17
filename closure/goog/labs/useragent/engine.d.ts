@@ -15,6 +15,11 @@ declare module goog.labs.userAgent.engine {
     function isTrident(): boolean;
 
     /**
+     * @return {boolean} Whether the rendering engine is Edge.
+     */
+    function isEdge(): boolean;
+
+    /**
      * @return {boolean} Whether the rendering engine is WebKit.
      */
     function isWebKit(): boolean;

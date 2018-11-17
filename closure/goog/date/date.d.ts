@@ -60,6 +60,7 @@ declare module goog.date {
      * @param {number=} opt_minutes Minutes.
      * @param {number=} opt_seconds Seconds.
      * @constructor
+     * @struct
      * @final
      */
     class Interval {
@@ -178,16 +179,13 @@ declare module goog.date {
      * Closure APIs should accept goog.date.DateLike instead of the real Date
      * object.
      *
-     * To allow goog.date.Date objects to be passed as arguments to methods
-     * expecting Date objects this class is marked as extending the built in Date
-     * object even though that's not strictly true.
-     *
      * @param {number|goog.date.DateLike=} opt_year Four digit year or a date-like
      *     object. If not set, the created object will contain the date
      *     determined by goog.now().
      * @param {number=} opt_month Month, 0 = Jan, 11 = Dec.
      * @param {number=} opt_date Date of month, 1 - 31.
      * @constructor
+     * @struct
      * @see goog.date.DateTime
      */
     class Date {
@@ -207,7 +205,7 @@ declare module goog.date {
          * Alias for getFullYear.
          *
          * @return {number} The four digit year of date.
-         * @see #getFullyear
+         * @see #getFullYear
          */
         getYear(): number;
         
@@ -229,14 +227,14 @@ declare module goog.date {
         getTime(): number;
         
         /**
-         * @return {goog.date.weekDay} The day of week, US style. 0 = Sun, 6 = Sat.
+         * @return {number} The day of week, US style. 0 = Sun, 6 = Sat.
          */
-        getDay(): goog.date.weekDay;
+        getDay(): number;
         
         /**
-         * @return {number} The day of week, ISO style. 0 = Mon, 6 = Sun.
+         * @return {goog.date.weekDay} The day of week, ISO style. 0 = Mon, 6 = Sun.
          */
-        getIsoWeekday(): number;
+        getIsoWeekday(): goog.date.weekDay;
         
         /**
          * @return {number} The day of week according to firstDayOfWeek setting.
@@ -260,10 +258,10 @@ declare module goog.date {
         getUTCDate(): number;
         
         /**
-         * @return {goog.date.weekDay} The day of week according to universal time,
-         *     US style. 0 = Sun, 1 = Mon, 6 = Sat.
+         * @return {number} The day of week according to universal time, US style.
+         *     0 = Sun, 1 = Mon, 6 = Sat.
          */
-        getUTCDay(): goog.date.weekDay;
+        getUTCDay(): number;
         
         /**
          * @return {number} The hours value according to universal time.
@@ -271,15 +269,15 @@ declare module goog.date {
         getUTCHours(): number;
         
         /**
-         * @return {number} The hours value according to universal time.
+         * @return {number} The minutes value according to universal time.
          */
         getUTCMinutes(): number;
         
         /**
-         * @return {number} The day of week according to universal time, ISO style.
-         *     0 = Mon, 6 = Sun.
+         * @return {goog.date.weekDay} The day of week according to universal time, ISO
+         *     style. 0 = Mon, 6 = Sun.
          */
-        getUTCIsoWeekday(): number;
+        getUTCIsoWeekday(): goog.date.weekDay;
         
         /**
          * @return {number} The day of week according to universal time and
@@ -307,6 +305,13 @@ declare module goog.date {
          * @return {number} The week number.
          */
         getWeekNumber(): number;
+        
+        /**
+         * Returns year in “Week of Year” based calendars in which the year transition
+         * occurs on a week boundary.
+         * @return {number} The four digit year in "Week of Year"
+         */
+        getYearOfWeek(): number;
         
         /**
          * @return {number} The day of year.
@@ -473,6 +478,13 @@ declare module goog.date {
          *     date1 is earlier than date2, greater than 0 if date1 is later than date2.
          */
         static compare(date1: goog.date.DateLike, date2: goog.date.DateLike): number;
+        
+        /**
+         * Parses an ISO 8601 string as a `goog.date.Date`.
+         * @param {string} formatted ISO 8601 string to parse.
+         * @return {?goog.date.Date} Parsed date or null if parse fails.
+         */
+        static fromIsoString(formatted: string): goog.date.Date;
     }
 
     /**
@@ -482,9 +494,9 @@ declare module goog.date {
      * Implements most methods of the native js Date object and can be used
      * interchangeably with it just as if goog.date.DateTime was a subclass of Date.
      *
-     * @param {number|Object=} opt_year Four digit year or a date-like object. If
-     *     not set, the created object will contain the date determined by
-     *     goog.now().
+     * @param {(number|{getTime:?}|null)=} opt_year Four digit year or a date-like
+     *     object. If not set, the created object will contain the date determined
+     *     by goog.now().
      * @param {number=} opt_month Month, 0 = Jan, 11 = Dec.
      * @param {number=} opt_date Date of month, 1 - 31.
      * @param {number=} opt_hours Hours, 0 - 23.
@@ -492,10 +504,11 @@ declare module goog.date {
      * @param {number=} opt_seconds Seconds, 0 - 61.
      * @param {number=} opt_milliseconds Milliseconds, 0 - 999.
      * @constructor
+     * @struct
      * @extends {goog.date.Date}
      */
     class DateTime extends goog.date.Date {
-        constructor(opt_year?: number|Object, opt_month?: number, opt_date?: number, opt_hours?: number, opt_minutes?: number, opt_seconds?: number, opt_milliseconds?: number);
+        constructor(opt_year?: number|{getTime: any}|void, opt_month?: number, opt_date?: number, opt_hours?: number, opt_minutes?: number, opt_seconds?: number, opt_milliseconds?: number);
         
         /**
          * @param {number} timestamp Number of milliseconds since Epoch.
@@ -599,7 +612,7 @@ declare module goog.date {
         setSeconds(seconds: number): void;
         
         /**
-         * Sets the seconds part of the datetime.
+         * Sets the milliseconds part of the datetime.
          *
          * @param {number} ms Integer between 0 and 999, representing the milliseconds.
          */
@@ -683,6 +696,13 @@ declare module goog.date {
         toUTCIsoString(opt_verbose?: boolean, opt_tz?: boolean): string;
         
         /**
+         * Returns RFC 3339 string representation of datetime in UTC.
+         *
+         * @return {string} A UTC datetime expressed in RFC 3339 format.
+         */
+        toUTCRfc3339String(): string;
+        
+        /**
          * Tests whether given datetime is exactly equal to this DateTime.
          *
          * @param {goog.date.Date} other The datetime to compare.
@@ -699,7 +719,7 @@ declare module goog.date {
         toString(): string;
         
         /**
-         * Generates time label for the datetime, e.g., '5:30am'.
+         * Generates time label for the datetime, e.g., '5:30 AM'.
          * By default this does not pad hours (e.g., to '05:30') and it does add
          * an am/pm suffix.
          * TODO(user): i18n -- hardcoding time format like this is bad.  E.g., in CJK
@@ -709,6 +729,11 @@ declare module goog.date {
          * @param {boolean=} opt_omitZeroMinutes E.g., '5:00pm' becomes '5pm',
          *                                      but '5:01pm' remains '5:01pm'.
          * @return {string} The time label.
+         * @deprecated Use goog.i18n.DateTimeFormat with
+         *     goog.i18n.DateTimeFormat.Format.FULL_TIME or
+         *     goog.i18n.DateTimeFormat.Format.LONG_TIME or
+         *     goog.i18n.DateTimeFormat.Format.MEDIUM_TIME or
+         *     goog.i18n.DateTimeFormat.Format.SHORT_TIME.
          */
         toUsTimeString(opt_padHours?: boolean, opt_showAmPm?: boolean, opt_omitZeroMinutes?: boolean): string;
         
@@ -725,6 +750,14 @@ declare module goog.date {
          * @override
          */
         clone(): goog.date.DateTime;
+        
+        /**
+         * Parses an ISO 8601 string as a `goog.date.DateTime`.
+         * @param {string} formatted ISO 8601 string to parse.
+         * @return {?goog.date.DateTime} Parsed date or null if parse fails.
+         * @override
+         */
+        static fromIsoString(formatted: string): goog.date.DateTime;
     }
 
     /**
@@ -740,6 +773,9 @@ declare module goog.date {
      * @param {string} monthName The month name to use in the result.
      * @param {number} yearNum The numeric year to use in the result.
      * @return {string} A formatted month/year string.
+     * @deprecated Use goog.i18n.DateTimeFormat with
+     *     goog.i18n.DateTimeFormat.Format.YEAR_MONTH_ABBR or
+     *     goog.i18n.DateTimeFormat.Format.YEAR_MONTH_FULL.
      */
     function formatMonthAndYear(monthName: string, yearNum: number): string;
 
@@ -808,6 +844,20 @@ declare module goog.date {
     function getWeekNumber(year: number, month: number, date: number, opt_weekDay?: number, opt_firstDayOfWeek?: number): number;
 
     /**
+     * Static function for year of the week. ISO 8601 implementation.
+     *
+     * @param {number} year Year part of date.
+     * @param {number} month Month part of date (0-11).
+     * @param {number} date Day part of date (1-31).
+     * @param {number=} opt_weekDay Cut off weekday, defaults to Thursday.
+     * @param {number=} opt_firstDayOfWeek First day of the week, defaults to
+     *     Monday.
+     *     Monday=0, Sunday=6.
+     * @return {number} The four digit year of date.
+     */
+    function getYearOfWeek(year: number, month: number, date: number, opt_weekDay?: number, opt_firstDayOfWeek?: number): number;
+
+    /**
      * @param {T} date1 A datelike object.
      * @param {S} date2 Another datelike object.
      * @return {T|S} The earlier of them in time.
@@ -822,14 +872,6 @@ declare module goog.date {
      * @template T,S
      */
     function max<T, S>(date1: T, date2: S): T|S;
-
-    /**
-     * Creates a DateTime from a datetime string expressed in ISO 8601 format.
-     *
-     * @param {string} formatted A date or datetime expressed in ISO 8601 format.
-     * @return {goog.date.DateTime} Parsed date or null if parse fails.
-     */
-    function fromIsoString(formatted: string): goog.date.DateTime;
 
     /**
      * Parses a datetime string expressed in ISO 8601 format. Overwrites the date

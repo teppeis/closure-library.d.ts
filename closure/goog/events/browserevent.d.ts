@@ -1,6 +1,7 @@
 declare module goog {
     function require(name: 'goog.events.BrowserEvent'): typeof goog.events.BrowserEvent;
     function require(name: 'goog.events.BrowserEvent.MouseButton'): typeof goog.events.BrowserEvent.MouseButton;
+    function require(name: 'goog.events.BrowserEvent.PointerType'): typeof goog.events.BrowserEvent.PointerType;
 }
 
 declare module goog.events {
@@ -21,8 +22,21 @@ declare module goog.events {
         /**
          * Static data for mapping mouse buttons.
          * @type {!Array<number>}
+         * @deprecated Use `goog.events.BrowserEvent.IE_BUTTON_MAP` instead.
          */
         static IEButtonMap: Array<number>;
+        
+        /**
+         * Static data for mapping mouse buttons.
+         * @const {!Array<number>}
+         */
+        static IE_BUTTON_MAP: any;
+        
+        /**
+         * Static data for mapping MSPointerEvent types to PointerEvent types.
+         * @const {!Object<number, goog.events.BrowserEvent.PointerType>}
+         */
+        static IE_POINTER_TYPE_MAP: any;
         
         /**
          * Accepts a browser event object and creates a patched, cross browser event
@@ -78,5 +92,16 @@ declare module goog.events.BrowserEvent {
         LEFT: MouseButton;
         MIDDLE: MouseButton;
         RIGHT: MouseButton;
+    };
+
+    /**
+     * Normalized pointer type constants for pointer events.
+     * @enum {string}
+     */
+    type PointerType = string;
+    var PointerType: {
+        MOUSE: PointerType;
+        PEN: PointerType;
+        TOUCH: PointerType;
     };
 }

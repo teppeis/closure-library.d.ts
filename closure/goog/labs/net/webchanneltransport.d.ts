@@ -1,3 +1,7 @@
+declare module goog {
+    function require(name: 'goog.net.WebChannelTransport'): typeof goog.net.WebChannelTransport;
+}
+
 declare module goog.net {
 
     /**
@@ -35,4 +39,19 @@ declare module goog.net {
          */
         createWebChannel(url: string, opt_options?: goog.net.WebChannel.Options): goog.net.WebChannel;
     }
+}
+
+declare module goog.net.WebChannelTransport {
+
+    /**
+     * The client version. This integer value will be passed to the server
+     * when a channel is opened to inform the server the client "capabilities".
+     *
+     * Wire protocol version is a different concept and is internal to the
+     * transport implementation.
+     *
+     * @const
+     * @type {number}
+     */
+    var CLIENT_VERSION: number;
 }

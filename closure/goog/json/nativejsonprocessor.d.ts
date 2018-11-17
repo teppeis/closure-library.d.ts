@@ -6,7 +6,7 @@ declare module goog.json {
 
     /**
      * A class that parses and stringifies JSON using the browser's built-in JSON
-     * library, if it is avaliable.
+     * library, if it is available.
      *
      * Note that the native JSON api has subtle differences across browsers, so
      * use this implementation with care.  See json_test#assertSerialize

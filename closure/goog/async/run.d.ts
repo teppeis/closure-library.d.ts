@@ -23,8 +23,14 @@ declare module goog.async.run {
      * This should only be done in unit tests. It's useful because MockClock
      * replaces nextTick, but not the browser Promise implementation, so it allows
      * Promise-based code to be tested with MockClock.
+     *
+     * However, we also want to run promises if the MockClock is no longer in
+     * control so we schedule a backup "setTimeout" to the unmocked timeout if
+     * provided.
+     *
+     * @param {function(function())=} opt_realSetTimeout
      */
-    function forceNextTick(): void;
+    function forceNextTick(opt_realSetTimeout?: (arg0: () => any) => any): void;
 
     /**
      * Run any pending goog.async.run work items. This function is not intended

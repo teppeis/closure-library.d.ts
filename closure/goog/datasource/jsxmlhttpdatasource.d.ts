@@ -6,8 +6,7 @@ declare module goog.ds {
 
     /**
      * Similar to JsonDataSource, with using XMLHttpRequest for transport
-     * Currently requires the result be a JS object that can be evaluated and
-     * set to a variable and doesn't require strict JSON notation.
+     * Currently requires the result be a valid JSON.
      *
      * @param {(string|goog.Uri)} uri URI for the request.
      * @param {string} name Name of the datasource.

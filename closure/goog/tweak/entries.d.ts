@@ -120,7 +120,7 @@ declare module goog.tweak {
         /**
          * Sets the initial query parameter value for this setting. May not be called
          * after the setting has been initialized.
-         * @param {string} value The inital query parameter value for this setting.
+         * @param {string} value The initial query parameter value for this setting.
          */
         setInitialQueryParamValue(value: string): void;
         
@@ -173,15 +173,15 @@ declare module goog.tweak {
         encodeNewValue(): string;
         
         /**
-         * If the setting has the restartRequired option, then returns its inital
+         * If the setting has the restartRequired option, then returns its initial
          * value. Otherwise, returns its current value.
-         * @return {*} The value.
+         * @return {?} The value.
          */
         getValue(): any;
         
         /**
          * Returns the value of the setting to use once "Apply Tweaks" is clicked.
-         * @return {*} The value.
+         * @return {?} The value.
          */
         getNewValue(): any;
         
@@ -190,19 +190,19 @@ declare module goog.tweak {
          * option, then the value will not be changed until the "Apply Tweaks" button
          * is clicked. If it does not have the option, the value will be update
          * immediately and all registered callbacks will be called.
-         * @param {*} value The value.
+         * @param {?} value The value.
          */
         setValue(value: any): void;
         
         /**
          * Returns the default value for this setting.
-         * @return {*} The default value.
+         * @return {?} The default value.
          */
         getDefaultValue(): any;
         
         /**
          * Sets the default value for the tweak.
-         * @param {*} value The new value.
+         * @param {?} value The new value.
          */
         setDefaultValue(value: any): void;
     }

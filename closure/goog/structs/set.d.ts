@@ -19,6 +19,7 @@ declare module goog.structs {
      * @implements {goog.structs.Collection<T>}
      * @final
      * @template T
+     * @deprecated This type is misleading: use ES6 Set instead.
      */
     class Set<T> {
         constructor(opt_values?: Array<T>|{[index: string]: T});

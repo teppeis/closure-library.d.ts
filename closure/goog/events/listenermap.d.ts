@@ -40,7 +40,7 @@ declare module goog.events {
          * @param {boolean=} opt_useCapture The capture mode of the listener.
          * @param {Object=} opt_listenerScope Object in whose scope to call the
          *     listener.
-         * @return {goog.events.ListenableKey} Unique key for the listener.
+         * @return {!goog.events.ListenableKey} Unique key for the listener.
          */
         add(type: string|goog.events.EventId<any>, listener: Function, callOnce: boolean, opt_useCapture?: boolean, opt_listenerScope?: Object): goog.events.ListenableKey;
         
@@ -57,7 +57,7 @@ declare module goog.events {
         
         /**
          * Removes the given listener object.
-         * @param {goog.events.ListenableKey} listener The listener to remove.
+         * @param {!goog.events.ListenableKey} listener The listener to remove.
          * @return {boolean} Whether the listener is removed.
          */
         removeByKey(listener: goog.events.ListenableKey): boolean;
@@ -76,7 +76,7 @@ declare module goog.events {
          * @param {string|!goog.events.EventId} type The type of the listeners
          *     to retrieve.
          * @param {boolean} capture The capture mode of the listeners to retrieve.
-         * @return {!Array<goog.events.ListenableKey>} An array of matching
+         * @return {!Array<!goog.events.ListenableKey>} An array of matching
          *     listeners.
          */
         getListeners(type: string|goog.events.EventId<any>, capture: boolean): Array<goog.events.ListenableKey>;

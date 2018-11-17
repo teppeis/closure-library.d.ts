@@ -65,6 +65,7 @@ declare module goog.a11y.aria {
         TAB_LIST: Role;
         TAB_PANEL: Role;
         TEXTBOX: Role;
+        TEXTINFO: Role;
         TIMER: Role;
         TOOLBAR: Role;
         TOOLTIP: Role;

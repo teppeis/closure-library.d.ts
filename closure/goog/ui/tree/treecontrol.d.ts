@@ -7,7 +7,8 @@ declare module goog.ui.tree {
     /**
      * This creates a TreeControl object. A tree control provides a way to
      * view a hierarchical set of data.
-     * @param {string|!goog.html.SafeHtml} html The HTML content of the node label.
+     * @param {string|!goog.html.SafeHtml} content The content of the node label.
+     *     Strings are treated as plain-text and will be HTML escaped.
      * @param {Object=} opt_config The configuration for the tree. See
      *    goog.ui.tree.TreeControl.defaultConfig. If not specified, a default config
      *    will be used.
@@ -16,7 +17,7 @@ declare module goog.ui.tree {
      * @extends {goog.ui.tree.BaseNode}
      */
     class TreeControl extends goog.ui.tree.BaseNode {
-        constructor(html: string|goog.html.SafeHtml, opt_config?: Object, opt_domHelper?: goog.dom.DomHelper);
+        constructor(content: string|goog.html.SafeHtml, opt_config?: Object, opt_domHelper?: goog.dom.DomHelper);
         
         /**
          * A default configuration for the tree.
@@ -100,10 +101,12 @@ declare module goog.ui.tree {
         
         /**
          * Creates a new tree node using the same config as the root.
-         * @param {string=} opt_html The HTML content of the node label.
+         * @param {string=} opt_content The content of the node label. Strings are
+         *     treated as plain-text and will be HTML escaped. To set SafeHtml content,
+         *     omit opt_content and call setSafeHtml on the resulting node.
          * @return {!goog.ui.tree.TreeNode} The new item.
          */
-        createNode(opt_html?: string): goog.ui.tree.TreeNode;
+        createNode(opt_content?: string): goog.ui.tree.TreeNode;
         
         /**
          * Allows the caller to notify that the given node has been added or just had

@@ -14,9 +14,6 @@ declare module goog.i18n {
      * change time zone setting, dynamic retrieval should be the method to use.
      * In case only time zone offset is known, there is a decent fallback
      * that only use the time zone offset to create a TimeZone object.
-     * A whole set of time zone information array was available under
-     * http://go/js_locale_data. It is generated based on CLDR and
-     * Olson time zone data base (through pytz), and will be updated timely.
      *
      * @constructor
      * @final
@@ -38,6 +35,9 @@ declare module goog.i18n {
          *     <li>std_offset: The standard time zone offset in minutes EAST of UTC.
          *     <li>names: An array of four names (standard short name, standard long
          *           name, daylight short name, daylight long, name)
+         *     <li>names_ext: A hash of four fields (standard long name gmt, daylight
+         *           long name gmt, standard generic location, daylight generic
+         *           location)
          *     <li>transitions: An array of numbers which are interpreted in pairs:
          *           [time1, adjustment1, time2, adjustment2, ...] where each time is
          *           a DST transition point given as a number of hours since 00:00 UTC,
@@ -73,6 +73,14 @@ declare module goog.i18n {
          * @return {string} GMT representation string.
          */
         getGMTString(date: goog.date.DateLike): string;
+        
+        /**
+         * Return the UTC representation of this time zone object.
+         * @param {!goog.date.DateLike} date The date for which time to retrieve
+         *     UTC string.
+         * @return {string} UTC representation string.
+         */
+        getUTCString(date: goog.date.DateLike): string;
         
         /**
          * Get the long time zone name for a given date/time.
@@ -118,6 +126,22 @@ declare module goog.i18n {
          * @return {boolean} True if Daylight Saving Time is in effect.
          */
         isDaylightTime(date: goog.date.DateLike): boolean;
+        
+        /**
+         * Get the long GMT time zone name for a given date/time.
+         * @param {!goog.date.DateLike} date The time for which to retrieve
+         *     the long GMT time zone name.
+         * @return {string} The long GMT time zone name.
+         */
+        getLongNameGMT(date: goog.date.DateLike): string;
+        
+        /**
+         * Get the generic location time zone name for a given date/time.
+         * @param {!goog.date.DateLike} date The time for which to retrieve
+         *     the generic location time zone name.
+         * @return {string} The generic location time zone name.
+         */
+        getGenericLocation(date: goog.date.DateLike): string;
     }
 }
 

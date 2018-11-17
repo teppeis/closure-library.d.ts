@@ -44,6 +44,7 @@ declare module goog.debug.DevCss {
         WEBKIT: UserAgent;
         SAFARI: UserAgent;
         MOBILE: UserAgent;
+        EDGE: UserAgent;
     };
 
     /**

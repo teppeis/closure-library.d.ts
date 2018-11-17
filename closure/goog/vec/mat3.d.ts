@@ -280,7 +280,7 @@ declare module goog.vec.Mat3 {
     /**
      * Sets the specified column with the supplied values.
      *
-     * @param {goog.vec.Mat3.AnyType} mat The matrix to recieve the values.
+     * @param {goog.vec.Mat3.AnyType} mat The matrix to receive the values.
      * @param {number} column The column index to set the values on.
      * @param {number} v0 The value for row 0.
      * @param {number} v1 The value for row 1.

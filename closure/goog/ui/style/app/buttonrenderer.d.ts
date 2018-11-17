@@ -33,14 +33,16 @@ declare module goog.ui.style.app {
         /**
          * Takes a text caption or existing DOM structure, and returns the content
          * wrapped in a pseudo-rounded-corner box.  Creates the following DOM structure:
-         *  <div class="goog-inline-block goog-button-base-outer-box">
-         *    <div class="goog-inline-block goog-button-base-inner-box">
-         *      <div class="goog-button-base-pos">
-         *        <div class="goog-button-base-top-shadow">&nbsp;</div>
-         *        <div class="goog-button-base-content">Contents...</div>
+         *
+         *    <div class="goog-inline-block goog-button-base-outer-box">
+         *      <div class="goog-inline-block goog-button-base-inner-box">
+         *        <div class="goog-button-base-pos">
+         *          <div class="goog-button-base-top-shadow">&nbsp;</div>
+         *          <div class="goog-button-base-content">Contents...</div>
+         *        </div>
          *      </div>
          *    </div>
-         *  </div>
+         *
          * Used by both {@link #createDom} and {@link #decorate}.  To be overridden
          * by subclasses.
          * @param {goog.ui.ControlContent} content Text caption or DOM structure to wrap

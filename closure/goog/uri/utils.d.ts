@@ -102,7 +102,7 @@ declare module goog.uri.utils {
      *
      * Each component can be accessed via the component indices; for example:
      * <pre>
-     * goog.uri.utils.split(someStr)[goog.uri.utils.CompontentIndex.QUERY_DATA];
+     * goog.uri.utils.split(someStr)[goog.uri.utils.ComponentIndex.QUERY_DATA];
      * </pre>
      *
      * @param {string} uri The URI string to examine.
@@ -210,6 +210,13 @@ declare module goog.uri.utils {
     function getHost(uri: string): string;
 
     /**
+     * Returns the origin for a given URL.
+     * @param {string} uri The URI string.
+     * @return {string} Everything up to and including the port.
+     */
+    function getOrigin(uri: string): string;
+
+    /**
      * Extracts the path of the URL and everything after.
      * @param {string} uri The URI string.
      * @return {string} The URI, starting at the path and including the query
@@ -258,12 +265,12 @@ declare module goog.uri.utils {
      * Builds a query data string from a sequence of alternating keys and values.
      * Currently generates "&key&" for empty args.
      *
-     * @param {goog.uri.utils.QueryArray} keysAndValues Alternating keys and
-     *     values.  See the typedef.
+     * @param {!IArrayLike<string|goog.uri.utils.QueryValue>} keysAndValues
+     *     Alternating keys and values. See the QueryArray typedef.
      * @param {number=} opt_startIndex A start offset into the arary, defaults to 0.
      * @return {string} The encoded query string, in the form 'a=1&b=2'.
      */
-    function buildQueryData(keysAndValues: goog.uri.utils.QueryArray, opt_startIndex?: number): string;
+    function buildQueryData(keysAndValues: IArrayLike<string|goog.uri.utils.QueryValue>, opt_startIndex?: number): string;
 
     /**
      * Builds a query data string from a map.
@@ -299,11 +306,12 @@ declare module goog.uri.utils {
      * fact that URL's generally can't exceed 2kb.
      *
      * @param {string} uri The original URI, which may already have query data.
-     * @param {...(goog.uri.utils.QueryArray|string|goog.uri.utils.QueryValue)} var_args
+     * @param {...(goog.uri.utils.QueryArray|goog.uri.utils.QueryValue)}
+     * var_args
      *     An array or argument list conforming to goog.uri.utils.QueryArray.
      * @return {string} The URI with all query parameters added.
      */
-    function appendParams(uri: string, ...var_args: (goog.uri.utils.QueryArray|string|goog.uri.utils.QueryValue)[]): string;
+    function appendParams(uri: string, ...var_args: (goog.uri.utils.QueryArray|goog.uri.utils.QueryValue)[]): string;
 
     /**
      * Appends query parameters from a map.
@@ -354,8 +362,8 @@ declare module goog.uri.utils {
 
     /**
      * Gets all values of a query parameter.
-     * @param {string} uri The URI to process.  May contain a framgnet.
-     * @param {string} keyEncoded The URI-encoded key.  Case-snsitive.
+     * @param {string} uri The URI to process.  May contain a fragment.
+     * @param {string} keyEncoded The URI-encoded key.  Case-sensitive.
      * @return {!Array<string>} All URI-decoded values with the given key.
      *     If the key is not found, this will have length 0, but never be null.
      */
@@ -374,8 +382,8 @@ declare module goog.uri.utils {
      *
      * Repeated calls to this can exhibit quadratic behavior due to the need to
      * find existing instances and reconstruct the string, though it should be
-     * limited given the 2kb limit.  Consider using appendParams to append multiple
-     * parameters in bulk.
+     * limited given the 2kb limit.  Consider using appendParams or setParamsFromMap
+     * to update multiple parameters in bulk.
      *
      * @param {string} uri The original URI, which may already have query data.
      * @param {string} keyEncoded The key, which must already be URI encoded.
@@ -384,6 +392,20 @@ declare module goog.uri.utils {
      * @return {string} The URI with the query parameter added.
      */
     function setParam(uri: string, keyEncoded: string, value: any): string;
+
+    /**
+     * Effeciently set or remove multiple query parameters in a URI. Order of
+     * unchanged parameters will not be modified, all updated parameters will be
+     * appended to the end of the query. Params with values of null or undefined are
+     * removed.
+     *
+     * @param {string} uri The URI to process.
+     * @param {!Object<string, goog.uri.utils.QueryValue>} params A list of
+     *     parameters to update. If null or undefined, the param will be removed.
+     * @return {string} An updated URI where the query data has been updated with
+     *     the params.
+     */
+    function setParamsFromMap(uri: string, params: {[index: string]: goog.uri.utils.QueryValue}): string;
 
     /**
      * Generates a URI path using a given URI and a path with checks to

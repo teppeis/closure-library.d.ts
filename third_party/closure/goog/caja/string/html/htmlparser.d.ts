@@ -1,15 +1,14 @@
 declare module goog {
+    function require(name: 'goog.string.html'): typeof goog.string$.html;
     function require(name: 'goog.string.html.HtmlParser'): typeof goog.string$.html.HtmlParser;
-    function require(name: 'goog.string.html.HtmlSaxHandler'): typeof goog.string$.html.HtmlSaxHandler;
-    function require(name: 'goog.string.html.HtmlParser.Entities'): typeof goog.string$.html.HtmlParser.Entities;
     function require(name: 'goog.string.html.HtmlParser.EFlags'): typeof goog.string$.html.HtmlParser.EFlags;
 }
 
 declare module goog.string$.html {
 
     /**
-     * An Html parser: {@code parse} takes a string and calls methods on
-     * {@code goog.string.html.HtmlSaxHandler} while it is visiting it.
+     * An Html parser: `parse` takes a string and calls methods on
+     * `goog.string.html.HtmlSaxHandler` while it is visiting it.
      *
      * @constructor
      */
@@ -17,14 +16,56 @@ declare module goog.string$.html {
         constructor();
         
         /**
-         * A map of element to a bitmap of flags it has, used internally on the parser.
-         * @type {Object}
+         * HTML entities that are encoded/decoded.
+         * TODO(user): use `goog.string.htmlEncode` instead.
+         * @type {!Object<string, string>}
          */
-        static Elements: Object;
+        static Entities: {[index: string]: string};
         
         /**
-         * Given a SAX-like {@code goog.string.html.HtmlSaxHandler} parses a
-         * {@code htmlText} and lets the {@code handler} know the structure while
+         * A map of element to a bitmap of flags it has, used internally on the parser.
+         * @type {Object<string,number>}
+         */
+        static Elements: {[index: string]: number};
+        
+        /**
+         * Regular expression that matches &s.
+         * @type {RegExp}
+         * @package
+         */
+        static AMP_RE: RegExp;
+        
+        /**
+         * Regular expression that matches <.
+         * @type {RegExp}
+         * @package
+         */
+        static LT_RE: RegExp;
+        
+        /**
+         * Regular expression that matches >.
+         * @type {RegExp}
+         * @package
+         */
+        static GT_RE: RegExp;
+        
+        /**
+         * Regular expression that matches ".
+         * @type {RegExp}
+         * @package
+         */
+        static QUOTE_RE: RegExp;
+        
+        /**
+         * Regular expression that matches =.
+         * @type {RegExp}
+         * @package
+         */
+        static EQUALS_RE: RegExp;
+        
+        /**
+         * Given a SAX-like `goog.string.html.HtmlSaxHandler` parses a
+         * `htmlText` and lets the `handler` know the structure while
          * visiting the nodes.
          *
          * @param {goog.string.html.HtmlSaxHandler} handler The HtmlSaxHandler that will
@@ -35,18 +76,17 @@ declare module goog.string$.html {
     }
 
     /**
-     * An interface to the {@code goog.string.html.HtmlParser} visitor, that gets
+     * An interface to the `goog.string.html.HtmlParser` visitor, that gets
      * called while the HTML is being parsed.
      *
-     * @constructor
+     * @interface
      */
-    class HtmlSaxHandler {
-        constructor();
+    interface HtmlSaxHandler {
         
         /**
          * Handler called when the parser found a new tag.
          * @param {string} name The name of the tag that is starting.
-         * @param {Array.<string>} attributes The attributes of the tag.
+         * @param {Array<string>} attributes The attributes of the tag.
          */
         startTag(name: string, attributes: Array<string>): void;
         
@@ -96,21 +136,6 @@ declare module goog.string$.html {
 }
 
 declare module goog.string$.html.HtmlParser {
-
-    /**
-     * HTML entities that are encoded/decoded.
-     * TODO(user): use {@code goog.string.htmlEncode} instead.
-     * @enum {string}
-     */
-    type Entities = string;
-    var Entities: {
-        lt: Entities;
-        gt: Entities;
-        amp: Entities;
-        nbsp: Entities;
-        quot: Entities;
-        apos: Entities;
-    };
 
     /**
      * The html eflags, used internally on the parser.

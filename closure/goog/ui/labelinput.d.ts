@@ -33,6 +33,7 @@ declare module goog.ui {
          * label input object.
          * @param {Element} element The HTML input element to decorate.
          * @override
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         decorateInternal(element: Element): void;
         
@@ -43,11 +44,13 @@ declare module goog.ui {
         
         /**
          * @return {boolean} Whether the value has been changed by the user.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         hasChanged(): boolean;
         
         /**
          * Clears the value of the input element without resetting the default text.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         clear(): void;
         
@@ -60,6 +63,7 @@ declare module goog.ui {
          * Use this to set the value through script to ensure that the label state is
          * up to date
          * @param {string} s The new value for the input.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         setValue(s: string): void;
         
@@ -67,12 +71,14 @@ declare module goog.ui {
          * Returns the current value of the text box, returning an empty string if the
          * search box is the default value
          * @return {string} The value of the input box.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         getValue(): string;
         
         /**
          * Sets the label text as aria-label, and placeholder when supported.
          * @param {string} label The text to show as the label.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         setLabel(label: string): void;
         
@@ -85,6 +91,7 @@ declare module goog.ui {
          * This method focuses the input and selects all the text. If the value hasn't
          * changed it will set the value to the label so that the label text is
          * selected.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         focusAndSelect(): void;
         
@@ -92,11 +99,13 @@ declare module goog.ui {
          * Enables/Disables the label input.
          * @param {boolean} enabled Whether to enable (true) or disable (false) the
          *     label input.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         setEnabled(enabled: boolean): void;
         
         /**
          * @return {boolean} True if the label input is enabled, false otherwise.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         isEnabled(): boolean;
     }

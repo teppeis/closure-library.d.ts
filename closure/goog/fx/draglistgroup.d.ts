@@ -1,7 +1,9 @@
 declare module goog {
     function require(name: 'goog.fx.DragListDirection'): typeof goog.fx.DragListDirection;
+    function require(name: 'goog.fx.DragListPermission'): typeof goog.fx.DragListPermission;
     function require(name: 'goog.fx.DragListGroup'): typeof goog.fx.DragListGroup;
     function require(name: 'goog.fx.DragListGroupEvent'): typeof goog.fx.DragListGroupEvent;
+    function require(name: 'goog.fx.DragListGroup.EventType'): typeof goog.fx.DragListGroup.EventType;
 }
 
 declare module goog.fx {
@@ -20,6 +22,18 @@ declare module goog.fx {
     };
 
     /**
+     * Enum to indicate the drag and drop permissions for a drag list. Default is
+     * DRAG_OUT_AND_DROP.
+     * @enum {number}
+     */
+    type DragListPermission = number;
+    var DragListPermission: {
+        DRAG_OUT_AND_DROP: DragListPermission;
+        ONLY_DRAG_OUT: DragListPermission;
+        ONLY_DROP: DragListPermission;
+    };
+
+    /**
      * A class representing a group of one or more "drag lists" with items that can
      * be dragged within them and between them.
      *
@@ -33,15 +47,10 @@ declare module goog.fx {
      *
      * @extends {goog.events.EventTarget}
      * @constructor
+     * @struct
      */
     class DragListGroup extends goog.events.EventTarget {
         constructor();
-        
-        /**
-         * Events dispatched by this class.
-         * @const
-         */
-        static EventType: any;
         
         /**
          * Sets the property of the currDragItem that it is always displayed in the
@@ -70,6 +79,9 @@ declare module goog.fx {
          */
         getHysteresis(): number;
         
+        /** @return {boolean} true if the user is currently dragging an element. */
+        isDragging(): boolean;
+        
         /**
          * Adds a drag list to this DragListGroup.
          * All calls to this method must happen before the call to init().
@@ -85,8 +97,11 @@ declare module goog.fx {
          * @param {string=} opt_dragHoverClass CSS class to apply to this drag list when
          *     the draggerEl hovers over it during a drag action.  If present, must be a
          *     single, valid classname (not a string of space-separated classnames).
+         * @param {!goog.fx.DragListPermission=} opt_dragListPermission Defaults
+         *     to DRAG_OUT_AND_DROP but can be passed in to modify to prevent users from
+         *     dragging an item out of a list or dropping an item into a list.
          */
-        addDragList(dragListElement: Element, growthDirection: goog.fx.DragListDirection, opt_unused?: boolean, opt_dragHoverClass?: string): void;
+        addDragList(dragListElement: Element, growthDirection: goog.fx.DragListDirection, opt_unused?: boolean, opt_dragHoverClass?: string, opt_dragListPermission?: goog.fx.DragListPermission): void;
         
         /**
          * Sets a user-supplied function used to get the "handle" element for a drag
@@ -96,7 +111,7 @@ declare module goog.fx {
          * If not set, the default implementation uses the whole drag item as the
          * handle.
          *
-         * @param {function(Element): Element} getHandleForDragItemFn A function that,
+         * @param {function(!Element): Element} getHandleForDragItemFn A function that,
          *     given any drag item, returns a reference to its "handle" element
          *     (which may be the drag item element itself).
          */
@@ -105,14 +120,14 @@ declare module goog.fx {
         /**
          * Sets a user-supplied CSS class to add to a drag item on hover (not during a
          * drag action).
-         * @param {...!string} var_args The CSS class or classes.
+         * @param {...string} var_args The CSS class or classes.
          */
         setDragItemHoverClass(...var_args: string[]): void;
         
         /**
          * Sets a user-supplied CSS class to add to a drag item handle on hover (not
          * during a drag action).
-         * @param {...!string} var_args The CSS class or classes.
+         * @param {...string} var_args The CSS class or classes.
          */
         setDragItemHandleHoverClass(...var_args: string[]): void;
         
@@ -125,7 +140,7 @@ declare module goog.fx {
          * If this class is set by the user, then the default behavior does not happen
          * (unless, of course, the class also contains visibility:hidden).
          *
-         * @param {...!string} var_args The CSS class or classes.
+         * @param {...string} var_args The CSS class or classes.
          */
         setCurrDragItemClass(...var_args: string[]): void;
         
@@ -155,10 +170,17 @@ declare module goog.fx {
         addItemToDragList(list: Element, item: Element, opt_index?: number): void;
         
         /**
+         * Caches the heights of each drag list and drag item, except for the current
+         * drag item.
+         *
+         */
+        recacheListAndItemBounds(): void;
+        
+        /**
          * Listens for drag events on the given drag item. This method is currently used
          * to initialize drag items.
          *
-         * @param {Element} dragItem the element to initialize. This element has to be
+         * @param {!Element} dragItem the element to initialize. This element has to be
          * in one of the drag lists.
          * @protected
          */
@@ -168,7 +190,7 @@ declare module goog.fx {
          * Generates an element to follow the cursor during dragging, given a drag
          * source element.  The default behavior is simply to clone the source element,
          * but this may be overridden in subclasses.  This method is called by
-         * {@code createDragElement()} before the drag class is added.
+         * `createDragElement()` before the drag class is added.
          *
          * @param {Element} sourceEl Drag source element.
          * @return {!Element} The new drag element.
@@ -210,7 +232,7 @@ declare module goog.fx {
      * The fields draggerElCenter, hoverList, and hoverNextItem are only available
      * for the BEFOREDRAGMOVE and DRAGMOVE events.
      *
-     * @param {string} type The event type string.
+     * @param {!goog.fx.DragListGroup.EventType} type
      * @param {goog.fx.DragListGroup} dragListGroup A reference to the associated
      *     DragListGroup object.
      * @param {goog.events.BrowserEvent|goog.fx.DragEvent} event The event fired
@@ -231,9 +253,29 @@ declare module goog.fx {
      *     location of currDragItem.) May be null if not applicable or if
      *     currDragItem would be added to the end of hoverList.
      * @constructor
+     * @struct
      * @extends {goog.events.Event}
      */
     class DragListGroupEvent extends goog.events.Event {
-        constructor(type: string, dragListGroup: goog.fx.DragListGroup, event: goog.events.BrowserEvent|goog.fx.DragEvent, currDragItem: Element, draggerEl: Element, dragger: goog.fx.Dragger, opt_draggerElCenter?: goog.math.Coordinate, opt_hoverList?: Element, opt_hoverNextItem?: Element);
+        constructor(type: goog.fx.DragListGroup.EventType, dragListGroup: goog.fx.DragListGroup, event: goog.events.BrowserEvent|goog.fx.DragEvent, currDragItem: Element, draggerEl: Element, dragger: goog.fx.Dragger, opt_draggerElCenter?: goog.math.Coordinate, opt_hoverList?: Element, opt_hoverNextItem?: Element);
     }
+}
+
+declare module goog.fx.DragListGroup {
+
+    /**
+     * Events dispatched by this class.
+     * @enum {!goog.events.EventId<!goog.fx.DragListGroupEvent>}
+     */
+    type EventType = goog.events.EventId<goog.fx.DragListGroupEvent>;
+    var EventType: {
+        DRAGGERCREATED: EventType;
+        BEFOREDRAGSTART: EventType;
+        DRAGSTART: EventType;
+        BEFOREDRAGMOVE: EventType;
+        DRAGMOVE: EventType;
+        BEFOREDRAGEND: EventType;
+        DRAGEND: EventType;
+        DRAGGERREMOVED: EventType;
+    };
 }

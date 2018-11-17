@@ -52,7 +52,7 @@ declare module goog.debug {
          * name and should normally be based on the package name or class name of the
          * subsystem, such as goog.net.BrowserChannel.
          * @return {!goog.debug.Logger} The named logger.
-         * @deprecated use goog.log instead. http://go/goog-debug-logger-deprecated
+         * @deprecated use {@link goog.log} instead.
          */
         static getLogger(name: string): goog.debug.Logger;
         

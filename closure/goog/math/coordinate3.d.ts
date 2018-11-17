@@ -37,7 +37,7 @@ declare module goog.math {
          *
          * @param {goog.math.Coordinate3} a A Coordinate3.
          * @param {goog.math.Coordinate3} b A Coordinate3.
-         * @return {number} The distance between {@code a} and {@code b}.
+         * @return {number} The distance between `a` and `b`.
          */
         static distance(a: goog.math.Coordinate3, b: goog.math.Coordinate3): number;
         
@@ -51,7 +51,7 @@ declare module goog.math {
          *
          * @param {goog.math.Coordinate3} a A Coordinate3.
          * @param {goog.math.Coordinate3} b A Coordinate3.
-         * @return {number} The squared distance between {@code a} and {@code b}.
+         * @return {number} The squared distance between `a` and `b`.
          */
         static squaredDistance(a: goog.math.Coordinate3, b: goog.math.Coordinate3): number;
         
@@ -62,7 +62,7 @@ declare module goog.math {
          * @param {goog.math.Coordinate3} a A Coordinate3.
          * @param {goog.math.Coordinate3} b A Coordinate3.
          * @return {!goog.math.Coordinate3} A Coordinate3 representing the difference
-         *     between {@code a} and {@code b}.
+         *     between `a` and `b`.
          */
         static difference(a: goog.math.Coordinate3, b: goog.math.Coordinate3): goog.math.Coordinate3;
         

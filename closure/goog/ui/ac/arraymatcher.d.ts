@@ -54,7 +54,8 @@ declare module goog.ui.ac {
          * Matches the token against the start of words in the row.
          * @param {string} token Token to match.
          * @param {number} maxMatches Max number of matches to return.
-         * @param {!Array<?>} rows Rows to search for matches. Can be objects if they have
+         * @param {!Array<?>} rows Rows to search for matches. Can be objects if they
+         * have
          *     a toString method that returns the value to match against.
          * @return {!Array<?>} Rows that match.
          */

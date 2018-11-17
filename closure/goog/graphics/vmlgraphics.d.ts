@@ -120,6 +120,7 @@ declare module goog.graphics {
          * @param {goog.graphics.StrokeAndFillElement} element The element wrapper.
          * @param {goog.graphics.Fill?} fill The fill object.
          * @override
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         setElementFill(element: goog.graphics.StrokeAndFillElement, fill: goog.graphics.Fill): void;
         
@@ -128,6 +129,7 @@ declare module goog.graphics {
          * @param {goog.graphics.StrokeAndFillElement} element The element wrapper.
          * @param {goog.graphics.Stroke?} stroke The stroke object.
          * @override
+         * @suppress {strictPrimitiveOperators,strictMissingProperties} Part of the go/strict_warnings_migration
          */
         setElementStroke(element: goog.graphics.StrokeAndFillElement, stroke: goog.graphics.Stroke): void;
         
@@ -152,6 +154,7 @@ declare module goog.graphics {
          * @param {!goog.graphics.AffineTransform} affineTransform The
          *     transformation applied to this element.
          * @override
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         setElementAffineTransform(element: goog.graphics.Element, affineTransform: goog.graphics.AffineTransform): void;
         
@@ -196,6 +199,7 @@ declare module goog.graphics {
          * @return {!goog.math.Size} Returns the number of pixels spanned by the
          *     surface.
          * @override
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         getPixelSize(): goog.math.Size;
         
@@ -309,7 +313,7 @@ declare module goog.graphics {
          * Measure and return the width (in pixels) of a given text string.
          * Text measurement is needed to make sure a text can fit in the allocated
          * area. The way text length is measured is by writing it into a div that is
-         * after the visible area, measure the div width, and immediatly erase the
+         * after the visible area, measure the div width, and immediately erase the
          * written value.
          *
          * @param {string} text The text string to measure.

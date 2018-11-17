@@ -1,6 +1,7 @@
 declare module goog {
     function require(name: 'goog.ui.DatePicker'): typeof goog.ui.DatePicker;
     function require(name: 'goog.ui.DatePickerEvent'): typeof goog.ui.DatePickerEvent;
+    function require(name: 'goog.ui.DatePicker.Events'): typeof goog.ui.DatePicker.Events;
 }
 
 declare module goog.ui {
@@ -21,13 +22,6 @@ declare module goog.ui {
      */
     class DatePicker extends goog.ui.Component {
         constructor(opt_date?: goog.date.Date|Date, opt_dateTimeSymbols?: Object, opt_domHelper?: goog.dom.DomHelper, opt_renderer?: goog.ui.DatePickerRenderer);
-        
-        /**
-         * Constants for event names
-         *
-         * @const
-         */
-        static Events: any;
         
         /**
          * @deprecated Use isInDocument.
@@ -131,9 +125,16 @@ declare module goog.ui {
         /**
          * Sets the range of dates which may be selected by the user.
          *
-         * @param {goog.date.DateRange} dateRange The range of selectable dates.
+         * @param {!goog.date.DateRange} dateRange The range of selectable dates.
          */
         setUserSelectableDateRange(dateRange: goog.date.DateRange): void;
+        
+        /**
+         * Gets the range of dates which may be selected by the user.
+         *
+         * @return {!goog.date.DateRange} The range of selectable dates.
+         */
+        getUserSelectableDateRange(): goog.date.DateRange;
         
         /**
          * Sets whether the picker should use a simple navigation menu that only
@@ -269,7 +270,7 @@ declare module goog.ui {
         getDateElementAt(row: number, col: number): Element;
         
         /**
-         * Sets the selected date.
+         * Sets the selected date. Will always fire the SELECT event.
          *
          * @param {goog.date.Date|Date} date Date to select or null to select nothing.
          */
@@ -289,4 +290,19 @@ declare module goog.ui {
     class DatePickerEvent extends goog.events.Event {
         constructor(type: string, target: goog.ui.DatePicker, date: goog.date.Date);
     }
+}
+
+declare module goog.ui.DatePicker {
+
+    /**
+     * Constants for event names
+     *
+     * @enum {string}
+     */
+    type Events = string;
+    var Events: {
+        CHANGE: Events;
+        CHANGE_ACTIVE_MONTH: Events;
+        SELECT: Events;
+    };
 }

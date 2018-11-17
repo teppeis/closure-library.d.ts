@@ -15,6 +15,11 @@ declare module goog.labs.userAgent.browser {
     function isIE(): boolean;
 
     /**
+     * @return {boolean} Whether the user's browser is Edge.
+     */
+    function isEdge(): boolean;
+
+    /**
      * @return {boolean} Whether the user's browser is Firefox.
      */
     function isFirefox(): boolean;

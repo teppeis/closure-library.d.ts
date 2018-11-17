@@ -12,16 +12,23 @@ declare module goog.i18n {
      *     number format pattern.
      * @param {string=} opt_currency Optional international currency
      *     code. This determines the currency code/symbol used in format/parse. If
-     *     not given, the currency code for current locale will be used.
+     *     not given, the currency code for the current locale will be used.
      * @param {number=} opt_currencyStyle currency style, value defined in
-     *        goog.i18n.NumberFormat.CurrencyStyle.
+     *     goog.i18n.NumberFormat.CurrencyStyle. If not given, the currency style
+     *     for the current locale will be used.
+     * @param {!Object<string, string>=} opt_symbols Optional number format symbols
+     *     map, analogous to goog.i18n.NumberFormatSymbols. If present, this
+     *     overrides the symbols from the current locale, such as the percent sign
+     *     and minus sign.
      * @constructor
      */
     class NumberFormat {
-        constructor(pattern: number|string, opt_currency?: string, opt_currencyStyle?: number);
+        constructor(pattern: number|string, opt_currency?: string, opt_currencyStyle?: number, opt_symbols?: {[index: string]: string});
         
         /**
          * Set if the usage of Ascii digits in formatting should be enforced.
+         * NOTE: This function must be called before constructing NumberFormat.
+         *
          * @param {boolean} doEnforce Boolean value about if Ascii digits should be
          *     enforced.
          */
@@ -41,6 +48,12 @@ declare module goog.i18n {
         setMinimumFractionDigits(min: number): goog.i18n.NumberFormat;
         
         /**
+         * Gets minimum number of fraction digits.
+         * @return {number} The number of minimum fraction digits.
+         */
+        getMinimumFractionDigits(): number;
+        
+        /**
          * Sets maximum number of fraction digits.
          * @param {number} max the maximum.
          * @return {!goog.i18n.NumberFormat} Reference to this NumberFormat object.
@@ -48,7 +61,16 @@ declare module goog.i18n {
         setMaximumFractionDigits(max: number): goog.i18n.NumberFormat;
         
         /**
+         * Gets maximum number of fraction digits.
+         * @return {number} The number of maximum fraction digits.
+         */
+        getMaximumFractionDigits(): number;
+        
+        /**
          * Sets number of significant digits to show. Only fractions will be rounded.
+         * Regardless of the number of significant digits set, the number of fractional
+         * digits shown will always be capped by the maximum number of fractional digits
+         * set on {@link #setMaximumFractionDigits}.
          * @param {number} number The number of significant digits to include.
          * @return {!goog.i18n.NumberFormat} Reference to this NumberFormat object.
          */

@@ -13,6 +13,7 @@ declare module goog.ui {
      * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper.
      * @constructor
      * @extends {goog.events.EventTarget}
+     * @suppress {underscore}
      */
     class Component extends goog.events.EventTarget {
         constructor(opt_domHelper?: goog.dom.DomHelper);
@@ -30,7 +31,7 @@ declare module goog.ui {
         
         /**
          * Set the default right-to-left value. This causes all component's created from
-         * this point foward to have the given value. This is useful for cases where
+         * this point forward to have the given value. This is useful for cases where
          * a given page is always in one directionality, avoiding unnecessary
          * right to left determinations.
          * @param {?boolean} rightToLeft Whether the components should be rendered
@@ -88,9 +89,9 @@ declare module goog.ui {
          * Returns an array of all the elements in this component's DOM with the
          * provided className.
          * @param {string} className The name of the class to look for.
-         * @return {!goog.array.ArrayLike} The items found with the class name provided.
+         * @return {!IArrayLike<!Element>} The items found with the class name provided.
          */
-        getElementsByClass(className: string): goog.array.ArrayLike;
+        getElementsByClass(className: string): IArrayLike<Element>;
         
         /**
          * Returns the first element in this component's DOM with the provided
@@ -101,7 +102,7 @@ declare module goog.ui {
         getElementByClass(className: string): Element;
         
         /**
-         * Similar to {@code getElementByClass} except that it expects the
+         * Similar to `getElementByClass` except that it expects the
          * element to be present in the dom thus returning a required value. Otherwise,
          * will assert.
          * @param {string} className The name of the class to look for.
@@ -114,7 +115,7 @@ declare module goog.ui {
          * this method is called.
          * @return {!goog.events.EventHandler<T>} Event handler for this component.
          * @protected
-         * @this T
+         * @this {T}
          * @template T
          */
         getHandler<T>(): goog.events.EventHandler<T>;
@@ -122,8 +123,8 @@ declare module goog.ui {
         /**
          * Sets the parent of this component to use for event bubbling.  Throws an error
          * if the component already has a parent or if an attempt is made to add a
-         * component to itself as a child.  Callers must use {@code removeChild}
-         * or {@code removeChildAt} to remove components from their containers before
+         * component to itself as a child.  Callers must use `removeChild`
+         * or `removeChildAt` to remove components from their containers before
          * calling this method.
          * @see goog.ui.Component#removeChild
          * @see goog.ui.Component#removeChildAt
@@ -162,7 +163,7 @@ declare module goog.ui {
          * document body.
          *
          * If this component has a parent component, and the parent component is
-         * not in the document already, then this will not call {@code enterDocument}
+         * not in the document already, then this will not call `enterDocument`
          * on this component.
          *
          * Throws an Error if the component is already rendered.
@@ -252,9 +253,9 @@ declare module goog.ui {
          * object's values are the id fragments and the new values are the generated
          * ids.  The key will remain the same.
          * @param {Object} object The object that will be used to create the ids.
-         * @return {!Object} An object of id keys to generated ids.
+         * @return {!Object<string, string>} An object of id keys to generated ids.
          */
-        makeIds(object: Object): Object;
+        makeIds(object: Object): {[index: string]: string};
         
         /**
          * Returns the model associated with the UI component.
@@ -300,33 +301,33 @@ declare module goog.ui {
          * Adds the specified component as a child of this component at the given
          * 0-based index.
          *
-         * Both {@code addChild} and {@code addChildAt} assume the following contract
+         * Both `addChild` and `addChildAt` assume the following contract
          * between parent and child components:
          *  <ul>
          *    <li>the child component's element must be a descendant of the parent
          *        component's element, and
          *    <li>the DOM state of the child component must be consistent with the DOM
-         *        state of the parent component (see {@code isInDocument}) in the
+         *        state of the parent component (see `isInDocument`) in the
          *        steady state -- the exception is to addChildAt(child, i, false) and
          *        then immediately decorate/render the child.
          *  </ul>
          *
-         * In particular, {@code parent.addChild(child)} will throw an error if the
+         * In particular, `parent.addChild(child)` will throw an error if the
          * child component is already in the document, but the parent isn't.
          *
-         * Clients of this API may call {@code addChild} and {@code addChildAt} with
-         * {@code opt_render} set to true.  If {@code opt_render} is true, calling these
+         * Clients of this API may call `addChild` and `addChildAt` with
+         * `opt_render` set to true.  If `opt_render` is true, calling these
          * methods will automatically render the child component's element into the
          * parent component's element. If the parent does not yet have an element, then
-         * {@code createDom} will automatically be invoked on the parent before
+         * `createDom` will automatically be invoked on the parent before
          * rendering the child.
          *
          * Invoking {@code parent.addChild(child, true)} will throw an error if the
          * child component is already in the document, regardless of the parent's DOM
          * state.
          *
-         * If {@code opt_render} is true and the parent component is not already
-         * in the document, {@code enterDocument} will not be called on this component
+         * If `opt_render` is true and the parent component is not already
+         * in the document, `enterDocument` will not be called on this component
          * at this point.
          *
          * Finally, this method also throws an error if the new child already has a
@@ -403,7 +404,7 @@ declare module goog.ui {
         
         /**
          * Calls the given function on each of this component's children in order.  If
-         * {@code opt_obj} is provided, it will be used as the 'this' object in the
+         * `opt_obj` is provided, it will be used as the 'this' object in the
          * function when called.  The function should take two arguments:  the child
          * component and its 0-based index.  The return value is ignored.
          * @param {function(this:T,?,number):?} f The function to call for every
@@ -427,7 +428,7 @@ declare module goog.ui {
          * parent component.  The argument can either be a string (interpreted as the
          * ID of the child component to remove) or the child component itself.
          *
-         * If {@code opt_unrender} is true, calls {@link goog.ui.component#exitDocument}
+         * If `opt_unrender` is true, calls {@link goog.ui.component#exitDocument}
          * on the removed child, and subsequently detaches the child's DOM from the
          * document.  Otherwise it is the caller's responsibility to clean up the child
          * component's DOM.
@@ -435,7 +436,7 @@ declare module goog.ui {
          * @see goog.ui.Component#removeChildAt
          * @param {string|goog.ui.Component|null} child The ID of the child to remove,
          *    or the child component itself.
-         * @param {boolean=} opt_unrender If true, calls {@code exitDocument} on the
+         * @param {boolean=} opt_unrender If true, calls `exitDocument` on the
          *    removed child component, and detaches its DOM from the document.
          * @return {goog.ui.Component} The removed component, if any.
          */
@@ -449,7 +450,7 @@ declare module goog.ui {
          *
          * @see goog.ui.Component#removeChild
          * @param {number} index 0-based index of the child to remove.
-         * @param {boolean=} opt_unrender If true, calls {@code exitDocument} on the
+         * @param {boolean=} opt_unrender If true, calls `exitDocument` on the
          *    removed child component, and detaches its DOM from the document.
          * @return {goog.ui.Component} The removed component, if any.
          */
@@ -464,6 +465,23 @@ declare module goog.ui {
          * @return {!Array<goog.ui.Component>} The removed components if any.
          */
         removeChildren(opt_unrender?: boolean): Array<goog.ui.Component>;
+        
+        /**
+         * Returns whether this component should listen for PointerEvent types rather
+         * than MouseEvent types. This allows supporting drag gestures for touch/stylus
+         * input.
+         * @return {boolean}
+         */
+        pointerEventsEnabled(): boolean;
+        
+        /**
+         * Indicates whether this component should listen for PointerEvent types rather
+         * than MouseEvent types. This allows supporting drag gestures for touch/stylus
+         * input. Must be called before enterDocument to listen for the correct event
+         * types.
+         * @param {boolean} enable
+         */
+        setPointerEventsEnabled(enable: boolean): void;
     }
 }
 
@@ -478,28 +496,27 @@ declare module goog.ui.Component {
      */
     type EventType = string;
     var EventType: {
-        [index: string]: EventType;
-        // BEFORE_SHOW: EventType;
-        // SHOW: EventType;
-        // HIDE: EventType;
-        // DISABLE: EventType;
-        // ENABLE: EventType;
-        // HIGHLIGHT: EventType;
-        // UNHIGHLIGHT: EventType;
-        // ACTIVATE: EventType;
-        // DEACTIVATE: EventType;
-        // SELECT: EventType;
-        // UNSELECT: EventType;
-        // CHECK: EventType;
-        // UNCHECK: EventType;
-        // FOCUS: EventType;
-        // BLUR: EventType;
-        // OPEN: EventType;
-        // CLOSE: EventType;
-        // ENTER: EventType;
-        // LEAVE: EventType;
-        // ACTION: EventType;
-        // CHANGE: EventType;
+        BEFORE_SHOW: EventType;
+        SHOW: EventType;
+        HIDE: EventType;
+        DISABLE: EventType;
+        ENABLE: EventType;
+        HIGHLIGHT: EventType;
+        UNHIGHLIGHT: EventType;
+        ACTIVATE: EventType;
+        DEACTIVATE: EventType;
+        SELECT: EventType;
+        UNSELECT: EventType;
+        CHECK: EventType;
+        UNCHECK: EventType;
+        FOCUS: EventType;
+        BLUR: EventType;
+        OPEN: EventType;
+        CLOSE: EventType;
+        ENTER: EventType;
+        LEAVE: EventType;
+        ACTION: EventType;
+        CHANGE: EventType;
     };
 
     /**
@@ -526,14 +543,13 @@ declare module goog.ui.Component {
      */
     type State = number;
     var State: {
-        [index: string]: State;
-        // ALL: State;
-        // DISABLED: State;
-        // HOVER: State;
-        // ACTIVE: State;
-        // SELECTED: State;
-        // CHECKED: State;
-        // FOCUSED: State;
-        // OPENED: State;
+        ALL: State;
+        DISABLED: State;
+        HOVER: State;
+        ACTIVE: State;
+        SELECTED: State;
+        CHECKED: State;
+        FOCUSED: State;
+        OPENED: State;
     };
 }

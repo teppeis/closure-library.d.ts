@@ -25,9 +25,11 @@ declare module goog.ui {
         
         /**
          * Returns the button's contents wrapped in the following DOM structure:
+         *
          *    <div class="goog-inline-block goog-css3-button">
          *      Contents...
          *    </div>
+         *
          * Overrides {@link goog.ui.ButtonRenderer#createDom}.
          * @param {goog.ui.Control} control goog.ui.Button to render.
          * @return {!Element} Root element for the button.

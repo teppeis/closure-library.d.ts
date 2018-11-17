@@ -37,6 +37,12 @@ declare module goog.ui {
         static CSS_CLASS: string;
         
         /**
+         * Data attribute to store grid width from palette control.
+         * @const {string}
+         */
+        static GRID_WIDTH_ATTRIBUTE: any;
+        
+        /**
          * Returns the palette items arranged in a table wrapped in a DIV, with the
          * renderer's own CSS class and additional state-specific classes applied to
          * it.
@@ -47,8 +53,8 @@ declare module goog.ui {
         createDom(palette: goog.ui.Control): Element;
         
         /**
-         * Returns the given items in a table with {@code size.width} columns and
-         * {@code size.height} rows.  If the table is too big, empty cells will be
+         * Returns the given items in a table with `size.width` columns and
+         * `size.height` rows.  If the table is too big, empty cells will be
          * created as needed.  If the table is too small, the items that don't fit
          * will not be rendered.
          * @param {Array<Node>} items Palette items.
@@ -98,10 +104,10 @@ declare module goog.ui {
          * palettes don't support the decorate flow (for now).
          * @param {goog.ui.Control} palette Ignored.
          * @param {Element} element Ignored.
-         * @return {Element} Always null.
+         * @return {null} Always null.
          * @override
          */
-        decorate(palette: goog.ui.Control, element: Element): Element;
+        decorate(palette: goog.ui.Control, element: Element): void;
         
         /**
          * Overrides {@link goog.ui.ControlRenderer#setContent} for palettes.  Locates

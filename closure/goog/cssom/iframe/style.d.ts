@@ -13,11 +13,11 @@ declare module goog.cssom.iframe.style {
     interface CssRuleSet_ {
         
         /**
-         * Initializes the rule set from a {@code CSSRule}.
+         * Initializes the rule set from a `CSSRule`.
          *
-         * @param {CSSRule} cssRule The {@code CSSRule} to initialize from.
+         * @param {CSSRule} cssRule The `CSSRule` to initialize from.
          * @return {boolean} True if initialization succeeded. We only support
-         *     {@code CSSStyleRule} and {@code CSSFontFaceRule} objects.
+         *     `CSSStyleRule` and `CSSFontFaceRule` objects.
          */
         initializeFromCssRule(cssRule: CSSRule): boolean;
         
@@ -137,7 +137,7 @@ declare module goog.cssom.iframe.style {
      * @param {boolean=} opt_forceRuleSetCacheUpdate Flag to force the internal
      *     cache of rulesets to refresh itself before we read the same.
      * @param {boolean=} opt_copyBackgroundContext Flag indicating that if the
-     *     {@code element} has a transparent background, background rules
+     *     `element` has a transparent background, background rules
      *     from the nearest ancestor element(s) that have background-color
      *     and/or background-image set should be copied.
      * @return {string} String containing all CSS rules present in the original

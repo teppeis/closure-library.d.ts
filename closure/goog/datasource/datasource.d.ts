@@ -132,13 +132,6 @@ declare module goog.ds {
         constructor();
         
         /**
-         * Gets the parent node. Subclasses implement this function
-         * @type {Function}
-         * @protected
-         */
-        getParent: Function;
-        
-        /**
          * Set the value of the node
          * @param {Object} value The new value of the node.
          */
@@ -192,6 +185,13 @@ declare module goog.ds {
          * @return {goog.ds.LoadState} The state.
          */
         getLoadState(): goog.ds.LoadState;
+        
+        /**
+         * Gets the parent node. Subclasses implement this function
+         * @return {?goog.ds.DataNode}
+         * @protected
+         */
+        getParent(): goog.ds.DataNode;
     }
 
     /**

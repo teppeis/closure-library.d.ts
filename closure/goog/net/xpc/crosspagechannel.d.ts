@@ -35,9 +35,9 @@ declare module goog.net.xpc {
          * Returns a reference to the iframe-element.
          * Package private. Do not call from outside goog.net.xpc.
          *
-         * @return {Object} A reference to the iframe-element.
+         * @return {?HTMLIFrameElement} A reference to the iframe-element.
          */
-        getIframeElement(): Object;
+        getIframeElement(): HTMLIFrameElement;
         
         /**
          * Sets the window object the foreign document resides in.
@@ -138,7 +138,7 @@ declare module goog.net.xpc {
         
         /**
          * Delivers messages to the appropriate service-handler. Named xpcDeliver to
-         * avoid name conflict with {@code deliver} function in superclass
+         * avoid name conflict with `deliver` function in superclass
          * goog.messaging.AbstractChannel.
          *
          * @param {string} serviceName The name of the port.
@@ -163,5 +163,16 @@ declare module goog.net.xpc {
          * @param {string} name The new channel name.
          */
         updateChannelNameAndCatalog(name: string): void;
+        
+        /**
+         * Returns whether an incoming message with the given origin is acceptable.
+         * If an incoming request comes with a specified (non-empty) origin, and the
+         * PEER_HOSTNAME config parameter has also been provided, the two must match,
+         * or the message is unacceptable.
+         * @param {string=} opt_origin The origin associated with the incoming message.
+         * @return {boolean} Whether the message is acceptable.
+         * @package
+         */
+        isMessageOriginAcceptable(opt_origin?: string): boolean;
     }
 }

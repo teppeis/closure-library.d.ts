@@ -25,11 +25,12 @@ declare module goog.window {
     /**
      * Opens a new window.
      *
-     * @param {string|Object} linkRef A string or an object that supports toString,
-     *     for example goog.Uri.  If this is an object with a 'href' attribute, such
-     *     as HTMLAnchorElement, it will be used instead.
+     * @param {goog.html.SafeUrl|string|Object|null} linkRef If an Object with an 'href'
+     *     attribute (such as HTMLAnchorElement) is passed then the value of 'href'
+     *     is used, otherwise its toString method is called. Note that if a
+     *     string|Object is used, it will be sanitized with SafeUrl.sanitize().
      *
-     * @param {Object=} opt_options supports the following options:
+     * @param {?Object=} opt_options supports the following options:
      *  'target': (string) target (window name). If null, linkRef.target will
      *          be used.
      *  'width': (number) window width.
@@ -46,14 +47,17 @@ declare module goog.window {
      *      from the request headers. Does this by opening a blank window that
      *      then redirects to the target url, so users may see some flickering.
      *
-     * @param {Window=} opt_parentWin Parent window that should be used to open the
+     * @param {?Window=} opt_parentWin Parent window that should be used to open the
      *                 new window.
      *
-     * @return {Window} Returns the window object that was opened. This returns
+     * @return {?Window} Returns the window object that was opened. This returns
      *                  null if a popup blocker prevented the window from being
-     *                  opened.
+     *                  opened. In case when a new window is opened in a different
+     *                  browser sandbox (such as iOS standalone mode), the returned
+     *                  object is a emulated Window object that functions as if
+     *                  a cross-origin window has been opened.
      */
-    function open(linkRef: string|Object, opt_options?: Object, opt_parentWin?: Window): Window;
+    function open(linkRef: goog.html.SafeUrl|string|Object|void, opt_options?: Object, opt_parentWin?: Window): Window;
 
     /**
      * Opens a new window without any real content in it.
@@ -72,11 +76,11 @@ declare module goog.window {
      *
      * @param {string=} opt_message String to show in the new window. This string
      *     will be HTML-escaped to avoid XSS issues.
-     * @param {Object=} opt_options Options to open window with.
+     * @param {?Object=} opt_options Options to open window with.
      *     {@see goog.window.open for exact option semantics}.
-     * @param {Window=} opt_parentWin Parent window that should be used to open the
+     * @param {?Window=} opt_parentWin Parent window that should be used to open the
      *                 new window.
-     * @return {Window} Returns the window object that was opened. This returns
+     * @return {?Window} Returns the window object that was opened. This returns
      *                  null if a popup blocker prevented the window from being
      *                  opened.
      */
@@ -87,11 +91,12 @@ declare module goog.window {
      *
      * (If your project is using GXPs, consider using {@link PopUpLink.gxp}.)
      *
-     * @param {string|Object} linkRef if this is a string, it will be used as the
-     * URL of the popped window; otherwise it's assumed to be an HTMLAnchorElement
-     * (or some other object with "target" and "href" properties).
+    * @param {?goog.html.SafeUrl|string|?Object} linkRef If an Object with an 'href'
+     *     attribute (such as HTMLAnchorElement) is passed then the value of 'href'
+     *     is used, otherwise  otherwise its toString method is called. Note that
+     *     if a string|Object is used, it will be sanitized with SafeUrl.sanitize().
      *
-     * @param {Object=} opt_options Options to open window with.
+     * @param {?Object=} opt_options Options to open window with.
      *     {@see goog.window.open for exact option semantics}
      *     Additional wrinkles to the options:
      *     - if 'target' field is null, linkRef.target will be used. If *that's*
@@ -101,5 +106,5 @@ declare module goog.window {
      *
      * @return {boolean} true if the window was not popped up, false if it was.
      */
-    function popup(linkRef: string|Object, opt_options?: Object): boolean;
+    function popup(linkRef: goog.html.SafeUrl|string|Object, opt_options?: Object): boolean;
 }

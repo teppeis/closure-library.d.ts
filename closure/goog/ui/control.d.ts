@@ -63,16 +63,6 @@ declare module goog.ui {
         static getDecorator(element: Element): goog.ui.Control;
         
         /**
-         * Takes an element, and decorates it with a {@link goog.ui.Control} instance
-         * if a suitable decorator is found.
-         * @param {Element} element Element to decorate.
-         * @return {goog.ui.Control?} New control instance that decorates the element
-         *     (null if none).
-         * @deprecated Use {@link goog.ui.decorate} instead.
-         */
-        static decorate(element: Element): goog.ui.Control;
-        
-        /**
          * Returns true if the control is configured to handle its own mouse events,
          * false otherwise.  Controls not hosted in {@link goog.ui.Container}s have
          * to handle their own mouse events, but controls hosted in containers may
@@ -375,8 +365,8 @@ declare module goog.ui {
         
         /**
          * Returns true if the component is styled to indicate that it has keyboard
-         * focus, false otherwise.  Note that {@code isFocused()} returning true
-         * doesn't guarantee that the component's key event target has keyborad focus,
+         * focus, false otherwise.  Note that `isFocused()` returning true
+         * doesn't guarantee that the component's key event target has keyboard focus,
          * only that it is styled as such.
          * @return {boolean} Whether the component is styled to indicate as having
          *     keyboard focus.
@@ -387,7 +377,7 @@ declare module goog.ui {
          * Applies or removes styling indicating that the component has keyboard focus.
          * Note that unlike the other "set" methods, this method is called as a result
          * of the component's element having received or lost keyboard focus, not the
-         * other way around, so calling {@code setFocused(true)} doesn't guarantee that
+         * other way around, so calling `setFocused(true)` doesn't guarantee that
          * the component's key event target has keyboard focus, only that it is styled
          * as such.
          * @param {boolean} focused Whether to apply or remove styling to indicate that
@@ -629,5 +619,34 @@ declare module goog.ui {
          * @protected
          */
         handleKeyEventInternal(e: goog.events.KeyEvent): boolean;
+    }
+}
+
+declare module goog.ui.Control {
+
+    /**
+     * A singleton that helps goog.ui.Control instances play well with screen
+     * readers.  It necessitated by shortcomings in IE, and need not be
+     * instantiated in any other browser.
+     *
+     * In most cases, a click on a goog.ui.Control results in a sequence of events:
+     * MOUSEDOWN, MOUSEUP and CLICK.  UI controls rely on this sequence since most
+     * behavior is trigged by MOUSEDOWN and MOUSEUP.  But when IE is used with some
+     * traditional screen readers (JAWS, NVDA and perhaps others), IE only sends
+     * the CLICK event, resulting in the control being unresponsive.  This class
+     * monitors the sequence of these events, and if it detects a CLICK event not
+     * not preceded by a MOUSEUP event, directly calls the control's event handlers
+     * for MOUSEDOWN, then MOUSEUP.  While the resulting sequence is different from
+     * the norm (the CLICK comes first instead of last), testing thus far shows
+     * the resulting behavior to be correct.
+     *
+     * See http://goo.gl/qvQR4C for more details.
+     *
+     * @param {!goog.ui.Control} control
+     * @constructor
+     * @extends {goog.Disposable}
+     * @private
+     */
+    interface IeMouseEventSequenceSimulator_ extends goog.Disposable {
     }
 }

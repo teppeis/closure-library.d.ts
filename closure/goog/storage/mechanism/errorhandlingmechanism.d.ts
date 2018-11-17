@@ -12,6 +12,7 @@ declare module goog.storage.mechanism {
      * @param {goog.storage.mechanism.ErrorHandlingMechanism.ErrorHandler}
      *     errorHandler An error handler.
      * @constructor
+     * @struct
      * @extends {goog.storage.mechanism.Mechanism}
      * @final
      */

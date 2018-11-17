@@ -56,4 +56,20 @@ declare module goog.style.transform {
      * @return {boolean} Whether the CSS scale was set.
      */
     function setScale(element: Element, x: number, y: number, z: number): boolean;
+
+    /**
+     * Returns the rotation CSS transform applied to the element.
+     * @param {!Element} element The element to get the rotation of.
+     * @return {number} The rotation of the element in degrees.
+     */
+    function getRotation(element: Element): number;
+
+    /**
+     * Rotates an element using the CSS3 transform property.
+     * NOTE: This replaces all other transforms already defined on the element.
+     * @param {!Element} element The element to rotate.
+     * @param {number} degrees The number of degrees to rotate by.
+     * @return {boolean} Whether the CSS rotation was set.
+     */
+    function setRotation(element: Element, degrees: number): boolean;
 }

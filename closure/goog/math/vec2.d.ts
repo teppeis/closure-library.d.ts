@@ -55,10 +55,12 @@ declare module goog.math {
         squaredMagnitude(): number;
         
         /**
-         * @return {!goog.math.Vec2} This coordinate after scaling.
+         * @param {number} sx The scale factor to use for the x dimension.
+         * @param {number=} opt_sy The scale factor to use for the y dimension.
+         * @return {!goog.math.Vec2} This vector after scaling.
          * @override
          */
-        scale(): goog.math.Vec2;
+        scale(sx: number, opt_sy?: number): goog.math.Vec2;
         
         /**
          * Reverses the sign of the vector. Equivalent to scaling the vector by -1.
@@ -75,21 +77,21 @@ declare module goog.math {
         /**
          * Adds another vector to this vector in-place.
          * @param {!goog.math.Coordinate} b The vector to add.
-         * @return {!goog.math.Vec2}  This vector with {@code b} added.
+         * @return {!goog.math.Vec2}  This vector with `b` added.
          */
         add(b: goog.math.Coordinate): goog.math.Vec2;
         
         /**
          * Subtracts another vector from this vector in-place.
          * @param {!goog.math.Coordinate} b The vector to subtract.
-         * @return {!goog.math.Vec2} This vector with {@code b} subtracted.
+         * @return {!goog.math.Vec2} This vector with `b` subtracted.
          */
         subtract(b: goog.math.Coordinate): goog.math.Vec2;
         
         /**
          * Rotates this vector in-place by a given angle, specified in radians.
          * @param {number} angle The angle, in radians.
-         * @return {!goog.math.Vec2} This vector rotated {@code angle} radians.
+         * @return {!goog.math.Vec2} This vector rotated `angle` radians.
          */
         rotate(angle: number): goog.math.Vec2;
         
@@ -103,14 +105,6 @@ declare module goog.math {
          * @return {!goog.math.Vec2} The rotated vector in a newly created instance.
          */
         static rotateAroundPoint(v: goog.math.Vec2, axisPoint: goog.math.Vec2, angle: number): goog.math.Vec2;
-        
-        /**
-         * Compares this vector with another for equality.
-         * @param {!goog.math.Vec2} b The other vector.
-         * @return {boolean} Whether this vector has the same x and y as the given
-         *     vector.
-         */
-        equals(b: goog.math.Vec2): boolean;
         
         /**
          * Returns the distance between two vectors.
@@ -161,6 +155,14 @@ declare module goog.math {
         static dot(a: goog.math.Coordinate, b: goog.math.Coordinate): number;
         
         /**
+         * Returns the determinant of two vectors.
+         * @param {!goog.math.Vec2} a The first vector.
+         * @param {!goog.math.Vec2} b The second vector.
+         * @return {number} The determinant of the two vectors.
+         */
+        static determinant(a: goog.math.Vec2, b: goog.math.Vec2): number;
+        
+        /**
          * Returns a new Vec2 that is the linear interpolant between vectors a and b at
          * scale-value x.
          * @param {!goog.math.Coordinate} a Vector a.
@@ -169,5 +171,16 @@ declare module goog.math {
          * @return {!goog.math.Vec2} The interpolated vector.
          */
         static lerp(a: goog.math.Coordinate, b: goog.math.Coordinate, x: number): goog.math.Vec2;
+        
+        /**
+         * Returns a new Vec2 that is a copy of the vector a, but rescaled by a factors
+         * sx and sy in the x and y directions. If only sx is specified, then y is
+         * scaled by the same factor as x.
+         * @param {!goog.math.Coordinate} a Vector a.
+         * @param {number} sx X scale factor.
+         * @param {number=} sy Y scale factor (optional).
+         * @return {!goog.math.Vec2} A new rescaled vector.
+         */
+        static rescaled(a: goog.math.Coordinate, sx: number, sy?: number): goog.math.Vec2;
     }
 }

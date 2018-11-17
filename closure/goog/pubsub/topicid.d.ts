@@ -5,7 +5,7 @@ declare module goog {
 declare module goog.pubsub {
 
     /**
-     * A templated class that is used to register {@code goog.pubsub.PubSub}
+     * A templated class that is used to register `goog.pubsub.PubSub`
      * subscribers.
      *
      * Typical usage for a publisher:

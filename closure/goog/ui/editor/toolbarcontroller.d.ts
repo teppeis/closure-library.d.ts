@@ -8,7 +8,7 @@ declare module goog.ui.editor {
      * A class for managing the editor toolbar.  Acts as a bridge between
      * a {@link goog.editor.Field} and a {@link goog.ui.Toolbar}.
      *
-     * The {@code toolbar} argument must be an instance of {@link goog.ui.Toolbar}
+     * The `toolbar` argument must be an instance of {@link goog.ui.Toolbar}
      * or a subclass.  This class doesn't care how the toolbar was created.  As
      * long as one or more controls hosted  in the toolbar have IDs that match
      * built-in {@link goog.editor.Command}s, they will function as expected.  It is
@@ -51,17 +51,17 @@ declare module goog.ui.editor {
         
         /**
          * Returns the event handler object for the editor toolbar.  Useful for classes
-         * that extend {@code goog.ui.editor.ToolbarController}.
+         * that extend `goog.ui.editor.ToolbarController`.
          * @return {!goog.events.EventHandler<T>} The event handler object.
          * @protected
-         * @this T
+         * @this {T}
          * @template T
          */
         getHandler<T>(): goog.events.EventHandler<T>;
         
         /**
          * Returns the field instance managed by the toolbar.  Useful for
-         * classes that extend {@code goog.ui.editor.ToolbarController}.
+         * classes that extend `goog.ui.editor.ToolbarController`.
          * @return {!goog.editor.Field} The field managed by the toolbar.
          * @protected
          */
@@ -69,7 +69,7 @@ declare module goog.ui.editor {
         
         /**
          * Returns the toolbar UI component that manages the editor.  Useful for
-         * classes that extend {@code goog.ui.editor.ToolbarController}.
+         * classes that extend `goog.ui.editor.ToolbarController`.
          * @return {!goog.ui.Toolbar} The toolbar UI component.
          */
         getToolbar(): goog.ui.Toolbar;
@@ -104,7 +104,7 @@ declare module goog.ui.editor {
         
         /**
          * Updates the toolbar in response to editor events.  Specifically, updates
-         * button states based on {@code COMMAND_VALUE_CHANGE} events, reflecting the
+         * button states based on `COMMAND_VALUE_CHANGE` events, reflecting the
          * effective formatting of the selection.
          * @param {goog.events.Event} e Editor event to handle.
          * @protected
@@ -118,7 +118,7 @@ declare module goog.ui.editor {
         updateToolbarFromState(state: Object): void;
         
         /**
-         * Handles {@code ACTION} events dispatched by toolbar buttons in response to
+         * Handles `ACTION` events dispatched by toolbar buttons in response to
          * user actions by executing the corresponding field command.
          * @param {goog.events.Event} e Action event to handle.
          * @protected

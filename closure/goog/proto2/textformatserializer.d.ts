@@ -25,6 +25,7 @@ declare module goog.proto2 {
          * @param {*} data The text format data.
          * @return {?string} The parse error or null on success.
          * @override
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         deserializeTo(message: goog.proto2.Message, data: any): string;
         
@@ -66,6 +67,7 @@ declare module goog.proto2.TextFormatSerializer {
         /**
          * Appends the given value to the printer.
          * @param {*} value The value to append.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         append(value: any): void;
         

@@ -11,6 +11,7 @@ declare module goog.storage.mechanism {
      *     iterable storage mechanism.
      * @param {string} prefix Prefix for creating an artificial namespace.
      * @constructor
+     * @struct
      * @extends {goog.storage.mechanism.IterableMechanism}
      * @final
      */

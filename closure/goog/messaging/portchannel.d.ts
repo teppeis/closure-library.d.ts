@@ -6,14 +6,14 @@ declare module goog.messaging {
 
     /**
      * A wrapper for several types of HTML5 message-passing entities
-     * ({@link MessagePort}s and {@link Worker}s). This class implements the
+     * ({@link MessagePort}s and {@link WebWorker}s). This class implements the
      * {@link goog.messaging.MessageChannel} interface.
      *
      * This class can be used in conjunction with other communication on the port.
      * It sets {@link goog.messaging.PortChannel.FLAG} to true on all messages it
      * sends.
      *
-     * @param {!MessagePort|!Worker} underlyingPort The message-passing
+     * @param {!MessagePort|!WebWorker} underlyingPort The message-passing
      *     entity to wrap. If this is a {@link MessagePort}, it should be started.
      *     The remote end should also be wrapped in a PortChannel. This will be
      *     disposed along with the PortChannel; this means terminating it if it's a
@@ -23,7 +23,7 @@ declare module goog.messaging {
      * @final
      */
     class PortChannel extends goog.messaging.AbstractChannel {
-        constructor(underlyingPort: MessagePort|Worker);
+        constructor(underlyingPort: MessagePort|WebWorker);
         
         /**
          * The flag added to messages that are sent by a PortChannel, and are meant to
@@ -49,7 +49,7 @@ declare module goog.messaging {
          * embedded window. However, only one PortChannel should be used for a given
          * window at a time.
          *
-         * @param {!Window} window The window object to communicate with.
+         * @param {!Window} peerWindow The window object to communicate with.
          * @param {string} peerOrigin The expected origin of the window. See
          *     http://dev.w3.org/html5/postmsg/#dom-window-postmessage.
          * @param {goog.Timer=} opt_timer The timer that regulates how often the initial
@@ -61,7 +61,7 @@ declare module goog.messaging {
          *     be cancelled before a connection is established in order to abort the
          *     attempt to make a connection.
          */
-        static forEmbeddedWindow(window: Window, peerOrigin: string, opt_timer?: goog.Timer): goog.messaging.DeferredChannel;
+        static forEmbeddedWindow(peerWindow: Window, peerOrigin: string, opt_timer?: goog.Timer): goog.messaging.DeferredChannel;
         
         /**
          * Create a PortChannel that communicates with the document in which this window

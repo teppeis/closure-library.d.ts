@@ -28,11 +28,6 @@ declare module goog.ui.editor.messages {
      */
     var MSG_TEST_THIS_LINK: any;
 
-    /**
-     * @desc Explanation for how to create a link with the link-editing dialog.
-     */
-    var MSG_TR_LINK_EXPLANATION: any;
-
     /** @desc Prompt for the URL of a link that the user is creating. */
     var MSG_WHAT_URL: any;
 
@@ -55,12 +50,6 @@ declare module goog.ui.editor.messages {
      *     address clicking on this link will send mail to.
      */
     var MSG_WHAT_EMAIL: any;
-
-    /**
-     * @desc Warning about the dangers of creating links with email
-     *     addresses in them.
-     */
-    var MSG_EMAIL_EXPLANATION: any;
 
     /**
      * @desc Label for the checkbox that allows the user to specify what when this

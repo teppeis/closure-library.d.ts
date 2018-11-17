@@ -11,7 +11,6 @@ declare module goog.ui {
      * be no-ops.
      * @constructor
      * @extends {goog.ui.ControlRenderer}
-     * @final
      */
     class TextareaRenderer extends goog.ui.ControlRenderer {
         constructor();

@@ -7,9 +7,9 @@ declare module goog {
 declare module goog.events {
 
     /**
-     * A paste event detector. Gets an {@code element} as parameter and fires
-     * {@code goog.events.PasteHandler.EventType.PASTE} events when text is
-     * pasted in the {@code element}. Uses heuristics to detect paste events in FF2.
+     * A paste event detector. Gets an `element` as parameter and fires
+     * `goog.events.PasteHandler.EventType.PASTE` events when text is
+     * pasted in the `element`. Uses heuristics to detect paste events in FF2.
      * See more details of the heuristic on {@link #handleEvent_}.
      *
      * @param {Element} element The textarea element we are listening on.
@@ -20,11 +20,17 @@ declare module goog.events {
         constructor(element: Element);
         
         /**
-         * The mandatory delay we expect between two {@code input} events, used to
+         * The mandatory delay we expect between two `input` events, used to
          * differentiated between non key paste events and key events.
          * @type {number}
          */
         static MANDATORY_MS_BETWEEN_INPUT_EVENTS_TIE_BREAKER: number;
+        
+        /**
+         * Whether current UA supoprts the native "paste" event type.
+         * @const {boolean}
+         */
+        static SUPPORTS_NATIVE_PASTE_EVENT: any;
         
         /**
          * Returns the current state of the paste detection algorithm. Used mostly for
@@ -37,7 +43,7 @@ declare module goog.events {
          * Returns the event handler.
          * @return {goog.events.EventHandler<T>} The event handler.
          * @protected
-         * @this T
+         * @this {T}
          * @template T
          */
         getEventHandler<T>(): goog.events.EventHandler<T>;

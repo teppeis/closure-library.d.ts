@@ -10,6 +10,7 @@ declare module goog.storage {
      * @param {!goog.storage.mechanism.Mechanism} mechanism The underlying
      *     storage mechanism.
      * @constructor
+     * @struct
      */
     class Storage {
         constructor(mechanism: goog.storage.mechanism.Mechanism);

@@ -9,6 +9,7 @@ declare module goog.storage.mechanism {
      *
      * @param {Storage} storage The Web storage object.
      * @constructor
+     * @struct
      * @extends {goog.storage.mechanism.IterableMechanism}
      */
     class HTML5WebStorage extends goog.storage.mechanism.IterableMechanism {

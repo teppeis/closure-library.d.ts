@@ -17,6 +17,8 @@ declare module goog.debug {
      * @param {boolean=} opt_cancel Whether to stop the error from reaching the
      *    browser.
      * @param {Object=} opt_target Object that fires onerror events.
+     * @suppress {strictMissingProperties} onerror is not defined as a property
+     *    on Object.
      */
     function catchErrors(logFunc: (arg0: Object) => any, opt_cancel?: boolean, opt_target?: Object): void;
 
@@ -25,20 +27,19 @@ declare module goog.debug {
      * @param {Object|null|undefined} obj Object to expose.
      * @param {boolean=} opt_showFn Show the functions as well as the properties,
      *     default is false.
-     * @return {string} The string representation of {@code obj}.
+     * @return {string} The string representation of `obj`.
      */
     function expose(obj: Object|void|void, opt_showFn?: boolean): string;
 
     /**
      * Creates a string representing a given primitive or object, and for an
-     * object, all its properties and nested objects.  WARNING: If an object is
-     * given, it and all its nested objects will be modified.  To detect reference
-     * cycles, this method identifies objects using goog.getUid() which mutates the
-     * object.
+     * object, all its properties and nested objects. NOTE: The output will include
+     * Uids on all objects that were exposed. Any added Uids will be removed before
+     * returning.
      * @param {*} obj Object to expose.
      * @param {boolean=} opt_showFn Also show properties that are functions (by
      *     default, functions are omitted).
-     * @return {string} A string representation of {@code obj}.
+     * @return {string} A string representation of `obj`.
      */
     function deepExpose(obj: any, opt_showFn?: boolean): string;
 
@@ -50,42 +51,42 @@ declare module goog.debug {
     function exposeArray(arr: Array<any>): string;
 
     /**
-     * Exposes an exception that has been caught by a try...catch and outputs the
-     * error as HTML with a stack trace.
-     * @param {Object} err Error object or string.
-     * @param {Function=} opt_fn Optional function to start stack trace from.
-     * @return {string} Details of exception, as HTML.
-     */
-    function exposeException(err: Object, opt_fn?: Function): string;
-
-    /**
-     * Exposes an exception that has been caught by a try...catch and outputs the
-     * error with a stack trace.
-     * @param {Object} err Error object or string.
-     * @param {Function=} opt_fn Optional function to start stack trace from.
-     * @return {!goog.html.SafeHtml} Details of exception.
-     */
-    function exposeExceptionAsHtml(err: Object, opt_fn?: Function): goog.html.SafeHtml;
-
-    /**
      * Normalizes the error/exception object between browsers.
-     * @param {Object} err Raw error object.
-     * @return {!Object} Normalized error object.
+     * @param {*} err Raw error object.
+     * @return {{
+     *    message: (?|undefined),
+     *    name: (?|undefined),
+     *    lineNumber: (?|undefined),
+     *    fileName: (?|undefined),
+     *    stack: (?|undefined)
+     * }} Normalized error object.
+     * @suppress {strictMissingProperties} properties not defined on err
      */
-    function normalizeErrorObject(err: Object): Object;
+    function normalizeErrorObject(err: any): {message: any|void; name: any|void; lineNumber: any|void; fileName: any|void; stack: any|void};
 
     /**
-     * Converts an object to an Error if it's a String,
-     * adds a stacktrace if there isn't one,
-     * and optionally adds an extra message.
-     * @param {Error|string} err  the original thrown object or string.
+     * Converts an object to an Error using the object's toString if it's not
+     * already an Error, adds a stacktrace if there isn't one, and optionally adds
+     * an extra message.
+     * @param {*} err The original thrown error, object, or string.
      * @param {string=} opt_message  optional additional message to add to the
      *     error.
-     * @return {!Error} If err is a string, it is used to create a new Error,
-     *     which is enhanced and returned.  Otherwise err itself is enhanced
-     *     and returned.
+     * @return {!Error} If err is an Error, it is enhanced and returned. Otherwise,
+     *     it is converted to an Error which is enhanced and returned.
      */
-    function enhanceError(err: Error|string, opt_message?: string): Error;
+    function enhanceError(err: any, opt_message?: string): Error;
+
+    /**
+     * Converts an object to an Error using the object's toString if it's not
+     * already an Error, adds a stacktrace if there isn't one, and optionally adds
+     * context to the Error, which is reported by the closure error reporter.
+     * @param {*} err The original thrown error, object, or string.
+     * @param {!Object<string, string>=} opt_context Key-value context to add to the
+     *     Error.
+     * @return {!Error} If err is an Error, it is enhanced and returned. Otherwise,
+     *     it is converted to an Error which is enhanced and returned.
+     */
+    function enhanceErrorWithContext(err: any, opt_context?: {[index: string]: string}): Error;
 
     /**
      * Gets the current stack trace. Simple and iterative - doesn't worry about
@@ -100,12 +101,13 @@ declare module goog.debug {
     /**
      * Gets the current stack trace, either starting from the caller or starting
      * from a specified function that's currently on the call stack.
-     * @param {Function=} opt_fn Optional function to start getting the trace from.
-     *     If not provided, defaults to the function that called this.
+     * @param {?Function=} fn If provided, when collecting the stack trace all
+     *     frames above the topmost call to this function, including that call,
+     *     will be left out of the stack trace.
      * @return {string} Stack trace.
      * @suppress {es5Strict}
      */
-    function getStacktrace(opt_fn?: Function): string;
+    function getStacktrace(fn?: Function): string;
 
     /**
      * Set a custom function name resolver.
@@ -129,4 +131,25 @@ declare module goog.debug {
      * @return {string} string whose whitespace is made visible.
      */
     function makeWhitespaceVisible(string: string): string;
+
+    /**
+     * Returns the type of a value. If a constructor is passed, and a suitable
+     * string cannot be found, 'unknown type name' will be returned.
+     *
+     * <p>Forked rather than moved from {@link goog.asserts.getType_}
+     * to avoid adding a dependency to goog.asserts.
+     * @param {*} value A constructor, object, or primitive.
+     * @return {string} The best display name for the value, or 'unknown type name'.
+     */
+    function runtimeType(value: any): string;
+
+    /**
+     * Freezes the given object, but only in debug mode (and in browsers that
+     * support it).  Note that this is a shallow freeze, so for deeply nested
+     * objects it must be called at every level to ensure deep immutability.
+     * @param {T} arg
+     * @return {T}
+     * @template T
+     */
+    function freeze<T>(arg: T): T;
 }

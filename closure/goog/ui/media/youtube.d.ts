@@ -11,8 +11,8 @@ declare module goog.ui.media {
      *
      * This class knows how to parse youtube urls, and render the DOM structure
      * of youtube video players and previews. This class is meant to be used as a
-     * singleton static stateless class, that takes {@code goog.ui.media.Media}
-     * instances and renders it. It expects {@code goog.ui.media.Media.getModel} to
+     * singleton static stateless class, that takes `goog.ui.media.Media`
+     * instances and renders it. It expects `goog.ui.media.Media.getModel` to
      * return a well formed, previously constructed, youtube video id, which is the
      * data model this renderer will use to construct the DOM structure.
      * {@see goog.ui.media.Youtube.newControl} for a example of constructing a
@@ -21,7 +21,7 @@ declare module goog.ui.media {
      * goog.ui.media.Youtube currently supports all {@link goog.ui.Component.State}.
      * It will change its DOM structure between SELECTED and !SELECTED, and rely on
      * CSS definitions on the others. On !SELECTED, the renderer will render a
-     * youtube static <img>, with a thumbnail of the video. On SELECTED, the
+     * youtube static `<img>`, with a thumbnail of the video. On SELECTED, the
      * renderer will append to the DOM a flash object, that contains the youtube
      * video.
      *
@@ -58,7 +58,7 @@ declare module goog.ui.media {
         static newControl(youtubeModel: goog.ui.media.YoutubeModel, opt_domHelper?: goog.dom.DomHelper): goog.ui.media.Media;
         
         /**
-         * Changes the state of a {@code control}. Currently only changes the DOM
+         * Changes the state of a `control`. Currently only changes the DOM
          * structure when the youtube movie is SELECTED (by default fired by a MOUSEUP
          * on the thumbnail), which means we have to embed the youtube flash video and
          * play it.
@@ -81,8 +81,8 @@ declare module goog.ui.media {
     }
 
     /**
-     * The {@code goog.ui.media.Youtube} media data model. It stores a required
-     * {@code videoId} field, sets the youtube URL, and allows a few optional
+     * The `goog.ui.media.Youtube` media data model. It stores a required
+     * `videoId` field, sets the youtube URL, and allows a few optional
      * parameters.
      *
      * @param {string} videoId The youtube video id.
@@ -112,7 +112,7 @@ declare module goog.ui.media {
         static newInstance(youtubeUrl: string, opt_caption?: string, opt_description?: string): goog.ui.media.YoutubeModel;
         
         /**
-         * The opposite of {@code goog.ui.media.Youtube.newInstance}: it takes a videoId
+         * The opposite of `goog.ui.media.Youtube.newInstance`: it takes a videoId
          * and returns a youtube URL.
          *
          * @param {string} videoId The youtube video ID.
@@ -127,7 +127,7 @@ declare module goog.ui.media {
          * NOTE(user): patterned after Gmail's gadgets/youtube,
          *
          * TODO(user): how do I specify the width/height of the resulting image on the
-         * url ? is there an official API for http://ytimg.com ?
+         * url ? is there an official API for https://ytimg.com ?
          *
          * @param {string} youtubeId The youtube video ID.
          * @return {string} An URL that contains an image with a preview of the youtube
@@ -142,9 +142,10 @@ declare module goog.ui.media {
          * @param {string} videoId The youtube video ID.
          * @param {boolean=} opt_autoplay Whether the flash movie should start playing
          *     as soon as it is shown, or if it should show a 'play' button.
-         * @return {string} The flash URL to be embedded on the page.
+         * @return {!goog.html.TrustedResourceUrl} The flash URL to be embedded on the
+         *     page.
          */
-        static getFlashUrl(videoId: string, opt_autoplay?: boolean): string;
+        static getFlashUrl(videoId: string, opt_autoplay?: boolean): goog.html.TrustedResourceUrl;
         
         /**
          * Gets the Youtube video id.

@@ -13,13 +13,6 @@ declare module goog.dom.pattern.callback {
         constructor();
         
         /**
-         * The count of objects matched so far.
-         *
-         * @type {number}
-         */
-        count: number;
-        
-        /**
          * Get a bound callback function that is suitable as a callback for
          * {@link goog.dom.pattern.Matcher}.
          *

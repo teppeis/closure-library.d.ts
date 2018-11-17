@@ -22,7 +22,7 @@ declare module goog.ds {
      * A URI of an empty string will mean that no request is made
      * and the data source will be a data source with no child nodes
      *
-     * @param {string|goog.Uri} uri URI for the request.
+     * @param {?goog.html.TrustedResourceUrl} uri URI for the request.
      * @param {string} name Name of the datasource.
      * @param {string=} opt_callbackParamName The parameter name that is used to
      *     specify the callback. Defaults to 'callback'.
@@ -32,7 +32,7 @@ declare module goog.ds {
      * @final
      */
     class JsonDataSource extends goog.ds.JsDataSource {
-        constructor(uri: string|goog.Uri, name: string, opt_callbackParamName?: string);
+        constructor(uri: goog.html.TrustedResourceUrl, name: string, opt_callbackParamName?: string);
         
         /**
          * Gets the state of the backing data for this node

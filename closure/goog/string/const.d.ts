@@ -9,7 +9,7 @@ declare module goog.string$ {
      *
      * Const is a wrapper for strings that can only be created from program
      * constants (i.e., string literals).  This property relies on a custom Closure
-     * compiler check that {@code goog.string.Const.from} is only invoked on
+     * compiler check that `goog.string.Const.from` is only invoked on
      * compile-time-constant expressions.
      *
      * Const is useful in APIs whose correct and secure use requires that certain
@@ -18,28 +18,37 @@ declare module goog.string$ {
      * attackers, and hence are safe to use in such contexts.
      *
      * Instances of this type must be created via its factory method
-     * {@code goog.string.Const.from} and not by invoking its constructor.  The
+     * `goog.string.Const.from` and not by invoking its constructor.  The
      * constructor intentionally takes no parameters and the type is immutable;
      * hence only a default instance corresponding to the empty string can be
-     * obtained via constructor invocation.
+     * obtained via constructor invocation.  Use goog.string.Const.EMPTY
+     * instead of using this constructor to get an empty Const string.
      *
      * @see goog.string.Const#from
      * @constructor
      * @final
      * @struct
      * @implements {goog.string.TypedString}
+     * @param {Object=} opt_token package-internal implementation detail.
+     * @param {string=} opt_content package-internal implementation detail.
      */
     class Const {
-        constructor();
+        constructor(opt_token?: Object, opt_content?: string);
+        
+        /**
+         * A Const instance wrapping the empty string.
+         * @const {!goog.string.Const}
+         */
+        static EMPTY: any;
         
         /**
          * Performs a runtime check that the provided object is indeed an instance
-         * of {@code goog.string.Const}, and returns its value.
+         * of `goog.string.Const`, and returns its value.
          * @param {!goog.string.Const} stringConst The object to extract from.
          * @return {string} The Const object's contained string, unless the run-time
-         *     type check fails. In that case, {@code unwrap} returns an innocuous
+         *     type check fails. In that case, `unwrap` returns an innocuous
          *     string, or, if assertions are enabled, throws
-         *     {@code goog.asserts.AssertionError}.
+         *     `goog.asserts.AssertionError`.
          */
         static unwrap(stringConst: goog.string$.Const): string;
         
@@ -47,7 +56,7 @@ declare module goog.string$ {
          * Creates a Const object from a compile-time constant string.
          *
          * It is illegal to invoke this function on an expression whose
-         * compile-time-contant value cannot be determined by the Closure compiler.
+         * compile-time-constant value cannot be determined by the Closure compiler.
          *
          * Correct invocations include,
          * <pre>
@@ -60,9 +69,6 @@ declare module goog.string$ {
          *   var s = goog.string.Const.from(getHello());
          *   var t = goog.string.Const.from('hello' + world);
          * </pre>
-         *
-         * TODO(user): Compile-time checks that this function is only called
-         * with compile-time constant expressions.
          *
          * @param {string} s A constant string from which to create a Const.
          * @return {!goog.string.Const} A Const object initialized to stringConst.

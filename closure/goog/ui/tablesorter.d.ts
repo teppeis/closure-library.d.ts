@@ -73,6 +73,7 @@ declare module goog.ui {
          * @param {number} column The column to sort by.
          * @param {boolean=} opt_reverse Whether to sort in reverse.
          * @return {boolean} Whether the sort was executed.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         sort(column: number, opt_reverse?: boolean): boolean;
         
@@ -119,8 +120,7 @@ declare module goog.ui.TableSorter {
      */
     type EventType = string;
     var EventType: {
-        [index: string]: EventType;
-        // BEFORESORT: EventType;
-        // SORT: EventType;
+        BEFORESORT: EventType;
+        SORT: EventType;
     };
 }

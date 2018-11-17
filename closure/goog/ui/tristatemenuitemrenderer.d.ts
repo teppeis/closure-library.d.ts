@@ -7,10 +7,12 @@ declare module goog.ui {
     /**
      * Default renderer for {@link goog.ui.TriStateMenuItemRenderer}s. Each item has
      * the following structure:
+     *
      *    <div class="goog-tristatemenuitem">
      *        <div class="goog-tristatemenuitem-checkbox"></div>
      *        <div>...(content)...</div>
      *    </div>
+     *
      * @constructor
      * @extends {goog.ui.MenuItemRenderer}
      * @final

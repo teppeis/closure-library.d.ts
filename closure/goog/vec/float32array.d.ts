@@ -11,6 +11,7 @@ declare module goog.vec {
      *     The length of the array, or an array to initialize the contents of the
      *     new Float32Array.
      * @constructor
+     * @implements {IArrayLike<number>}
      * @final
      */
     class Float32Array {

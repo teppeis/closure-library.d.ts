@@ -49,3 +49,6 @@ declare module goog.events {
      */
     var actionEventWrapper: goog.events.ActionEventWrapper_;
 }
+
+declare module goog.events.ActionEventWrapper_ {
+}

@@ -6,20 +6,22 @@ declare module goog.fx {
 
     /**
      * An interface for programmatic transition. Must extend
-     * {@code goog.events.EventTarget}.
+     * `goog.events.EventTarget`.
      * @interface
      */
     interface Transition {
         
         /**
+         * @type {function()}
          * Plays the transition.
          */
-        play(): void;
+        play: () => any;
         
         /**
+         * @type {function()}
          * Stops the transition.
          */
-        stop(): void;
+        stop: () => any;
     }
 }
 

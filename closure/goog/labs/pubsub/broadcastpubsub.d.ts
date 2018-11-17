@@ -11,7 +11,7 @@ declare module goog.labs.pubsub {
      *
      * Delivery is guaranteed on all browsers except IE8 where topics expire after a
      * timeout. Publishing of a topic within a callback function provides no
-     * guarantee on ordering in that there is a possiblilty that separate origin
+     * guarantee on ordering in that there is a possibility that separate origin
      * contexts may see topics in a different order.
      *
      * This class is not secure and in certain cases (e.g., a browser crash) data
@@ -26,11 +26,10 @@ declare module goog.labs.pubsub {
      * objects.
      *
      * Special handling is done for the IE8 browsers. See the IE8_EVENTS_KEY_
-     * constant and the {@code publish} function for more information.
+     * constant and the `publish` function for more information.
      *
      *
      * @constructor @struct @extends {goog.Disposable}
-     * @suppress {checkStructDictInheritance}
      */
     function BroadcastPubSub(): void;
 }

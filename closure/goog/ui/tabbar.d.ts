@@ -18,8 +18,8 @@ declare module goog.ui {
      * Clients may listen for all of the above events on the tab bar itself, and
      * refer to the event target to identify the tab that dispatched the event.
      * When an unselected tab is clicked for the first time, it dispatches both a
-     * {@code SELECT} event and an {@code ACTION} event; subsequent clicks on an
-     * already selected tab only result in {@code ACTION} events.
+     * `SELECT` event and an `ACTION` event; subsequent clicks on an
+     * already selected tab only result in `ACTION` events.
      *
      * @param {goog.ui.TabBar.Location=} opt_location Tab bar location; defaults to
      *     {@link goog.ui.TabBar.Location.TOP}.
@@ -38,7 +38,7 @@ declare module goog.ui {
          * by deselecting the tab being removed.  Since {@link #removeChildAt} uses
          * {@link #removeChild} internally, we only need to override this method.
          * @param {string|goog.ui.Component} tab Tab to remove.
-         * @param {boolean=} opt_unrender Whether to call {@code exitDocument} on the
+         * @param {boolean=} opt_unrender Whether to call `exitDocument` on the
          *     removed tab, and detach its DOM from the document (defaults to false).
          * @return {goog.ui.Control} The removed tab, if any.
          * @override
@@ -126,28 +126,28 @@ declare module goog.ui {
         isSelectableTab(tab: goog.ui.Control): boolean;
         
         /**
-         * Handles {@code SELECT} events dispatched by tabs as they become selected.
+         * Handles `SELECT` events dispatched by tabs as they become selected.
          * @param {goog.events.Event} e Select event to handle.
          * @protected
          */
         handleTabSelect(e: goog.events.Event): void;
         
         /**
-         * Handles {@code UNSELECT} events dispatched by tabs as they become deselected.
+         * Handles `UNSELECT` events dispatched by tabs as they become deselected.
          * @param {goog.events.Event} e Unselect event to handle.
          * @protected
          */
         handleTabUnselect(e: goog.events.Event): void;
         
         /**
-         * Handles {@code DISABLE} events displayed by tabs.
+         * Handles `DISABLE` events displayed by tabs.
          * @param {goog.events.Event} e Disable event to handle.
          * @protected
          */
         handleTabDisable(e: goog.events.Event): void;
         
         /**
-         * Handles {@code HIDE} events displayed by tabs.
+         * Handles `HIDE` events displayed by tabs.
          * @param {goog.events.Event} e Hide event to handle.
          * @protected
          */

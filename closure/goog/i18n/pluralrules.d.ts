@@ -22,4 +22,15 @@ declare module goog.i18n.pluralRules {
      * Selected Plural rules by locale.
      */
     var select: any;
+
+    /**
+     * Plural selection function.
+     *
+     * The actual implementation is locale-dependent.
+     *
+     * @param {number} n The count of items.
+     * @param {number=} opt_precision optional, precision.
+     * @return {goog.i18n.pluralRules.Keyword}
+     */
+    function select(n: number, opt_precision?: number): goog.i18n.pluralRules.Keyword;
 }

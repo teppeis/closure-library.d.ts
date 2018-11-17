@@ -29,6 +29,7 @@ declare module goog.dom {
          * Gets the range that this SavedCaretRage represents, without selecting it
          * or removing the carets from the DOM.
          * @return {goog.dom.AbstractRange?} An abstract range.
+         * @suppress {missingRequire,undefinedNames} circular dependency
          */
         toAbstractRange(): goog.dom.AbstractRange;
         

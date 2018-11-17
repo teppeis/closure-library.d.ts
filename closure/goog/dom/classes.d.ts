@@ -15,7 +15,7 @@ declare module goog.dom.classes {
     /**
      * Gets an array of class names on an element
      * @param {Node} element DOM node to get class of.
-     * @return {!Array<?>} Class names on {@code element}. Some browsers add extra
+     * @return {!Array<?>} Class names on `element`. Some browsers add extra
      *     properties to the array. Do not depend on any of these!
      * @deprecated Use goog.dom.classlist.get instead.
      */
@@ -34,7 +34,7 @@ declare module goog.dom.classes {
      * Removes a class or classes from an element.
      * @param {Node} element DOM node to remove class from.
      * @param {...string} var_args Class name(s) to remove.
-     * @return {boolean} Whether all classes in {@code var_args} were found and
+     * @return {boolean} Whether all classes in `var_args` were found and
      *     removed.
      * @deprecated Use goog.dom.classlist.remove or goog.dom.classlist.removeAll
      *     instead.

@@ -15,6 +15,7 @@ declare module goog.userAgentTestUtil {
         IE: UserAgents;
         OPERA: UserAgents;
         WEBKIT: UserAgents;
+        EDGE: UserAgents;
     };
 
     /**

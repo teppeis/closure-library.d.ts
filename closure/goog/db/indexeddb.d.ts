@@ -35,9 +35,9 @@ declare module goog.db {
         getName(): string;
         
         /**
-         * @return {string} The current database version.
+         * @return {number} The current database version.
          */
-        getVersion(): string;
+        getVersion(): number;
         
         /**
          * @return {DOMStringList} List of object stores in this database.
@@ -46,11 +46,11 @@ declare module goog.db {
         
         /**
          * Creates an object store in this database. Can only be called inside a
-         * {@link goog.db.UpgradeNeededCallback} or the callback for the Deferred
-         * returned from #setVersion.
+         * {@link goog.db.UpgradeNeededCallback}.
          *
          * @param {string} name Name for the new object store.
-         * @param {Object=} opt_params Options object. The available options are:
+         * @param {!IDBObjectStoreParameters=} opt_params Options object.
+         *     The available options are:
          *     keyPath, which is a string and determines what object attribute
          *     to use as the key when storing objects in this object store; and
          *     autoIncrement, which is a boolean, which defaults to false and determines
@@ -60,36 +60,16 @@ declare module goog.db {
          * @return {!goog.db.ObjectStore} The newly created object store.
          * @throws {goog.db.Error} If there's a problem creating the object store.
          */
-        createObjectStore(name: string, opt_params?: Object): goog.db.ObjectStore;
+        createObjectStore(name: string, opt_params?: IDBObjectStoreParameters): goog.db.ObjectStore;
         
         /**
          * Deletes an object store. Can only be called inside a
-         * {@link goog.db.UpgradeNeededCallback} or the callback for the Deferred
-         * returned from #setVersion.
+         * {@link goog.db.UpgradeNeededCallback}.
          *
          * @param {string} name Name of the object store to delete.
          * @throws {goog.db.Error} If there's a problem deleting the object store.
          */
         deleteObjectStore(name: string): void;
-        
-        /**
-         * Updates the version of the database and returns a Deferred transaction.
-         * The database's structure can be changed inside this Deferred's callback, but
-         * nowhere else. This means adding or deleting object stores, and adding or
-         * deleting indexes. The version change will not succeed unless there are no
-         * other connections active for this database anywhere. A new database
-         * connection should be opened after the version change is finished to pick
-         * up changes.
-         *
-         * This is deprecated, and only supported on Chrome prior to version 25. New
-         * applications should use the version parameter to {@link goog.db.openDatabase}
-         * instead.
-         *
-         * @param {string} version The new version of the database.
-         * @return {!goog.async.Deferred} The deferred transaction for changing the
-         *     version.
-         */
-        setVersion(version: string): goog.async.Deferred<any>;
         
         /**
          * Creates a new transaction.
@@ -98,8 +78,7 @@ declare module goog.db {
          *     transaction's scope, the object stores that this transaction can operate
          *     on.
          * @param {goog.db.Transaction.TransactionMode=} opt_mode The mode of the
-         *     transaction. If not present, the default is READ_ONLY. For VERSION_CHANGE
-         *     transactions call {@link goog.db.IndexedDB#setVersion} instead.
+         *     transaction. If not present, the default is READ_ONLY.
          * @return {!goog.db.Transaction} The wrapper for the newly created transaction.
          * @throws {goog.db.Error} If there's a problem creating the transaction.
          */

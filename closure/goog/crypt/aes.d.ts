@@ -26,5 +26,14 @@ declare module goog.crypt {
      */
     class Aes {
         constructor(key: Array<number>);
+        
+        /**
+         * Block size, in bytes.  Fixed at 16 per AES spec.
+         * @override
+         * @type {number}
+         * @const
+         * @public
+         */
+        BLOCK_SIZE: number;
     }
 }

@@ -42,13 +42,12 @@ declare module goog.events {
      * @param {function(this:T, EVENTOBJ):?|{handleEvent:function(?):?}|null}
      *     listener Callback method, or an object with a handleEvent function.
      *     WARNING: passing an Object is now softly deprecated.
-     * @param {boolean=} opt_capt Whether to fire in capture phase (defaults to
-     *     false).
+     * @param {(boolean|!AddEventListenerOptions)=} opt_options
      * @param {T=} opt_handler Element in whose scope to call the listener.
      * @return {goog.events.Key} Unique key for the listener.
      * @template T,EVENTOBJ
      */
-    function listen<T, EVENTOBJ>(src: goog.globalEventTarget|goog.events.Listenable, type: string|Array<string>|goog.events.EventId<EVENTOBJ>|Array<goog.events.EventId<EVENTOBJ>>, listener: ((arg0: EVENTOBJ) => any)|{handleEvent: (arg0: any) => any}|void, opt_capt?: boolean, opt_handler?: T): goog.events.Key;
+    function listen<T, EVENTOBJ>(src: goog.globalEventTarget|goog.events.Listenable, type: string|Array<string>|goog.events.EventId<EVENTOBJ>|Array<goog.events.EventId<EVENTOBJ>>, listener: ((arg0: EVENTOBJ) => any)|{handleEvent: (arg0: any) => any}|void, opt_options?: boolean|AddEventListenerOptions, opt_handler?: T): goog.events.Key;
 
     /**
      * Helper function for returning a proxy function.
@@ -76,12 +75,12 @@ declare module goog.events {
      *     type Event type or array of event types.
      * @param {function(this:T, EVENTOBJ):?|{handleEvent:function(?):?}|null}
      *     listener Callback method.
-     * @param {boolean=} opt_capt Fire in capture phase?.
+     * @param {(boolean|!AddEventListenerOptions)=} opt_options
      * @param {T=} opt_handler Element in whose scope to call the listener.
      * @return {goog.events.Key} Unique key for the listener.
      * @template T,EVENTOBJ
      */
-    function listenOnce<T, EVENTOBJ>(src: goog.globalEventTarget|goog.events.Listenable, type: string|Array<string>|goog.events.EventId<EVENTOBJ>|Array<goog.events.EventId<EVENTOBJ>>, listener: ((arg0: EVENTOBJ) => any)|{handleEvent: (arg0: any) => any}|void, opt_capt?: boolean, opt_handler?: T): goog.events.Key;
+    function listenOnce<T, EVENTOBJ>(src: goog.globalEventTarget|goog.events.Listenable, type: string|Array<string>|goog.events.EventId<EVENTOBJ>|Array<goog.events.EventId<EVENTOBJ>>, listener: ((arg0: EVENTOBJ) => any)|{handleEvent: (arg0: any) => any}|void, opt_options?: boolean|AddEventListenerOptions, opt_handler?: T): goog.events.Key;
 
     /**
      * Adds an event listener with a specific event wrapper on a DOM Node or an
@@ -110,14 +109,14 @@ declare module goog.events {
      *     type Event type or array of event types to unlisten to.
      * @param {function(?):?|{handleEvent:function(?):?}|null} listener The
      *     listener function to remove.
-     * @param {boolean=} opt_capt In DOM-compliant browsers, this determines
+     * @param {(boolean|!EventListenerOptions)=} opt_options
      *     whether the listener is fired during the capture or bubble phase of the
      *     event.
      * @param {Object=} opt_handler Element in whose scope to call the listener.
      * @return {?boolean} indicating whether the listener was there to remove.
      * @template EVENTOBJ
      */
-    function unlisten<EVENTOBJ>(src: goog.globalEventTarget|goog.events.Listenable, type: string|Array<string>|goog.events.EventId<EVENTOBJ>|Array<goog.events.EventId<EVENTOBJ>>, listener: ((arg0: any) => any)|{handleEvent: (arg0: any) => any}|void, opt_capt?: boolean, opt_handler?: Object): boolean;
+    function unlisten<EVENTOBJ>(src: goog.globalEventTarget|goog.events.Listenable, type: string|Array<string>|goog.events.EventId<EVENTOBJ>|Array<goog.events.EventId<EVENTOBJ>>, listener: ((arg0: any) => any)|{handleEvent: (arg0: any) => any}|void, opt_options?: boolean|EventListenerOptions, opt_handler?: Object): boolean;
 
     /**
      * Removes an event listener which was added with listen() by the key
@@ -162,7 +161,7 @@ declare module goog.events {
      * @param {Object} obj Object to get listeners for.
      * @param {string|!goog.events.EventId} type Event type.
      * @param {boolean} capture Capture phase?.
-     * @return {Array<goog.events.Listener>} Array of listener objects.
+     * @return {Array<!goog.events.Listener>} Array of listener objects.
      */
     function getListeners(obj: Object, type: string|goog.events.EventId<any>, capture: boolean): Array<goog.events.Listener>;
 
@@ -222,9 +221,9 @@ declare module goog.events {
      *
      * @param {goog.events.Listener} listener The listener object to call.
      * @param {Object} eventObject The event object to pass to the listener.
-     * @return {boolean} Result of listener.
+     * @return {*} Result of listener.
      */
-    function fireListener(listener: goog.events.Listener, eventObject: Object): boolean;
+    function fireListener(listener: goog.events.Listener, eventObject: Object): any;
 
     /**
      * Gets the total number of listeners currently in the system.
@@ -270,18 +269,18 @@ declare module goog.events {
      * @param {goog.events.Listener} listener The listener object.
      * @param {Event=} opt_evt Optional event object that gets passed in via the
      *     native event handlers.
-     * @return {boolean} Result of the event handler.
+     * @return {*} Result of the event handler.
      * @this {EventTarget} The object or Element that fired the event.
      * @private
      */
-    function handleBrowserEvent_(listener: goog.events.Listener, opt_evt?: Event): boolean;
+    function handleBrowserEvent_(listener: goog.events.Listener, opt_evt?: Event): any;
 
     /**
      * Creates a unique event id.
      *
      * @param {string} identifier The identifier.
      * @return {string} A unique identifier.
-     * @idGenerator
+     * @idGenerator {unique}
      */
     function getUniqueId(identifier: string): string;
 

@@ -44,7 +44,7 @@ declare module goog.i18n.bidi {
          *
          * This property can be used to determine at runtime whether or not an object
          * implements this interface.  All implementations of this interface set this
-         * property to {@code true}.
+         * property to `true`.
          * @type {boolean}
          */
         implementsGoogI18nBidiDirectionalString: boolean;
@@ -273,12 +273,13 @@ declare module goog.i18n.bidi {
      *   Latin or Cyrillic script (which are the usual LTR alternatives).<p>
      * The list of right-to-left scripts appears in the 100-199 range in
      * http://www.unicode.org/iso15924/iso15924-num.html, of which Arabic and
-     * Hebrew are by far the most widely used. We also recognize Thaana, N'Ko, and
-     * Tifinagh, which also have significant modern usage. The rest (Syriac,
-     * Samaritan, Mandaic, etc.) seem to have extremely limited or no modern usage
-     * and are not recognized to save on code size.
-     * The languages usually written in a right-to-left script are taken as those
-     * with Suppress-Script: Hebr|Arab|Thaa|Nkoo|Tfng  in
+     * Hebrew are by far the most widely used. We also recognize Thaana, and N'Ko,
+     * which also have significant modern usage. Adlam and Rohingya
+     * scripts are now included since they can be expected to be used in the
+     * future. The rest (Syriac, Samaritan, Mandaic, etc.) seem to have extremely
+     * limited or no modern usage and are not recognized to save on code size. The
+     * languages usually written in a right-to-left script are taken as those with
+     * Suppress-Script: Hebr|Arab|Thaa|Nkoo|Adlm|Rohg in
      * http://www.iana.org/assignments/language-subtag-registry,
      * as well as Central (or Sorani) Kurdish (ckb), Sindhi (sd) and Uyghur (ug).
      * Other subtags of the language code, e.g. regions like EG (Egypt), are
@@ -289,20 +290,11 @@ declare module goog.i18n.bidi {
     function isRtlLanguage(lang: string): boolean;
 
     /**
-     * Apply bracket guard using html span tag. This is to address the problem of
-     * messy bracket display frequently happens in RTL layout.
-     * @param {string} s The string that need to be processed.
-     * @param {boolean=} opt_isRtlContext specifies default direction (usually
-     *     direction of the UI).
-     * @return {string} The processed string, with all bracket guarded.
-     */
-    function guardBracketInHtml(s: string, opt_isRtlContext?: boolean): string;
-
-    /**
      * Apply bracket guard using LRM and RLM. This is to address the problem of
      * messy bracket display frequently happens in RTL layout.
-     * This version works for both plain text and html. But it does not work as
-     * good as guardBracketInHtml in some cases.
+     * This function works for plain text, not for HTML. In HTML, the opening
+     * bracket might be in a different context than the closing bracket (such as
+     * an attribute value).
      * @param {string} s The string that need to be processed.
      * @param {boolean=} opt_isRtlContext specifies default direction (usually
      *     direction of the UI).
@@ -311,10 +303,10 @@ declare module goog.i18n.bidi {
     function guardBracketInText(s: string, opt_isRtlContext?: boolean): string;
 
     /**
-     * Enforce the html snippet in RTL directionality regardless overall context.
+     * Enforce the html snippet in RTL directionality regardless of overall context.
      * If the html piece was enclosed by tag, dir will be applied to existing
      * tag, otherwise a span tag will be added as wrapper. For this reason, if
-     * html snippet start with with tag, this tag must enclose the whole piece. If
+     * html snippet starts with a tag, this tag must enclose the whole piece. If
      * the tag already has a dir specified, this new one will override existing
      * one in behavior (tested on FF and IE).
      * @param {string} html The string that need to be processed.
@@ -331,10 +323,10 @@ declare module goog.i18n.bidi {
     function enforceRtlInText(text: string): string;
 
     /**
-     * Enforce the html snippet in RTL directionality regardless overall context.
+     * Enforce the html snippet in RTL directionality regardless or overall context.
      * If the html piece was enclosed by tag, dir will be applied to existing
      * tag, otherwise a span tag will be added as wrapper. For this reason, if
-     * html snippet start with with tag, this tag must enclose the whole piece. If
+     * html snippet starts with a tag, this tag must enclose the whole piece. If
      * the tag already has a dir specified, this new one will override existing
      * one in behavior (tested on FF and IE).
      * @param {string} html The string that need to be processed.
@@ -378,7 +370,7 @@ declare module goog.i18n.bidi {
      * @param {string} str The string to be checked.
      * @param {boolean=} opt_isHtml Whether str is HTML / HTML-escaped.
      *     Default: false.
-     * @return {goog.i18n.bidi.Dir} Estimated overall directionality of {@code str}.
+     * @return {goog.i18n.bidi.Dir} Estimated overall directionality of `str`.
      */
     function estimateDirection(str: string, opt_isHtml?: boolean): goog.i18n.bidi.Dir;
 
@@ -405,4 +397,11 @@ declare module goog.i18n.bidi {
      *     4. A null for unknown directionality.
      */
     function setElementDirAndAlign(element: Element, dir: goog.i18n.bidi.Dir|number|boolean|void): void;
+
+    /**
+     * Sets element dir based on estimated directionality of the given text.
+     * @param {!Element} element
+     * @param {string} text
+     */
+    function setElementDirByTextDirectionality(element: Element, text: string): void;
 }

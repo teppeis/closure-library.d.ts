@@ -17,85 +17,10 @@ declare module goog.fx {
      *
      * @extends {goog.events.EventTarget}
      * @constructor
+     * @struct
      */
     class Dragger extends goog.events.EventTarget {
         constructor(target: Element, opt_handle?: Element, opt_limits?: goog.math.Rect);
-        
-        /**
-         * Reference to drag target element.
-         * @type {Element}
-         */
-        target: Element;
-        
-        /**
-         * Reference to the handler that initiates the drag.
-         * @type {Element}
-         */
-        handle: Element;
-        
-        /**
-         * Object representing the limits of the drag region.
-         * @type {goog.math.Rect}
-         */
-        limits: goog.math.Rect;
-        
-        /**
-         * Current x position of mouse or touch relative to viewport.
-         * @type {number}
-         */
-        clientX: number;
-        
-        /**
-         * Current y position of mouse or touch relative to viewport.
-         * @type {number}
-         */
-        clientY: number;
-        
-        /**
-         * Current x position of mouse or touch relative to screen. Deprecated because
-         * it doesn't take into affect zoom level or pixel density.
-         * @type {number}
-         * @deprecated Consider switching to clientX instead.
-         */
-        screenX: number;
-        
-        /**
-         * Current y position of mouse or touch relative to screen. Deprecated because
-         * it doesn't take into affect zoom level or pixel density.
-         * @type {number}
-         * @deprecated Consider switching to clientY instead.
-         */
-        screenY: number;
-        
-        /**
-         * The x position where the first mousedown or touchstart occurred.
-         * @type {number}
-         */
-        startX: number;
-        
-        /**
-         * The y position where the first mousedown or touchstart occurred.
-         * @type {number}
-         */
-        startY: number;
-        
-        /**
-         * Current x position of drag relative to target's parent.
-         * @type {number}
-         */
-        deltaX: number;
-        
-        /**
-         * Current y position of drag relative to target's parent.
-         * @type {number}
-         */
-        deltaY: number;
-        
-        /**
-         * The current page scroll value.
-         * @type {goog.math.Coordinate}
-         */
-        pageScroll: goog.math.Coordinate;
         
         /**
          * Creates copy of node being dragged.  This is a utility function to be used
@@ -103,9 +28,16 @@ declare module goog.fx {
          * cursor itself.
          *
          * @param {Element} sourceEl Element to copy.
-         * @return {!Element} The clone of {@code sourceEl}.
+         * @return {!Element} The clone of `sourceEl`.
          */
         static cloneNode(sourceEl: Element): Element;
+        
+        /**
+         * Prevents the dragger from calling setCapture(), even in browsers that support
+         * it.  If the draggable item has click handlers, setCapture() can break them.
+         * @param {boolean} allow True to use setCapture if the browser supports it.
+         */
+        setAllowSetCapture(allow: boolean): void;
         
         /**
          * Turns on/off true RTL behavior.  This should be called immediately after
@@ -120,7 +52,7 @@ declare module goog.fx {
         /**
          * Returns the event handler, intended for subclass use.
          * @return {!goog.events.EventHandler<T>} The event handler.
-         * @this T
+         * @this {T}
          * @template T
          */
         getHandler<T>(): goog.events.EventHandler<T>;
@@ -175,6 +107,13 @@ declare module goog.fx {
          * @param {boolean} enabled Whether dragger is enabled.
          */
         setEnabled(enabled: boolean): void;
+        
+        /**
+         * Set whether mousedown should be default prevented.
+         * @param {boolean} preventMouseDown Whether mousedown should be default
+         *     prevented.
+         */
+        setPreventMouseDown(preventMouseDown: boolean): void;
         
         /**
          * Event handler that is used to start the drag
@@ -264,6 +203,7 @@ declare module goog.fx {
      * @param {number=} opt_actY Optional actual y for drag if it has been limited.
      * @param {boolean=} opt_dragCanceled Whether the drag has been canceled.
      * @constructor
+     * @struct
      * @extends {goog.events.Event}
      */
     class DragEvent extends goog.events.Event {

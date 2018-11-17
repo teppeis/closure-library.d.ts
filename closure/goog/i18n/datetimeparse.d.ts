@@ -7,11 +7,13 @@ declare module goog.i18n {
     /**
      * Construct a DateTimeParse based on current locale.
      * @param {string|number} pattern pattern specification or pattern type.
+     * @param {!Object=} opt_dateTimeSymbols Optional symbols to use for this
+     *     instance rather than the global symbols.
      * @constructor
      * @final
      */
     class DateTimeParse {
-        constructor(pattern: string|number);
+        constructor(pattern: string|number, opt_dateTimeSymbols?: Object);
         
         /**
          * Number of years prior to now that the century used to
@@ -33,7 +35,7 @@ declare module goog.i18n {
         
         /**
          * Parse the given string and fill info into date object. This version will
-         * validate the input and make sure it is a validate date/time.
+         * validate the input and make sure it is a valid date/time.
          * @param {string} text The string being parsed.
          * @param {goog.date.DateLike} date The Date object to hold the parsed date.
          * @param {number=} opt_start The position from where parse should begin.

@@ -98,6 +98,8 @@ declare module goog.dom.browserrange {
          * @param {boolean=} opt_allowPartial If not set or false, the node must be
          *     entirely contained in the selection for this function to return true.
          * @return {boolean} Whether this range contains the given node.
+         * @suppress {missingRequire} Cannot depend on goog.dom.browserrange because it
+         *     creates a circular dependency.
          */
         containsNode(node: Node, opt_allowPartial?: boolean): boolean;
         

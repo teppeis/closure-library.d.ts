@@ -11,6 +11,7 @@ declare module goog.storage {
      * @param {!goog.storage.mechanism.Mechanism} mechanism The underlying
      *     storage mechanism.
      * @constructor
+     * @struct
      * @extends {goog.storage.Storage}
      */
     class RichStorage extends goog.storage.Storage {

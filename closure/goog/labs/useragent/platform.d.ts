@@ -52,6 +52,16 @@ declare module goog.labs.userAgent.platform {
     function isChromeOS(): boolean;
 
     /**
+     * @return {boolean} Whether the platform is Chromecast.
+     */
+    function isChromecast(): boolean;
+
+    /**
+     * @return {boolean} Whether the platform is KaiOS.
+     */
+    function isKaiOS(): boolean;
+
+    /**
      * The version of the platform. We only determine the version for Windows,
      * Mac, and Chrome OS. It doesn't make much sense on Linux. For Windows, we only
      * look at the NT version. Non-NT-based versions (e.g. 95, 98, etc.) are given

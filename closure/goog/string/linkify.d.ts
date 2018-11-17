@@ -10,13 +10,16 @@ declare module goog.string$.linkify {
      * _blank and it will have a rel=nofollow attribute applied to it so that links
      * created by linkify will not be of interest to search engines.
      * @param {string} text Plain text.
-     * @param {Object<string, string>=} opt_attributes Attributes to add to all
-     *      links created. Default are rel=nofollow and target=_blank. To clear
-     *      those default attributes set rel='' and target=''.
-     * @return {string} HTML Linkified HTML text. Any text that is not part of a
+     * @param {!Object<string, ?goog.html.SafeHtml.AttributeValue>=} opt_attributes
+     *     Attributes to add to all links created. Default are rel=nofollow and
+     *     target=_blank. To clear those default attributes set rel='' and
+     *     target=''.
+     * @param {boolean=} opt_preserveNewlines Whether to preserve newlines with
+     *     &lt;br&gt;.
+     * @return {!goog.html.SafeHtml} Linkified HTML. Any text that is not part of a
      *      link will be HTML-escaped.
      */
-    function linkifyPlainText(text: string, opt_attributes?: {[index: string]: string}): string;
+    function linkifyPlainTextAsHtml(text: string, opt_attributes?: {[index: string]: goog.html.SafeHtml.AttributeValue}, opt_preserveNewlines?: boolean): goog.html.SafeHtml;
 
     /**
      * Gets the first URI in text.

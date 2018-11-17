@@ -17,13 +17,6 @@ declare module goog.ui {
         constructor(opt_domHelper?: goog.dom.DomHelper, opt_labelFn?: ((arg0: number) => string));
         
         /**
-         * The underlying range model
-         * @type {goog.ui.RangeModel}
-         * @protected
-         */
-        rangeModel: goog.ui.RangeModel;
-        
-        /**
          * The minThumb dom-element, pointing to the start of the selected range.
          * @type {HTMLDivElement}
          * @protected
@@ -97,6 +90,7 @@ declare module goog.ui {
          * If the specified delta is smaller than the step size, it will be rounded
          * to the step size.
          * @param {number} delta The delta by which to move the selected range.
+         * @suppress {strictPrimitiveOperators} Part of the go/strict_warnings_migration
          */
         moveThumbs(delta: number): void;
         
@@ -162,6 +156,7 @@ declare module goog.ui {
         /**
          * Sets the value and starts animating the handle towards that position.
          * @param {number} v Value to set and animate to.
+         * @suppress {strictPrimitiveOperators} Part of the go/strict_warnings_migration
          */
         animatedSetValue(v: number): void;
         
@@ -332,6 +327,13 @@ declare module goog.ui {
          *     unavailable.
          */
         getTextValue(): string;
+        
+        /**
+         * Sets whether focus will be moved to the top-level element when the slider is
+         * dragged.
+         * @param {boolean} focusElementOnSliderDrag
+         */
+        setFocusElementOnSliderDrag(focusElementOnSliderDrag: boolean): void;
     }
 }
 
@@ -345,13 +347,13 @@ declare module goog.ui.SliderBase {
      */
     type EventType = string;
     var EventType: {
-        [index: string]: EventType;
-        // DRAG_VALUE_START: EventType;
-        // DRAG_VALUE_END: EventType;
-        // DRAG_EXTENT_START: EventType;
-        // DRAG_EXTENT_END: EventType;
-        // DRAG_START: EventType;
-        // DRAG_END: EventType;
+        DRAG_VALUE_START: EventType;
+        DRAG_VALUE_END: EventType;
+        DRAG_EXTENT_START: EventType;
+        DRAG_EXTENT_END: EventType;
+        DRAG_START: EventType;
+        DRAG_END: EventType;
+        ANIMATION_END: EventType;
     };
 
     /**
@@ -373,7 +375,7 @@ declare module goog.ui.SliderBase {
     interface AnimationFactory {
         
         /**
-         * Creates an additonal animation to play when animating to a new value.
+         * Creates an additional animation to play when animating to a new value.
          *
          * @param {number} previousValue The previous value (before animation).
          * @param {number} newValue The new value (after animation).

@@ -13,6 +13,13 @@ declare module goog.net {
         constructor();
         
         /**
+         * The normal response for forward channel requests.
+         * Used only before version 8 of the protocol.
+         * @const
+         */
+        static MAGIC_RESPONSE_COOKIE: any;
+        
+        /**
          * Gets the logger used by this ChannelDebug.
          * @return {goog.debug.Logger} The logger used by this ChannelDebug.
          */

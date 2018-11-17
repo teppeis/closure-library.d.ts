@@ -82,8 +82,10 @@ declare module goog.ui {
          * Show the popup at the bottom-left corner of the specified element.
          * @param {Element} element Reference element for displaying the popup -- popup
          *     will appear at the bottom-left corner of this element.
+         * @param {boolean=} opt_keepDate Whether to keep the date picker's current
+         *     date. If false, the date is set to null. Defaults to false.
          */
-        showPopup(element: Element): void;
+        showPopup(element: Element, opt_keepDate?: boolean): void;
         
         /**
          * Hides this popup.

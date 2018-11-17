@@ -6,7 +6,7 @@ declare module goog {
 declare module goog.cssom {
 
     /**
-     * Enumeration of {@code CSSRule} types.
+     * Enumeration of `CSSRule` types.
      * @enum {number}
      */
     type CssRuleType = number;
@@ -21,20 +21,20 @@ declare module goog.cssom {
 
     /**
      * Recursively gets all CSS as text, optionally starting from a given
-     * CSSStyleSheet.
-     * @param {(CSSStyleSheet|StyleSheetList)=} opt_styleSheet The CSSStyleSheet.
+     * StyleSheet.
+     * @param {(StyleSheet|StyleSheetList)=} opt_styleSheet
      * @return {string} css text.
      */
-    function getAllCssText(opt_styleSheet?: CSSStyleSheet|StyleSheetList): string;
+    function getAllCssText(opt_styleSheet?: StyleSheet|StyleSheetList): string;
 
     /**
      * Recursively gets all CSSStyleRules, optionally starting from a given
-     * CSSStyleSheet.
+     * StyleSheet.
      * Note that this excludes any CSSImportRules, CSSMediaRules, etc..
-     * @param {(CSSStyleSheet|StyleSheetList)=} opt_styleSheet The CSSStyleSheet.
-     * @return {Array<CSSStyleRule>} A list of CSSStyleRules.
+     * @param {(StyleSheet|StyleSheetList)=} opt_styleSheet
+     * @return {!Array<CSSStyleRule>} A list of CSSStyleRules.
      */
-    function getAllCssStyleRules(opt_styleSheet?: CSSStyleSheet|StyleSheetList): Array<CSSStyleRule>;
+    function getAllCssStyleRules(opt_styleSheet?: StyleSheet|StyleSheetList): Array<CSSStyleRule>;
 
     /**
      * Returns the CSSRules from a styleSheet.
@@ -42,25 +42,27 @@ declare module goog.cssom {
      * Firefox will return styleSheet.cssRules, which includes ImportRules and
      * anything which implements the CSSRules interface. IE returns simply a list of
      * CSSRules.
-     * @param {CSSStyleSheet} styleSheet The CSSStyleSheet.
+     * @param {StyleSheet} styleSheet
      * @throws {Error} If we cannot access the rules on a stylesheet object - this
      *     can  happen if a stylesheet object's rules are accessed before the rules
      *     have been downloaded and parsed and are "ready".
      * @return {CSSRuleList} An array of CSSRules or null.
+     * @suppress {strictMissingProperties} StyleSheet does not define cssRules
      */
-    function getCssRulesFromStyleSheet(styleSheet: CSSStyleSheet): CSSRuleList;
+    function getCssRulesFromStyleSheet(styleSheet: StyleSheet): CSSRuleList;
 
     /**
-     * Gets all CSSStyleSheet objects starting from some CSSStyleSheet. Note that we
+     * Gets all StyleSheet objects starting from some StyleSheet. Note that we
      * want to return the sheets in the order of the cascade, therefore if we
-     * encounter an import, we will splice that CSSStyleSheet object in front of
-     * the CSSStyleSheet that contains it in the returned array of CSSStyleSheets.
-     * @param {(CSSStyleSheet|StyleSheetList)=} opt_styleSheet A CSSStyleSheet.
+     * encounter an import, we will splice that StyleSheet object in front of
+     * the StyleSheet that contains it in the returned array of StyleSheets.
+     * @param {(StyleSheet|StyleSheetList)=} opt_styleSheet A StyleSheet.
      * @param {boolean=} opt_includeDisabled If true, includes disabled stylesheets,
      *    defaults to false.
-     * @return {!Array<CSSStyleSheet>} A list of CSSStyleSheet objects.
+     * @return {!Array<StyleSheet>} A list of StyleSheet objects.
+     * @suppress {strictMissingProperties} StyleSheet does not define cssRules
      */
-    function getAllCssStyleSheets(opt_styleSheet?: CSSStyleSheet|StyleSheetList, opt_includeDisabled?: boolean): Array<CSSStyleSheet>;
+    function getAllCssStyleSheets(opt_styleSheet?: StyleSheet|StyleSheetList, opt_includeDisabled?: boolean): Array<StyleSheet>;
 
     /**
      * Gets the cssText from a CSSRule object cross-browserly.
@@ -70,23 +72,23 @@ declare module goog.cssom {
     function getCssTextFromCssRule(cssRule: CSSRule): string;
 
     /**
-     * Get the index of the CSSRule in it's CSSStyleSheet.
+     * Get the index of the CSSRule in it's StyleSheet.
      * @param {CSSRule} cssRule A CSSRule.
-     * @param {CSSStyleSheet=} opt_parentStyleSheet A reference to the stylesheet
+     * @param {StyleSheet=} opt_parentStyleSheet A reference to the stylesheet
      *     object this cssRule belongs to.
      * @throws {Error} When we cannot get the parentStyleSheet.
      * @return {number} The index of the CSSRule, or -1.
      */
-    function getCssRuleIndexInParentStyleSheet(cssRule: CSSRule, opt_parentStyleSheet?: CSSStyleSheet): number;
+    function getCssRuleIndexInParentStyleSheet(cssRule: CSSRule, opt_parentStyleSheet?: StyleSheet): number;
 
     /**
      * We do some trickery in getAllCssStyleRules that hacks this in for IE.
      * If the cssRule object isn't coming from a result of that function call, this
      * method will return undefined in IE.
      * @param {CSSRule} cssRule The CSSRule.
-     * @return {CSSStyleSheet} A styleSheet object.
+     * @return {StyleSheet} A styleSheet object.
      */
-    function getParentStyleSheet(cssRule: CSSRule): CSSStyleSheet;
+    function getParentStyleSheet(cssRule: CSSRule): StyleSheet;
 
     /**
      * Replace a cssRule with some cssText for a new rule.
@@ -96,18 +98,18 @@ declare module goog.cssom {
      * object in IE. We do some trickery in getAllCssStyleRules to hack this in.
      * @param {CSSRule} cssRule A CSSRule.
      * @param {string} cssText The text for the new CSSRule.
-     * @param {CSSStyleSheet=} opt_parentStyleSheet A reference to the stylesheet
+     * @param {StyleSheet=} opt_parentStyleSheet A reference to the stylesheet
      *     object this cssRule belongs to.
      * @param {number=} opt_index The index of the cssRule in its parentStylesheet.
      * @throws {Error} If we cannot find a parentStyleSheet.
      * @throws {Error} If we cannot find a css rule index.
      */
-    function replaceCssRule(cssRule: CSSRule, cssText: string, opt_parentStyleSheet?: CSSStyleSheet, opt_index?: number): void;
+    function replaceCssRule(cssRule: CSSRule, cssText: string, opt_parentStyleSheet?: StyleSheet, opt_index?: number): void;
 
     /**
-     * Cross browser function to add a CSSRule into a CSSStyleSheet, optionally
+     * Cross browser function to add a CSSRule into a StyleSheet, optionally
      * at a given index.
-     * @param {CSSStyleSheet} cssStyleSheet The CSSRule's parentStyleSheet.
+     * @param {StyleSheet} cssStyleSheet The CSSRule's parentStyleSheet.
      * @param {string} cssText The text for the new CSSRule.
      * @param {number=} opt_index The index of the cssRule in its parentStylesheet.
      * @throws {Error} If the css rule text appears to be ill-formatted.
@@ -115,14 +117,14 @@ declare module goog.cssom {
      *     exception warning "Node cannot be inserted at the specified point in
      *     the hierarchy."
      */
-    function addCssRule(cssStyleSheet: CSSStyleSheet, cssText: string, opt_index?: number): void;
+    function addCssRule(cssStyleSheet: StyleSheet, cssText: string, opt_index?: number): void;
 
     /**
-     * Cross browser function to remove a CSSRule in a CSSStyleSheet at an index.
-     * @param {CSSStyleSheet} cssStyleSheet The CSSRule's parentStyleSheet.
+     * Cross browser function to remove a CSSRule in a StyleSheet at an index.
+     * @param {StyleSheet} cssStyleSheet The CSSRule's parentStyleSheet.
      * @param {number} index The CSSRule's index in the parentStyleSheet.
      */
-    function removeCssRule(cssStyleSheet: CSSStyleSheet, index: number): void;
+    function removeCssRule(cssStyleSheet: StyleSheet, index: number): void;
 
     /**
      * Appends a DOM node to HEAD containing the css text that's passed in.

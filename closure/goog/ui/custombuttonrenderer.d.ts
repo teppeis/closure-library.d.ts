@@ -24,6 +24,7 @@ declare module goog.ui {
         
         /**
          * Returns the button's contents wrapped in the following DOM structure:
+         *
          *    <div class="goog-inline-block goog-custom-button">
          *      <div class="goog-inline-block goog-custom-button-outer-box">
          *        <div class="goog-inline-block goog-custom-button-inner-box">
@@ -31,6 +32,7 @@ declare module goog.ui {
          *        </div>
          *      </div>
          *    </div>
+         *
          * Overrides {@link goog.ui.ButtonRenderer#createDom}.
          * @param {goog.ui.Control} control goog.ui.Button to render.
          * @return {!Element} Root element for the button.
@@ -59,11 +61,13 @@ declare module goog.ui {
         /**
          * Takes a text caption or existing DOM structure, and returns the content
          * wrapped in a pseudo-rounded-corner box.  Creates the following DOM structure:
-         *  <div class="goog-inline-block goog-custom-button-outer-box">
-         *    <div class="goog-inline-block goog-custom-button-inner-box">
-         *      Contents...
+         *
+         *    <div class="goog-inline-block goog-custom-button-outer-box">
+         *      <div class="goog-inline-block goog-custom-button-inner-box">
+         *        Contents...
+         *      </div>
          *    </div>
-         *  </div>
+         *
          * Used by both {@link #createDom} and {@link #decorate}.  To be overridden
          * by subclasses.
          * @param {goog.ui.ControlContent} content Text caption or DOM structure to wrap

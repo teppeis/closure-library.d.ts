@@ -30,7 +30,7 @@ declare module goog.string$ {
          *
          * @param {*} a1 Required first string.
          * @param {*=} opt_a2 Optional second string.
-         * @param {...*} var_args Other items to append,
+         * @param {...?} var_args Other items to append,
          *     e.g., sb.append('foo', 'bar', 'baz').
          * @return {!goog.string.StringBuffer} This same StringBuffer object.
          * @suppress {duplicate}

@@ -11,16 +11,17 @@ declare module goog.db {
      * A database error. Since the stack trace can be unhelpful in an asynchronous
      * context, the error provides a message about where it was produced.
      *
-     * @param {number|!DOMError} error The DOMError instance returned by the
-     *     browser for Chrome22+, or an error code for previous versions.
-     * @param {string} context A description of where the error occured.
+     * @param {number|!DOMError|!goog.db.DOMErrorLike} error The DOMError instance
+     *     returned by the browser for Chrome22+, or an error code for previous
+     *     versions.
+     * @param {string} context A description of where the error occurred.
      * @param {string=} opt_message Additional message.
      * @constructor
      * @extends {goog.debug.Error}
      * @final
      */
     class Error extends goog.debug.Error {
-        constructor(error: number|DOMError, context: string, opt_message?: string);
+        constructor(error: number|DOMError|goog.db.DOMErrorLike, context: string, opt_message?: string);
         
         /**
          * @return {string} The name of the error.
@@ -39,10 +40,10 @@ declare module goog.db {
          * Translates an error name to an error code. This is purely kept for backwards
          * compatibility with Chrome21.
          *
-         * @param {string} name The name of the erorr.
+         * @param {string|undefined} name The name of the erorr.
          * @return {number} The error code corresponding to the error.
          */
-        static getCode(name: string): number;
+        static getCode(name: string|void): number;
         
         /**
          * Converts an error code used by the old spec, to an error name used by the
@@ -68,14 +69,15 @@ declare module goog.db {
          * Constructs an goog.db.Error instance from an DOMException. This abstraction
          * is necessary to provide backwards compatibility with Chrome21.
          *
-         * @param {!IDBDatabaseException} ex The exception that was thrown.
+         * @param {!DOMError|!DOMException} ex The exception that was thrown.
          * @param {string} message The error message to add to err if it's wrapped.
          * @return {!goog.db.Error} The error that caused the failure.
-         * @suppress {invalidCasts} The cast from IDBDatabaseException to DOMError
-         *     is invalid and will not compile.
          */
-        static fromException(ex: IDBDatabaseException, message: string): goog.db.Error;
+        static fromException(ex: DOMError|DOMException, message: string): goog.db.Error;
     }
+
+    /** @record */
+    function DOMErrorLike(): void;
 }
 
 declare module goog.db.Error {
@@ -113,6 +115,7 @@ declare module goog.db.Error {
      * @see http://www.w3.org/TR/IndexedDB/#idl-def-IDBDatabaseException
      *
      * @enum {number}
+     * @suppress {missingProperties} Obsolete IndexDb exception objects
      */
     type ErrorCode = number;
     var ErrorCode: {

@@ -32,6 +32,7 @@ declare module goog.graphics {
          * @param {number|string} width The width of the group element.
          * @param {number|string} height The height of the group element.
          * @override
+         * @suppress {missingRequire} goog.graphics.VmlGraphics
          */
         setSize(width: number|string, height: number|string): void;
     }
@@ -110,6 +111,7 @@ declare module goog.graphics {
          * @param {number} width Width of rectangle.
          * @param {number} height Height of rectangle.
          * @override
+         * @suppress {missingRequire} goog.graphics.VmlGraphics
          */
         setSize(width: number, height: number): void;
     }
@@ -201,6 +203,7 @@ declare module goog.graphics {
          * @param {number} width Width of rectangle.
          * @param {number} height Height of rectangle.
          * @override
+         * @suppress {missingRequire} goog.graphics.VmlGraphics
          */
         setSize(width: number, height: number): void;
         
@@ -211,16 +214,4 @@ declare module goog.graphics {
          */
         setSource(src: string): void;
     }
-
-    /**
-     * Returns the VML element corresponding to this object.  This method is added
-     * to several classes below.  Note that the return value of this method may
-     * change frequently in IE8, so it should not be cached externally.
-     * @return {Element} The VML element corresponding to this object.
-     * @this {goog.graphics.VmlGroupElement|goog.graphics.VmlEllipseElement|
-     *     goog.graphics.VmlRectElement|goog.graphics.VmlPathElement|
-     *     goog.graphics.VmlTextElement|goog.graphics.VmlImageElement}
-     * @private
-     */
-    function vmlGetElement_(): Element;
 }

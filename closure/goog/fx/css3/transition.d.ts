@@ -21,26 +21,31 @@ declare module goog.fx.css3 {
      * that expands on the width and then followed by the height:
      *
      * <pre>
-     *   initialStyle: {width: 10px, height: 10px}
-     *   finalStyle: {width: 100px, height: 100px}
-     *   transitions: [
-     *     {property: width, duration: 1, timing: 'ease-in', delay: 0},
-     *     {property: height, duration: 1, timing: 'ease-in', delay: 1}
-     *   ]
+     *   var animation = new goog.fx.css3.Transition(
+     *     element,
+     *     duration,
+     *     {width: 10px, height: 10px},
+     *     {width: 100px, height: 100px},
+     *     [
+     *       {property: width, duration: 1, timing: 'ease-in', delay: 0},
+     *       {property: height, duration: 1, timing: 'ease-in', delay: 1}
+     *     ]
+     *   );
      * </pre>
      *
      * @param {Element} element The element to be transitioned.
      * @param {number} duration The duration of the transition in seconds.
-     *     This should be the longest of all transitions.
+     *     This should be the longest of all transitions, including any delay.
      * @param {Object} initialStyle Initial style properties of the element before
-     *     animating. Set using {@code goog.style.setStyle}.
+     *     animating. Set using `goog.style.setStyle`.
      * @param {Object} finalStyle Final style properties of the element after
-     *     animating. Set using {@code goog.style.setStyle}.
+     *     animating. Set using `goog.style.setStyle`.
      * @param {goog.style.transition.Css3Property|
      *     Array<goog.style.transition.Css3Property>} transitions A single CSS3
      *     transition property or an array of it.
      * @extends {goog.fx.TransitionBase}
      * @constructor
+     * @struct
      */
     class Transition extends goog.fx.TransitionBase {
         constructor(element: Element, duration: number, initialStyle: Object, finalStyle: Object, transitions: goog.style.transition.Css3Property|Array<goog.style.transition.Css3Property>);

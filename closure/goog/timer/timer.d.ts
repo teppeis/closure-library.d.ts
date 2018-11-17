@@ -7,9 +7,10 @@ declare module goog {
     /**
      * Class for handling timing events.
      *
-     * @param {number=} opt_interval Number of ms between ticks (Default: 1ms).
-     * @param {Object=} opt_timerObject  An object that has setTimeout, setInterval,
-     *     clearTimeout and clearInterval (eg Window).
+     * @param {number=} opt_interval Number of ms between ticks (default: 1ms).
+     * @param {Object=} opt_timerObject  An object that has `setTimeout`,
+     *     `setInterval`, `clearTimeout` and `clearInterval`
+     *     (e.g., `window`).
      * @constructor
      * @extends {goog.events.EventTarget}
      */
@@ -23,29 +24,29 @@ declare module goog {
         enabled: boolean;
         
         /**
-         * An object that implements setTimout, setInterval, clearTimeout and
-         * clearInterval. We default to the global object. Changing
-         * goog.Timer.defaultTimerObject changes the object for all timer instances
-         * which can be useful if your environment has some other implementation of
-         * timers you'd like to use.
-         * @type {Object}
+         * An object that implements `setTimeout`, `setInterval`,
+         * `clearTimeout` and `clearInterval`. We default to the global
+         * object. Changing `goog.Timer.defaultTimerObject` changes the object for
+         * all timer instances which can be useful if your environment has some other
+         * implementation of timers you'd like to use.
+         * @type {{setTimeout, clearTimeout}}
          */
-        static defaultTimerObject: Object;
+        static defaultTimerObject: {setTimeout: any; clearTimeout: any};
         
         /**
-         * A variable that controls the timer error correction. If the
-         * timer is called before the requested interval times
-         * intervalScale, which often happens on mozilla, the timer is
-         * rescheduled. See also this.last_
+         * Variable that controls the timer error correction. If the timer is called
+         * before the requested interval times `intervalScale`, which often
+         * happens on Mozilla, the timer is rescheduled.
+         * @see {@link #last_}
          * @type {number}
          */
         static intervalScale: number;
         
         /**
-         * Constant for the timer's event type
-         * @type {string}
+         * Constant for the timer's event type.
+         * @const
          */
-        static TICK: string;
+        static TICK: any;
         
         /**
          * Gets the interval of the timer.
@@ -76,7 +77,7 @@ declare module goog {
         
         /**
          * Calls the given function once, after the optional pause.
-         *
+         * <p>
          * The function is always called asynchronously, even if the delay is 0. This
          * is a common trick to schedule a function to run after a batch of browser
          * event processing.
@@ -91,8 +92,8 @@ declare module goog {
         static callOnce<SCOPE>(listener: (() => any)|{handleEvent: () => any}|void, opt_delay?: number, opt_handler?: SCOPE): number;
         
         /**
-         * Clears a timeout initiated by callOnce
-         * @param {?number} timerId a timer ID.
+         * Clears a timeout initiated by {@link #callOnce}.
+         * @param {?number} timerId A timer ID.
          */
         static clear(timerId: number): void;
         
@@ -104,6 +105,6 @@ declare module goog {
          *     the specified delay, unless it is canceled first.
          * @template RESULT
          */
-        static promise<RESULT>(delay: number, opt_result?: RESULT|goog.Thenable<RESULT>|Thenable<any>): goog.Promise<RESULT, any>;
+        static promise<RESULT>(delay: number, opt_result?: RESULT|goog.Thenable<RESULT>|_Thenable): goog.Promise<RESULT, any>;
     }
 }

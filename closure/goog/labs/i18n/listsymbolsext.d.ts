@@ -56,16 +56,6 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_ar_DJ: any;
 
     /**
-     * List formatting symbols for locale ar_DZ.
-     */
-    var ListFormatSymbols_ar_DZ: any;
-
-    /**
-     * List formatting symbols for locale ar_EG.
-     */
-    var ListFormatSymbols_ar_EG: any;
-
-    /**
      * List formatting symbols for locale ar_EH.
      */
     var ListFormatSymbols_ar_EH: any;
@@ -171,6 +161,11 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_ar_TN: any;
 
     /**
+     * List formatting symbols for locale ar_XB.
+     */
+    var ListFormatSymbols_ar_XB: any;
+
+    /**
      * List formatting symbols for locale ar_YE.
      */
     var ListFormatSymbols_ar_YE: any;
@@ -194,6 +189,16 @@ declare module goog.labs.i18n {
      * List formatting symbols for locale asa_TZ.
      */
     var ListFormatSymbols_asa_TZ: any;
+
+    /**
+     * List formatting symbols for locale ast.
+     */
+    var ListFormatSymbols_ast: any;
+
+    /**
+     * List formatting symbols for locale ast_ES.
+     */
+    var ListFormatSymbols_ast_ES: any;
 
     /**
      * List formatting symbols for locale az_Cyrl.
@@ -224,11 +229,6 @@ declare module goog.labs.i18n {
      * List formatting symbols for locale bas_CM.
      */
     var ListFormatSymbols_bas_CM: any;
-
-    /**
-     * List formatting symbols for locale be.
-     */
-    var ListFormatSymbols_be: any;
 
     /**
      * List formatting symbols for locale be_BY.
@@ -266,14 +266,9 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_bm: any;
 
     /**
-     * List formatting symbols for locale bm_Latn.
+     * List formatting symbols for locale bm_ML.
      */
-    var ListFormatSymbols_bm_Latn: any;
-
-    /**
-     * List formatting symbols for locale bm_Latn_ML.
-     */
-    var ListFormatSymbols_bm_Latn_ML: any;
+    var ListFormatSymbols_bm_ML: any;
 
     /**
      * List formatting symbols for locale bn_BD.
@@ -316,11 +311,6 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_brx_IN: any;
 
     /**
-     * List formatting symbols for locale bs.
-     */
-    var ListFormatSymbols_bs: any;
-
-    /**
      * List formatting symbols for locale bs_Cyrl.
      */
     var ListFormatSymbols_bs_Cyrl: any;
@@ -361,6 +351,31 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_ca_IT: any;
 
     /**
+     * List formatting symbols for locale ccp.
+     */
+    var ListFormatSymbols_ccp: any;
+
+    /**
+     * List formatting symbols for locale ccp_BD.
+     */
+    var ListFormatSymbols_ccp_BD: any;
+
+    /**
+     * List formatting symbols for locale ccp_IN.
+     */
+    var ListFormatSymbols_ccp_IN: any;
+
+    /**
+     * List formatting symbols for locale ce.
+     */
+    var ListFormatSymbols_ce: any;
+
+    /**
+     * List formatting symbols for locale ce_RU.
+     */
+    var ListFormatSymbols_ce_RU: any;
+
+    /**
      * List formatting symbols for locale cgg.
      */
     var ListFormatSymbols_cgg: any;
@@ -374,6 +389,21 @@ declare module goog.labs.i18n {
      * List formatting symbols for locale chr_US.
      */
     var ListFormatSymbols_chr_US: any;
+
+    /**
+     * List formatting symbols for locale ckb.
+     */
+    var ListFormatSymbols_ckb: any;
+
+    /**
+     * List formatting symbols for locale ckb_IQ.
+     */
+    var ListFormatSymbols_ckb_IQ: any;
+
+    /**
+     * List formatting symbols for locale ckb_IR.
+     */
+    var ListFormatSymbols_ckb_IR: any;
 
     /**
      * List formatting symbols for locale cs_CZ.
@@ -414,6 +444,11 @@ declare module goog.labs.i18n {
      * List formatting symbols for locale de_DE.
      */
     var ListFormatSymbols_de_DE: any;
+
+    /**
+     * List formatting symbols for locale de_IT.
+     */
+    var ListFormatSymbols_de_IT: any;
 
     /**
      * List formatting symbols for locale de_LI.
@@ -536,6 +571,11 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_en_AS: any;
 
     /**
+     * List formatting symbols for locale en_AT.
+     */
+    var ListFormatSymbols_en_AT: any;
+
+    /**
      * List formatting symbols for locale en_BB.
      */
     var ListFormatSymbols_en_BB: any;
@@ -544,6 +584,11 @@ declare module goog.labs.i18n {
      * List formatting symbols for locale en_BE.
      */
     var ListFormatSymbols_en_BE: any;
+
+    /**
+     * List formatting symbols for locale en_BI.
+     */
+    var ListFormatSymbols_en_BI: any;
 
     /**
      * List formatting symbols for locale en_BM.
@@ -566,14 +611,14 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_en_BZ: any;
 
     /**
-     * List formatting symbols for locale en_CA.
-     */
-    var ListFormatSymbols_en_CA: any;
-
-    /**
      * List formatting symbols for locale en_CC.
      */
     var ListFormatSymbols_en_CC: any;
+
+    /**
+     * List formatting symbols for locale en_CH.
+     */
+    var ListFormatSymbols_en_CH: any;
 
     /**
      * List formatting symbols for locale en_CK.
@@ -591,9 +636,24 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_en_CX: any;
 
     /**
+     * List formatting symbols for locale en_CY.
+     */
+    var ListFormatSymbols_en_CY: any;
+
+    /**
+     * List formatting symbols for locale en_DE.
+     */
+    var ListFormatSymbols_en_DE: any;
+
+    /**
      * List formatting symbols for locale en_DG.
      */
     var ListFormatSymbols_en_DG: any;
+
+    /**
+     * List formatting symbols for locale en_DK.
+     */
+    var ListFormatSymbols_en_DK: any;
 
     /**
      * List formatting symbols for locale en_DM.
@@ -604,6 +664,11 @@ declare module goog.labs.i18n {
      * List formatting symbols for locale en_ER.
      */
     var ListFormatSymbols_en_ER: any;
+
+    /**
+     * List formatting symbols for locale en_FI.
+     */
+    var ListFormatSymbols_en_FI: any;
 
     /**
      * List formatting symbols for locale en_FJ.
@@ -659,6 +724,11 @@ declare module goog.labs.i18n {
      * List formatting symbols for locale en_HK.
      */
     var ListFormatSymbols_en_HK: any;
+
+    /**
+     * List formatting symbols for locale en_IL.
+     */
+    var ListFormatSymbols_en_IL: any;
 
     /**
      * List formatting symbols for locale en_IM.
@@ -776,6 +846,11 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_en_NG: any;
 
     /**
+     * List formatting symbols for locale en_NL.
+     */
+    var ListFormatSymbols_en_NL: any;
+
+    /**
      * List formatting symbols for locale en_NR.
      */
     var ListFormatSymbols_en_NR: any;
@@ -841,9 +916,19 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_en_SD: any;
 
     /**
+     * List formatting symbols for locale en_SE.
+     */
+    var ListFormatSymbols_en_SE: any;
+
+    /**
      * List formatting symbols for locale en_SH.
      */
     var ListFormatSymbols_en_SH: any;
+
+    /**
+     * List formatting symbols for locale en_SI.
+     */
+    var ListFormatSymbols_en_SI: any;
 
     /**
      * List formatting symbols for locale en_SL.
@@ -936,6 +1021,11 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_en_WS: any;
 
     /**
+     * List formatting symbols for locale en_XA.
+     */
+    var ListFormatSymbols_en_XA: any;
+
+    /**
      * List formatting symbols for locale en_ZM.
      */
     var ListFormatSymbols_en_ZM: any;
@@ -959,6 +1049,16 @@ declare module goog.labs.i18n {
      * List formatting symbols for locale es_BO.
      */
     var ListFormatSymbols_es_BO: any;
+
+    /**
+     * List formatting symbols for locale es_BR.
+     */
+    var ListFormatSymbols_es_BR: any;
+
+    /**
+     * List formatting symbols for locale es_BZ.
+     */
+    var ListFormatSymbols_es_BZ: any;
 
     /**
      * List formatting symbols for locale es_CL.
@@ -1016,11 +1116,6 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_es_IC: any;
 
     /**
-     * List formatting symbols for locale es_MX.
-     */
-    var ListFormatSymbols_es_MX: any;
-
-    /**
      * List formatting symbols for locale es_NI.
      */
     var ListFormatSymbols_es_NI: any;
@@ -1054,11 +1149,6 @@ declare module goog.labs.i18n {
      * List formatting symbols for locale es_SV.
      */
     var ListFormatSymbols_es_SV: any;
-
-    /**
-     * List formatting symbols for locale es_US.
-     */
-    var ListFormatSymbols_es_US: any;
 
     /**
      * List formatting symbols for locale es_UY.
@@ -1106,26 +1196,6 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_ff: any;
 
     /**
-     * List formatting symbols for locale ff_CM.
-     */
-    var ListFormatSymbols_ff_CM: any;
-
-    /**
-     * List formatting symbols for locale ff_GN.
-     */
-    var ListFormatSymbols_ff_GN: any;
-
-    /**
-     * List formatting symbols for locale ff_MR.
-     */
-    var ListFormatSymbols_ff_MR: any;
-
-    /**
-     * List formatting symbols for locale ff_SN.
-     */
-    var ListFormatSymbols_ff_SN: any;
-
-    /**
      * List formatting symbols for locale fi_FI.
      */
     var ListFormatSymbols_fi_FI: any;
@@ -1139,6 +1209,11 @@ declare module goog.labs.i18n {
      * List formatting symbols for locale fo.
      */
     var ListFormatSymbols_fo: any;
+
+    /**
+     * List formatting symbols for locale fo_DK.
+     */
+    var ListFormatSymbols_fo_DK: any;
 
     /**
      * List formatting symbols for locale fo_FO.
@@ -1456,24 +1531,19 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_ha: any;
 
     /**
-     * List formatting symbols for locale ha_Latn.
+     * List formatting symbols for locale ha_GH.
      */
-    var ListFormatSymbols_ha_Latn: any;
+    var ListFormatSymbols_ha_GH: any;
 
     /**
-     * List formatting symbols for locale ha_Latn_GH.
+     * List formatting symbols for locale ha_NE.
      */
-    var ListFormatSymbols_ha_Latn_GH: any;
+    var ListFormatSymbols_ha_NE: any;
 
     /**
-     * List formatting symbols for locale ha_Latn_NE.
+     * List formatting symbols for locale ha_NG.
      */
-    var ListFormatSymbols_ha_Latn_NE: any;
-
-    /**
-     * List formatting symbols for locale ha_Latn_NG.
-     */
-    var ListFormatSymbols_ha_Latn_NG: any;
+    var ListFormatSymbols_ha_NG: any;
 
     /**
      * List formatting symbols for locale haw_US.
@@ -1521,6 +1591,16 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_hy_AM: any;
 
     /**
+     * List formatting symbols for locale ia.
+     */
+    var ListFormatSymbols_ia: any;
+
+    /**
+     * List formatting symbols for locale ia_001.
+     */
+    var ListFormatSymbols_ia_001: any;
+
+    /**
      * List formatting symbols for locale id_ID.
      */
     var ListFormatSymbols_id_ID: any;
@@ -1566,6 +1646,11 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_it_SM: any;
 
     /**
+     * List formatting symbols for locale it_VA.
+     */
+    var ListFormatSymbols_it_VA: any;
+
+    /**
      * List formatting symbols for locale ja_JP.
      */
     var ListFormatSymbols_ja_JP: any;
@@ -1589,6 +1674,16 @@ declare module goog.labs.i18n {
      * List formatting symbols for locale jmc_TZ.
      */
     var ListFormatSymbols_jmc_TZ: any;
+
+    /**
+     * List formatting symbols for locale jv.
+     */
+    var ListFormatSymbols_jv: any;
+
+    /**
+     * List formatting symbols for locale jv_ID.
+     */
+    var ListFormatSymbols_jv_ID: any;
 
     /**
      * List formatting symbols for locale ka_GE.
@@ -1656,14 +1751,9 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_ki_KE: any;
 
     /**
-     * List formatting symbols for locale kk_Cyrl.
+     * List formatting symbols for locale kk_KZ.
      */
-    var ListFormatSymbols_kk_Cyrl: any;
-
-    /**
-     * List formatting symbols for locale kk_Cyrl_KZ.
-     */
-    var ListFormatSymbols_kk_Cyrl_KZ: any;
+    var ListFormatSymbols_kk_KZ: any;
 
     /**
      * List formatting symbols for locale kkj.
@@ -1731,14 +1821,9 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_ks: any;
 
     /**
-     * List formatting symbols for locale ks_Arab.
+     * List formatting symbols for locale ks_IN.
      */
-    var ListFormatSymbols_ks_Arab: any;
-
-    /**
-     * List formatting symbols for locale ks_Arab_IN.
-     */
-    var ListFormatSymbols_ks_Arab_IN: any;
+    var ListFormatSymbols_ks_IN: any;
 
     /**
      * List formatting symbols for locale ksb.
@@ -1771,6 +1856,16 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_ksh_DE: any;
 
     /**
+     * List formatting symbols for locale ku.
+     */
+    var ListFormatSymbols_ku: any;
+
+    /**
+     * List formatting symbols for locale ku_TR.
+     */
+    var ListFormatSymbols_ku_TR: any;
+
+    /**
      * List formatting symbols for locale kw.
      */
     var ListFormatSymbols_kw: any;
@@ -1781,14 +1876,9 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_kw_GB: any;
 
     /**
-     * List formatting symbols for locale ky_Cyrl.
+     * List formatting symbols for locale ky_KG.
      */
-    var ListFormatSymbols_ky_Cyrl: any;
-
-    /**
-     * List formatting symbols for locale ky_Cyrl_KG.
-     */
-    var ListFormatSymbols_ky_Cyrl_KG: any;
+    var ListFormatSymbols_ky_KG: any;
 
     /**
      * List formatting symbols for locale lag.
@@ -1854,6 +1944,21 @@ declare module goog.labs.i18n {
      * List formatting symbols for locale lo_LA.
      */
     var ListFormatSymbols_lo_LA: any;
+
+    /**
+     * List formatting symbols for locale lrc.
+     */
+    var ListFormatSymbols_lrc: any;
+
+    /**
+     * List formatting symbols for locale lrc_IQ.
+     */
+    var ListFormatSymbols_lrc_IQ: any;
+
+    /**
+     * List formatting symbols for locale lrc_IR.
+     */
+    var ListFormatSymbols_lrc_IR: any;
 
     /**
      * List formatting symbols for locale lt_LT.
@@ -1961,6 +2066,16 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_mgo_CM: any;
 
     /**
+     * List formatting symbols for locale mi.
+     */
+    var ListFormatSymbols_mi: any;
+
+    /**
+     * List formatting symbols for locale mi_NZ.
+     */
+    var ListFormatSymbols_mi_NZ: any;
+
+    /**
      * List formatting symbols for locale mk_MK.
      */
     var ListFormatSymbols_mk_MK: any;
@@ -1971,14 +2086,9 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_ml_IN: any;
 
     /**
-     * List formatting symbols for locale mn_Cyrl.
+     * List formatting symbols for locale mn_MN.
      */
-    var ListFormatSymbols_mn_Cyrl: any;
-
-    /**
-     * List formatting symbols for locale mn_Cyrl_MN.
-     */
-    var ListFormatSymbols_mn_Cyrl_MN: any;
+    var ListFormatSymbols_mn_MN: any;
 
     /**
      * List formatting symbols for locale mr_IN.
@@ -1986,24 +2096,19 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_mr_IN: any;
 
     /**
-     * List formatting symbols for locale ms_Latn.
+     * List formatting symbols for locale ms_BN.
      */
-    var ListFormatSymbols_ms_Latn: any;
+    var ListFormatSymbols_ms_BN: any;
 
     /**
-     * List formatting symbols for locale ms_Latn_BN.
+     * List formatting symbols for locale ms_MY.
      */
-    var ListFormatSymbols_ms_Latn_BN: any;
+    var ListFormatSymbols_ms_MY: any;
 
     /**
-     * List formatting symbols for locale ms_Latn_MY.
+     * List formatting symbols for locale ms_SG.
      */
-    var ListFormatSymbols_ms_Latn_MY: any;
-
-    /**
-     * List formatting symbols for locale ms_Latn_SG.
-     */
-    var ListFormatSymbols_ms_Latn_SG: any;
+    var ListFormatSymbols_ms_SG: any;
 
     /**
      * List formatting symbols for locale mt_MT.
@@ -2024,6 +2129,16 @@ declare module goog.labs.i18n {
      * List formatting symbols for locale my_MM.
      */
     var ListFormatSymbols_my_MM: any;
+
+    /**
+     * List formatting symbols for locale mzn.
+     */
+    var ListFormatSymbols_mzn: any;
+
+    /**
+     * List formatting symbols for locale mzn_IR.
+     */
+    var ListFormatSymbols_mzn_IR: any;
 
     /**
      * List formatting symbols for locale naq.
@@ -2054,6 +2169,21 @@ declare module goog.labs.i18n {
      * List formatting symbols for locale nd_ZW.
      */
     var ListFormatSymbols_nd_ZW: any;
+
+    /**
+     * List formatting symbols for locale nds.
+     */
+    var ListFormatSymbols_nds: any;
+
+    /**
+     * List formatting symbols for locale nds_DE.
+     */
+    var ListFormatSymbols_nds_DE: any;
+
+    /**
+     * List formatting symbols for locale nds_NL.
+     */
+    var ListFormatSymbols_nds_NL: any;
 
     /**
      * List formatting symbols for locale ne_IN.
@@ -2136,9 +2266,9 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_nus: any;
 
     /**
-     * List formatting symbols for locale nus_SD.
+     * List formatting symbols for locale nus_SS.
      */
-    var ListFormatSymbols_nus_SD: any;
+    var ListFormatSymbols_nus_SS: any;
 
     /**
      * List formatting symbols for locale nyn.
@@ -2226,14 +2356,29 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_pt_AO: any;
 
     /**
+     * List formatting symbols for locale pt_CH.
+     */
+    var ListFormatSymbols_pt_CH: any;
+
+    /**
      * List formatting symbols for locale pt_CV.
      */
     var ListFormatSymbols_pt_CV: any;
 
     /**
+     * List formatting symbols for locale pt_GQ.
+     */
+    var ListFormatSymbols_pt_GQ: any;
+
+    /**
      * List formatting symbols for locale pt_GW.
      */
     var ListFormatSymbols_pt_GW: any;
+
+    /**
+     * List formatting symbols for locale pt_LU.
+     */
+    var ListFormatSymbols_pt_LU: any;
 
     /**
      * List formatting symbols for locale pt_MO.
@@ -2394,6 +2539,16 @@ declare module goog.labs.i18n {
      * List formatting symbols for locale sbp_TZ.
      */
     var ListFormatSymbols_sbp_TZ: any;
+
+    /**
+     * List formatting symbols for locale sd.
+     */
+    var ListFormatSymbols_sd: any;
+
+    /**
+     * List formatting symbols for locale sd_PK.
+     */
+    var ListFormatSymbols_sd_PK: any;
 
     /**
      * List formatting symbols for locale se.
@@ -2571,11 +2726,6 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_sr_Cyrl_XK: any;
 
     /**
-     * List formatting symbols for locale sr_Latn.
-     */
-    var ListFormatSymbols_sr_Latn: any;
-
-    /**
      * List formatting symbols for locale sr_Latn_BA.
      */
     var ListFormatSymbols_sr_Latn_BA: any;
@@ -2611,6 +2761,11 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_sv_SE: any;
 
     /**
+     * List formatting symbols for locale sw_CD.
+     */
+    var ListFormatSymbols_sw_CD: any;
+
+    /**
      * List formatting symbols for locale sw_KE.
      */
     var ListFormatSymbols_sw_KE: any;
@@ -2624,16 +2779,6 @@ declare module goog.labs.i18n {
      * List formatting symbols for locale sw_UG.
      */
     var ListFormatSymbols_sw_UG: any;
-
-    /**
-     * List formatting symbols for locale swc.
-     */
-    var ListFormatSymbols_swc: any;
-
-    /**
-     * List formatting symbols for locale swc_CD.
-     */
-    var ListFormatSymbols_swc_CD: any;
 
     /**
      * List formatting symbols for locale ta_IN.
@@ -2676,6 +2821,16 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_teo_UG: any;
 
     /**
+     * List formatting symbols for locale tg.
+     */
+    var ListFormatSymbols_tg: any;
+
+    /**
+     * List formatting symbols for locale tg_TJ.
+     */
+    var ListFormatSymbols_tg_TJ: any;
+
+    /**
      * List formatting symbols for locale th_TH.
      */
     var ListFormatSymbols_th_TH: any;
@@ -2694,6 +2849,16 @@ declare module goog.labs.i18n {
      * List formatting symbols for locale ti_ET.
      */
     var ListFormatSymbols_ti_ET: any;
+
+    /**
+     * List formatting symbols for locale tk.
+     */
+    var ListFormatSymbols_tk: any;
+
+    /**
+     * List formatting symbols for locale tk_TM.
+     */
+    var ListFormatSymbols_tk_TM: any;
 
     /**
      * List formatting symbols for locale to.
@@ -2716,6 +2881,16 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_tr_TR: any;
 
     /**
+     * List formatting symbols for locale tt.
+     */
+    var ListFormatSymbols_tt: any;
+
+    /**
+     * List formatting symbols for locale tt_RU.
+     */
+    var ListFormatSymbols_tt_RU: any;
+
+    /**
      * List formatting symbols for locale twq.
      */
     var ListFormatSymbols_twq: any;
@@ -2731,14 +2906,9 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_tzm: any;
 
     /**
-     * List formatting symbols for locale tzm_Latn.
+     * List formatting symbols for locale tzm_MA.
      */
-    var ListFormatSymbols_tzm_Latn: any;
-
-    /**
-     * List formatting symbols for locale tzm_Latn_MA.
-     */
-    var ListFormatSymbols_tzm_Latn_MA: any;
+    var ListFormatSymbols_tzm_MA: any;
 
     /**
      * List formatting symbols for locale ug.
@@ -2746,14 +2916,9 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_ug: any;
 
     /**
-     * List formatting symbols for locale ug_Arab.
+     * List formatting symbols for locale ug_CN.
      */
-    var ListFormatSymbols_ug_Arab: any;
-
-    /**
-     * List formatting symbols for locale ug_Arab_CN.
-     */
-    var ListFormatSymbols_ug_Arab_CN: any;
+    var ListFormatSymbols_ug_CN: any;
 
     /**
      * List formatting symbols for locale uk_UA.
@@ -2851,6 +3016,26 @@ declare module goog.labs.i18n {
     var ListFormatSymbols_wae_CH: any;
 
     /**
+     * List formatting symbols for locale wo.
+     */
+    var ListFormatSymbols_wo: any;
+
+    /**
+     * List formatting symbols for locale wo_SN.
+     */
+    var ListFormatSymbols_wo_SN: any;
+
+    /**
+     * List formatting symbols for locale xh.
+     */
+    var ListFormatSymbols_xh: any;
+
+    /**
+     * List formatting symbols for locale xh_ZA.
+     */
+    var ListFormatSymbols_xh_ZA: any;
+
+    /**
      * List formatting symbols for locale xog.
      */
     var ListFormatSymbols_xog: any;
@@ -2894,6 +3079,31 @@ declare module goog.labs.i18n {
      * List formatting symbols for locale yo_NG.
      */
     var ListFormatSymbols_yo_NG: any;
+
+    /**
+     * List formatting symbols for locale yue.
+     */
+    var ListFormatSymbols_yue: any;
+
+    /**
+     * List formatting symbols for locale yue_Hans.
+     */
+    var ListFormatSymbols_yue_Hans: any;
+
+    /**
+     * List formatting symbols for locale yue_Hans_CN.
+     */
+    var ListFormatSymbols_yue_Hans_CN: any;
+
+    /**
+     * List formatting symbols for locale yue_Hant.
+     */
+    var ListFormatSymbols_yue_Hant: any;
+
+    /**
+     * List formatting symbols for locale yue_Hant_HK.
+     */
+    var ListFormatSymbols_yue_Hant_HK: any;
 
     /**
      * List formatting symbols for locale zgh.

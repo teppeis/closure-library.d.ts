@@ -17,24 +17,24 @@ declare module goog.string$ {
     /**
      * Fast prefix-checker.
      * @param {string} str The string to check.
-     * @param {string} prefix A string to look for at the start of {@code str}.
-     * @return {boolean} True if {@code str} begins with {@code prefix}.
+     * @param {string} prefix A string to look for at the start of `str`.
+     * @return {boolean} True if `str` begins with `prefix`.
      */
     function startsWith(str: string, prefix: string): boolean;
 
     /**
      * Fast suffix-checker.
      * @param {string} str The string to check.
-     * @param {string} suffix A string to look for at the end of {@code str}.
-     * @return {boolean} True if {@code str} ends with {@code suffix}.
+     * @param {string} suffix A string to look for at the end of `str`.
+     * @return {boolean} True if `str` ends with `suffix`.
      */
     function endsWith(str: string, suffix: string): boolean;
 
     /**
      * Case-insensitive prefix-checker.
      * @param {string} str The string to check.
-     * @param {string} prefix  A string to look for at the end of {@code str}.
-     * @return {boolean} True if {@code str} begins with {@code prefix} (ignoring
+     * @param {string} prefix  A string to look for at the end of `str`.
+     * @return {boolean} True if `str` begins with `prefix` (ignoring
      *     case).
      */
     function caseInsensitiveStartsWith(str: string, prefix: string): boolean;
@@ -42,8 +42,8 @@ declare module goog.string$ {
     /**
      * Case-insensitive suffix-checker.
      * @param {string} str The string to check.
-     * @param {string} suffix A string to look for at the end of {@code str}.
-     * @return {boolean} True if {@code str} ends with {@code suffix} (ignoring
+     * @param {string} suffix A string to look for at the end of `str`.
+     * @return {boolean} True if `str` ends with `suffix` (ignoring
      *     case).
      */
     function caseInsensitiveEndsWith(str: string, suffix: string): boolean;
@@ -52,7 +52,7 @@ declare module goog.string$ {
      * Case-insensitive equality checker.
      * @param {string} str1 First string to check.
      * @param {string} str2 Second string to check.
-     * @return {boolean} True if {@code str1} and {@code str2} are the same string,
+     * @return {boolean} True if `str1` and `str2` are the same string,
      *     ignoring case.
      */
     function caseInsensitiveEquals(str1: string, str2: string): boolean;
@@ -62,8 +62,8 @@ declare module goog.string$ {
      * subs("foo%s hot%s", "bar", "dog") becomes "foobar hotdog".
      * @param {string} str The string containing the pattern.
      * @param {...*} var_args The items to substitute into the pattern.
-     * @return {string} A copy of {@code str} in which each occurrence of
-     *     {@code %s} has been replaced an argument from {@code var_args}.
+     * @return {string} A copy of `str` in which each occurrence of
+     *     {@code %s} has been replaced an argument from `var_args`.
      */
     function subs(str: string, ...var_args: any[]): string;
 
@@ -71,39 +71,37 @@ declare module goog.string$ {
      * Converts multiple whitespace chars (spaces, non-breaking-spaces, new lines
      * and tabs) to a single space, and strips leading and trailing whitespace.
      * @param {string} str Input string.
-     * @return {string} A copy of {@code str} with collapsed whitespace.
+     * @return {string} A copy of `str` with collapsed whitespace.
      */
     function collapseWhitespace(str: string): string;
 
     /**
      * Checks if a string is empty or contains only whitespaces.
      * @param {string} str The string to check.
-     * @return {boolean} Whether {@code str} is empty or whitespace only.
+     * @return {boolean} Whether `str` is empty or whitespace only.
      */
     function isEmptyOrWhitespace(str: string): boolean;
 
     /**
      * Checks if a string is empty.
      * @param {string} str The string to check.
-     * @return {boolean} Whether {@code str} is empty.
+     * @return {boolean} Whether `str` is empty.
      */
     function isEmptyString(str: string): boolean;
 
     /**
      * Checks if a string is empty or contains only whitespaces.
      *
-     * TODO(user): Deprecate this when clients have been switched over to
-     * goog.string.isEmptyOrWhitespace.
-     *
      * @param {string} str The string to check.
-     * @return {boolean} Whether {@code str} is empty or whitespace only.
+     * @return {boolean} Whether `str` is empty or whitespace only.
+     * @deprecated Use goog.string.isEmptyOrWhitespace instead.
      */
     function isEmpty(str: string): boolean;
 
     /**
      * Checks if a string is null, undefined, empty or contains only whitespaces.
      * @param {*} str The string to check.
-     * @return {boolean} Whether {@code str} is null, undefined, empty, or
+     * @return {boolean} Whether `str` is null, undefined, empty, or
      *     whitespace only.
      * @deprecated Use goog.string.isEmptyOrWhitespace(goog.string.makeSafe(str))
      *     instead.
@@ -113,12 +111,10 @@ declare module goog.string$ {
     /**
      * Checks if a string is null, undefined, empty or contains only whitespaces.
      *
-     * TODO(user): Deprecate this when clients have been switched over to
-     * goog.string.isEmptyOrWhitespaceSafe.
-     *
      * @param {*} str The string to check.
-     * @return {boolean} Whether {@code str} is null, undefined, empty, or
+     * @return {boolean} Whether `str` is null, undefined, empty, or
      *     whitespace only.
+     * @deprecated Use goog.string.isEmptyOrWhitespace instead.
      */
     function isEmptySafe(str: any): boolean;
 
@@ -132,7 +128,7 @@ declare module goog.string$ {
     /**
      * Checks if a string contains all letters.
      * @param {string} str string to check.
-     * @return {boolean} True if {@code str} consists entirely of letters.
+     * @return {boolean} True if `str` consists entirely of letters.
      */
     function isAlpha(str: string): boolean;
 
@@ -140,28 +136,28 @@ declare module goog.string$ {
      * Checks if a string contains only numbers.
      * @param {*} str string to check. If not a string, it will be
      *     casted to one.
-     * @return {boolean} True if {@code str} is numeric.
+     * @return {boolean} True if `str` is numeric.
      */
     function isNumeric(str: any): boolean;
 
     /**
      * Checks if a string contains only numbers or letters.
      * @param {string} str string to check.
-     * @return {boolean} True if {@code str} is alphanumeric.
+     * @return {boolean} True if `str` is alphanumeric.
      */
     function isAlphaNumeric(str: string): boolean;
 
     /**
      * Checks if a character is a space character.
      * @param {string} ch Character to check.
-     * @return {boolean} True if {@code ch} is a space.
+     * @return {boolean} True if `ch` is a space.
      */
     function isSpace(ch: string): boolean;
 
     /**
      * Checks if a character is a valid unicode character.
      * @param {string} ch Character to check.
-     * @return {boolean} True if {@code ch} is a valid unicode character.
+     * @return {boolean} True if `ch` is a valid unicode character.
      */
     function isUnicodeChar(ch: string): boolean;
 
@@ -169,14 +165,14 @@ declare module goog.string$ {
      * Takes a string and replaces newlines with a space. Multiple lines are
      * replaced with a single space.
      * @param {string} str The string from which to strip newlines.
-     * @return {string} A copy of {@code str} stripped of newlines.
+     * @return {string} A copy of `str` stripped of newlines.
      */
     function stripNewlines(str: string): string;
 
     /**
      * Replaces Windows and Mac new lines with unix style: \r or \r\n with \n.
      * @param {string} str The string to in which to canonicalize newlines.
-     * @return {string} {@code str} A copy of {@code} with canonicalized newlines.
+     * @return {string} `str` A copy of {@code} with canonicalized newlines.
      */
     function canonicalizeNewlines(str: string): string;
 
@@ -184,7 +180,7 @@ declare module goog.string$ {
      * Normalizes whitespace in a string, replacing all whitespace chars with
      * a space.
      * @param {string} str The string in which to normalize whitespace.
-     * @return {string} A copy of {@code str} with all whitespace normalized.
+     * @return {string} A copy of `str` with all whitespace normalized.
      */
     function normalizeWhitespace(str: string): string;
 
@@ -192,7 +188,7 @@ declare module goog.string$ {
      * Normalizes spaces in a string, replacing all consecutive spaces and tabs
      * with a single space. Replaces non-breaking space with a space.
      * @param {string} str The string in which to normalize spaces.
-     * @return {string} A copy of {@code str} with all consecutive spaces and tabs
+     * @return {string} A copy of `str` with all consecutive spaces and tabs
      *    replaced with a single space.
      */
     function normalizeSpaces(str: string): string;
@@ -209,21 +205,21 @@ declare module goog.string$ {
     /**
      * Trims white spaces to the left and right of a string.
      * @param {string} str The string to trim.
-     * @return {string} A trimmed copy of {@code str}.
+     * @return {string} A trimmed copy of `str`.
      */
     function trim(str: string): string;
 
     /**
      * Trims whitespaces at the left end of a string.
      * @param {string} str The string to left trim.
-     * @return {string} A trimmed copy of {@code str}.
+     * @return {string} A trimmed copy of `str`.
      */
     function trimLeft(str: string): string;
 
     /**
      * Trims whitespaces at the right end of a string.
      * @param {string} str The string to right trim.
-     * @return {string} A trimmed copy of {@code str}.
+     * @return {string} A trimmed copy of `str`.
      */
     function trimRight(str: string): string;
 
@@ -234,33 +230,57 @@ declare module goog.string$ {
      *  1 = str1 greater than str2
      *
      * @param {string} str1 The string to compare.
-     * @param {string} str2 The string to compare {@code str1} to.
+     * @param {string} str2 The string to compare `str1` to.
      * @return {number} The comparator result, as described above.
      */
     function caseInsensitiveCompare(str1: string, str2: string): number;
 
     /**
-     * String comparison function that handles numbers in a way humans might expect.
-     * Using this function, the string "File 2.jpg" sorts before "File 10.jpg". The
-     * comparison is mostly case-insensitive, though strings that are identical
-     * except for case are sorted with the upper-case strings before lower-case.
+     * String comparison function that handles non-negative integer numbers in a
+     * way humans might expect. Using this function, the string 'File 2.jpg' sorts
+     * before 'File 10.jpg', and 'Version 1.9' before 'Version 1.10'. The comparison
+     * is mostly case-insensitive, though strings that are identical except for case
+     * are sorted with the upper-case strings before lower-case.
      *
-     * This comparison function is significantly slower (about 500x) than either
-     * the default or the case-insensitive compare. It should not be used in
-     * time-critical code, but should be fast enough to sort several hundred short
-     * strings (like filenames) with a reasonable delay.
+     * This comparison function is up to 50x slower than either the default or the
+     * case-insensitive compare. It should not be used in time-critical code, but
+     * should be fast enough to sort several hundred short strings (like filenames)
+     * with a reasonable delay.
      *
      * @param {string} str1 The string to compare in a numerically sensitive way.
-     * @param {string} str2 The string to compare {@code str1} to.
+     * @param {string} str2 The string to compare `str1` to.
      * @return {number} less than 0 if str1 < str2, 0 if str1 == str2, greater than
      *     0 if str1 > str2.
+     */
+    function intAwareCompare(str1: string, str2: string): number;
+
+    /**
+     * String comparison function that handles non-negative integer and fractional
+     * numbers in a way humans might expect. Using this function, the string
+     * 'File 2.jpg' sorts before 'File 10.jpg', and '3.14' before '3.2'. Equivalent
+     * to {@link goog.string.intAwareCompare} apart from the way how it interprets
+     * dots.
+     *
+     * @param {string} str1 The string to compare in a numerically sensitive way.
+     * @param {string} str2 The string to compare `str1` to.
+     * @return {number} less than 0 if str1 < str2, 0 if str1 == str2, greater than
+     *     0 if str1 > str2.
+     */
+    function floatAwareCompare(str1: string, str2: string): number;
+
+    /**
+     * Alias for {@link goog.string.floatAwareCompare}.
+     *
+     * @param {string} str1
+     * @param {string} str2
+     * @return {number}
      */
     function numerateCompare(str1: string, str2: string): number;
 
     /**
      * URL-encodes a string
      * @param {*} str The string to url-encode.
-     * @return {string} An encoded copy of {@code str} that is safe for urls.
+     * @return {string} An encoded copy of `str` that is safe for urls.
      *     Note that '#', ':', and other characters used to delimit portions
      *     of URLs *will* be encoded.
      */
@@ -270,7 +290,7 @@ declare module goog.string$ {
      * URL-decodes the string. We need to specially handle '+'s because
      * the javascript library doesn't convert them to spaces.
      * @param {string} str The string to url decode.
-     * @return {string} The decoded {@code str}.
+     * @return {string} The decoded `str`.
      */
     function urlDecode(str: string): string;
 
@@ -278,7 +298,7 @@ declare module goog.string$ {
      * Converts \n to <br>s or <br />s.
      * @param {string} str The string in which to convert newlines.
      * @param {boolean=} opt_xml Whether to use XML compatible tags.
-     * @return {string} A copy of {@code str} with converted newlines.
+     * @return {string} A copy of `str` with converted newlines.
      */
     function newLineToBr(str: string, opt_xml?: boolean): string;
 
@@ -324,7 +344,7 @@ declare module goog.string$ {
      *     if the character needs replacing - use this option if you expect each of
      *     the characters to appear often. Leave false if you expect few html
      *     characters to occur in your strings, such as if you are escaping HTML.
-     * @return {string} An escaped copy of {@code str}.
+     * @return {string} An escaped copy of `str`.
      */
     function htmlEscape(str: string, opt_isLikelyToContainHtmlChars?: boolean): string;
 
@@ -332,7 +352,7 @@ declare module goog.string$ {
      * Unescapes an HTML string.
      *
      * @param {string} str The string to unescape.
-     * @return {string} An unescaped copy of {@code str}.
+     * @return {string} An unescaped copy of `str`.
      */
     function unescapeEntities(str: string): string;
 
@@ -341,7 +361,7 @@ declare module goog.string$ {
      *
      * @param {string} str The string to unescape.
      * @param {!Document} document A document to use in escaping the string.
-     * @return {string} An unescaped copy of {@code str}.
+     * @return {string} An unescaped copy of `str`.
      */
     function unescapeEntitiesWithDocument(str: string, document: Document): string;
 
@@ -350,7 +370,7 @@ declare module goog.string$ {
      * entity #160 to make it safer for xml.
      * @param {string} str The string in which to escape whitespace.
      * @param {boolean=} opt_xml Whether to use XML compatible tags.
-     * @return {string} An escaped copy of {@code str}.
+     * @return {string} An escaped copy of `str`.
      */
     function whitespaceEscape(str: string, opt_xml?: boolean): string;
 
@@ -358,7 +378,7 @@ declare module goog.string$ {
      * Preserve spaces that would be otherwise collapsed in HTML by replacing them
      * with non-breaking space Unicode characters.
      * @param {string} str The string in which to preserve whitespace.
-     * @return {string} A copy of {@code str} with preserved whitespace.
+     * @return {string} A copy of `str` with preserved whitespace.
      */
     function preserveSpaces(str: string): string;
 
@@ -375,7 +395,7 @@ declare module goog.string$ {
      *
      * @param {string} str The string to strip.
      * @param {string} quoteChars The quote characters to strip.
-     * @return {string} A copy of {@code str} without the quotes.
+     * @return {string} A copy of `str` without the quotes.
      */
     function stripQuotes(str: string, quoteChars: string): string;
 
@@ -387,7 +407,7 @@ declare module goog.string$ {
      * @param {number} chars Max number of characters.
      * @param {boolean=} opt_protectEscapedCharacters Whether to protect escaped
      *     characters from being cut off in the middle.
-     * @return {string} The truncated {@code str} string.
+     * @return {string} The truncated `str` string.
      */
     function truncate(str: string, chars: number, opt_protectEscapedCharacters?: boolean): string;
 
@@ -401,22 +421,23 @@ declare module goog.string$ {
      * @param {number=} opt_trailingChars Optional number of trailing characters to
      *     leave at the end of the string, instead of truncating as close to the
      *     middle as possible.
-     * @return {string} A truncated copy of {@code str}.
+     * @return {string} A truncated copy of `str`.
      */
     function truncateMiddle(str: string, chars: number, opt_protectEscapedCharacters?: boolean, opt_trailingChars?: number): string;
 
     /**
      * Encloses a string in double quotes and escapes characters so that the
-     * string is a valid JS string.
+     * string is a valid JS string. The resulting string is safe to embed in
+     * `<script>` tags as "<" is escaped.
      * @param {string} s The string to quote.
-     * @return {string} A copy of {@code s} surrounded by double quotes.
+     * @return {string} A copy of `s` surrounded by double quotes.
      */
     function quote(s: string): string;
 
     /**
-     * Takes a string and returns the escaped string for that character.
+     * Takes a string and returns the escaped string for that input string.
      * @param {string} str The string to escape.
-     * @return {string} An escaped string representing {@code str}.
+     * @return {string} An escaped string representing `str`.
      */
     function escapeString(str: string): string;
 
@@ -424,7 +445,7 @@ declare module goog.string$ {
      * Takes a character and returns the escaped string for that character. For
      * example escapeChar(String.fromCharCode(15)) -> "\\x0E".
      * @param {string} c The character to escape.
-     * @return {string} An escaped string representing {@code c}.
+     * @return {string} An escaped string representing `c`.
      */
     function escapeChar(c: string): string;
 
@@ -432,7 +453,7 @@ declare module goog.string$ {
      * Determines whether a string contains a substring.
      * @param {string} str The string to search.
      * @param {string} subString The substring to search for.
-     * @return {boolean} Whether {@code str} contains {@code subString}.
+     * @return {boolean} Whether `str` contains `subString`.
      */
     function contains(str: string, subString: string): boolean;
 
@@ -440,7 +461,7 @@ declare module goog.string$ {
      * Determines whether a string contains a substring, ignoring case.
      * @param {string} str The string to search.
      * @param {string} subString The substring to search for.
-     * @return {boolean} Whether {@code str} contains {@code subString}.
+     * @return {boolean} Whether `str` contains `subString`.
      */
     function caseInsensitiveContains(str: string, subString: string): boolean;
 
@@ -459,34 +480,44 @@ declare module goog.string$ {
      * @param {string} s The base string from which to remove.
      * @param {number} index The index at which to remove the substring.
      * @param {number} stringLength The length of the substring to remove.
-     * @return {string} A copy of {@code s} with the substring removed or the full
+     * @return {string} A copy of `s` with the substring removed or the full
      *     string if nothing is removed or the input is invalid.
      */
     function removeAt(s: string, index: number, stringLength: number): string;
 
     /**
-     *  Removes the first occurrence of a substring from a string.
-     *  @param {string} s The base string from which to remove.
-     *  @param {string} ss The string to remove.
-     *  @return {string} A copy of {@code s} with {@code ss} removed or the full
-     *      string if nothing is removed.
+     * Removes the first occurrence of a substring from a string.
+     * @param {string} str The base string from which to remove.
+     * @param {string} substr The string to remove.
+     * @return {string} A copy of `str` with `substr` removed or the
+     *     full string if nothing is removed.
      */
-    function remove(s: string, ss: string): string;
+    function remove(str: string, substr: string): string;
 
     /**
      *  Removes all occurrences of a substring from a string.
      *  @param {string} s The base string from which to remove.
      *  @param {string} ss The string to remove.
-     *  @return {string} A copy of {@code s} with {@code ss} removed or the full
+     *  @return {string} A copy of `s` with `ss` removed or the full
      *      string if nothing is removed.
      */
     function removeAll(s: string, ss: string): string;
 
     /**
+     *  Replaces all occurrences of a substring of a string with a new substring.
+     *  @param {string} s The base string from which to remove.
+     *  @param {string} ss The string to replace.
+     *  @param {string} replacement The replacement string.
+     *  @return {string} A copy of `s` with `ss` replaced by
+     *      `replacement` or the original string if nothing is replaced.
+     */
+    function replaceAll(s: string, ss: string, replacement: string): string;
+
+    /**
      * Escapes characters in the string that are not safe to use in a RegExp.
      * @param {*} s The string to escape. If not a string, it will be casted
      *     to one.
-     * @return {string} A RegExp safe, escaped copy of {@code s}.
+     * @return {string} A RegExp safe, escaped copy of `s`.
      */
     function regExpEscape(s: any): string;
 
@@ -494,8 +525,8 @@ declare module goog.string$ {
      * Repeats a string n times.
      * @param {string} string The string to repeat.
      * @param {number} length The number of times to repeat.
-     * @return {string} A string containing {@code length} repetitions of
-     *     {@code string}.
+     * @return {string} A string containing `length` repetitions of
+     *     `string`.
      */
     function repeat(string: string, length: number): string;
 
@@ -510,7 +541,7 @@ declare module goog.string$ {
      * @param {number} num The number to pad.
      * @param {number} length The desired length.
      * @param {number=} opt_precision The desired precision.
-     * @return {string} {@code num} as a string with the given options.
+     * @return {string} `num` as a string with the given options.
      */
     function padNumber(num: number, length: number, opt_precision?: number): string;
 
@@ -519,7 +550,7 @@ declare module goog.string$ {
      * null and undefined being returned as the empty string.
      *
      * @param {*} obj The object to convert.
-     * @return {string} A string representation of the {@code obj}.
+     * @return {string} A string representation of the `obj`.
      */
     function makeSafe(obj: any): string;
 
@@ -535,14 +566,14 @@ declare module goog.string$ {
      * </pre>
      * @param {...*} var_args A list of strings to concatenate. If not a string,
      *     it will be casted to one.
-     * @return {string} The concatenation of {@code var_args}.
+     * @return {string} The concatenation of `var_args`.
      */
     function buildString(...var_args: any[]): string;
 
     /**
      * Returns a string with at least 64-bits of randomness.
      *
-     * Doesn't trust Javascript's random function entirely. Uses a combination of
+     * Doesn't trust JavaScript's random function entirely. Uses a combination of
      * random and current timestamp, and then encodes the string in base-36 to
      * make it shorter.
      *
@@ -556,9 +587,9 @@ declare module goog.string$ {
      * @param {string|number} version1 Version of first item.
      * @param {string|number} version2 Version of second item.
      *
-     * @return {number}  1 if {@code version1} is higher.
+     * @return {number}  1 if `version1` is higher.
      *                   0 if arguments are equal.
-     *                  -1 if {@code version2} is higher.
+     *                  -1 if `version2` is higher.
      */
     function compareVersions(version1: string|number, version2: string|number): number;
 
@@ -570,7 +601,7 @@ declare module goog.string$ {
      * the string. We mod the result to make it between 0 (inclusive) and 2^32
      * (exclusive).
      * @param {string} str A string.
-     * @return {number} Hash value for {@code str}, between 0 (inclusive) and 2^32
+     * @return {number} Hash value for `str`, between 0 (inclusive) and 2^32
      *  (exclusive). The empty string returns 0.
      */
     function hashCode(str: string): number;
@@ -587,7 +618,7 @@ declare module goog.string$ {
      * This function strips whitespace: (toNumber(' 123') === 123)
      * This function accepts scientific notation: (toNumber('1e1') === 10)
      *
-     * This is better than Javascript's built-in conversions because, sadly:
+     * This is better than JavaScript's built-in conversions because, sadly:
      *     (Number(' ') === 0) and (parseFloat('123a') === 123)
      *
      * @param {string} str The string to convert.
@@ -721,6 +752,21 @@ declare module goog.string$ {
      * @return {!Array<string>} The string, split.
      */
     function splitLimit(str: string, separator: string, limit: number): Array<string>;
+
+    /**
+     * Finds the characters to the right of the last instance of any separator
+     *
+     * This function is similar to goog.string.path.baseName, except it can take a
+     * list of characters to split the string on. It will return the rightmost
+     * grouping of characters to the right of any separator as a left-to-right
+     * oriented string.
+     *
+     * @see goog.string.path.baseName
+     * @param {string} str The string
+     * @param {string|!Array<string>} separators A list of separator characters
+     * @return {string} The last part of the string with respect to the separators
+     */
+    function lastComponent(str: string, separators: string|Array<string>): string;
 
     /**
      * Computes the Levenshtein edit distance between two strings.

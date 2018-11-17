@@ -64,10 +64,5 @@ declare module goog.editor {
          * @param {string} iframeableCss String containing the css rules to use.
          */
         setIframeableCss(iframeableCss: string): void;
-        
-        /**
-         * Applies CSS from the wrapper-div to the field iframe.
-         */
-        inheritBlendedCSS(): void;
     }
 }

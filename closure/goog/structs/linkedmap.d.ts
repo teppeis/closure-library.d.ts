@@ -32,11 +32,15 @@ declare module goog.structs {
      * @param {boolean=} opt_cache When set, the LinkedMap stores items in order
      *     from most recently used to least recently used, instead of insertion
      *     order.
+     * @param {function(string, VALUE)=} opt_evictionCallback Called with the
+     *     removed stringified key as the first argument and value as the second
+     *     argument after the key was evicted from the LRU because the max count
+     *     was reached.
      * @constructor
      * @template KEY, VALUE
      */
     class LinkedMap<KEY, VALUE> {
-        constructor(opt_maxCount?: number, opt_cache?: boolean);
+        constructor(opt_maxCount?: number, opt_cache?: boolean, opt_evictionCallback?: (arg0: string, arg1: VALUE) => any);
         
         /**
          * Retrieves the value for a given key. If this is a caching LinkedMap, the
@@ -101,15 +105,19 @@ declare module goog.structs {
         remove(key: string): boolean;
         
         /**
-         * Removes a node from the {@code LinkedMap}. It can be overridden to do
+         * Removes a node from the `LinkedMap`. It can be overridden to do
          * further cleanup such as disposing of the node value.
-         * @param {!goog.structs.LinkedMap.Node_.<string, VALUE>} node The node to remove.
+         * @param {!goog.structs.LinkedMap.Node_<string, VALUE>} node The node to
+         *     remove.
          * @protected
          */
         removeNode(node: goog.structs.LinkedMap.Node_<string, VALUE>): void;
         
         /**
-         * @return {number} The number of items currently in the LinkedMap.
+         * @return {number} The number of items currently in the LinkedMap. Sub classes
+         *     may override this to change how items are counted (e.g. to introduce
+         *     per item weight). Truncation will always proceed as long as the count
+         *     returned from this method is higher than the max count for this map.
          */
         getCount(): number;
         
@@ -117,6 +125,15 @@ declare module goog.structs {
          * @return {boolean} True if the cache is empty, false if it contains any items.
          */
         isEmpty(): boolean;
+        
+        /**
+         * Sets a callback that fires when an entry is evicted because max entry
+         * count is reached. The callback is called with the removed stringified key
+         * as the first argument and value as the second argument after the key was
+         * evicted from the LRU because the max count was reached.
+         * @param {function(string, VALUE)} evictionCallback
+         */
+        setEvictionCallback(evictionCallback: (arg0: string, arg1: VALUE) => any): void;
         
         /**
          * Sets the maximum number of entries allowed in this object, truncating any
@@ -162,7 +179,7 @@ declare module goog.structs {
          * Calls a function on each item in the LinkedMap.
          *
          * @see goog.structs.forEach
-         * @param {function(this:T, VALUE, KEY, goog.structs.LinkedMap<KEY,VALUE>)} f
+         * @param {function(this:T, VALUE, KEY, goog.structs.LinkedMap<KEY, VALUE>)} f
          * @param {T=} opt_obj The value of "this" inside f.
          * @template T
          */
@@ -174,7 +191,7 @@ declare module goog.structs {
          *
          * @see goog.structs.map
          * @param {function(this:T, VALUE, KEY,
-         *         goog.structs.LinkedMap<KEY,VALUE>): RESULT} f
+         *         goog.structs.LinkedMap<KEY, VALUE>): RESULT} f
          *     The function to call for each item. The function takes
          *     three arguments: the value, the key, and the LinkedMap.
          * @param {T=} opt_obj The object context to use as "this" for the
@@ -191,7 +208,7 @@ declare module goog.structs {
          *
          * @see goog.structs.some
          * @param {function(this:T, VALUE, KEY,
-         *         goog.structs.LinkedMap<KEY,VALUE>):boolean} f
+         *         goog.structs.LinkedMap<KEY, VALUE>):boolean} f
          *     The function to call for each item. The function takes
          *     three arguments: the value, the key, and the LinkedMap, and returns a
          *     boolean.
@@ -209,7 +226,7 @@ declare module goog.structs {
          *
          * @see goog.structs.some
          * @param {function(this:T, VALUE, KEY,
-         *         goog.structs.LinkedMap<KEY,VALUE>):boolean} f
+         *         goog.structs.LinkedMap<KEY, VALUE>):boolean} f
          *     The function to call for each item. The function takes
          *     three arguments: the value, the key, and the Cache, and returns a
          *     boolean.
@@ -236,13 +253,13 @@ declare module goog.structs.LinkedMap {
         
         /**
          * The next node in the list.
-         * @type {!goog.structs.LinkedMap.Node_.<KEY, VALUE>}
+         * @type {!goog.structs.LinkedMap.Node_<KEY, VALUE>}
          */
         next: goog.structs.LinkedMap.Node_<KEY, VALUE>;
         
         /**
          * The previous node in the list.
-         * @type {!goog.structs.LinkedMap.Node_.<KEY, VALUE>}
+         * @type {!goog.structs.LinkedMap.Node_<KEY, VALUE>}
          */
         prev: goog.structs.LinkedMap.Node_<KEY, VALUE>;
         

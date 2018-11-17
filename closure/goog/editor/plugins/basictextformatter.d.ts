@@ -52,6 +52,14 @@ declare module goog.editor.plugins {
          * @override
          */
         queryCommandValue(command: string): string|boolean|void;
+        
+        /**
+         * To avoid forcing the BidiPlugin code to be loaded create a simple interface
+         * for the method that is needed.
+         *
+         * @record
+         */
+        static IBidiPlugin(): void;
     }
 }
 
@@ -64,6 +72,7 @@ declare module goog.editor.plugins.BasicTextFormatter {
     type COMMAND = string;
     var COMMAND: {
         LINK: COMMAND;
+        CREATE_LINK: COMMAND;
         FORMAT_BLOCK: COMMAND;
         INDENT: COMMAND;
         OUTDENT: COMMAND;

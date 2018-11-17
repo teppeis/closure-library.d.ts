@@ -5,7 +5,7 @@ declare module goog {
 declare module goog.module {
 
     /**
-     * A class that loads Javascript modules.
+     * A class that loads JavaScript modules.
      * @constructor
      * @extends {goog.events.EventTarget}
      * @implements {goog.module.AbstractModuleLoader}
@@ -21,10 +21,13 @@ declare module goog.module {
         logger: goog.log.Logger;
         
         /**
+         * Events dispatched by the ModuleLoader.
+         * @const
+         */
+        static EventType: any;
+        
+        /**
          * @return {boolean} Whether sourceURL affects stack traces.
-         *     Chrome is currently the only browser that does this, but
-         *     we believe other browsers are working on this.
-         * @see http://bugzilla.mozilla.org/show_bug.cgi?id=583083
          */
         static supportsSourceUrlStackTraces(): boolean;
         
@@ -49,7 +52,7 @@ declare module goog.module {
          * When enabled, we will add a sourceURL comment to the end of all scripts
          * to mark their origin.
          *
-         * On WebKit, stack traces will refect the sourceURL comment, so this is
+         * On WebKit, stack traces will reflect the sourceURL comment, so this is
          * useful for debugging webkit stack traces in production.
          *
          * Notice that in debug mode, we will use source url injection + eval rather
@@ -72,24 +75,37 @@ declare module goog.module {
 declare module goog.module.ModuleLoader {
 
     /**
-     * @enum {string}
-     */
-    type EventType = string;
-    var EventType: {
-        EVALUATE_CODE: EventType;
-        REQUEST_SUCCESS: EventType;
-        REQUEST_ERROR: EventType;
-    };
-
-    /**
-     * @param {goog.module.ModuleLoader.EventType} type The type.
      * @param {Array<string>} moduleIds The ids of the modules being evaluated.
      * @constructor
      * @extends {goog.events.Event}
      * @final
+     * @protected
      */
-    class Event extends goog.events.Event {
-        constructor(type: goog.module.ModuleLoader.EventType, moduleIds: Array<string>);
+    class EvaluateCodeEvent extends goog.events.Event {
+        constructor(moduleIds: Array<string>);
+    }
+
+    /**
+     * @param {Array<string>} moduleIds The ids of the modules being evaluated.
+     * @constructor
+     * @extends {goog.events.Event}
+     * @final
+     * @protected
+     */
+    class RequestSuccessEvent extends goog.events.Event {
+        constructor(moduleIds: Array<string>);
+    }
+
+    /**
+     * @param {Array<string>} moduleIds The ids of the modules being evaluated.
+     * @param {!Error=} opt_error The error encountered, if available.
+     * @constructor
+     * @extends {goog.events.Event}
+     * @final
+     * @protected
+     */
+    class RequestErrorEvent extends goog.events.Event {
+        constructor(moduleIds: Array<string>, opt_error?: Error);
     }
 
     /**

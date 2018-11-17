@@ -19,14 +19,14 @@ declare module goog.labs.userAgent.util {
 
     /**
      * @param {string} str
-     * @return {boolean} Whether the user agent contains the given string, ignoring
-     *     case.
+     * @return {boolean} Whether the user agent contains the given string.
      */
     function matchUserAgent(str: string): boolean;
 
     /**
      * @param {string} str
-     * @return {boolean} Whether the user agent contains the given string.
+     * @return {boolean} Whether the user agent contains the given string, ignoring
+     *     case.
      */
     function matchUserAgentIgnoreCase(str: string): boolean;
 

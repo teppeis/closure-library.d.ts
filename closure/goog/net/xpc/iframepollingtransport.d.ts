@@ -62,7 +62,7 @@ declare module goog.net.xpc {
         /**
          * Sends a message. Splits it in multiple frames if too long (exceeds IE's
          * URL-length maximum.
-         * Wireformat: <seq>[,<frame_no>/<#frames>]|<frame_content>
+         * Wireformat: `<seq>[,<frame_no>/<#frames>]|<frame_content>`
          *
          * @param {string} service Name of service this the message has to be delivered.
          * @param {string} payload The message content.
@@ -80,7 +80,8 @@ declare module goog.net.xpc.IframePollingTransport {
      * Utility class to send message-parts to a document from a different origin.
      *
      * @constructor
-     * @param {string} url The url the other document will use for polling.
+     * @param {string} url The url the other document will use for polling. Must
+     *     be an http:// or https:// URL.
      * @param {Object} windowObj The frame used for sending information to.
      * @final
      */

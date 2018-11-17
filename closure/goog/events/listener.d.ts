@@ -6,7 +6,7 @@ declare module goog.events {
 
     /**
      * Simple class that stores information about a listener
-     * @param {!Function} listener Callback function.
+     * @param {function(?):?} listener Callback function.
      * @param {Function} proxy Wrapper for the listener that patches the event.
      * @param {EventTarget|goog.events.Listenable} src Source object for
      *     the event.
@@ -17,7 +17,7 @@ declare module goog.events {
      * @constructor
      */
     class Listener {
-        constructor(listener: Function, proxy: Function, src: goog.globalEventTarget|goog.events.Listenable, type: string, capture: boolean, opt_handler?: Object);
+        constructor(listener: (arg0: any) => any, proxy: Function, src: goog.globalEventTarget|goog.events.Listenable, type: string, capture: boolean, opt_handler?: Object);
         
         /**
          * If monitoring the goog.events.Listener instances is enabled, stores the

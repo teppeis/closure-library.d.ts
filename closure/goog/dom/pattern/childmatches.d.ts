@@ -19,19 +19,12 @@ declare module goog.dom.pattern {
         constructor(childPattern: goog.dom.pattern.AbstractPattern, opt_minimumMatches?: number);
         
         /**
-         * Array of matched child nodes.
-         *
-         * @type {Array<Node>}
-         */
-        matches: Array<Node>;
-        
-        /**
          * Test whether the given token is on the same level.
          *
          * @param {Node} token Token to match against.
          * @param {goog.dom.TagWalkType} type The type of token.
-         * @return {goog.dom.pattern.MatchType} {@code MATCHING} if the token is on the
-         *     same level or deeper and {@code BACKTRACK_MATCH} if not.
+         * @return {goog.dom.pattern.MatchType} `MATCHING` if the token is on the
+         *     same level or deeper and `BACKTRACK_MATCH` if not.
          * @override
          */
         matchToken(token: Node, type: goog.dom.TagWalkType): goog.dom.pattern.MatchType;

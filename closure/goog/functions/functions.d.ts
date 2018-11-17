@@ -5,30 +5,30 @@ declare module goog {
 declare module goog.functions {
 
     /**
-     * Always returns false.
-     * @type {function(...): boolean}
-     */
-    var FALSE: (...arg0: any[]) => boolean;
-
-    /**
-     * Always returns true.
-     * @type {function(...): boolean}
-     */
-    var TRUE: (...arg0: any[]) => boolean;
-
-    /**
-     * Always returns NULL.
-     * @type {function(...): null}
-     */
-    var NULL: (...arg0: any[]) => void;
-
-    /**
      * Creates a function that always returns the same value.
      * @param {T} retValue The value to return.
      * @return {function():T} The new function.
      * @template T
      */
     function constant<T>(retValue: T): () => T;
+
+    /**
+     * Always returns false.
+     * @type {function(...): boolean}
+     */
+    function FALSE(): void;
+
+    /**
+     * Always returns true.
+     * @type {function(...): boolean}
+     */
+    function TRUE(): void;
+
+    /**
+     * Always returns NULL.
+     * @type {function(...): null}
+     */
+    function NULL(): void;
 
     /**
      * A simple function that returns the first argument of whatever is passed
@@ -72,6 +72,23 @@ declare module goog.functions {
     function nth(n: number): Function;
 
     /**
+     * Like goog.partial(), except that arguments are added after arguments to the
+     * returned function.
+     *
+     * Usage:
+     * function f(arg1, arg2, arg3, arg4) { ... }
+     * var g = goog.functions.partialRight(f, arg3, arg4);
+     * g(arg1, arg2);
+     *
+     * @param {!Function} fn A function to partially apply.
+     * @param {...*} var_args Additional arguments that are partially applied to fn
+     *     at the end.
+     * @return {!Function} A partially-applied form of the function goog.partial()
+     *     was invoked as a method of.
+     */
+    function partialRight(fn: Function, ...var_args: any[]): Function;
+
+    /**
      * Given a function, create a new function that swallows its return value
      * and replaces it with a new one.
      * @param {Function} f A function.
@@ -82,7 +99,7 @@ declare module goog.functions {
     function withReturnValue<T>(f: Function, retValue: T): (...arg0: any[]) => T;
 
     /**
-     * Creates a function that returns whether its arguement equals the given value.
+     * Creates a function that returns whether its argument equals the given value.
      *
      * Example:
      * var key = goog.object.findKey(obj, goog.functions.equalTo('needle'));
@@ -154,7 +171,7 @@ declare module goog.functions {
      *
      * @param {function(new:T, ...)} constructor The constructor for the Object.
      * @param {...*} var_args The arguments to be passed to the constructor.
-     * @return {T} A new instance of the class given in {@code constructor}.
+     * @return {T} A new instance of the class given in `constructor`.
      * @template T
      */
     function create<T>(constructor: (...arg0: any[]) => any, ...var_args: any[]): T;
@@ -170,9 +187,82 @@ declare module goog.functions {
      *
      * To cache the return values of functions with parameters, see goog.memoize.
      *
-     * @param {!function():T} fn A function to lazily evaluate.
-     * @return {!function():T} A wrapped version the function.
+     * @param {function():T} fn A function to lazily evaluate.
+     * @return {function():T} A wrapped version the function.
      * @template T
      */
     function cacheReturnValue<T>(fn: () => T): () => T;
+
+    /**
+     * Wraps a function to allow it to be called, at most, once. All
+     * additional calls are no-ops.
+     *
+     * This is particularly useful for initialization functions
+     * that should be called, at most, once.
+     *
+     * @param {function():*} f Function to call.
+     * @return {function():undefined} Wrapped function.
+     */
+    function once(f: () => any): () => void;
+
+    /**
+     * Wraps a function to allow it to be called, at most, once per interval
+     * (specified in milliseconds). If the wrapper function is called N times within
+     * that interval, only the Nth call will go through.
+     *
+     * This is particularly useful for batching up repeated actions where the
+     * last action should win. This can be used, for example, for refreshing an
+     * autocomplete pop-up every so often rather than updating with every keystroke,
+     * since the final text typed by the user is the one that should produce the
+     * final autocomplete results. For more stateful debouncing with support for
+     * pausing, resuming, and canceling debounced actions, use
+     * `goog.async.Debouncer`.
+     *
+     * @param {function(this:SCOPE, ...?)} f Function to call.
+     * @param {number} interval Interval over which to debounce. The function will
+     *     only be called after the full interval has elapsed since the last call.
+     * @param {SCOPE=} opt_scope Object in whose scope to call the function.
+     * @return {function(...?): undefined} Wrapped function.
+     * @template SCOPE
+     */
+    function debounce<SCOPE>(f: (...arg0: any[]) => any, interval: number, opt_scope?: SCOPE): (...arg0: any[]) => void;
+
+    /**
+     * Wraps a function to allow it to be called, at most, once per interval
+     * (specified in milliseconds). If the wrapper function is called N times in
+     * that interval, both the 1st and the Nth calls will go through.
+     *
+     * This is particularly useful for limiting repeated user requests where the
+     * the last action should win, but you also don't want to wait until the end of
+     * the interval before sending a request out, as it leads to a perception of
+     * slowness for the user.
+     *
+     * @param {function(this:SCOPE, ...?)} f Function to call.
+     * @param {number} interval Interval over which to throttle. The function can
+     *     only be called once per interval.
+     * @param {SCOPE=} opt_scope Object in whose scope to call the function.
+     * @return {function(...?): undefined} Wrapped function.
+     * @template SCOPE
+     */
+    function throttle<SCOPE>(f: (...arg0: any[]) => any, interval: number, opt_scope?: SCOPE): (...arg0: any[]) => void;
+
+    /**
+     * Wraps a function to allow it to be called, at most, once per interval
+     * (specified in milliseconds). If the wrapper function is called N times within
+     * that interval, only the 1st call will go through.
+     *
+     * This is particularly useful for limiting repeated user requests where the
+     * first request is guaranteed to have all the data required to perform the
+     * final action, so there's no need to wait until the end of the interval before
+     * sending the request out.
+     *
+     * @param {function(this:SCOPE, ...?)} f Function to call.
+     * @param {number} interval Interval over which to rate-limit. The function will
+     *     only be called once per interval, and ignored for the remainer of the
+     *     interval.
+     * @param {SCOPE=} opt_scope Object in whose scope to call the function.
+     * @return {function(...?): undefined} Wrapped function.
+     * @template SCOPE
+     */
+    function rateLimit<SCOPE>(f: (...arg0: any[]) => any, interval: number, opt_scope?: SCOPE): (...arg0: any[]) => void;
 }

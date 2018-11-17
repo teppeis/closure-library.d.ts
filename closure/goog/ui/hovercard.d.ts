@@ -17,10 +17,10 @@ declare module goog.ui {
      * tag should have for that tag to trigger the hover card.  See example below.
      *
      * Hovercards can also be triggered manually by calling
-     * {@code triggerForElement}, shown without a delay by calling
-     * {@code showForElement}, or triggered over other elements by calling
-     * {@code attach}.  For the latter two cases, the application is responsible
-     * for calling {@code detach} when finished.
+     * `triggerForElement`, shown without a delay by calling
+     * `showForElement`, or triggered over other elements by calling
+     * `attach`.  For the latter two cases, the application is responsible
+     * for calling `detach` when finished.
      *
      * HoverCard objects fire a TRIGGER event when the mouse moves over an element
      * that can trigger a hovercard, and BEFORE_SHOW when the hovercard is

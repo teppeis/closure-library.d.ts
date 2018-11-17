@@ -74,6 +74,13 @@ declare module goog.math {
         expandToInclude(box: goog.math.Box): void;
         
         /**
+         * Expand this box to include the coordinate.
+         * @param {!goog.math.Coordinate} coord The coordinate to be included
+         *     inside the box.
+         */
+        expandToIncludeCoordinate(coord: goog.math.Coordinate): void;
+        
+        /**
          * Compares boxes for equality.
          * @param {goog.math.Box} a A Box.
          * @param {goog.math.Box} b A Box.
@@ -96,8 +103,8 @@ declare module goog.math {
          *
          * @param {goog.math.Box} box A Box.
          * @param {goog.math.Coordinate} coord A Coordinate.
-         * @return {number} The x position of {@code coord} relative to the nearest
-         *     side of {@code box}, or zero if {@code coord} is inside {@code box}.
+         * @return {number} The x position of `coord` relative to the nearest
+         *     side of `box`, or zero if `coord` is inside `box`.
          */
         static relativePositionX(box: goog.math.Box, coord: goog.math.Coordinate): number;
         
@@ -107,8 +114,8 @@ declare module goog.math {
          *
          * @param {goog.math.Box} box A Box.
          * @param {goog.math.Coordinate} coord A Coordinate.
-         * @return {number} The y position of {@code coord} relative to the nearest
-         *     side of {@code box}, or zero if {@code coord} is inside {@code box}.
+         * @return {number} The y position of `coord` relative to the nearest
+         *     side of `box`, or zero if `coord` is inside `box`.
          */
         static relativePositionY(box: goog.math.Box, coord: goog.math.Coordinate): number;
         
@@ -118,9 +125,9 @@ declare module goog.math {
          *
          * @param {goog.math.Box} box A Box.
          * @param {goog.math.Coordinate} coord A Coordinate.
-         * @return {number} The distance between {@code coord} and the nearest
-         *     corner/side of {@code box}, or zero if {@code coord} is inside
-         *     {@code box}.
+         * @return {number} The distance between `coord` and the nearest
+         *     corner/side of `box`, or zero if `coord` is inside
+         *     `box`.
          */
         static distance(box: goog.math.Box, coord: goog.math.Coordinate): number;
         
@@ -165,10 +172,10 @@ declare module goog.math {
         round(): goog.math.Box;
         
         /**
-         * Translates this box by the given offsets. If a {@code goog.math.Coordinate}
+         * Translates this box by the given offsets. If a `goog.math.Coordinate`
          * is given, then the left and right values are translated by the coordinate's
          * x value and the top and bottom values are translated by the coordinate's y
-         * value.  Otherwise, {@code tx} and {@code opt_ty} are used to translate the x
+         * value.  Otherwise, `tx` and `opt_ty` are used to translate the x
          * and y dimension values.
          *
          * @param {number|goog.math.Coordinate} tx The value to translate the x
@@ -180,8 +187,8 @@ declare module goog.math {
         
         /**
          * Scales this coordinate by the given scale factors. The x and y dimension
-         * values are scaled by {@code sx} and {@code opt_sy} respectively.
-         * If {@code opt_sy} is not given, then {@code sx} is used for both x and y.
+         * values are scaled by `sx` and `opt_sy` respectively.
+         * If `opt_sy` is not given, then `sx` is used for both x and y.
          *
          * @param {number} sx The scale factor to use for the x dimension.
          * @param {number=} opt_sy The scale factor to use for the y dimension.

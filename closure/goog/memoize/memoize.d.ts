@@ -25,7 +25,7 @@ declare module goog.memoize {
 
     /**
      * Clears the memoization cache on the given object.
-     * @param {Object} cacheOwner The owner of the cache. This is the {@code this}
+     * @param {Object} cacheOwner The owner of the cache. This is the `this`
      *     context of the memoized function.
      */
     function clearCache(cacheOwner: Object): void;
@@ -36,11 +36,11 @@ declare module goog.memoize {
      * support \x0B characters in the strings.
      * @param {number} functionUid Unique identifier of the function whose result
      *     is cached.
-     * @param {Object} args The arguments that the function to memoize is called
-     *     with. Note: it is an array-like object, because supports indexing and
-     *     has the length property.
+     * @param {?{length:number}} args The arguments that the function to memoize is
+     *     called with. Note: it is an array-like object, because it supports
+     *     indexing and has the length property.
      * @return {string} The list of arguments with type information concatenated
      *     with the functionUid argument, serialized as \x0B-separated string.
      */
-    function simpleSerializer(functionUid: number, args: Object): string;
+    function simpleSerializer(functionUid: number, args: {length: number}): string;
 }

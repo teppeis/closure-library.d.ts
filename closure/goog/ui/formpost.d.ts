@@ -24,6 +24,7 @@ declare module goog.ui {
          * @param {string=} opt_target An optional name of a window in which to open the
          *     URL. If not specified, uses the window for the DOM specified in the
          *     constructor.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         post(parameters: Object, opt_url?: string, opt_target?: string): void;
     }

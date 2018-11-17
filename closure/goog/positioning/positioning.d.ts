@@ -1,12 +1,25 @@
 declare module goog {
     function require(name: 'goog.positioning'): typeof goog.positioning;
-    function require(name: 'goog.positioning.Corner'): typeof goog.positioning.Corner;
     function require(name: 'goog.positioning.CornerBit'): typeof goog.positioning.CornerBit;
+    function require(name: 'goog.positioning.Corner'): typeof goog.positioning.Corner;
     function require(name: 'goog.positioning.Overflow'): typeof goog.positioning.Overflow;
     function require(name: 'goog.positioning.OverflowStatus'): typeof goog.positioning.OverflowStatus;
 }
 
 declare module goog.positioning {
+
+    /**
+     * Enum for bits in the {@see goog.positioning.Corner) bitmap.
+     *
+     * @enum {number}
+     */
+    type CornerBit = number;
+    var CornerBit: {
+        BOTTOM: CornerBit;
+        CENTER: CornerBit;
+        RIGHT: CornerBit;
+        FLIP_RTL: CornerBit;
+    };
 
     /**
      * Enum for representing an element corner for positioning the popup.
@@ -27,18 +40,8 @@ declare module goog.positioning {
         TOP_END: Corner;
         BOTTOM_START: Corner;
         BOTTOM_END: Corner;
-    };
-
-    /**
-     * Enum for bits in the {@see goog.positioning.Corner) bitmap.
-     *
-     * @enum {number}
-     */
-    type CornerBit = number;
-    var CornerBit: {
-        BOTTOM: CornerBit;
-        RIGHT: CornerBit;
-        FLIP_RTL: CornerBit;
+        TOP_CENTER: Corner;
+        BOTTOM_CENTER: Corner;
     };
 
     /**
@@ -77,23 +80,6 @@ declare module goog.positioning {
         FAILED_TOP: OverflowStatus;
         FAILED_BOTTOM: OverflowStatus;
         FAILED_OUTSIDE_VIEWPORT: OverflowStatus;
-        /**
-         * Shorthand to check if a status code contains any fail code.
-         * @type {number}
-         */
-        FAILED: number;
-
-        /**
-         * Shorthand to check if horizontal positioning failed.
-         * @type {number}
-         */
-        FAILED_HORIZONTAL: number;
-
-        /**
-         * Shorthand to check if vertical positioning failed.
-         * @type {number}
-         */
-        FAILED_VERTICAL: number;
     };
 
     /**
@@ -125,10 +111,10 @@ declare module goog.positioning {
      *     movableElement.
      * @param {goog.math.Box=} opt_viewport Box object describing the dimensions of
      *     the viewport. The viewport is specified relative to offsetParent of
-     *     {@code movableElement}. In other words, the viewport can be thought of as
+     *     `movableElement`. In other words, the viewport can be thought of as
      *     describing a "position: absolute" element contained in the offsetParent.
      *     It defaults to visible area of nearest scrollable ancestor of
-     *     {@code movableElement} (see {@code goog.style.getVisibleRectForElement}).
+     *     `movableElement` (see `goog.style.getVisibleRectForElement`).
      * @return {goog.positioning.OverflowStatus} Status bitmap,
      *     {@see goog.positioning.OverflowStatus}.
      */
@@ -139,7 +125,7 @@ declare module goog.positioning {
      * offsetParent. This value can be used to translate any x- and
      * y-offset relative to the page to an offset relative to the
      * offsetParent, which can then be used directly with as position
-     * coordinate for {@code positionWithCoordinate}.
+     * coordinate for `positionWithCoordinate`.
      * @param {!Element} movableElement The element to calculate.
      * @return {!goog.math.Coordinate} The page offset, may be (0, 0).
      */
@@ -226,4 +212,25 @@ declare module goog.positioning {
      *     vertically.
      */
     function flipCorner(corner: goog.positioning.Corner): goog.positioning.Corner;
+}
+
+declare module goog.positioning.OverflowStatus {
+
+    /**
+     * Shorthand to check if a status code contains any fail code.
+     * @type {number}
+     */
+    var FAILED: number;
+
+    /**
+     * Shorthand to check if horizontal positioning failed.
+     * @type {number}
+     */
+    var FAILED_HORIZONTAL: number;
+
+    /**
+     * Shorthand to check if vertical positioning failed.
+     * @type {number}
+     */
+    var FAILED_VERTICAL: number;
 }

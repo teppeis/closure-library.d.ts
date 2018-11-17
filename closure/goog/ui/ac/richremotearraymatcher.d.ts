@@ -8,11 +8,6 @@ declare module goog.ui.ac {
      * An array matcher that requests rich matches via ajax and converts them into
      * rich rows.
      *
-     * This class makes use of goog.html.legacyconversions and provides no
-     * HTML-type-safe alternative. As such, it is not compatible with
-     * code that sets goog.html.legacyconversions.ALLOW_LEGACY_CONVERSIONS to
-     * false.
-     *
      * @param {string} url The Uri which generates the auto complete matches.  The
      *     search term is passed to the server as the 'token' query param.
      * @param {boolean=} opt_noSimilar If true, request that the server does not do
@@ -33,6 +28,14 @@ declare module goog.ui.ac {
         setRowFilter(rowFilter: Function): void;
         
         /**
+         * Sets the function building the rows.
+         * @param {goog.ui.ac.RichRemoteArrayMatcher.RowBuilder} rowBuilder
+         *     A function(type, response) converting the type and the server response to
+         *     an object with two methods: render(node, token) and select(target).
+         */
+        setRowBuilder(rowBuilder: goog.ui.ac.RichRemoteArrayMatcher.RowBuilder): void;
+        
+        /**
          * Retrieve a set of matching rows from the server via ajax and convert them
          * into rich rows.
          * @param {string} token The text that should be matched; passed to the server
@@ -46,4 +49,15 @@ declare module goog.ui.ac {
          */
         requestMatchingRows(token: string, maxMatches: number, matchHandler: Function): void;
     }
+}
+
+declare module goog.ui.ac.RichRemoteArrayMatcher {
+
+    /**
+     * @typedef {function(string, *): {
+     *   render: (function(!Element, string)|undefined),
+     *   select: (function(!Element)|undefined)
+     * }}
+     */
+    type RowBuilder = (arg0: string, arg1: any) => {render: ((arg0: Element, arg1: string) => any)|void; select: ((arg0: Element) => any)|void};
 }

@@ -5,11 +5,12 @@ declare module goog {
 declare module goog.storage {
 
     /**
-     * Provides a storage with expirning keys.
+     * Provides a storage with expiring keys.
      *
      * @param {!goog.storage.mechanism.Mechanism} mechanism The underlying
      *     storage mechanism.
      * @constructor
+     * @struct
      * @extends {goog.storage.RichStorage}
      */
     class ExpiringStorage extends goog.storage.RichStorage {

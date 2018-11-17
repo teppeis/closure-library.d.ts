@@ -48,4 +48,12 @@ declare module goog.dom.fullscreen {
      * @return {boolean} Whether the document is full screen.
      */
     function isFullScreen(opt_domHelper?: goog.dom.DomHelper): boolean;
+
+    /**
+     * Get the root element in full screen mode.
+     * @param {!goog.dom.DomHelper=} opt_domHelper The DomHelper for the DOM being
+     *     queried. If not provided, use the current DOM.
+     * @return {?Element} The root element in full screen mode.
+     */
+    function getFullScreenElement(opt_domHelper?: goog.dom.DomHelper): Element;
 }

@@ -58,7 +58,8 @@ declare module goog.labs.format.csv {
      * @param {string} text The entire CSV text to be parsed.
      * @param {boolean=} opt_ignoreErrors Whether to ignore parsing errors and
      *      instead try to recover and keep going.
+     * @param {string=} opt_delimiter The delimiter to use. Defaults to ','
      * @return {!Array<!Array<string>>} The parsed CSV.
      */
-    function parse(text: string, opt_ignoreErrors?: boolean): Array<Array<string>>;
+    function parse(text: string, opt_ignoreErrors?: boolean, opt_delimiter?: string): Array<Array<string>>;
 }

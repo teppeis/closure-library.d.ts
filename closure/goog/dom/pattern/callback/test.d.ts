@@ -13,13 +13,6 @@ declare module goog.dom.pattern.callback {
         constructor();
         
         /**
-         * Whether or not the pattern matched.
-         *
-         * @type {boolean}
-         */
-        matched: boolean;
-        
-        /**
          * Get a bound callback function that is suitable as a callback for
          * {@link goog.dom.pattern.Matcher}.
          *

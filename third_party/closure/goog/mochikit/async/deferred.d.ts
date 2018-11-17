@@ -9,10 +9,10 @@ declare module goog.async {
     /**
      * A Deferred represents the result of an asynchronous operation. A Deferred
      * instance has no result when it is created, and is "fired" (given an initial
-     * result) by calling {@code callback} or {@code errback}.
+     * result) by calling `callback` or `errback`.
      *
      * Once fired, the result is passed through a sequence of callback functions
-     * registered with {@code addCallback} or {@code addErrback}. The functions may
+     * registered with `addCallback` or `addErrback`. The functions may
      * mutate the result before it is passed to the next function in the sequence.
      *
      * Callbacks and errbacks may be added at any time, including after the Deferred
@@ -23,25 +23,25 @@ declare module goog.async {
      *
      * If a Deferred operation is canceled, an optional user-provided cancellation
      * function is invoked which may perform any special cleanup, followed by firing
-     * the Deferred's errback sequence with a {@code CanceledError}. If the
+     * the Deferred's errback sequence with a `CanceledError`. If the
      * Deferred has already fired, cancellation is ignored.
      *
      * Deferreds may be templated to a specific type they produce using generics
      * with syntax such as:
-     * <code>
-     *   /** @type {goog.async.Deferred<string>} *&#47;
-     *   var d = new goog.async.Deferred();
-     *   // Compiler can infer that foo is a string.
-     *   d.addCallback(function(foo) {...});
-     *   d.callback('string');  // Checked to be passed a string
-     * </code>
+     *
+     *    /** @type {goog.async.Deferred<string>} *\
+     *    var d = new goog.async.Deferred();
+     *    // Compiler can infer that foo is a string.
+     *    d.addCallback(function(foo) {...});
+     *    d.callback('string');  // Checked to be passed a string
+     *
      * Since deferreds are often used to produce different values across a chain,
      * the type information is not propagated across chains, but rather only
      * associated with specifically cast objects.
      *
      * @param {Function=} opt_onCancelFunction A function that will be called if the
      *     Deferred is canceled. If provided, this function runs before the
-     *     Deferred is fired with a {@code CanceledError}.
+     *     Deferred is fired with a `CanceledError`.
      * @param {Object=} opt_defaultScope The default object context to call
      *     callbacks and errbacks in.
      * @constructor
@@ -96,7 +96,7 @@ declare module goog.async {
          * until that Deferred fires. Its result will be passed to the next callback (or
          * errback if it is an error result) in this Deferred's execution sequence.
          *
-         * @param {!function(this:T,VALUE):?} cb The function to be called with a
+         * @param {function(this:T,VALUE):?} cb The function to be called with a
          *     successful result.
          * @param {T=} opt_scope An optional scope to call the callback in.
          * @return {!goog.async.Deferred} This Deferred.
@@ -117,7 +117,7 @@ declare module goog.async {
          * until that Deferred fires. Its result will be passed to the next callback (or
          * errback if it is an error result) in this Deferred's execution sequence.
          *
-         * @param {!function(this:T,?):?} eb The function to be called on an
+         * @param {function(this:T,?):?} eb The function to be called on an
          *     unsuccessful result.
          * @param {T=} opt_scope An optional scope to call the errback in.
          * @return {!goog.async.Deferred<VALUE>} This Deferred.
@@ -128,7 +128,7 @@ declare module goog.async {
         /**
          * Registers one function as both a callback and errback.
          *
-         * @param {!function(this:T,?):?} f The function to be called on any result.
+         * @param {function(this:T,?):?} f The function to be called on any result.
          * @param {T=} opt_scope An optional scope to call the function in.
          * @return {!goog.async.Deferred} This Deferred.
          * @template T
@@ -138,9 +138,9 @@ declare module goog.async {
         /**
          * Like addBoth, but propagates uncaught exceptions in the errback.
          *
-         * @param {!function(this:T,?):?} f The function to be called on any result.
+         * @param {function(this:T,?):?} f The function to be called on any result.
          * @param {T=} opt_scope An optional scope to call the function in.
-         * @return {!goog.async.Deferred.<VALUE>} This Deferred.
+         * @return {!goog.async.Deferred<VALUE>} This Deferred.
          * @template T
          */
         addFinally<T>(f: (arg0: any) => any, opt_scope?: T): goog.async.Deferred<VALUE>;
@@ -153,15 +153,15 @@ declare module goog.async {
          * NOTE: This is not equivalent to {@code def.addCallback().addErrback()}! If
          * the callback is invoked, the errback will be skipped, and vice versa.
          *
-         * @param {(function(this:T,VALUE):?)|null} cb The function to be called on a
+         * @param {?(function(this:T,VALUE):?)} cb The function to be called on a
          *     successful result.
-         * @param {(function(this:T,?):?)|null} eb The function to be called on an
+         * @param {?(function(this:T,?):?)} eb The function to be called on an
          *     unsuccessful result.
          * @param {T=} opt_scope An optional scope to call the functions in.
          * @return {!goog.async.Deferred} This Deferred.
          * @template T
          */
-        addCallbacks<T>(cb: ((arg0: VALUE) => any)|void, eb: ((arg0: any) => any)|void, opt_scope?: T): goog.async.Deferred<any>;
+        addCallbacks<T>(cb: ((arg0: VALUE) => any), eb: ((arg0: any) => any), opt_scope?: T): goog.async.Deferred<any>;
         
         /**
          * Links another Deferred to the end of this Deferred's execution sequence. The
@@ -177,9 +177,9 @@ declare module goog.async {
          * Makes this Deferred wait for another Deferred's execution sequence to
          * complete before continuing.
          *
-         * This is equivalent to adding a callback that returns {@code otherDeferred},
+         * This is equivalent to adding a callback that returns `otherDeferred`,
          * but doesn't prevent additional callbacks from being added to
-         * {@code otherDeferred}.
+         * `otherDeferred`.
          *
          * @param {!goog.async.Deferred|!goog.Thenable} otherDeferred The Deferred
          *     to wait for.
@@ -206,7 +206,7 @@ declare module goog.async {
         
         /**
          * @return {boolean} Whether the execution sequence has been started on this
-         *     Deferred by invoking {@code callback} or {@code errback}.
+         *     Deferred by invoking `callback` or `errback`.
          */
         hasFired(): boolean;
         
@@ -231,11 +231,16 @@ declare module goog.async {
          * Creates a Deferred that fires when the given promise resolves.
          * Use only during migration to Promises.
          *
-         * @param {!goog.Promise<T>} promise
+         * Note: If the promise resolves to a thenable value (which is not allowed by
+         * conforming promise implementations), then the deferred may behave
+         * unexpectedly as it tries to wait on it. This should not be a risk when using
+         * goog.Promise, goog.async.Deferred, or native Promise objects.
+         *
+         * @param {!IThenable<T>} promise
          * @return {!goog.async.Deferred<T>} The new Deferred.
          * @template T
          */
-        static fromPromise<T>(promise: goog.Promise<T, any>): goog.async.Deferred<T>;
+        static fromPromise<T>(promise: IThenable<T>): goog.async.Deferred<T>;
         
         /**
          * Creates a Deferred that has an initial error result.
@@ -278,7 +283,7 @@ declare module goog.async {
          * </pre>
          *
          * @param {*} value Deferred or normal value to pass to the callback.
-         * @param {!function(this:T, ?):?} callback The callback to execute.
+         * @param {function(this:T, ?):?} callback The callback to execute.
          * @param {T=} opt_scope An optional scope to call the callback in.
          * @return {!goog.async.Deferred} A new Deferred that will call the input
          *     callback with the input value.

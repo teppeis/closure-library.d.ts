@@ -1,7 +1,19 @@
 declare module goog {
 
     /**
+     * Types of modules the debug loader can load.
+     * @enum {string}
+     */
+    type ModuleType = string;
+    var ModuleType: {
+        ES6: ModuleType;
+        GOOG: ModuleType;
+    };
+
+    /**
      * Reference to the global context.  In most cases this will be 'window'.
+     * @const
+     * @suppress {newCheckTypes}
      */
     var global: any;
 
@@ -12,10 +24,16 @@ declare module goog {
     var basePath: string;
 
     /**
-     * True if goog.dependencies_ is available.
+     * True if the debug loader enabled and used.
      * @const {boolean}
      */
     var DEPENDENCIES_ENABLED: any;
+
+    /**
+     * @package {?boolean}
+     * Visible for testing.
+     */
+    var hasBadLetScoping: any;
 
     /**
      * Name for unsealable tag property.
@@ -25,13 +43,32 @@ declare module goog {
 
     /**
      * Returns true if the specified value is not undefined.
-     * WARNING: Do not use this to test if an object has a property. Use the in
-     * operator instead.
      *
      * @param {?} val Variable to test.
      * @return {boolean} Whether variable is defined.
      */
     function isDef(val: any): boolean;
+
+    /**
+     * Returns true if the specified value is a string.
+     * @param {?} val Variable to test.
+     * @return {boolean} Whether variable is a string.
+     */
+    function isString(val: any): boolean;
+
+    /**
+     * Returns true if the specified value is a boolean.
+     * @param {?} val Variable to test.
+     * @return {boolean} Whether variable is boolean.
+     */
+    function isBoolean(val: any): boolean;
+
+    /**
+     * Returns true if the specified value is a number.
+     * @param {?} val Variable to test.
+     * @return {boolean} Whether variable is a number.
+     */
+    function isNumber(val: any): boolean;
 
     /**
      * Defines a named value. In uncompiled mode, the value is retrieved from
@@ -70,6 +107,14 @@ declare module goog {
     function provide(name: string): void;
 
     /**
+     * Returns CSP nonce, if set for any script tag.
+     * @param {?Window=} opt_window The window context used to retrieve the nonce.
+     *     Defaults to global context.
+     * @return {string} CSP nonce or empty string if no nonce is present.
+     */
+    function getScriptNonce(opt_window?: Window): string;
+
+    /**
      * Defines a module in Closure.
      *
      * Marks that this file must be loaded as a module and claims the namespace.
@@ -98,8 +143,22 @@ declare module goog {
      *
      * @param {string} name Namespace provided by this file in the form
      *     "goog.package.part", is expected but not required.
+     * @return {void}
      */
     function module(name: string): void;
+
+    /**
+     * Associates an ES6 module with a Closure module ID so that is available via
+     * goog.require. The associated ID  acts like a goog.module ID - it does not
+     * create any global names, it is merely available via goog.require /
+     * goog.module.get / goog.forwardDeclare / goog.requireType. goog.require and
+     * goog.module.get will return the entire module as if it was import *'d. This
+     * allows Closure files to reference ES6 modules for the sake of migration.
+     *
+     * @param {string} namespace
+     * @suppress {missingProvide}
+     */
+    function declareModuleId(namespace: string): void;
 
     /**
      * Marks that the current file should only be used for testing, and never for
@@ -126,6 +185,9 @@ declare module goog {
      * into the JavaScript binary. If it is required elsewhere, it will be type
      * checked as normal.
      *
+     * Before using goog.forwardDeclare, please read the documentation at
+     * https://github.com/google/closure-compiler/wiki/Bad-Type-Annotation to
+     * understand the options and tradeoffs when working with forward declarations.
      *
      * @param {string} name The namespace to forward declare in the form of
      *     "goog.package.part".
@@ -162,22 +224,45 @@ declare module goog {
      *     the names of the objects this file provides.
      * @param {!Array<string>} requires An array of strings with
      *     the names of the objects this file requires.
-     * @param {boolean=} opt_isModule Whether this dependency must be loaded as
-     *     a module as declared by goog.module.
+     * @param {boolean|!Object<string>=} opt_loadFlags Parameters indicating
+     *     how the file must be loaded.  The boolean 'true' is equivalent
+     *     to {'module': 'goog'} for backwards-compatibility.  Valid properties
+     *     and values include {'module': 'goog'} and {'lang': 'es6'}.
      */
-    function addDependency(relPath: string, provides: Array<string>, requires: Array<string>, opt_isModule?: boolean): void;
+    function addDependency(relPath: string, provides: Array<string>, requires: Array<string>, opt_loadFlags?: boolean|{[index: string]: string}): void;
 
     /**
      * Implements a system for the dynamic resolution of dependencies that works in
-     * parallel with the BUILD system. Note that all calls to goog.require will be
-     * stripped by the JSCompiler when the --closure_pass option is used.
+     * parallel with the BUILD system.
+     *
+     * Note that all calls to goog.require will be stripped by the compiler.
+     *
      * @see goog.provide
-     * @param {string} name Namespace to include (as was given in goog.provide()) in
-     *     the form "goog.package.part".
-     * @return {?} If called within a goog.module file, the associated namespace or
-     *     module otherwise null.
+     * @param {string} namespace Namespace (as was given in goog.provide,
+     *     goog.module, or goog.declareModuleId) in the form
+     *     "goog.package.part".
+     * @return {?} If called within a goog.module or ES6 module file, the associated
+     *     namespace or module otherwise null.
      */
-    function require(name: string): any;
+    function require(namespace: string): any;
+
+    /**
+     * Requires a symbol for its type information. This is an indication to the
+     * compiler that the symbol may appear in type annotations, yet it is not
+     * referenced at runtime.
+     *
+     * When called within a goog.module or ES6 module file, the return value may be
+     * assigned to or destructured into a variable, but it may not be otherwise used
+     * in code outside of a type annotation.
+     *
+     * Note that all calls to goog.requireType will be stripped by the compiler.
+     *
+     * @param {string} namespace Namespace (as was given in goog.provide,
+     *     goog.module, or goog.declareModuleId) in the form
+     *     "goog.package.part".
+     * @return {?}
+     */
+    function requireType(namespace: string): any;
 
     /**
      * Null function used for default values of callbacks, etc.
@@ -186,25 +271,11 @@ declare module goog {
     function nullFunction(): void;
 
     /**
-     * The identity function. Returns its first argument.
-     *
-     * @param {*=} opt_returnValue The single value that will be returned.
-     * @param {...*} var_args Optional trailing arguments. These are ignored.
-     * @return {?} The first argument. We can't know the type -- just pass it along
-     *      without type.
-     * @deprecated Use goog.functions.identity instead.
-     */
-    function identityFunction(opt_returnValue?: any, ...var_args: any[]): any;
-
-    /**
      * When defining a class Foo with an abstract method bar(), you can do:
      * Foo.prototype.bar = goog.abstractMethod
      *
      * Now if a subclass of Foo fails to override bar(), an error will be thrown
      * when bar() is invoked.
-     *
-     * Note: This does not take the name of the function to override as an argument
-     * because that would make it more difficult to obfuscate our JavaScript code.
      *
      * @type {!Function}
      * @throws {Error} when invoked to indicate the method should be overridden.
@@ -212,17 +283,37 @@ declare module goog {
     function abstractMethod(): void;
 
     /**
-     * Adds a {@code getInstance} static method that always returns the same
+     * Adds a `getInstance` static method that always returns the same
      * instance object.
      * @param {!Function} ctor The constructor for the class to add the static
      *     method to.
+     * @suppress {missingProperties} 'instance_' isn't a property on 'Function'
+     *     but we don't have a better type to use here.
      */
     function addSingletonGetter(ctor: Function): void;
 
     /**
+     * @return {boolean}
+     * @package Visible for testing.
+     */
+    function useSafari10Workaround(): boolean;
+
+    /**
+     * @param {string} moduleDef
+     * @return {string}
+     * @package Visible for testing.
+     */
+    function workaroundSafari10EvalBug(moduleDef: string): string;
+
+    /**
+     * @param {function(?):?|string} moduleDef The module definition.
+     */
+    function loadModule(moduleDef: ((arg0: any) => any)|string): void;
+
+    /**
      * This is a "fixed" version of the typeof operator.  It differs from the typeof
      * operator in such a way that null returns 'null' and arrays return 'array'.
-     * @param {*} value The value to get the type of.
+     * @param {?} value The value to get the type of.
      * @return {string} The name of the type.
      */
     function typeOf(value: any): string;
@@ -251,8 +342,9 @@ declare module goog {
     /**
      * Returns true if the object looks like an array. To qualify as array like
      * the value needs to be either a NodeList or an object with a Number length
-     * property. As a special case, a function value is not array like, because its
-     * length property is fixed to correspond to the number of expected arguments.
+     * property. Note that for this function neither strings nor functions are
+     * considered "array-like".
+     *
      * @param {?} val Variable to test.
      * @return {boolean} Whether variable is an array.
      */
@@ -265,27 +357,6 @@ declare module goog {
      * @return {boolean} Whether variable is a like a Date.
      */
     function isDateLike(val: any): boolean;
-
-    /**
-     * Returns true if the specified value is a string.
-     * @param {?} val Variable to test.
-     * @return {boolean} Whether variable is a string.
-     */
-    function isString(val: any): boolean;
-
-    /**
-     * Returns true if the specified value is a boolean.
-     * @param {?} val Variable to test.
-     * @return {boolean} Whether variable is boolean.
-     */
-    function isBoolean(val: any): boolean;
-
-    /**
-     * Returns true if the specified value is a number.
-     * @param {?} val Variable to test.
-     * @return {boolean} Whether variable is a number.
-     */
-    function isNumber(val: any): boolean;
 
     /**
      * Returns true if the specified value is a function.
@@ -306,7 +377,7 @@ declare module goog {
      * Gets a unique ID for an object. This mutates the object so that further calls
      * with the same object as a parameter returns the same value. The unique ID is
      * guaranteed to be unique across the current session amongst objects that are
-     * passed into {@code getUid}. There is no guarantee that the ID is unique or
+     * passed into `getUid`. There is no guarantee that the ID is unique or
      * consistent across sessions. It is unsafe to generate unique ID for function
      * prototypes.
      *
@@ -327,7 +398,7 @@ declare module goog {
 
     /**
      * Removes the unique ID from an object. This is useful if the object was
-     * previously mutated using {@code goog.getUid} in which case the mutation is
+     * previously mutated using `goog.getUid` in which case the mutation is
      * undone.
      * @param {Object} obj The object to remove the unique ID field from.
      */
@@ -377,7 +448,7 @@ declare module goog {
      * Also see: {@link #partial}.
      *
      * Usage:
-     * <pre>var barMethBound = bind(myFunction, myObj, 'arg1', 'arg2');
+     * <pre>var barMethBound = goog.bind(myFunction, myObj, 'arg1', 'arg2');
      * barMethBound('arg3', 'arg4');</pre>
      *
      * @param {?function(this:T, ...)} fn A function to partially apply.
@@ -385,7 +456,7 @@ declare module goog {
      *     function is run.
      * @param {...*} var_args Additional arguments that are partially applied to the
      *     function.
-     * @return {!Function} A partially-applied form of the function bind() was
+     * @return {!Function} A partially-applied form of the function goog.bind() was
      *     invoked as a method of.
      * @template T
      * @suppress {deprecated} See above.
@@ -393,17 +464,17 @@ declare module goog {
     function bind<T>(fn: (...arg0: any[]) => any, selfObj: T, ...var_args: any[]): Function;
 
     /**
-     * Like bind(), except that a 'this object' is not required. Useful when the
-     * target function is already bound.
+     * Like goog.bind(), except that a 'this object' is not required. Useful when
+     * the target function is already bound.
      *
      * Usage:
-     * var g = partial(f, arg1, arg2);
+     * var g = goog.partial(f, arg1, arg2);
      * g(arg3, arg4);
      *
      * @param {Function} fn A function to partially apply.
      * @param {...*} var_args Additional arguments that are partially applied to fn.
-     * @return {!Function} A partially-applied form of the function bind() was
-     *     invoked as a method of.
+     * @return {!Function} A partially-applied form of the function goog.partial()
+     *     was invoked as a method of.
      */
     function partial(fn: Function, ...var_args: any[]): Function;
 
@@ -450,7 +521,7 @@ declare module goog {
      *     var x = goog.getCssName('foo');
      *     var y = goog.getCssName(this.baseClass, 'active');
      *  becomes:
-     *     var x= 'foo';
+     *     var x = 'foo';
      *     var y = this.baseClass + '-active';
      *
      * If one argument is passed it will be processed, if two are passed only the
@@ -478,7 +549,7 @@ declare module goog {
      * </pre>
      * When declared as a map of string literals to string literals, the JSCompiler
      * will replace all calls to goog.getCssName() using the supplied map if the
-     * --closure_pass flag is set.
+     * --process_closure_primitives flag is set.
      *
      * @param {!Object} mapping A map of strings to strings where keys are possible
      *     arguments to goog.getCssName() and values are the corresponding values
@@ -500,6 +571,10 @@ declare module goog {
      * <code>
      * var MSG_NAME = goog.getMsg('Hello {$placeholder}', {'placeholder': 'world'});
      * </code>
+     *
+     * This function produces a string which should be treated as plain text. Use
+     * {@link goog.html.SafeHtmlFormatter} in conjunction with goog.getMsg to
+     * produce SafeHtml.
      *
      * @param {string} str Translatable string, places holders in the form {$foo}.
      * @param {Object<string, string>=} opt_values Maps place holder name to value.
@@ -574,8 +649,10 @@ declare module goog {
      * child.foo(); // This works.
      * </pre>
      *
-     * @param {Function} childCtor Child class.
-     * @param {Function} parentCtor Parent class.
+     * @param {!Function} childCtor Child class.
+     * @param {!Function} parentCtor Parent class.
+     * @suppress {strictMissingProperties} superClass_ and base is not defined on
+     *    Function.
      */
     function inherits(childCtor: Function, parentCtor: Function): void;
 
@@ -603,6 +680,9 @@ declare module goog {
      * @return {*} The return value of the superclass method.
      * @suppress {es5Strict} This method can not be used in strict mode, but
      *     all Closure Library consumers must depend on this file.
+     * @deprecated goog.base is not strict mode compatible.  Prefer the static
+     *     "base" method added to the constructor by goog.inherits
+     *     or ES6 classes and the "super" keyword.
      */
     function base(me: Object, opt_methodName?: any, ...var_args: any[]): any;
 
@@ -644,7 +724,7 @@ declare module goog {
 
     /**
      * Sealing classes breaks the older idiom of assigning properties on the
-     * prototype rather than in the constructor.  As such, goog.defineClass
+     * prototype rather than in the constructor. As such, goog.defineClass
      * must not seal subclasses of these old-style classes until they are fixed.
      * Until then, this marks a class as "broken", instructing defineClass
      * not to seal subclasses.
@@ -654,6 +734,15 @@ declare module goog {
 }
 
 declare module goog.module {
+
+    /**
+     * Deprecated old name for goog.declareModuleId. This function is being renamed
+     * to help disambiguate with goog.module.declareLegacyNamespace.
+     *
+     * @type {function(string): undefined}
+     * @suppress {missingProvide}
+     */
+    var declareNamespace: (arg0: string) => void;
 
     /**
      * @param {string} name The module identifier.
@@ -668,18 +757,6 @@ declare module goog.module {
     function get(name: string): any;
 
     /**
-     * Indicate that a module's exports that are known test methods should
-     * be copied to the global object.  This makes the test methods visible to
-     * test runners that inspect the global object.
-     *
-     * TODO(johnlenz): Make the test framework aware of goog.module so
-     * that this isn't necessary. Alternately combine this with goog.setTestOnly
-     * to minimize boiler plate.
-     * @suppress {missingProvide}
-     */
-    function declareTestMethods(): void;
-
-    /**
      * Provide the module's exports as a globally accessible object under the
      * module's declared name.  This is intended to ease migration to goog.module
      * for files that have existing usages.
@@ -691,11 +768,10 @@ declare module goog.module {
 declare module goog.defineClass {
 
     /**
-     * @typedef {
-     *     !Object|
-     *     {constructor:!Function}|
-     *     {constructor:!Function, statics:(Object|function(Function):void)}}
-     * @suppress {missingProvide}
+     * @typedef {{
+     *   constructor: (!Function|undefined),
+     *   statics: (Object|undefined|function(Function):void)
+     * }}
      */
-    type ClassDescriptor = Object|{constructor: Function}|{constructor: Function; statics: Object|((arg0: Function) => void)};
+    type ClassDescriptor = {constructor: Function|void; statics: Object|void|((arg0: Function) => void)};
 }

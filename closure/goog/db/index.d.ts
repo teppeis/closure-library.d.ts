@@ -24,9 +24,9 @@ declare module goog.db {
         getName(): string;
         
         /**
-         * @return {string} Key path of the index.
+         * @return {*} Key path of the index.
          */
-        getKeyPath(): string;
+        getKeyPath(): any;
         
         /**
          * @return {boolean} True if the index enforces that there is only one object
@@ -81,7 +81,7 @@ declare module goog.db {
          * Example usage:
          *
          * <code>
-         *  var cursor = index.openCursor(goog.db.Range.bound('a', 'c'));
+         *  var cursor = index.openCursor(goog.db.KeyRange.bound('a', 'c'));
          *
          *  var key = goog.events.listen(
          *      cursor, goog.db.Cursor.EventType.NEW_DATA,

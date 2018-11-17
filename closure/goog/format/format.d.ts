@@ -20,9 +20,9 @@ declare module goog.format {
 
     /**
      * Constant for the WBR replacement used by insertWordBreaks.  Safari requires
-     * <wbr></wbr>, Opera needs the &shy; entity, though this will give a visible
-     * hyphen at breaks.  IE8 uses a zero width space.
-     * Other browsers just use <wbr>.
+     * &lt;wbr&gt;&lt;/wbr&gt;, Opera needs the &shy; entity, though this will give
+     * a visible hyphen at breaks.  IE8 uses a zero width space. Other browsers just
+     * use &lt;wbr&gt;.
      * @type {string}
      */
     var WORD_BREAK_HTML: string;
@@ -79,8 +79,9 @@ declare module goog.format {
 
     /**
      * Converts number of bytes to string representation. Binary conversion.
-     * Default is to return the additional 'B' suffix, e.g. '10.5KB' to minimize
-     * confusion with counts that are scaled by powers of 1000.
+     * Default is to return the additional 'B' suffix only for scales greater than
+     * 1K, e.g. '10.5KB' to minimize confusion with counts that are scaled by powers
+     * of 1000. Otherwise, suffix is empty string.
      * @param {number} val Value to be converted.
      * @param {number=} opt_decimals The number of decimals to use.  Defaults to 2.
      * @param {boolean=} opt_suffix If true, include trailing 'B' in returned
@@ -103,6 +104,7 @@ declare module goog.format {
      * @param {number=} opt_maxlen Maximum length after which to ensure there is a
      *     break.  Default is 10 characters.
      * @return {string} The string including word breaks.
+     * @deprecated Prefer wrapping with CSS word-wrap: break-word.
      */
     function insertWordBreaks(str: string, opt_maxlen?: number): string;
 
@@ -120,6 +122,7 @@ declare module goog.format {
      * @param {number=} opt_maxlen Maximum length after which to ensure there is a
      *     break.  Default is 10 characters.
      * @return {string} The string including word breaks.
+     * @deprecated Prefer wrapping with CSS word-wrap: break-word.
      */
     function insertWordBreaksBasic(str: string, opt_maxlen?: number): string;
 }

@@ -33,7 +33,7 @@ declare module goog.ui {
         
         /**
          * CSS Style text for invalid words. As it's set inside the rich edit iframe
-         * classes defined in the parent document are not availble, thus the style is
+         * classes defined in the parent document are not available, thus the style is
          * set inline.
          * @type {string}
          */
@@ -41,9 +41,9 @@ declare module goog.ui {
         
         /**
          * Decorates the element for the UI component.
-         *
          * @param {Element} element Element to decorate.
          * @override
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         decorateInternal(element: Element): void;
         

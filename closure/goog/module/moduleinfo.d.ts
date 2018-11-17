@@ -33,15 +33,16 @@ declare module goog.module {
         
         /**
          * Sets the uris of this module.
-         * @param {Array<string>} uris Uris for this module's code.
+         * @param {!Array<!goog.html.TrustedResourceUrl>} uris Uris for this module's
+         *     code.
          */
-        setUris(uris: Array<string>): void;
+        setTrustedUris(uris: Array<goog.html.TrustedResourceUrl>): void;
         
         /**
          * Gets the uris of this module.
-         * @return {Array<string>?} Uris for this module's code.
+         * @return {!Array<!goog.html.TrustedResourceUrl>} Uris for this module's code.
          */
-        getUris(): Array<string>;
+        getUris(): Array<goog.html.TrustedResourceUrl>;
         
         /**
          * Sets the constructor to use to instantiate the module object after the
@@ -93,6 +94,14 @@ declare module goog.module {
         isLoaded(): boolean;
         
         /**
+         * Marks the current module as loaded. This is useful for subtractive module
+         * loading, where occasionally we need to fallback to normal module loading,
+         * and re-fetch the module graph. In this case, we need a way to tell the module
+         * manager to mark all modules that are already loaded.
+         */
+        setLoaded(): void;
+        
+        /**
          * Gets the module.
          * @return {goog.module.BaseModule?} The module if it has been loaded.
          *     Otherwise, null.
@@ -110,8 +119,9 @@ declare module goog.module {
         
         /**
          * Calls the error callbacks for the module.
-         * @param {goog.module.ModuleManager.FailureType} cause What caused the error.
+         * @param {goog.loader.AbstractModuleManager.FailureType} cause What caused the
+         *     error.
          */
-        onError(cause: goog.module.ModuleManager.FailureType): void;
+        onError(cause: goog.loader.AbstractModuleManager.FailureType): void;
     }
 }

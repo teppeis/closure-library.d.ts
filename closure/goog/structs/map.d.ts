@@ -11,6 +11,7 @@ declare module goog.structs {
      *     will be used as key-value pairs.
      * @constructor
      * @template K, V
+     * @deprecated This type is misleading: use ES6 Map instead.
      */
     class Map<K, V> {
         constructor(opt_map?: any, ...var_args: any[]);
@@ -85,7 +86,7 @@ declare module goog.structs {
         
         /**
          * Returns the value for the given key.  If the key is not found and the default
-         * value is not given this will return {@code undefined}.
+         * value is not given this will return `undefined`.
          * @param {*} key The key to get the value for.
          * @param {DEFAULT=} opt_val The value to return if no item is found for the
          *     given key, defaults to undefined.
@@ -104,7 +105,7 @@ declare module goog.structs {
         
         /**
          * Adds multiple key-value pairs from another goog.structs.Map or Object.
-         * @param {Object} map  Object containing the data to add.
+         * @param {?Object} map Object containing the data to add.
          */
         addAll(map: Object): void;
         

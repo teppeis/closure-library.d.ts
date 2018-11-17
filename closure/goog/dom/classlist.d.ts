@@ -7,9 +7,9 @@ declare module goog.dom.classlist {
     /**
      * Gets an array-like object of class names on an element.
      * @param {Element} element DOM node to get the classes of.
-     * @return {!goog.array.ArrayLike} Class names on {@code element}.
+     * @return {!IArrayLike<?>} Class names on `element`.
      */
-    function get(element: Element): goog.array.ArrayLike;
+    function get(element: Element): IArrayLike<any>;
 
     /**
      * Sets the entire class name of an element.
@@ -39,12 +39,12 @@ declare module goog.dom.classlist {
     /**
      * Convenience method to add a number of class names at once.
      * @param {Element} element The element to which to add classes.
-     * @param {goog.array.ArrayLike<string>} classesToAdd An array-like object
+     * @param {IArrayLike<string>} classesToAdd An array-like object
      * containing a collection of class names to add to the element.
      * This method may throw a DOM exception if classesToAdd contains invalid
      * or empty class names.
      */
-    function addAll(element: Element, classesToAdd: goog.array.ArrayLike): void;
+    function addAll(element: Element, classesToAdd: IArrayLike<string>): void;
 
     /**
      * Removes a class from an element.  This method may throw a DOM exception
@@ -56,15 +56,15 @@ declare module goog.dom.classlist {
 
     /**
      * Removes a set of classes from an element.  Prefer this call to
-     * repeatedly calling {@code goog.dom.classlist.remove} if you want to remove
+     * repeatedly calling `goog.dom.classlist.remove` if you want to remove
      * a large set of class names at once.
      * @param {Element} element The element from which to remove classes.
-     * @param {goog.array.ArrayLike<string>} classesToRemove An array-like object
+     * @param {IArrayLike<string>} classesToRemove An array-like object
      * containing a collection of class names to remove from the element.
      * This method may throw a DOM exception if classesToRemove contains invalid
      * or empty class names.
      */
-    function removeAll(element: Element, classesToRemove: goog.array.ArrayLike): void;
+    function removeAll(element: Element, classesToRemove: IArrayLike<string>): void;
 
     /**
      * Adds or removes a class depending on the enabled argument.  This method
@@ -82,12 +82,12 @@ declare module goog.dom.classlist {
      * method may throw a DOM exception for an invalid or empty class name if
      * DOMTokenList is used.
      * @param {!Element} element DOM node to add or remove the class on.
-     * @param {goog.array.ArrayLike<string>} classesToEnable An array-like object
+     * @param {?IArrayLike<string>} classesToEnable An array-like object
      *     containing a collection of class names to add or remove from the element.
      * @param {boolean} enabled Whether to add or remove the classes (true adds,
      *     false removes).
      */
-    function enableAll(element: Element, classesToEnable: goog.array.ArrayLike, enabled: boolean): void;
+    function enableAll(element: Element, classesToEnable: IArrayLike<string>, enabled: boolean): void;
 
     /**
      * Switches a class on an element from one to another without disturbing other

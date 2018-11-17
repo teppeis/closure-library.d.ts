@@ -69,7 +69,7 @@ declare module goog.structs {
          *     to call for every element. It takes the element, undefined (because sets
          *     have no notion of keys), and the set.
          * @param {Object=} opt_obj The object to be used as the value of 'this'
-         *     within {@code f}.
+         *     within `f`.
          */
         forEach(f: (arg0: string, arg1: void, arg2: goog.structs.StringSet) => any, opt_obj?: Object): void;
         
@@ -88,7 +88,7 @@ declare module goog.structs {
         /**
          * Calculates the difference of two sets.
          * @param {!goog.structs.StringSet} stringSet The set to subtract from this set.
-         * @return {!goog.structs.StringSet} {@code this} minus {@code stringSet}.
+         * @return {!goog.structs.StringSet} `this` minus `stringSet`.
          */
         getDifference(stringSet: goog.structs.StringSet): goog.structs.StringSet;
         
@@ -104,7 +104,7 @@ declare module goog.structs {
          * Calculates the symmetric difference of two sets.
          * @param {!goog.structs.StringSet} stringSet The other set.
          * @return {!goog.structs.StringSet} A new set with the elements in exactly one
-         *     of {@code this} and {@code stringSet}.
+         *     of `this` and `stringSet`.
          */
         getSymmetricDifference(stringSet: goog.structs.StringSet): goog.structs.StringSet;
         

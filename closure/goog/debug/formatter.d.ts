@@ -105,6 +105,30 @@ declare module goog.debug {
         showExceptionText: boolean;
         
         /**
+         * Exposes an exception that has been caught by a try...catch and outputs the
+         * error as HTML with a stack trace.
+         *
+         * @param {*} err Error object or string.
+         * @param {?Function=} fn If provided, when collecting the stack trace all
+         *     frames above the topmost call to this function, including that call,
+         *     will be left out of the stack trace.
+         * @return {string} Details of exception, as HTML.
+         */
+        static exposeException(err: any, fn?: Function): string;
+        
+        /**
+         * Exposes an exception that has been caught by a try...catch and outputs the
+         * error with a stack trace.
+         *
+         * @param {*} err Error object or string.
+         * @param {?Function=} fn If provided, when collecting the stack trace all
+         *     frames above the topmost call to this function, including that call,
+         *     will be left out of the stack trace.
+         * @return {!goog.html.SafeHtml} Details of exception.
+         */
+        static exposeExceptionAsHtml(err: any, fn?: Function): goog.html.SafeHtml;
+        
+        /**
          * Formats a record
          * @param {goog.debug.LogRecord} logRecord the logRecord to format.
          * @return {string} The formatted string as html.

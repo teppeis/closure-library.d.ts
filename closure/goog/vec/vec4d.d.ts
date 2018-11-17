@@ -15,9 +15,36 @@ declare module goog.vec.vec4d {
     function create(): goog.vec.vec4d.Type;
 
     /**
+     * Creates a new vec4d initialized with the value from the given array.
+     *
+     * @param {!Array<number>} vec The source 4 element array.
+     * @return {!goog.vec.vec4d.Type} The new vec4d.
+     */
+    function createFromArray(vec: Array<number>): goog.vec.vec4d.Type;
+
+    /**
+     * Creates a new vec4d initialized with the supplied values.
+     *
+     * @param {number} v0 The value for element at index 0.
+     * @param {number} v1 The value for element at index 1.
+     * @param {number} v2 The value for element at index 2.
+     * @param {number} v3 The value for element at index 3.
+     * @return {!goog.vec.vec4d.Type} The new vector.
+     */
+    function createFromValues(v0: number, v1: number, v2: number, v3: number): goog.vec.vec4d.Type;
+
+    /**
+     * Creates a clone of the given vec4d.
+     *
+     * @param {!goog.vec.vec4d.Type} vec The source vec4d.
+     * @return {!goog.vec.vec4d.Type} The new cloned vec4d.
+     */
+    function clone(vec: goog.vec.vec4d.Type): goog.vec.vec4d.Type;
+
+    /**
      * Initializes the vector with the given values.
      *
-     * @param {goog.vec.vec4d.Type} vec The vector to receive the values.
+     * @param {!goog.vec.vec4d.Type} vec The vector to receive the values.
      * @param {number} v0 The value for element at index 0.
      * @param {number} v1 The value for element at index 1.
      * @param {number} v2 The value for element at index 2.
@@ -30,8 +57,8 @@ declare module goog.vec.vec4d {
     /**
      * Initializes vec4d vec from vec4d src.
      *
-     * @param {goog.vec.vec4d.Type} vec The destination vector.
-     * @param {goog.vec.vec4d.Type} src The source vector.
+     * @param {!goog.vec.vec4d.Type} vec The destination vector.
+     * @param {!goog.vec.vec4d.Type} src The source vector.
      * @return {!goog.vec.vec4d.Type} Return vec so that operations can be
      *     chained together.
      */
@@ -41,7 +68,7 @@ declare module goog.vec.vec4d {
      * Initializes vec4d vec from vec4f src (typed as a Float32Array to
      * avoid circular goog.requires).
      *
-     * @param {goog.vec.vec4d.Type} vec The destination vector.
+     * @param {!goog.vec.vec4d.Type} vec The destination vector.
      * @param {Float32Array} src The source vector.
      * @return {!goog.vec.vec4d.Type} Return vec so that operations can be
      *     chained together.
@@ -51,7 +78,7 @@ declare module goog.vec.vec4d {
     /**
      * Initializes vec4d vec from Array src.
      *
-     * @param {goog.vec.vec4d.Type} vec The destination vector.
+     * @param {!goog.vec.vec4d.Type} vec The destination vector.
      * @param {Array<number>} src The source vector.
      * @return {!goog.vec.vec4d.Type} Return vec so that operations can be
      *     chained together.
@@ -62,9 +89,9 @@ declare module goog.vec.vec4d {
      * Performs a component-wise addition of vec0 and vec1 together storing the
      * result into resultVec.
      *
-     * @param {goog.vec.vec4d.Type} vec0 The first addend.
-     * @param {goog.vec.vec4d.Type} vec1 The second addend.
-     * @param {goog.vec.vec4d.Type} resultVec The vector to
+     * @param {!goog.vec.vec4d.Type} vec0 The first addend.
+     * @param {!goog.vec.vec4d.Type} vec1 The second addend.
+     * @param {!goog.vec.vec4d.Type} resultVec The vector to
      *     receive the result. May be vec0 or vec1.
      * @return {!goog.vec.vec4d.Type} Return resultVec so that operations can be
      *     chained together.
@@ -75,9 +102,9 @@ declare module goog.vec.vec4d {
      * Performs a component-wise subtraction of vec1 from vec0 storing the
      * result into resultVec.
      *
-     * @param {goog.vec.vec4d.Type} vec0 The minuend.
-     * @param {goog.vec.vec4d.Type} vec1 The subtrahend.
-     * @param {goog.vec.vec4d.Type} resultVec The vector to
+     * @param {!goog.vec.vec4d.Type} vec0 The minuend.
+     * @param {!goog.vec.vec4d.Type} vec1 The subtrahend.
+     * @param {!goog.vec.vec4d.Type} resultVec The vector to
      *     receive the result. May be vec0 or vec1.
      * @return {!goog.vec.vec4d.Type} Return resultVec so that operations can be
      *     chained together.
@@ -87,8 +114,8 @@ declare module goog.vec.vec4d {
     /**
      * Negates vec0, storing the result into resultVec.
      *
-     * @param {goog.vec.vec4d.Type} vec0 The vector to negate.
-     * @param {goog.vec.vec4d.Type} resultVec The vector to
+     * @param {!goog.vec.vec4d.Type} vec0 The vector to negate.
+     * @param {!goog.vec.vec4d.Type} resultVec The vector to
      *     receive the result. May be vec0.
      * @return {!goog.vec.vec4d.Type} Return resultVec so that operations can be
      *     chained together.
@@ -99,8 +126,8 @@ declare module goog.vec.vec4d {
      * Takes the absolute value of each component of vec0 storing the result in
      * resultVec.
      *
-     * @param {goog.vec.vec4d.Type} vec0 The source vector.
-     * @param {goog.vec.vec4d.Type} resultVec The vector to receive the result.
+     * @param {!goog.vec.vec4d.Type} vec0 The source vector.
+     * @param {!goog.vec.vec4d.Type} resultVec The vector to receive the result.
      *     May be vec0.
      * @return {!goog.vec.vec4d.Type} Return resultVec so that operations can be
      *     chained together.
@@ -111,9 +138,9 @@ declare module goog.vec.vec4d {
      * Multiplies each component of vec0 with scalar storing the product into
      * resultVec.
      *
-     * @param {goog.vec.vec4d.Type} vec0 The source vector.
+     * @param {!goog.vec.vec4d.Type} vec0 The source vector.
      * @param {number} scalar The value to multiply with each component of vec0.
-     * @param {goog.vec.vec4d.Type} resultVec The vector to
+     * @param {!goog.vec.vec4d.Type} resultVec The vector to
      *     receive the result. May be vec0.
      * @return {!goog.vec.vec4d.Type} Return resultVec so that operations can be
      *     chained together.
@@ -123,7 +150,7 @@ declare module goog.vec.vec4d {
     /**
      * Returns the magnitudeSquared of the given vector.
      *
-     * @param {goog.vec.vec4d.Type} vec0 The vector.
+     * @param {!goog.vec.vec4d.Type} vec0 The vector.
      * @return {number} The magnitude of the vector.
      */
     function magnitudeSquared(vec0: goog.vec.vec4d.Type): number;
@@ -131,7 +158,7 @@ declare module goog.vec.vec4d {
     /**
      * Returns the magnitude of the given vector.
      *
-     * @param {goog.vec.vec4d.Type} vec0 The vector.
+     * @param {!goog.vec.vec4d.Type} vec0 The vector.
      * @return {number} The magnitude of the vector.
      */
     function magnitude(vec0: goog.vec.vec4d.Type): number;
@@ -139,8 +166,8 @@ declare module goog.vec.vec4d {
     /**
      * Normalizes the given vector storing the result into resultVec.
      *
-     * @param {goog.vec.vec4d.Type} vec0 The vector to normalize.
-     * @param {goog.vec.vec4d.Type} resultVec The vector to
+     * @param {!goog.vec.vec4d.Type} vec0 The vector to normalize.
+     * @param {!goog.vec.vec4d.Type} resultVec The vector to
      *     receive the result. May be vec0.
      * @return {!goog.vec.vec4d.Type} Return resultVec so that operations can be
      *     chained together.
@@ -150,8 +177,8 @@ declare module goog.vec.vec4d {
     /**
      * Returns the scalar product of vectors v0 and v1.
      *
-     * @param {goog.vec.vec4d.Type} v0 The first vector.
-     * @param {goog.vec.vec4d.Type} v1 The second vector.
+     * @param {!goog.vec.vec4d.Type} v0 The first vector.
+     * @param {!goog.vec.vec4d.Type} v1 The second vector.
      * @return {number} The scalar product.
      */
     function dot(v0: goog.vec.vec4d.Type, v1: goog.vec.vec4d.Type): number;
@@ -160,10 +187,10 @@ declare module goog.vec.vec4d {
      * Linearly interpolate from v0 to v1 according to f. The value of f should be
      * in the range [0..1] otherwise the results are undefined.
      *
-     * @param {goog.vec.vec4d.Type} v0 The first vector.
-     * @param {goog.vec.vec4d.Type} v1 The second vector.
+     * @param {!goog.vec.vec4d.Type} v0 The first vector.
+     * @param {!goog.vec.vec4d.Type} v1 The second vector.
      * @param {number} f The interpolation factor.
-     * @param {goog.vec.vec4d.Type} resultVec The vector to receive the
+     * @param {!goog.vec.vec4d.Type} resultVec The vector to receive the
      *     results (may be v0 or v1).
      * @return {!goog.vec.vec4d.Type} Return resultVec so that operations can be
      *     chained together.
@@ -174,9 +201,9 @@ declare module goog.vec.vec4d {
      * Compares the components of vec0 with the components of another vector or
      * scalar, storing the larger values in resultVec.
      *
-     * @param {goog.vec.vec4d.Type} vec0 The source vector.
-     * @param {goog.vec.vec4d.Type|number} limit The limit vector or scalar.
-     * @param {goog.vec.vec4d.Type} resultVec The vector to receive the
+     * @param {!goog.vec.vec4d.Type} vec0 The source vector.
+     * @param {!goog.vec.vec4d.Type|number} limit The limit vector or scalar.
+     * @param {!goog.vec.vec4d.Type} resultVec The vector to receive the
      *     results (may be vec0 or limit).
      * @return {!goog.vec.vec4d.Type} Return resultVec so that operations can be
      *     chained together.
@@ -187,9 +214,9 @@ declare module goog.vec.vec4d {
      * Compares the components of vec0 with the components of another vector or
      * scalar, storing the smaller values in resultVec.
      *
-     * @param {goog.vec.vec4d.Type} vec0 The source vector.
-     * @param {goog.vec.vec4d.Type|number} limit The limit vector or scalar.
-     * @param {goog.vec.vec4d.Type} resultVec The vector to receive the
+     * @param {!goog.vec.vec4d.Type} vec0 The source vector.
+     * @param {!goog.vec.vec4d.Type|number} limit The limit vector or scalar.
+     * @param {!goog.vec.vec4d.Type} resultVec The vector to receive the
      *     results (may be vec0 or limit).
      * @return {!goog.vec.vec4d.Type} Return resultVec so that operations can be
      *     chained together.
@@ -199,8 +226,8 @@ declare module goog.vec.vec4d {
     /**
      * Returns true if the components of v0 are equal to the components of v1.
      *
-     * @param {goog.vec.vec4d.Type} v0 The first vector.
-     * @param {goog.vec.vec4d.Type} v1 The second vector.
+     * @param {!goog.vec.vec4d.Type} v0 The first vector.
+     * @param {!goog.vec.vec4d.Type} v1 The second vector.
      * @return {boolean} True if the vectors are equal, false otherwise.
      */
     function equals(v0: goog.vec.vec4d.Type, v1: goog.vec.vec4d.Type): boolean;

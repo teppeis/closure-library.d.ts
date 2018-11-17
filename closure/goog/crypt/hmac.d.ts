@@ -8,9 +8,9 @@ declare module goog.crypt {
      * @constructor
      * @param {!goog.crypt.Hash} hasher An object to serve as a hash function.
      * @param {Array<number>} key The secret key to use to calculate the hmac.
-     *     Should be an array of not more than {@code blockSize} integers in
+     *     Should be an array of not more than `blockSize` integers in
            {0, 255}.
-     * @param {number=} opt_blockSize Optional. The block size {@code hasher} uses.
+     * @param {number=} opt_blockSize Optional. The block size `hasher` uses.
      *     If not specified, uses the block size from the hasher, or 16 if it is
      *     not specified.
      * @extends {goog.crypt.Hash}

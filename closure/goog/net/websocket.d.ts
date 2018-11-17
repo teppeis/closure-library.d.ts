@@ -10,19 +10,20 @@ declare module goog.net {
     /**
      * Class encapsulating the logic for using a WebSocket.
      *
-     * @param {boolean=} opt_autoReconnect True if the web socket should
-     *     automatically reconnect or not.  This is true by default.
-     * @param {function(number):number=} opt_getNextReconnect A function for
-     *     obtaining the time until the next reconnect attempt. Given the reconnect
-     *     attempt count (which is a positive integer), the function should return a
-     *     positive integer representing the milliseconds to the next reconnect
-     *     attempt.  The default function used is an exponential back-off. Note that
-     *     this function is never called if auto reconnect is disabled.
+     * @param {boolean|!goog.net.WebSocket.Options=} opt_params
+     *     Parameters describing behavior of the WebSocket. The boolean 'true' is
+     *     equivalent to setting Options.autoReconnect to be true.
+     * @param {function(number): number=} opt_getNextReconnect
+     *     @see goog.net.WebSocket.Options.getNextReconnect. This parameter is
+     *     ignored if Options is passed for the first argument.
      * @constructor
      * @extends {goog.events.EventTarget}
      */
     class WebSocket extends goog.events.EventTarget {
-        constructor(opt_autoReconnect?: boolean, opt_getNextReconnect?: (arg0: number) => number);
+        constructor(opt_params?: boolean|goog.net.WebSocket.Options, opt_getNextReconnect?: (arg0: number) => number);
+        
+        /** @record */
+        static Options(): void;
         
         /**
          * Installs exception protection for all entry points introduced by
@@ -39,7 +40,7 @@ declare module goog.net {
         /**
          * Creates and opens the actual WebSocket.  Only call this after attaching the
          * appropriate listeners to this object.  If listeners aren't registered, then
-         * the {@code goog.net.WebSocket.EventType.OPENED} event might be missed.
+         * the `goog.net.WebSocket.EventType.OPENED` event might be missed.
          *
          * @param {string} url The URL to which to connect.
          * @param {string=} opt_protocol The subprotocol to use.  The connection will
@@ -58,9 +59,9 @@ declare module goog.net {
         /**
          * Sends the message over the web socket.
          *
-         * @param {string} message The message to send.
+         * @param {string|!ArrayBuffer|!ArrayBufferView} message The message to send.
          */
-        send(message: string): void;
+        send(message: string|ArrayBuffer|ArrayBufferView): void;
         
         /**
          * Checks to see if the web socket is open or not.
@@ -68,10 +69,25 @@ declare module goog.net {
          * @return {boolean} True if the web socket is open, false otherwise.
          */
         isOpen(): boolean;
+        
+        /**
+         * Gets the number of bytes of data that have been queued using calls to send()
+         * but not yet transmitted to the network.
+         *
+         * @return {number} Number of bytes of data that have been queued.
+         */
+        getBufferedAmount(): number;
     }
 }
 
 declare module goog.net.WebSocket {
+
+    /** @enum {string} */
+    type BinaryType = string;
+    var BinaryType: {
+        ARRAY_BUFFER: BinaryType;
+        BLOB: BinaryType;
+    };
 
     /**
      * The events fired by the web socket.

@@ -38,29 +38,29 @@ declare module goog.ui {
         /**
          * Returns the selected date, if any.  Compares the dates from the date picker
          * and the input field, causing them to be synced if different.
-         * @return {goog.date.Date?} The selected date, if any.
+         * @return {goog.date.DateTime} The selected date, if any.
          */
-        getDate(): goog.date.Date;
+        getDate(): goog.date.DateTime;
         
         /**
          * Sets the selected date.  See goog.ui.PopupDatePicker.setDate().
-         * @param {goog.date.Date?} date The date to set.
+         * @param {goog.date.Date} date The date to set.
          */
         setDate(date: goog.date.Date): void;
         
         /**
          * Sets the value of the input element.  This can be overridden to support
          * alternative types of input setting.
-         *
          * @param {string} value The value to set.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         setInputValue(value: string): void;
         
         /**
          * Returns the value of the input element.  This can be overridden to support
          * alternative types of input getting.
-         *
          * @return {string} The input value.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         getInputValue(): string;
         

@@ -14,6 +14,9 @@ declare module goog.proto2 {
     class Serializer {
         constructor();
         
+        /** @const {!RegExp} */
+        static INTEGER_REGEX: any;
+        
         /**
          * Serializes a message to the expected format.
          *

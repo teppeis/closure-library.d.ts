@@ -79,6 +79,7 @@ declare module goog.ui {
          * {@link goog.ui.MenuButton#handleMenuAction}.
          * @param {goog.events.Event} e Action event to handle.
          * @override
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         handleMenuAction(e: goog.events.Event): void;
         

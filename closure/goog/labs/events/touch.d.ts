@@ -18,7 +18,7 @@ declare module goog.labs.events.touch {
     type TouchData = {clientX: number; clientY: number; screenX: number; screenY: number; target: goog.globalEventTarget};
 
     /**
-     * Takes a mouse or touch event and returns the relevent geometry and target
+     * Takes a mouse or touch event and returns the relevant geometry and target
      * data.
      * @param {!Event} e A mouse or touch event.
      * @return {!goog.labs.events.touch.TouchData}

@@ -21,7 +21,9 @@ declare module goog.ui {
         
         /**
          * Returns a styled toolbar separator implemented by the following DOM:
-         * <div class="goog-toolbar-separator goog-inline-block">&nbsp;</div>
+         *
+         *    <div class="goog-toolbar-separator goog-inline-block">&nbsp;</div>
+         *
          * Overrides {@link goog.ui.MenuSeparatorRenderer#createDom}.
          * @param {goog.ui.Control} separator goog.ui.Separator to render.
          * @return {!Element} Root element for the separator.

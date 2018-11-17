@@ -5,11 +5,12 @@ declare module goog {
 declare module goog.storage {
 
     /**
-     * Provides a storage with expirning keys and a collection method.
+     * Provides a storage with expiring keys and a collection method.
      *
      * @param {!goog.storage.mechanism.IterableMechanism} mechanism The underlying
      *     storage mechanism.
      * @constructor
+     * @struct
      * @extends {goog.storage.ExpiringStorage}
      */
     class CollectableStorage extends goog.storage.ExpiringStorage {
@@ -18,12 +19,12 @@ declare module goog.storage {
         /**
          * Cleans up the storage by removing expired keys.
          *
-         * @param {Array<string>} keys List of all keys.
+         * @param {goog.iter.Iterable} keys List of all keys.
          * @param {boolean=} opt_strict Also remove invalid keys.
          * @return {!Array<string>} a list of expired keys.
          * @protected
          */
-        collectInternal(keys: Array<string>, opt_strict?: boolean): Array<string>;
+        collectInternal(keys: goog.iter.Iterable, opt_strict?: boolean): Array<string>;
         
         /**
          * Cleans up the storage by removing expired keys.

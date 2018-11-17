@@ -11,6 +11,7 @@ declare module goog.fx {
      *
      * @extends {goog.fx.AbstractDragDrop}
      * @constructor
+     * @struct
      */
     class DragDropGroup extends goog.fx.AbstractDragDrop {
         constructor();

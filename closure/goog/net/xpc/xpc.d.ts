@@ -12,6 +12,7 @@ declare module goog.net.xpc {
      */
     type TransportTypes = number;
     var TransportTypes: {
+        UNDEFINED: TransportTypes;
         NATIVE_MESSAGING: TransportTypes;
         FRAME_ELEMENT_METHOD: TransportTypes;
         IFRAME_RELAY: TransportTypes;

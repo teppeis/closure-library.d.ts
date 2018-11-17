@@ -88,6 +88,7 @@ declare module goog.ui.ac {
          * @param {string} token The XHR autocomplete token.
          * @param {Function} matchHandler The AutoComplete match handler.
          * @param {goog.events.Event} event The XHR success event.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         xhrCallback(token: string, matchHandler: Function, event: goog.events.Event): void;
         

@@ -8,6 +8,7 @@ declare module goog.storage.mechanism {
      * Provides a storage mechanism that uses HTML5 session storage.
      *
      * @constructor
+     * @struct
      * @extends {goog.storage.mechanism.HTML5WebStorage}
      */
     class HTML5SessionStorage extends goog.storage.mechanism.HTML5WebStorage {

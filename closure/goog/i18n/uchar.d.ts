@@ -32,13 +32,13 @@ declare module goog.i18n.uChar {
      * Returns the Unicode code point at the specified index.
      *
      * If the char value specified at the given index is in the leading-surrogate
-     * range, and the following index is less than the length of {@code string}, and
+     * range, and the following index is less than the length of `string`, and
      * the char value at the following index is in the trailing-surrogate range,
      * then the supplementary code point corresponding to this surrogate pair is
      * returned.
      *
      * If the char value specified at the given index is in the trailing-surrogate
-     * range, and the preceding index is not before the start of {@code string}, and
+     * range, and the preceding index is not before the start of `string`, and
      * the char value at the preceding index is in the leading-surrogate range, then
      * the negated supplementary code point corresponding to this surrogate pair is
      * returned.
@@ -53,7 +53,7 @@ declare module goog.i18n.uChar {
      * trailing surrogate is returned when it is not preceded by a leading
      * surrogate.
      *
-     * @param {!string} string The string.
+     * @param {string} string The string.
      * @param {number} index The index from which the code point is to be retrieved.
      * @return {number} The code point at the given index. If the given index is
      * that of the start (i.e. lead surrogate) of a surrogate pair, returns the code
@@ -105,18 +105,4 @@ declare module goog.i18n.uChar {
      * the given UTF-16 surrogate pair.
      */
     function buildSupplementaryCodePoint(lead: number, trail: number): number;
-
-    /**
-     * Gets the name of a character, if available, returns null otherwise.
-     * @param {string} ch The character.
-     * @return {?string} The name of the character.
-     */
-    function toName(ch: string): string;
-
-    /**
-     * Sets up the character map, lazily.  Some characters are indexed by their
-     * decimal value.
-     * @protected
-     */
-    function createCharData(): void;
 }

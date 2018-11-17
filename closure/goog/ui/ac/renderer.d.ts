@@ -21,6 +21,7 @@ declare module goog.ui.ac {
      *     bolds every matching substring for a given token in each row. True by
      *     default.
      * @extends {goog.events.EventTarget}
+     * @suppress {underscore}
      */
     class Renderer extends goog.events.EventTarget {
         constructor(opt_parentNode?: Element, opt_customRenderer?: {renderRow: any}|{render: any}, opt_rightAlign?: boolean, opt_useStandardHighlighting?: boolean);
@@ -33,6 +34,24 @@ declare module goog.ui.ac {
         static DELAY_BEFORE_MOUSEOVER: number;
         
         /**
+         * The anchor element to position the rendered autocompleter against.
+         * @protected {Element|undefined}
+         */
+        target_(): void;
+        
+        /**
+         * The element on which to base the width of the autocomplete.
+         * @protected {Node}
+         */
+        widthProvider_(): void;
+        
+        /**
+         * The element on which to base the max width of the autocomplete.
+         * @protected {!Node|undefined}
+         */
+        maxWidthProvider_(): void;
+        
+        /**
          * Gets the renderer's element.
          * @return {Element} The  main element that controls the rendered autocomplete.
          */
@@ -42,8 +61,12 @@ declare module goog.ui.ac {
          * Sets the width provider element. The provider is only used on redraw and as
          * such will not automatically update on resize.
          * @param {Node} widthProvider The element whose width should be mirrored.
+         * @param {number=} opt_borderWidth The width of the border of the autocomplete,
+         *     which will be subtracted from the width of the autocomplete dropdown.
+         * @param {!Node=} maxWidthProvider The element whose width should be used
+         *     as the autocomplete's max width.
          */
-        setWidthProvider(widthProvider: Node): void;
+        setWidthProvider(widthProvider: Node, opt_borderWidth?: number, maxWidthProvider?: Node): void;
         
         /**
          * Set whether to align autocomplete to top of target element
@@ -144,6 +167,7 @@ declare module goog.ui.ac {
         /**
          * Sets the 'active' class of the nth item.
          * @param {number} index Index of the item to highlight.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         hiliteRow(index: number): void;
         
@@ -156,12 +180,14 @@ declare module goog.ui.ac {
          * Sets the 'active' class of the item with a given id.
          * @param {number} id Id of the row to hilight. If id is -1 then no rows get
          *     hilited.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         hiliteId(id: number): void;
         
         /**
          * Redraw (or draw if this is the first call) the rendered auto-complete drop
          * down.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         redraw(): void;
         

@@ -133,6 +133,12 @@ declare module goog.editor.plugins.UndoRedo {
     interface UndoState_ extends goog.editor.plugins.UndoRedoState {
         
         /**
+         * Get the content to restore on undo.
+         * @return {string}
+         */
+        getUndoContent(): string;
+        
+        /**
          * Updates the undo portion of this state. Should only be used to update the
          * current state of an editable field, which is not yet on the undo stack after
          * an undo or redo operation. You should never be modifying states on the stack!
@@ -154,7 +160,7 @@ declare module goog.editor.plugins.UndoRedo {
         
         /**
          * Checks if the *contents* of two
-         * {@code goog.editor.plugins.UndoRedo.UndoState_}s are the same.  We don't
+         * `goog.editor.plugins.UndoRedo.UndoState_`s are the same.  We don't
          * bother checking the cursor position (that's not something we'd want to save
          * anyway).
          * @param {goog.editor.plugins.UndoRedoState} rhs The state to compare.

@@ -5,10 +5,36 @@ declare module goog {
 declare module goog.dom.forms {
 
     /**
+     * Submits form data via a new window. This hides references to the parent
+     * window and should be used when submitting forms to untrusted 3rd party urls.
+     * By default, this uses the action and method of the specified form
+     * element. It is possible to override the default action and method if an
+     * optional submit element with formaction and/or formmethod attributes is
+     * provided.
+     * @param {!HTMLFormElement} form The form.
+     * @param {!HTMLElement=} opt_submitElement The `<button>` or `<input>` element
+     *     used to submit the form. The element should have a submit type.
+     * @return {boolean} true If the form was submitted succesfully.
+     * @throws {!Error} If opt_submitElement is not a valid form submit element.
+     */
+    function submitFormInNewWindow(form: HTMLFormElement, opt_submitElement?: HTMLElement): boolean;
+
+    /**
+     * Submits form data via a new window. This hides references to the parent
+     * window and should be used when submitting forms to untrusted 3rd party urls.
+     * @param {string} actionUri uri to submit form content to.
+     * @param {string} method HTTP method used to submit the form.
+     * @param {!goog.structs.Map<string, !Array<string>>} formData A map of the form
+     *     data as field name to arrays of values.
+     * @return {boolean} true If the form was submitted succesfully.
+     */
+    function submitFormDataInNewWindow(actionUri: string, method: string, formData: goog.structs.Map<string, Array<string>>): boolean;
+
+    /**
      * Returns form data as a map of name to value arrays. This doesn't
      * support file inputs.
      * @param {HTMLFormElement} form The form.
-     * @return {!goog.structs.Map.<string, !Array.<string>>} A map of the form data
+     * @return {!goog.structs.Map<string, !Array<string>>} A map of the form data
      *     as field name to arrays of values.
      */
     function getFormDataMap(form: HTMLFormElement): goog.structs.Map<string, Array<string>>;
@@ -84,15 +110,4 @@ declare module goog.dom.forms {
      *     an array for setting the value of select multiple elements.
      */
     function setValue(el: Element, opt_value?: any): void;
-}
-
-declare module goog.dom {
-
-    /**
-     * Alias for goog.dom.form.element.getValue
-     * @type {Function}
-     * @deprecated Use {@link goog.dom.forms.getValue} instead.
-     * @suppress {missingProvide}
-     */
-    var $F: Function;
 }

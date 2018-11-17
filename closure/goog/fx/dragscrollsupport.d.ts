@@ -18,6 +18,7 @@ declare module goog.fx {
      *     event handler, useful when events are generated for more than one source
      *     element and/or are not real mousemove events.
      * @constructor
+     * @struct
      * @extends {goog.Disposable}
      * @see ../demos/dragscrollsupport.html
      */

@@ -185,8 +185,7 @@ declare module goog.ui.Palette {
      */
     type EventType = string;
     var EventType: {
-        [index: string]: EventType;
-        // AFTER_HIGHLIGHT: EventType;
+        AFTER_HIGHLIGHT: EventType;
     };
 
     /**

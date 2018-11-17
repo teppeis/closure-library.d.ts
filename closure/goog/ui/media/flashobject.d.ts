@@ -12,17 +12,13 @@ declare module goog.ui.media {
      * {@link goog.ui.Component}, which makes it very easy to be embedded on the
      * page.
      *
-     * @param {string|!goog.html.TrustedResourceUrl} flashUrl The Flash SWF URL.
-     *     If possible pass a TrustedResourceUrl. string is supported
-     *     for backwards-compatibility only, uses goog.html.legacyconversions,
-     *     and will be sanitized with goog.html.SafeUrl.sanitize() before being
-     *     used.
+     * @param {!goog.html.TrustedResourceUrl} flashUrl The Flash SWF URL.
      * @param {goog.dom.DomHelper=} opt_domHelper An optional DomHelper.
      * @extends {goog.ui.Component}
      * @constructor
      */
     class FlashObject extends goog.ui.Component {
-        constructor(flashUrl: string|goog.html.TrustedResourceUrl, opt_domHelper?: goog.dom.DomHelper);
+        constructor(flashUrl: goog.html.TrustedResourceUrl, opt_domHelper?: goog.dom.DomHelper);
         
         /**
          * The component CSS namespace.
@@ -77,7 +73,7 @@ declare module goog.ui.media {
          * @deprecated Use {@link #addFlashVars} or {@link #setFlashVar} instead.
          * @param {goog.structs.Map|Object|string} flashVar A map of variables (given
          *    as a goog.structs.Map or an Object literal) or a key to the optional
-         *    {@code opt_value}.
+         *    `opt_value`.
          * @param {string=} opt_value The optional value for the flashVar key.
          * @return {!goog.ui.media.FlashObject} The flash object instance for chaining.
          */
@@ -175,6 +171,22 @@ declare module goog.ui.media.FlashObject {
         LOADED: SwfReadyStates_;
         INTERACTIVE: SwfReadyStates_;
         COMPLETE: SwfReadyStates_;
+    };
+
+    /**
+     * IE specific ready states.
+     *
+     * @see https://msdn.microsoft.com/en-us/library/ms534359(v=vs.85).aspx
+     * @enum {string}
+     * @private
+     */
+    type IeSwfReadyStates_ = string;
+    var IeSwfReadyStates_: {
+        LOADING: IeSwfReadyStates_;
+        UNINITIALIZED: IeSwfReadyStates_;
+        LOADED: IeSwfReadyStates_;
+        INTERACTIVE: IeSwfReadyStates_;
+        COMPLETE: IeSwfReadyStates_;
     };
 
     /**

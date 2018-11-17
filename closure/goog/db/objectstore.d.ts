@@ -11,7 +11,7 @@ declare module goog.db {
      * object store. They can only be created when setting the version of the
      * database. Should not be created directly, access object stores through
      * transactions.
-     * @see goog.db.IndexedDb#setVersion
+     * @see goog.db.UpgradeNeededCallback
      * @see goog.db.Transaction#objectStore
      *
      * @param {!IDBObjectStore} store The backing IndexedDb object.
@@ -58,14 +58,15 @@ declare module goog.db {
          * Removes an object from the store. No-op if there is no object present with
          * the given key.
          *
-         * @param {IDBKeyType} key The key to remove objects under.
+         * @param {IDBKeyType|!goog.db.KeyRange} keyOrRange The key or range to remove
+         *     objects under.
          * @return {!goog.async.Deferred} The deferred remove request.
          */
-        remove(key: IDBKeyType): goog.async.Deferred<any>;
+        remove(keyOrRange: IDBKeyType|goog.db.KeyRange): goog.async.Deferred<any>;
         
         /**
          * Gets an object from the store. If no object is present with that key
-         * the result is {@code undefined}.
+         * the result is `undefined`.
          *
          * @param {IDBKeyType} key The key to look up.
          * @return {!goog.async.Deferred} The deferred get request.
@@ -82,6 +83,14 @@ declare module goog.db {
          * @return {!goog.async.Deferred} The deferred getAll request.
          */
         getAll(opt_range?: goog.db.KeyRange, opt_direction?: goog.db.Cursor.Direction): goog.async.Deferred<any>;
+        
+        /**
+         * Gets an object from the store. If no object is present with that key
+         * the result is `undefined`.
+         *
+         * @return {!goog.async.Deferred} The deferred getAllKeys request.
+         */
+        getAllKeys(): goog.async.Deferred<any>;
         
         /**
          * Opens a cursor over the specified key range. Returns a cursor object which is
@@ -122,11 +131,12 @@ declare module goog.db {
         clear(): goog.async.Deferred<any>;
         
         /**
-         * Creates an index in this object store. Can only be called inside the callback
-         * for the Deferred returned from goog.db.IndexedDb#setVersion.
+         * Creates an index in this object store. Can only be called inside a
+         * {@link goog.db.UpgradeNeededCallback}.
          *
          * @param {string} name Name of the index to create.
-         * @param {string} keyPath Attribute to index on.
+         * @param {string|!Array<string>} keyPath Attribute or array of attributes to
+         *     index on.
          * @param {!Object=} opt_parameters Optional parameters object. The only
          *     available option is unique, which defaults to false. If unique is true,
          *     the index will enforce that there is only ever one object in the object
@@ -134,7 +144,7 @@ declare module goog.db {
          * @return {!goog.db.Index} The newly created, wrapped index.
          * @throws {goog.db.Error} In case of an error creating the index.
          */
-        createIndex(name: string, keyPath: string, opt_parameters?: Object): goog.db.Index;
+        createIndex(name: string, keyPath: string|Array<string>, opt_parameters?: Object): goog.db.Index;
         
         /**
          * Gets an index.
@@ -146,8 +156,8 @@ declare module goog.db {
         getIndex(name: string): goog.db.Index;
         
         /**
-         * Deletes an index from the object store. Can only be called inside the
-         * callback for the Deferred returned from goog.db.IndexedDb#setVersion.
+         * Deletes an index from the object store. Can only be called inside a
+         * {@link goog.db.UpgradeNeededCallback}.
          *
          * @param {string} name Name of the index to delete.
          * @throws {goog.db.Error} In case of an error deleting the index.

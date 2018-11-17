@@ -115,6 +115,7 @@ declare module goog.ui {
         /**
          * Hides correction UI.
          * Should be overridden by implementation.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         resume(): void;
         
@@ -147,11 +148,11 @@ declare module goog.ui {
         
         /**
          * Displays suggestions menu.
-         *
          * @param {Element} el Element to display menu for.
          * @param {goog.events.BrowserEvent|goog.math.Coordinate=} opt_pos Position to
          *     display menu at relative to the viewport (in client coordinates), or a
          *     mouse event.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         showSuggestionsMenu(el: Element, opt_pos?: goog.events.BrowserEvent|goog.math.Coordinate): void;
         
@@ -165,9 +166,9 @@ declare module goog.ui {
         
         /**
          * Handles correction menu actions.
-         *
          * @param {goog.events.Event} event Action event.
          * @protected
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         onCorrectionAction(event: goog.events.Event): void;
         

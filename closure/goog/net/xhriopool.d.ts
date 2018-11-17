@@ -8,13 +8,15 @@ declare module goog.net {
      * A pool of XhrIo objects.
      * @param {goog.structs.Map=} opt_headers Map of default headers to add to every
      *     request.
-     * @param {number=} opt_minCount Minimum number of objects (Default: 1).
+     * @param {number=} opt_minCount Minimum number of objects (Default: 0).
      * @param {number=} opt_maxCount Maximum number of objects (Default: 10).
+     * @param {boolean=} opt_withCredentials Add credentials to every request
+     *     (Default: false).
      * @constructor
      * @extends {goog.structs.PriorityPool}
      */
     class XhrIoPool extends goog.structs.PriorityPool<any> {
-        constructor(opt_headers?: goog.structs.Map<any, any>, opt_minCount?: number, opt_maxCount?: number);
+        constructor(opt_headers?: goog.structs.Map<any, any>, opt_minCount?: number, opt_maxCount?: number, opt_withCredentials?: boolean);
         
         /**
          * Creates an instance of an XhrIo object to use in the pool.

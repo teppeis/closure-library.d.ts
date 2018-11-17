@@ -10,14 +10,22 @@ declare module goog.proto2 {
      * @param {function(new:goog.proto2.Message)} messageType Constructor for the
      *     message class to which the field described by this class belongs.
      * @param {number|string} tag The field's tag index.
-     * @param {Object} metadata The metadata about this field that will be used
-     *     to construct this descriptor.
+     * @param {{
+     *       name: string,
+     *       fieldType: !goog.proto2.FieldDescriptor.FieldType,
+     *       type: !Function,
+     *       repeated: (*|undefined),
+     *       required: (*|undefined),
+     *       packed: (*|undefined),
+     *       defaultValue: (*|undefined)
+     *     }} metadata The metadata about this field
+     *     that will be used to construct this descriptor.
      *
      * @constructor
      * @final
      */
     class FieldDescriptor {
-        constructor(messageType: () => any, tag: number|string, metadata: Object);
+        constructor(messageType: () => any, tag: number|string, metadata: {name: string; fieldType: goog.proto2.FieldDescriptor.FieldType; type: Function; repeated: any|void; required: any|void; packed: any|void; defaultValue: any|void});
         
         /**
          * Returns the tag of the field that this descriptor represents.

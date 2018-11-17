@@ -44,8 +44,8 @@ declare module goog.ui {
         
         /**
          * Performs the appropriate action when the menu button is activated by the
-         * user.  Overrides the superclass implementation by not dispatching an {@code
-         * ACTION} event, because menu buttons exist only to reveal menus, not to
+         * user.  Overrides the superclass implementation by not dispatching an
+         * `ACTION` event, because menu buttons exist only to reveal menus, not to
          * perform actions themselves.  Calls {@link #setActive} to deactivate the
          * button.
          * @param {goog.events.Event} e Mouse or key event that triggered the action.
@@ -74,14 +74,14 @@ declare module goog.ui {
         containsElement(element: Element): boolean;
         
         /**
-         * Handles {@code ACTION} events dispatched by an activated menu item.
+         * Handles `ACTION` events dispatched by an activated menu item.
          * @param {goog.events.Event} e Action event to handle.
          * @protected
          */
         handleMenuAction(e: goog.events.Event): void;
         
         /**
-         * Handles {@code BLUR} events dispatched by the popup menu by closing it.
+         * Handles `BLUR` events dispatched by the popup menu by closing it.
          * Only registered if the menu is focusable.
          * @param {goog.events.Event} e Blur event dispatched by a focusable menu.
          */
@@ -237,7 +237,7 @@ declare module goog.ui {
         setScrollOnOverflow(scrollOnOverflow: boolean): void;
         
         /**
-         * @return {boolean} Wether the menu will scroll when it's to big to fit
+         * @return {boolean} Whether the menu will scroll when it's to big to fit
          *     vertically on the screen.
          */
         isScrollOnOverflow(): boolean;
@@ -303,7 +303,7 @@ declare module goog.ui {
         positionMenu(): void;
         
         /**
-         * Handles {@code HIGHLIGHT} events dispatched by the attached menu.
+         * Handles `HIGHLIGHT` events dispatched by the attached menu.
          * @param {goog.events.Event} e Highlight event to handle.
          */
         handleHighlightItem(e: goog.events.Event): void;
@@ -315,7 +315,7 @@ declare module goog.ui {
         handleUnHighlightItem(e: goog.events.Event): void;
         
         /**
-         * Handles {@code CLOSE} events dispatched by the associated menu.
+         * Handles `CLOSE` events dispatched by the associated menu.
          * @param {goog.events.Event} e Close event to handle.
          */
         handleCloseItem(e: goog.events.Event): void;

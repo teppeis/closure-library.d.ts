@@ -18,7 +18,7 @@ declare module goog.module {
         
         /**
          * The globally exported name of the load callback. Matches the
-         * definition in the js_modular_binary() BUILD rule.
+         * definition in the js_module_binary() BUILD rule.
          * @type {string}
          */
         static LOAD_CALLBACK: string;
@@ -110,7 +110,6 @@ declare module goog.module {
          * Registers a symbol in a loaded module. When called without symbol,
          * registers the module to be fully loaded and executes all callbacks
          * from pending require() callbacks for this module.
-         *
          * @param {string} module The name of the module. Cf. parameter module
          *     of method require().
          * @param {number|string=} opt_symbol The symbol being defined, or nothing when
@@ -118,6 +117,7 @@ declare module goog.module {
          *     require().
          * @param {Object=} opt_object The object bound to the symbol, or nothing when
          *     all symbols of the module are defined.
+         * @suppress {strictPrimitiveOperators} Part of the go/strict_warnings_migration
          */
         provide(module: string, opt_symbol?: number|string, opt_object?: Object): void;
     }

@@ -87,8 +87,8 @@ declare module goog.math {
         
         /**
          * Scales this size by the given scale factors. The width and height are scaled
-         * by {@code sx} and {@code opt_sy} respectively.  If {@code opt_sy} is not
-         * given, then {@code sx} is used for both the width and height.
+         * by `sx` and `opt_sy` respectively.  If `opt_sy` is not
+         * given, then `sx` is used for both the width and height.
          * @param {number} sx The scale factor to use for the width.
          * @param {number=} opt_sy The scale factor to use for the height.
          * @return {!goog.math.Size} This Size object after scaling.

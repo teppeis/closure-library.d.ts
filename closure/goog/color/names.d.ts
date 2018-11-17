@@ -5,6 +5,8 @@ declare module goog.color {
      * This list is way larger than the minimal one dictated by W3C.
      * The keys of this map are the lowercase "readable" names of the colors, while
      * the values are the "hex" values.
+     *
+     * @type {!Object<string, string>}
      */
-    var names: any;
+    var names: {[index: string]: string};
 }

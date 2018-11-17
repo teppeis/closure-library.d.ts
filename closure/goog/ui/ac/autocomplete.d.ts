@@ -29,6 +29,7 @@ declare module goog.ui.ac {
      *
      * @constructor
      * @extends {goog.events.EventTarget}
+     * @suppress {underscore}
      */
     class AutoComplete extends goog.events.EventTarget {
         constructor(matcher: Object, renderer: goog.events.EventTarget, selectionHandler: Object);

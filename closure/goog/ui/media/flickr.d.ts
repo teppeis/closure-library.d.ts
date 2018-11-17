@@ -11,8 +11,8 @@ declare module goog.ui.media {
      *
      * This class knows how to parse FlickrSet URLs, and render the DOM structure
      * of flickr set players. This class is meant to be used as a singleton static
-     * stateless class, that takes {@code goog.ui.media.Media} instances and renders
-     * it. It expects {@code goog.ui.media.Media.getModel} to return a well formed,
+     * stateless class, that takes `goog.ui.media.Media` instances and renders
+     * it. It expects `goog.ui.media.Media.getModel` to return a well formed,
      * previously constructed, set id {@see goog.ui.media.FlickrSet.parseUrl},
      * which is the data model this renderer will use to construct the DOM
      * structure. {@see goog.ui.media.FlickrSet.newControl} for a example of
@@ -50,7 +50,7 @@ declare module goog.ui.media {
          * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper, used for
          *     document interaction.
          * @return {!goog.ui.media.Media} A Control binded to the FlickrSet renderer.
-         * @throws exception in case {@code flickrSetUrl} is an invalid flickr set URL.
+         * @throws exception in case `flickrSetUrl` is an invalid flickr set URL.
          * TODO(user): use {@link goog.ui.media.MediaModel} once it is checked in.
          */
         static newControl(dataModel: goog.ui.media.FlickrSetModel, opt_domHelper?: goog.dom.DomHelper): goog.ui.media.Media;
@@ -84,8 +84,8 @@ declare module goog.ui.media {
     }
 
     /**
-     * The {@code goog.ui.media.FlickrAlbum} media data model. It stores a required
-     * {@code userId} and {@code setId} fields, sets the flickr Set URL, and
+     * The `goog.ui.media.FlickrAlbum` media data model. It stores a required
+     * `userId` and `setId` fields, sets the flickr Set URL, and
      * allows a few optional parameters.
      *
      * @param {string} userId The flickr userId associated with this set.
@@ -100,7 +100,7 @@ declare module goog.ui.media {
         constructor(userId: string, setId: string, opt_caption?: string, opt_description?: string);
         
         /**
-         * Takes a {@code flickrSetUrl} and extracts the flickr username and set id.
+         * Takes a `flickrSetUrl` and extracts the flickr username and set id.
          *
          * @param {string} flickrSetUrl A Flickr set URL.
          * @param {string=} opt_caption An optional caption of the flickr set.

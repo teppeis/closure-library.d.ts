@@ -8,9 +8,9 @@ declare module goog.dom {
     /**
      * There are three types of token:
      *  <ol>
-     *    <li>{@code START_TAG} - The beginning of a tag.
-     *    <li>{@code OTHER} - Any non-element node position.
-     *    <li>{@code END_TAG} - The end of a tag.
+     *    <li>`START_TAG` - The beginning of a tag.
+     *    <li>`OTHER` - Any non-element node position.
+     *    <li>`END_TAG` - The end of a tag.
      *  </ol>
      * Users of this enumeration can rely on {@code START_TAG + END_TAG = 0} and
      * that {@code OTHER = 0}.
@@ -76,41 +76,6 @@ declare module goog.dom {
      */
     class TagIterator extends goog.iter.Iterator<Node> {
         constructor(opt_node?: Node, opt_reversed?: boolean, opt_unconstrained?: boolean, opt_tagType?: goog.dom.TagWalkType, opt_depth?: number);
-        
-        /**
-         * The node this position is located on.
-         * @type {Node}
-         */
-        node: Node;
-        
-        /**
-         * The type of this position.
-         * @type {goog.dom.TagWalkType}
-         */
-        tagType: goog.dom.TagWalkType;
-        
-        /**
-         * The tree depth of this position relative to where the iterator started.  The
-         * depth is considered to be the tree depth just past the current node, so if an
-         * iterator is at position <pre>
-         *     <div>|</div>
-         * </pre>
-         * (i.e. the node is the div and the type is START_TAG) its depth will be 1.
-         * @type {number}
-         */
-        depth: number;
-        
-        /**
-         * Whether the node iterator is moving in reverse.
-         * @type {boolean}
-         */
-        reversed: boolean;
-        
-        /**
-         * Whether the iterator is constrained to the starting node and its children.
-         * @type {boolean}
-         */
-        constrained: boolean;
         
         /**
          * Set the position of the iterator.  Overwrite the tree node and the position

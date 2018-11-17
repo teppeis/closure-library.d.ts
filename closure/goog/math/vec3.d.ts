@@ -95,7 +95,7 @@ declare module goog.math {
          * Adds another vector to this vector in-place.
          *
          * @param {goog.math.Vec3} b The vector to add.
-         * @return {!goog.math.Vec3} This vector with {@code b} added.
+         * @return {!goog.math.Vec3} This vector with `b` added.
          */
         add(b: goog.math.Vec3): goog.math.Vec3;
         
@@ -103,7 +103,7 @@ declare module goog.math {
          * Subtracts another vector from this vector in-place.
          *
          * @param {goog.math.Vec3} b The vector to subtract.
-         * @return {!goog.math.Vec3} This vector with {@code b} subtracted.
+         * @return {!goog.math.Vec3} This vector with `b` subtracted.
          */
         subtract(b: goog.math.Vec3): goog.math.Vec3;
         
@@ -189,5 +189,14 @@ declare module goog.math {
          * @return {!goog.math.Vec3} The interpolated vector.
          */
         static lerp(a: goog.math.Vec3, b: goog.math.Vec3, x: number): goog.math.Vec3;
+        
+        /**
+         * Returns a new Vec3 that is a copy of the vector a, but rescaled by a factor s
+         * in all dimensions.
+         * @param {!goog.math.Vec3} a Vector a.
+         * @param {number} s Scale factor.
+         * @return {!goog.math.Vec3} A new rescaled vector.
+         */
+        static rescaled(a: goog.math.Vec3, s: number): goog.math.Vec3;
     }
 }

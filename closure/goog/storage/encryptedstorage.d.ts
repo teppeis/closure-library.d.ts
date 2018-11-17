@@ -14,6 +14,7 @@ declare module goog.storage {
      *     storage mechanism.
      * @param {string} secret The secret key used to encrypt the storage.
      * @constructor
+     * @struct
      * @extends {goog.storage.CollectableStorage}
      * @final
      */

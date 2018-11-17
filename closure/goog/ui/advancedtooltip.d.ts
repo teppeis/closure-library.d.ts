@@ -81,10 +81,10 @@ declare module goog.ui {
         /**
          * Called by timer from mouse out handler. Hides tooltip if cursor is still
          * outside element and tooltip.
-         * @param {Element} el Anchor when hide timer was started.
+         * @param {?Element|undefined} el Anchor when hide timer was started.
          * @override
          */
-        maybeHide(el: Element): void;
+        maybeHide(el: Element|void): void;
         
         /**
          * Handler for mouse move events.
@@ -114,7 +114,7 @@ declare module goog.ui {
         /**
          * Forces the recalculation of the hotspot on the next mouse over event.
          * @deprecated Not ever necessary to call this function. Hot spot is calculated
-         *     as neccessary.
+         *     as necessary.
          */
         resetHotSpot(): void;
     }

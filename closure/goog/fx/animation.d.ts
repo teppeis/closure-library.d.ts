@@ -14,6 +14,7 @@ declare module goog.fx {
      * @param {number} duration Length of animation in milliseconds.
      * @param {Function=} opt_acc Acceleration function, returns 0-1 for inputs 0-1.
      * @constructor
+     * @struct
      * @implements {goog.fx.anim.Animated}
      * @implements {goog.fx.Transition}
      * @extends {goog.fx.TransitionBase}
@@ -25,6 +26,11 @@ declare module goog.fx {
          * @deprecated Use goog.fx.anim.TIMEOUT.
          */
         static TIMEOUT: any;
+        
+        /**
+         * @return {number} The duration of this animation in milliseconds.
+         */
+        getDuration(): number;
         
         /**
          * Sets whether the animation should use "right" rather than "left" to position
@@ -114,6 +120,7 @@ declare module goog.fx {
      * @param {string} type Event type.
      * @param {goog.fx.Animation} anim An animation object.
      * @constructor
+     * @struct
      * @extends {goog.events.Event}
      */
     class AnimationEvent extends goog.events.Event {

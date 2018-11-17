@@ -77,5 +77,8 @@ declare module goog.ui.ac {
          * @param {Function} matchHandler callback to execute after matching.
          */
         requestMatchingRows(token: string, maxMatches: number, matchHandler: Function): void;
+        
+        /** Clears the cache. */
+        clearCache(): void;
     }
 }

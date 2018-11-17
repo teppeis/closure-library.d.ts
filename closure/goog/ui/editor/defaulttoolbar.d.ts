@@ -184,7 +184,7 @@ declare module goog.ui.editor.DefaultToolbar {
     /**
      * Creates a {@link goog.ui.Toolbar} containing the specified set of
      * toolbar buttons, and renders it into the given parent element.  Each
-     * item in the {@code items} array must either be a
+     * item in the `items` array must either be a
      * {@link goog.editor.Command} (to create a built-in button) or a subclass
      * of {@link goog.ui.Control} (to create a custom control).
      * @param {!Array<string|goog.ui.Control>} items Toolbar items; each must
@@ -215,11 +215,13 @@ declare module goog.ui.editor.DefaultToolbar {
 declare module goog.ui.editor {
 
     /**
-     * @typedef {{command: string, tooltip: ?string,
-     *   caption: ?goog.ui.ControlContent, classes: ?string,
-     *   factory: ?function(string, string, goog.ui.ControlContent, ?string,
-     *       goog.ui.ButtonRenderer, goog.dom.DomHelper):goog.ui.Button,
-     *   queryable:?boolean}}
+     * @typedef {{
+     *   command: string,
+     *   tooltip: (undefined|string),
+     *   caption: (undefined|goog.ui.ControlContent),
+     *   classes: (undefined|string),
+     *   factory: (undefined|!Function),
+     *   queryable:(undefined|boolean)}}
      */
-    type ButtonDescriptor = {command: string; tooltip: string; caption: goog.ui.ControlContent; classes: string; factory: (arg0: string, arg1: string, arg2: goog.ui.ControlContent, arg3: string, arg4: goog.ui.ButtonRenderer, arg5: goog.dom.DomHelper) => goog.ui.Button; queryable: boolean};
+    type ButtonDescriptor = {command: string; tooltip: void|string; caption: void|goog.ui.ControlContent; classes: void|string; factory: void|Function; queryable: void|boolean};
 }

@@ -8,7 +8,8 @@ declare module goog.ui.tree {
     /**
      * An abstract base class for a node in the tree.
      *
-     * @param {string|!goog.html.SafeHtml} html The html content of the node label.
+     * @param {string|!goog.html.SafeHtml} content The content of the node label.
+     *     Strings are treated as plain-text and will be HTML escaped.
      * @param {Object=} opt_config The configuration for the tree. See
      *    {@link goog.ui.tree.BaseNode.defaultConfig}. If not specified the
      *    default config will be used.
@@ -17,7 +18,7 @@ declare module goog.ui.tree {
      * @extends {goog.ui.Component}
      */
     class BaseNode extends goog.ui.Component {
-        constructor(html: string|goog.html.SafeHtml, opt_config?: Object, opt_domHelper?: goog.dom.DomHelper);
+        constructor(content: string|goog.html.SafeHtml, opt_config?: Object, opt_domHelper?: goog.dom.DomHelper);
         
         /**
          * Map of nodes in existence. Needed to route events to the appropriate nodes.
@@ -66,8 +67,9 @@ declare module goog.ui.tree {
         
         /**
          * Returns the tree.
+         * @return {?goog.ui.tree.TreeControl}
          */
-        getTree(): void;
+        getTree(): goog.ui.tree.TreeControl;
         
         /**
          * Returns the depth of the node in the tree. Should not be overridden.
@@ -132,7 +134,7 @@ declare module goog.ui.tree {
         
         /**
          * Originally it was intended to deselect the node but never worked.
-         * @deprecated Use {@code tree.setSelectedItem(null)}.
+         * @deprecated Use `tree.setSelectedItem(null)`.
          */
         deselect(): void;
         
@@ -254,13 +256,6 @@ declare module goog.ui.tree {
         /**
          * Sets the html that appears after the label. This is useful if you want to
          * put extra UI on the row of the label but not inside the anchor tag.
-         * @param {string} html The html.
-         */
-        setAfterLabelHtml(html: string): void;
-        
-        /**
-         * Sets the html that appears after the label. This is useful if you want to
-         * put extra UI on the row of the label but not inside the anchor tag.
          * @param {!goog.html.SafeHtml} html The html.
          */
         setAfterLabelSafeHtml(html: goog.html.SafeHtml): void;
@@ -375,12 +370,6 @@ declare module goog.ui.tree {
          * @return {string} The plain text of the label.
          */
         getText(): string;
-        
-        /**
-         * Sets the html of the label.
-         * @param {string} s The html string for the label.
-         */
-        setHtml(s: string): void;
         
         /**
          * Sets the HTML of the label.
@@ -504,10 +493,9 @@ declare module goog.ui.tree.BaseNode {
      */
     type EventType = string;
     var EventType: {
-        [index: string]: EventType;
-        // BEFORE_EXPAND: EventType;
-        // EXPAND: EventType;
-        // BEFORE_COLLAPSE: EventType;
-        // COLLAPSE: EventType;
+        BEFORE_EXPAND: EventType;
+        EXPAND: EventType;
+        BEFORE_COLLAPSE: EventType;
+        COLLAPSE: EventType;
     };
 }

@@ -60,8 +60,8 @@ declare module goog.ui.media {
         
         /**
          * Builds the common DOM structure of medias. Builds an outer div, and appends
-         * a child div with the {@code goog.ui.Control.getContent} content. Marks the
-         * caption with a {@code this.getClassClass()} + '-caption' css flag, so that
+         * a child div with the `goog.ui.Control.getContent` content. Marks the
+         * caption with a `this.getClassClass()` + '-caption' css flag, so that
          * specific renderers can hide/show the caption as desired.
          *
          * @param {goog.ui.Control} control The control instance.

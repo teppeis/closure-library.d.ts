@@ -10,25 +10,28 @@ declare module goog.async {
      * per interval (specified in milliseconds). If it gets multiple signals
      * to perform the action while it is waiting, it will only perform the action
      * once at the end of the interval.
-     * @param {function(this: T)} listener Function to callback when the action is
-     *     triggered.
+     * @param {function(this: T, ...?)} listener Function to callback when the
+     *     action is triggered.
      * @param {number} interval Interval over which to throttle. The listener can
      *     only be called once per interval.
      * @param {T=} opt_handler Object in whose scope to call the listener.
      * @constructor
+     * @struct
      * @extends {goog.Disposable}
      * @final
      * @template T
      */
     class Throttle<T> extends goog.Disposable {
-        constructor(listener: () => any, interval: number, opt_handler?: T);
+        constructor(listener: (...arg0: any[]) => any, interval: number, opt_handler?: T);
         
         /**
          * Notifies the throttle that the action has happened. It will throttle the call
          * so that the callback is not called too often according to the interval
-         * parameter passed to the constructor.
+         * parameter passed to the constructor, passing the arguments from the last call
+         * of this function into the throttled function.
+         * @param {...?} var_args Arguments to pass on to the throttled function.
          */
-        fire(): void;
+        fire(...var_args: any[]): void;
         
         /**
          * Cancels any pending action callback. The throttle can be restarted by

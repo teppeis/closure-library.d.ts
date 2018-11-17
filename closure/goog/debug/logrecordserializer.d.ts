@@ -25,6 +25,7 @@ declare module goog.debug.logRecordSerializer {
      * exception is likely to be lost.
      * @param {goog.debug.LogRecord} record The record to serialize.
      * @return {string} Serialized JSON string of the log message.
+     * @suppress {strictMissingProperties} message is not defined on Object
      */
     function serialize(record: goog.debug.LogRecord): string;
 
@@ -34,13 +35,4 @@ declare module goog.debug.logRecordSerializer {
      * @return {!goog.debug.LogRecord} The deserialized record.
      */
     function parse(s: string): goog.debug.LogRecord;
-
-    /**
-     * Deserializes a JSON-serialized LogRecord.  Use this only if you're
-     * naive enough to blindly trust any JSON formatted input that comes
-     * your way.
-     * @param {string} s The JSON serialized record.
-     * @return {!goog.debug.LogRecord} The deserialized record.
-     */
-    function unsafeParse(s: string): goog.debug.LogRecord;
 }

@@ -6,7 +6,8 @@ declare module goog.ui.tree {
 
     /**
      * A single node in the tree.
-     * @param {string|!goog.html.SafeHtml} html The html content of the node label.
+     * @param {string|!goog.html.SafeHtml} content The content of the node label.
+     *     Strings are treated as plain-text and will be HTML escaped.
      * @param {Object=} opt_config The configuration for the tree. See
      *    goog.ui.tree.TreeControl.defaultConfig. If not specified, a default config
      *    will be used.
@@ -15,7 +16,7 @@ declare module goog.ui.tree {
      * @extends {goog.ui.tree.BaseNode}
      */
     class TreeNode extends goog.ui.tree.BaseNode {
-        constructor(html: string|goog.html.SafeHtml, opt_config?: Object, opt_domHelper?: goog.dom.DomHelper);
+        constructor(content: string|goog.html.SafeHtml, opt_config?: Object, opt_domHelper?: goog.dom.DomHelper);
         
         /**
          * Returns the tree.

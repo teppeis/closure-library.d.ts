@@ -52,7 +52,7 @@ declare module goog.vec.Vec3 {
     function create(): goog.vec.Vec3.Type;
 
     /**
-     * Creates a new 3 element FLoat32 vector initialized with the value from the
+     * Creates a new 3 element Float32 vector initialized with the value from the
      * given array.
      *
      * @param {goog.vec.Vec3.AnyType} vec The source 3 element array.

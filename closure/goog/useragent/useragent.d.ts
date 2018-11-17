@@ -17,6 +17,18 @@ declare module goog.userAgent {
     var IE: boolean;
 
     /**
+     * Whether the user agent is Microsoft Edge.
+     * @type {boolean}
+     */
+    var EDGE: boolean;
+
+    /**
+     * Whether the user agent is MS Internet Explorer or MS Edge.
+     * @type {boolean}
+     */
+    var EDGE_OR_IE: boolean;
+
+    /**
      * Whether the user agent is Gecko. Gecko is the rendering engine used by
      * Mozilla, Firefox, and others.
      * @type {boolean}
@@ -104,6 +116,23 @@ declare module goog.userAgent {
     var IPAD: boolean;
 
     /**
+     * Whether the user agent is running on an iPod.
+     * @type {boolean}
+     */
+    var IPOD: boolean;
+
+    /**
+     * Whether the user agent is running on iOS.
+     * @type {boolean}
+     */
+    var IOS: boolean;
+
+    /**
+     * Whether the user agent is running on KaiOS.
+     */
+    var KAIOS: any;
+
+    /**
      * The version of the user agent. This is a string because it might contain
      * 'b' (as in beta) as well as multiple dots.
      * @type {string}
@@ -128,8 +157,13 @@ declare module goog.userAgent {
     function getUserAgentString(): string;
 
     /**
+     * @return {?Navigator} The native navigator object.
+     */
+    function getNavigatorTyped(): Navigator;
+
+    /**
      * TODO(nnaze): Change type to "Navigator" and update compilation targets.
-     * @return {Object} The native navigator object.
+     * @return {?Object} The native navigator object.
      */
     function getNavigator(): Object;
 
@@ -163,7 +197,7 @@ declare module goog.userAgent {
     function isVersionOrHigher(version: string|number): boolean;
 
     /**
-     * Deprecated alias to {@code goog.userAgent.isVersionOrHigher}.
+     * Deprecated alias to `goog.userAgent.isVersionOrHigher`.
      * @param {string|number} version The version to check.
      * @return {boolean} Whether the user agent version is higher or the same as
      *     the given version.
@@ -183,7 +217,7 @@ declare module goog.userAgent {
     function isDocumentModeOrHigher(documentMode: number): boolean;
 
     /**
-     * Deprecated alias to {@code goog.userAgent.isDocumentModeOrHigher}.
+     * Deprecated alias to `goog.userAgent.isDocumentModeOrHigher`.
      * @param {number} version The version to check.
      * @return {boolean} Whether the IE effective document mode is higher or the
      *      same as the given version.

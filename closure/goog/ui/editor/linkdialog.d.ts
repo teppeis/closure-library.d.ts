@@ -37,6 +37,12 @@ declare module goog.ui.editor {
         showOpenLinkInNewWindow(startChecked: boolean): void;
         
         /**
+         * Tells the dialog to focus the text to display input instead of the url field
+         * if the text to display input is empty when the dialog is opened.
+         */
+        focusTextToDisplayOnOpenIfEmpty(): void;
+        
+        /**
          * Tells the dialog to show a checkbox where the user can choose to add
          * 'rel=nofollow' attribute to the link.
          */
@@ -65,19 +71,19 @@ declare module goog.ui.editor {
         setAutogenFeatureEnabled(enable: boolean): void;
         
         /**
-         * Checks if {@code str} contains {@code "nofollow"} as a separate word.
-         * @param {string} str String to be tested.  This is usually {@code rel}
-         *     attribute of an {@code HTMLAnchorElement} object.
-         * @return {boolean} {@code true} if {@code str} contains {@code nofollow}.
+         * Checks if `str` contains {@code "nofollow"} as a separate word.
+         * @param {string} str String to be tested.  This is usually `rel`
+         *     attribute of an `HTMLAnchorElement` object.
+         * @return {boolean} `true` if `str` contains `nofollow`.
          */
         static hasNoFollow(str: string): boolean;
         
         /**
-         * Removes {@code "nofollow"} from {@code rel} if it's present as a separate
+         * Removes {@code "nofollow"} from `rel` if it's present as a separate
          * word.
-         * @param {string} rel Input string.  This is usually {@code rel} attribute of
-         *     an {@code HTMLAnchorElement} object.
-         * @return {string} {@code rel} with any {@code "nofollow"} removed.
+         * @param {string} rel Input string.  This is usually `rel` attribute of
+         *     an `HTMLAnchorElement` object.
+         * @return {string} `rel` with any {@code "nofollow"} removed.
          */
         static removeNoFollow(rel: string): string;
         
@@ -102,8 +108,7 @@ declare module goog.ui.editor.LinkDialog {
      */
     type EventType = string;
     var EventType: {
-        [index: string]: EventType;
-        // BEFORE_TEST_LINK: EventType;
+        BEFORE_TEST_LINK: EventType;
     };
 
     /**

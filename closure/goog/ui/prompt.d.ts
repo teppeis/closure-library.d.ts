@@ -11,8 +11,8 @@ declare module goog.ui {
      * "Content area" and has the default class-name 'modal-dialog-userInput'
      *
      * @param {string} promptTitle The title of the prompt.
-     * @param {string|!goog.html.SafeHtml} promptHtml The HTML body of the prompt.
-     *     The variable is trusted and it should be already properly escaped.
+     * @param {string|!goog.html.SafeHtml} promptBody The body of the prompt.
+     *     String is treated as plain text and it will be HTML-escaped.
      * @param {Function} callback The function to call when the user selects Ok or
      *     Cancel. The function should expect a single argument which represents
      *     what the user entered into the prompt. If the user presses cancel, the
@@ -28,7 +28,7 @@ declare module goog.ui {
      * @extends {goog.ui.Dialog}
      */
     class Prompt extends goog.ui.Dialog {
-        constructor(promptTitle: string, promptHtml: string|goog.html.SafeHtml, callback: Function, opt_defaultValue?: string, opt_class?: string, opt_useIframeForIE?: boolean, opt_domHelper?: goog.dom.DomHelper);
+        constructor(promptTitle: string, promptBody: string|goog.html.SafeHtml, callback: Function, opt_defaultValue?: string, opt_class?: string, opt_useIframeForIE?: boolean, opt_domHelper?: goog.dom.DomHelper);
         
         /**
          * Sets the validation function that takes a string and returns true if the
@@ -39,10 +39,10 @@ declare module goog.ui {
         setValidationFunction(fn: (arg0: string) => boolean): void;
         
         /**
-         * @return {HTMLInputElement} The user input element. May be null if the Prompt
-         *     has not been rendered.
+         * @return {?HTMLInputElement|?HTMLTextAreaElement} The user input element. May
+         *     be null if the Prompt has not been rendered.
          */
-        getInputElement(): HTMLInputElement;
+        getInputElement(): HTMLInputElement|HTMLTextAreaElement;
         
         /**
          * Sets an input decorator function.  This function will be called in
@@ -56,12 +56,12 @@ declare module goog.ui {
         
         /**
          * Set the number of rows in the user input element.
-         * A values of 1 means use an <input> element.  If the prompt is already
-         * rendered then you cannot change from <input> to <textarea> or vice versa.
+         * A values of 1 means use an `<input>` element.  If the prompt is already
+         * rendered then you cannot change from `<input>` to `<textarea>` or vice versa.
          * @param {number} rows Number of rows for user input element.
          * @throws {goog.ui.Component.Error.ALREADY_RENDERED} If the component is
-         *    already rendered and an attempt to change between <input> and <textarea>
-         *    is made.
+         *    already rendered and an attempt to change between `<input>` and
+         *    `<textarea>` is made.
          */
         setRows(rows: number): void;
         

@@ -1,217 +1,121 @@
 declare module goog {
     function require(name: 'goog.i18n.NumberFormatSymbols_af'): typeof goog.i18n.NumberFormatSymbols_af;
-    function require(name: 'goog.i18n.NumberFormatSymbols_af_ZA'): typeof goog.i18n.NumberFormatSymbols_af_ZA;
     function require(name: 'goog.i18n.NumberFormatSymbols_am'): typeof goog.i18n.NumberFormatSymbols_am;
-    function require(name: 'goog.i18n.NumberFormatSymbols_am_ET'): typeof goog.i18n.NumberFormatSymbols_am_ET;
     function require(name: 'goog.i18n.NumberFormatSymbols_ar'): typeof goog.i18n.NumberFormatSymbols_ar;
-    function require(name: 'goog.i18n.NumberFormatSymbols_ar_001'): typeof goog.i18n.NumberFormatSymbols_ar_001;
+    function require(name: 'goog.i18n.NumberFormatSymbols_ar_DZ'): typeof goog.i18n.NumberFormatSymbols_ar_DZ;
+    function require(name: 'goog.i18n.NumberFormatSymbols_ar_EG'): typeof goog.i18n.NumberFormatSymbols_ar_EG;
+    function require(name: 'goog.i18n.NumberFormatSymbols_ar_EG_u_nu_latn'): typeof goog.i18n.NumberFormatSymbols_ar_EG_u_nu_latn;
     function require(name: 'goog.i18n.NumberFormatSymbols_az'): typeof goog.i18n.NumberFormatSymbols_az;
-    function require(name: 'goog.i18n.NumberFormatSymbols_az_Latn_AZ'): typeof goog.i18n.NumberFormatSymbols_az_Latn_AZ;
+    function require(name: 'goog.i18n.NumberFormatSymbols_be'): typeof goog.i18n.NumberFormatSymbols_be;
     function require(name: 'goog.i18n.NumberFormatSymbols_bg'): typeof goog.i18n.NumberFormatSymbols_bg;
-    function require(name: 'goog.i18n.NumberFormatSymbols_bg_BG'): typeof goog.i18n.NumberFormatSymbols_bg_BG;
     function require(name: 'goog.i18n.NumberFormatSymbols_bn'): typeof goog.i18n.NumberFormatSymbols_bn;
-    function require(name: 'goog.i18n.NumberFormatSymbols_bn_BD'): typeof goog.i18n.NumberFormatSymbols_bn_BD;
+    function require(name: 'goog.i18n.NumberFormatSymbols_bn_u_nu_latn'): typeof goog.i18n.NumberFormatSymbols_bn_u_nu_latn;
     function require(name: 'goog.i18n.NumberFormatSymbols_br'): typeof goog.i18n.NumberFormatSymbols_br;
-    function require(name: 'goog.i18n.NumberFormatSymbols_br_FR'): typeof goog.i18n.NumberFormatSymbols_br_FR;
+    function require(name: 'goog.i18n.NumberFormatSymbols_bs'): typeof goog.i18n.NumberFormatSymbols_bs;
     function require(name: 'goog.i18n.NumberFormatSymbols_ca'): typeof goog.i18n.NumberFormatSymbols_ca;
-    function require(name: 'goog.i18n.NumberFormatSymbols_ca_AD'): typeof goog.i18n.NumberFormatSymbols_ca_AD;
-    function require(name: 'goog.i18n.NumberFormatSymbols_ca_ES'): typeof goog.i18n.NumberFormatSymbols_ca_ES;
-    function require(name: 'goog.i18n.NumberFormatSymbols_ca_ES_VALENCIA'): typeof goog.i18n.NumberFormatSymbols_ca_ES_VALENCIA;
-    function require(name: 'goog.i18n.NumberFormatSymbols_ca_FR'): typeof goog.i18n.NumberFormatSymbols_ca_FR;
-    function require(name: 'goog.i18n.NumberFormatSymbols_ca_IT'): typeof goog.i18n.NumberFormatSymbols_ca_IT;
     function require(name: 'goog.i18n.NumberFormatSymbols_chr'): typeof goog.i18n.NumberFormatSymbols_chr;
-    function require(name: 'goog.i18n.NumberFormatSymbols_chr_US'): typeof goog.i18n.NumberFormatSymbols_chr_US;
     function require(name: 'goog.i18n.NumberFormatSymbols_cs'): typeof goog.i18n.NumberFormatSymbols_cs;
-    function require(name: 'goog.i18n.NumberFormatSymbols_cs_CZ'): typeof goog.i18n.NumberFormatSymbols_cs_CZ;
     function require(name: 'goog.i18n.NumberFormatSymbols_cy'): typeof goog.i18n.NumberFormatSymbols_cy;
-    function require(name: 'goog.i18n.NumberFormatSymbols_cy_GB'): typeof goog.i18n.NumberFormatSymbols_cy_GB;
     function require(name: 'goog.i18n.NumberFormatSymbols_da'): typeof goog.i18n.NumberFormatSymbols_da;
-    function require(name: 'goog.i18n.NumberFormatSymbols_da_DK'): typeof goog.i18n.NumberFormatSymbols_da_DK;
-    function require(name: 'goog.i18n.NumberFormatSymbols_da_GL'): typeof goog.i18n.NumberFormatSymbols_da_GL;
     function require(name: 'goog.i18n.NumberFormatSymbols_de'): typeof goog.i18n.NumberFormatSymbols_de;
     function require(name: 'goog.i18n.NumberFormatSymbols_de_AT'): typeof goog.i18n.NumberFormatSymbols_de_AT;
-    function require(name: 'goog.i18n.NumberFormatSymbols_de_BE'): typeof goog.i18n.NumberFormatSymbols_de_BE;
     function require(name: 'goog.i18n.NumberFormatSymbols_de_CH'): typeof goog.i18n.NumberFormatSymbols_de_CH;
-    function require(name: 'goog.i18n.NumberFormatSymbols_de_DE'): typeof goog.i18n.NumberFormatSymbols_de_DE;
-    function require(name: 'goog.i18n.NumberFormatSymbols_de_LU'): typeof goog.i18n.NumberFormatSymbols_de_LU;
     function require(name: 'goog.i18n.NumberFormatSymbols_el'): typeof goog.i18n.NumberFormatSymbols_el;
-    function require(name: 'goog.i18n.NumberFormatSymbols_el_GR'): typeof goog.i18n.NumberFormatSymbols_el_GR;
     function require(name: 'goog.i18n.NumberFormatSymbols_en'): typeof goog.i18n.NumberFormatSymbols_en;
-    function require(name: 'goog.i18n.NumberFormatSymbols_en_001'): typeof goog.i18n.NumberFormatSymbols_en_001;
-    function require(name: 'goog.i18n.NumberFormatSymbols_en_AS'): typeof goog.i18n.NumberFormatSymbols_en_AS;
     function require(name: 'goog.i18n.NumberFormatSymbols_en_AU'): typeof goog.i18n.NumberFormatSymbols_en_AU;
-    function require(name: 'goog.i18n.NumberFormatSymbols_en_DG'): typeof goog.i18n.NumberFormatSymbols_en_DG;
-    function require(name: 'goog.i18n.NumberFormatSymbols_en_FM'): typeof goog.i18n.NumberFormatSymbols_en_FM;
+    function require(name: 'goog.i18n.NumberFormatSymbols_en_CA'): typeof goog.i18n.NumberFormatSymbols_en_CA;
     function require(name: 'goog.i18n.NumberFormatSymbols_en_GB'): typeof goog.i18n.NumberFormatSymbols_en_GB;
-    function require(name: 'goog.i18n.NumberFormatSymbols_en_GU'): typeof goog.i18n.NumberFormatSymbols_en_GU;
     function require(name: 'goog.i18n.NumberFormatSymbols_en_IE'): typeof goog.i18n.NumberFormatSymbols_en_IE;
     function require(name: 'goog.i18n.NumberFormatSymbols_en_IN'): typeof goog.i18n.NumberFormatSymbols_en_IN;
-    function require(name: 'goog.i18n.NumberFormatSymbols_en_IO'): typeof goog.i18n.NumberFormatSymbols_en_IO;
-    function require(name: 'goog.i18n.NumberFormatSymbols_en_MH'): typeof goog.i18n.NumberFormatSymbols_en_MH;
-    function require(name: 'goog.i18n.NumberFormatSymbols_en_MP'): typeof goog.i18n.NumberFormatSymbols_en_MP;
-    function require(name: 'goog.i18n.NumberFormatSymbols_en_PR'): typeof goog.i18n.NumberFormatSymbols_en_PR;
-    function require(name: 'goog.i18n.NumberFormatSymbols_en_PW'): typeof goog.i18n.NumberFormatSymbols_en_PW;
     function require(name: 'goog.i18n.NumberFormatSymbols_en_SG'): typeof goog.i18n.NumberFormatSymbols_en_SG;
-    function require(name: 'goog.i18n.NumberFormatSymbols_en_TC'): typeof goog.i18n.NumberFormatSymbols_en_TC;
-    function require(name: 'goog.i18n.NumberFormatSymbols_en_UM'): typeof goog.i18n.NumberFormatSymbols_en_UM;
     function require(name: 'goog.i18n.NumberFormatSymbols_en_US'): typeof goog.i18n.NumberFormatSymbols_en_US;
-    function require(name: 'goog.i18n.NumberFormatSymbols_en_VG'): typeof goog.i18n.NumberFormatSymbols_en_VG;
-    function require(name: 'goog.i18n.NumberFormatSymbols_en_VI'): typeof goog.i18n.NumberFormatSymbols_en_VI;
     function require(name: 'goog.i18n.NumberFormatSymbols_en_ZA'): typeof goog.i18n.NumberFormatSymbols_en_ZA;
-    function require(name: 'goog.i18n.NumberFormatSymbols_en_ZW'): typeof goog.i18n.NumberFormatSymbols_en_ZW;
     function require(name: 'goog.i18n.NumberFormatSymbols_es'): typeof goog.i18n.NumberFormatSymbols_es;
     function require(name: 'goog.i18n.NumberFormatSymbols_es_419'): typeof goog.i18n.NumberFormatSymbols_es_419;
-    function require(name: 'goog.i18n.NumberFormatSymbols_es_EA'): typeof goog.i18n.NumberFormatSymbols_es_EA;
     function require(name: 'goog.i18n.NumberFormatSymbols_es_ES'): typeof goog.i18n.NumberFormatSymbols_es_ES;
-    function require(name: 'goog.i18n.NumberFormatSymbols_es_IC'): typeof goog.i18n.NumberFormatSymbols_es_IC;
+    function require(name: 'goog.i18n.NumberFormatSymbols_es_MX'): typeof goog.i18n.NumberFormatSymbols_es_MX;
+    function require(name: 'goog.i18n.NumberFormatSymbols_es_US'): typeof goog.i18n.NumberFormatSymbols_es_US;
     function require(name: 'goog.i18n.NumberFormatSymbols_et'): typeof goog.i18n.NumberFormatSymbols_et;
-    function require(name: 'goog.i18n.NumberFormatSymbols_et_EE'): typeof goog.i18n.NumberFormatSymbols_et_EE;
     function require(name: 'goog.i18n.NumberFormatSymbols_eu'): typeof goog.i18n.NumberFormatSymbols_eu;
-    function require(name: 'goog.i18n.NumberFormatSymbols_eu_ES'): typeof goog.i18n.NumberFormatSymbols_eu_ES;
     function require(name: 'goog.i18n.NumberFormatSymbols_fa'): typeof goog.i18n.NumberFormatSymbols_fa;
-    function require(name: 'goog.i18n.NumberFormatSymbols_fa_IR'): typeof goog.i18n.NumberFormatSymbols_fa_IR;
+    function require(name: 'goog.i18n.NumberFormatSymbols_fa_u_nu_latn'): typeof goog.i18n.NumberFormatSymbols_fa_u_nu_latn;
     function require(name: 'goog.i18n.NumberFormatSymbols_fi'): typeof goog.i18n.NumberFormatSymbols_fi;
-    function require(name: 'goog.i18n.NumberFormatSymbols_fi_FI'): typeof goog.i18n.NumberFormatSymbols_fi_FI;
     function require(name: 'goog.i18n.NumberFormatSymbols_fil'): typeof goog.i18n.NumberFormatSymbols_fil;
-    function require(name: 'goog.i18n.NumberFormatSymbols_fil_PH'): typeof goog.i18n.NumberFormatSymbols_fil_PH;
     function require(name: 'goog.i18n.NumberFormatSymbols_fr'): typeof goog.i18n.NumberFormatSymbols_fr;
-    function require(name: 'goog.i18n.NumberFormatSymbols_fr_BL'): typeof goog.i18n.NumberFormatSymbols_fr_BL;
     function require(name: 'goog.i18n.NumberFormatSymbols_fr_CA'): typeof goog.i18n.NumberFormatSymbols_fr_CA;
-    function require(name: 'goog.i18n.NumberFormatSymbols_fr_FR'): typeof goog.i18n.NumberFormatSymbols_fr_FR;
-    function require(name: 'goog.i18n.NumberFormatSymbols_fr_GF'): typeof goog.i18n.NumberFormatSymbols_fr_GF;
-    function require(name: 'goog.i18n.NumberFormatSymbols_fr_GP'): typeof goog.i18n.NumberFormatSymbols_fr_GP;
-    function require(name: 'goog.i18n.NumberFormatSymbols_fr_MC'): typeof goog.i18n.NumberFormatSymbols_fr_MC;
-    function require(name: 'goog.i18n.NumberFormatSymbols_fr_MF'): typeof goog.i18n.NumberFormatSymbols_fr_MF;
-    function require(name: 'goog.i18n.NumberFormatSymbols_fr_MQ'): typeof goog.i18n.NumberFormatSymbols_fr_MQ;
-    function require(name: 'goog.i18n.NumberFormatSymbols_fr_PM'): typeof goog.i18n.NumberFormatSymbols_fr_PM;
-    function require(name: 'goog.i18n.NumberFormatSymbols_fr_RE'): typeof goog.i18n.NumberFormatSymbols_fr_RE;
-    function require(name: 'goog.i18n.NumberFormatSymbols_fr_YT'): typeof goog.i18n.NumberFormatSymbols_fr_YT;
     function require(name: 'goog.i18n.NumberFormatSymbols_ga'): typeof goog.i18n.NumberFormatSymbols_ga;
-    function require(name: 'goog.i18n.NumberFormatSymbols_ga_IE'): typeof goog.i18n.NumberFormatSymbols_ga_IE;
     function require(name: 'goog.i18n.NumberFormatSymbols_gl'): typeof goog.i18n.NumberFormatSymbols_gl;
-    function require(name: 'goog.i18n.NumberFormatSymbols_gl_ES'): typeof goog.i18n.NumberFormatSymbols_gl_ES;
     function require(name: 'goog.i18n.NumberFormatSymbols_gsw'): typeof goog.i18n.NumberFormatSymbols_gsw;
-    function require(name: 'goog.i18n.NumberFormatSymbols_gsw_CH'): typeof goog.i18n.NumberFormatSymbols_gsw_CH;
-    function require(name: 'goog.i18n.NumberFormatSymbols_gsw_LI'): typeof goog.i18n.NumberFormatSymbols_gsw_LI;
     function require(name: 'goog.i18n.NumberFormatSymbols_gu'): typeof goog.i18n.NumberFormatSymbols_gu;
-    function require(name: 'goog.i18n.NumberFormatSymbols_gu_IN'): typeof goog.i18n.NumberFormatSymbols_gu_IN;
     function require(name: 'goog.i18n.NumberFormatSymbols_haw'): typeof goog.i18n.NumberFormatSymbols_haw;
-    function require(name: 'goog.i18n.NumberFormatSymbols_haw_US'): typeof goog.i18n.NumberFormatSymbols_haw_US;
     function require(name: 'goog.i18n.NumberFormatSymbols_he'): typeof goog.i18n.NumberFormatSymbols_he;
-    function require(name: 'goog.i18n.NumberFormatSymbols_he_IL'): typeof goog.i18n.NumberFormatSymbols_he_IL;
     function require(name: 'goog.i18n.NumberFormatSymbols_hi'): typeof goog.i18n.NumberFormatSymbols_hi;
-    function require(name: 'goog.i18n.NumberFormatSymbols_hi_IN'): typeof goog.i18n.NumberFormatSymbols_hi_IN;
     function require(name: 'goog.i18n.NumberFormatSymbols_hr'): typeof goog.i18n.NumberFormatSymbols_hr;
-    function require(name: 'goog.i18n.NumberFormatSymbols_hr_HR'): typeof goog.i18n.NumberFormatSymbols_hr_HR;
     function require(name: 'goog.i18n.NumberFormatSymbols_hu'): typeof goog.i18n.NumberFormatSymbols_hu;
-    function require(name: 'goog.i18n.NumberFormatSymbols_hu_HU'): typeof goog.i18n.NumberFormatSymbols_hu_HU;
     function require(name: 'goog.i18n.NumberFormatSymbols_hy'): typeof goog.i18n.NumberFormatSymbols_hy;
-    function require(name: 'goog.i18n.NumberFormatSymbols_hy_AM'): typeof goog.i18n.NumberFormatSymbols_hy_AM;
     function require(name: 'goog.i18n.NumberFormatSymbols_id'): typeof goog.i18n.NumberFormatSymbols_id;
-    function require(name: 'goog.i18n.NumberFormatSymbols_id_ID'): typeof goog.i18n.NumberFormatSymbols_id_ID;
     function require(name: 'goog.i18n.NumberFormatSymbols_in'): typeof goog.i18n.NumberFormatSymbols_in;
     function require(name: 'goog.i18n.NumberFormatSymbols_is'): typeof goog.i18n.NumberFormatSymbols_is;
-    function require(name: 'goog.i18n.NumberFormatSymbols_is_IS'): typeof goog.i18n.NumberFormatSymbols_is_IS;
     function require(name: 'goog.i18n.NumberFormatSymbols_it'): typeof goog.i18n.NumberFormatSymbols_it;
-    function require(name: 'goog.i18n.NumberFormatSymbols_it_IT'): typeof goog.i18n.NumberFormatSymbols_it_IT;
-    function require(name: 'goog.i18n.NumberFormatSymbols_it_SM'): typeof goog.i18n.NumberFormatSymbols_it_SM;
     function require(name: 'goog.i18n.NumberFormatSymbols_iw'): typeof goog.i18n.NumberFormatSymbols_iw;
     function require(name: 'goog.i18n.NumberFormatSymbols_ja'): typeof goog.i18n.NumberFormatSymbols_ja;
-    function require(name: 'goog.i18n.NumberFormatSymbols_ja_JP'): typeof goog.i18n.NumberFormatSymbols_ja_JP;
     function require(name: 'goog.i18n.NumberFormatSymbols_ka'): typeof goog.i18n.NumberFormatSymbols_ka;
-    function require(name: 'goog.i18n.NumberFormatSymbols_ka_GE'): typeof goog.i18n.NumberFormatSymbols_ka_GE;
     function require(name: 'goog.i18n.NumberFormatSymbols_kk'): typeof goog.i18n.NumberFormatSymbols_kk;
-    function require(name: 'goog.i18n.NumberFormatSymbols_kk_Cyrl_KZ'): typeof goog.i18n.NumberFormatSymbols_kk_Cyrl_KZ;
     function require(name: 'goog.i18n.NumberFormatSymbols_km'): typeof goog.i18n.NumberFormatSymbols_km;
-    function require(name: 'goog.i18n.NumberFormatSymbols_km_KH'): typeof goog.i18n.NumberFormatSymbols_km_KH;
     function require(name: 'goog.i18n.NumberFormatSymbols_kn'): typeof goog.i18n.NumberFormatSymbols_kn;
-    function require(name: 'goog.i18n.NumberFormatSymbols_kn_IN'): typeof goog.i18n.NumberFormatSymbols_kn_IN;
     function require(name: 'goog.i18n.NumberFormatSymbols_ko'): typeof goog.i18n.NumberFormatSymbols_ko;
-    function require(name: 'goog.i18n.NumberFormatSymbols_ko_KR'): typeof goog.i18n.NumberFormatSymbols_ko_KR;
     function require(name: 'goog.i18n.NumberFormatSymbols_ky'): typeof goog.i18n.NumberFormatSymbols_ky;
-    function require(name: 'goog.i18n.NumberFormatSymbols_ky_Cyrl_KG'): typeof goog.i18n.NumberFormatSymbols_ky_Cyrl_KG;
     function require(name: 'goog.i18n.NumberFormatSymbols_ln'): typeof goog.i18n.NumberFormatSymbols_ln;
-    function require(name: 'goog.i18n.NumberFormatSymbols_ln_CD'): typeof goog.i18n.NumberFormatSymbols_ln_CD;
     function require(name: 'goog.i18n.NumberFormatSymbols_lo'): typeof goog.i18n.NumberFormatSymbols_lo;
-    function require(name: 'goog.i18n.NumberFormatSymbols_lo_LA'): typeof goog.i18n.NumberFormatSymbols_lo_LA;
     function require(name: 'goog.i18n.NumberFormatSymbols_lt'): typeof goog.i18n.NumberFormatSymbols_lt;
-    function require(name: 'goog.i18n.NumberFormatSymbols_lt_LT'): typeof goog.i18n.NumberFormatSymbols_lt_LT;
     function require(name: 'goog.i18n.NumberFormatSymbols_lv'): typeof goog.i18n.NumberFormatSymbols_lv;
-    function require(name: 'goog.i18n.NumberFormatSymbols_lv_LV'): typeof goog.i18n.NumberFormatSymbols_lv_LV;
     function require(name: 'goog.i18n.NumberFormatSymbols_mk'): typeof goog.i18n.NumberFormatSymbols_mk;
-    function require(name: 'goog.i18n.NumberFormatSymbols_mk_MK'): typeof goog.i18n.NumberFormatSymbols_mk_MK;
     function require(name: 'goog.i18n.NumberFormatSymbols_ml'): typeof goog.i18n.NumberFormatSymbols_ml;
-    function require(name: 'goog.i18n.NumberFormatSymbols_ml_IN'): typeof goog.i18n.NumberFormatSymbols_ml_IN;
     function require(name: 'goog.i18n.NumberFormatSymbols_mn'): typeof goog.i18n.NumberFormatSymbols_mn;
-    function require(name: 'goog.i18n.NumberFormatSymbols_mn_Cyrl_MN'): typeof goog.i18n.NumberFormatSymbols_mn_Cyrl_MN;
+    function require(name: 'goog.i18n.NumberFormatSymbols_mo'): typeof goog.i18n.NumberFormatSymbols_mo;
     function require(name: 'goog.i18n.NumberFormatSymbols_mr'): typeof goog.i18n.NumberFormatSymbols_mr;
-    function require(name: 'goog.i18n.NumberFormatSymbols_mr_IN'): typeof goog.i18n.NumberFormatSymbols_mr_IN;
+    function require(name: 'goog.i18n.NumberFormatSymbols_mr_u_nu_latn'): typeof goog.i18n.NumberFormatSymbols_mr_u_nu_latn;
     function require(name: 'goog.i18n.NumberFormatSymbols_ms'): typeof goog.i18n.NumberFormatSymbols_ms;
-    function require(name: 'goog.i18n.NumberFormatSymbols_ms_Latn_MY'): typeof goog.i18n.NumberFormatSymbols_ms_Latn_MY;
     function require(name: 'goog.i18n.NumberFormatSymbols_mt'): typeof goog.i18n.NumberFormatSymbols_mt;
-    function require(name: 'goog.i18n.NumberFormatSymbols_mt_MT'): typeof goog.i18n.NumberFormatSymbols_mt_MT;
     function require(name: 'goog.i18n.NumberFormatSymbols_my'): typeof goog.i18n.NumberFormatSymbols_my;
-    function require(name: 'goog.i18n.NumberFormatSymbols_my_MM'): typeof goog.i18n.NumberFormatSymbols_my_MM;
+    function require(name: 'goog.i18n.NumberFormatSymbols_my_u_nu_latn'): typeof goog.i18n.NumberFormatSymbols_my_u_nu_latn;
     function require(name: 'goog.i18n.NumberFormatSymbols_nb'): typeof goog.i18n.NumberFormatSymbols_nb;
-    function require(name: 'goog.i18n.NumberFormatSymbols_nb_NO'): typeof goog.i18n.NumberFormatSymbols_nb_NO;
-    function require(name: 'goog.i18n.NumberFormatSymbols_nb_SJ'): typeof goog.i18n.NumberFormatSymbols_nb_SJ;
     function require(name: 'goog.i18n.NumberFormatSymbols_ne'): typeof goog.i18n.NumberFormatSymbols_ne;
-    function require(name: 'goog.i18n.NumberFormatSymbols_ne_NP'): typeof goog.i18n.NumberFormatSymbols_ne_NP;
+    function require(name: 'goog.i18n.NumberFormatSymbols_ne_u_nu_latn'): typeof goog.i18n.NumberFormatSymbols_ne_u_nu_latn;
     function require(name: 'goog.i18n.NumberFormatSymbols_nl'): typeof goog.i18n.NumberFormatSymbols_nl;
-    function require(name: 'goog.i18n.NumberFormatSymbols_nl_NL'): typeof goog.i18n.NumberFormatSymbols_nl_NL;
     function require(name: 'goog.i18n.NumberFormatSymbols_no'): typeof goog.i18n.NumberFormatSymbols_no;
     function require(name: 'goog.i18n.NumberFormatSymbols_no_NO'): typeof goog.i18n.NumberFormatSymbols_no_NO;
     function require(name: 'goog.i18n.NumberFormatSymbols_or'): typeof goog.i18n.NumberFormatSymbols_or;
-    function require(name: 'goog.i18n.NumberFormatSymbols_or_IN'): typeof goog.i18n.NumberFormatSymbols_or_IN;
     function require(name: 'goog.i18n.NumberFormatSymbols_pa'): typeof goog.i18n.NumberFormatSymbols_pa;
-    function require(name: 'goog.i18n.NumberFormatSymbols_pa_Guru_IN'): typeof goog.i18n.NumberFormatSymbols_pa_Guru_IN;
     function require(name: 'goog.i18n.NumberFormatSymbols_pl'): typeof goog.i18n.NumberFormatSymbols_pl;
-    function require(name: 'goog.i18n.NumberFormatSymbols_pl_PL'): typeof goog.i18n.NumberFormatSymbols_pl_PL;
     function require(name: 'goog.i18n.NumberFormatSymbols_pt'): typeof goog.i18n.NumberFormatSymbols_pt;
     function require(name: 'goog.i18n.NumberFormatSymbols_pt_BR'): typeof goog.i18n.NumberFormatSymbols_pt_BR;
     function require(name: 'goog.i18n.NumberFormatSymbols_pt_PT'): typeof goog.i18n.NumberFormatSymbols_pt_PT;
     function require(name: 'goog.i18n.NumberFormatSymbols_ro'): typeof goog.i18n.NumberFormatSymbols_ro;
-    function require(name: 'goog.i18n.NumberFormatSymbols_ro_RO'): typeof goog.i18n.NumberFormatSymbols_ro_RO;
     function require(name: 'goog.i18n.NumberFormatSymbols_ru'): typeof goog.i18n.NumberFormatSymbols_ru;
-    function require(name: 'goog.i18n.NumberFormatSymbols_ru_RU'): typeof goog.i18n.NumberFormatSymbols_ru_RU;
+    function require(name: 'goog.i18n.NumberFormatSymbols_sh'): typeof goog.i18n.NumberFormatSymbols_sh;
     function require(name: 'goog.i18n.NumberFormatSymbols_si'): typeof goog.i18n.NumberFormatSymbols_si;
-    function require(name: 'goog.i18n.NumberFormatSymbols_si_LK'): typeof goog.i18n.NumberFormatSymbols_si_LK;
     function require(name: 'goog.i18n.NumberFormatSymbols_sk'): typeof goog.i18n.NumberFormatSymbols_sk;
-    function require(name: 'goog.i18n.NumberFormatSymbols_sk_SK'): typeof goog.i18n.NumberFormatSymbols_sk_SK;
     function require(name: 'goog.i18n.NumberFormatSymbols_sl'): typeof goog.i18n.NumberFormatSymbols_sl;
-    function require(name: 'goog.i18n.NumberFormatSymbols_sl_SI'): typeof goog.i18n.NumberFormatSymbols_sl_SI;
     function require(name: 'goog.i18n.NumberFormatSymbols_sq'): typeof goog.i18n.NumberFormatSymbols_sq;
-    function require(name: 'goog.i18n.NumberFormatSymbols_sq_AL'): typeof goog.i18n.NumberFormatSymbols_sq_AL;
     function require(name: 'goog.i18n.NumberFormatSymbols_sr'): typeof goog.i18n.NumberFormatSymbols_sr;
-    function require(name: 'goog.i18n.NumberFormatSymbols_sr_Cyrl_RS'): typeof goog.i18n.NumberFormatSymbols_sr_Cyrl_RS;
+    function require(name: 'goog.i18n.NumberFormatSymbols_sr_Latn'): typeof goog.i18n.NumberFormatSymbols_sr_Latn;
     function require(name: 'goog.i18n.NumberFormatSymbols_sv'): typeof goog.i18n.NumberFormatSymbols_sv;
-    function require(name: 'goog.i18n.NumberFormatSymbols_sv_SE'): typeof goog.i18n.NumberFormatSymbols_sv_SE;
     function require(name: 'goog.i18n.NumberFormatSymbols_sw'): typeof goog.i18n.NumberFormatSymbols_sw;
-    function require(name: 'goog.i18n.NumberFormatSymbols_sw_TZ'): typeof goog.i18n.NumberFormatSymbols_sw_TZ;
     function require(name: 'goog.i18n.NumberFormatSymbols_ta'): typeof goog.i18n.NumberFormatSymbols_ta;
-    function require(name: 'goog.i18n.NumberFormatSymbols_ta_IN'): typeof goog.i18n.NumberFormatSymbols_ta_IN;
     function require(name: 'goog.i18n.NumberFormatSymbols_te'): typeof goog.i18n.NumberFormatSymbols_te;
-    function require(name: 'goog.i18n.NumberFormatSymbols_te_IN'): typeof goog.i18n.NumberFormatSymbols_te_IN;
     function require(name: 'goog.i18n.NumberFormatSymbols_th'): typeof goog.i18n.NumberFormatSymbols_th;
-    function require(name: 'goog.i18n.NumberFormatSymbols_th_TH'): typeof goog.i18n.NumberFormatSymbols_th_TH;
     function require(name: 'goog.i18n.NumberFormatSymbols_tl'): typeof goog.i18n.NumberFormatSymbols_tl;
     function require(name: 'goog.i18n.NumberFormatSymbols_tr'): typeof goog.i18n.NumberFormatSymbols_tr;
-    function require(name: 'goog.i18n.NumberFormatSymbols_tr_TR'): typeof goog.i18n.NumberFormatSymbols_tr_TR;
     function require(name: 'goog.i18n.NumberFormatSymbols_uk'): typeof goog.i18n.NumberFormatSymbols_uk;
-    function require(name: 'goog.i18n.NumberFormatSymbols_uk_UA'): typeof goog.i18n.NumberFormatSymbols_uk_UA;
     function require(name: 'goog.i18n.NumberFormatSymbols_ur'): typeof goog.i18n.NumberFormatSymbols_ur;
-    function require(name: 'goog.i18n.NumberFormatSymbols_ur_PK'): typeof goog.i18n.NumberFormatSymbols_ur_PK;
     function require(name: 'goog.i18n.NumberFormatSymbols_uz'): typeof goog.i18n.NumberFormatSymbols_uz;
-    function require(name: 'goog.i18n.NumberFormatSymbols_uz_Latn_UZ'): typeof goog.i18n.NumberFormatSymbols_uz_Latn_UZ;
     function require(name: 'goog.i18n.NumberFormatSymbols_vi'): typeof goog.i18n.NumberFormatSymbols_vi;
-    function require(name: 'goog.i18n.NumberFormatSymbols_vi_VN'): typeof goog.i18n.NumberFormatSymbols_vi_VN;
     function require(name: 'goog.i18n.NumberFormatSymbols_zh'): typeof goog.i18n.NumberFormatSymbols_zh;
     function require(name: 'goog.i18n.NumberFormatSymbols_zh_CN'): typeof goog.i18n.NumberFormatSymbols_zh_CN;
     function require(name: 'goog.i18n.NumberFormatSymbols_zh_HK'): typeof goog.i18n.NumberFormatSymbols_zh_HK;
-    function require(name: 'goog.i18n.NumberFormatSymbols_zh_Hans_CN'): typeof goog.i18n.NumberFormatSymbols_zh_Hans_CN;
     function require(name: 'goog.i18n.NumberFormatSymbols_zh_TW'): typeof goog.i18n.NumberFormatSymbols_zh_TW;
     function require(name: 'goog.i18n.NumberFormatSymbols_zu'): typeof goog.i18n.NumberFormatSymbols_zu;
-    function require(name: 'goog.i18n.NumberFormatSymbols_zu_ZA'): typeof goog.i18n.NumberFormatSymbols_zu_ZA;
 }
 
 declare module goog.i18n {
@@ -240,12 +144,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale af_ZA.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_af_ZA = goog.i18n.NumberFormatSymbols_af;
-
-    /**
      * Number formatting symbols for locale am.
      * @enum {string}
      */
@@ -267,12 +165,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_am;
         DEF_CURRENCY_CODE: NumberFormatSymbols_am;
     };
-
-    /**
-     * Number formatting symbols for locale am_ET.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_am_ET = goog.i18n.NumberFormatSymbols_am;
 
     /**
      * Number formatting symbols for locale ar.
@@ -298,10 +190,73 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale ar_001.
+     * Number formatting symbols for locale ar_DZ.
      * @enum {string}
      */
-    export import NumberFormatSymbols_ar_001 = goog.i18n.NumberFormatSymbols_ar;
+    type NumberFormatSymbols_ar_DZ = string;
+    var NumberFormatSymbols_ar_DZ: {
+        DECIMAL_SEP: NumberFormatSymbols_ar_DZ;
+        GROUP_SEP: NumberFormatSymbols_ar_DZ;
+        PERCENT: NumberFormatSymbols_ar_DZ;
+        ZERO_DIGIT: NumberFormatSymbols_ar_DZ;
+        PLUS_SIGN: NumberFormatSymbols_ar_DZ;
+        MINUS_SIGN: NumberFormatSymbols_ar_DZ;
+        EXP_SYMBOL: NumberFormatSymbols_ar_DZ;
+        PERMILL: NumberFormatSymbols_ar_DZ;
+        INFINITY: NumberFormatSymbols_ar_DZ;
+        NAN: NumberFormatSymbols_ar_DZ;
+        DECIMAL_PATTERN: NumberFormatSymbols_ar_DZ;
+        SCIENTIFIC_PATTERN: NumberFormatSymbols_ar_DZ;
+        PERCENT_PATTERN: NumberFormatSymbols_ar_DZ;
+        CURRENCY_PATTERN: NumberFormatSymbols_ar_DZ;
+        DEF_CURRENCY_CODE: NumberFormatSymbols_ar_DZ;
+    };
+
+    /**
+     * Number formatting symbols for locale ar_EG.
+     * @enum {string}
+     */
+    type NumberFormatSymbols_ar_EG = string;
+    var NumberFormatSymbols_ar_EG: {
+        DECIMAL_SEP: NumberFormatSymbols_ar_EG;
+        GROUP_SEP: NumberFormatSymbols_ar_EG;
+        PERCENT: NumberFormatSymbols_ar_EG;
+        ZERO_DIGIT: NumberFormatSymbols_ar_EG;
+        PLUS_SIGN: NumberFormatSymbols_ar_EG;
+        MINUS_SIGN: NumberFormatSymbols_ar_EG;
+        EXP_SYMBOL: NumberFormatSymbols_ar_EG;
+        PERMILL: NumberFormatSymbols_ar_EG;
+        INFINITY: NumberFormatSymbols_ar_EG;
+        NAN: NumberFormatSymbols_ar_EG;
+        DECIMAL_PATTERN: NumberFormatSymbols_ar_EG;
+        SCIENTIFIC_PATTERN: NumberFormatSymbols_ar_EG;
+        PERCENT_PATTERN: NumberFormatSymbols_ar_EG;
+        CURRENCY_PATTERN: NumberFormatSymbols_ar_EG;
+        DEF_CURRENCY_CODE: NumberFormatSymbols_ar_EG;
+    };
+
+    /**
+     * Number formatting symbols for locale ar_EG_u_nu_latn.
+     * @enum {string}
+     */
+    type NumberFormatSymbols_ar_EG_u_nu_latn = string;
+    var NumberFormatSymbols_ar_EG_u_nu_latn: {
+        DECIMAL_SEP: NumberFormatSymbols_ar_EG_u_nu_latn;
+        GROUP_SEP: NumberFormatSymbols_ar_EG_u_nu_latn;
+        PERCENT: NumberFormatSymbols_ar_EG_u_nu_latn;
+        ZERO_DIGIT: NumberFormatSymbols_ar_EG_u_nu_latn;
+        PLUS_SIGN: NumberFormatSymbols_ar_EG_u_nu_latn;
+        MINUS_SIGN: NumberFormatSymbols_ar_EG_u_nu_latn;
+        EXP_SYMBOL: NumberFormatSymbols_ar_EG_u_nu_latn;
+        PERMILL: NumberFormatSymbols_ar_EG_u_nu_latn;
+        INFINITY: NumberFormatSymbols_ar_EG_u_nu_latn;
+        NAN: NumberFormatSymbols_ar_EG_u_nu_latn;
+        DECIMAL_PATTERN: NumberFormatSymbols_ar_EG_u_nu_latn;
+        SCIENTIFIC_PATTERN: NumberFormatSymbols_ar_EG_u_nu_latn;
+        PERCENT_PATTERN: NumberFormatSymbols_ar_EG_u_nu_latn;
+        CURRENCY_PATTERN: NumberFormatSymbols_ar_EG_u_nu_latn;
+        DEF_CURRENCY_CODE: NumberFormatSymbols_ar_EG_u_nu_latn;
+    };
 
     /**
      * Number formatting symbols for locale az.
@@ -327,10 +282,27 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale az_Latn_AZ.
+     * Number formatting symbols for locale be.
      * @enum {string}
      */
-    export import NumberFormatSymbols_az_Latn_AZ = goog.i18n.NumberFormatSymbols_az;
+    type NumberFormatSymbols_be = string;
+    var NumberFormatSymbols_be: {
+        DECIMAL_SEP: NumberFormatSymbols_be;
+        GROUP_SEP: NumberFormatSymbols_be;
+        PERCENT: NumberFormatSymbols_be;
+        ZERO_DIGIT: NumberFormatSymbols_be;
+        PLUS_SIGN: NumberFormatSymbols_be;
+        MINUS_SIGN: NumberFormatSymbols_be;
+        EXP_SYMBOL: NumberFormatSymbols_be;
+        PERMILL: NumberFormatSymbols_be;
+        INFINITY: NumberFormatSymbols_be;
+        NAN: NumberFormatSymbols_be;
+        DECIMAL_PATTERN: NumberFormatSymbols_be;
+        SCIENTIFIC_PATTERN: NumberFormatSymbols_be;
+        PERCENT_PATTERN: NumberFormatSymbols_be;
+        CURRENCY_PATTERN: NumberFormatSymbols_be;
+        DEF_CURRENCY_CODE: NumberFormatSymbols_be;
+    };
 
     /**
      * Number formatting symbols for locale bg.
@@ -356,12 +328,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale bg_BG.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_bg_BG = goog.i18n.NumberFormatSymbols_bg;
-
-    /**
      * Number formatting symbols for locale bn.
      * @enum {string}
      */
@@ -385,10 +351,27 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale bn_BD.
+     * Number formatting symbols for locale bn_u_nu_latn.
      * @enum {string}
      */
-    export import NumberFormatSymbols_bn_BD = goog.i18n.NumberFormatSymbols_bn;
+    type NumberFormatSymbols_bn_u_nu_latn = string;
+    var NumberFormatSymbols_bn_u_nu_latn: {
+        DECIMAL_SEP: NumberFormatSymbols_bn_u_nu_latn;
+        GROUP_SEP: NumberFormatSymbols_bn_u_nu_latn;
+        PERCENT: NumberFormatSymbols_bn_u_nu_latn;
+        ZERO_DIGIT: NumberFormatSymbols_bn_u_nu_latn;
+        PLUS_SIGN: NumberFormatSymbols_bn_u_nu_latn;
+        MINUS_SIGN: NumberFormatSymbols_bn_u_nu_latn;
+        EXP_SYMBOL: NumberFormatSymbols_bn_u_nu_latn;
+        PERMILL: NumberFormatSymbols_bn_u_nu_latn;
+        INFINITY: NumberFormatSymbols_bn_u_nu_latn;
+        NAN: NumberFormatSymbols_bn_u_nu_latn;
+        DECIMAL_PATTERN: NumberFormatSymbols_bn_u_nu_latn;
+        SCIENTIFIC_PATTERN: NumberFormatSymbols_bn_u_nu_latn;
+        PERCENT_PATTERN: NumberFormatSymbols_bn_u_nu_latn;
+        CURRENCY_PATTERN: NumberFormatSymbols_bn_u_nu_latn;
+        DEF_CURRENCY_CODE: NumberFormatSymbols_bn_u_nu_latn;
+    };
 
     /**
      * Number formatting symbols for locale br.
@@ -414,10 +397,27 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale br_FR.
+     * Number formatting symbols for locale bs.
      * @enum {string}
      */
-    export import NumberFormatSymbols_br_FR = goog.i18n.NumberFormatSymbols_br;
+    type NumberFormatSymbols_bs = string;
+    var NumberFormatSymbols_bs: {
+        DECIMAL_SEP: NumberFormatSymbols_bs;
+        GROUP_SEP: NumberFormatSymbols_bs;
+        PERCENT: NumberFormatSymbols_bs;
+        ZERO_DIGIT: NumberFormatSymbols_bs;
+        PLUS_SIGN: NumberFormatSymbols_bs;
+        MINUS_SIGN: NumberFormatSymbols_bs;
+        EXP_SYMBOL: NumberFormatSymbols_bs;
+        PERMILL: NumberFormatSymbols_bs;
+        INFINITY: NumberFormatSymbols_bs;
+        NAN: NumberFormatSymbols_bs;
+        DECIMAL_PATTERN: NumberFormatSymbols_bs;
+        SCIENTIFIC_PATTERN: NumberFormatSymbols_bs;
+        PERCENT_PATTERN: NumberFormatSymbols_bs;
+        CURRENCY_PATTERN: NumberFormatSymbols_bs;
+        DEF_CURRENCY_CODE: NumberFormatSymbols_bs;
+    };
 
     /**
      * Number formatting symbols for locale ca.
@@ -443,36 +443,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale ca_AD.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_ca_AD = goog.i18n.NumberFormatSymbols_ca;
-
-    /**
-     * Number formatting symbols for locale ca_ES.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_ca_ES = goog.i18n.NumberFormatSymbols_ca;
-
-    /**
-     * Number formatting symbols for locale ca_ES_VALENCIA.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_ca_ES_VALENCIA = goog.i18n.NumberFormatSymbols_ca;
-
-    /**
-     * Number formatting symbols for locale ca_FR.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_ca_FR = goog.i18n.NumberFormatSymbols_ca;
-
-    /**
-     * Number formatting symbols for locale ca_IT.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_ca_IT = goog.i18n.NumberFormatSymbols_ca;
-
-    /**
      * Number formatting symbols for locale chr.
      * @enum {string}
      */
@@ -494,12 +464,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_chr;
         DEF_CURRENCY_CODE: NumberFormatSymbols_chr;
     };
-
-    /**
-     * Number formatting symbols for locale chr_US.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_chr_US = goog.i18n.NumberFormatSymbols_chr;
 
     /**
      * Number formatting symbols for locale cs.
@@ -525,12 +489,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale cs_CZ.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_cs_CZ = goog.i18n.NumberFormatSymbols_cs;
-
-    /**
      * Number formatting symbols for locale cy.
      * @enum {string}
      */
@@ -554,12 +512,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale cy_GB.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_cy_GB = goog.i18n.NumberFormatSymbols_cy;
-
-    /**
      * Number formatting symbols for locale da.
      * @enum {string}
      */
@@ -581,18 +533,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_da;
         DEF_CURRENCY_CODE: NumberFormatSymbols_da;
     };
-
-    /**
-     * Number formatting symbols for locale da_DK.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_da_DK = goog.i18n.NumberFormatSymbols_da;
-
-    /**
-     * Number formatting symbols for locale da_GL.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_da_GL = goog.i18n.NumberFormatSymbols_da;
 
     /**
      * Number formatting symbols for locale de.
@@ -641,12 +581,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale de_BE.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_de_BE = goog.i18n.NumberFormatSymbols_de;
-
-    /**
      * Number formatting symbols for locale de_CH.
      * @enum {string}
      */
@@ -668,18 +602,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_de_CH;
         DEF_CURRENCY_CODE: NumberFormatSymbols_de_CH;
     };
-
-    /**
-     * Number formatting symbols for locale de_DE.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_de_DE = goog.i18n.NumberFormatSymbols_de;
-
-    /**
-     * Number formatting symbols for locale de_LU.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_de_LU = goog.i18n.NumberFormatSymbols_de;
 
     /**
      * Number formatting symbols for locale el.
@@ -705,12 +627,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale el_GR.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_el_GR = goog.i18n.NumberFormatSymbols_el;
-
-    /**
      * Number formatting symbols for locale en.
      * @enum {string}
      */
@@ -732,18 +648,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_en;
         DEF_CURRENCY_CODE: NumberFormatSymbols_en;
     };
-
-    /**
-     * Number formatting symbols for locale en_001.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_en_001 = goog.i18n.NumberFormatSymbols_en;
-
-    /**
-     * Number formatting symbols for locale en_AS.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_en_AS = goog.i18n.NumberFormatSymbols_en;
 
     /**
      * Number formatting symbols for locale en_AU.
@@ -769,16 +673,27 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale en_DG.
+     * Number formatting symbols for locale en_CA.
      * @enum {string}
      */
-    export import NumberFormatSymbols_en_DG = goog.i18n.NumberFormatSymbols_en;
-
-    /**
-     * Number formatting symbols for locale en_FM.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_en_FM = goog.i18n.NumberFormatSymbols_en;
+    type NumberFormatSymbols_en_CA = string;
+    var NumberFormatSymbols_en_CA: {
+        DECIMAL_SEP: NumberFormatSymbols_en_CA;
+        GROUP_SEP: NumberFormatSymbols_en_CA;
+        PERCENT: NumberFormatSymbols_en_CA;
+        ZERO_DIGIT: NumberFormatSymbols_en_CA;
+        PLUS_SIGN: NumberFormatSymbols_en_CA;
+        MINUS_SIGN: NumberFormatSymbols_en_CA;
+        EXP_SYMBOL: NumberFormatSymbols_en_CA;
+        PERMILL: NumberFormatSymbols_en_CA;
+        INFINITY: NumberFormatSymbols_en_CA;
+        NAN: NumberFormatSymbols_en_CA;
+        DECIMAL_PATTERN: NumberFormatSymbols_en_CA;
+        SCIENTIFIC_PATTERN: NumberFormatSymbols_en_CA;
+        PERCENT_PATTERN: NumberFormatSymbols_en_CA;
+        CURRENCY_PATTERN: NumberFormatSymbols_en_CA;
+        DEF_CURRENCY_CODE: NumberFormatSymbols_en_CA;
+    };
 
     /**
      * Number formatting symbols for locale en_GB.
@@ -802,12 +717,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_en_GB;
         DEF_CURRENCY_CODE: NumberFormatSymbols_en_GB;
     };
-
-    /**
-     * Number formatting symbols for locale en_GU.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_en_GU = goog.i18n.NumberFormatSymbols_en;
 
     /**
      * Number formatting symbols for locale en_IE.
@@ -856,36 +765,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale en_IO.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_en_IO = goog.i18n.NumberFormatSymbols_en;
-
-    /**
-     * Number formatting symbols for locale en_MH.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_en_MH = goog.i18n.NumberFormatSymbols_en;
-
-    /**
-     * Number formatting symbols for locale en_MP.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_en_MP = goog.i18n.NumberFormatSymbols_en;
-
-    /**
-     * Number formatting symbols for locale en_PR.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_en_PR = goog.i18n.NumberFormatSymbols_en;
-
-    /**
-     * Number formatting symbols for locale en_PW.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_en_PW = goog.i18n.NumberFormatSymbols_en;
-
-    /**
      * Number formatting symbols for locale en_SG.
      * @enum {string}
      */
@@ -909,34 +788,10 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale en_TC.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_en_TC = goog.i18n.NumberFormatSymbols_en;
-
-    /**
-     * Number formatting symbols for locale en_UM.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_en_UM = goog.i18n.NumberFormatSymbols_en;
-
-    /**
      * Number formatting symbols for locale en_US.
      * @enum {string}
      */
     export import NumberFormatSymbols_en_US = goog.i18n.NumberFormatSymbols_en;
-
-    /**
-     * Number formatting symbols for locale en_VG.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_en_VG = goog.i18n.NumberFormatSymbols_en;
-
-    /**
-     * Number formatting symbols for locale en_VI.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_en_VI = goog.i18n.NumberFormatSymbols_en;
 
     /**
      * Number formatting symbols for locale en_ZA.
@@ -960,12 +815,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_en_ZA;
         DEF_CURRENCY_CODE: NumberFormatSymbols_en_ZA;
     };
-
-    /**
-     * Number formatting symbols for locale en_ZW.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_en_ZW = goog.i18n.NumberFormatSymbols_en;
 
     /**
      * Number formatting symbols for locale es.
@@ -1014,22 +863,56 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale es_EA.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_es_EA = goog.i18n.NumberFormatSymbols_es;
-
-    /**
      * Number formatting symbols for locale es_ES.
      * @enum {string}
      */
     export import NumberFormatSymbols_es_ES = goog.i18n.NumberFormatSymbols_es;
 
     /**
-     * Number formatting symbols for locale es_IC.
+     * Number formatting symbols for locale es_MX.
      * @enum {string}
      */
-    export import NumberFormatSymbols_es_IC = goog.i18n.NumberFormatSymbols_es;
+    type NumberFormatSymbols_es_MX = string;
+    var NumberFormatSymbols_es_MX: {
+        DECIMAL_SEP: NumberFormatSymbols_es_MX;
+        GROUP_SEP: NumberFormatSymbols_es_MX;
+        PERCENT: NumberFormatSymbols_es_MX;
+        ZERO_DIGIT: NumberFormatSymbols_es_MX;
+        PLUS_SIGN: NumberFormatSymbols_es_MX;
+        MINUS_SIGN: NumberFormatSymbols_es_MX;
+        EXP_SYMBOL: NumberFormatSymbols_es_MX;
+        PERMILL: NumberFormatSymbols_es_MX;
+        INFINITY: NumberFormatSymbols_es_MX;
+        NAN: NumberFormatSymbols_es_MX;
+        DECIMAL_PATTERN: NumberFormatSymbols_es_MX;
+        SCIENTIFIC_PATTERN: NumberFormatSymbols_es_MX;
+        PERCENT_PATTERN: NumberFormatSymbols_es_MX;
+        CURRENCY_PATTERN: NumberFormatSymbols_es_MX;
+        DEF_CURRENCY_CODE: NumberFormatSymbols_es_MX;
+    };
+
+    /**
+     * Number formatting symbols for locale es_US.
+     * @enum {string}
+     */
+    type NumberFormatSymbols_es_US = string;
+    var NumberFormatSymbols_es_US: {
+        DECIMAL_SEP: NumberFormatSymbols_es_US;
+        GROUP_SEP: NumberFormatSymbols_es_US;
+        PERCENT: NumberFormatSymbols_es_US;
+        ZERO_DIGIT: NumberFormatSymbols_es_US;
+        PLUS_SIGN: NumberFormatSymbols_es_US;
+        MINUS_SIGN: NumberFormatSymbols_es_US;
+        EXP_SYMBOL: NumberFormatSymbols_es_US;
+        PERMILL: NumberFormatSymbols_es_US;
+        INFINITY: NumberFormatSymbols_es_US;
+        NAN: NumberFormatSymbols_es_US;
+        DECIMAL_PATTERN: NumberFormatSymbols_es_US;
+        SCIENTIFIC_PATTERN: NumberFormatSymbols_es_US;
+        PERCENT_PATTERN: NumberFormatSymbols_es_US;
+        CURRENCY_PATTERN: NumberFormatSymbols_es_US;
+        DEF_CURRENCY_CODE: NumberFormatSymbols_es_US;
+    };
 
     /**
      * Number formatting symbols for locale et.
@@ -1055,12 +938,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale et_EE.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_et_EE = goog.i18n.NumberFormatSymbols_et;
-
-    /**
      * Number formatting symbols for locale eu.
      * @enum {string}
      */
@@ -1082,12 +959,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_eu;
         DEF_CURRENCY_CODE: NumberFormatSymbols_eu;
     };
-
-    /**
-     * Number formatting symbols for locale eu_ES.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_eu_ES = goog.i18n.NumberFormatSymbols_eu;
 
     /**
      * Number formatting symbols for locale fa.
@@ -1113,10 +984,27 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale fa_IR.
+     * Number formatting symbols for locale fa_u_nu_latn.
      * @enum {string}
      */
-    export import NumberFormatSymbols_fa_IR = goog.i18n.NumberFormatSymbols_fa;
+    type NumberFormatSymbols_fa_u_nu_latn = string;
+    var NumberFormatSymbols_fa_u_nu_latn: {
+        DECIMAL_SEP: NumberFormatSymbols_fa_u_nu_latn;
+        GROUP_SEP: NumberFormatSymbols_fa_u_nu_latn;
+        PERCENT: NumberFormatSymbols_fa_u_nu_latn;
+        ZERO_DIGIT: NumberFormatSymbols_fa_u_nu_latn;
+        PLUS_SIGN: NumberFormatSymbols_fa_u_nu_latn;
+        MINUS_SIGN: NumberFormatSymbols_fa_u_nu_latn;
+        EXP_SYMBOL: NumberFormatSymbols_fa_u_nu_latn;
+        PERMILL: NumberFormatSymbols_fa_u_nu_latn;
+        INFINITY: NumberFormatSymbols_fa_u_nu_latn;
+        NAN: NumberFormatSymbols_fa_u_nu_latn;
+        DECIMAL_PATTERN: NumberFormatSymbols_fa_u_nu_latn;
+        SCIENTIFIC_PATTERN: NumberFormatSymbols_fa_u_nu_latn;
+        PERCENT_PATTERN: NumberFormatSymbols_fa_u_nu_latn;
+        CURRENCY_PATTERN: NumberFormatSymbols_fa_u_nu_latn;
+        DEF_CURRENCY_CODE: NumberFormatSymbols_fa_u_nu_latn;
+    };
 
     /**
      * Number formatting symbols for locale fi.
@@ -1142,12 +1030,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale fi_FI.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_fi_FI = goog.i18n.NumberFormatSymbols_fi;
-
-    /**
      * Number formatting symbols for locale fil.
      * @enum {string}
      */
@@ -1169,12 +1051,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_fil;
         DEF_CURRENCY_CODE: NumberFormatSymbols_fil;
     };
-
-    /**
-     * Number formatting symbols for locale fil_PH.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_fil_PH = goog.i18n.NumberFormatSymbols_fil;
 
     /**
      * Number formatting symbols for locale fr.
@@ -1200,12 +1076,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale fr_BL.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_fr_BL = goog.i18n.NumberFormatSymbols_fr;
-
-    /**
      * Number formatting symbols for locale fr_CA.
      * @enum {string}
      */
@@ -1227,60 +1097,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_fr_CA;
         DEF_CURRENCY_CODE: NumberFormatSymbols_fr_CA;
     };
-
-    /**
-     * Number formatting symbols for locale fr_FR.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_fr_FR = goog.i18n.NumberFormatSymbols_fr;
-
-    /**
-     * Number formatting symbols for locale fr_GF.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_fr_GF = goog.i18n.NumberFormatSymbols_fr;
-
-    /**
-     * Number formatting symbols for locale fr_GP.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_fr_GP = goog.i18n.NumberFormatSymbols_fr;
-
-    /**
-     * Number formatting symbols for locale fr_MC.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_fr_MC = goog.i18n.NumberFormatSymbols_fr;
-
-    /**
-     * Number formatting symbols for locale fr_MF.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_fr_MF = goog.i18n.NumberFormatSymbols_fr;
-
-    /**
-     * Number formatting symbols for locale fr_MQ.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_fr_MQ = goog.i18n.NumberFormatSymbols_fr;
-
-    /**
-     * Number formatting symbols for locale fr_PM.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_fr_PM = goog.i18n.NumberFormatSymbols_fr;
-
-    /**
-     * Number formatting symbols for locale fr_RE.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_fr_RE = goog.i18n.NumberFormatSymbols_fr;
-
-    /**
-     * Number formatting symbols for locale fr_YT.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_fr_YT = goog.i18n.NumberFormatSymbols_fr;
 
     /**
      * Number formatting symbols for locale ga.
@@ -1306,12 +1122,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale ga_IE.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_ga_IE = goog.i18n.NumberFormatSymbols_ga;
-
-    /**
      * Number formatting symbols for locale gl.
      * @enum {string}
      */
@@ -1333,12 +1143,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_gl;
         DEF_CURRENCY_CODE: NumberFormatSymbols_gl;
     };
-
-    /**
-     * Number formatting symbols for locale gl_ES.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_gl_ES = goog.i18n.NumberFormatSymbols_gl;
 
     /**
      * Number formatting symbols for locale gsw.
@@ -1364,18 +1168,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale gsw_CH.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_gsw_CH = goog.i18n.NumberFormatSymbols_gsw;
-
-    /**
-     * Number formatting symbols for locale gsw_LI.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_gsw_LI = goog.i18n.NumberFormatSymbols_gsw;
-
-    /**
      * Number formatting symbols for locale gu.
      * @enum {string}
      */
@@ -1397,12 +1189,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_gu;
         DEF_CURRENCY_CODE: NumberFormatSymbols_gu;
     };
-
-    /**
-     * Number formatting symbols for locale gu_IN.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_gu_IN = goog.i18n.NumberFormatSymbols_gu;
 
     /**
      * Number formatting symbols for locale haw.
@@ -1428,12 +1214,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale haw_US.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_haw_US = goog.i18n.NumberFormatSymbols_haw;
-
-    /**
      * Number formatting symbols for locale he.
      * @enum {string}
      */
@@ -1455,12 +1235,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_he;
         DEF_CURRENCY_CODE: NumberFormatSymbols_he;
     };
-
-    /**
-     * Number formatting symbols for locale he_IL.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_he_IL = goog.i18n.NumberFormatSymbols_he;
 
     /**
      * Number formatting symbols for locale hi.
@@ -1486,12 +1260,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale hi_IN.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_hi_IN = goog.i18n.NumberFormatSymbols_hi;
-
-    /**
      * Number formatting symbols for locale hr.
      * @enum {string}
      */
@@ -1513,12 +1281,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_hr;
         DEF_CURRENCY_CODE: NumberFormatSymbols_hr;
     };
-
-    /**
-     * Number formatting symbols for locale hr_HR.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_hr_HR = goog.i18n.NumberFormatSymbols_hr;
 
     /**
      * Number formatting symbols for locale hu.
@@ -1544,12 +1306,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale hu_HU.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_hu_HU = goog.i18n.NumberFormatSymbols_hu;
-
-    /**
      * Number formatting symbols for locale hy.
      * @enum {string}
      */
@@ -1573,12 +1329,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale hy_AM.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_hy_AM = goog.i18n.NumberFormatSymbols_hy;
-
-    /**
      * Number formatting symbols for locale id.
      * @enum {string}
      */
@@ -1600,12 +1350,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_id;
         DEF_CURRENCY_CODE: NumberFormatSymbols_id;
     };
-
-    /**
-     * Number formatting symbols for locale id_ID.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_id_ID = goog.i18n.NumberFormatSymbols_id;
 
     /**
      * Number formatting symbols for locale in.
@@ -1654,12 +1398,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale is_IS.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_is_IS = goog.i18n.NumberFormatSymbols_is;
-
-    /**
      * Number formatting symbols for locale it.
      * @enum {string}
      */
@@ -1681,18 +1419,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_it;
         DEF_CURRENCY_CODE: NumberFormatSymbols_it;
     };
-
-    /**
-     * Number formatting symbols for locale it_IT.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_it_IT = goog.i18n.NumberFormatSymbols_it;
-
-    /**
-     * Number formatting symbols for locale it_SM.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_it_SM = goog.i18n.NumberFormatSymbols_it;
 
     /**
      * Number formatting symbols for locale iw.
@@ -1741,12 +1467,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale ja_JP.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_ja_JP = goog.i18n.NumberFormatSymbols_ja;
-
-    /**
      * Number formatting symbols for locale ka.
      * @enum {string}
      */
@@ -1768,12 +1488,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_ka;
         DEF_CURRENCY_CODE: NumberFormatSymbols_ka;
     };
-
-    /**
-     * Number formatting symbols for locale ka_GE.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_ka_GE = goog.i18n.NumberFormatSymbols_ka;
 
     /**
      * Number formatting symbols for locale kk.
@@ -1799,12 +1513,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale kk_Cyrl_KZ.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_kk_Cyrl_KZ = goog.i18n.NumberFormatSymbols_kk;
-
-    /**
      * Number formatting symbols for locale km.
      * @enum {string}
      */
@@ -1826,12 +1534,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_km;
         DEF_CURRENCY_CODE: NumberFormatSymbols_km;
     };
-
-    /**
-     * Number formatting symbols for locale km_KH.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_km_KH = goog.i18n.NumberFormatSymbols_km;
 
     /**
      * Number formatting symbols for locale kn.
@@ -1857,12 +1559,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale kn_IN.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_kn_IN = goog.i18n.NumberFormatSymbols_kn;
-
-    /**
      * Number formatting symbols for locale ko.
      * @enum {string}
      */
@@ -1884,12 +1580,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_ko;
         DEF_CURRENCY_CODE: NumberFormatSymbols_ko;
     };
-
-    /**
-     * Number formatting symbols for locale ko_KR.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_ko_KR = goog.i18n.NumberFormatSymbols_ko;
 
     /**
      * Number formatting symbols for locale ky.
@@ -1915,12 +1605,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale ky_Cyrl_KG.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_ky_Cyrl_KG = goog.i18n.NumberFormatSymbols_ky;
-
-    /**
      * Number formatting symbols for locale ln.
      * @enum {string}
      */
@@ -1942,12 +1626,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_ln;
         DEF_CURRENCY_CODE: NumberFormatSymbols_ln;
     };
-
-    /**
-     * Number formatting symbols for locale ln_CD.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_ln_CD = goog.i18n.NumberFormatSymbols_ln;
 
     /**
      * Number formatting symbols for locale lo.
@@ -1973,12 +1651,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale lo_LA.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_lo_LA = goog.i18n.NumberFormatSymbols_lo;
-
-    /**
      * Number formatting symbols for locale lt.
      * @enum {string}
      */
@@ -2000,12 +1672,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_lt;
         DEF_CURRENCY_CODE: NumberFormatSymbols_lt;
     };
-
-    /**
-     * Number formatting symbols for locale lt_LT.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_lt_LT = goog.i18n.NumberFormatSymbols_lt;
 
     /**
      * Number formatting symbols for locale lv.
@@ -2031,12 +1697,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale lv_LV.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_lv_LV = goog.i18n.NumberFormatSymbols_lv;
-
-    /**
      * Number formatting symbols for locale mk.
      * @enum {string}
      */
@@ -2058,12 +1718,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_mk;
         DEF_CURRENCY_CODE: NumberFormatSymbols_mk;
     };
-
-    /**
-     * Number formatting symbols for locale mk_MK.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_mk_MK = goog.i18n.NumberFormatSymbols_mk;
 
     /**
      * Number formatting symbols for locale ml.
@@ -2089,12 +1743,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale ml_IN.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_ml_IN = goog.i18n.NumberFormatSymbols_ml;
-
-    /**
      * Number formatting symbols for locale mn.
      * @enum {string}
      */
@@ -2118,10 +1766,27 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale mn_Cyrl_MN.
+     * Number formatting symbols for locale mo.
      * @enum {string}
      */
-    export import NumberFormatSymbols_mn_Cyrl_MN = goog.i18n.NumberFormatSymbols_mn;
+    type NumberFormatSymbols_mo = string;
+    var NumberFormatSymbols_mo: {
+        DECIMAL_SEP: NumberFormatSymbols_mo;
+        GROUP_SEP: NumberFormatSymbols_mo;
+        PERCENT: NumberFormatSymbols_mo;
+        ZERO_DIGIT: NumberFormatSymbols_mo;
+        PLUS_SIGN: NumberFormatSymbols_mo;
+        MINUS_SIGN: NumberFormatSymbols_mo;
+        EXP_SYMBOL: NumberFormatSymbols_mo;
+        PERMILL: NumberFormatSymbols_mo;
+        INFINITY: NumberFormatSymbols_mo;
+        NAN: NumberFormatSymbols_mo;
+        DECIMAL_PATTERN: NumberFormatSymbols_mo;
+        SCIENTIFIC_PATTERN: NumberFormatSymbols_mo;
+        PERCENT_PATTERN: NumberFormatSymbols_mo;
+        CURRENCY_PATTERN: NumberFormatSymbols_mo;
+        DEF_CURRENCY_CODE: NumberFormatSymbols_mo;
+    };
 
     /**
      * Number formatting symbols for locale mr.
@@ -2147,10 +1812,27 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale mr_IN.
+     * Number formatting symbols for locale mr_u_nu_latn.
      * @enum {string}
      */
-    export import NumberFormatSymbols_mr_IN = goog.i18n.NumberFormatSymbols_mr;
+    type NumberFormatSymbols_mr_u_nu_latn = string;
+    var NumberFormatSymbols_mr_u_nu_latn: {
+        DECIMAL_SEP: NumberFormatSymbols_mr_u_nu_latn;
+        GROUP_SEP: NumberFormatSymbols_mr_u_nu_latn;
+        PERCENT: NumberFormatSymbols_mr_u_nu_latn;
+        ZERO_DIGIT: NumberFormatSymbols_mr_u_nu_latn;
+        PLUS_SIGN: NumberFormatSymbols_mr_u_nu_latn;
+        MINUS_SIGN: NumberFormatSymbols_mr_u_nu_latn;
+        EXP_SYMBOL: NumberFormatSymbols_mr_u_nu_latn;
+        PERMILL: NumberFormatSymbols_mr_u_nu_latn;
+        INFINITY: NumberFormatSymbols_mr_u_nu_latn;
+        NAN: NumberFormatSymbols_mr_u_nu_latn;
+        DECIMAL_PATTERN: NumberFormatSymbols_mr_u_nu_latn;
+        SCIENTIFIC_PATTERN: NumberFormatSymbols_mr_u_nu_latn;
+        PERCENT_PATTERN: NumberFormatSymbols_mr_u_nu_latn;
+        CURRENCY_PATTERN: NumberFormatSymbols_mr_u_nu_latn;
+        DEF_CURRENCY_CODE: NumberFormatSymbols_mr_u_nu_latn;
+    };
 
     /**
      * Number formatting symbols for locale ms.
@@ -2176,12 +1858,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale ms_Latn_MY.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_ms_Latn_MY = goog.i18n.NumberFormatSymbols_ms;
-
-    /**
      * Number formatting symbols for locale mt.
      * @enum {string}
      */
@@ -2203,12 +1879,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_mt;
         DEF_CURRENCY_CODE: NumberFormatSymbols_mt;
     };
-
-    /**
-     * Number formatting symbols for locale mt_MT.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_mt_MT = goog.i18n.NumberFormatSymbols_mt;
 
     /**
      * Number formatting symbols for locale my.
@@ -2234,10 +1904,27 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale my_MM.
+     * Number formatting symbols for locale my_u_nu_latn.
      * @enum {string}
      */
-    export import NumberFormatSymbols_my_MM = goog.i18n.NumberFormatSymbols_my;
+    type NumberFormatSymbols_my_u_nu_latn = string;
+    var NumberFormatSymbols_my_u_nu_latn: {
+        DECIMAL_SEP: NumberFormatSymbols_my_u_nu_latn;
+        GROUP_SEP: NumberFormatSymbols_my_u_nu_latn;
+        PERCENT: NumberFormatSymbols_my_u_nu_latn;
+        ZERO_DIGIT: NumberFormatSymbols_my_u_nu_latn;
+        PLUS_SIGN: NumberFormatSymbols_my_u_nu_latn;
+        MINUS_SIGN: NumberFormatSymbols_my_u_nu_latn;
+        EXP_SYMBOL: NumberFormatSymbols_my_u_nu_latn;
+        PERMILL: NumberFormatSymbols_my_u_nu_latn;
+        INFINITY: NumberFormatSymbols_my_u_nu_latn;
+        NAN: NumberFormatSymbols_my_u_nu_latn;
+        DECIMAL_PATTERN: NumberFormatSymbols_my_u_nu_latn;
+        SCIENTIFIC_PATTERN: NumberFormatSymbols_my_u_nu_latn;
+        PERCENT_PATTERN: NumberFormatSymbols_my_u_nu_latn;
+        CURRENCY_PATTERN: NumberFormatSymbols_my_u_nu_latn;
+        DEF_CURRENCY_CODE: NumberFormatSymbols_my_u_nu_latn;
+    };
 
     /**
      * Number formatting symbols for locale nb.
@@ -2263,18 +1950,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale nb_NO.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_nb_NO = goog.i18n.NumberFormatSymbols_nb;
-
-    /**
-     * Number formatting symbols for locale nb_SJ.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_nb_SJ = goog.i18n.NumberFormatSymbols_nb;
-
-    /**
      * Number formatting symbols for locale ne.
      * @enum {string}
      */
@@ -2298,10 +1973,27 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale ne_NP.
+     * Number formatting symbols for locale ne_u_nu_latn.
      * @enum {string}
      */
-    export import NumberFormatSymbols_ne_NP = goog.i18n.NumberFormatSymbols_ne;
+    type NumberFormatSymbols_ne_u_nu_latn = string;
+    var NumberFormatSymbols_ne_u_nu_latn: {
+        DECIMAL_SEP: NumberFormatSymbols_ne_u_nu_latn;
+        GROUP_SEP: NumberFormatSymbols_ne_u_nu_latn;
+        PERCENT: NumberFormatSymbols_ne_u_nu_latn;
+        ZERO_DIGIT: NumberFormatSymbols_ne_u_nu_latn;
+        PLUS_SIGN: NumberFormatSymbols_ne_u_nu_latn;
+        MINUS_SIGN: NumberFormatSymbols_ne_u_nu_latn;
+        EXP_SYMBOL: NumberFormatSymbols_ne_u_nu_latn;
+        PERMILL: NumberFormatSymbols_ne_u_nu_latn;
+        INFINITY: NumberFormatSymbols_ne_u_nu_latn;
+        NAN: NumberFormatSymbols_ne_u_nu_latn;
+        DECIMAL_PATTERN: NumberFormatSymbols_ne_u_nu_latn;
+        SCIENTIFIC_PATTERN: NumberFormatSymbols_ne_u_nu_latn;
+        PERCENT_PATTERN: NumberFormatSymbols_ne_u_nu_latn;
+        CURRENCY_PATTERN: NumberFormatSymbols_ne_u_nu_latn;
+        DEF_CURRENCY_CODE: NumberFormatSymbols_ne_u_nu_latn;
+    };
 
     /**
      * Number formatting symbols for locale nl.
@@ -2325,12 +2017,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_nl;
         DEF_CURRENCY_CODE: NumberFormatSymbols_nl;
     };
-
-    /**
-     * Number formatting symbols for locale nl_NL.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_nl_NL = goog.i18n.NumberFormatSymbols_nl;
 
     /**
      * Number formatting symbols for locale no.
@@ -2385,12 +2071,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale or_IN.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_or_IN = goog.i18n.NumberFormatSymbols_or;
-
-    /**
      * Number formatting symbols for locale pa.
      * @enum {string}
      */
@@ -2414,12 +2094,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale pa_Guru_IN.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_pa_Guru_IN = goog.i18n.NumberFormatSymbols_pa;
-
-    /**
      * Number formatting symbols for locale pl.
      * @enum {string}
      */
@@ -2441,12 +2115,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_pl;
         DEF_CURRENCY_CODE: NumberFormatSymbols_pl;
     };
-
-    /**
-     * Number formatting symbols for locale pl_PL.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_pl_PL = goog.i18n.NumberFormatSymbols_pl;
 
     /**
      * Number formatting symbols for locale pt.
@@ -2524,12 +2192,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale ro_RO.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_ro_RO = goog.i18n.NumberFormatSymbols_ro;
-
-    /**
      * Number formatting symbols for locale ru.
      * @enum {string}
      */
@@ -2553,10 +2215,27 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale ru_RU.
+     * Number formatting symbols for locale sh.
      * @enum {string}
      */
-    export import NumberFormatSymbols_ru_RU = goog.i18n.NumberFormatSymbols_ru;
+    type NumberFormatSymbols_sh = string;
+    var NumberFormatSymbols_sh: {
+        DECIMAL_SEP: NumberFormatSymbols_sh;
+        GROUP_SEP: NumberFormatSymbols_sh;
+        PERCENT: NumberFormatSymbols_sh;
+        ZERO_DIGIT: NumberFormatSymbols_sh;
+        PLUS_SIGN: NumberFormatSymbols_sh;
+        MINUS_SIGN: NumberFormatSymbols_sh;
+        EXP_SYMBOL: NumberFormatSymbols_sh;
+        PERMILL: NumberFormatSymbols_sh;
+        INFINITY: NumberFormatSymbols_sh;
+        NAN: NumberFormatSymbols_sh;
+        DECIMAL_PATTERN: NumberFormatSymbols_sh;
+        SCIENTIFIC_PATTERN: NumberFormatSymbols_sh;
+        PERCENT_PATTERN: NumberFormatSymbols_sh;
+        CURRENCY_PATTERN: NumberFormatSymbols_sh;
+        DEF_CURRENCY_CODE: NumberFormatSymbols_sh;
+    };
 
     /**
      * Number formatting symbols for locale si.
@@ -2582,12 +2261,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale si_LK.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_si_LK = goog.i18n.NumberFormatSymbols_si;
-
-    /**
      * Number formatting symbols for locale sk.
      * @enum {string}
      */
@@ -2609,12 +2282,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_sk;
         DEF_CURRENCY_CODE: NumberFormatSymbols_sk;
     };
-
-    /**
-     * Number formatting symbols for locale sk_SK.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_sk_SK = goog.i18n.NumberFormatSymbols_sk;
 
     /**
      * Number formatting symbols for locale sl.
@@ -2640,12 +2307,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale sl_SI.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_sl_SI = goog.i18n.NumberFormatSymbols_sl;
-
-    /**
      * Number formatting symbols for locale sq.
      * @enum {string}
      */
@@ -2667,12 +2328,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_sq;
         DEF_CURRENCY_CODE: NumberFormatSymbols_sq;
     };
-
-    /**
-     * Number formatting symbols for locale sq_AL.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_sq_AL = goog.i18n.NumberFormatSymbols_sq;
 
     /**
      * Number formatting symbols for locale sr.
@@ -2698,10 +2353,10 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale sr_Cyrl_RS.
+     * Number formatting symbols for locale sr_Latn.
      * @enum {string}
      */
-    export import NumberFormatSymbols_sr_Cyrl_RS = goog.i18n.NumberFormatSymbols_sr;
+    export import NumberFormatSymbols_sr_Latn = goog.i18n.NumberFormatSymbols_sr;
 
     /**
      * Number formatting symbols for locale sv.
@@ -2727,12 +2382,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale sv_SE.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_sv_SE = goog.i18n.NumberFormatSymbols_sv;
-
-    /**
      * Number formatting symbols for locale sw.
      * @enum {string}
      */
@@ -2754,12 +2403,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_sw;
         DEF_CURRENCY_CODE: NumberFormatSymbols_sw;
     };
-
-    /**
-     * Number formatting symbols for locale sw_TZ.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_sw_TZ = goog.i18n.NumberFormatSymbols_sw;
 
     /**
      * Number formatting symbols for locale ta.
@@ -2785,12 +2428,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale ta_IN.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_ta_IN = goog.i18n.NumberFormatSymbols_ta;
-
-    /**
      * Number formatting symbols for locale te.
      * @enum {string}
      */
@@ -2814,12 +2451,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale te_IN.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_te_IN = goog.i18n.NumberFormatSymbols_te;
-
-    /**
      * Number formatting symbols for locale th.
      * @enum {string}
      */
@@ -2841,12 +2472,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_th;
         DEF_CURRENCY_CODE: NumberFormatSymbols_th;
     };
-
-    /**
-     * Number formatting symbols for locale th_TH.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_th_TH = goog.i18n.NumberFormatSymbols_th;
 
     /**
      * Number formatting symbols for locale tl.
@@ -2895,12 +2520,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale tr_TR.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_tr_TR = goog.i18n.NumberFormatSymbols_tr;
-
-    /**
      * Number formatting symbols for locale uk.
      * @enum {string}
      */
@@ -2922,12 +2541,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_uk;
         DEF_CURRENCY_CODE: NumberFormatSymbols_uk;
     };
-
-    /**
-     * Number formatting symbols for locale uk_UA.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_uk_UA = goog.i18n.NumberFormatSymbols_uk;
 
     /**
      * Number formatting symbols for locale ur.
@@ -2953,12 +2566,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale ur_PK.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_ur_PK = goog.i18n.NumberFormatSymbols_ur;
-
-    /**
      * Number formatting symbols for locale uz.
      * @enum {string}
      */
@@ -2982,12 +2589,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale uz_Latn_UZ.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_uz_Latn_UZ = goog.i18n.NumberFormatSymbols_uz;
-
-    /**
      * Number formatting symbols for locale vi.
      * @enum {string}
      */
@@ -3009,12 +2610,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_vi;
         DEF_CURRENCY_CODE: NumberFormatSymbols_vi;
     };
-
-    /**
-     * Number formatting symbols for locale vi_VN.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_vi_VN = goog.i18n.NumberFormatSymbols_vi;
 
     /**
      * Number formatting symbols for locale zh.
@@ -3069,12 +2664,6 @@ declare module goog.i18n {
     };
 
     /**
-     * Number formatting symbols for locale zh_Hans_CN.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_zh_Hans_CN = goog.i18n.NumberFormatSymbols_zh;
-
-    /**
      * Number formatting symbols for locale zh_TW.
      * @enum {string}
      */
@@ -3119,12 +2708,6 @@ declare module goog.i18n {
         CURRENCY_PATTERN: NumberFormatSymbols_zu;
         DEF_CURRENCY_CODE: NumberFormatSymbols_zu;
     };
-
-    /**
-     * Number formatting symbols for locale zu_ZA.
-     * @enum {string}
-     */
-    export import NumberFormatSymbols_zu_ZA = goog.i18n.NumberFormatSymbols_zu;
 
     /**
      * Selected number formatting symbols by locale.

@@ -20,7 +20,7 @@ declare module goog.proto2 {
          * @param {goog.proto2.LazyDeserializer} deserializer The lazy deserializer to
          *   use to decode the data on the fly.
          *
-         * @param {*} data The data to decode/deserialize.
+         * @param {?} data The data to decode/deserialize.
          */
         initializeForLazyDeserializer(deserializer: goog.proto2.LazyDeserializer, data: any): void;
         
@@ -35,12 +35,13 @@ declare module goog.proto2 {
         /**
          * Iterates over all the unknown fields in the message.
          *
-         * @param {function(number, *)} callback A callback method
+         * @param {function(this:T, number, *)} callback A callback method
          *     which gets invoked for each unknown field.
-         * @param {Object=} opt_scope The scope under which to execute the callback.
+         * @param {T=} opt_scope The scope under which to execute the callback.
          *     If not given, the current message will be used.
+         * @template T
          */
-        forEachUnknown(callback: (arg0: number, arg1: any) => any, opt_scope?: Object): void;
+        forEachUnknown<T>(callback: (arg0: number, arg1: any) => any, opt_scope?: T): void;
         
         /**
          * Returns the descriptor which describes the current message.
@@ -91,7 +92,7 @@ declare module goog.proto2 {
          * @param {number=} opt_index If the field is repeated, the index to use when
          *     looking up the value.
          *
-         * @return {*} The value found or null if none.
+         * @return {?} The value found or null if none.
          */
         get(field: goog.proto2.FieldDescriptor, opt_index?: number): any;
         
@@ -104,7 +105,7 @@ declare module goog.proto2 {
          * @param {number=} opt_index If the field is repeated, the index to use when
          *     looking up the value.
          *
-         * @return {*} The value found or the default if none.
+         * @return {?} The value found or the default if none.
          */
         getOrDefault(field: goog.proto2.FieldDescriptor, opt_index?: number): any;
         
@@ -137,8 +138,8 @@ declare module goog.proto2 {
         
         /**
          * Compares this message with another one ignoring the unknown fields.
-         * @param {*} other The other message.
-         * @return {boolean} Whether they are equal. Returns false if the {@code other}
+         * @param {?} other The other message.
+         * @return {boolean} Whether they are equal. Returns false if the `other`
          *     argument is a different type of message or not a message.
          */
         equals(other: any): boolean;
@@ -194,7 +195,7 @@ declare module goog.proto2 {
          * @param {number=} opt_index If the field is a repeated field, the index
          *     at which to get the value.
          *
-         * @return {*} The value found or null for none.
+         * @return {?} The value found or null for none.
          * @protected
          */
         get$Value(tag: number, opt_index?: number): any;
@@ -209,7 +210,7 @@ declare module goog.proto2 {
          * @param {number=} opt_index If the field is a repeated field, the index
          *     at which to get the value.
          *
-         * @return {*} The value found or the default value if none set.
+         * @return {?} The value found or the default value if none set.
          * @protected
          */
         get$ValueOrDefault(tag: number, opt_index?: number): any;
@@ -221,7 +222,7 @@ declare module goog.proto2 {
          *
          * @param {number} tag The field's tag index.
          *
-         * @return {!Array<*>} The values found. If none, returns an empty array.
+         * @return {!Array<?>} The values found. If none, returns an empty array.
          * @protected
          */
         array$Values(tag: number): Array<any>;

@@ -9,7 +9,8 @@ declare module goog.spell {
      * Support class for spell checker components. Provides basic functionality
      * such as word lookup and caching.
      *
-     * @param {Function=} opt_lookupFunction Function to use for word lookup. Must
+     * @param {function(!Array<string>, !goog.spell.SpellCheck, !Function)=}
+     *     opt_lookupFunction Function to use for word lookup. Must
      *     accept an array of words, an object reference and a callback function as
      *     parameters. It must also call the callback function (as a method on the
      *     object), once ready, with an array containing the original words, their
@@ -20,7 +21,7 @@ declare module goog.spell {
      * @final
      */
     class SpellCheck extends goog.events.EventTarget {
-        constructor(opt_lookupFunction?: Function, opt_language?: string);
+        constructor(opt_lookupFunction?: (arg0: Array<string>, arg1: goog.spell.SpellCheck, arg2: Function) => any, opt_language?: string);
         
         /**
          * Regular expression for identifying word boundaries.

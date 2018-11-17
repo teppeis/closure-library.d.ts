@@ -31,6 +31,7 @@ declare module goog.ui {
          *     enough to determine directionality (e.g. an empty value), and the
          *     direction is inherited from a parent element (typically the body
          *     element).
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         getDirection(): string;
         
@@ -38,12 +39,14 @@ declare module goog.ui {
          * Sets the value of the underlying input field, and sets the direction
          * according to the given value.
          * @param {string} value  The Value to set in the underlying input field.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         setValue(value: string): void;
         
         /**
          * Returns the value of the underlying input field.
          * @return {string} Value of the underlying input field.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         getValue(): string;
     }

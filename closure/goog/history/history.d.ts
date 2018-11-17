@@ -35,12 +35,12 @@ declare module goog {
      *
      * @param {boolean=} opt_invisible True to use hidden history states instead of
      *     the user-visible location hash.
-     * @param {string=} opt_blankPageUrl A URL to a blank page on the same server.
-     *     Required if opt_invisible is true.  This URL is also used as the src
-     *     for the iframe used to track history state in IE (if not specified the
-     *     iframe is not given a src attribute).  Access is Denied error may
-     *     occur in IE7 if the window's URL's scheme is https, and this URL is
-     *     not specified.
+     * @param {!goog.html.TrustedResourceUrl=} opt_blankPageUrl A URL to a
+     *     blank page on the same server. Required if opt_invisible is true.
+     *     This URL is also used as the src for the iframe used to track history
+     *     state in IE (if not specified the iframe is not given a src attribute).
+     *     Access is Denied error may occur in IE7 if the window's URL's scheme
+     *     is https, and this URL is not specified.
      * @param {HTMLInputElement=} opt_input The hidden input element to be used to
      *     store the history token.  If not provided, a hidden input element will
      *     be created using document.write.
@@ -52,7 +52,7 @@ declare module goog {
      * @extends {goog.events.EventTarget}
      */
     class History extends goog.events.EventTarget {
-        constructor(opt_invisible?: boolean, opt_blankPageUrl?: string, opt_input?: HTMLInputElement, opt_iframe?: HTMLIFrameElement);
+        constructor(opt_invisible?: boolean, opt_blankPageUrl?: goog.html.TrustedResourceUrl, opt_input?: HTMLInputElement, opt_iframe?: HTMLIFrameElement);
         
         /**
          * Whether the current browser is Internet Explorer prior to version 8. Many IE
@@ -152,13 +152,11 @@ declare module goog.History {
 
     /**
      * Constant for the history change event type.
-     * @param {string} token The string identifying the new history state.
-     * @extends {goog.events.Event}
      * @constructor
      * @deprecated Use goog.history.Event.
      * @final
      */
-    class Event extends goog.events.Event {
-        constructor(token: string);
+    class Event {
+        constructor();
     }
 }

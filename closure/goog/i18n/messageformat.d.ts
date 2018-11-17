@@ -68,4 +68,7 @@ declare module goog.i18n.MessageFormat {
         STRING: BlockType_;
         UNKNOWN: BlockType_;
     };
+
+    /** @typedef {{ type: goog.i18n.MessageFormat.Element_, value: ? }} */
+    type TypeVal_ = {type: goog.i18n.MessageFormat.Element_; value: any};
 }

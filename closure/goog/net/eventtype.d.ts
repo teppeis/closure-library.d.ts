@@ -19,5 +19,7 @@ declare module goog.net {
         TIMEOUT: EventType;
         INCREMENTAL_DATA: EventType;
         PROGRESS: EventType;
+        DOWNLOAD_PROGRESS: EventType;
+        UPLOAD_PROGRESS: EventType;
     };
 }

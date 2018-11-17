@@ -9,8 +9,8 @@ declare module goog.net {
      * host URL. By default, if no reply arrives within 5s, the channel
      * assumes the call failed to complete successfully.
      *
-     * @param {goog.Uri|string} uri The Uri of the server side code that receives
-     *     data posted through this channel (e.g.,
+     * @param {!goog.html.TrustedResourceUrl} uri The Uri of the server side code
+     *     that receives data posted through this channel (e.g.,
      *     "http://maps.google.com/maps/geo").
      *
      * @param {string=} opt_callbackParamName The parameter name that is used to
@@ -20,11 +20,10 @@ declare module goog.net {
      * @final
      */
     class Jsonp {
-        constructor(uri: goog.Uri|string, opt_callbackParamName?: string);
+        constructor(uri: goog.html.TrustedResourceUrl, opt_callbackParamName?: string);
         
         /**
-         * The name of the property of goog.global under which the callback is
-         * stored.
+         * The prefix for the callback name which will be stored on goog.global.
          */
         static CALLBACKS: any;
         
@@ -46,6 +45,16 @@ declare module goog.net {
          * @return {number} The timeout value.
          */
         getRequestTimeout(): number;
+        
+        /**
+         * Sets the nonce value for CSP. This nonce value will be added to any created
+         * script elements and must match the nonce provided in the
+         * Content-Security-Policy header sent by the server for the callback to pass
+         * CSP enforcement.
+         *
+         * @param {string} nonce The CSP nonce value.
+         */
+        setNonce(nonce: string): void;
         
         /**
          * Sends the given payload to the URL specified at the construction
@@ -86,8 +95,8 @@ declare module goog.net {
         /**
          * Cancels a given request. The request must be exactly the object returned by
          * the send method.
-         *
          * @param {Object} request The request object returned by the send method.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         cancel(request: Object): void;
     }

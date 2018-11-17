@@ -15,9 +15,9 @@ declare module goog.math {
      * The internal representation of an integer is an array of 32-bit signed
      * pieces, along with a sign (0 or -1) that indicates the contents of all the
      * other 32-bit pieces out to infinity.  We use 32-bit pieces because these are
-     * the size of integers on which Javascript performs bit-operations.  For
+     * the size of integers on which JavaScript performs bit-operations.  For
      * operations like addition and multiplication, we split each number into 16-bit
-     * pieces, which can easily be multiplied within Javascript's floating-point
+     * pieces, which can easily be multiplied within JavaScript's floating-point
      * representation without overflow or change in sign.
      *
      * @struct
@@ -191,14 +191,14 @@ declare module goog.math {
         
         /**
          * Returns this Integer divided by the given one.
-         * @param {goog.math.Integer} other Th Integer to divide this by.
+         * @param {!goog.math.Integer} other The Integer to divide this by.
          * @return {!goog.math.Integer} This value divided by the given one.
          */
         divide(other: goog.math.Integer): goog.math.Integer;
         
         /**
          * Returns this Integer modulo the given one.
-         * @param {goog.math.Integer} other The Integer by which to mod.
+         * @param {!goog.math.Integer} other The Integer by which to mod.
          * @return {!goog.math.Integer} This value modulo the given one.
          */
         modulo(other: goog.math.Integer): goog.math.Integer;

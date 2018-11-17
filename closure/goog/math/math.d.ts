@@ -5,15 +5,15 @@ declare module goog {
 declare module goog.math {
 
     /**
-     * Returns a random integer greater than or equal to 0 and less than {@code a}.
+     * Returns a random integer greater than or equal to 0 and less than `a`.
      * @param {number} a  The upper bound for the random integer (exclusive).
      * @return {number} A random integer N such that 0 <= N < a.
      */
     function randomInt(a: number): number;
 
     /**
-     * Returns a random number greater than or equal to {@code a} and less than
-     * {@code b}.
+     * Returns a random number greater than or equal to `a` and less than
+     * `b`.
      * @param {number} a  The lower bound for the random number (inclusive).
      * @param {number} b  The upper bound for the random number (exclusive).
      * @return {number} A random number N such that a <= N < b.
@@ -63,7 +63,7 @@ declare module goog.math {
      * @param {number} b A number.
      * @param {number=} opt_tolerance Optional tolerance range. Defaults
      *     to 0.000001. If specified, should be greater than 0.
-     * @return {boolean} Whether {@code a} and {@code b} are nearly equal.
+     * @return {boolean} Whether `a` and `b` are nearly equal.
      */
     function nearlyEquals(a: number, b: number, opt_tolerance?: number): boolean;
 
@@ -145,7 +145,8 @@ declare module goog.math {
     /**
      * Returns the sign of a number as per the "sign" or "signum" function.
      * @param {number} x The number to take the sign of.
-     * @return {number} -1 when negative, 1 when positive, 0 when 0.
+     * @return {number} -1 when negative, 1 when positive, 0 when 0. Preserves
+     *     signed zeros and NaN.
      */
     function sign(x: number): number;
 
@@ -155,8 +156,8 @@ declare module goog.math {
      *
      * Returns the longest possible array that is subarray of both of given arrays.
      *
-     * @param {Array<Object>} array1 First array of objects.
-     * @param {Array<Object>} array2 Second array of objects.
+     * @param {IArrayLike<S>} array1 First array of objects.
+     * @param {IArrayLike<T>} array2 Second array of objects.
      * @param {Function=} opt_compareFn Function that acts as a custom comparator
      *     for the array ojects. Function should return true if objects are equal,
      *     otherwise false.
@@ -164,24 +165,25 @@ declare module goog.math {
      *     as a result subsequence. It accepts 2 arguments: index of common element
      *     in the first array and index in the second. The default function returns
      *     element from the first array.
-     * @return {!Array<Object>} A list of objects that are common to both arrays
+     * @return {!Array<S|T>} A list of objects that are common to both arrays
      *     such that there is no common subsequence with size greater than the
      *     length of the list.
+     * @template S,T
      */
-    function longestCommonSubsequence(array1: Array<Object>, array2: Array<Object>, opt_compareFn?: Function, opt_collectorFn?: Function): Array<Object>;
+    function longestCommonSubsequence<S, T>(array1: IArrayLike<S>, array2: IArrayLike<T>, opt_compareFn?: Function, opt_collectorFn?: Function): Array<S|T>;
 
     /**
      * Returns the sum of the arguments.
      * @param {...number} var_args Numbers to add.
      * @return {number} The sum of the arguments (0 if no arguments were provided,
-     *     {@code NaN} if any of the arguments is not a valid number).
+     *     `NaN` if any of the arguments is not a valid number).
      */
     function sum(...var_args: number[]): number;
 
     /**
      * Returns the arithmetic mean of the arguments.
      * @param {...number} var_args Numbers to average.
-     * @return {number} The average of the arguments ({@code NaN} if no arguments
+     * @return {number} The average of the arguments (`NaN` if no arguments
      *     were provided or any of the arguments is not a valid number).
      */
     function average(...var_args: number[]): number;
@@ -191,7 +193,7 @@ declare module goog.math {
      * see e.g. http://en.wikipedia.org/wiki/Variance
      * @param {...number} var_args Number samples to analyze.
      * @return {number} The unbiased sample variance of the arguments (0 if fewer
-     *     than two samples were provided, or {@code NaN} if any of the samples is
+     *     than two samples were provided, or `NaN` if any of the samples is
      *     not a valid number).
      */
     function sampleVariance(...var_args: number[]): number;
@@ -202,7 +204,7 @@ declare module goog.math {
      * http://en.wikipedia.org/wiki/Standard_deviation
      * @param {...number} var_args Number samples to analyze.
      * @return {number} The sample standard deviation of the arguments (0 if fewer
-     *     than two samples were provided, or {@code NaN} if any of the samples is
+     *     than two samples were provided, or `NaN` if any of the samples is
      *     not a valid number).
      */
     function standardDeviation(...var_args: number[]): number;
@@ -211,16 +213,23 @@ declare module goog.math {
      * Returns whether the supplied number represents an integer, i.e. that is has
      * no fractional component.  No range-checking is performed on the number.
      * @param {number} num The number to test.
-     * @return {boolean} Whether {@code num} is an integer.
+     * @return {boolean} Whether `num` is an integer.
      */
     function isInt(num: number): boolean;
 
     /**
      * Returns whether the supplied number is finite and not NaN.
      * @param {number} num The number to test.
-     * @return {boolean} Whether {@code num} is a finite number.
+     * @return {boolean} Whether `num` is a finite number.
+     * @deprecated Use {@link isFinite} instead.
      */
     function isFiniteNumber(num: number): boolean;
+
+    /**
+     * @param {number} num The number to test.
+     * @return {boolean} Whether it is negative zero.
+     */
+    function isNegativeZero(num: number): boolean;
 
     /**
      * Returns the precise value of floor(log10(num)).
@@ -238,7 +247,7 @@ declare module goog.math {
     function log10Floor(num: number): number;
 
     /**
-     * A tweaked variant of {@code Math.floor} which tolerates if the passed number
+     * A tweaked variant of `Math.floor` which tolerates if the passed number
      * is infinitesimally smaller than the closest integer. It often happens with
      * the results of floating point calculations because of the finite precision
      * of the intermediate results. For example {@code Math.floor(Math.log(1000) /
@@ -246,17 +255,17 @@ declare module goog.math {
      * @param {number} num A number.
      * @param {number=} opt_epsilon An infinitesimally small positive number, the
      *     rounding error to tolerate.
-     * @return {number} The largest integer less than or equal to {@code num}.
+     * @return {number} The largest integer less than or equal to `num`.
      */
     function safeFloor(num: number, opt_epsilon?: number): number;
 
     /**
-     * A tweaked variant of {@code Math.ceil}. See {@code goog.math.safeFloor} for
+     * A tweaked variant of `Math.ceil`. See `goog.math.safeFloor` for
      * details.
      * @param {number} num A number.
      * @param {number=} opt_epsilon An infinitesimally small positive number, the
      *     rounding error to tolerate.
-     * @return {number} The smallest integer greater than or equal to {@code num}.
+     * @return {number} The smallest integer greater than or equal to `num`.
      */
     function safeCeil(num: number, opt_epsilon?: number): number;
 }

@@ -7,11 +7,6 @@ declare module goog.net {
     /**
      * Creates a new instance of cross domain RPC.
      *
-     * This class makes use of goog.html.legacyconversions and provides no
-     * HTML-type-safe alternative. As such, it is not compatible with
-     * code that sets goog.html.legacyconversions.ALLOW_LEGACY_CONVERSIONS to
-     * false.
-     *
      * @extends {goog.events.EventTarget}
      * @constructor
      * @final
@@ -106,7 +101,8 @@ declare module goog.net {
         /**
          * Sends a request across domain.
          * @param {string} uri Uri to make request to.
-         * @param {string=} opt_method Method of request. Default is POST.
+         * @param {string=} opt_method Method of request, 'GET' or 'POST' (uppercase).
+         *     Default is 'POST'.
          * @param {Object=} opt_params Parameters. Each property is turned into a
          *     request parameter.
          * @param {Object=} opt_headers Map of headers of the request.

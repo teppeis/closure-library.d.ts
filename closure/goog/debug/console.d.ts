@@ -13,7 +13,7 @@ declare module goog.debug {
         
         /**
          * Global console logger instance
-         * @type {goog.debug.Console}
+         * @type {?goog.debug.Console}
          */
         static instance: goog.debug.Console;
         

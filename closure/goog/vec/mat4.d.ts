@@ -321,7 +321,7 @@ declare module goog.vec.Mat4 {
     /**
      * Sets the specified column with the supplied values.
      *
-     * @param {goog.vec.Mat4.AnyType} mat The matrix to recieve the values.
+     * @param {goog.vec.Mat4.AnyType} mat The matrix to receive the values.
      * @param {number} column The column index to set the values on.
      * @param {number} v0 The value for row 0.
      * @param {number} v1 The value for row 1.
@@ -692,7 +692,7 @@ declare module goog.vec.Mat4 {
     function makeFrustum(mat: goog.vec.Mat4.AnyType, left: number, right: number, bottom: number, top: number, near: number, far: number): goog.vec.Mat4.AnyType;
 
     /**
-     * Makse the given 4x4 matrix  perspective projection matrix given a
+     * Makes the given 4x4 matrix  perspective projection matrix given a
      * field of view and aspect ratio.
      *
      * @param {goog.vec.Mat4.AnyType} mat The matrix.

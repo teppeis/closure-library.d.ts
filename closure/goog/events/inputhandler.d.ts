@@ -19,6 +19,7 @@ declare module goog.events {
         /**
          * This handles the underlying events and dispatches a new event as needed.
          * @param {goog.events.BrowserEvent} e The underlying browser event.
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         handleEvent(e: goog.events.BrowserEvent): void;
     }

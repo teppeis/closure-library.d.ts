@@ -2,7 +2,6 @@ declare module goog {
     function require(name: 'goog.net.BrowserChannel'): typeof goog.net.BrowserChannel;
     function require(name: 'goog.net.BrowserChannel.State'): typeof goog.net.BrowserChannel.State;
     function require(name: 'goog.net.BrowserChannel.Error'): typeof goog.net.BrowserChannel.Error;
-    function require(name: 'goog.net.BrowserChannel.Event'): typeof goog.net.BrowserChannel.Event;
     function require(name: 'goog.net.BrowserChannel.ServerReachability'): typeof goog.net.BrowserChannel.ServerReachability;
     function require(name: 'goog.net.BrowserChannel.Stat'): typeof goog.net.BrowserChannel.Stat;
     function require(name: 'goog.net.BrowserChannel.QueuedMap'): typeof goog.net.BrowserChannel.QueuedMap;
@@ -10,6 +9,7 @@ declare module goog {
     function require(name: 'goog.net.BrowserChannel.TimingEvent'): typeof goog.net.BrowserChannel.TimingEvent;
     function require(name: 'goog.net.BrowserChannel.ServerReachabilityEvent'): typeof goog.net.BrowserChannel.ServerReachabilityEvent;
     function require(name: 'goog.net.BrowserChannel.Handler'): typeof goog.net.BrowserChannel.Handler;
+    function require(name: 'goog.net.BrowserChannel.Event'): typeof goog.net.BrowserChannel.Event;
     function require(name: 'goog.net.BrowserChannel.LogSaver'): typeof goog.net.BrowserChannel.LogSaver;
 }
 
@@ -24,10 +24,14 @@ declare module goog.net {
      *        of the first browser channel test.
      * @param {boolean=} opt_secondTestResults Previously determined results
      *        of the second browser channel test.
+     * @param {boolean=} opt_asyncTest Whether to perform the test requests
+     *        asynchronously. While the test is performed, we'll assume the worst
+     *        (connection is buffered), in order to avoid delaying the connection
+     *        until the test is performed.
      * @constructor
      */
     class BrowserChannel {
-        constructor(opt_clientVersion?: string, opt_firstTestResults?: Array<string>, opt_secondTestResults?: boolean);
+        constructor(opt_clientVersion?: string, opt_firstTestResults?: Array<string>, opt_secondTestResults?: boolean, opt_asyncTest?: boolean);
         
         /**
          * The latest protocol version that this class supports. We request this version
@@ -66,11 +70,10 @@ declare module goog.net {
         static INACTIVE_CHANNEL_RETRY_FACTOR: number;
         
         /**
-         * The normal response for forward channel requests.
-         * Used only before version 8 of the protocol.
-         * @type {string}
+         * Events fired by BrowserChannel and associated objects
+         * @const
          */
-        static MAGIC_RESPONSE_COOKIE: string;
+        static Event: any;
         
         /**
          * A guess at a cutoff at which to no longer assume the backchannel is dead
@@ -247,10 +250,10 @@ declare module goog.net {
          * structure of key/value pairs. These maps are then encoded in a format
          * suitable for the wire and then reconstituted as a Map data structure that
          * the server can process.
-         * @param {Object|goog.structs.Map} map  The map to send.
+         * @param {Object} map  The map to send.
          * @param {?Object=} opt_context The context associated with the map.
          */
-        sendMap(map: Object|goog.structs.Map<any, any>, opt_context?: Object): void;
+        sendMap(map: Object, opt_context?: Object): void;
         
         /**
          * When set to true, this changes the behavior of the forward channel so it
@@ -315,9 +318,7 @@ declare module goog.net {
         hasOutstandingRequests(): boolean;
         
         /**
-         * Sets a new parser for the response payload. A custom parser may be set to
-         * avoid using eval(), for example. By default, the parser uses
-         * {@code goog.json.unsafeParse}.
+         * Sets a new parser for the response payload.
          * @param {!goog.string.Parser} parser Parser.
          */
         setParser(parser: goog.string$.Parser): void;
@@ -549,17 +550,6 @@ declare module goog.net.BrowserChannel {
     };
 
     /**
-     * Events fired by BrowserChannel and associated objects
-     * @enum {string}
-     */
-    type Event = string;
-    var Event: {
-        STAT_EVENT: Event;
-        TIMING_EVENT: Event;
-        SERVER_REACHABILITY_EVENT: Event;
-    };
-
-    /**
      * Types of events which reveal information about the reachability of the
      * server.
      * @enum {number}
@@ -737,8 +727,8 @@ declare module goog.net.BrowserChannel {
          * Gets any parameters that should be added at the time another connection is
          * made to the server.
          * @param {goog.net.BrowserChannel} browserChannel The browser channel.
-         * @return {Object} Extra parameter keys and values to add to the
-         *                  requests.
+         * @return {!Object} Extra parameter keys and values to add to the
+         *     requests.
          */
         getAdditionalParams(browserChannel: goog.net.BrowserChannel): Object;
         
@@ -773,6 +763,29 @@ declare module goog.net.BrowserChannel {
          */
         correctHostPrefix(serverHostPrefix: string): string;
     }
+}
+
+declare module goog.net.BrowserChannel.Event {
+
+    /**
+     * Stat Event that fires when things of interest happen that may be useful for
+     * applications to know about for stats or debugging purposes. This event fires
+     * on the EventTarget returned by getStatEventTarget.
+     */
+    var STAT_EVENT: any;
+
+    /**
+     * An event that fires when POST requests complete successfully, indicating
+     * the size of the POST and the round trip time.
+     * This event fires on the EventTarget returned by getStatEventTarget.
+     */
+    var TIMING_EVENT: any;
+
+    /**
+     * The type of event that occurs every time some information about how reachable
+     * the server is is discovered.
+     */
+    var SERVER_REACHABILITY_EVENT: any;
 }
 
 declare module goog.net.BrowserChannel.LogSaver {

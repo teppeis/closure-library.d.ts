@@ -9,6 +9,7 @@ declare module goog.date {
     /**
      * Constructs a date range.
      * @constructor
+     * @struct
      * @param {goog.date.Date} startDate The first date in the range.
      * @param {goog.date.Date} endDate The last date in the range.
      * @final
@@ -180,7 +181,8 @@ declare module goog.date.DateRange {
     /**
      * Creates an iterator over the dates in a {@link goog.date.DateRange}.
      * @constructor
-     * @extends {goog.iter.Iterator.<goog.date.Date>}
+     * @struct
+     * @extends {goog.iter.Iterator<goog.date.Date>}
      * @param {goog.date.DateRange} dateRange The date range to iterate.
      * @final
      */

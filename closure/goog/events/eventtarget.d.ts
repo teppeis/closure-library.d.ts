@@ -5,7 +5,7 @@ declare module goog {
 declare module goog.events {
 
     /**
-     * An implementation of {@code goog.events.Listenable} with full W3C
+     * An implementation of `goog.events.Listenable` with full W3C
      * EventTarget-like support (capture/bubble mechanism, stopping event
      * propagation, preventing default actions).
      *
@@ -13,8 +13,8 @@ declare module goog.events {
      *
      * Unless propagation is stopped, an event dispatched by an
      * EventTarget will bubble to the parent returned by
-     * {@code getParentEventTarget}. To set the parent, call
-     * {@code setParentEventTarget}. Subclasses that don't support
+     * `getParentEventTarget`. To set the parent, call
+     * `setParentEventTarget`. Subclasses that don't support
      * changing the parent can override the setter to throw an error.
      *
      * Example usage:
@@ -61,7 +61,7 @@ declare module goog.events {
          * using the same type then it will only be called once when the event is
          * dispatched.
          *
-         * @param {string} type The type of the event to listen for.
+         * @param {string|!goog.events.EventId} type The type of the event to listen for
          * @param {function(?):?|{handleEvent:function(?):?}|null} handler The function
          *     to handle the event. The handler can also be an object that implements
          *     the handleEvent method which takes the event object as argument.
@@ -70,11 +70,11 @@ declare module goog.events {
          *     of the event.
          * @param {Object=} opt_handlerScope Object in whose scope to call
          *     the listener.
-         * @deprecated Use {@code #listen} instead, when possible. Otherwise, use
-         *     {@code goog.events.listen} if you are passing Object
+         * @deprecated Use `#listen` instead, when possible. Otherwise, use
+         *     `goog.events.listen` if you are passing Object
          *     (instead of Function) as handler.
          */
-        addEventListener(type: string, handler: ((arg0: any) => any)|{handleEvent: (arg0: any) => any}|void, opt_capture?: boolean, opt_handlerScope?: Object): void;
+        addEventListener(type: string|goog.events.EventId<any>, handler: ((arg0: any) => any)|{handleEvent: (arg0: any) => any}|void, opt_capture?: boolean, opt_handlerScope?: Object): void;
         
         /**
          * Removes an event listener from the event target. The handler must be the
@@ -90,16 +90,16 @@ declare module goog.events {
          *     of the event.
          * @param {Object=} opt_handlerScope Object in whose scope to call
          *     the listener.
-         * @deprecated Use {@code #unlisten} instead, when possible. Otherwise, use
-         *     {@code goog.events.unlisten} if you are passing Object
+         * @deprecated Use `#unlisten` instead, when possible. Otherwise, use
+         *     `goog.events.unlisten` if you are passing Object
          *     (instead of Function) as handler.
          */
         removeEventListener(type: string, handler: ((arg0: any) => any)|{handleEvent: (arg0: any) => any}|void, opt_capture?: boolean, opt_handlerScope?: Object): void;
         
         /**
-         * Sets the target to be used for {@code event.target} when firing
+         * Sets the target to be used for `event.target` when firing
          * event. Mainly used for testing. For example, see
-         * {@code goog.testing.events.mixinListenable}.
+         * `goog.testing.events.mixinListenable`.
          * @param {!Object} target The target.
          */
         setTargetForTesting(target: Object): void;

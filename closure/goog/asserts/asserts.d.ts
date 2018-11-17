@@ -52,7 +52,7 @@ declare module goog.asserts {
      *  switch(type) {
      *    case FOO: doSomething(); break;
      *    case BAR: doSomethingElse(); break;
-     *    default: goog.assert.fail('Unrecognized type: ' + type);
+     *    default: goog.asserts.fail('Unrecognized type: ' + type);
      *      // We have only 2 types - "default:" section is unreachable code.
      *  }
      * </pre>
@@ -142,7 +142,7 @@ declare module goog.asserts {
      *
      * The compiler may tighten the type returned by this function.
      *
-     * @param {*} value The value to check.
+     * @param {?} value The value to check.
      * @param {function(new: T, ...)} type A user-defined constructor.
      * @param {string=} opt_message Error message in case of failure.
      * @param {...*} var_args The items to substitute into the failure message.
@@ -152,6 +152,19 @@ declare module goog.asserts {
      * @template T
      */
     function assertInstanceof<T>(value: any, type: (...arg0: any[]) => any, opt_message?: string, ...var_args: any[]): T;
+
+    /**
+     * Checks whether the value is a finite number, if goog.asserts.ENABLE_ASSERTS
+     * is true.
+     *
+     * @param {*} value The value to check.
+     * @param {string=} opt_message Error message in case of failure.
+     * @param {...*} var_args The items to substitute into the failure message.
+     * @throws {goog.asserts.AssertionError} When the value is not a number, or is
+     *     a non-finite number such as NaN, Infinity or -Infinity.
+     * @return {number} The value initially passed in.
+     */
+    function assertFinite(value: any, opt_message?: string, ...var_args: any[]): number;
 
     /**
      * Checks that no enumerable keys are present in Object.prototype. Such keys

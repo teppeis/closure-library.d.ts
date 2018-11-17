@@ -116,7 +116,7 @@ declare module goog.structs {
         /**
          * Tells whether this node is the ancestor of the given node.
          * @param {!goog.structs.TreeNode<KEY, VALUE>} node A node.
-         * @return {boolean} Whether this node is the ancestor of {@code node}.
+         * @return {boolean} Whether this node is the ancestor of `node`.
          */
         contains(node: goog.structs.TreeNode<KEY, VALUE>): boolean;
         
@@ -144,8 +144,8 @@ declare module goog.structs {
          * @param {function(this:THIS, !goog.structs.TreeNode<KEY, VALUE>, number,
          *     !Array<!goog.structs.TreeNode<KEY, VALUE>>)} f Callback function. It
          *     takes the node, its index and the array of all child nodes as arguments.
-         * @param {THIS=} opt_this The object to be used as the value of {@code this}
-         *     within {@code f}.
+         * @param {THIS=} opt_this The object to be used as the value of `this`
+         *     within `f`.
          * @template THIS
          */
         forEachChild<THIS>(f: (arg0: goog.structs.TreeNode<KEY, VALUE>, arg1: number, arg2: Array<goog.structs.TreeNode<KEY, VALUE>>) => any, opt_this?: THIS): void;
@@ -154,8 +154,8 @@ declare module goog.structs {
          * Traverses all child nodes recursively in preorder.
          * @param {function(this:THIS, !goog.structs.TreeNode<KEY, VALUE>)} f Callback
          *     function.  It takes the node as argument.
-         * @param {THIS=} opt_this The object to be used as the value of {@code this}
-         *     within {@code f}.
+         * @param {THIS=} opt_this The object to be used as the value of `this`
+         *     within `f`.
          * @template THIS
          */
         forEachDescendant<THIS>(f: (arg0: goog.structs.TreeNode<KEY, VALUE>) => any, opt_this?: THIS): void;
@@ -167,8 +167,8 @@ declare module goog.structs {
          *     (boolean|undefined)} f Callback function. It takes the node as argument.
          *     The children of this node will be visited if the callback returns true or
          *     undefined, and will be skipped if the callback returns false.
-         * @param {THIS=} opt_this The object to be used as the value of {@code this}
-         *     within {@code f}.
+         * @param {THIS=} opt_this The object to be used as the value of `this`
+         *     within `f`.
          * @template THIS
          */
         traverse<THIS>(f: (arg0: goog.structs.TreeNode<KEY, VALUE>) => boolean|void, opt_this?: THIS): void;
@@ -208,7 +208,7 @@ declare module goog.structs {
         /**
          * Replaces the given child node.
          * @param {!goog.structs.TreeNode<KEY, VALUE>} newChild New node to replace
-         *     {@code oldChild}. It must not have parent node.
+         *     `oldChild`. It must not have parent node.
          * @param {!goog.structs.TreeNode<KEY, VALUE>} oldChild Existing child node to
          *     be replaced.
          * @return {!goog.structs.TreeNode<KEY, VALUE>} The replaced child node

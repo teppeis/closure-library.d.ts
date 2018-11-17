@@ -19,10 +19,10 @@ declare module goog.ui {
         
         /**
          * DOM element representing the value background image.
-         * @type {Element}
+         * @type {HTMLElement}
          * @protected
          */
-        valueBackgroundImageElement: Element;
+        valueBackgroundImageElement: HTMLElement;
         
         /**
          * DOM element representing the current color swatch.
@@ -75,14 +75,17 @@ declare module goog.ui {
         /**
          * Updates the text entry field.
          * @protected
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         updateInput(): void;
         
         /**
          * Sets which color is selected and update the UI.
          * @param {string} color The selected color.
+         * @param {boolean=} opt_disableDispatchEvent (optional) Whether the event
+         * should not be fired.
          */
-        setColor(color: string): void;
+        setColor(color: string, opt_disableDispatchEvent?: boolean): void;
         
         /**
          * Sets which color is selected.
@@ -134,6 +137,7 @@ declare module goog.ui {
          * Handles input events on the hex value input field.
          * @param {goog.events.Event} e Event object.
          * @protected
+         * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
          */
         handleInput(e: goog.events.Event): void;
     }

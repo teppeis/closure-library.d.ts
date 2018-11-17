@@ -47,6 +47,16 @@ declare module goog.net {
         toString(): string;
         
         /**
+         * @return {boolean} Whether or not the address is site-local.
+         */
+        isSiteLocal(): boolean;
+        
+        /**
+         * @return {boolean} Whether or not the address is link-local.
+         */
+        isLinkLocal(): boolean;
+        
+        /**
          * Parses an IP Address in a string.
          * If the string is malformed, the function will simply return null
          * instead of raising an exception.

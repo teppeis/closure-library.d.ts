@@ -30,12 +30,6 @@ declare module goog.dom.pattern {
     };
 
     /**
-     * Regular expression for breaking text nodes.
-     * @type {RegExp}
-     */
-    var BREAKING_TEXTNODE_RE: RegExp;
-
-    /**
      * Utility function to match a string against either a string or a regular
      * expression.
      *

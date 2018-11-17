@@ -41,10 +41,10 @@ declare module goog.string$.path {
      * Joins one or more path components (e.g. 'foo/' and 'bar' make 'foo/bar').
      * An absolute component will discard all previous component.
      * See http://docs.python.org/library/os.path.html#os.path.join
-     * @param {...string} var_args One of more path components.
+     * @param {...(string|undefined)} var_args One of more path components.
      * @return {string} The path components joined.
      */
-    function join(...var_args: string[]): string;
+    function join(...var_args: (string|void)[]): string;
 
     /**
      * Normalizes a pathname by collapsing duplicate separators, parent directory

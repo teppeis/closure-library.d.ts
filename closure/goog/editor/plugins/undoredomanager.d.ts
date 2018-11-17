@@ -6,7 +6,7 @@ declare module goog {
 declare module goog.editor.plugins {
 
     /**
-     * Manages undo and redo operations through a series of {@code UndoRedoState}s
+     * Manages undo and redo operations through a series of `UndoRedoState`s
      * maintained on undo and redo stacks.
      *
      * @constructor

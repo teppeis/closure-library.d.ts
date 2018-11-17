@@ -14,7 +14,8 @@ declare module goog.net {
      * </ol>
      *
      * @param {HTMLIFrameElement} iframe An iframe.
-     * @param {boolean=} opt_hasContent Does the loaded iframe have content.
+     * @param {boolean=} opt_hasContent Whether to wait for the loaded iframe to
+     *     have content in its document body.
      * @extends {goog.events.EventTarget}
      * @constructor
      * @final

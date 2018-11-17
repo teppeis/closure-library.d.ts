@@ -45,6 +45,12 @@ declare module goog.graphics {
          * @param {CanvasRenderingContext2D} ctx The context to draw the element in.
          */
         draw(ctx: CanvasRenderingContext2D): void;
+        
+        /**
+         * Removes an element from the group.
+         * @param {!goog.graphics.Element} elem the element to remove.
+         */
+        removeElement(elem: goog.graphics.Element): void;
     }
 
     /**

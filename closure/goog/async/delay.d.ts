@@ -18,6 +18,7 @@ declare module goog.async {
      * @param {THIS=} opt_handler The object scope to invoke the function in.
      * @template THIS
      * @constructor
+     * @struct
      * @extends {goog.Disposable}
      * @final
      */
@@ -32,6 +33,14 @@ declare module goog.async {
          *     interval with this one (in milliseconds).
          */
         start(opt_interval?: number): void;
+        
+        /**
+         * Starts the delay timer if it's not already active.
+         * @param {number=} opt_interval If specified and the timer is not already
+         *     active, overrides the object's default interval with this one (in
+         *     milliseconds).
+         */
+        startIfNotActive(opt_interval?: number): void;
         
         /**
          * Stops the delay timer if it is active. No action is taken if the timer is not

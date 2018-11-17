@@ -21,20 +21,23 @@ declare module goog.net.jsloader {
     /**
      * Optional parameters for goog.net.jsloader.send.
      * timeout: The length of time, in milliseconds, we are prepared to wait
-     *     for a load request to complete. Default it 5 seconds.
+     *     for a load request to complete, or 0 or negative for no timeout. Default
+     *     is 5 seconds.
      * document: The HTML document under which to load the JavaScript. Default is
      *     the current document.
      * cleanupWhenDone: If true clean up the script tag after script completes to
      *     load. This is important if you just want to read data from the JavaScript
      *     and then throw it away. Default is false.
+     * attributes: Additional attributes to set on the script tag.
      *
      * @typedef {{
      *   timeout: (number|undefined),
      *   document: (HTMLDocument|undefined),
-     *   cleanupWhenDone: (boolean|undefined)
+     *   cleanupWhenDone: (boolean|undefined),
+     *   attributes: (!Object<string, string>|undefined)
      * }}
      */
-    type Options = {timeout: number|void; document: HTMLDocument|void; cleanupWhenDone: boolean|void};
+    type Options = {timeout: number|void; document: HTMLDocument|void; cleanupWhenDone: boolean|void; attributes: {[index: string]: string}|void};
 
     /**
      * A jsloader error.
@@ -65,23 +68,25 @@ declare module goog.net.jsloader {
      * the network fetches in parallel.
      *
      * If you need to load a large number of scripts but dependency order doesn't
-     * matter, you should just call goog.net.jsloader.load N times.
+     * matter, you should just call goog.net.jsloader.safeLoad N times.
      *
      * If you need to load a large number of scripts on the same domain,
      * you may want to use goog.module.ModuleLoader.
      *
-     * @param {Array<string>} uris The URIs to load.
+     * @param {Array<!goog.html.TrustedResourceUrl>} trustedUris The URIs to load.
      * @param {goog.net.jsloader.Options=} opt_options Optional parameters. See
      *     goog.net.jsloader.options documentation for details.
+     * @return {!goog.async.Deferred} The deferred result, that may be used to add
+     *     callbacks
      */
-    function loadMany(uris: Array<string>, opt_options?: goog.net.jsloader.Options): void;
+    function safeLoadMany(trustedUris: Array<goog.html.TrustedResourceUrl>, opt_options?: goog.net.jsloader.Options): goog.async.Deferred<any>;
 
     /**
      * Loads and evaluates a JavaScript file.
      * When the script loads, a user callback is called.
      * It is the client's responsibility to verify that the script ran successfully.
      *
-     * @param {string} uri The URI of the JavaScript.
+     * @param {!goog.html.TrustedResourceUrl} trustedUri The URI of the JavaScript.
      * @param {goog.net.jsloader.Options=} opt_options Optional parameters. See
      *     goog.net.jsloader.Options documentation for details.
      * @return {!goog.async.Deferred} The deferred result, that may be used to add
@@ -89,7 +94,7 @@ declare module goog.net.jsloader {
      *     The error callback will be called with a single goog.net.jsloader.Error
      *     parameter.
      */
-    function load(uri: string, opt_options?: goog.net.jsloader.Options): goog.async.Deferred<any>;
+    function safeLoad(trustedUri: goog.html.TrustedResourceUrl, opt_options?: goog.net.jsloader.Options): goog.async.Deferred<any>;
 
     /**
      * Loads a JavaScript file and verifies it was evaluated successfully, using a
@@ -99,7 +104,7 @@ declare module goog.net.jsloader {
      * We verify this object was set and return its value in the success callback.
      * If the object is not defined we trigger an error callback.
      *
-     * @param {string} uri The URI of the JavaScript.
+     * @param {!goog.html.TrustedResourceUrl} trustedUri The URI of the JavaScript.
      * @param {string} verificationObjName The name of the verification object that
      *     the loaded script should set.
      * @param {goog.net.jsloader.Options} options Optional parameters. See
@@ -111,7 +116,7 @@ declare module goog.net.jsloader {
      *     The error callback will be called with a single goog.net.jsloader.Error
      *     parameter.
      */
-    function loadAndVerify(uri: string, verificationObjName: string, options: goog.net.jsloader.Options): goog.async.Deferred<any>;
+    function safeLoadAndVerify(trustedUri: goog.html.TrustedResourceUrl, verificationObjName: string, options: goog.net.jsloader.Options): goog.async.Deferred<any>;
 
     /**
      * Cancels a given request.

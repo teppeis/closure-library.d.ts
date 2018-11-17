@@ -189,32 +189,34 @@ declare module goog.style {
     function getVisibleRectForElement(element: Element): goog.math.Box;
 
     /**
-     * Calculate the scroll position of {@code container} with the minimum amount so
-     * that the content and the borders of the given {@code element} become visible.
+     * Calculate the scroll position of `container` with the minimum amount so
+     * that the content and the borders of the given `element` become visible.
      * If the element is bigger than the container, its top left corner will be
      * aligned as close to the container's top left corner as possible.
      *
      * @param {Element} element The element to make visible.
-     * @param {Element} container The container to scroll.
+     * @param {Element=} opt_container The container to scroll. If not set, then the
+     *     document scroll element will be used.
      * @param {boolean=} opt_center Whether to center the element in the container.
      *     Defaults to false.
      * @return {!goog.math.Coordinate} The new scroll position of the container,
      *     in form of goog.math.Coordinate(scrollLeft, scrollTop).
      */
-    function getContainerOffsetToScrollInto(element: Element, container: Element, opt_center?: boolean): goog.math.Coordinate;
+    function getContainerOffsetToScrollInto(element: Element, opt_container?: Element, opt_center?: boolean): goog.math.Coordinate;
 
     /**
-     * Changes the scroll position of {@code container} with the minimum amount so
-     * that the content and the borders of the given {@code element} become visible.
+     * Changes the scroll position of `container` with the minimum amount so
+     * that the content and the borders of the given `element` become visible.
      * If the element is bigger than the container, its top left corner will be
      * aligned as close to the container's top left corner as possible.
      *
      * @param {Element} element The element to make visible.
-     * @param {Element} container The container to scroll.
+     * @param {Element=} opt_container The container to scroll. If not set, then the
+     *     document scroll element will be used.
      * @param {boolean=} opt_center Whether to center the element in the container.
      *     Defaults to false.
      */
-    function scrollIntoContainerView(element: Element, container: Element, opt_center?: boolean): void;
+    function scrollIntoContainerView(element: Element, opt_container?: Element, opt_center?: boolean): void;
 
     /**
      * Returns clientLeft (width of the left border and, if the directionality is
@@ -290,7 +292,8 @@ declare module goog.style {
 
     /**
      * Returns the position of the event or the element's border box relative to
-     * the client viewport.
+     * the client viewport. If an event is passed, and if this event is a "touch"
+     * event, then the position of the first changedTouches will be returned.
      * @param {Element|Event|goog.events.Event} el Element or a mouse / touch event.
      * @return {!goog.math.Coordinate} The position.
      */
@@ -344,7 +347,7 @@ declare module goog.style {
      * irrespective of the box model in effect.
      *
      * Note that this function does not take CSS transforms into account. Please see
-     * {@code goog.style.getTransformedSize}.
+     * `goog.style.getTransformedSize`.
      * @param {Element} element Element to get size of.
      * @return {!goog.math.Size} Object with width/height properties.
      */
@@ -354,11 +357,11 @@ declare module goog.style {
      * Gets the height and width of an element, post transform, even if its display
      * is none.
      *
-     * This is like {@code goog.style.getSize}, except:
+     * This is like `goog.style.getSize`, except:
      * <ol>
      * <li>Takes webkitTransforms such as rotate and scale into account.
-     * <li>Will return null if {@code element} doesn't respond to
-     *     {@code getBoundingClientRect}.
+     * <li>Will return null if `element` doesn't respond to
+     *     `getBoundingClientRect`.
      * <li>Currently doesn't make sense on non-WebKit browsers which don't support
      *    webkitTransforms.
      * </ol>
@@ -488,14 +491,19 @@ declare module goog.style {
     function isElementShown(el: Element): boolean;
 
     /**
-     * Installs the styles string into the window that contains opt_element.  If
-     * opt_element is null, the main window is used.
-     * @param {string} stylesString The style string to install.
-     * @param {Node=} opt_node Node whose parent document should have the
+     * Installs the style sheet into the window that contains opt_node.  If
+     * opt_node is null, the main window is used.
+     * @param {!goog.html.SafeStyleSheet} safeStyleSheet The style sheet to install.
+     * @param {?Node=} opt_node Node whose parent document should have the
      *     styles installed.
-     * @return {Element|StyleSheet} The style element created.
+     * @return {!HTMLStyleElement|!StyleSheet} In IE<11, a StyleSheet object with no
+     *     owning &lt;style&gt; tag (this is how IE creates style sheets).  In every
+     *     other browser, a &lt;style&gt; element with an attached style.  This
+     *     doesn't return a StyleSheet object so that setSafeStyleSheet can replace
+     *     it (otherwise, if you pass a StyleSheet to setSafeStyleSheet, it will
+     *     make a new StyleSheet and leave the original StyleSheet orphaned).
      */
-    function installStyles(stylesString: string, opt_node?: Node): Element|StyleSheet;
+    function installSafeStyleSheet(safeStyleSheet: goog.html.SafeStyleSheet, opt_node?: Node): HTMLStyleElement|StyleSheet;
 
     /**
      * Removes the styles added by {@link #installStyles}.
@@ -507,12 +515,13 @@ declare module goog.style {
     /**
      * Sets the content of a style element.  The style element can be any valid
      * style element.  This element will have its content completely replaced by
-     * the new stylesString.
-     * @param {Element|StyleSheet} element A stylesheet element as returned by
+     * the safeStyleSheet.
+     * @param {!Element|!StyleSheet} element A stylesheet element as returned by
      *     installStyles.
-     * @param {string} stylesString The new content of the stylesheet.
+     * @param {!goog.html.SafeStyleSheet} safeStyleSheet The new content of the
+     *     stylesheet.
      */
-    function setStyles(element: Element|StyleSheet, stylesString: string): void;
+    function setSafeStyleSheet(element: Element|StyleSheet, safeStyleSheet: goog.html.SafeStyleSheet): void;
 
     /**
      * Sets 'white-space: pre-wrap' for a node (x-browser).

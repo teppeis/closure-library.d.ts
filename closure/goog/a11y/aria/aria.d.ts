@@ -20,7 +20,7 @@ declare module goog.a11y.aria {
     /**
      * Gets role of an element.
      * @param {!Element} element DOM element to get role of.
-     * @return {goog.a11y.aria.Role} ARIA Role name.
+     * @return {?goog.a11y.aria.Role} ARIA Role name.
      */
     function getRole(element: Element): goog.a11y.aria.Role;
 
@@ -105,10 +105,10 @@ declare module goog.a11y.aria {
      * semantics is well supported by most screen readers.
      * Only to be used internally by the ARIA library in goog.a11y.aria.*.
      * @param {!Element} element The element to assert an ARIA role set.
-     * @param {!goog.array.ArrayLike<string>} allowedRoles The child roles of
+     * @param {!IArrayLike<string>} allowedRoles The child roles of
      * the roles.
      */
-    function assertRoleIsSetInternalUtil(element: Element, allowedRoles: goog.array.ArrayLike): void;
+    function assertRoleIsSetInternalUtil(element: Element, allowedRoles: IArrayLike<string>): void;
 
     /**
      * Gets the boolean value of an ARIA state/property.
@@ -143,8 +143,27 @@ declare module goog.a11y.aria {
      * Only to be used internally by the ARIA library in goog.a11y.aria.*.
      * @param {!Element} element DOM node to get state from.
      * @param {!goog.a11y.aria.State} stateName State name.
-     * @return {!goog.array.ArrayLike<string>} string Array
+     * @return {!IArrayLike<string>} string Array
      *     value of the state attribute.
      */
-    function getStringArrayStateInternalUtil(element: Element, stateName: goog.a11y.aria.State): goog.array.ArrayLike;
+    function getStringArrayStateInternalUtil(element: Element, stateName: goog.a11y.aria.State): IArrayLike<string>;
+
+    /**
+     * Returns true if element has an ARIA state/property, false otherwise.
+     * @param {!Element} element The element to get the ARIA state for.
+     * @param {!goog.a11y.aria.State|string} stateName the ARIA state name.
+     * @return {boolean}
+     */
+    function hasState(element: Element, stateName: goog.a11y.aria.State|string): boolean;
+
+    /**
+     * Returns whether the element has a container ARIA role.
+     * Container roles are ARIA roles that use the aria-activedescendant property
+     * to manage their active descendants or children. See
+     * {@link http://www.w3.org/TR/wai-aria/states_and_properties
+     * #aria-activedescendant} for more information.
+     * @param {!Element} element
+     * @return {boolean}
+     */
+    function isContainerRole(element: Element): boolean;
 }

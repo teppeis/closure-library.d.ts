@@ -27,6 +27,7 @@ declare module goog.style.transition {
      * @param {goog.style.transition.Css3Property|
      *     Array<goog.style.transition.Css3Property>} properties A single CSS3
      *     transition property or array of properties.
+     * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
      */
     function set(element: Element, properties: goog.style.transition.Css3Property|Array<goog.style.transition.Css3Property>): void;
 

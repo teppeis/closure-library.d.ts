@@ -21,7 +21,7 @@ declare module goog.locale {
     };
 
     /**
-     * Set currnet locale to the specified one.
+     * Set current locale to the specified one.
      * @param {string} localeName Locale name string. We are following the usage
      *     in CLDR, but can make a few compromise for existing name compatibility.
      */
@@ -84,7 +84,7 @@ declare module goog.locale {
      * Returns the localized country name for the provided language code in the
      * current or provided locale symbols set.
      *
-     * This method depends on goog.locale.LocaleNameConstants__<locale> available
+     * This method depends on `goog.locale.LocaleNameConstants__<locale>` available
      * from http://go/js_locale_data. User of this method has to add dependency to
      * this.
      *
@@ -95,6 +95,23 @@ declare module goog.locale {
      * @return {string} Localized country name.
      */
     function getLocalizedCountryName(languageCode: string, opt_localeSymbols?: Object): string;
+
+    /**
+     * Returns the localized country name for the provided language code in the
+     * current or provided locale symbols set.
+     *
+     * This method depends on `goog.locale.LocaleNameConstants__<locale>` available
+     * from http://go/js_locale_data. User of this method has to add dependency to
+     * this.
+     *
+     * @param {string} regionCode Two character country code or three digit region
+     *      code to look up the country name for.
+     * @param {?Object=} opt_localeSymbols If omitted the current locale symbol
+     *     set is used.
+     *
+     * @return {string} Localized region name.
+     */
+    function getLocalizedRegionNameFromRegionCode(regionCode: string, opt_localeSymbols?: Object): string;
 
     /**
      * Returns the language name of the provided language code in its native
@@ -113,7 +130,7 @@ declare module goog.locale {
      * Returns the localized language name for the provided language code in
      * the current or provided locale symbols set.
      *
-     * This method depends on goog.locale.LocaleNameConstants__<locale> available
+     * This method depends on `goog.locale.LocaleNameConstants__<locale>` available
      * from http://go/js_locale_data. User of this method has to add dependency to
      * this.
      *

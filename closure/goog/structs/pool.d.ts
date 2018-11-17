@@ -6,7 +6,7 @@ declare module goog.structs {
 
     /**
      * A generic pool class. If min is greater than max, an error is thrown.
-     * @param {number=} opt_minCount Min. number of objects (Default: 1).
+     * @param {number=} opt_minCount Min. number of objects (Default: 0).
      * @param {number=} opt_maxCount Max. number of objects (Default: 10).
      * @constructor
      * @extends {goog.Disposable}
@@ -24,7 +24,7 @@ declare module goog.structs {
         
         /**
          * Sets the maximum count of the pool.
-         * If max is less than the max count of the pool, an error is thrown.
+         * If max is less than the min count of the pool, an error is thrown.
          * @param {number} max The maximum count of the pool.
          */
         setMaximumCount(max: number): void;
@@ -79,7 +79,7 @@ declare module goog.structs {
         /**
          * Should be overridden to dispose of an object. Default implementation is to
          * remove all its members, which should render it useless. Calls the object's
-         * {@code dispose()} method, if available.
+         * `dispose()` method, if available.
          * @param {T} obj The object to dispose.
          */
         disposeObject(obj: T): void;
@@ -87,7 +87,7 @@ declare module goog.structs {
         /**
          * Should be overridden to determine whether an object has become unusable and
          * should not be returned by getObject(). Calls the object's
-         * {@code canBeReused()}  method, if available.
+         * `canBeReused()`  method, if available.
          * @param {T} obj The object to test.
          * @return {boolean} Whether the object can be reused.
          */

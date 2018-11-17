@@ -15,14 +15,16 @@ declare module goog.pubsub {
      * "toString", "hasOwnProperty", etc.
      *
      * @constructor
+     * @param {boolean=} opt_async Enable asynchronous behavior.  Recommended for
+     *     new code.  See notes on the publish() method.
      * @extends {goog.Disposable}
      */
     class PubSub extends goog.Disposable {
-        constructor();
+        constructor(opt_async?: boolean);
         
         /**
          * Subscribes a function to a topic.  The function is invoked as a method on
-         * the given {@code opt_context} object, or in the global scope if no context
+         * the given `opt_context` object, or in the global scope if no context
          * is specified.  Subscribing the same function to the same topic multiple
          * times will result in multiple function invocations while publishing.
          * Returns a subscription key that can be used to unsubscribe the function from
@@ -39,7 +41,7 @@ declare module goog.pubsub {
         
         /**
          * Subscribes a single-use function to a topic.  The function is invoked as a
-         * method on the given {@code opt_context} object, or in the global scope if
+         * method on the given `opt_context` object, or in the global scope if
          * no context is specified, and is then unsubscribed.  Returns a subscription
          * key that can be used to unsubscribe the function from the topic via
          * {@link #unsubscribeByKey}.
@@ -77,8 +79,11 @@ declare module goog.pubsub {
         
         /**
          * Publishes a message to a topic.  Calls functions subscribed to the topic in
-         * the order in which they were added, passing all arguments along.  If any of
-         * the functions throws an uncaught error, publishing is aborted.
+         * the order in which they were added, passing all arguments along.
+         *
+         * If this object was created with async=true, subscribed functions are called
+         * via goog.async.run().  Otherwise, the functions are called directly, and if
+         * any of them throw an uncaught error, publishing is aborted.
          *
          * @param {string} topic Topic to publish to.
          * @param {...*} var_args Arguments that are applied to each subscription
@@ -95,7 +100,7 @@ declare module goog.pubsub {
         
         /**
          * Returns the number of subscriptions to the given topic (or all topics if
-         * unspecified).
+         * unspecified). This number will not change while publishing any messages.
          * @param {string=} opt_topic The topic (all topics if unspecified).
          * @return {number} Number of subscriptions to the topic.
          */

@@ -65,17 +65,19 @@ declare module goog.ui.style.app {
          * Takes a text caption or existing DOM structure, and returns the content and
          * a dropdown arrow element wrapped in a pseudo-rounded-corner box.  Creates
          * the following DOM structure:
-         *  <div class="goog-inline-block goog-button-outer-box">
-         *    <div class="goog-inline-block goog-button-inner-box">
-         *      <div class="goog-button-pos">
-         *        <div class="goog-button-top-shadow">&nbsp;</div>
-         *        <div class="goog-button-content">
-         *          Contents...
-         *          <div class="goog-menu-button-dropdown"> </div>
+         *
+         *    <div class="goog-inline-block goog-button-outer-box">
+         *      <div class="goog-inline-block goog-button-inner-box">
+         *        <div class="goog-button-pos">
+         *          <div class="goog-button-top-shadow">&nbsp;</div>
+         *          <div class="goog-button-content">
+         *            Contents...
+         *            <div class="goog-menu-button-dropdown"> </div>
+         *          </div>
          *        </div>
          *      </div>
          *    </div>
-         *  </div>
+         *
          * @param {goog.ui.ControlContent} content Text caption or DOM structure to wrap
          *     in a box.
          * @param {goog.dom.DomHelper} dom DOM helper, used for document interaction.
@@ -95,7 +97,9 @@ declare module goog.ui.style.app {
         /**
          * Returns an appropriately-styled DIV containing a dropdown arrow.
          * Creates the following DOM structure:
+         *
          *    <div class="goog-menu-button-dropdown"> </div>
+         *
          * @param {goog.dom.DomHelper} dom DOM helper, used for document interaction.
          * @return {Element} Dropdown element.
          */

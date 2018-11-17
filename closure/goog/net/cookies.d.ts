@@ -6,7 +6,7 @@ declare module goog.net {
 
     /**
      * A class for handling browser cookies.
-     * @param {Document} context The context document to get/set cookies on.
+     * @param {?Document} context The context document to get/set cookies on.
      * @constructor
      * @final
      */
@@ -18,9 +18,9 @@ declare module goog.net {
          * to the size of a cookie. To make sure users can't break this limit, we
          * should truncate long cookies at 3950 bytes, to be extra careful with dumb
          * browsers/proxies that interpret 4K as 4000 rather than 4096.
-         * @type {number}
+         * @const {number}
          */
-        static MAX_COOKIE_LENGTH: number;
+        static MAX_COOKIE_LENGTH: any;
         
         /**
          * Returns true if cookies are enabled.
@@ -68,12 +68,12 @@ declare module goog.net {
          * Sets a cookie.  The max_age can be -1 to set a session cookie. To remove and
          * expire cookies, use remove() instead.
          *
-         * Neither the {@code name} nor the {@code value} are encoded in any way. It is
-         * up to the callers of {@code get} and {@code set} (as well as all the other
+         * Neither the `name` nor the `value` are encoded in any way. It is
+         * up to the callers of `get` and `set` (as well as all the other
          * methods) to handle any possible encoding and decoding.
          *
-         * @throws {!Error} If the {@code name} fails #goog.net.cookies.isValidName.
-         * @throws {!Error} If the {@code value} fails #goog.net.cookies.isValidValue.
+         * @throws {!Error} If the `name` fails #goog.net.cookies.isValidName.
+         * @throws {!Error} If the `value` fails #goog.net.cookies.isValidValue.
          *
          * @param {string} name  The cookie name.
          * @param {string} value  The cookie value.
@@ -103,10 +103,10 @@ declare module goog.net {
         /**
          * Removes and expires a cookie.
          * @param {string} name  The cookie name.
-         * @param {string=} opt_path  The path of the cookie, or null to expire a cookie
+         * @param {?string=} opt_path  The path of the cookie, or null to expire a cookie
          *     set at the full request path. If not provided, the default is '/'
          *     (i.e. path=/).
-         * @param {string=} opt_domain  The domain of the cookie, or null to expire a
+         * @param {?string=} opt_domain  The domain of the cookie, or null to expire a
          *     cookie set at the full request host name. If not provided, the default is
          *     null (i.e. cookie at full request host name).
          * @return {boolean} Whether the cookie existed before it was removed.
@@ -156,11 +156,17 @@ declare module goog.net {
          * subpath and/or another domain these will still be there.
          */
         clear(): void;
+        
+        /**
+         * Getter for the static instance of goog.net.Cookies.
+         * @return {!goog.net.Cookies}
+         */
+        static getInstance(): goog.net.Cookies;
     }
 
     /**
      * A static default instance.
-     * @type {goog.net.Cookies}
+     * @const {!goog.net.Cookies}
      */
-    var cookies: goog.net.Cookies;
+    var cookies: any;
 }

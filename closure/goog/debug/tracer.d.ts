@@ -4,6 +4,8 @@ declare module goog.debug {
      * Class used for singleton goog.debug.Trace.  Used for timing slow points in
      * the code. Based on the java Tracer class but optimized for javascript.
      * See com.google.common.tracing.Tracer.
+     * It is also possible to bridge from this class to other tracer classes via
+     * adding listeners.
      * @constructor
      * @private
      */
@@ -14,6 +16,20 @@ declare module goog.debug {
          * @type {number}
          */
         MAX_TRACE_SIZE: number;
+        
+        /**
+         * Removes all registered callback functions. Mainly used for testing.
+         */
+        removeAllListeners(): void;
+        
+        /**
+         * Adds up to three callback functions which are called on `startTracer`,
+         * `stopTracer`, `clearOutstandingEvents_` and `addComment` in
+         * order to bridge from the Closure tracer singleton object to any tracer class.
+         * @param {!goog.debug.Trace_.TracerCallbacks} callbacks An object literal
+         *   containing the callback functions.
+         */
+        addTraceCallbacks(callbacks: goog.debug.Trace_.TracerCallbacks): void;
         
         /**
          * Add the ability to explicitly set the start time. This is useful for example
@@ -27,7 +43,7 @@ declare module goog.debug {
         /**
          * Initializes and resets the current trace
          * @param {number} defaultThreshold The default threshold below which the
-         * tracer output will be supressed. Can be overridden on a per-Tracer basis.
+         * tracer output will be suppressed. Can be overridden on a per-Tracer basis.
          */
         initCurrentTrace(defaultThreshold: number): void;
         
@@ -39,7 +55,7 @@ declare module goog.debug {
         /**
          * Resets the trace.
          * @param {number} defaultThreshold The default threshold below which the
-         * tracer output will be supressed. Can be overridden on a per-Tracer basis.
+         * tracer output will be suppressed. Can be overridden on a per-Tracer basis.
          */
         reset(defaultThreshold: number): void;
         
@@ -114,6 +130,12 @@ declare module goog.debug {
      * @type {goog.debug.Trace_}
      */
     var Trace: goog.debug.Trace_;
+
+    /**
+     * The detail of calling the stop callback for a trace.
+     * @record
+     */
+    function StopTraceDetail(): void;
 }
 
 declare module goog.debug.Trace_ {
@@ -163,6 +185,21 @@ declare module goog.debug.Trace_ {
         type: string|void|void;
         
         /**
+         * @type {goog.debug.Trace_.EventType|undefined}
+         */
+        eventType: goog.debug.Trace_.EventType|void;
+        
+        /**
+         * @type {number|undefined}
+         */
+        id: number|void;
+        
+        /**
+         * @type {string|undefined}
+         */
+        comment: string|void;
+        
+        /**
          * Returns a formatted string for the event.
          * @param {number} startTime The start time of the trace to generate relative
          * times.
@@ -179,6 +216,13 @@ declare module goog.debug.Trace_ {
          */
         toString(): string;
     }
+
+    /**
+     * A class to specify the types of the callback functions used by
+     * `addTraceCallbacks`.
+     * @record
+     */
+    function TracerCallbacks(): void;
 
     /**
      * Returns the current time. Done through a wrapper function so it can be
