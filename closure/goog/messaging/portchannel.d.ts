@@ -23,7 +23,7 @@ declare module goog.messaging {
      * @final
      */
     class PortChannel extends goog.messaging.AbstractChannel {
-        constructor(underlyingPort: MessagePort|WebWorker);
+        constructor(underlyingPort: MessagePort|Worker);
         
         /**
          * The flag added to messages that are sent by a PortChannel, and are meant to
