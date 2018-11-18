@@ -64,9 +64,6 @@ declare module goog {
     class Promise<TYPE, RESOLVER_CONTEXT> {
         constructor(resolver: (arg0: (arg0?: TYPE|IThenable<TYPE>|_Thenable) => any, arg1: (arg0?: any) => any) => void, opt_context?: RESOLVER_CONTEXT);
         
-        /** @const @private {goog.async.FreeList<!goog.Promise.CallbackEntry_>} */
-        static freelist_: any;
-        
         /**
          * @param {VALUE=} opt_value
          * @return {RESULT} A new Promise that is immediately resolved
@@ -257,6 +254,19 @@ declare module goog.Promise {
         FULFILLED: State_;
         REJECTED: State_;
     };
+
+    /**
+     * Entries in the callback chain. Each call to `then`,
+     * `thenCatch`, or `thenAlways` creates an entry containing the
+     * functions that may be invoked once the Promise is settled.
+     *
+     * @private @final @struct @constructor
+     */
+    interface CallbackEntry_ {
+        
+        /** clear the object prior to reuse */
+        reset(): void;
+    }
 
     /**
      * Error used as a rejection reason for canceled Promises.

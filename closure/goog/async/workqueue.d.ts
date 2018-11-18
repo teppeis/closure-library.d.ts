@@ -17,9 +17,6 @@ declare module goog.async {
     class WorkQueue {
         constructor();
         
-        /** @const @private {goog.async.FreeList<goog.async.WorkItem>} */
-        static freelist_: any;
-        
         /**
          * @param {function()} fn
          * @param {Object|null|undefined} scope

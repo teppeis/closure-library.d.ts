@@ -22,9 +22,6 @@ declare module goog.net {
     class WebSocket extends goog.events.EventTarget {
         constructor(opt_params?: boolean|goog.net.WebSocket.Options, opt_getNextReconnect?: (arg0: number) => number);
         
-        /** @record */
-        static Options(): void;
-        
         /**
          * Installs exception protection for all entry points introduced by
          * goog.net.WebSocket instances which are not protected by
@@ -113,6 +110,10 @@ declare module goog.net.WebSocket {
         CLOSING: ReadyState_;
         CLOSED: ReadyState_;
     };
+
+    /** @record */
+    interface Options {
+    }
 
     /**
      * Object representing a new incoming message event.

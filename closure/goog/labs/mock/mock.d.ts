@@ -188,6 +188,21 @@ declare module goog.labs.mock {
     }
 
     /**
+     * A `StubBinder` which uses `MockManager_` to manage stub
+     * bindings.
+     *
+     * @param {!goog.labs.mock.MockManager_}
+     *   mockManager The mock manager.
+     * @param {?string} name The method name.
+     * @param {!Array<?>} args The other arguments to the method.
+     *
+     * @implements {goog.labs.mock.StubBinder}
+     * @private @constructor @struct @final
+     */
+    interface StubBinderImpl_ {
+    }
+
+    /**
      * Represents a binding between a method name, args and a stub.
      *
      * @param {?string} methodName The name of the method being stubbed.

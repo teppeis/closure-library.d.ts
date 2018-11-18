@@ -126,16 +126,17 @@ declare module goog.debug {
     }
 
     /**
+     * The detail of calling the stop callback for a trace.
+     * @record
+     */
+    interface StopTraceDetail {
+    }
+
+    /**
      * Singleton trace object
      * @type {goog.debug.Trace_}
      */
     var Trace: goog.debug.Trace_;
-
-    /**
-     * The detail of calling the stop callback for a trace.
-     * @record
-     */
-    function StopTraceDetail(): void;
 }
 
 declare module goog.debug.Trace_ {
@@ -222,7 +223,8 @@ declare module goog.debug.Trace_ {
      * `addTraceCallbacks`.
      * @record
      */
-    function TracerCallbacks(): void;
+    interface TracerCallbacks {
+    }
 
     /**
      * Returns the current time. Done through a wrapper function so it can be

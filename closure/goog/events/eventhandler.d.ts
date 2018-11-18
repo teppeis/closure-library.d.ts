@@ -148,7 +148,7 @@ declare module goog.events {
          * @this {THIS}
          * @template EVENTOBJ, THIS
          */
-        unlisten(src: goog.events.ListenableType, type: string|Array<string>|goog.events.EventId<EVENTOBJ>|Array<goog.events.EventId<EVENTOBJ>>): void;
+        unlisten<EVENTOBJ, THIS>(src: goog.events.ListenableType, type: string|Array<string>|goog.events.EventId<EVENTOBJ>|Array<goog.events.EventId<EVENTOBJ>>, opt_fn?: ((arg0: EVENTOBJ) => any)|{handleEvent: (arg0: any) => any}|void, opt_options?: boolean|EventListenerOptions, opt_scope?: Object): THIS;
         
         /**
          * Removes an event listener which was added with listenWithWrapper().

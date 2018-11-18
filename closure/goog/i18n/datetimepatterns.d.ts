@@ -1,6 +1,49 @@
 declare module goog.i18n {
 
     /**
+     * @record
+     * @struct
+     */
+    interface DateTimePatternsType {
+        
+        /** @type {string} */
+        YEAR_FULL: string;
+        
+        /** @type {string} */
+        YEAR_FULL_WITH_ERA: string;
+        
+        /** @type {string} */
+        YEAR_MONTH_ABBR: string;
+        
+        /** @type {string} */
+        YEAR_MONTH_FULL: string;
+        
+        /** @type {string} */
+        MONTH_DAY_ABBR: string;
+        
+        /** @type {string} */
+        MONTH_DAY_FULL: string;
+        
+        /** @type {string} */
+        MONTH_DAY_SHORT: string;
+        
+        /** @type {string} */
+        MONTH_DAY_MEDIUM: string;
+        
+        /** @type {string} */
+        MONTH_DAY_YEAR_MEDIUM: string;
+        
+        /** @type {string} */
+        WEEKDAY_MONTH_DAY_MEDIUM: string;
+        
+        /** @type {string} */
+        WEEKDAY_MONTH_DAY_YEAR_MEDIUM: string;
+        
+        /** @type {string} */
+        DAY_ABBR: string;
+    }
+
+    /**
      * Extended set of localized date/time patterns for locale af.
      * @type {!goog.i18n.DateTimePatternsType}
      */
@@ -671,10 +714,4 @@ declare module goog.i18n {
      * @type {!goog.i18n.DateTimePatternsType}
      */
     var DateTimePatterns: goog.i18n.DateTimePatternsType;
-
-    /**
-     * @record
-     * @struct
-     */
-    function DateTimePatternsType(): void;
 }

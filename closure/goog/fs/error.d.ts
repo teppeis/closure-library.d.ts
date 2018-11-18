@@ -5,6 +5,16 @@ declare module goog {
 
 declare module goog.fs {
 
+    /** @record */
+    interface DOMErrorLike {
+        
+        /** @type {string|undefined} */
+        name: string|void;
+        
+        /** @type {goog.fs.Error.ErrorCode|undefined} */
+        code: goog.fs.Error.ErrorCode|void;
+    }
+
     /**
      * A filesystem error. Since the filesystem API is asynchronous, stack traces
      * are less useful for identifying where errors come from, so this includes a
@@ -19,9 +29,6 @@ declare module goog.fs {
     class Error extends goog.debug.Error {
         constructor(error: DOMError|goog.fs.DOMErrorLike, action: string);
     }
-
-    /** @record */
-    function DOMErrorLike(): void;
 }
 
 declare module goog.fs.Error {

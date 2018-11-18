@@ -36,12 +36,6 @@ declare module goog {
     var hasBadLetScoping: any;
 
     /**
-     * Name for unsealable tag property.
-     * @const @private {string}
-     */
-    var UNSEALABLE_CONSTRUCTOR_PROPERTY_: any;
-
-    /**
      * Returns true if the specified value is not undefined.
      *
      * @param {?} val Variable to test.

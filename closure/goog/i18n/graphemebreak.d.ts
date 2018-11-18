@@ -12,7 +12,29 @@ declare module goog.i18n.GraphemeBreak {
      *
      * @protected @enum {number}
      */
-    var property: any;
+    type property = number;
+    var property: {
+        OTHER: property;
+        CONTROL: property;
+        EXTEND: property;
+        PREPEND: property;
+        SPACING_MARK: property;
+        INDIC_LETTER: property;
+        VIRAMA: property;
+        L: property;
+        V: property;
+        T: property;
+        LV: property;
+        LVT: property;
+        CR: property;
+        LF: property;
+        REGIONAL_INDICATOR: property;
+        ZWJ: property;
+        E_BASE: property;
+        GLUE_AFTER_ZWJ: property;
+        E_MODIFIER: property;
+        E_BASE_GAZ: property;
+    };
 
     /**
      * Indicates if there is a grapheme cluster boundary between a and b.

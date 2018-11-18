@@ -1,6 +1,85 @@
 declare module goog.i18n {
 
     /**
+     * @record
+     * @struct
+     */
+    interface DateTimeSymbolsType {
+        
+        /** @type {!Array<string>} */
+        ERAS: Array<string>;
+        
+        /** @type {!Array<string>} */
+        ERANAMES: Array<string>;
+        
+        /** @type {!Array<string>} */
+        NARROWMONTHS: Array<string>;
+        
+        /** @type {!Array<string>} */
+        STANDALONENARROWMONTHS: Array<string>;
+        
+        /** @type {!Array<string>} */
+        MONTHS: Array<string>;
+        
+        /** @type {!Array<string>} */
+        STANDALONEMONTHS: Array<string>;
+        
+        /** @type {!Array<string>} */
+        SHORTMONTHS: Array<string>;
+        
+        /** @type {!Array<string>} */
+        STANDALONESHORTMONTHS: Array<string>;
+        
+        /** @type {!Array<string>} */
+        WEEKDAYS: Array<string>;
+        
+        /** @type {!Array<string>} */
+        SHORTWEEKDAYS: Array<string>;
+        
+        /** @type {!Array<string>} */
+        STANDALONESHORTWEEKDAYS: Array<string>;
+        
+        /** @type {!Array<string>} */
+        STANDALONEWEEKDAYS: Array<string>;
+        
+        /** @type {!Array<string>} */
+        NARROWWEEKDAYS: Array<string>;
+        
+        /** @type {!Array<string>} */
+        STANDALONENARROWWEEKDAYS: Array<string>;
+        
+        /** @type {!Array<string>} */
+        SHORTQUARTERS: Array<string>;
+        
+        /** @type {!Array<string>} */
+        QUARTERS: Array<string>;
+        
+        /** @type {!Array<string>} */
+        AMPMS: Array<string>;
+        
+        /** @type {!Array<string>} */
+        DATEFORMATS: Array<string>;
+        
+        /** @type {!Array<string>} */
+        TIMEFORMATS: Array<string>;
+        
+        /** @type {!Array<string>} */
+        DATETIMEFORMATS: Array<string>;
+        
+        /** @type {number|undefined} */
+        ZERODIGIT: number|void;
+        
+        /** @type {number} */
+        FIRSTDAYOFWEEK: number;
+        
+        /** @type {!Array<number>} */
+        WEEKENDRANGE: Array<number>;
+        
+        /** @type {number} */
+        FIRSTWEEKCUTOFFDAY: number;
+    }
+
+    /**
      * Date/time formatting symbols for locale en_ISO.
      * @const
      */
@@ -679,10 +758,4 @@ declare module goog.i18n {
      * Selected date/time formatting symbols by locale.
      */
     var DateTimeSymbols: any;
-
-    /**
-     * @record
-     * @struct
-     */
-    function DateTimeSymbolsType(): void;
 }

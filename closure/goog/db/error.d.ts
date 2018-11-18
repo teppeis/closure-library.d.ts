@@ -7,6 +7,13 @@ declare module goog {
 
 declare module goog.db {
 
+    /** @record */
+    interface DOMErrorLike {
+        
+        /** @type {string|undefined} */
+        name: string|void;
+    }
+
     /**
      * A database error. Since the stack trace can be unhelpful in an asynchronous
      * context, the error provides a message about where it was produced.
@@ -75,9 +82,6 @@ declare module goog.db {
          */
         static fromException(ex: DOMError|DOMException, message: string): goog.db.Error;
     }
-
-    /** @record */
-    function DOMErrorLike(): void;
 }
 
 declare module goog.db.Error {

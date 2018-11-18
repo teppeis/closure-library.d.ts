@@ -6,5 +6,18 @@ declare module goog.math {
      *
      * @record
      */
-    function IRect(): void;
+    interface IRect {
+        
+        /** @type {number} */
+        left: number;
+        
+        /** @type {number} */
+        top: number;
+        
+        /** @type {number} */
+        width: number;
+        
+        /** @type {number} */
+        height: number;
+    }
 }

@@ -6,5 +6,17 @@ declare module goog.disposable {
      * implement this interface (it may subclass goog.Disposable).
      * @record
      */
-    function IDisposable(): void;
+    interface IDisposable {
+        
+        /**
+         * Disposes of the object and its resources.
+         * @return {void} Nothing.
+         */
+        dispose(): void;
+        
+        /**
+         * @return {boolean} Whether the object has been disposed of.
+         */
+        isDisposed(): boolean;
+    }
 }
