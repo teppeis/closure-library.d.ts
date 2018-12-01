@@ -1,0 +1,33 @@
+{
+  "name": "closure-library.d.ts",
+  "description": "TypeScript type definition (d.ts) for Google Closure Library",
+  "version": "20180910.0.0",
+  "author": "Teppei Sato <teppeis@gmail.com>",
+  "main": "index.d.ts",
+  "files": [
+    "*.d.ts"
+  ],
+  "scripts": {
+    "build": "./build.sh",
+    "test": "tsc -p ./test/tsconfig.json | tee error.txt"
+  },
+  "devDependencies": {
+    "@teppeis/clutz": "^1.0.3-6d75605.v20181130T001121",
+    "google-closure-compiler": "^20181125.0.1",
+    "google-closure-library": "^20180910.0.0",
+    "typescript": "^3.2.1"
+  },
+  "homepage": "https://github.com/teppeis/closure-library.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/teppeis/closure-library.d.ts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/teppeis/closure-library.d.ts/issues"
+  },
+  "keywords": [
+    "google-closure-compiler",
+    "typescript"
+  ],
+  "license": "MIT"
+}

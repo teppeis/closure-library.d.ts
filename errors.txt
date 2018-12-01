@@ -1,0 +1,141 @@
+all.d.ts(2182,13): error TS2430: Interface 'Thenable<TYPE>' incorrectly extends interface 'PromiseLike<TYPE>'.
+  Types of property 'then' are incompatible.
+    Type '<RESULT>(opt_onFulfilled?: ((a: TYPE) => RESULT | Thenable<RESULT>) | null | undefined, opt_onRejected?: ((a: any) => any) | null | undefined) => Thenable<RESULT>' is not assignable to type '<TResult1 = TYPE, TResult2 = never>(onfulfilled?: ((value: TYPE) => TResult1 | PromiseLike<TResult1>) | null | undefined, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | null | undefined) => PromiseLike<...>'.
+      Type 'Thenable<TResult1 | PromiseLike<TResult1>>' is not assignable to type 'PromiseLike<TResult1 | TResult2>'.
+        Types of property 'then' are incompatible.
+          Type '<RESULT>(opt_onFulfilled?: ((a: TResult1 | PromiseLike<TResult1>) => RESULT | Thenable<RESULT>) | null | undefined, opt_onRejected?: ((a: any) => any) | null | undefined) => Thenable<RESULT>' is not assignable to type '<TResult1 = TResult1 | TResult2, TResult2 = never>(onfulfilled?: ((value: TResult1 | TResult2) => TResult1 | PromiseLike<TResult1>) | null | undefined, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | null | undefined) => PromiseLike<...>'.
+            Types of parameters 'opt_onFulfilled' and 'onfulfilled' are incompatible.
+              Types of parameters 'value' and 'a' are incompatible.
+                Type 'TResult1 | PromiseLike<TResult1>' is not assignable to type 'TResult1 | TResult2'.
+                  Type 'PromiseLike<TResult1>' is not assignable to type 'TResult1 | TResult2'.
+                    Type 'PromiseLike<TResult1>' is not assignable to type 'TResult2'.
+all.d.ts(4229,5): error TS2416: Property 'then' in type 'Deferred<VALUE>' is not assignable to the same property in base type 'Thenable<VALUE>'.
+  Type '<RESULT>(opt_onFulfilled?: ((a: VALUE) => RESULT | Deferred<RESULT>) | null | undefined, opt_onRejected?: ((a: any) => any) | null | undefined) => Deferred<RESULT>' is not assignable to type '<RESULT>(opt_onFulfilled?: ((a: VALUE) => RESULT | Thenable<RESULT>) | null | undefined, opt_onRejected?: ((a: any) => any) | null | undefined) => Thenable<RESULT>'.
+    Type 'Deferred<RESULT | Thenable<RESULT>>' is not assignable to type 'Thenable<RESULT>'.
+      Types of property 'then' are incompatible.
+        Type '<RESULT>(opt_onFulfilled?: ((a: RESULT | Thenable<RESULT>) => RESULT | Deferred<RESULT>) | null | undefined, opt_onRejected?: ((a: any) => any) | null | undefined) => Deferred<RESULT>' is not assignable to type '<RESULT>(opt_onFulfilled?: ((a: RESULT) => RESULT | Thenable<RESULT>) | null | undefined, opt_onRejected?: ((a: any) => any) | null | undefined) => Thenable<RESULT>'.
+          Types of parameters 'opt_onFulfilled' and 'opt_onFulfilled' are incompatible.
+            Types of parameters 'a' and 'a' are incompatible.
+              Type 'RESULT | Thenable<RESULT>' is not assignable to type 'RESULT'.
+                Type 'Thenable<RESULT>' is not assignable to type 'RESULT'.
+all.d.ts(11171,9): error TS2415: Class 'SavedCaretRange' incorrectly extends base class 'SavedRange'.
+  Property 'restoreInternal' is protected in type 'SavedCaretRange' but public in type 'SavedRange'.
+all.d.ts(11493,51): error TS2304: Cannot find name 'HTMLIsIndexElement'.
+all.d.ts(11505,52): error TS2304: Cannot find name 'HTMLMenuItemElement'.
+all.d.ts(17373,74): error TS2304: Cannot find name 'T'.
+all.d.ts(20142,74): error TS2304: Cannot find name 'T'.
+all.d.ts(21072,5): error TS1070: 'protected' modifier cannot appear on a type member.
+all.d.ts(21937,9): error TS2415: Class 'Animation' incorrectly extends base class 'TransitionBase'.
+  Property 'disposeInternal' is protected in type 'Animation' but public in type 'TransitionBase'.
+all.d.ts(22876,59): error TS2304: Cannot find name 'T'.
+all.d.ts(28293,62): error TS2315: Type 'NamedNodeMap' is not generic.
+all.d.ts(88375,47): error TS2304: Cannot find name 'Image'.
+all.d.ts(88375,64): error TS2304: Cannot find name 'Image'.
+all.d.ts(88375,101): error TS2304: Cannot find name 'Image'.
+all.d.ts(96356,5): error TS2416: Property 'onreadystatechange' in type 'IeCorsXhrAdapter' is not assignable to the same property in base type 'XhrLike'.
+  Type 'Function | null' is not assignable to type '(() => any) | null | undefined'.
+    Type 'Function' is not assignable to type '() => any'.
+      Type 'Function' provides no match for the signature '(): any'.
+all.d.ts(96690,46): error TS2304: Cannot find name 'Image'.
+all.d.ts(97092,13): error TS2320: Interface 'WebChannel' cannot simultaneously extend types 'EventTarget' and 'Listenable'.
+  Named property 'dispatchEvent' of types 'EventTarget' and 'Listenable' are not identical.
+all.d.ts(97494,9): error TS2415: Class 'XhrIo' incorrectly extends base class 'EventTarget'.
+  Property 'disposeInternal' is protected in type 'XhrIo' but public in type 'EventTarget'.
+all.d.ts(109441,5): error TS2416: Property 'file' in type 'FileEntry' is not assignable to the same property in base type 'FileEntry'.
+  Type '() => ಠ_ಠ.clutz.goog.async.Deferred<ಠ_ಠ.clutz.goog.testing.fs.File>' is not assignable to type '() => ಠ_ಠ.clutz.goog.async.Deferred<File>'.
+    Type 'ಠ_ಠ.clutz.goog.async.Deferred<ಠ_ಠ.clutz.goog.testing.fs.File>' is not assignable to type 'ಠ_ಠ.clutz.goog.async.Deferred<File>'.
+      Property 'lastModified' is missing in type 'File' but required in type 'File'.
+all.d.ts(110138,9): error TS2415: Class 'base' incorrectly extends base class 'EventTarget'.
+  Property 'disposeInternal' is protected in type 'base' but public in type 'EventTarget'.
+all.d.ts(111698,9): error TS2415: Class 'AdvancedTooltip' incorrectly extends base class 'Tooltip'.
+  Property 'onHide' is protected in type 'AdvancedTooltip' but public in type 'Tooltip'.
+all.d.ts(111783,9): error TS2417: Class static side 'typeof AnimatedZippy' incorrectly extends base class static side 'typeof Zippy'.
+  Types of property 'Events' are incompatible.
+    Type '{ TOGGLE_ANIMATION_BEGIN: string; TOGGLE_ANIMATION_END: string; }' is missing the following properties from type 'typeof Events': ACTION, TOGGLE
+all.d.ts(111963,9): error TS2415: Class 'BidiInput' incorrectly extends base class 'Component'.
+  Property 'createDom' is protected in type 'BidiInput' but public in type 'Component'.
+all.d.ts(112381,9): error TS2417: Class static side 'typeof Checkbox' incorrectly extends base class static side 'typeof Control'.
+  Types of property 'State' are incompatible.
+    Type '{ CHECKED: boolean; UNCHECKED: boolean; UNDETERMINED: boolean; }' is missing the following properties from type 'typeof State': ACTIVE, ALL, DISABLED, FOCUSED, and 3 more.
+all.d.ts(112574,9): error TS2417: Class static side 'typeof ColorMenuButtonRenderer' incorrectly extends base class static side 'typeof MenuButtonRenderer'.
+  Types of property 'wrapCaption' are incompatible.
+    Type '(content: string | Node | NodeList | Node[] | null, dom: DomHelper | null) => Element' is not assignable to type '(content: string | Node | NodeList | Node[] | null, cssClass: string, dom: DomHelper | null) => Element'.
+      Types of parameters 'dom' and 'cssClass' are incompatible.
+        Type 'string' is not assignable to type 'DomHelper | null'.
+all.d.ts(112681,9): error TS2417: Class static side 'typeof ColorPicker' incorrectly extends base class static side 'typeof Component'.
+  Types of property 'EventType' are incompatible.
+    Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 16 more.
+all.d.ts(112955,9): error TS2415: Class 'Component' incorrectly extends base class 'EventTarget'.
+  Property 'disposeInternal' is protected in type 'Component' but public in type 'EventTarget'.
+all.d.ts(113146,69): error TS2304: Cannot find name 'T'.
+all.d.ts(113429,9): error TS2417: Class static side 'typeof Container' incorrectly extends base class static side 'typeof Component'.
+  Types of property 'EventType' are incompatible.
+    Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 17 more.
+all.d.ts(115113,5): error TS2416: Property 'createColorNodes' in type 'CustomColorPalette' is not assignable to the same property in base type 'ColorPalette'.
+  Type '() => (Node | null)[]' is not assignable to type '() => Node[]'.
+    Type '(Node | null)[]' is not assignable to type 'Node[]'.
+      Type 'Node | null' is not assignable to type 'Node'.
+        Type 'null' is not assignable to type 'Node'.
+all.d.ts(115440,9): error TS2417: Class static side 'typeof Dialog' incorrectly extends base class static side 'typeof ModalPopup'.
+  Types of property 'EventType' are incompatible.
+    Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 16 more.
+all.d.ts(116251,9): error TS2417: Class static side 'typeof FilteredMenu' incorrectly extends base class static side 'typeof Menu'.
+  Types of property 'EventType' are incompatible.
+    Type 'typeof EventType' is missing the following properties from type '{ BEFORE_HIDE: EventType; BEFORE_SHOW: EventType; HIDE: EventType; SHOW: EventType; }': BEFORE_HIDE, BEFORE_SHOW, HIDE, SHOW
+all.d.ts(116872,9): error TS2417: Class static side 'typeof HoverCard' incorrectly extends base class static side 'typeof AdvancedTooltip'.
+  Types of property 'EventType' are incompatible.
+    Type '{ BEFORE_HIDE: EventType; BEFORE_SHOW: EventType; CANCEL_TRIGGER: "canceltrigger"; HIDE: EventType; SHOW: EventType; TRIGGER: "trigger"; }' is not assignable to type 'typeof EventType'.
+      Types of property 'BEFORE_HIDE' are incompatible.
+        Type 'EventType' is not assignable to type 'EventType.BEFORE_HIDE'.
+          Type 'string & { clutzEnumBrand: never; }' is not assignable to type 'EventType.BEFORE_HIDE'.
+all.d.ts(117856,9): error TS2417: Class static side 'typeof Menu' incorrectly extends base class static side 'typeof Container'.
+  Types of property 'EventType' are incompatible.
+    Type '{ BEFORE_HIDE: EventType; BEFORE_SHOW: EventType; HIDE: EventType; SHOW: EventType; }' is missing the following properties from type 'typeof EventType': AFTER_HIDE, AFTER_SHOW
+all.d.ts(118088,9): error TS2415: Class 'MenuButton' incorrectly extends base class 'Button'.
+  Property 'handleBlur' is protected in type 'MenuButton' but public in type 'Button'.
+all.d.ts(119006,9): error TS2415: Class 'Palette' incorrectly extends base class 'Control'.
+  Property 'setContentInternal' is protected in type 'Palette' but public in type 'Control'.
+all.d.ts(119455,69): error TS2304: Cannot find name 'T'.
+all.d.ts(119826,9): error TS2415: Class 'PopupMenu' incorrectly extends base class 'Menu'.
+  Property 'handleBlur' is protected in type 'PopupMenu' but public in type 'Menu'.
+all.d.ts(120170,9): error TS2417: Class static side 'typeof Ratings' incorrectly extends base class static side 'typeof Component'.
+  Types of property 'EventType' are incompatible.
+    Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 14 more.
+all.d.ts(120489,9): error TS2417: Class static side 'typeof ScrollFloater' incorrectly extends base class static side 'typeof Component'.
+  Types of property 'EventType' are incompatible.
+    Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 17 more.
+all.d.ts(120701,9): error TS2415: Class 'SelectionMenuButton' incorrectly extends base class 'MenuButton'.
+  Property 'createDom' is protected in type 'SelectionMenuButton' but public in type 'MenuButton'.
+all.d.ts(121599,9): error TS2417: Class static side 'typeof SliderBase' incorrectly extends base class static side 'typeof Component'.
+  Types of property 'EventType' are incompatible.
+    Type '{ ANIMATION_END: EventType; DRAG_END: EventType; DRAG_EXTENT_END: EventType; DRAG_EXTENT_START: EventType; DRAG_START: EventType; DRAG_VALUE_END: EventType; DRAG_VALUE_START: EventType; }' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 17 more.
+all.d.ts(121875,9): error TS2417: Class static side 'typeof SplitPane' incorrectly extends base class static side 'typeof Component'.
+  Types of property 'EventType' are incompatible.
+    Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 17 more.
+all.d.ts(121987,9): error TS2415: Class 'SubMenu' incorrectly extends base class 'MenuItem'.
+  Property 'handleMouseOver' is protected in type 'SubMenu' but public in type 'MenuItem'.
+all.d.ts(122228,9): error TS2415: Class 'TabBar' incorrectly extends base class 'Container'.
+  Property 'handleFocus' is protected in type 'TabBar' but public in type 'Container'.
+all.d.ts(122640,9): error TS2417: Class static side 'typeof TableSorter' incorrectly extends base class static side 'typeof Component'.
+  Types of property 'EventType' are incompatible.
+    Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 17 more.
+all.d.ts(122735,9): error TS2417: Class static side 'typeof Textarea' incorrectly extends base class static side 'typeof Control'.
+  Types of property 'EventType' are incompatible.
+    Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 17 more.
+all.d.ts(123453,9): error TS2417: Class static side 'typeof TriStateMenuItem' incorrectly extends base class static side 'typeof MenuItem'.
+  Types of property 'State' are incompatible.
+    Type 'typeof State' is missing the following properties from type 'typeof State': ACTIVE, ALL, CHECKED, DISABLED, and 4 more.
+all.d.ts(124470,9): error TS2415: Class 'Renderer' incorrectly extends base class 'EventTarget'.
+  Property 'disposeInternal' is protected in type 'Renderer' but public in type 'EventTarget'.
+all.d.ts(124794,9): error TS2415: Class 'AbstractDialog' incorrectly extends base class 'EventTarget'.
+  Property 'disposeInternal' is protected in type 'AbstractDialog' but public in type 'EventTarget'.
+all.d.ts(124971,74): error TS2304: Cannot find name 'T'.
+all.d.ts(125166,9): error TS2417: Class static side 'typeof LinkDialog' incorrectly extends base class static side 'typeof AbstractDialog'.
+  Types of property 'EventType' are incompatible.
+    Type 'typeof EventType' is missing the following properties from type 'typeof EventType': AFTER_HIDE, CANCEL, OK
+all.d.ts(125400,69): error TS2304: Cannot find name 'T'.
+all.d.ts(125739,76): error TS2304: Cannot find name 'Image'.
+all.d.ts(126078,76): error TS2304: Cannot find name 'Image'.
+all.d.ts(127715,9): error TS2417: Class static side 'typeof BaseNode' incorrectly extends base class static side 'typeof Component'.
+  Types of property 'EventType' are incompatible.
+    Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 17 more.
