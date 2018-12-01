@@ -20,8 +20,6 @@ all.d.ts(4229,5): error TS2416: Property 'then' in type 'Deferred<VALUE>' is not
                 Type 'Thenable<RESULT>' is not assignable to type 'RESULT'.
 all.d.ts(11171,9): error TS2415: Class 'SavedCaretRange' incorrectly extends base class 'SavedRange'.
   Property 'restoreInternal' is protected in type 'SavedCaretRange' but public in type 'SavedRange'.
-all.d.ts(11493,51): error TS2304: Cannot find name 'HTMLIsIndexElement'.
-all.d.ts(11505,52): error TS2304: Cannot find name 'HTMLMenuItemElement'.
 all.d.ts(17373,74): error TS2304: Cannot find name 'T'.
 all.d.ts(20142,74): error TS2304: Cannot find name 'T'.
 all.d.ts(21072,5): error TS1070: 'protected' modifier cannot appear on a type member.

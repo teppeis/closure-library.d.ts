@@ -44,9 +44,16 @@ declare namespace ಠ_ಠ.clutz {
   class ClutzMissingBase {}
 
   /**
-   * Image is just a function not a type in TypeScript builtins.
+   * `Image` is just a function but not a type in TypeScript.
    */
   interface Image extends HTMLImageElement {}
+
+  /**
+   * They are deprecated and not defined in TypeScript.
+   * Just define the interface to avoid errors, not their properties.
+   */
+  interface HTMLIsIndexElement extends HTMLElement {}
+  interface HTMLMenuItemElement extends HTMLElement {}
 }
 
 // Will be extended if base.js is a dependency.

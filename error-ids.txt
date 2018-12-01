@@ -1,6 +1,4 @@
 TS1070: 'protected' modifier cannot appear on a type member.
-TS2304: Cannot find name 'HTMLIsIndexElement'.
-TS2304: Cannot find name 'HTMLMenuItemElement'.
 TS2304: Cannot find name 'T'.
 TS2304: Cannot find name 'T'.
 TS2304: Cannot find name 'T'.

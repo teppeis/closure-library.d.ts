@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "./build.sh",
-    "error": "grep 'TS\\d.*' -o errors.txt|sort",
+    "error": "grep 'TS\\d.*' -o errors.txt | sort | tee error-ids.txt",
     "test": "tsc -p ./test/tsconfig.json | tee errors.txt"
   },
   "devDependencies": {
