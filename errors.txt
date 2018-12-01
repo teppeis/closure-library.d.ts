@@ -29,14 +29,10 @@ all.d.ts(21937,9): error TS2415: Class 'Animation' incorrectly extends base clas
   Property 'disposeInternal' is protected in type 'Animation' but public in type 'TransitionBase'.
 all.d.ts(22876,59): error TS2304: Cannot find name 'T'.
 all.d.ts(28293,62): error TS2315: Type 'NamedNodeMap' is not generic.
-all.d.ts(88375,47): error TS2304: Cannot find name 'Image'.
-all.d.ts(88375,64): error TS2304: Cannot find name 'Image'.
-all.d.ts(88375,101): error TS2304: Cannot find name 'Image'.
 all.d.ts(96356,5): error TS2416: Property 'onreadystatechange' in type 'IeCorsXhrAdapter' is not assignable to the same property in base type 'XhrLike'.
   Type 'Function | null' is not assignable to type '(() => any) | null | undefined'.
     Type 'Function' is not assignable to type '() => any'.
       Type 'Function' provides no match for the signature '(): any'.
-all.d.ts(96690,46): error TS2304: Cannot find name 'Image'.
 all.d.ts(97092,13): error TS2320: Interface 'WebChannel' cannot simultaneously extend types 'EventTarget' and 'Listenable'.
   Named property 'dispatchEvent' of types 'EventTarget' and 'Listenable' are not identical.
 all.d.ts(97494,9): error TS2415: Class 'XhrIo' incorrectly extends base class 'EventTarget'.
@@ -134,8 +130,6 @@ all.d.ts(125166,9): error TS2417: Class static side 'typeof LinkDialog' incorrec
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type 'typeof EventType': AFTER_HIDE, CANCEL, OK
 all.d.ts(125400,69): error TS2304: Cannot find name 'T'.
-all.d.ts(125739,76): error TS2304: Cannot find name 'Image'.
-all.d.ts(126078,76): error TS2304: Cannot find name 'Image'.
 all.d.ts(127715,9): error TS2417: Class static side 'typeof BaseNode' incorrectly extends base class static side 'typeof Component'.
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 17 more.

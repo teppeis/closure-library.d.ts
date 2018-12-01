@@ -42,6 +42,11 @@ declare namespace ಠ_ಠ.clutz {
    * A base class that can be used for extends/implement clauses when the used value is missing.
    */
   class ClutzMissingBase {}
+
+  /**
+   * Image is just a function not a type in TypeScript builtins.
+   */
+  interface Image extends HTMLImageElement {}
 }
 
 // Will be extended if base.js is a dependency.
