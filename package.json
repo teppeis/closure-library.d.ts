@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "./build.sh",
-    "test": "tsc -p ./test/tsconfig.json | tee error.txt"
+    "test": "tsc -p ./test/tsconfig.json | tee errors.txt"
   },
   "devDependencies": {
     "@teppeis/clutz": "^1.0.3-6d75605.v20181130T001121",
