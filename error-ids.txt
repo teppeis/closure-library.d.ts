@@ -1,11 +1,4 @@
 TS1070: 'protected' modifier cannot appear on a type member.
-TS2304: Cannot find name 'T'.
-TS2304: Cannot find name 'T'.
-TS2304: Cannot find name 'T'.
-TS2304: Cannot find name 'T'.
-TS2304: Cannot find name 'T'.
-TS2304: Cannot find name 'T'.
-TS2304: Cannot find name 'T'.
 TS2315: Type 'NamedNodeMap' is not generic.
 TS2320: Interface 'WebChannel' cannot simultaneously extend types 'EventTarget' and 'Listenable'.
 TS2415: Class 'AbstractDialog' incorrectly extends base class 'EventTarget'.

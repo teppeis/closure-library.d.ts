@@ -13,7 +13,7 @@
     "test": "tsc -p ./test/tsconfig.json | tee errors.txt"
   },
   "devDependencies": {
-    "@teppeis/clutz": "^1.0.3-6d75605.v20181130T001121",
+    "@teppeis/clutz": "^1.0.5-77ab8e9.v20181205T145903",
     "google-closure-compiler": "^20181125.0.1",
     "google-closure-library": "^20180910.0.0",
     "typescript": "^3.2.1"
