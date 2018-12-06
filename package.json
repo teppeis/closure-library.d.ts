@@ -10,12 +10,14 @@
   "scripts": {
     "build": "./build.sh",
     "error": "grep 'TS\\d.*' -o errors.txt | sort | tee error-ids.txt",
+    "postinstall": "patch-package",
     "test": "tsc -p ./test/tsconfig.json | tee errors.txt"
   },
   "devDependencies": {
     "@teppeis/clutz": "^1.0.5-77ab8e9.v20181205T145903",
     "google-closure-compiler": "^20181125.0.1",
     "google-closure-library": "^20180910.0.0",
+    "patch-package": "^5.1.1",
     "typescript": "^3.2.1"
   },
   "homepage": "https://github.com/teppeis/closure-library.d.ts",

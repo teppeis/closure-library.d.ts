@@ -1,0 +1,11 @@
+patch-package
+--- a/node_modules/google-closure-library/closure/goog/memoize/memoize.js
++++ b/node_modules/google-closure-library/closure/goog/memoize/memoize.js
+@@ -34,7 +34,6 @@ goog.provide('goog.memoize');
+  * @param {function(number, Object): string=} opt_serializer A function to
+  *     serialize f's arguments. It must have the same signature as
+  *     goog.memoize.simpleSerializer. It defaults to that function.
+- * @this {Object} The object whose function is being wrapped.
+  * @return {!Function} The wrapped function.
+  */
+ goog.memoize = function(f, opt_serializer) {
