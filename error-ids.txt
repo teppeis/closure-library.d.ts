@@ -22,7 +22,6 @@ TS2416: Property 'then' in type 'Deferred<VALUE>' is not assignable to the same 
 TS2417: Class static side 'typeof AnimatedZippy' incorrectly extends base class static side 'typeof Zippy'.
 TS2417: Class static side 'typeof BaseNode' incorrectly extends base class static side 'typeof Component'.
 TS2417: Class static side 'typeof Checkbox' incorrectly extends base class static side 'typeof Control'.
-TS2417: Class static side 'typeof ColorMenuButtonRenderer' incorrectly extends base class static side 'typeof MenuButtonRenderer'.
 TS2417: Class static side 'typeof ColorPicker' incorrectly extends base class static side 'typeof Component'.
 TS2417: Class static side 'typeof Container' incorrectly extends base class static side 'typeof Component'.
 TS2417: Class static side 'typeof Dialog' incorrectly extends base class static side 'typeof ModalPopup'.

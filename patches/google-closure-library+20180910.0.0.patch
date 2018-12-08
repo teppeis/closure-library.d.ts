@@ -9,3 +9,19 @@ patch-package
   * @return {!Function} The wrapped function.
   */
  goog.memoize = function(f, opt_serializer) {
+--- a/node_modules/google-closure-library/closure/goog/ui/colormenubuttonrenderer.js
++++ b/node_modules/google-closure-library/closure/goog/ui/colormenubuttonrenderer.js
+@@ -79,10 +79,11 @@ goog.ui.ColorMenuButtonRenderer.prototype.createCaption = function(
+ /**
+  * Wrap a caption in a div with the color-menu-button-indicator CSS class.
+  * @param {goog.ui.ControlContent} content Text caption or DOM structure.
+- * @param {goog.dom.DomHelper} dom DOM helper, used for document interaction.
++ * @param {goog.dom.DomHelper|string} dom DOM helper, used for document interaction.
++ * @param {goog.dom.DomHelper} dummy Dummy param for compatibility with TypeScript.
+  * @return {!Element} Caption element.
+  */
+-goog.ui.ColorMenuButtonRenderer.wrapCaption = function(content, dom) {
++goog.ui.ColorMenuButtonRenderer.wrapCaption = function(content, dom, dummy) {
+   return dom.createDom(
+       goog.dom.TagName.DIV,
+       goog.getCssName(goog.ui.ColorMenuButtonRenderer.CSS_CLASS, 'indicator'),
