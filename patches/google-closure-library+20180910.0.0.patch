@@ -30,6 +30,19 @@ patch-package
     */
    this.onreadystatechange = null;
  
+--- a/node_modules/google-closure-library/closure/goog/testing/fs/file.js
++++ b/node_modules/google-closure-library/closure/goog/testing/fs/file.js
+@@ -50,5 +50,10 @@ goog.testing.fs.File = function(name, opt_lastModified, opt_data, opt_type) {
+    * @type {Date}
+    */
+   this.lastModifiedDate = opt_lastModified || null;
++
++  /**
++   * @type {number}
++   */
++  this.lastModified = opt_lastModified && opt_lastModified.getTime() || 0;
+ };
+ goog.inherits(goog.testing.fs.File, goog.testing.fs.Blob);
 --- a/node_modules/google-closure-library/closure/goog/ui/colormenubuttonrenderer.js
 +++ b/node_modules/google-closure-library/closure/goog/ui/colormenubuttonrenderer.js
 @@ -79,10 +79,11 @@ goog.ui.ColorMenuButtonRenderer.prototype.createCaption = function(

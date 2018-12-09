@@ -25,90 +25,86 @@ all.d.ts(22096,9): error TS2415: Class 'Animation' incorrectly extends base clas
   Property 'disposeInternal' is protected in type 'Animation' but public in type 'TransitionBase'.
 all.d.ts(97785,9): error TS2415: Class 'XhrIo' incorrectly extends base class 'EventTarget'.
   Property 'disposeInternal' is protected in type 'XhrIo' but public in type 'EventTarget'.
-all.d.ts(109813,5): error TS2416: Property 'file' in type 'FileEntry' is not assignable to the same property in base type 'FileEntry'.
-  Type '() => ಠ_ಠ.clutz.goog.async.Deferred<ಠ_ಠ.clutz.goog.testing.fs.File>' is not assignable to type '() => ಠ_ಠ.clutz.goog.async.Deferred<File>'.
-    Type 'ಠ_ಠ.clutz.goog.async.Deferred<ಠ_ಠ.clutz.goog.testing.fs.File>' is not assignable to type 'ಠ_ಠ.clutz.goog.async.Deferred<File>'.
-      Property 'lastModified' is missing in type 'File' but required in type 'File'.
-all.d.ts(110521,9): error TS2415: Class 'base' incorrectly extends base class 'EventTarget'.
+all.d.ts(110522,9): error TS2415: Class 'base' incorrectly extends base class 'EventTarget'.
   Property 'disposeInternal' is protected in type 'base' but public in type 'EventTarget'.
-all.d.ts(112096,9): error TS2415: Class 'AdvancedTooltip' incorrectly extends base class 'Tooltip'.
+all.d.ts(112097,9): error TS2415: Class 'AdvancedTooltip' incorrectly extends base class 'Tooltip'.
   Property 'onHide' is protected in type 'AdvancedTooltip' but public in type 'Tooltip'.
-all.d.ts(112182,9): error TS2417: Class static side 'typeof AnimatedZippy' incorrectly extends base class static side 'typeof Zippy'.
+all.d.ts(112183,9): error TS2417: Class static side 'typeof AnimatedZippy' incorrectly extends base class static side 'typeof Zippy'.
   Types of property 'Events' are incompatible.
     Type '{ TOGGLE_ANIMATION_BEGIN: string; TOGGLE_ANIMATION_END: string; }' is missing the following properties from type 'typeof Events': ACTION, TOGGLE
-all.d.ts(112365,9): error TS2415: Class 'BidiInput' incorrectly extends base class 'Component'.
+all.d.ts(112366,9): error TS2415: Class 'BidiInput' incorrectly extends base class 'Component'.
   Property 'createDom' is protected in type 'BidiInput' but public in type 'Component'.
-all.d.ts(112790,9): error TS2417: Class static side 'typeof Checkbox' incorrectly extends base class static side 'typeof Control'.
+all.d.ts(112791,9): error TS2417: Class static side 'typeof Checkbox' incorrectly extends base class static side 'typeof Control'.
   Types of property 'State' are incompatible.
     Type '{ CHECKED: boolean; UNCHECKED: boolean; UNDETERMINED: boolean; }' is missing the following properties from type 'typeof State': ACTIVE, ALL, DISABLED, FOCUSED, and 3 more.
-all.d.ts(113096,9): error TS2417: Class static side 'typeof ColorPicker' incorrectly extends base class static side 'typeof Component'.
+all.d.ts(113097,9): error TS2417: Class static side 'typeof ColorPicker' incorrectly extends base class static side 'typeof Component'.
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 16 more.
-all.d.ts(113373,9): error TS2415: Class 'Component' incorrectly extends base class 'EventTarget'.
+all.d.ts(113374,9): error TS2415: Class 'Component' incorrectly extends base class 'EventTarget'.
   Property 'disposeInternal' is protected in type 'Component' but public in type 'EventTarget'.
-all.d.ts(113848,9): error TS2417: Class static side 'typeof Container' incorrectly extends base class static side 'typeof Component'.
+all.d.ts(113849,9): error TS2417: Class static side 'typeof Container' incorrectly extends base class static side 'typeof Component'.
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 17 more.
-all.d.ts(115543,5): error TS2416: Property 'createColorNodes' in type 'CustomColorPalette' is not assignable to the same property in base type 'ColorPalette'.
+all.d.ts(115544,5): error TS2416: Property 'createColorNodes' in type 'CustomColorPalette' is not assignable to the same property in base type 'ColorPalette'.
   Type '() => (Node | null)[]' is not assignable to type '() => Node[]'.
     Type '(Node | null)[]' is not assignable to type 'Node[]'.
       Type 'Node | null' is not assignable to type 'Node'.
         Type 'null' is not assignable to type 'Node'.
-all.d.ts(115872,9): error TS2417: Class static side 'typeof Dialog' incorrectly extends base class static side 'typeof ModalPopup'.
+all.d.ts(115873,9): error TS2417: Class static side 'typeof Dialog' incorrectly extends base class static side 'typeof ModalPopup'.
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 16 more.
-all.d.ts(116694,9): error TS2417: Class static side 'typeof FilteredMenu' incorrectly extends base class static side 'typeof Menu'.
+all.d.ts(116695,9): error TS2417: Class static side 'typeof FilteredMenu' incorrectly extends base class static side 'typeof Menu'.
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type '{ BEFORE_HIDE: EventType; BEFORE_SHOW: EventType; HIDE: EventType; SHOW: EventType; }': BEFORE_HIDE, BEFORE_SHOW, HIDE, SHOW
-all.d.ts(117321,9): error TS2417: Class static side 'typeof HoverCard' incorrectly extends base class static side 'typeof AdvancedTooltip'.
+all.d.ts(117322,9): error TS2417: Class static side 'typeof HoverCard' incorrectly extends base class static side 'typeof AdvancedTooltip'.
   Types of property 'EventType' are incompatible.
     Type '{ BEFORE_HIDE: EventType; BEFORE_SHOW: EventType; CANCEL_TRIGGER: "canceltrigger"; HIDE: EventType; SHOW: EventType; TRIGGER: "trigger"; }' is not assignable to type 'typeof EventType'.
       Types of property 'BEFORE_HIDE' are incompatible.
         Type 'EventType' is not assignable to type 'EventType.BEFORE_HIDE'.
           Type 'string & { clutzEnumBrand: never; }' is not assignable to type 'EventType.BEFORE_HIDE'.
-all.d.ts(118319,9): error TS2417: Class static side 'typeof Menu' incorrectly extends base class static side 'typeof Container'.
+all.d.ts(118320,9): error TS2417: Class static side 'typeof Menu' incorrectly extends base class static side 'typeof Container'.
   Types of property 'EventType' are incompatible.
     Type '{ BEFORE_HIDE: EventType; BEFORE_SHOW: EventType; HIDE: EventType; SHOW: EventType; }' is missing the following properties from type 'typeof EventType': AFTER_HIDE, AFTER_SHOW
-all.d.ts(118554,9): error TS2415: Class 'MenuButton' incorrectly extends base class 'Button'.
+all.d.ts(118555,9): error TS2415: Class 'MenuButton' incorrectly extends base class 'Button'.
   Property 'handleBlur' is protected in type 'MenuButton' but public in type 'Button'.
-all.d.ts(119485,9): error TS2415: Class 'Palette' incorrectly extends base class 'Control'.
+all.d.ts(119486,9): error TS2415: Class 'Palette' incorrectly extends base class 'Control'.
   Property 'setContentInternal' is protected in type 'Palette' but public in type 'Control'.
-all.d.ts(120313,9): error TS2415: Class 'PopupMenu' incorrectly extends base class 'Menu'.
+all.d.ts(120314,9): error TS2415: Class 'PopupMenu' incorrectly extends base class 'Menu'.
   Property 'handleBlur' is protected in type 'PopupMenu' but public in type 'Menu'.
-all.d.ts(120661,9): error TS2417: Class static side 'typeof Ratings' incorrectly extends base class static side 'typeof Component'.
+all.d.ts(120662,9): error TS2417: Class static side 'typeof Ratings' incorrectly extends base class static side 'typeof Component'.
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 14 more.
-all.d.ts(120983,9): error TS2417: Class static side 'typeof ScrollFloater' incorrectly extends base class static side 'typeof Component'.
+all.d.ts(120984,9): error TS2417: Class static side 'typeof ScrollFloater' incorrectly extends base class static side 'typeof Component'.
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 17 more.
-all.d.ts(121197,9): error TS2415: Class 'SelectionMenuButton' incorrectly extends base class 'MenuButton'.
+all.d.ts(121198,9): error TS2415: Class 'SelectionMenuButton' incorrectly extends base class 'MenuButton'.
   Property 'createDom' is protected in type 'SelectionMenuButton' but public in type 'MenuButton'.
-all.d.ts(122101,9): error TS2417: Class static side 'typeof SliderBase' incorrectly extends base class static side 'typeof Component'.
+all.d.ts(122102,9): error TS2417: Class static side 'typeof SliderBase' incorrectly extends base class static side 'typeof Component'.
   Types of property 'EventType' are incompatible.
     Type '{ ANIMATION_END: EventType; DRAG_END: EventType; DRAG_EXTENT_END: EventType; DRAG_EXTENT_START: EventType; DRAG_START: EventType; DRAG_VALUE_END: EventType; DRAG_VALUE_START: EventType; }' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 17 more.
-all.d.ts(122378,9): error TS2417: Class static side 'typeof SplitPane' incorrectly extends base class static side 'typeof Component'.
+all.d.ts(122379,9): error TS2417: Class static side 'typeof SplitPane' incorrectly extends base class static side 'typeof Component'.
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 17 more.
-all.d.ts(122491,9): error TS2415: Class 'SubMenu' incorrectly extends base class 'MenuItem'.
+all.d.ts(122492,9): error TS2415: Class 'SubMenu' incorrectly extends base class 'MenuItem'.
   Property 'handleMouseOver' is protected in type 'SubMenu' but public in type 'MenuItem'.
-all.d.ts(122735,9): error TS2415: Class 'TabBar' incorrectly extends base class 'Container'.
+all.d.ts(122736,9): error TS2415: Class 'TabBar' incorrectly extends base class 'Container'.
   Property 'handleFocus' is protected in type 'TabBar' but public in type 'Container'.
-all.d.ts(123152,9): error TS2417: Class static side 'typeof TableSorter' incorrectly extends base class static side 'typeof Component'.
+all.d.ts(123153,9): error TS2417: Class static side 'typeof TableSorter' incorrectly extends base class static side 'typeof Component'.
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 17 more.
-all.d.ts(123248,9): error TS2417: Class static side 'typeof Textarea' incorrectly extends base class static side 'typeof Control'.
+all.d.ts(123249,9): error TS2417: Class static side 'typeof Textarea' incorrectly extends base class static side 'typeof Control'.
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 17 more.
-all.d.ts(123984,9): error TS2417: Class static side 'typeof TriStateMenuItem' incorrectly extends base class static side 'typeof MenuItem'.
+all.d.ts(123985,9): error TS2417: Class static side 'typeof TriStateMenuItem' incorrectly extends base class static side 'typeof MenuItem'.
   Types of property 'State' are incompatible.
     Type 'typeof State' is missing the following properties from type 'typeof State': ACTIVE, ALL, CHECKED, DISABLED, and 4 more.
-all.d.ts(125010,9): error TS2415: Class 'Renderer' incorrectly extends base class 'EventTarget'.
+all.d.ts(125011,9): error TS2415: Class 'Renderer' incorrectly extends base class 'EventTarget'.
   Property 'disposeInternal' is protected in type 'Renderer' but public in type 'EventTarget'.
-all.d.ts(125338,9): error TS2415: Class 'AbstractDialog' incorrectly extends base class 'EventTarget'.
+all.d.ts(125339,9): error TS2415: Class 'AbstractDialog' incorrectly extends base class 'EventTarget'.
   Property 'disposeInternal' is protected in type 'AbstractDialog' but public in type 'EventTarget'.
-all.d.ts(125712,9): error TS2417: Class static side 'typeof LinkDialog' incorrectly extends base class static side 'typeof AbstractDialog'.
+all.d.ts(125713,9): error TS2417: Class static side 'typeof LinkDialog' incorrectly extends base class static side 'typeof AbstractDialog'.
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type 'typeof EventType': AFTER_HIDE, CANCEL, OK
-all.d.ts(128289,9): error TS2417: Class static side 'typeof BaseNode' incorrectly extends base class static side 'typeof Component'.
+all.d.ts(128290,9): error TS2417: Class static side 'typeof BaseNode' incorrectly extends base class static side 'typeof Component'.
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 17 more.
