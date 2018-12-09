@@ -19,6 +19,17 @@ patch-package
   * @return {!Function} The wrapped function.
   */
  goog.memoize = function(f, opt_serializer) {
+--- a/node_modules/google-closure-library/closure/goog/net/corsxmlhttpfactory.js
++++ b/node_modules/google-closure-library/closure/goog/net/corsxmlhttpfactory.js
+@@ -93,7 +93,7 @@ goog.net.IeCorsXhrAdapter = function() {
+ 
+   /**
+    * The simulated ready state change callback function.
+-   * @type {Function}
++   * @type {function()|null}
+    */
+   this.onreadystatechange = null;
+ 
 --- a/node_modules/google-closure-library/closure/goog/ui/colormenubuttonrenderer.js
 +++ b/node_modules/google-closure-library/closure/goog/ui/colormenubuttonrenderer.js
 @@ -79,10 +79,11 @@ goog.ui.ColorMenuButtonRenderer.prototype.createCaption = function(

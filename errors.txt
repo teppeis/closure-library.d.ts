@@ -23,10 +23,6 @@ all.d.ts(11234,9): error TS2415: Class 'SavedCaretRange' incorrectly extends bas
 all.d.ts(21224,5): error TS1070: 'protected' modifier cannot appear on a type member.
 all.d.ts(22096,9): error TS2415: Class 'Animation' incorrectly extends base class 'TransitionBase'.
   Property 'disposeInternal' is protected in type 'Animation' but public in type 'TransitionBase'.
-all.d.ts(96634,5): error TS2416: Property 'onreadystatechange' in type 'IeCorsXhrAdapter' is not assignable to the same property in base type 'XhrLike'.
-  Type 'Function | null' is not assignable to type '(() => any) | null | undefined'.
-    Type 'Function' is not assignable to type '() => any'.
-      Type 'Function' provides no match for the signature '(): any'.
 all.d.ts(97785,9): error TS2415: Class 'XhrIo' incorrectly extends base class 'EventTarget'.
   Property 'disposeInternal' is protected in type 'XhrIo' but public in type 'EventTarget'.
 all.d.ts(109813,5): error TS2416: Property 'file' in type 'FileEntry' is not assignable to the same property in base type 'FileEntry'.

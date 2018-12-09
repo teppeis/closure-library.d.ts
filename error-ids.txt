@@ -16,7 +16,6 @@ TS2415: Class 'XhrIo' incorrectly extends base class 'EventTarget'.
 TS2415: Class 'base' incorrectly extends base class 'EventTarget'.
 TS2416: Property 'createColorNodes' in type 'CustomColorPalette' is not assignable to the same property in base type 'ColorPalette'.
 TS2416: Property 'file' in type 'FileEntry' is not assignable to the same property in base type 'FileEntry'.
-TS2416: Property 'onreadystatechange' in type 'IeCorsXhrAdapter' is not assignable to the same property in base type 'XhrLike'.
 TS2416: Property 'then' in type 'Deferred<VALUE>' is not assignable to the same property in base type 'Thenable<VALUE>'.
 TS2417: Class static side 'typeof AnimatedZippy' incorrectly extends base class static side 'typeof Zippy'.
 TS2417: Class static side 'typeof BaseNode' incorrectly extends base class static side 'typeof Component'.
