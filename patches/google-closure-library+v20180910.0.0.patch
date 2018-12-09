@@ -59,3 +59,14 @@ patch-package
    return dom.createDom(
        goog.dom.TagName.DIV,
        goog.getCssName(goog.ui.ColorMenuButtonRenderer.CSS_CLASS, 'indicator'),
+--- a/node_modules/google-closure-library/closure/goog/ui/customcolorpalette.js
++++ b/node_modules/google-closure-library/closure/goog/ui/customcolorpalette.js
+@@ -53,7 +53,7 @@ goog.inherits(goog.ui.CustomColorPalette, goog.ui.ColorPalette);
+ /**
+  * Returns an array of DOM nodes for each color, and an additional cell with a
+  * '+'.
+- * @return {!Array<Node>} Array of div elements.
++ * @return {!Array<!Node>} Array of div elements.
+  * @override
+  */
+ goog.ui.CustomColorPalette.prototype.createColorNodes = function() {

@@ -45,11 +45,6 @@ all.d.ts(113374,9): error TS2415: Class 'Component' incorrectly extends base cla
 all.d.ts(113849,9): error TS2417: Class static side 'typeof Container' incorrectly extends base class static side 'typeof Component'.
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 17 more.
-all.d.ts(115544,5): error TS2416: Property 'createColorNodes' in type 'CustomColorPalette' is not assignable to the same property in base type 'ColorPalette'.
-  Type '() => (Node | null)[]' is not assignable to type '() => Node[]'.
-    Type '(Node | null)[]' is not assignable to type 'Node[]'.
-      Type 'Node | null' is not assignable to type 'Node'.
-        Type 'null' is not assignable to type 'Node'.
 all.d.ts(115873,9): error TS2417: Class static side 'typeof Dialog' incorrectly extends base class static side 'typeof ModalPopup'.
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 16 more.
