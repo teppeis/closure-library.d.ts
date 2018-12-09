@@ -27,8 +27,6 @@ all.d.ts(96634,5): error TS2416: Property 'onreadystatechange' in type 'IeCorsXh
   Type 'Function | null' is not assignable to type '(() => any) | null | undefined'.
     Type 'Function' is not assignable to type '() => any'.
       Type 'Function' provides no match for the signature '(): any'.
-all.d.ts(97377,13): error TS2320: Interface 'WebChannel' cannot simultaneously extend types 'EventTarget' and 'Listenable'.
-  Named property 'dispatchEvent' of types 'EventTarget' and 'Listenable' are not identical.
 all.d.ts(97785,9): error TS2415: Class 'XhrIo' incorrectly extends base class 'EventTarget'.
   Property 'disposeInternal' is protected in type 'XhrIo' but public in type 'EventTarget'.
 all.d.ts(109813,5): error TS2416: Property 'file' in type 'FileEntry' is not assignable to the same property in base type 'FileEntry'.

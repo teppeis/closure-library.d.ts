@@ -1,4 +1,14 @@
 patch-package
+--- a/node_modules/google-closure-library/closure/goog/labs/net/webchannel.js
++++ b/node_modules/google-closure-library/closure/goog/labs/net/webchannel.js
+@@ -64,7 +64,6 @@ goog.require('goog.net.XmlHttpFactory');
+  * to be enabled.
+  *
+  * @interface
+- * @extends {EventTarget}
+  * @extends {goog.events.Listenable}
+  */
+ goog.net.WebChannel = function() {};
 --- a/node_modules/google-closure-library/closure/goog/memoize/memoize.js
 +++ b/node_modules/google-closure-library/closure/goog/memoize/memoize.js
 @@ -34,7 +34,6 @@ goog.provide('goog.memoize');
