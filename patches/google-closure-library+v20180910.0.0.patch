@@ -32,12 +32,13 @@ patch-package
  
 --- a/node_modules/google-closure-library/closure/goog/testing/fs/file.js
 +++ b/node_modules/google-closure-library/closure/goog/testing/fs/file.js
-@@ -50,5 +50,10 @@ goog.testing.fs.File = function(name, opt_lastModified, opt_data, opt_type) {
+@@ -50,5 +50,11 @@ goog.testing.fs.File = function(name, opt_lastModified, opt_data, opt_type) {
     * @type {Date}
     */
    this.lastModifiedDate = opt_lastModified || null;
 +
 +  /**
++   * Don't use this prop. This is only to avoid type error in TypeScript with clutz.
 +   * @type {number}
 +   */
 +  this.lastModified = opt_lastModified && opt_lastModified.getTime() || 0;
