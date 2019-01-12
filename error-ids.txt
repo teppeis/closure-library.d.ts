@@ -1,4 +1,30 @@
 TS1070: 'protected' modifier cannot appear on a type member.
+TS2300: Duplicate identifier 'ABORT'.
+TS2300: Duplicate identifier 'ABORT'.
+TS2300: Duplicate identifier 'CLOSED'.
+TS2300: Duplicate identifier 'CLOSED'.
+TS2300: Duplicate identifier 'EXCEPTION'.
+TS2300: Duplicate identifier 'EXCEPTION'.
+TS2300: Duplicate identifier 'EvaluateCodeEvent'.
+TS2300: Duplicate identifier 'EvaluateCodeEvent'.
+TS2300: Duplicate identifier 'FAILED'.
+TS2300: Duplicate identifier 'FAILED'.
+TS2300: Duplicate identifier 'HTTP_ERROR'.
+TS2300: Duplicate identifier 'HTTP_ERROR'.
+TS2300: Duplicate identifier 'INIT'.
+TS2300: Duplicate identifier 'INIT'.
+TS2300: Duplicate identifier 'LoadStatus'.
+TS2300: Duplicate identifier 'LoadStatus'.
+TS2300: Duplicate identifier 'RECOVERING'.
+TS2300: Duplicate identifier 'RECOVERING'.
+TS2300: Duplicate identifier 'RequestErrorEvent'.
+TS2300: Duplicate identifier 'RequestErrorEvent'.
+TS2300: Duplicate identifier 'RequestSuccessEvent'.
+TS2300: Duplicate identifier 'RequestSuccessEvent'.
+TS2300: Duplicate identifier 'TIMEOUT'.
+TS2300: Duplicate identifier 'TIMEOUT'.
+TS2300: Duplicate identifier 'Token'.
+TS2300: Duplicate identifier 'Token'.
 TS2415: Class 'AbstractDialog' incorrectly extends base class 'EventTarget'.
 TS2415: Class 'AdvancedTooltip' incorrectly extends base class 'Tooltip'.
 TS2415: Class 'Animation' incorrectly extends base class 'TransitionBase'.
@@ -33,3 +59,7 @@ TS2417: Class static side 'typeof TableSorter' incorrectly extends base class st
 TS2417: Class static side 'typeof Textarea' incorrectly extends base class static side 'typeof Control'.
 TS2417: Class static side 'typeof TriStateMenuItem' incorrectly extends base class static side 'typeof MenuItem'.
 TS2430: Interface 'Thenable<TYPE>' incorrectly extends interface 'PromiseLike<TYPE>'.
+TS2451: Cannot redeclare block-scoped variable 'TokenTypes'.
+TS2451: Cannot redeclare block-scoped variable 'TokenTypes'.
+TS2451: Cannot redeclare block-scoped variable 'TokenTypes'.
+TS2451: Cannot redeclare block-scoped variable 'TokenTypes'.
