@@ -25,21 +25,6 @@ TS2300: Duplicate identifier 'TIMEOUT'.
 TS2300: Duplicate identifier 'TIMEOUT'.
 TS2300: Duplicate identifier 'Token'.
 TS2300: Duplicate identifier 'Token'.
-TS2415: Class 'AbstractDialog' incorrectly extends base class 'EventTarget'.
-TS2415: Class 'AdvancedTooltip' incorrectly extends base class 'Tooltip'.
-TS2415: Class 'Animation' incorrectly extends base class 'TransitionBase'.
-TS2415: Class 'BidiInput' incorrectly extends base class 'Component'.
-TS2415: Class 'Component' incorrectly extends base class 'EventTarget'.
-TS2415: Class 'MenuButton' incorrectly extends base class 'Button'.
-TS2415: Class 'Palette' incorrectly extends base class 'Control'.
-TS2415: Class 'PopupMenu' incorrectly extends base class 'Menu'.
-TS2415: Class 'Renderer' incorrectly extends base class 'EventTarget'.
-TS2415: Class 'SavedCaretRange' incorrectly extends base class 'SavedRange'.
-TS2415: Class 'SelectionMenuButton' incorrectly extends base class 'MenuButton'.
-TS2415: Class 'SubMenu' incorrectly extends base class 'MenuItem'.
-TS2415: Class 'TabBar' incorrectly extends base class 'Container'.
-TS2415: Class 'XhrIo' incorrectly extends base class 'EventTarget'.
-TS2415: Class 'base' incorrectly extends base class 'EventTarget'.
 TS2416: Property 'then' in type 'Deferred<VALUE>' is not assignable to the same property in base type 'Thenable<VALUE>'.
 TS2417: Class static side 'typeof AnimatedZippy' incorrectly extends base class static side 'typeof Zippy'.
 TS2417: Class static side 'typeof BaseNode' incorrectly extends base class static side 'typeof Component'.
@@ -51,6 +36,7 @@ TS2417: Class static side 'typeof FilteredMenu' incorrectly extends base class s
 TS2417: Class static side 'typeof HoverCard' incorrectly extends base class static side 'typeof AdvancedTooltip'.
 TS2417: Class static side 'typeof LinkDialog' incorrectly extends base class static side 'typeof AbstractDialog'.
 TS2417: Class static side 'typeof Menu' incorrectly extends base class static side 'typeof Container'.
+TS2417: Class static side 'typeof Palette' incorrectly extends base class static side 'typeof Control'.
 TS2417: Class static side 'typeof Ratings' incorrectly extends base class static side 'typeof Component'.
 TS2417: Class static side 'typeof ScrollFloater' incorrectly extends base class static side 'typeof Component'.
 TS2417: Class static side 'typeof SliderBase' incorrectly extends base class static side 'typeof Component'.
