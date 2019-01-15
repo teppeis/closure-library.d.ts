@@ -14,7 +14,7 @@
     "test": "tsc -p ./test/tsconfig.json | tee errors.txt"
   },
   "devDependencies": {
-    "@teppeis/clutz": "^1.0.15-5813e89.v20190112T150003",
+    "@teppeis/clutz": "^1.0.16-bc63d2f.v20190115T021203",
     "google-closure-compiler": "^20181210.0.0",
     "google-closure-library": "^20180910.0.0",
     "patch-package": "^5.1.1",
