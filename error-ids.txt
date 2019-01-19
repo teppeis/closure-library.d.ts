@@ -17,7 +17,6 @@ TS2300: Duplicate identifier 'TIMEOUT'.
 TS2300: Duplicate identifier 'TIMEOUT'.
 TS2300: Duplicate identifier 'Token'.
 TS2300: Duplicate identifier 'Token'.
-TS2416: Property 'then' in type 'Deferred<VALUE>' is not assignable to the same property in base type 'Thenable<VALUE>'.
 TS2417: Class static side 'typeof AnimatedZippy' incorrectly extends base class static side 'typeof Zippy'.
 TS2417: Class static side 'typeof BaseNode' incorrectly extends base class static side 'typeof Component'.
 TS2417: Class static side 'typeof Checkbox' incorrectly extends base class static side 'typeof Control'.
@@ -36,7 +35,6 @@ TS2417: Class static side 'typeof SplitPane' incorrectly extends base class stat
 TS2417: Class static side 'typeof TableSorter' incorrectly extends base class static side 'typeof Component'.
 TS2417: Class static side 'typeof Textarea' incorrectly extends base class static side 'typeof Control'.
 TS2417: Class static side 'typeof TriStateMenuItem' incorrectly extends base class static side 'typeof MenuItem'.
-TS2430: Interface 'Thenable<TYPE>' incorrectly extends interface 'PromiseLike<TYPE>'.
 TS2451: Cannot redeclare block-scoped variable 'TokenTypes'.
 TS2451: Cannot redeclare block-scoped variable 'TokenTypes'.
 TS2451: Cannot redeclare block-scoped variable 'TokenTypes'.
