@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@teppeis/clutz": "^1.0.17-bca1863.v20190119T024819",
-    "google-closure-compiler": "^20190106.0.0",
+    "google-closure-compiler": "^20190121.0.0",
     "google-closure-library": "^20180910.0.0",
     "patch-package": "^5.1.2",
     "typescript": "^3.2.4"
