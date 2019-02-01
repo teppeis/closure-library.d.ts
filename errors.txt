@@ -1,81 +1,81 @@
-all.d.ts(12833,13): error TS2310: Type 'FullscreenOptions' recursively references itself as a base type.
-all.d.ts(21380,5): error TS1070: 'protected' modifier cannot appear on a type member.
-all.d.ts(101385,5): error TS2300: Duplicate identifier 'ABORT'.
-all.d.ts(101386,5): error TS2300: Duplicate identifier 'EXCEPTION'.
-all.d.ts(101387,5): error TS2300: Duplicate identifier 'HTTP_ERROR'.
-all.d.ts(101388,5): error TS2300: Duplicate identifier 'TIMEOUT'.
-all.d.ts(101391,5): error TS2300: Duplicate identifier 'CLOSED'.
-all.d.ts(101392,5): error TS2300: Duplicate identifier 'FAILED'.
-all.d.ts(101393,5): error TS2300: Duplicate identifier 'INIT'.
-all.d.ts(101394,5): error TS2300: Duplicate identifier 'RECOVERING'.
-all.d.ts(104752,8): error TS2300: Duplicate identifier 'Token'.
-all.d.ts(104753,8): error TS2451: Cannot redeclare block-scoped variable 'TokenTypes'.
-all.d.ts(104754,7): error TS2451: Cannot redeclare block-scoped variable 'TokenTypes'.
-all.d.ts(116080,9): error TS2417: Class static side 'typeof AnimatedZippy' incorrectly extends base class static side 'typeof Zippy'.
+all.d.ts(12835,13): error TS2310: Type 'FullscreenOptions' recursively references itself as a base type.
+all.d.ts(21382,5): error TS1070: 'protected' modifier cannot appear on a type member.
+all.d.ts(101387,5): error TS2300: Duplicate identifier 'ABORT'.
+all.d.ts(101388,5): error TS2300: Duplicate identifier 'EXCEPTION'.
+all.d.ts(101389,5): error TS2300: Duplicate identifier 'HTTP_ERROR'.
+all.d.ts(101390,5): error TS2300: Duplicate identifier 'TIMEOUT'.
+all.d.ts(101393,5): error TS2300: Duplicate identifier 'CLOSED'.
+all.d.ts(101394,5): error TS2300: Duplicate identifier 'FAILED'.
+all.d.ts(101395,5): error TS2300: Duplicate identifier 'INIT'.
+all.d.ts(101396,5): error TS2300: Duplicate identifier 'RECOVERING'.
+all.d.ts(104754,8): error TS2300: Duplicate identifier 'Token'.
+all.d.ts(104755,8): error TS2451: Cannot redeclare block-scoped variable 'TokenTypes'.
+all.d.ts(104756,7): error TS2451: Cannot redeclare block-scoped variable 'TokenTypes'.
+all.d.ts(116082,9): error TS2417: Class static side 'typeof AnimatedZippy' incorrectly extends base class static side 'typeof Zippy'.
   Types of property 'Events' are incompatible.
     Type '{ TOGGLE_ANIMATION_BEGIN: string; TOGGLE_ANIMATION_END: string; }' is missing the following properties from type 'typeof Events': ACTION, TOGGLE
-all.d.ts(116688,9): error TS2417: Class static side 'typeof Checkbox' incorrectly extends base class static side 'typeof Control'.
+all.d.ts(116690,9): error TS2417: Class static side 'typeof Checkbox' incorrectly extends base class static side 'typeof Control'.
   Types of property 'State' are incompatible.
     Type '{ CHECKED: boolean; UNCHECKED: boolean; UNDETERMINED: boolean; }' is missing the following properties from type 'typeof State': ACTIVE, ALL, DISABLED, FOCUSED, and 3 more.
-all.d.ts(116987,9): error TS2417: Class static side 'typeof ColorPicker' incorrectly extends base class static side 'typeof Component'.
+all.d.ts(116989,9): error TS2417: Class static side 'typeof ColorPicker' incorrectly extends base class static side 'typeof Component'.
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 16 more.
-all.d.ts(117739,9): error TS2417: Class static side 'typeof Container' incorrectly extends base class static side 'typeof Component'.
+all.d.ts(117741,9): error TS2417: Class static side 'typeof Container' incorrectly extends base class static side 'typeof Component'.
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 17 more.
-all.d.ts(119763,9): error TS2417: Class static side 'typeof Dialog' incorrectly extends base class static side 'typeof ModalPopup'.
+all.d.ts(119765,9): error TS2417: Class static side 'typeof Dialog' incorrectly extends base class static side 'typeof ModalPopup'.
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 16 more.
-all.d.ts(120585,9): error TS2417: Class static side 'typeof FilteredMenu' incorrectly extends base class static side 'typeof Menu'.
+all.d.ts(120587,9): error TS2417: Class static side 'typeof FilteredMenu' incorrectly extends base class static side 'typeof Menu'.
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type '{ BEFORE_HIDE: EventType; BEFORE_SHOW: EventType; HIDE: EventType; SHOW: EventType; }': BEFORE_HIDE, BEFORE_SHOW, HIDE, SHOW
-all.d.ts(121220,9): error TS2417: Class static side 'typeof HoverCard' incorrectly extends base class static side 'typeof AdvancedTooltip'.
+all.d.ts(121222,9): error TS2417: Class static side 'typeof HoverCard' incorrectly extends base class static side 'typeof AdvancedTooltip'.
   Types of property 'EventType' are incompatible.
     Type '{ BEFORE_HIDE: EventType; BEFORE_SHOW: EventType; CANCEL_TRIGGER: "canceltrigger"; HIDE: EventType; SHOW: EventType; TRIGGER: "trigger"; }' is not assignable to type 'typeof EventType'.
       Types of property 'BEFORE_HIDE' are incompatible.
         Type 'EventType' is not assignable to type 'EventType.BEFORE_HIDE'.
           Type 'string & { clutzEnumBrand: never; }' is not assignable to type 'EventType.BEFORE_HIDE'.
-all.d.ts(122219,9): error TS2417: Class static side 'typeof Menu' incorrectly extends base class static side 'typeof Container'.
+all.d.ts(122221,9): error TS2417: Class static side 'typeof Menu' incorrectly extends base class static side 'typeof Container'.
   Types of property 'EventType' are incompatible.
     Type '{ BEFORE_HIDE: EventType; BEFORE_SHOW: EventType; HIDE: EventType; SHOW: EventType; }' is missing the following properties from type 'typeof EventType': AFTER_HIDE, AFTER_SHOW
-all.d.ts(123385,9): error TS2417: Class static side 'typeof Palette' incorrectly extends base class static side 'typeof Control'.
+all.d.ts(123387,9): error TS2417: Class static side 'typeof Palette' incorrectly extends base class static side 'typeof Control'.
   Types of property 'EventType' are incompatible.
     Type '{ AFTER_HIGHLIGHT: EventType; }' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 17 more.
-all.d.ts(124565,9): error TS2417: Class static side 'typeof Ratings' incorrectly extends base class static side 'typeof Component'.
+all.d.ts(124567,9): error TS2417: Class static side 'typeof Ratings' incorrectly extends base class static side 'typeof Component'.
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 14 more.
-all.d.ts(124887,9): error TS2417: Class static side 'typeof ScrollFloater' incorrectly extends base class static side 'typeof Component'.
+all.d.ts(124889,9): error TS2417: Class static side 'typeof ScrollFloater' incorrectly extends base class static side 'typeof Component'.
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 17 more.
-all.d.ts(126005,9): error TS2417: Class static side 'typeof SliderBase' incorrectly extends base class static side 'typeof Component'.
+all.d.ts(126007,9): error TS2417: Class static side 'typeof SliderBase' incorrectly extends base class static side 'typeof Component'.
   Types of property 'EventType' are incompatible.
     Type '{ ANIMATION_END: EventType; DRAG_END: EventType; DRAG_EXTENT_END: EventType; DRAG_EXTENT_START: EventType; DRAG_START: EventType; DRAG_VALUE_END: EventType; DRAG_VALUE_START: EventType; }' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 17 more.
-all.d.ts(126282,9): error TS2417: Class static side 'typeof SplitPane' incorrectly extends base class static side 'typeof Component'.
+all.d.ts(126284,9): error TS2417: Class static side 'typeof SplitPane' incorrectly extends base class static side 'typeof Component'.
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 17 more.
-all.d.ts(127060,9): error TS2417: Class static side 'typeof TableSorter' incorrectly extends base class static side 'typeof Component'.
+all.d.ts(127062,9): error TS2417: Class static side 'typeof TableSorter' incorrectly extends base class static side 'typeof Component'.
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 17 more.
-all.d.ts(127156,9): error TS2417: Class static side 'typeof Textarea' incorrectly extends base class static side 'typeof Control'.
+all.d.ts(127158,9): error TS2417: Class static side 'typeof Textarea' incorrectly extends base class static side 'typeof Control'.
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 17 more.
-all.d.ts(127892,9): error TS2417: Class static side 'typeof TriStateMenuItem' incorrectly extends base class static side 'typeof MenuItem'.
+all.d.ts(127894,9): error TS2417: Class static side 'typeof TriStateMenuItem' incorrectly extends base class static side 'typeof MenuItem'.
   Types of property 'State' are incompatible.
     Type 'typeof State' is missing the following properties from type 'typeof State': ACTIVE, ALL, CHECKED, DISABLED, and 4 more.
-all.d.ts(129625,9): error TS2417: Class static side 'typeof LinkDialog' incorrectly extends base class static side 'typeof AbstractDialog'.
+all.d.ts(129627,9): error TS2417: Class static side 'typeof LinkDialog' incorrectly extends base class static side 'typeof AbstractDialog'.
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type 'typeof EventType': AFTER_HIDE, CANCEL, OK
-all.d.ts(132202,9): error TS2417: Class static side 'typeof BaseNode' incorrectly extends base class static side 'typeof Component'.
+all.d.ts(132204,9): error TS2417: Class static side 'typeof BaseNode' incorrectly extends base class static side 'typeof Component'.
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 17 more.
-all.d.ts(139086,5): error TS2300: Duplicate identifier 'CLOSED'.
-all.d.ts(139087,5): error TS2300: Duplicate identifier 'FAILED'.
-all.d.ts(139088,5): error TS2300: Duplicate identifier 'INIT'.
-all.d.ts(139089,5): error TS2300: Duplicate identifier 'RECOVERING'.
-all.d.ts(139101,5): error TS2300: Duplicate identifier 'ABORT'.
-all.d.ts(139102,5): error TS2300: Duplicate identifier 'EXCEPTION'.
-all.d.ts(139103,5): error TS2300: Duplicate identifier 'HTTP_ERROR'.
-all.d.ts(139104,5): error TS2300: Duplicate identifier 'TIMEOUT'.
-all.d.ts(139452,8): error TS2300: Duplicate identifier 'Token'.
-all.d.ts(139458,8): error TS2451: Cannot redeclare block-scoped variable 'TokenTypes'.
-all.d.ts(139459,7): error TS2451: Cannot redeclare block-scoped variable 'TokenTypes'.
+all.d.ts(139128,5): error TS2300: Duplicate identifier 'CLOSED'.
+all.d.ts(139129,5): error TS2300: Duplicate identifier 'FAILED'.
+all.d.ts(139130,5): error TS2300: Duplicate identifier 'INIT'.
+all.d.ts(139131,5): error TS2300: Duplicate identifier 'RECOVERING'.
+all.d.ts(139143,5): error TS2300: Duplicate identifier 'ABORT'.
+all.d.ts(139144,5): error TS2300: Duplicate identifier 'EXCEPTION'.
+all.d.ts(139145,5): error TS2300: Duplicate identifier 'HTTP_ERROR'.
+all.d.ts(139146,5): error TS2300: Duplicate identifier 'TIMEOUT'.
+all.d.ts(139494,8): error TS2300: Duplicate identifier 'Token'.
+all.d.ts(139500,8): error TS2451: Cannot redeclare block-scoped variable 'TokenTypes'.
+all.d.ts(139501,7): error TS2451: Cannot redeclare block-scoped variable 'TokenTypes'.
