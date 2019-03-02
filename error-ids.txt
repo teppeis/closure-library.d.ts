@@ -18,6 +18,7 @@ TS2300: Duplicate identifier 'TIMEOUT'.
 TS2300: Duplicate identifier 'Token'.
 TS2300: Duplicate identifier 'Token'.
 TS2310: Type 'FullscreenOptions' recursively references itself as a base type.
+TS2320: Interface 'WebChannel' cannot simultaneously extend types 'EventTarget' and 'Listenable'.
 TS2417: Class static side 'typeof AnimatedZippy' incorrectly extends base class static side 'typeof Zippy'.
 TS2417: Class static side 'typeof BaseNode' incorrectly extends base class static side 'typeof Component'.
 TS2417: Class static side 'typeof Checkbox' incorrectly extends base class static side 'typeof Control'.

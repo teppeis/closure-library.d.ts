@@ -1,4 +1,5 @@
-patch-package
+diff --git a/node_modules/google-closure-library/closure/goog/labs/net/webchannel.js b/node_modules/google-closure-library/closure/goog/labs/net/webchannel.js
+index c5b853e..94e343c 100644
 --- a/node_modules/google-closure-library/closure/goog/labs/net/webchannel.js
 +++ b/node_modules/google-closure-library/closure/goog/labs/net/webchannel.js
 @@ -64,7 +64,6 @@ goog.require('goog.net.XmlHttpFactory');
@@ -9,17 +10,8 @@ patch-package
   * @extends {goog.events.Listenable}
   */
  goog.net.WebChannel = function() {};
---- a/node_modules/google-closure-library/closure/goog/net/corsxmlhttpfactory.js
-+++ b/node_modules/google-closure-library/closure/goog/net/corsxmlhttpfactory.js
-@@ -93,7 +93,7 @@ goog.net.IeCorsXhrAdapter = function() {
- 
-   /**
-    * The simulated ready state change callback function.
--   * @type {Function}
-+   * @type {function()|null}
-    */
-   this.onreadystatechange = null;
- 
+diff --git a/node_modules/google-closure-library/closure/goog/testing/fs/file.js b/node_modules/google-closure-library/closure/goog/testing/fs/file.js
+index 334ef36..d1706da 100644
 --- a/node_modules/google-closure-library/closure/goog/testing/fs/file.js
 +++ b/node_modules/google-closure-library/closure/goog/testing/fs/file.js
 @@ -50,5 +50,11 @@ goog.testing.fs.File = function(name, opt_lastModified, opt_data, opt_type) {
@@ -34,6 +26,8 @@ patch-package
 +  this.lastModified = opt_lastModified && opt_lastModified.getTime() || 0;
  };
  goog.inherits(goog.testing.fs.File, goog.testing.fs.Blob);
+diff --git a/node_modules/google-closure-library/closure/goog/ui/colormenubuttonrenderer.js b/node_modules/google-closure-library/closure/goog/ui/colormenubuttonrenderer.js
+index 772b3ad..ad200b2 100644
 --- a/node_modules/google-closure-library/closure/goog/ui/colormenubuttonrenderer.js
 +++ b/node_modules/google-closure-library/closure/goog/ui/colormenubuttonrenderer.js
 @@ -79,10 +79,11 @@ goog.ui.ColorMenuButtonRenderer.prototype.createCaption = function(
@@ -50,14 +44,3 @@ patch-package
    return dom.createDom(
        goog.dom.TagName.DIV,
        goog.getCssName(goog.ui.ColorMenuButtonRenderer.CSS_CLASS, 'indicator'),
---- a/node_modules/google-closure-library/closure/goog/ui/customcolorpalette.js
-+++ b/node_modules/google-closure-library/closure/goog/ui/customcolorpalette.js
-@@ -53,7 +53,7 @@ goog.inherits(goog.ui.CustomColorPalette, goog.ui.ColorPalette);
- /**
-  * Returns an array of DOM nodes for each color, and an additional cell with a
-  * '+'.
-- * @return {!Array<Node>} Array of div elements.
-+ * @return {!Array<!Node>} Array of div elements.
-  * @override
-  */
- goog.ui.CustomColorPalette.prototype.createColorNodes = function() {
