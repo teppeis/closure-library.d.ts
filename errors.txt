@@ -68,14 +68,14 @@ all.d.ts(129698,9): error TS2417: Class static side 'typeof LinkDialog' incorrec
 all.d.ts(132275,9): error TS2417: Class static side 'typeof BaseNode' incorrectly extends base class static side 'typeof Component'.
   Types of property 'EventType' are incompatible.
     Type 'typeof EventType' is missing the following properties from type 'typeof EventType': ACTION, ACTIVATE, BEFORE_SHOW, BLUR, and 17 more.
-all.d.ts(139204,5): error TS2300: Duplicate identifier 'CLOSED'.
-all.d.ts(139205,5): error TS2300: Duplicate identifier 'FAILED'.
-all.d.ts(139206,5): error TS2300: Duplicate identifier 'INIT'.
-all.d.ts(139207,5): error TS2300: Duplicate identifier 'RECOVERING'.
-all.d.ts(139219,5): error TS2300: Duplicate identifier 'ABORT'.
-all.d.ts(139220,5): error TS2300: Duplicate identifier 'EXCEPTION'.
-all.d.ts(139221,5): error TS2300: Duplicate identifier 'HTTP_ERROR'.
-all.d.ts(139222,5): error TS2300: Duplicate identifier 'TIMEOUT'.
-all.d.ts(139570,8): error TS2300: Duplicate identifier 'Token'.
-all.d.ts(139576,8): error TS2451: Cannot redeclare block-scoped variable 'TokenTypes'.
-all.d.ts(139577,7): error TS2451: Cannot redeclare block-scoped variable 'TokenTypes'.
+all.d.ts(139164,5): error TS2300: Duplicate identifier 'CLOSED'.
+all.d.ts(139165,5): error TS2300: Duplicate identifier 'FAILED'.
+all.d.ts(139166,5): error TS2300: Duplicate identifier 'INIT'.
+all.d.ts(139167,5): error TS2300: Duplicate identifier 'RECOVERING'.
+all.d.ts(139179,5): error TS2300: Duplicate identifier 'ABORT'.
+all.d.ts(139180,5): error TS2300: Duplicate identifier 'EXCEPTION'.
+all.d.ts(139181,5): error TS2300: Duplicate identifier 'HTTP_ERROR'.
+all.d.ts(139182,5): error TS2300: Duplicate identifier 'TIMEOUT'.
+all.d.ts(139530,8): error TS2300: Duplicate identifier 'Token'.
+all.d.ts(139536,8): error TS2451: Cannot redeclare block-scoped variable 'TokenTypes'.
+all.d.ts(139537,7): error TS2451: Cannot redeclare block-scoped variable 'TokenTypes'.

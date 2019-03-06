@@ -14,7 +14,7 @@
     "test": "tsc -p ./test/tsconfig.json | tee errors.txt"
   },
   "devDependencies": {
-    "@teppeis/clutz": "^1.0.20-92d7905.v20190215",
+    "@teppeis/clutz": "^1.0.21-5cb77a5.v20190306T132737",
     "google-closure-library": "^20190301.0.0",
     "patch-package": "^6.0.5",
     "typescript": "^3.3.3333"
