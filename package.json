@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@teppeis/clutz": "^1.0.27-fb3fc7c.v20190318T233908",
-    "google-closure-library": "^20190301.0.0",
+    "google-closure-library": "^20200614.0.0",
     "patch-package": "^6.0.7",
     "typescript": "^3.3.4000"
   },
